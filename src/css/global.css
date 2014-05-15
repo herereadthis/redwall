@@ -19,6 +19,11 @@ body {
     line-height: 1;
     /*background: #000 url(images/space_bg.gif) scroll repeat 0 0;*/
 }
+body > h1 {
+    position: absolute;
+    left: 50%;
+    top: 7rem;
+}
 
 body > header {
     overflow: auto;
@@ -132,6 +137,12 @@ body > article > section {
         0 0,
         0 0;
     background-repeat: no-repeat;
+}
+#popup_box_simulator > *:first-child {
+    margin: 0.1rem 0 0.1rem 2.2rem;
+    color: #FFF;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
 }
 
 #riley {
