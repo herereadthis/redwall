@@ -1,8 +1,4 @@
-
-
-
-
-html {
+ html {
     font-size: 62.5%;
     height: 100%;
     overflow-x: hidden;
@@ -17,34 +13,88 @@ body {
     text-rendering: optimizelegibility;
     font-size: 1em;
     line-height: 1;
-    /*background: #000 url(images/space_bg.gif) scroll repeat 0 0;*/
-}
-body > h1 {
-    position: absolute;
-    left: 50%;
-    top: 7rem;
+
+    > h1 {
+        position: absolute;
+        left: 50%;
+        top: 5rem;
+        font-size: 3rem;
+        line-height: 4rem;
+        @media @mq_2x_small {
+            margin-left: (-1 * @pw_2x_small / 2) + 1;
+        }
+        @media @mq_x_small {
+            margin-left: (-1 * @pw_x_small / 2) + 1;
+        }
+        @media @mq_small {
+            margin-left: (-1 * @pw_small / 2) + 1;
+        }
+        @media @mq_medium {
+            margin-left: (-1 * @pw_medium / 2) + 1;
+        }
+        @media @mq_large {
+            margin-left: (-1 * @pw_large / 2) + 1;
+        }
+        @media @mq_x_large {
+            margin-left: (-1 * @pw_x_large / 2) + 1;
+        }
+    }
+    > header {
+        overflow: auto;
+        background: #000 url("@{img_path}space_bg.gif") scroll repeat 0 bottom;
+
+        & + article {
+            background: #000 url("@{img_path}space_bg.gif") scroll repeat 0 0;
+        }
+        > div {
+            box-sizing: border-box;
+            margin: 0 auto;  
+        }
+    }
+    > article {
+        clear: both;
+
+        > section {
+            box-sizing: border-box;
+            margin: 0 auto;
+            position: relative;
+            clear: both;
+            overflow: auto;
+
+        }
+    }
+    > footer { 
+    /*overflow: auto;*/
+    background: #000 url("@{img_path}space_bg.gif") scroll repeat 0 bottom;
+
+        > section {
+            padding: 2rem 0;
+            margin: 0 auto;
+        }
+        p, h2 {
+            color: #FF0;
+            text-align: center;
+            font: normal normal normal 1.5rem/2rem "Times New Roman", serif;
+            padding: 0 0 2rem 0;         
+        }
+    }
 }
 
-body > header {
-    overflow: auto;
-    background: #000 url(images/space_bg.gif) scroll repeat 0 bottom;
+
+p, span {
+    margin: 0;
+    font: normal normal bold 18px/18px 'Microsoft Sans Serif', sans-serif;
+    /*font: normal normal normal 50px/50px Helvetica, Arial, sans-serif;*/
+    color: #000;
 }
-body > header + article {
-    background: #000 url(images/space_bg.gif) scroll repeat 0 0;
-}
-body > header > div {
-    box-sizing: border-box;
-    margin: 0 auto;
-}
-body > article {
-    clear: both;
-}
-body > article > section {
-    box-sizing: border-box;
-    margin: 0 auto;
-    position: relative;
-    clear: both;
-    overflow: auto;
+
+
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 19px auto;
+    padding: 0;
 }
 
 #popup_box_simulator {
@@ -53,7 +103,7 @@ body > article > section {
     padding: 0.4rem 0.4rem 0.6rem 0.4rem;
     background-color: #FFF;
     background-image:
-        url(images/netscape_logo.png),
+        url("@{img_path}netscape_logo.png"),
 
         linear-gradient(0deg, #000 0%, #000 100%),
         linear-gradient(0deg, #000 0%, #000 100%),
@@ -148,7 +198,29 @@ body > article > section {
 #riley {
     background-color: rgba(115, 194, 251, 0.5);
     position: relative;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
+    // width: 87.2rem;
+
+    section {
+        @media @mq_2x_small {
+            background-position: 100% 100%;
+        }
+        @media @mq_x_small {
+            background-position: 100% 100%;
+        }
+        @media @mq_small {
+            background-position: ((5 / 6) * @pw_small) 0;
+        }
+        @media @mq_medium {
+            background-position: ((5 / 6) * @pw_medium) 0;
+        }
+        @media @mq_large {
+            background-position: ((5 / 6) * @pw_large) 0;
+        }
+        @media @mq_x_large {
+            background-position: ((5 / 6) * @pw_x_large) 0;
+        }
+    }
 }
 
 .riley_bg {
@@ -203,23 +275,31 @@ body > article > section {
     background-color: #0CC;
     bottom: 0;
     left: 50%;
+    @media @mq_2x_small {
+    }
+    @media @mq_x_small {
+        left: 83.3333%;
+        margin-left: 0;
+    }
+    @media @mq_small {
+        left: 83.3333%;
+        margin-left: 0;
+    }
+    @media @mq_medium {
+        left: 50%;
+        margin-left: 48rem;
+        background-position: -16rem 0;
+    }
+    @media @mq_large {
+        margin-left: 57.6rem;
+        background-position: -19.2rem 0;
+    }
+    @media @mq_x_large {
+        margin-left: 64.8rem;
+        background-position: -21.6rem 0;
+    }
 }
 
-p, span {
-    margin: 0;
-    font: normal normal bold 18px/18px 'Microsoft Sans Serif', sans-serif;
-    /*font: normal normal normal 50px/50px Helvetica, Arial, sans-serif;*/
-    color: #000;
-}
-
-
-
-hr {
-    height: 2px;
-    border: 0;
-    margin: 19px auto;
-    padding: 0;
-}
 
 .rainbow_gradient {
     background-image: linear-gradient(90deg, #000020 0%, #000871 5%, #0021c2 10%, #004ff7 15%,
@@ -235,19 +315,4 @@ hr {
     border-style: solid;
     border-color: #808080 #C0C0C0 #C0C0C0 #808080;
     padding: 3px 4px 3px 3px;
-}
-
-body > footer { 
-    /*overflow: auto;*/
-    background: #000 url(images/space_bg.gif) scroll repeat 0 bottom;
-}
-footer > section {
-    padding: 2rem 0;
-    margin: 0 auto;
-}
-footer p, footer h2 {
-    color: #FF0;
-    text-align: center;
-    font: normal normal normal 1.5rem/2rem "Times New Roman", serif;
-    padding: 0 0 2rem 0;
 }
