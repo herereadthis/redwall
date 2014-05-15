@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" xml:lang="en" prefix="og: http://ogp.me/ns#
+<html lang="en" dir="ltr" xml:lang="en"
+prefix="og: http://ogp.me/ns#
 fb: http://ogp.me/ns/fb#
 foaf: http://xmlns.com/foaf/0.1/
 dc: http://purl.org/dc/terms/
@@ -7,25 +8,42 @@ v: http://rdf.data-vocabulary.org/#
 owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <head>
     <meta charset="utf-8">
-    <title>Here Read This</title>
-    <!-- browser-specific tags -->
+    <title property="dc:title">Here, Read This</title>
+<!-- Metadata Standards + Dublin Core RDFA -->
+    <meta name="robots" content="INDEX, FOLLOW" />
+    <meta name="keywords" content="Here, Read This, Jimmy Ha, web development, photography, Baking, Gardening" />
+    <meta property="dc:creator" name="author" content="Jimmy Ha" />
+    <meta property="dc:created" content="2014-01-15" />
+    <meta property="dc:language" content="en-US" />
+<!-- Open Graph RDFa -->
+    <meta property="og:title" content="Here, Read This" />
+    <meta property="og:description" name="description" content="A website by Jimmy Ha about photography, gardening, and baking." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://herereadthis.com/" />
+    <meta property="og:image" content="http://herereadthis.com/images/herereadthis_fb_320x320" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="320" />
+    <meta property="og:image:height" content="320" />
+    <meta property="og:site_name" content="Here, Read This" />
+<!-- browser-specific tags -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<!-- Facebook RDFa -->
+    <meta property="fb:admins" content="104276" />
+    <meta property="fb:app_id" content="146371075435162" />
+<!-- Bing Site Verification -->
+    <meta name="msvalidate.01" content="F7EE73CB34D5AF1C9DC816A5C75C32E6" />
+<!-- Google Site Verification -->
+    <meta name="google-site-verification" content="mczqUD0AU2jqxVwDld32k25wCRWJb5bMuQoCzvQCdfE" />
+<!-- Google Plus Verification -->
+    <link rel="author" href="https://plus.google.com/113505279995940079003" />
+<!-- Pinterest Site Verification -->
+    <meta name="p:domain_verify" content="642e03628ffc0809c6eab89aa14fb65b" />
+<!-- Friend of a Friend FOAF -->
+    <link rel="foaf:primaryTopic" type="application/rdf+xml" title="FOAF" href="http://herereadthis.com/src/xml/foaf.rdf" />
 
-    <!-- Metadata Standards + Dublin Core RDFA -->
-    <meta property="dc:creator" name="author" content="Jimmy Ha" />
-    <meta property="dc:created" content="2014-01-15" />
-    <meta property="dc:language" content="en-US" />
-
-    <!-- Open Graph RDFa -->
-    <meta property="og:title" content="Here, Read This" />
-    <meta property="og:description" name="description" content="Here, Read This" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://herereadthis.com/" />
-    <!-- Facebook RDFa -->
-    <meta property="fb:admins" content="452354541445433" />
 
     <!-- Icons -->
 <!--     <link rel="shortcut icon" href="images/icons/fav.ico" sizes="16x16 32x32 48x48" />
@@ -35,8 +53,8 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png" /> -->
 
-    <link rel="stylesheet" type="text/css" href="/css/global.css" />
-    <link rel="stylesheet" type="text/css" href="/css/queries.css" />
+    <link rel="stylesheet" type="text/css" href="/src/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/src/css/queries.css" />
     <!-- <link rel="stylesheet" type="text/css" href="css/header.css" /> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -58,7 +76,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <p style="color: #FF0;text-align: center;">Congratulations, you are the 000276 visitor to this site!</p>
 
 
-<img class="broken_image" src="images/broken_image.png" />
+<img class="broken_image" src="/src/images/broken_image.png" />
 
 <p style="color: #FF0;text-align: center;"><a href="mailto:herereadthis@hotmail.com">herereadthis@hotmail.com</a> &copy; 1998</p>
 
@@ -68,7 +86,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     </section>
     <section style="text-align: center;">
 
-<img src="/images/irene_430x464.png" width="215" height="232" style="text-align: center;border: 0.2rem solid #00F;padding: 0.3rem;" />
+<img src="/src/images/irene_430x464.png" width="215" height="232" style="text-align: center;border: 0.2rem solid #00F;padding: 0.3rem;" />
 
 <hr class="rainbow_gradient" />
 
@@ -80,9 +98,9 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <article id="riley">
     <section class="riley_bg">
         <p>FOOO</p>
-        <img class="broken_image" src="images/broken_image.png" />
+        <img class="broken_image" src="/src/images/broken_image.png" />
         <p>&lt;br /&gt;</p>
-        <img class="broken_image" src="images/broken_image.png" />
+        <img class="broken_image" src="/src/images/broken_image.png" />
         <p>FOOO</p>
     </section>
     <div id="riley_foo" class="riley_bg"></div>
