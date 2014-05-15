@@ -35,7 +35,8 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png" /> -->
 
-    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/queries.css" />
     <!-- <link rel="stylesheet" type="text/css" href="css/header.css" /> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -54,6 +55,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p style="color: #FF0;text-align: center;">Congratulations, you are the 000276 visitor to this site!</p>
 
+
 <img class="broken_image" src="images/broken_image.png" />
 
 <p style="color: #FF0;text-align: center;"><a href="mailto:herereadthis@hotmail.com">herereadthis@hotmail.com</a> &copy; 1998</p>
@@ -69,6 +71,63 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     </section>
 
 </article>
+
+
+<article id="riley">
+    <section class="riley_bg">
+        <p>FOOO</p>
+        <img class="broken_image" src="images/broken_image.png" />
+        <p>FOOO</p>
+    </section>
+    <div id="riley_foo" class="riley_bg"></div>
+</article>
+
+<script>
+
+var rileyColors = [
+    "0e90d2","c96977","3f8be6","cea635","0b90d7","cb6573","0b91d6","cb6676","23293d","d0a62e",
+    "0e8fd6","cb6371","408ae9","c96474","dfe7f4","0d90d7","ca6774","3a8be6","cfa632","0b91d7",
+    "cea834","198fc8","142c47","d2a631","3e8de7","e5ecf7","cc6874","0c95d7","cf6671","172945",
+    "3b8ce6","d2a831","0c8fd7","ca6571","0b8eda","e2eefb","398ce9","1092d5","cc6670","0d94db",
+    "d5a730","3d8deb","152942","0d91d9","cc6571","428aeb","d4a834","3f8de9","ecf0f7","d3a933",
+    "3e8dec","d5a932","3e8cec","d06674","1a2844","3e8cee","d4ab34","3c8fee","0b95dc","d7aa33",
+    "0b94dc","f0f1f6","d6aa35","3e8feb","d16772","0c91dc","1a283b","d8ab31","0a97dc","d7ab32",
+    "f3f3f6","d36770","3c8feb","202b3d","d1ad3c","4590ea","d7ab32","d36974","0c94d3","d8aa34",
+    "0d94db","f1f4f3","d7ad31","0d98dc","d7ad34","4692ec","d56875","242e3e","d6ae33","0a9ce0",
+    "d7af34","4a94f0","d26d78","4894ef","0a98dc","eef5f7","0b98dc","daae35","3c96ea","0b98dd",
+    "d16e7c","4294ec","1d2d4a","d56c7c","4495ee","dbb03d","4796ea","0e99e3","309bf0"];
+
+var _i,
+    _ref = rileyColors,
+    stringg = '',
+    la,
+    laNext;
+
+for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+    i = _ref[_i];
+    i = i.toUpperCase();
+    la = Math.round(_i * 8) / 10;
+    laNext = Math.round(_i * 8 + 8) / 10;
+
+    i = '#' + i + ' ' + la;
+
+    if (la % 1 == 0) {
+        i = i + '.0';
+    }
+    i = i + 'rem, #' + _ref[_i].toUpperCase() + ' ' + laNext;
+
+    if (laNext % 1 == 0) {
+        i = i + '.0';
+    }
+    i = i + 'rem, ';
+
+    stringg += i;
+    // console.log(i);
+}
+
+console.log(stringg);
+</script>
+
 
 <footer>
     <section>
@@ -95,8 +154,6 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 </section>
 
-
-<div id="foo_div"></div>
 
 <script>
 // var browserWidth;

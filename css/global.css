@@ -17,67 +17,28 @@ body {
     text-rendering: optimizelegibility;
     font-size: 1em;
     line-height: 1;
-    background: #000 url(images/space_bg.gif) scroll repeat 0 0;
+    /*background: #000 url(images/space_bg.gif) scroll repeat 0 0;*/
 }
 
 body > header {
-
+    overflow: auto;
+    background: #000 url(images/space_bg.gif) scroll repeat 0 bottom;
+}
+body > header + article {
+    background: #000 url(images/space_bg.gif) scroll repeat 0 0;
 }
 body > header > div {
     box-sizing: border-box;
     margin: 0 auto;
 }
 body > article {
+    overflow: auto;
 }
 body > article > section {
     box-sizing: border-box;
     margin: 0 auto;
+    position: relative;
 }
-
-@media (min-width: 32rem) {
-    body > header > *,
-    body > article > section {
-        width: 100%;
-    }
-}
-@media (min-width: 48rem) {
-    body > header > *,
-    body > article > section {
-        width: 100%;
-    }
-}
-@media (min-width: 568px) {
-    body > header > *,
-    body > article > section {
-        width: 100%;
-    }
-}
-@media (min-width: 768px) {
-    body > header > *,
-    body > article > section {
-        width: 100%;
-    }
-}
-@media (min-width: 1024px) {
-    body > header > *,
-    body > article > section {
-        width: 96rem;
-    }
-}
-@media (min-width: 1280px) {
-    body > header > *,
-    body > article > section {
-        width: 115.2rem;
-    }
-}
-@media (min-width: 1368ox) {
-    body > header > *,
-    body > article > section {
-        width: 129.6rem;
-    }
-}
-
-
 
 #popup_box_simulator {
     margin-top: 5rem;
@@ -171,43 +132,65 @@ body > article > section {
     background-repeat: no-repeat;
 }
 
+#riley {
+    background-color: rgba(115, 194, 251, 0.5);
+    position: relative;
+    overflow-x: hidden;
+}
 
-/*
-body > header {
-    box-sizing: border-box;
-    margin: 50px auto 0 auto;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #C0C0C0 #000 #000 #C0C0C0;
+.riley_bg {
+    /*min-height: 200px;*/
+    background-image: linear-gradient(90deg,
+        #0E90D2 0.0rem,  #0E90D2 0.8rem,  #C96977 0.8rem,  #C96977 1.6rem,  #3F8BE6 1.6rem,  #3F8BE6 2.4rem,
+        #CEA635 2.4rem,  #CEA635 3.2rem,  #0B90D7 3.2rem,  #0B90D7 4.0rem,  #CB6573 4.0rem,  #CB6573 4.8rem,
+        #0B91D6 4.8rem,  #0B91D6 5.6rem,  #CB6676 5.6rem,  #CB6676 6.4rem,  #23293D 6.4rem,  #23293D 7.2rem,
+        #D0A62E 7.2rem,  #D0A62E 8.0rem,  #0E8FD6 8.0rem,  #0E8FD6 8.8rem,  #CB6371 8.8rem,  #CB6371 9.6rem,
+        #408AE9 9.6rem,  #408AE9 10.4rem, #C96474 10.4rem, #C96474 11.2rem, #DFE7F4 11.2rem, #DFE7F4 12.0rem,
+        #0D90D7 12.0rem, #0D90D7 12.8rem, #CA6774 12.8rem, #CA6774 13.6rem, #3A8BE6 13.6rem, #3A8BE6 14.4rem,
+        #CFA632 14.4rem, #CFA632 15.2rem, #0B91D7 15.2rem, #0B91D7 16.0rem, #CEA834 16.0rem, #CEA834 16.8rem,
+        #198FC8 16.8rem, #198FC8 17.6rem, #142C47 17.6rem, #142C47 18.4rem, #D2A631 18.4rem, #D2A631 19.2rem,
+        #3E8DE7 19.2rem, #3E8DE7 20.0rem, #E5ECF7 20.0rem, #E5ECF7 20.8rem, #CC6874 20.8rem, #CC6874 21.6rem,
+        #0C95D7 21.6rem, #0C95D7 22.4rem, #CF6671 22.4rem, #CF6671 23.2rem, #172945 23.2rem, #172945 24.0rem,
+        #3B8CE6 24.0rem, #3B8CE6 24.8rem, #D2A831 24.8rem, #D2A831 25.6rem, #0C8FD7 25.6rem, #0C8FD7 26.4rem,
+        #CA6571 26.4rem, #CA6571 27.2rem, #0B8EDA 27.2rem, #0B8EDA 28.0rem, #E2EEFB 28.0rem, #E2EEFB 28.8rem,
+        #398CE9 28.8rem, #398CE9 29.6rem, #1092D5 29.6rem, #1092D5 30.4rem, #CC6670 30.4rem, #CC6670 31.2rem,
+        #0D94DB 31.2rem, #0D94DB 32.0rem, #D5A730 32.0rem, #D5A730 32.8rem, #3D8DEB 32.8rem, #3D8DEB 33.6rem,
+        #152942 33.6rem, #152942 34.4rem, #0D91D9 34.4rem, #0D91D9 35.2rem, #CC6571 35.2rem, #CC6571 36.0rem,
+        #428AEB 36.0rem, #428AEB 36.8rem, #D4A834 36.8rem, #D4A834 37.6rem, #3F8DE9 37.6rem, #3F8DE9 38.4rem,
+        #ECF0F7 38.4rem, #ECF0F7 39.2rem, #D3A933 39.2rem, #D3A933 40.0rem, #3E8DEC 40.0rem, #3E8DEC 40.8rem,
+        #D5A932 40.8rem, #D5A932 41.6rem, #3E8CEC 41.6rem, #3E8CEC 42.4rem, #D06674 42.4rem, #D06674 43.2rem,
+        #1A2844 43.2rem, #1A2844 44.0rem, #3E8CEE 44.0rem, #3E8CEE 44.8rem, #D4AB34 44.8rem, #D4AB34 45.6rem,
+        #3C8FEE 45.6rem, #3C8FEE 46.4rem, #0B95DC 46.4rem, #0B95DC 47.2rem, #D7AA33 47.2rem, #D7AA33 48.0rem,
+        #0B94DC 48.0rem, #0B94DC 48.8rem, #F0F1F6 48.8rem, #F0F1F6 49.6rem, #D6AA35 49.6rem, #D6AA35 50.4rem,
+        #3E8FEB 50.4rem, #3E8FEB 51.2rem, #D16772 51.2rem, #D16772 52.0rem, #0C91DC 52.0rem, #0C91DC 52.8rem,
+        #1A283B 52.8rem, #1A283B 53.6rem, #D8AB31 53.6rem, #D8AB31 54.4rem, #0A97DC 54.4rem, #0A97DC 55.2rem,
+        #D7AB32 55.2rem, #D7AB32 56.0rem, #F3F3F6 56.0rem, #F3F3F6 56.8rem, #D36770 56.8rem, #D36770 57.6rem,
+        #3C8FEB 57.6rem, #3C8FEB 58.4rem, #202B3D 58.4rem, #202B3D 59.2rem, #D1AD3C 59.2rem, #D1AD3C 60.0rem,
+        #4590EA 60.0rem, #4590EA 60.8rem, #D7AB32 60.8rem, #D7AB32 61.6rem, #D36974 61.6rem, #D36974 62.4rem,
+        #0C94D3 62.4rem, #0C94D3 63.2rem, #D8AA34 63.2rem, #D8AA34 64.0rem, #0D94DB 64.0rem, #0D94DB 64.8rem,
+        #F1F4F3 64.8rem, #F1F4F3 65.6rem, #D7AD31 65.6rem, #D7AD31 66.4rem, #0D98DC 66.4rem, #0D98DC 67.2rem,
+        #D7AD34 67.2rem, #D7AD34 68.0rem, #4692EC 68.0rem, #4692EC 68.8rem, #D56875 68.8rem, #D56875 69.6rem,
+        #242E3E 69.6rem, #242E3E 70.4rem, #D6AE33 70.4rem, #D6AE33 71.2rem, #0A9CE0 71.2rem, #0A9CE0 72.0rem,
+        #D7AF34 72.0rem, #D7AF34 72.8rem, #4A94F0 72.8rem, #4A94F0 73.6rem, #D26D78 73.6rem, #D26D78 74.4rem,
+        #4894EF 74.4rem, #4894EF 75.2rem, #0A98DC 75.2rem, #0A98DC 76.0rem, #EEF5F7 76.0rem, #EEF5F7 76.8rem,
+        #0B98DC 76.8rem, #0B98DC 77.6rem, #DAAE35 77.6rem, #DAAE35 78.4rem, #3C96EA 78.4rem, #3C96EA 79.2rem,
+        #0B98DD 79.2rem, #0B98DD 80.0rem, #D16E7C 80.0rem, #D16E7C 80.8rem, #4294EC 80.8rem, #4294EC 81.6rem,
+        #1D2D4A 81.6rem, #1D2D4A 82.4rem, #D56C7C 82.4rem, #D56C7C 83.2rem, #4495EE 83.2rem, #4495EE 84.0rem,
+        #DBB03D 84.0rem, #DBB03D 84.8rem, #4796EA 84.8rem, #4796EA 85.6rem, #0E99E3 85.6rem, #0E99E3 86.4rem,
+        #309BF0 86.4rem, #309BF0 87.2rem);
+    background-size: 87.2rem 100%;
+    background-repeat: no-repeat;
 }
-body > header > div {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #FFF #808080 #808080 #FFF;
-    background-color: #C0C0C0;
-    padding: 2px;
+#riley_foo {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    background-color: #0CC;
+    bottom: 0;
+    left: 50%;
 }
-body > header > div > div:first-child {
-    height: 16px;
-    background: #000080 url(images/netscape_logo.png) scroll no-repeat 1px 1px;
-    margin-bottom: 1px;
-    padding: 1px 1px 1px 19px;
-}
-body > header > div > div:first-child p {
-    color: #FFF;
-    font: normal normal bold 11px/16px 'Microsoft Sans Serif', sans-serif;
-}
-body > header > div > div:first-child + div {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #808080 #FFF #FFF #808080;
-}
-body > header > div > div:first-child + div > div {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #000 #C0C0C0 #C0C0C0 #000;
-}
-*/
 
 p, span {
     margin: 0;
@@ -216,14 +199,7 @@ p, span {
     color: #000;
 }
 
-body > section {
-    margin: 0 auto;
-}
 
-#foo_div {
-    height: 200px;
-    margin: 100px auto;
-}
 
 hr {
     height: 2px;
