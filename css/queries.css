@@ -1,18 +1,21 @@
 @media (min-width: 32rem) {
     body > header > *,
-    body > article > section {
+    body > article > section,
+    body > footer > section {
         width: 100%;
     }
 }
 @media (min-width: 48rem) {
     body > header > *,
-    body > article > section {
+    body > article > section,
+    body > footer > section {
         width: 100%;
     }
 }
 @media (min-width: 568px) {
     body > header > *,
-    body > article > section {
+    body > article > section,
+    body > footer > section {
         width: 100%;
     }
     #riley section {
@@ -25,7 +28,8 @@
 }
 @media (min-width: 768px) {
     body > header > *,
-    body > article > section {
+    body > article > section,
+    body > footer > section {
         width: 100%;
     }
     #riley section {
@@ -38,20 +42,23 @@
 }
 @media (min-width: 1024px) {
     body > header > *,
-    body > article > section {
+    body > article > section,
+    body > footer > section {
         width: 96rem;
     }
     #riley section {
         background-position: 80rem 0;
     }
     #riley_foo {
+        left: 50%;
         margin-left: 48rem;
         background-position: -16rem 0;
     }
 }
 @media (min-width: 1280px) {
     body > header > *,
-    body > article > section {
+    body > article > section,
+    body > footer > section {
         width: 115.2rem;
     }
     #riley section {
@@ -64,7 +71,8 @@
 }
 @media (min-width: 1368px) {
     body > header > *,
-    body > article > section {
+    body > article > section,
+    body > footer > section {
         width: 129.6rem;
     }
     #riley section {

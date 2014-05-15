@@ -32,17 +32,19 @@ body > header > div {
     margin: 0 auto;
 }
 body > article {
-    overflow: auto;
+    clear: both;
 }
 body > article > section {
     box-sizing: border-box;
     margin: 0 auto;
     position: relative;
+    clear: both;
+    overflow: auto;
 }
 
 #popup_box_simulator {
-    margin-top: 5rem;
     min-height: 5rem;
+    margin-top: 5rem;
     padding: 0.4rem 0.4rem 0.6rem 0.4rem;
     background-color: #FFF;
     background-image:
@@ -135,7 +137,7 @@ body > article > section {
 #riley {
     background-color: rgba(115, 194, 251, 0.5);
     position: relative;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 .riley_bg {
@@ -222,4 +224,19 @@ hr {
     border-style: solid;
     border-color: #808080 #C0C0C0 #C0C0C0 #808080;
     padding: 3px 4px 3px 3px;
+}
+
+body > footer { 
+    /*overflow: auto;*/
+    background: #000 url(images/space_bg.gif) scroll repeat 0 bottom;
+}
+footer > section {
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+footer p, footer h2 {
+    color: #FF0;
+    text-align: center;
+    font: normal normal normal 1.5rem/2rem "Times New Roman", serif;
+    padding: 0 0 2rem 0;
 }
