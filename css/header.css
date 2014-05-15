@@ -1,0 +1,146 @@
+@media (min-width: 320px) {
+    body {
+    }
+    body > header, #foo_div, body > hr, body > section {
+        width: 320px;
+    }
+    body > header > div > div:first-child + div > div {
+        background-color: #F0F;
+    }
+}
+@media (min-width: 480px) {
+    body {
+    }
+    body > header, #foo_div, body > hr, body > section {
+        width: 480px;
+    }
+    body > header > div > div:first-child + div > div {
+        background-color: #F00;
+    }
+}
+@media (min-width: 568px) {
+    body {
+    }
+    body > header, #foo_div, body > hr, body > section {
+        width: 568px;
+    }
+    body > header > div > div:first-child + div > div {
+        background-color: #FF0;
+    }
+}
+@media (min-width: 768px) {
+    body {
+    }
+    body > header, #foo_div, body > hr, body > section {
+        width: 768px;
+    }
+    body > header > div > div:first-child + div > div {
+        background-color: #0F0;
+    }
+}
+@media (min-width: 1024px) {
+    body {
+    }
+    body > header, #foo_div, body > hr, body > section {
+        width: 960px;
+    }
+    body > header > div > div:first-child + div > div {
+        background-color: #0FF;
+    }
+}
+@media (min-width: 1280px) {
+    body {
+    }
+    body > header, #foo_div, body > hr, body > section {
+        width: 1152px;
+    }
+    body > header > div > div:first-child + div > div {
+        background-color: #00F;
+    }
+}
+@media (min-width: 1368px) {
+    body {
+    }
+    body > header, #foo_div, body > hr, body > section {
+        width: 1296px;
+    }
+    body > header > div > div:first-child + div > div {
+        background-color: #F0F;
+    }
+}
+
+
+
+
+body {
+    margin: 0;
+    background-color: #F00;
+    background: #000 url(images/space_bg.gif) scroll repeat 0 0;
+}
+body > header {
+    box-sizing: border-box;
+    margin: 50px auto 0 auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #C0C0C0 #000 #000 #C0C0C0;
+}
+body > header > div {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFF #808080 #808080 #FFF;
+    background-color: #C0C0C0;
+    padding: 2px;
+}
+body > header > div > div:first-child {
+    height: 16px;
+    background: #000080 url(images/netscape_logo.png) scroll no-repeat 1px 1px;
+    margin-bottom: 1px;
+    padding: 1px 1px 1px 19px;
+}
+body > header > div > div:first-child p {
+    color: #FFF;
+    font: normal normal bold 11px/16px 'Microsoft Sans Serif', sans-serif;
+}
+body > header > div > div:first-child + div {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #808080 #FFF #FFF #808080;
+}
+body > header > div > div:first-child + div > div {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000 #C0C0C0 #C0C0C0 #000;
+    /*background-color: #FFF;*/
+}
+
+p, span {
+    margin: 0;
+    font: normal normal bold 18px/18px 'Microsoft Sans Serif', sans-serif;
+    /*font: normal normal normal 50px/50px Helvetica, Arial, sans-serif;*/
+    color: #000;
+}
+
+body > section {
+    margin: 0 auto;
+}
+
+#foo_div {
+    height: 200px;
+    margin: 100px auto;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 19px auto;
+    padding: 0;
+}
+
+.rainbow_gradient {
+    background-image: linear-gradient(90deg, #000020 0%, #000871 5%, #0021c2 10%, #004ff7 15%,
+            #008dff 20%, #00cad9 25%, #01f88f 30%, #00ff3f 35%, #00f609 40%, #00d400 45%,
+            #00a400 50%, #0a6900 55%, #502a00 60%, #a80000 65%, #f80000 70%, #ff0000 75%,
+            #ff1400 80%, #ff8c00 85%, #ffe600 90%, #ffff2e 95%, #FFFFFF 100%);
+}
+
+
