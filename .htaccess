@@ -1,0 +1,53 @@
+# maybe add these http://www.queness.com/post/5421/17-useful-htaccess-tricks-and-tips
+
+#404 page
+ErrorDocument 404 /error/404.html
+
+
+# sets mime type for fonts
+AddType application/vnd.ms-fontobject .eot
+AddType font/ttf .ttf
+AddType font/otf .otf
+AddType application/x-font-woff .woff
+AddType application/rdf+xml .rdf
+AddType application/ld+json .json
+
+# embed audio
+AddType audio/mid .mid
+AddType audio/midi .midi
+
+
+
+# Add the following headers to every response  
+Header add ALL-YOUR-BASE "ARE BELONG TO US" 
+Header add X-Apples "How do you like them?" 
+Header add X-BAMF "Jimmy Ha"   
+Header add X-Clue-Number-One "Stand by for further instructions."   
+
+
+RewriteEngine On
+
+# rewrite all http://www- traffic to just http:// traffic
+RewriteCond %{HTTP_HOST} !^herereadthis.com$ [NC]
+RewriteRule ^(.*)$ http://herereadthis.com/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.rdf -f
+RewriteRule ^(.*)$ $1.rdf
+
+# redirect all urls that doesnÃ¢â‚¬â„¢t have a trailing slash to urls with a trailing slash
+RewriteBase /
+# files that are existing will not get a slash added
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# url that shouldnÃ¢â‚¬â„¢t be rewritten
+RewriteCond %{REQUEST_URI} !apps/hrt/xml/foaf
+RewriteCond %{REQUEST_URI} !apps/hrt/xml/foaf#me
+# fires when a urls doesnÃ¢â‚¬â„¢t contain a trailing slash
+RewriteCond %{REQUEST_URI} !(.*)/$
+# 301 redirect to the url with the trailing slash appended
+RewriteRule ^(.*)$ http://herereadthis.com/$1/ [L,R=301] 
+
+# redirects index.html to root
+# redirect html pages to the root domain
+RewriteRule ^index\.html$ / [NC,R,L]
