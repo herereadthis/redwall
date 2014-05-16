@@ -357,6 +357,7 @@
 }
 
 .dancing_baby {
+    margin: 0 auto;
     background-image: url("@{img_path}dancing_baby_170x230.gif");
 
     @media @mq_2x_small {
@@ -387,5 +388,28 @@
         @media @mq_x_large {
             margin-left: (@pw_large / 2) - 17;
         }
+    }
+}
+
+.old_school_table {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: #CCC #515151 #515151 #CCC;
+    border-spacing: 0.5rem;
+    border-collapse: separate;
+
+    tr {
+    }
+    td {
+        text-align: center;
+        margin: 0;
+        padding: 0.5rem;
+        border-width: 0.1rem;
+        border-style: solid;
+        border-color: #515151 #CCC #CCC #515151;
     }
 }
