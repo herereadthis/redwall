@@ -230,11 +230,35 @@
     }
 }
 
+.geocities_me {
+    h3, p, li {
+        color: #FF0;
+    }
+    h3 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    p, li {
+        font-size: 1.5rem;
+        line-height: 2.0rem;
+    }
+    ul {
+        padding: 0 0 2rem 0;
+    }
+    li {
+        padding: 0 0 0rem 2rem;
+        list-style-type: none;
+        // list-style-position: inside;
+        // list-style-image: url("@{img_path}ball_14x14.gif");
+        background: transparent  url("@{img_path}ball_14x14.gif") scroll no-repeat 0 0.2rem;
+    }
+}
 
 
 
 .centered_image {
     margin: 0 auto;
+    padding-bottom: 2rem;
 
     img {
         display: block;
@@ -302,7 +326,6 @@
 .old_school_table {
     box-sizing: border-box;
     width: 100%;
-    margin: 0;
     padding: 0;
     border-width: 0.5rem;
     border-style: solid;
@@ -314,7 +337,6 @@
     }
     td {
         text-align: center;
-        margin: 0;
         padding: 0.5rem;
         border-width: 0.1rem;
         border-style: solid;
