@@ -16,10 +16,13 @@ body {
 
     > h1 {
         position: absolute;
+        margin: 0;
         left: 50%;
-        top: 5rem;
-        font-size: 3rem;
-        line-height: 4rem;
+        top: 7.5rem;
+        font-size: 4.5rem;
+        line-height: 6rem;
+        z-index: 5;
+
         @media @mq_2x_small {
             margin-left: (-1 * @pw_2x_small / 2) + 1;
         }
@@ -27,16 +30,16 @@ body {
             margin-left: (-1 * @pw_x_small / 2) + 1;
         }
         @media @mq_small {
-            margin-left: (-1 * @pw_small / 2) + 1;
+            margin-left: (-1 * @pw_small * (4 / 12)) + 2.6;
         }
         @media @mq_medium {
-            margin-left: (-1 * @pw_medium / 2) + 1;
+            margin-left: (-1 * @pw_medium * (4 / 12)) + 2.6;
         }
         @media @mq_large {
-            margin-left: (-1 * @pw_large / 2) + 1;
+            margin-left: (-1 * @pw_large * (4 / 12)) + 2.6;
         }
         @media @mq_x_large {
-            margin-left: (-1 * @pw_x_large / 2) + 1;
+            margin-left: (-1 * @pw_x_large * (4 / 12)) + 2.6;
         }
     }
     > header {
@@ -58,6 +61,7 @@ body {
         > div {
             box-sizing: border-box;
             margin: 0 auto;
+            overflow: auto;
         }
 
     }
@@ -90,6 +94,9 @@ body {
             padding: 0 0 2rem 0;         
         }
     }
+}
+img {
+    margin: 0;
 }
 p {
     margin: 0;

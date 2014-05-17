@@ -1,7 +1,41 @@
 
+[data-header-panel] {
+    box-sizing: border-box;
+    margin-right: 1rem;
+
+    a {
+        display: block;
+        border: 0.2rem solid #00F;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    @media @mq_2x_small {
+        display: none;
+    }
+    @media @mq_small {
+        float: left;
+        display: block;
+        width: ((2 / 12) * @pw_small) - 1;
+        margin-top: 1rem;
+    }
+    @media @mq_medium {
+        width: ((2 / 12) * @pw_medium) - 1;
+    }
+    @media @mq_large {
+        width: ((2 / 12) * @pw_large) - 1;
+    }
+    @media @mq_x_large {
+        width: ((2 / 12) * @pw_x_large) - 1;
+    }
+}
+
 .popup_box_simulator {
+    box-sizing: border-box;
     position: relative;
-    min-height: 5rem;
+    min-height: 6rem;
     margin-top: 5rem;
     padding: 0.4rem 0.4rem 0.6rem 0.4rem;
     background-color: #FFF;
@@ -12,7 +46,6 @@
         linear-gradient(0deg, #000 0%, #000 100%),
         linear-gradient(0deg, #C0C0C0 0%, #C0C0C0 100%),
         linear-gradient(0deg, #C0C0C0 0%, #C0C0C0 100%),
-
         linear-gradient(0deg, #808080 0%, #808080 100%),
         linear-gradient(0deg, #808080 0%, #808080 100%),
         linear-gradient(0deg, #FFF 0%, #FFF 100%),
@@ -28,68 +61,60 @@
         linear-gradient(0deg, #FFF 0%, #FFF 100%),
         linear-gradient(0deg, #808080 0%, #808080 100%),
         linear-gradient(0deg, #808080 0%, #808080 100%),
-
         linear-gradient(0deg, #C0C0C0 0%, #C0C0C0 100%),
         linear-gradient(0deg, #C0C0C0 0%, #C0C0C0 100%),
         linear-gradient(0deg, #000 0%, #000 100%),
-        linear-gradient(0deg, #000 0%, #000 100%);
+        linear-gradient(0deg, #000 0%, #000 100%),
+
+
+        url("@{img_path}cloud_216x144.gif");
     background-size:
         1.6rem 1.6rem,
 
-        100% 0.1rem,
-        0.1rem 100%,
-        100% 0.1rem,
-        0.1rem 100%,
+        100% 0.1rem,0.1rem 100%,100% 0.1rem,0.1rem 100%,
+        100% 0.2rem,0.2rem 100%,100% 0.2rem,0.2rem 100%,
 
-        100% 0.2rem,
-        0.2rem 100%,
-        100% 0.2rem,
-        0.2rem 100%,
+        100% 0.4rem,0.4rem 100%,0.4rem 100%,100% 1.8rem,100% 2.3rem,
 
-        100% 0.4rem,
-        0.4rem 100%,
-        0.4rem 100%,
-        100% 1.8rem,
-        100% 2.3rem,
+        100% 0.5rem,0.5rem 100%,100% 2.4rem,0.5rem 100%,
+        100% 0.6rem,0.6rem 100%,100% 2.5rem,0.6rem 100%,
 
-        100% 0.5rem,
-        0.5rem 100%,
-        100% 2.4rem,
-        0.5rem 100%,
-
-        100% 0.6rem,
-        0.6rem 100%,
-        100% 2.5rem,
-        0.6rem 100%;
+        21.6rem 14.4rem;
     background-position:
         0.6rem 0.5rem,
 
-        0% 100%,
-        100% 0,
-        0 0,
-        0 0,
+        0% 100%,100% 0,0 0,0 0,
+        0% 100%,100% 0,0 0,0 0,
 
-        0% 100%,
-        100% 0,
-        0 0,
-        0 0,
+        0% 100%,100% 0,0 0,0 0.4rem,0 0,
 
-        0% 100%,
-        100% 0,
-        0 0,
-        0 0.4rem,
-        0 0,
+        0% 100%,100% 0,0 0,0 0,
+        0% 100%,100% 0,0 0,0 0,
 
-        0% 100%,
-        100% 0,
-        0 0,
-        0 0,
-
-        0% 100%,
-        100% 0,
-        0 0,
         0 0;
-    background-repeat: no-repeat;
+    background-repeat:
+        no-repeat, no-repeat,
+        no-repeat, no-repeat, no-repeat, no-repeat,
+        no-repeat, no-repeat, no-repeat, no-repeat,
+        no-repeat, no-repeat, no-repeat, no-repeat,
+        no-repeat, no-repeat, no-repeat, no-repeat,
+        no-repeat, no-repeat, no-repeat, no-repeat,
+
+        repeat;
+
+    > p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 0 1rem 2rem;
+
+        &:first-of-type {
+            margin-top: 6rem;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+    }
 
     > *:first-child {
         margin: 0.1rem 0 0.1rem 2.2rem;
@@ -98,6 +123,28 @@
         line-height: 1.6rem;
     }
     body > header & {
+        margin-right: 1em;
+        margin-left: 1em;
+
+        @media @mq_2x_small {
+            float: none;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        @media @mq_small {
+            float: left;
+            margin-left: 1em;
+            width: ((10 / 12) * @pw_small) - 2;
+        }
+        @media @mq_medium {
+            width: ((10 / 12) * @pw_medium) - 1;
+        }
+        @media @mq_large {
+            width: ((10 / 12) * @pw_large) - 2;
+        }
+        @media @mq_x_large {
+            width: ((10 / 12) * @pw_x_large) - 2;
+        }
     }
 }
 .popup_button, .popup_button > span {
@@ -118,19 +165,9 @@
         linear-gradient(0deg, #808080 0%, #808080 100%),
         linear-gradient(0deg, #808080 0%, #808080 100%);
     background-position:
-        0% 100%,
-        100% 0,
-        0 0,
-        0 0,
-        0% 100%,
-        100% 0;
+        0% 100%,100% 0,0 0,0 0,0% 100%,100% 0;
     background-size:
-        100% 0.1rem,
-        0.1rem 100%,
-        100% 0.1rem,
-        0.1rem 100%,
-        100% 0.2rem,
-        0.2rem 100%;
+        100% 0.1rem,0.1rem 100%,100% 0.1rem,0.1rem 100%,100% 0.2rem,0.2rem 100%;
 
     > span {
 
@@ -155,32 +192,14 @@
 
             linear-gradient(0deg, #000000 0%, #000000 100%);
         background-position:
-            0.7rem 0.4rem,
-            0.7rem 0.8rem,
-            0.6rem 0.3rem,
-            0.6rem 0.9rem,
-
-            0.9rem 0.6rem,
-            0.6rem 0.6rem,
-            1.0rem 0.5rem,
-            0.5rem 0.5rem,
-            1.1rem 0.4rem,
-            0.4rem 0.4rem,
-
+            0.7rem 0.4rem,0.7rem 0.8rem,0.6rem 0.3rem,0.6rem 0.9rem,
+            0.9rem 0.6rem,0.6rem 0.6rem,1.0rem 0.5rem,
+            0.5rem 0.5rem,1.1rem 0.4rem,0.4rem 0.4rem,
             0.4rem 0.3rem;
         background-size:
-            0.2rem 0.1rem,
-            0.2rem 0.1rem,
-            0.4rem 0.1rem,
-            0.4rem 0.1rem,
-
-            0.1rem 0.1rem,
-            0.1rem 0.1rem,
-            0.1rem 0.3rem,
-            0.1rem 0.3rem,
-            0.1rem 0.5rem,
-            0.1rem 0.5rem,
-
+            0.2rem 0.1rem,0.2rem 0.1rem,0.4rem 0.1rem,0.4rem 0.1rem,
+            0.1rem 0.1rem,0.1rem 0.1rem,0.1rem 0.3rem,
+            0.1rem 0.3rem,0.1rem 0.5rem,0.1rem 0.5rem,
             0.8rem 0.7rem;
     }
 }
@@ -194,15 +213,9 @@
             linear-gradient(0deg, #808080 0%, #808080 100%),
             linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%);
         background-position:
-            0.5rem 0.5rem,
-            0.4rem 0.4rem,
-            0.3rem 0.2rem,
-            0.4rem 0.3rem;
+            0.5rem 0.5rem,0.4rem 0.4rem,0.3rem 0.2rem,0.4rem 0.3rem;
         background-size:
-            0.6rem 0.5rem,
-            0.7rem 0.6rem,
-            0.9rem 0.9rem,
-            0.9rem 0.9rem;
+            0.6rem 0.5rem,0.7rem 0.6rem,0.9rem 0.9rem,0.9rem 0.9rem;
     }
 }
 .popup_minimize {
@@ -217,128 +230,23 @@
     }
 }
 
-#riley {
-    background-color: rgba(115, 194, 251, 0.5);
-    position: relative;
-    overflow-x: hidden;
-    // width: 87.2rem;
 
-    h2 {
-        position: absolute;
 
-        @media @mq_2x_small {
-            top: 0;
-            left: 0;
-        }
-        @media @mq_medium {
-            left: 50%;
-            margin-left: -0.5 * @pw_medium; 
-        }
-        @media @mq_large {
-            margin-left: -0.5 * @pw_large; 
-        }
-        @media @mq_x_large {
-            margin-left: -0.5 * @pw_x_large; 
-        }
-    }
-    section {
-        padding-top: 5rem;
 
-        @media @mq_2x_small {
-            background-position: 100% 100%;
-        }
-        @media @mq_small {
-            background-position: ((5 / 6) * @pw_small) 0;
-        }
-        @media @mq_medium {
-            background-position: ((5 / 6) * @pw_medium) 0;
-        }
-        @media @mq_large {
-            background-position: ((5 / 6) * @pw_large) 0;
-        }
-        @media @mq_x_large {
-            background-position: ((5 / 6) * @pw_x_large) 0;
-        }
+.centered_image {
+    margin: 0 auto;
+
+    img {
+        display: block;
+        margin: 0 auto;
     }
 }
-
-.riley_bg {
-    /*min-height: 200px;*/
-    background-image: linear-gradient(90deg,
-        #0E90D2 0.0rem,  #0E90D2 0.8rem,  #C96977 0.8rem,  #C96977 1.6rem,  #3F8BE6 1.6rem,  #3F8BE6 2.4rem,
-        #CEA635 2.4rem,  #CEA635 3.2rem,  #0B90D7 3.2rem,  #0B90D7 4.0rem,  #CB6573 4.0rem,  #CB6573 4.8rem,
-        #0B91D6 4.8rem,  #0B91D6 5.6rem,  #CB6676 5.6rem,  #CB6676 6.4rem,  #23293D 6.4rem,  #23293D 7.2rem,
-        #D0A62E 7.2rem,  #D0A62E 8.0rem,  #0E8FD6 8.0rem,  #0E8FD6 8.8rem,  #CB6371 8.8rem,  #CB6371 9.6rem,
-        #408AE9 9.6rem,  #408AE9 10.4rem, #C96474 10.4rem, #C96474 11.2rem, #DFE7F4 11.2rem, #DFE7F4 12.0rem,
-        #0D90D7 12.0rem, #0D90D7 12.8rem, #CA6774 12.8rem, #CA6774 13.6rem, #3A8BE6 13.6rem, #3A8BE6 14.4rem,
-        #CFA632 14.4rem, #CFA632 15.2rem, #0B91D7 15.2rem, #0B91D7 16.0rem, #CEA834 16.0rem, #CEA834 16.8rem,
-        #198FC8 16.8rem, #198FC8 17.6rem, #142C47 17.6rem, #142C47 18.4rem, #D2A631 18.4rem, #D2A631 19.2rem,
-        #3E8DE7 19.2rem, #3E8DE7 20.0rem, #E5ECF7 20.0rem, #E5ECF7 20.8rem, #CC6874 20.8rem, #CC6874 21.6rem,
-        #0C95D7 21.6rem, #0C95D7 22.4rem, #CF6671 22.4rem, #CF6671 23.2rem, #172945 23.2rem, #172945 24.0rem,
-        #3B8CE6 24.0rem, #3B8CE6 24.8rem, #D2A831 24.8rem, #D2A831 25.6rem, #0C8FD7 25.6rem, #0C8FD7 26.4rem,
-        #CA6571 26.4rem, #CA6571 27.2rem, #0B8EDA 27.2rem, #0B8EDA 28.0rem, #E2EEFB 28.0rem, #E2EEFB 28.8rem,
-        #398CE9 28.8rem, #398CE9 29.6rem, #1092D5 29.6rem, #1092D5 30.4rem, #CC6670 30.4rem, #CC6670 31.2rem,
-        #0D94DB 31.2rem, #0D94DB 32.0rem, #D5A730 32.0rem, #D5A730 32.8rem, #3D8DEB 32.8rem, #3D8DEB 33.6rem,
-        #152942 33.6rem, #152942 34.4rem, #0D91D9 34.4rem, #0D91D9 35.2rem, #CC6571 35.2rem, #CC6571 36.0rem,
-        #428AEB 36.0rem, #428AEB 36.8rem, #D4A834 36.8rem, #D4A834 37.6rem, #3F8DE9 37.6rem, #3F8DE9 38.4rem,
-        #ECF0F7 38.4rem, #ECF0F7 39.2rem, #D3A933 39.2rem, #D3A933 40.0rem, #3E8DEC 40.0rem, #3E8DEC 40.8rem,
-        #D5A932 40.8rem, #D5A932 41.6rem, #3E8CEC 41.6rem, #3E8CEC 42.4rem, #D06674 42.4rem, #D06674 43.2rem,
-        #1A2844 43.2rem, #1A2844 44.0rem, #3E8CEE 44.0rem, #3E8CEE 44.8rem, #D4AB34 44.8rem, #D4AB34 45.6rem,
-        #3C8FEE 45.6rem, #3C8FEE 46.4rem, #0B95DC 46.4rem, #0B95DC 47.2rem, #D7AA33 47.2rem, #D7AA33 48.0rem,
-        #0B94DC 48.0rem, #0B94DC 48.8rem, #F0F1F6 48.8rem, #F0F1F6 49.6rem, #D6AA35 49.6rem, #D6AA35 50.4rem,
-        #3E8FEB 50.4rem, #3E8FEB 51.2rem, #D16772 51.2rem, #D16772 52.0rem, #0C91DC 52.0rem, #0C91DC 52.8rem,
-        #1A283B 52.8rem, #1A283B 53.6rem, #D8AB31 53.6rem, #D8AB31 54.4rem, #0A97DC 54.4rem, #0A97DC 55.2rem,
-        #D7AB32 55.2rem, #D7AB32 56.0rem, #F3F3F6 56.0rem, #F3F3F6 56.8rem, #D36770 56.8rem, #D36770 57.6rem,
-        #3C8FEB 57.6rem, #3C8FEB 58.4rem, #202B3D 58.4rem, #202B3D 59.2rem, #D1AD3C 59.2rem, #D1AD3C 60.0rem,
-        #4590EA 60.0rem, #4590EA 60.8rem, #D7AB32 60.8rem, #D7AB32 61.6rem, #D36974 61.6rem, #D36974 62.4rem,
-        #0C94D3 62.4rem, #0C94D3 63.2rem, #D8AA34 63.2rem, #D8AA34 64.0rem, #0D94DB 64.0rem, #0D94DB 64.8rem,
-        #F1F4F3 64.8rem, #F1F4F3 65.6rem, #D7AD31 65.6rem, #D7AD31 66.4rem, #0D98DC 66.4rem, #0D98DC 67.2rem,
-        #D7AD34 67.2rem, #D7AD34 68.0rem, #4692EC 68.0rem, #4692EC 68.8rem, #D56875 68.8rem, #D56875 69.6rem,
-        #242E3E 69.6rem, #242E3E 70.4rem, #D6AE33 70.4rem, #D6AE33 71.2rem, #0A9CE0 71.2rem, #0A9CE0 72.0rem,
-        #D7AF34 72.0rem, #D7AF34 72.8rem, #4A94F0 72.8rem, #4A94F0 73.6rem, #D26D78 73.6rem, #D26D78 74.4rem,
-        #4894EF 74.4rem, #4894EF 75.2rem, #0A98DC 75.2rem, #0A98DC 76.0rem, #EEF5F7 76.0rem, #EEF5F7 76.8rem,
-        #0B98DC 76.8rem, #0B98DC 77.6rem, #DAAE35 77.6rem, #DAAE35 78.4rem, #3C96EA 78.4rem, #3C96EA 79.2rem,
-        #0B98DD 79.2rem, #0B98DD 80.0rem, #D16E7C 80.0rem, #D16E7C 80.8rem, #4294EC 80.8rem, #4294EC 81.6rem,
-        #1D2D4A 81.6rem, #1D2D4A 82.4rem, #D56C7C 82.4rem, #D56C7C 83.2rem, #4495EE 83.2rem, #4495EE 84.0rem,
-        #DBB03D 84.0rem, #DBB03D 84.8rem, #4796EA 84.8rem, #4796EA 85.6rem, #0E99E3 85.6rem, #0E99E3 86.4rem,
-        #309BF0 86.4rem, #309BF0 87.2rem);
-    background-size: 87.2rem 100%;
-    background-repeat: no-repeat;
-}
-#riley_foo {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    width: 100%;
-    background-color: #0CC;
-    bottom: 0;
-    left: 50%;
-    @media @mq_2x_small {
-    }
-    @media @mq_x_small {
-        left: 83.3333%;
-        margin-left: 0;
-    }
-    @media @mq_small {
-        left: 83.3333%;
-        margin-left: 0;
-    }
-    @media @mq_medium {
-        left: 50%;
-        margin-left: 48rem;
-        background-position: -16rem 0;
-    }
-    @media @mq_large {
-        margin-left: 57.6rem;
-        background-position: -19.2rem 0;
-    }
-    @media @mq_x_large {
-        margin-left: 64.8rem;
-        background-position: -21.6rem 0;
+.with_border {
+    img {
+        border: 0.2rem solid #00F;
+        padding: 0.3rem;
     }
 }
-
 
 .rainbow_gradient {
     background-image: linear-gradient(90deg, #000020 0%, #000871 5%, #0021c2 10%, #004ff7 15%,
@@ -411,5 +319,146 @@
         border-width: 0.1rem;
         border-style: solid;
         border-color: #515151 #CCC #CCC #515151;
+    }
+}
+
+
+
+
+#riley {
+    background-color: rgba(115, 194, 251, 0.5);
+    position: relative;
+    overflow-x: hidden;
+    // width: 87.2rem;
+
+    h2 {
+        position: absolute;
+
+        @media @mq_2x_small {
+            top: 0;
+            left: 0;
+        }
+        @media @mq_medium {
+            left: 50%;
+            margin-left: -0.5 * @pw_medium; 
+        }
+        @media @mq_large {
+            margin-left: -0.5 * @pw_large; 
+        }
+        @media @mq_x_large {
+            margin-left: -0.5 * @pw_x_large; 
+        }
+    }
+    section {
+        padding-top: 5rem;
+
+        @media @mq_2x_small {
+            background-position: 100% 100%;
+        }
+        @media @mq_small {
+            background-position: ((5 / 6) * @pw_small) 0;
+        }
+        @media @mq_medium {
+            background-position: ((5 / 6) * @pw_medium) 0;
+        }
+        @media @mq_large {
+            background-position: ((5 / 6) * @pw_large) 0;
+        }
+        @media @mq_x_large {
+            background-position: ((5 / 6) * @pw_x_large) 0;
+        }
+    }
+}
+// blue
+@rb_001: #0E90D2;
+@rb_003: #3F8BE6;
+@rb_005: #0B90D7;
+@rb_007: #0B91D6;
+
+// pink
+@rb_002: #C96977;
+@rb_006: #CB6573;
+@rb_008: #CB6676;
+
+// yellow
+@rb_004: #CEA635;
+
+// black
+@rb_009: #23293D;
+
+.riley_bg {
+    /*min-height: 200px;*/
+    background-image: linear-gradient(90deg,
+        @rb_001 0.0rem,  @rb_001 0.8rem,  @rb_002 0.8rem,  @rb_002 1.6rem,  @rb_003 1.6rem,  @rb_003 2.4rem,
+        @rb_004 2.4rem,  @rb_004 3.2rem,  @rb_005 3.2rem,  @rb_005 4.0rem,  @rb_006 4.0rem,  @rb_006 4.8rem,
+        @rb_007 4.8rem,  @rb_007 5.6rem,  @rb_008 5.6rem,  @rb_008 6.4rem,  @rb_009 6.4rem,  @rb_009 7.2rem,
+        #D0A62E 7.2rem,  #D0A62E 8.0rem,  #0E8FD6 8.0rem,  #0E8FD6 8.8rem,  #CB6371 8.8rem,  #CB6371 9.6rem,
+        #408AE9 9.6rem,  #408AE9 10.4rem, #C96474 10.4rem, #C96474 11.2rem, #DFE7F4 11.2rem, #DFE7F4 12.0rem,
+        #0D90D7 12.0rem, #0D90D7 12.8rem, #CA6774 12.8rem, #CA6774 13.6rem, #3A8BE6 13.6rem, #3A8BE6 14.4rem,
+        #CFA632 14.4rem, #CFA632 15.2rem, #0B91D7 15.2rem, #0B91D7 16.0rem, #CEA834 16.0rem, #CEA834 16.8rem,
+        #198FC8 16.8rem, #198FC8 17.6rem, #142C47 17.6rem, #142C47 18.4rem, #D2A631 18.4rem, #D2A631 19.2rem,
+        #3E8DE7 19.2rem, #3E8DE7 20.0rem, #E5ECF7 20.0rem, #E5ECF7 20.8rem, #CC6874 20.8rem, #CC6874 21.6rem,
+        #0C95D7 21.6rem, #0C95D7 22.4rem, #CF6671 22.4rem, #CF6671 23.2rem, #172945 23.2rem, #172945 24.0rem,
+        #3B8CE6 24.0rem, #3B8CE6 24.8rem, #D2A831 24.8rem, #D2A831 25.6rem, #0C8FD7 25.6rem, #0C8FD7 26.4rem,
+        #CA6571 26.4rem, #CA6571 27.2rem, #0B8EDA 27.2rem, #0B8EDA 28.0rem, #E2EEFB 28.0rem, #E2EEFB 28.8rem,
+        #398CE9 28.8rem, #398CE9 29.6rem, #1092D5 29.6rem, #1092D5 30.4rem, #CC6670 30.4rem, #CC6670 31.2rem,
+        #0D94DB 31.2rem, #0D94DB 32.0rem, #D5A730 32.0rem, #D5A730 32.8rem, #3D8DEB 32.8rem, #3D8DEB 33.6rem,
+        #152942 33.6rem, #152942 34.4rem, #0D91D9 34.4rem, #0D91D9 35.2rem, #CC6571 35.2rem, #CC6571 36.0rem,
+        #428AEB 36.0rem, #428AEB 36.8rem, #D4A834 36.8rem, #D4A834 37.6rem, #3F8DE9 37.6rem, #3F8DE9 38.4rem,
+        #ECF0F7 38.4rem, #ECF0F7 39.2rem, #D3A933 39.2rem, #D3A933 40.0rem, #3E8DEC 40.0rem, #3E8DEC 40.8rem,
+        #D5A932 40.8rem, #D5A932 41.6rem, #3E8CEC 41.6rem, #3E8CEC 42.4rem, #D06674 42.4rem, #D06674 43.2rem,
+        #1A2844 43.2rem, #1A2844 44.0rem, #3E8CEE 44.0rem, #3E8CEE 44.8rem, #D4AB34 44.8rem, #D4AB34 45.6rem,
+        #3C8FEE 45.6rem, #3C8FEE 46.4rem, #0B95DC 46.4rem, #0B95DC 47.2rem, #D7AA33 47.2rem, #D7AA33 48.0rem,
+        #0B94DC 48.0rem, #0B94DC 48.8rem, #F0F1F6 48.8rem, #F0F1F6 49.6rem, #D6AA35 49.6rem, #D6AA35 50.4rem,
+        #3E8FEB 50.4rem, #3E8FEB 51.2rem, #D16772 51.2rem, #D16772 52.0rem, #0C91DC 52.0rem, #0C91DC 52.8rem,
+        #1A283B 52.8rem, #1A283B 53.6rem, #D8AB31 53.6rem, #D8AB31 54.4rem, #0A97DC 54.4rem, #0A97DC 55.2rem,
+        #D7AB32 55.2rem, #D7AB32 56.0rem, #F3F3F6 56.0rem, #F3F3F6 56.8rem, #D36770 56.8rem, #D36770 57.6rem,
+        #3C8FEB 57.6rem, #3C8FEB 58.4rem, #202B3D 58.4rem, #202B3D 59.2rem, #D1AD3C 59.2rem, #D1AD3C 60.0rem,
+        #4590EA 60.0rem, #4590EA 60.8rem, #D7AB32 60.8rem, #D7AB32 61.6rem, #D36974 61.6rem, #D36974 62.4rem,
+        #0C94D3 62.4rem, #0C94D3 63.2rem, #D8AA34 63.2rem, #D8AA34 64.0rem, #0D94DB 64.0rem, #0D94DB 64.8rem,
+        #F1F4F3 64.8rem, #F1F4F3 65.6rem, #D7AD31 65.6rem, #D7AD31 66.4rem, #0D98DC 66.4rem, #0D98DC 67.2rem,
+        #D7AD34 67.2rem, #D7AD34 68.0rem, #4692EC 68.0rem, #4692EC 68.8rem, #D56875 68.8rem, #D56875 69.6rem,
+        #242E3E 69.6rem, #242E3E 70.4rem, #D6AE33 70.4rem, #D6AE33 71.2rem, #0A9CE0 71.2rem, #0A9CE0 72.0rem,
+        #D7AF34 72.0rem, #D7AF34 72.8rem, #4A94F0 72.8rem, #4A94F0 73.6rem, #D26D78 73.6rem, #D26D78 74.4rem,
+        #4894EF 74.4rem, #4894EF 75.2rem, #0A98DC 75.2rem, #0A98DC 76.0rem, #EEF5F7 76.0rem, #EEF5F7 76.8rem,
+        #0B98DC 76.8rem, #0B98DC 77.6rem, #DAAE35 77.6rem, #DAAE35 78.4rem, #3C96EA 78.4rem, #3C96EA 79.2rem,
+        #0B98DD 79.2rem, #0B98DD 80.0rem, #D16E7C 80.0rem, #D16E7C 80.8rem, #4294EC 80.8rem, #4294EC 81.6rem,
+        #1D2D4A 81.6rem, #1D2D4A 82.4rem, #D56C7C 82.4rem, #D56C7C 83.2rem, #4495EE 83.2rem, #4495EE 84.0rem,
+        #DBB03D 84.0rem, #DBB03D 84.8rem, #4796EA 84.8rem, #4796EA 85.6rem, #0E99E3 85.6rem, #0E99E3 86.4rem,
+        #309BF0 86.4rem, #309BF0 87.2rem);
+    background-size: 87.2rem 100%;
+    background-repeat: no-repeat;
+}
+#riley_foo {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    background-color: #0CC;
+    bottom: 0;
+    left: 50%;
+    @media @mq_2x_small {
+    }
+    @media @mq_x_small {
+        left: 83.3333%;
+        margin-left: 0;
+    }
+    @media @mq_small {
+        left: 83.3333%;
+        margin-left: 0;
+    }
+    @media @mq_medium {
+        left: 50%;
+        margin-left: 48rem;
+        background-position: -16rem 0;
+    }
+    @media @mq_large {
+        margin-left: 57.6rem;
+        background-position: -19.2rem 0;
+    }
+    @media @mq_x_large {
+        margin-left: 64.8rem;
+        background-position: -21.6rem 0;
     }
 }

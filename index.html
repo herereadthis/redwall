@@ -43,11 +43,9 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <meta name="p:domain_verify" content="642e03628ffc0809c6eab89aa14fb65b" />
 <!-- Friend of a Friend FOAF -->
     <link rel="foaf:primaryTopic" type="application/rdf+xml" title="FOAF" href="http://herereadthis.com/src/xml/foaf.rdf" />
-
-
-    <!-- Icons -->
-<!--     <link rel="shortcut icon" href="images/icons/fav.ico" sizes="16x16 32x32 48x48" />
-    <meta name="msapplication-TileColor" content="#F0443C" />
+<!-- Icons -->
+    <link rel="shortcut icon" href="/src/images/fav.ico" sizes="16x16 32x32 48x48" />
+<!--     <meta name="msapplication-TileColor" content="#F0443C" />
     <meta name="msapplication-TileImage" content="/images/icons/windows-tile-144x144.png" />
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icons/apple-touch-icon-152x152.png" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png" />
@@ -62,16 +60,42 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
 </head>
-<body>
+<body data-google-analytics="UA-37798496-1">
 
 
-<h1>Here, Read This</h1>
+<h1>Here, Read This!</h1>
 
 <header>
-    <span>&lt;!DOCTYPE html PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;</span>
+    <!--<span>&lt;!DOCTYPE html PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;</span>-->
     <div>
-        <div class="popup_box_simulator">
+        <div data-header-panel="1"><a href=""><img src="/src/images/fasionavenue_1918_figurinomatita_422x781.jpg" /></a></div>
+        <div class="popup_box_simulator" typeof="foaf:Person" resource="#/me/">
             <h2>Welcome to my site!</h2>
+            <p>My Name is
+                <span property="foaf:name">
+                    <span property="foaf:nick">Jimmy</span>
+                    <span property="foaf:family_name">Ha</span>.
+                </span>
+                <span property="foaf:givenname" content="James"></span>
+                <span property="foaf:logo" content="http://herereadthis.com/src/images/herereadthis_logo.svg"></span>
+                I 
+                <span property="v:title" content="UX Web Developer">make web pages</span>
+                <span resource="http://herereadthis.com/" property="v:url foaf:homepage"></span> and specialize in user interface development and Django environments. I live and play in the
+                <span property="v:Postal" resource="#/me/address/" typeof="v:Address">
+                    <span property="v:locality" content="Washington"></span>
+                    <span property="v:region">DC</span>
+                </span> metro area.
+                <span property="foaf:based_near" resource="#/me/geo/" typeof="geo:point" prefix="geo: http://www.w3.org/2003/01/geo/wgs84_pos#">
+                    <span property="geo:lat" content="38.886757"></span>
+                    <span property="geo:long" content="-77.041626"></span>
+                </span>
+                I do 
+                <span property="foaf:topic_interest">photography</span> with a Hasselblad camera, 
+                <span property="foaf:topic_interest" content="gardening">grow roses</span>, 
+                <span property="foaf:topic_interest" content="baking">bake pastries</span>, 
+                dance at <span property="foaf:topic_interest" content="Burning Man">Burner parties</span>,
+                and practice <span property="foaf:topic_interest">Kyudo</span>.
+                I am guilty of putting Sriracha on everything.</p>
             <a class="popup_button popup_close"><span></span></a>
             <a class="popup_button popup_resize"><span></span></a>
             <a class="popup_button popup_minimize"><span></span></a>
@@ -99,24 +123,32 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <hr class="rainbow_gradient" />
 
     </section>
-    <section style="text-align: center;">
+    <section>
+        <table class="old_school_table">
+            <tr>
+                <td>
+                    <div class="dancing_baby"></div>
+                    <p style="color: #FF0;text-align: center;">&amp;nbsp;</p>
+                <img src="/src/images/tripod_125x71.png" />
+                </td>
+                <td><img src="/src/images/power_rangers_500x375.gif" width="500" height="375" /></td>
+            </tr>
+        </table>
+        <hr class="rainbow_gradient" />
+    </section>
+    <section>
+        <div class="centered_image with_border">
+            <img src="/src/images/irene_430x464.png" width="215" height="232" />
+        </div>
 
-<img src="/src/images/irene_430x464.png" width="215" height="232" style="text-align: center;border: 0.2rem solid #00F;padding: 0.3rem;" />
-
-<hr class="rainbow_gradient" />
-
-
-<table class="old_school_table">
-    <tr>
-        <td>
-            <div class="dancing_baby"></div>
-            <p style="color: #FF0;text-align: center;">&amp;nbsp;</p>
-        <img src="/src/images/tripod_125x71.png" />
-        </td>
-        <td><img src="/src/images/power_rangers_500x375.gif" width="500" height="375" /></td>
-    </tr>
-</table>
-
+        <h3>Here are 5 rules for life:</h3>
+        <ul>
+            <li>The secret to communication is remembering that what the other person knows is different than what I know.</li>
+            <li>It’s okay to have issues; everyone has issues.</li>
+            <li>Acceptance does not require understanding.</li>
+            <li>If I see a problem, and the solution for the problem is for other people to change, then I am the problem.</li>
+            <li>I am the company I keep.</li>
+        </ul>
     </section>
 
 </article>
