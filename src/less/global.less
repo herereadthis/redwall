@@ -15,19 +15,29 @@ body {
 
     > h1 {
         position: absolute;
-        left: 50%;
-        top: 7.5rem;
         font-size: 4.5rem;
         line-height: 6rem;
         z-index: 5;
 
         @media @mq_2x_small {
-            margin-left: (-1 * @pw_2x_small / 2) + 1;
+            left: 0;
+            top: 7.5rem;
+            font-size: 4rem;
+            line-height: 6rem;
+            text-align: center;
+            width: @pw_2x_small;
         }
         @media @mq_x_small {
-            margin-left: (-1 * @pw_x_small / 2) + 1;
+            text-align: left;
+            width: @pw_x_small;
+            margin-left: 1.6rem;
         }
         @media @mq_small {
+            left: 50%;
+            top: 7.5rem;
+            font-size: 4.5rem;
+            line-height: 6rem;
+            width: auto;
             margin-left: (-1 * @pw_small * (4 / 12)) + 2.6;
         }
         @media @mq_medium {
