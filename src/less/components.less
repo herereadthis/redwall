@@ -652,6 +652,12 @@
         }
     }
 }
+.frames_arrows {
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url("@{img_path}win95_sprites.png");
+}
 .frames_scrollbar {
     position: absolute;
     top: 0.4rem;
@@ -664,10 +670,61 @@
         linear-gradient(45deg, #C0C0C0 25%, transparent 25%, transparent 75%, #C0C0C0 75%, #C0C0C0);
     background-size: 0.2rem 0.2rem;
     background-position: 0 0, 0.1rem 0.1rem;
+
+    .frames_arrows:first-of-type {
+        top: 0;
+        left: 0;
+    }
+    .frames_arrows:last-of-type {
+        bottom: 0;
+        left: 0;
+        background-position: 0rem -1.6rem;
+    }
 }
 .frames_scrollbar + .frames_scrollbar {
     right: 75%;
     margin-right: 0.8rem;
+
+    .frames_arrows:last-of-type {
+        bottom: 1.6rem;
+    }
+}
+.frames_horizontal_scroll {
+    position: absolute;
+    // width: 100px;
+    height: 1.6rem;
+    bottom: 0.6rem;
+    // width: 25%;
+    left: 0.4rem;
+    right: 75%;
+    background-color: #FFF;
+    background-image:
+        linear-gradient(0deg, #C0C0C0 0%, #C0C0C0 100%),
+        linear-gradient(45deg, #C0C0C0 25%, transparent 25%, transparent 75%, #C0C0C0 75%, #C0C0C0), 
+        linear-gradient(45deg, #C0C0C0 25%, transparent 25%, transparent 75%, #C0C0C0 75%, #C0C0C0);
+    background-size: 
+        2.4rem 1.6rem,
+        0.2rem 0.2rem,
+        0.2rem 0.2rem;
+    background-position:
+        100% 100%,
+        0 0,
+        0.1rem 0.1rem;
+    background-repeat:
+        no-repeat,
+        repeat,
+        repeat; 
+
+    .frames_arrows:first-of-type {
+        top: 0;
+        left: 0;
+        background-position: 0rem -3.2rem;
+    }
+    .frames_arrows:last-of-type {
+        top: 0;
+        right: 2.4rem;
+        background-position: 0rem -4.8rem;
+    }
 }
 .frames_divider {
     position: absolute;
