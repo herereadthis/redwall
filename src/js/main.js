@@ -11,15 +11,16 @@
         //     }
         // },
         paths: {
+            "ColorTuner": "color_tuner",
             "Analytics": "analytics",
             jquery: ['https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min', "lib/jquery.min"]
         }
     });
-    require(["jquery", "Analytics"], function($, Analytics) {
+    require(["jquery", "ColorTuner", "Analytics"], function($, ColorTuner, Analytics) {
         // if (Modernizr.touch === false) {
         //       HeadMore.init();
         // }
-        // Footsie.init();
+        ColorTuner.init();
         return Analytics.track();
     });
 }).call(this);

@@ -72,13 +72,13 @@ redwall
         * Linter is at [https://developers.facebook.com/tools/debug](https://developers.facebook.com/tools/debug)
         * [Documentation on Open Graph `prefix="og"` protocol](https://developers.facebook.com/docs/opengraphprotocol/)
         * curl `https://developers.facebook.com/tools/lint/?url=http%3A%2F%2Fherereadthis.com&format=json`
-    * **FOAF (Friend of a Friend)** is a vocabulary for identifying people and their relationships to their works and other people. [Go to FOAF + WebID Docs](https://github.com/herereadthis/herereadthis/blob/master/docs/foaf.md)
+    * **FOAF (Friend of a Friend)** is a vocabulary for identifying people and their relationships to their works and other people. [Go to FOAF + WebID Docs](https://github.com/herereadthis/redwall/blob/master/docs/foaf.md)
 * **Icons**
     * [Online favicon generation (.ICO format)](http://convertico.com)
     * [Icons for iOS (iPhone and iPad) at Apple Developers](http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 
 ### `<header role="banner" />` Header
-* `role="banner"` is a WAI-ARIA Landmark Role. See the [documentation](https://github.com/herereadthis/herereadthis/blob/master/docs/wai_aria.md) )
+* `role="banner"` is a WAI-ARIA Landmark Role. See the [documentation](https://github.com/herereadthis/redwall/blob/master/docs/wai_aria.md) )
 
 
 

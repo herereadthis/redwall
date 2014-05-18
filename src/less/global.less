@@ -13,41 +13,26 @@ body {
     font-size: 1em;
     line-height: 1;
 
-    > h1 {
-        position: absolute;
-        font-size: 4.5rem;
-        line-height: 6rem;
-        z-index: 5;
+    h1 {
+        line-height: 5rem;
+        padding: 1rem 0 0rem 0;
 
         @media @mq_2x_small {
-            left: 0;
-            top: 7.5rem;
             font-size: 4rem;
-            line-height: 6rem;
             text-align: center;
-            width: @pw_2x_small;
         }
         @media @mq_x_small {
             text-align: left;
-            width: @pw_x_small;
-            margin-left: 1.6rem;
+            margin-left: 1rem;
         }
         @media @mq_small {
-            left: 50%;
-            top: 7.5rem;
             font-size: 4.5rem;
-            line-height: 6rem;
-            width: auto;
-            margin-left: (-1 * @pw_small * (4 / 12)) + 2.6;
         }
         @media @mq_medium {
-            margin-left: (-1 * @pw_medium * (4 / 12)) + 2.6;
         }
         @media @mq_large {
-            margin-left: (-1 * @pw_large * (4 / 12)) + 2.6;
         }
         @media @mq_x_large {
-            margin-left: (-1 * @pw_x_large * (4 / 12)) + 2.6;
         }
     }
     > header {
