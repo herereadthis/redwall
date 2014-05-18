@@ -71,14 +71,16 @@ body {
             margin: 0 auto;
             position: relative;
             clear: both;
-            // overflow: auto;
 
+            &:last-of-type {
+                padding-bottom: 2rem;
+            }
         }
     }
     > footer { 
         background-image: url("@{img_path}fire_600x50.gif"), url("@{img_path}space_bg.gif");
         background-repeat: repeat-x, repeat;
-        background-position: 50% 100%, 0 0;
+        background-position: 0 100%, 0 0;
         padding: 0 0 5rem 0;
 
         > section {
@@ -99,6 +101,10 @@ h1, h2, h3, h4, p, img {
     margin: 0;
 }
 img {
+    display: block;
+    p & {
+        display: inline;
+    }
 }
 p {
     font: normal normal bold 18px/25px 'Microsoft Sans Serif', sans-serif;
