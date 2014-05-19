@@ -1,0 +1,197 @@
+
+
+.popup_box_simulator {
+    box-sizing: border-box;
+    position: relative;
+    min-height: 6rem;
+    margin-top: 5rem;
+    padding: 0.4rem 0.4rem 0.6rem 0.4rem;
+    background-color: #FFF;
+    background-image:
+        url("@{img_path}netscape_logo.png"),
+
+        linear-gradient(0deg, #000 0%, #000 100%),
+        linear-gradient(0deg, #000 0%, #000 100%),
+        linear-gradient(0deg, @wlg 0%, @wlg 100%),
+        linear-gradient(0deg, @wlg 0%, @wlg 100%),
+        linear-gradient(0deg, @wdg 0%, @wdg 100%),
+        linear-gradient(0deg, @wdg 0%, @wdg 100%),
+        linear-gradient(0deg, #FFF 0%, #FFF 100%),
+        linear-gradient(0deg, #FFF 0%, #FFF 100%),
+
+        linear-gradient(0deg, @wlg 0%, @wlg 100%),
+        linear-gradient(0deg, @wlg 0%, @wlg 100%),
+        linear-gradient(0deg, @wlg 0%, @wlg 100%),
+        linear-gradient(0deg, #000080 0%, #000080 100%),
+        linear-gradient(0deg, @wlg 0%, @wlg 100%),
+
+        linear-gradient(0deg, #FFF 0%, #FFF 100%),
+        linear-gradient(0deg, #FFF 0%, #FFF 100%),
+        linear-gradient(0deg, @wdg 0%, @wdg 100%),
+        linear-gradient(0deg, @wdg 0%, @wdg 100%),
+        linear-gradient(0deg, @wlg 0%, @wlg 100%),
+        linear-gradient(0deg, @wlg 0%, @wlg 100%),
+        linear-gradient(0deg, #000 0%, #000 100%),
+        linear-gradient(0deg, #000 0%, #000 100%),
+
+
+        url("@{img_path}cloud_216x144.gif");
+    background-size:
+        1.6rem 1.6rem,
+
+        100% 0.1rem,0.1rem 100%,100% 0.1rem,0.1rem 100%,
+        100% 0.2rem,0.2rem 100%,100% 0.2rem,0.2rem 100%,
+
+        100% 0.4rem,0.4rem 100%,0.4rem 100%,100% 1.8rem,100% 2.3rem,
+
+        100% 0.5rem,0.5rem 100%,100% 2.4rem,0.5rem 100%,
+        100% 0.6rem,0.6rem 100%,100% 2.5rem,0.6rem 100%,
+
+        21.6rem 14.4rem;
+    background-position:
+        0.6rem 0.5rem,
+
+        0% 100%,100% 0,0 0,0 0,
+        0% 100%,100% 0,0 0,0 0,
+
+        0% 100%,100% 0,0 0,0 0.4rem,0 0,
+
+        0% 100%,100% 0,0 0,0 0,
+        0% 100%,100% 0,0 0,0 0,
+
+        0 0;
+    background-repeat:
+        no-repeat, no-repeat,
+        no-repeat, no-repeat, no-repeat, no-repeat,
+        no-repeat, no-repeat, no-repeat, no-repeat,
+        no-repeat, no-repeat, no-repeat, no-repeat,
+        no-repeat, no-repeat, no-repeat, no-repeat,
+        no-repeat, no-repeat, no-repeat, no-repeat,
+
+        repeat;
+
+    > p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 0 1rem 2rem;
+
+        &:last-of-type {
+            margin-bottom: 0.4rem;
+        }
+
+    }
+
+    > span:first-child {
+        display: block;
+        margin: 0.1rem 0 0.1rem 2.2rem;
+        color: #FFF;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    body > header & {
+        margin-right: 1em;
+        margin-left: 1em;
+
+        @media @mq_2x_small {
+            float: none;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        @media @mq_small {
+            float: left;
+            margin-left: 1em;
+            width: ((10 / 12) * @pw_small) - 2;
+        }
+        @media @mq_medium {
+            width: ((10 / 12) * @pw_medium) - 1;
+        }
+        @media @mq_large {
+            width: ((10 / 12) * @pw_large) - 2;
+        }
+        @media @mq_x_large {
+            width: ((10 / 12) * @pw_x_large) - 2;
+        }
+    }
+}
+.popup_button, .popup_button > span {
+    display: block;
+    width: 1.6rem;
+    height: 1.4rem;
+    background-repeat: no-repeat;
+}
+.popup_button {
+    position: absolute;
+    top: 0.6rem;
+    background-color: @wlg;
+    background-image:
+        linear-gradient(0deg, #000000 0%, #000000 100%),
+        linear-gradient(0deg, #000000 0%, #000000 100%),
+        linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%),
+        linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%),
+        linear-gradient(0deg, @wdg 0%, @wdg 100%),
+        linear-gradient(0deg, @wdg 0%, @wdg 100%);
+    background-position:
+        0% 100%,100% 0,0 0,0 0,0% 100%,100% 0;
+    background-size:
+        100% 0.1rem,0.1rem 100%,100% 0.1rem,0.1rem 100%,100% 0.2rem,0.2rem 100%;
+
+    > span {
+
+    }
+}
+.popup_close {
+    right: 0.6rem;
+
+    > span {
+        background-image:
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+
+            linear-gradient(0deg, #000000 0%, #000000 100%);
+        background-position:
+            0.7rem 0.4rem,0.7rem 0.8rem,0.6rem 0.3rem,0.6rem 0.9rem,
+            0.9rem 0.6rem,0.6rem 0.6rem,1.0rem 0.5rem,
+            0.5rem 0.5rem,1.1rem 0.4rem,0.4rem 0.4rem,
+            0.4rem 0.3rem;
+        background-size:
+            0.2rem 0.1rem,0.2rem 0.1rem,0.4rem 0.1rem,0.4rem 0.1rem,
+            0.1rem 0.1rem,0.1rem 0.1rem,0.1rem 0.3rem,
+            0.1rem 0.3rem,0.1rem 0.5rem,0.1rem 0.5rem,
+            0.8rem 0.7rem;
+    }
+}
+.popup_resize {
+    right: 2.4rem;
+
+    > span {
+        background-image:
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%),
+            linear-gradient(0deg, @wdg 0%, @wdg 100%),
+            linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%);
+        background-position:
+            0.5rem 0.5rem,0.4rem 0.4rem,0.3rem 0.2rem,0.4rem 0.3rem;
+        background-size:
+            0.6rem 0.5rem,0.7rem 0.6rem,0.9rem 0.9rem,0.9rem 0.9rem;
+    }
+}
+.popup_minimize {
+    right: 4rem;
+
+    > span {
+        background-image:
+            linear-gradient(0deg, #000000 0%, #000000 100%);
+        background-position:
+            0.4rem 0.9rem;
+        background-size: 0.6rem 0.2rem;
+    }
+}
