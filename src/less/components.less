@@ -252,11 +252,77 @@
 }
 
 
+.icon_box {
+    width: 4rem;
+    height: 4rem;
+    background-image:
+        linear-gradient(0deg, #BEBEBE 0%, #BEBEBE 100%),
+        linear-gradient(0deg, #E6E6FA 0%, #E6E6FA 100%),
+        linear-gradient(0deg, #E6E6FA 0%, #E6E6FA 100%),
+        linear-gradient(0deg, #2F4F4F 0%, #2F4F4F 100%),
+        linear-gradient(0deg, #BEBEBE 0%, #BEBEBE 100%),
+        linear-gradient(0deg, #2F4F4F 0%, #2F4F4F 100%),
+        linear-gradient(0deg, #2F4F4F 0%, #2F4F4F 100%),
+        linear-gradient(0deg, #2F4F4F 0%, #2F4F4F 100%),
+        linear-gradient(0deg, #2F4F4F 0%, #2F4F4F 100%),
+        linear-gradient(0deg, #E6E6FA 0%, #E6E6FA 100%);
+    background-size:
+        3.2rem 3.2rem, 3.4rem 0.1rem, 0.1rem 3.4rem, 3.4rem 3.4rem, 3.6rem 3.6rem,
+        4rem 0.1rem, 3.8rem 0.1rem, 0.1rem 4rem, 0.1rem 3.8rem, 4rem 4rem;
+    background-position:
+        0.4rem 0.4rem, 0.3rem 3.6rem, 3.6rem 0.3rem, 0.3rem 0.3rem, 0.2rem 0.2rem,
+        0rem 3.9rem, 0.1rem 3.8rem, 3.9rem 0rem, 3.8rem 0.1rem, 0 0;
+    background-repeat: no-repeat;
+}
+
+@icon_size_retina: 10rem 20rem;
+@icon_size_full: 20rem 40rem;
+[data-sprite] {
+    background-image: url("@{img_path}icon_logo_sprites.png");
+    background-repeat: no-repeat;
+}
+[data-sprite="email"] {
+    background-position: 0 0;
+    background-size: @icon_size_retina;
+    width: 3.2rem;
+    height: 3.2rem;
+
+    .icon_box & {
+        width: 4rem;
+        height: 4rem;
+        background-position: 0.4rem 0.4rem;
+    }
+}
+[data-sprite="netscape_8831"] {
+    background-size: @icon_size_retina;
+    width: 8.8rem;
+    height: 3.1rem;
+    background-position: 0rem -10rem;
+}
+[data-sprite="broken_image"] {
+    background-size: @icon_size_retina;
+    background-position: 0.3rem -4.7rem;
+    width: 31px;
+    height: 32px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #808080 #C0C0C0 #C0C0C0 #808080;
+    padding: 0.3rem 0.4rem 0.3rem 0.3rem;
+
+}
+[data-sprite="tripod_125x71"] {
+    background-size: @icon_size_full;
+    width: 12.5rem;
+    height: 7.1rem;
+    background-position: 0rem -30rem;
+}
+
+
 
 .centered_image {
     margin: 0 auto;
 
-    img {
+    img, [data-sprite] {
         margin: 0 auto;
     }
 }
@@ -272,15 +338,6 @@
             #008dff 20%, #00cad9 25%, #01f88f 30%, #00ff3f 35%, #00f609 40%, #00d400 45%,
             #00a400 50%, #0a6900 55%, #502a00 60%, #a80000 65%, #f80000 70%, #ff0000 75%,
             #ff1400 80%, #ff8c00 85%, #ffe600 90%, #ffff2e 95%, #FFFFFF 100%);
-}
-
-.broken_image {
-    width: 31px;
-    height: 32px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #808080 #C0C0C0 #C0C0C0 #808080;
-    padding: 3px 4px 3px 3px;
 }
 
 .dancing_baby {
