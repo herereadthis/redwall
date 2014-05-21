@@ -89,17 +89,16 @@
         line-height: 1.6rem;
     }
     body > header & {
-        margin-right: 1em;
-        margin-left: 1em;
 
         @media @mq_2x_small {
             float: none;
-            margin-right: 0;
             margin-left: 0;
+            margin-bottom: 1rem;
         }
         @media @mq_small {
+            margin-bottom: 0;
+            margin-left: 1rem;
             float: left;
-            margin-left: 1em;
             width: ((10 / 12) * @pw_small) - 2;
         }
         @media @mq_medium {
