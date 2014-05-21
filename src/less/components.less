@@ -43,6 +43,60 @@
     }
 }
 
+
+#email_joke {
+    margin: 0 auto;
+    
+    p {
+        color: #FF0;
+        padding: 0 0.5rem;
+    }
+    @media @mq_2x_small {
+        display: block;
+        position: relative;
+        height: 5rem;
+
+        > div {
+            position: absolute;
+            display: block;
+            text-align: left;
+            left: 4rem;
+        }
+        div.icon_box {
+            left: 0;
+            margin-top: 0.5rem;
+
+            + div {
+                top: 2.5rem;
+            }
+        }
+        + * {
+            clear: both;
+        }
+    }
+    @media @mq_x_small {
+        width: 32rem;
+    }
+    @media @mq_small {
+        height: auto;
+        text-align: center;
+        display: table;
+        width: auto;
+
+        > div {
+            position: static;
+            float: none;
+            display: table-cell;
+            vertical-align: top;
+            padding-top: 1.5rem;
+        }
+        div.icon_box {
+            padding-top: 0;
+            margin-top: 0;
+        }
+    }
+}
+
 .geocities_me {
     h3, p, li {
         color: #FF0;
