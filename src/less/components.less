@@ -323,8 +323,13 @@
             text-decoration: underline;
         }
         &:nth-child(1) {
-            width: 23%;
 
+            @media @mq_2x_small {
+                width: 50%;
+            }
+            @media @mq_small {
+                width: 23%;
+            }
             > span {
                 background-color: #0F6;
                 color: #F0F;
@@ -335,8 +340,13 @@
             }
         }
         &:nth-child(2) {
-            width: 20%;
 
+            @media @mq_2x_small {
+                width: 50%;
+            }
+            @media @mq_small {
+                width: 20%;
+            }
             > span {
                 background-color: #906;
                 color: #FCC;
@@ -350,8 +360,13 @@
             }
         }
         &:nth-child(3){
-            width: 30%;
-            
+
+            @media @mq_2x_small {
+                width: 50%;
+            }
+            @media @mq_small {
+                width: 30%;
+            }
             > span {
                 background-color: #F0C;
                 color: #6F0;
@@ -365,8 +380,13 @@
             }
         }
         &:nth-child(4) {
-            width: 27%;
-            
+
+            @media @mq_2x_small {
+                width: 50%;
+            }
+            @media @mq_small {
+                width: 27%;
+            }
             > span {
                 background-color: #C9F;
                 color: #6FC;
