@@ -441,16 +441,16 @@ body > header .dancing_baby {
     width: auto;
   }
 }
-.social_fu {
+[data-module="social_fu"] {
   overflow: auto;
   padding: 0 0 2rem 0;
 }
-.social_fu li {
+[data-module="social_fu"] li {
   display: block;
   float: left;
   box-sizing: border-box;
 }
-.social_fu li > span {
+[data-module="social_fu"] li > span {
   display: block;
   font-size: 2rem;
   line-height: 2.5rem;
@@ -461,81 +461,85 @@ body > header .dancing_baby {
   font-weight: bold;
   text-decoration: underline;
 }
+[data-module="social_fu"] li > span:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
 @media only screen and (min-width: 320px) {
-  .social_fu li:nth-child(1) {
+  [data-module="social_fu"] li:nth-child(1) {
     width: 50%;
   }
 }
 @media only screen and (min-width: 768px) {
-  .social_fu li:nth-child(1) {
+  [data-module="social_fu"] li:nth-child(1) {
     width: 23%;
   }
 }
-.social_fu li:nth-child(1) > span {
+[data-module="social_fu"] li:nth-child(1) > span {
   background-color: #0F6;
   color: #F0F;
 }
-.social_fu li:nth-child(1) > span span:before {
+[data-module="social_fu"] li:nth-child(1) > span span:before {
   content: "Click HERE for ";
 }
 @media only screen and (min-width: 320px) {
-  .social_fu li:nth-child(2) {
+  [data-module="social_fu"] li:nth-child(2) {
     width: 50%;
   }
 }
 @media only screen and (min-width: 768px) {
-  .social_fu li:nth-child(2) {
+  [data-module="social_fu"] li:nth-child(2) {
     width: 20%;
   }
 }
-.social_fu li:nth-child(2) > span {
+[data-module="social_fu"] li:nth-child(2) > span {
   background-color: #906;
   color: #FCC;
 }
-.social_fu li:nth-child(2) > span span:before {
+[data-module="social_fu"] li:nth-child(2) > span span:before {
   content: "My ";
 }
-.social_fu li:nth-child(2) > span span:after {
+[data-module="social_fu"] li:nth-child(2) > span span:after {
   content: ": click here....";
 }
 @media only screen and (min-width: 320px) {
-  .social_fu li:nth-child(3) {
+  [data-module="social_fu"] li:nth-child(3) {
     width: 50%;
   }
 }
 @media only screen and (min-width: 768px) {
-  .social_fu li:nth-child(3) {
+  [data-module="social_fu"] li:nth-child(3) {
     width: 30%;
   }
 }
-.social_fu li:nth-child(3) > span {
+[data-module="social_fu"] li:nth-child(3) > span {
   background-color: #F0C;
   color: #6F0;
 }
-.social_fu li:nth-child(3) > span span:before {
+[data-module="social_fu"] li:nth-child(3) > span span:before {
   content: "CLONE my *";
 }
-.social_fu li:nth-child(3) > span span:after {
+[data-module="social_fu"] li:nth-child(3) > span span:after {
   content: " Repo* today!";
 }
 @media only screen and (min-width: 320px) {
-  .social_fu li:nth-child(4) {
+  [data-module="social_fu"] li:nth-child(4) {
     width: 50%;
   }
 }
 @media only screen and (min-width: 768px) {
-  .social_fu li:nth-child(4) {
+  [data-module="social_fu"] li:nth-child(4) {
     width: 27%;
   }
 }
-.social_fu li:nth-child(4) > span {
+[data-module="social_fu"] li:nth-child(4) > span {
   background-color: #C9F;
   color: #6FC;
 }
-.social_fu li:nth-child(4) > span span:after {
+[data-module="social_fu"] li:nth-child(4) > span span:after {
   content: " - please click here~~";
 }
-.social_fu a {
+[data-module="social_fu"] a {
   display: none;
 }
 .popup_box_simulator {

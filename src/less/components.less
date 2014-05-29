@@ -302,7 +302,7 @@
 
 
 
-.social_fu {
+[data-module="social_fu"] {
     overflow: auto;
     padding: 0 0 2rem 0;
 
@@ -321,6 +321,11 @@
             font-family: "Microsoft Sans Serif", serif;
             font-weight: bold;
             text-decoration: underline;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
         }
         &:nth-child(1) {
 
