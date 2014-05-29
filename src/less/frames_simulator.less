@@ -38,6 +38,25 @@
         0 0,0 0,100% 0%,0% 100%,
         0 0,0 0;
     background-repeat: no-repeat;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0.3rem;
+        right: 75%;
+        bottom: 0.4rem;
+        width: 0.8rem;
+        background-color: #FFF;
+        background-image:
+            linear-gradient(90deg, @wlg 0.0rem, @wlg 0.1rem,
+                #FFF 0.1rem, #FFF 0.2rem, @wlg 0.2rem, @wlg 0.4rem,
+                @wdg 0.4rem, @wdg 0.5rem, #000 0.5rem);
+        background-size:
+            0.6rem 100%;
+        background-position:
+            0.1rem 0;
+        background-repeat: no-repeat;
+    }
 }
 .frames_column {
     display: table-cell;
@@ -126,11 +145,18 @@
     background-size: 0.2rem 0.2rem;
     background-position: 0 0, 0.1rem 0.1rem;
 
-    .frames_arrows:first-of-type {
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url("@{img_path}win95_sprites.png");
+    }
+    &:before {
         top: 0;
         left: 0;
     }
-    .frames_arrows:last-of-type {
+    &:after {
         bottom: 0;
         left: 0;
         background-position: -1.6rem 0;
@@ -140,7 +166,7 @@
     right: 75%;
     margin-right: 0.8rem;
 
-    .frames_arrows:last-of-type {
+    &:after {
         bottom: 1.6rem;
     }
 }
@@ -168,33 +194,23 @@
         repeat,
         repeat; 
 
-    .frames_arrows:first-of-type {
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url("@{img_path}win95_sprites.png");
+    }
+    &:before {
         top: 0;
         left: 0;
         background-position: -3.2rem 0;
     }
-    .frames_arrows:last-of-type {
+    &:after {
         top: 0;
         right: 2.4rem;
         background-position: -4.8rem 0;
     }
-}
-.frames_divider {
-    position: absolute;
-    top: 0.3rem;
-    right: 75%;
-    bottom: 0.4rem;
-    width: 0.8rem;
-    background-color: #FFF;
-    background-image:
-        linear-gradient(90deg, @wlg 0.0rem, @wlg 0.1rem,
-            #FFF 0.1rem, #FFF 0.2rem, @wlg 0.2rem, @wlg 0.4rem,
-            @wdg 0.4rem, @wdg 0.5rem, #000 0.5rem);
-    background-size:
-        0.6rem 100%;
-    background-position:
-        0.1rem 0;
-    background-repeat: no-repeat;
 }
 .frames_start_bar {
     height: 1.7rem;
