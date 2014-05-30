@@ -323,8 +323,24 @@
             text-decoration: underline;
 
             &:hover {
+                margin: 0 0.9rem;
+                padding: 0 0.1rem;
                 cursor: pointer;
                 text-decoration: none;
+            }
+            &:active {
+                @media @mq_2x_small {
+                    margin: 0 0.5rem;
+                    padding: 0 0.5rem;
+                }
+                @media @mq_small {
+                    margin: 0 0.6rem;
+                    padding: 0 0.4rem;
+                }
+                @media @mq_medium {
+                    margin: 0 0.7rem;
+                    padding: 0 0.3rem;
+                }
             }
         }
         &:nth-child(1) {
@@ -339,6 +355,10 @@
                 background-color: #0F6;
                 color: #F0F;
 
+                &:hover {
+                    color: #F3F;
+                    background-color: #0E3;
+                }
                 span:before {
                     content: "Click HERE for ";
                 }
@@ -356,6 +376,10 @@
                 background-color: #906;
                 color: #FCC;
 
+                &:hover {
+                    color: #FDD;
+                    background-color: #903;
+                }
                 span:before {
                     content: "My ";
                 }
@@ -376,6 +400,10 @@
                 background-color: #F0C;
                 color: #6F0;
 
+                &:hover {
+                    color: #9F0;
+                    background-color: #E09;
+                }
                 span:before {
                     content: "CLONE my *";
                 }
@@ -396,6 +424,10 @@
                 background-color: #C9F;
                 color: #6FC;
 
+                &:hover {
+                    color: #9FD;
+                    background-color: #96F;
+                }
                 span:after {
                     content: " - please click here~~";
                 }

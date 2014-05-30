@@ -462,8 +462,28 @@ body > header .dancing_baby {
   text-decoration: underline;
 }
 [data-module="social_fu"] li > span:hover {
+  margin: 0 0.9rem;
+  padding: 0 0.1rem;
   cursor: pointer;
   text-decoration: none;
+}
+@media only screen and (min-width: 320px) {
+  [data-module="social_fu"] li > span:active {
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  [data-module="social_fu"] li > span:active {
+    margin: 0 0.6rem;
+    padding: 0 0.4rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  [data-module="social_fu"] li > span:active {
+    margin: 0 0.7rem;
+    padding: 0 0.3rem;
+  }
 }
 @media only screen and (min-width: 320px) {
   [data-module="social_fu"] li:nth-child(1) {
@@ -478,6 +498,10 @@ body > header .dancing_baby {
 [data-module="social_fu"] li:nth-child(1) > span {
   background-color: #0F6;
   color: #F0F;
+}
+[data-module="social_fu"] li:nth-child(1) > span:hover {
+  color: #F3F;
+  background-color: #0E3;
 }
 [data-module="social_fu"] li:nth-child(1) > span span:before {
   content: "Click HERE for ";
@@ -495,6 +519,10 @@ body > header .dancing_baby {
 [data-module="social_fu"] li:nth-child(2) > span {
   background-color: #906;
   color: #FCC;
+}
+[data-module="social_fu"] li:nth-child(2) > span:hover {
+  color: #FDD;
+  background-color: #903;
 }
 [data-module="social_fu"] li:nth-child(2) > span span:before {
   content: "My ";
@@ -516,6 +544,10 @@ body > header .dancing_baby {
   background-color: #F0C;
   color: #6F0;
 }
+[data-module="social_fu"] li:nth-child(3) > span:hover {
+  color: #9F0;
+  background-color: #E09;
+}
 [data-module="social_fu"] li:nth-child(3) > span span:before {
   content: "CLONE my *";
 }
@@ -535,6 +567,10 @@ body > header .dancing_baby {
 [data-module="social_fu"] li:nth-child(4) > span {
   background-color: #C9F;
   color: #6FC;
+}
+[data-module="social_fu"] li:nth-child(4) > span:hover {
+  color: #9FD;
+  background-color: #96F;
 }
 [data-module="social_fu"] li:nth-child(4) > span span:after {
   content: " - please click here~~";
