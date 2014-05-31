@@ -860,14 +860,15 @@ body > header .dancing_baby {
 }
 @media only screen and (min-width: 320px) {
   #frames_foo:after {
+    display: none;
     background-image: linear-gradient(90deg, #c0c0c0 0rem, #c0c0c0 0.1rem, #ffffff 0.1rem, #ffffff 0.2rem);
     background-size: 0.2rem 100%;
     background-position: 0.1rem 0;
-    display: none;
   }
 }
 @media only screen and (min-width: 768px) {
   #frames_foo:after {
+    display: block;
     background-image: linear-gradient(90deg, #c0c0c0 0rem, #c0c0c0 0.1rem, #ffffff 0.1rem, #ffffff 0.2rem, #c0c0c0 0.2rem, #c0c0c0 0.4rem, #808080 0.4rem, #808080 0.5rem, #000000 0.5rem);
     background-size: 0.6rem 100%;
     background-position: 0.1rem 0;
