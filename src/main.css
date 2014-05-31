@@ -947,12 +947,20 @@ body > header .dancing_baby {
   left: 0;
   background-position: -1.6rem 0;
 }
+.frames_scrollbar span {
+  top: 1.6rem;
+  bottom: 33%;
+  width: 1.6rem;
+}
 .frames_scrollbar + .frames_scrollbar {
   right: 75%;
   margin-right: 0.8rem;
 }
 .frames_scrollbar + .frames_scrollbar:after {
   bottom: 1.6rem;
+}
+.frames_scrollbar + .frames_scrollbar span {
+  bottom: 67%;
 }
 .frames_horizontal_scroll {
   position: absolute;
@@ -987,6 +995,35 @@ body > header .dancing_baby {
   top: 0;
   right: 2.4rem;
   background-position: -4.8rem 0;
+}
+.frames_horizontal_scroll span {
+  left: 1.6rem;
+  right: 25%;
+  height: 1.6rem;
+}
+.frames_scrollbar span,
+.frames_horizontal_scroll span {
+  position: absolute;
+  display: block;
+  background-color: #C0C0C0;
+  background-image: linear-gradient(0deg, #000000 0, #000000 100%), linear-gradient(0deg, #000000 0, #000000 100%), linear-gradient(0deg, #c0c0c0 0, #c0c0c0 100%), linear-gradient(0deg, #c0c0c0 0, #c0c0c0 100%), linear-gradient(0deg, #808080 0, #808080 100%), linear-gradient(0deg, #808080 0, #808080 100%), linear-gradient(0deg, #ffffff 0, #ffffff 100%), linear-gradient(0deg, #ffffff 0, #ffffff 100%);
+  background-size: 100% 0.1rem,
+            0.1rem 100%,
+            100% 0.1rem,
+            0.1rem 100%,
+            100% 0.2rem,
+            0.2rem 100%,
+            100% 0.2rem,
+            0.2rem 100%;
+  background-position: 0 100%,
+            100% 0,
+            0 0,
+            0 0,
+            0 100%,
+            100% 0,
+            0 0,
+            0 0;
+  background-repeat: no-repeat;
 }
 .frames_start_bar {
   height: 1.7rem;
