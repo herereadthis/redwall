@@ -1078,22 +1078,10 @@ body > header .dancing_baby {
   display: block;
   background-color: #C0C0C0;
   background-image: linear-gradient(0deg, #000000 0, #000000 100%), linear-gradient(0deg, #000000 0, #000000 100%), linear-gradient(0deg, #c0c0c0 0, #c0c0c0 100%), linear-gradient(0deg, #c0c0c0 0, #c0c0c0 100%), linear-gradient(0deg, #808080 0, #808080 100%), linear-gradient(0deg, #808080 0, #808080 100%), linear-gradient(0deg, #ffffff 0, #ffffff 100%), linear-gradient(0deg, #ffffff 0, #ffffff 100%);
-  background-size: 100% 0.1rem,
-            0.1rem 100%,
-            100% 0.1rem,
-            0.1rem 100%,
-            100% 0.2rem,
-            0.2rem 100%,
-            100% 0.2rem,
-            0.2rem 100%;
-  background-position: 0 100%,
-            100% 0,
-            0 0,
-            0 0,
-            0 100%,
-            100% 0,
-            0 0,
-            0 0;
+  background-size: 100% 0.1rem, 0.1rem 100%, 100% 0.1rem, 0.1rem 100%,
+            100% 0.2rem, 0.2rem 100%, 100% 0.2rem, 0.2rem 100%;
+  background-position: 0 100%, 100% 0, 0 0, 0 0,
+            0 100%, 100% 0, 0 0, 0 0;
   background-repeat: no-repeat;
 }
 .frames_start_bar {
