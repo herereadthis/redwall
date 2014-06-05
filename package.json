@@ -1,0 +1,26 @@
+{
+  "name": "redwall",
+  "version": "0.0.1",
+  "description": "Here, Read This",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/herereadthis/redwall.git"
+  },
+  "author": "Jimmy Ha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herereadthis/redwall/issues"
+  },
+  "homepage": "https://github.com/herereadthis/redwall",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.4.0"
+  }
+}
