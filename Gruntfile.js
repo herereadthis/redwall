@@ -6,15 +6,23 @@ module.exports = function(grunt) {
     grunt.initConfig({
         // imports the JSON metadata stored in package.json
         pkg: grunt.file.readJSON('package.json'),
-        uglify: {
+        connect: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                livereload: 35729,
+                port: 9000,
+                // base: 'www-root',
+                hostname: 'localhost'
             },
-            build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+            livereload: {
+                options: {
+                    passphrase: 'grunt',
+                    open: 'http://localhost:9000',
+                    // open: true,
+                    base: './src/index.html'
+                }
             }
         },
+        // compiles LESS file to minified CSS
         less: {
             development: {
                 options: {
@@ -28,16 +36,38 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            build: {
+                src: 'src/<%= pkg.name %>.js',
+                dest: 'build/<%= pkg.name %>.min.js'
+            }
+        },
         watch: {
-            files: "./src/less/*",
-            tasks: ["less"]
+            // runs less task when any less files change
+            less: {
+                files: "./src/less/*",
+                tasks: ["less"]
+            },
+            html: {
+                files: "**/*.html"
+            }
         }
     });
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+
     grunt.registerTask('default', [
         // 'uglify'
         'watch'
+    ]);
+
+    grunt.registerTask('devserver', [
+        // 'uglify'
+        'connect:livereload'
     ]);
 };
