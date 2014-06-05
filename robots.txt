@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: http://herereadthis.com/src/xml/sitemap.xml

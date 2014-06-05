@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>http://herereadthis.com/</loc>
+		<lastmod>2014-06-04</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+		<!-- PageMap Schema: https://developers.google.com/custom-search/docs/structured_data#pagemaps -->
+		<PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
+			<DataObject type="thumbnail">
+				<Attribute name="src">http://herereadthis.com/src/images/hereradthis_logo_540x540.png</Attribute>
+				<Attribute name="width">540</Attribute>
+				<Attribute name="height">540</Attribute>
+			</DataObject>
+		</PageMap>
+	</url>
+	<url>
+		<loc>http://herereadthis.com/foaf.rdf</loc>
+		<lastmod>2013-01-20</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+</urlset> 
