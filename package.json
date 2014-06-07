@@ -2,7 +2,10 @@
   "name": "redwall",
   "version": "0.0.1",
   "description": "Here, Read This",
-  "main": "index.html",
+  "keywords": [
+    "less",
+    "require"
+  ],
   "directories": {
     "doc": "docs"
   },
@@ -13,8 +16,17 @@
     "type": "git",
     "url": "https://github.com/herereadthis/redwall.git"
   },
-  "author": "Jimmy Ha",
-  "license": "ISC",
+  "author": {
+    "name": "Jimmy Ha",
+    "email": "herereadthis@gmail.com",
+    "url": "http://herereadthis.com/"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/herereadthis/redwall/blob/master/LICENSE"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/herereadthis/redwall/issues"
   },
