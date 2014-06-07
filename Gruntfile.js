@@ -26,10 +26,10 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    paths: ["./src/less"],
                     // yuicompress: true,
                     // compress: true,
-                    cleancss: true
+                    // cleancss: true,
+                    paths: ["./src/less"]
                 },
                 files: {
                     "./src/main.css": "./src/less/main.less"
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         watch: {
             // runs less task when any less files change
             less: {
-                files: "./src/less/*",
+                files: ["./src/less/*", "./bellmaker/src/less/*"],
                 tasks: ["less"]
             },
             html: {
