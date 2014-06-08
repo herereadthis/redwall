@@ -15,23 +15,29 @@
         width: 100%;
     }
 
-    @media @mq_2x_small {
+    @media @mq_baseline {
         display: none;
     }
-    @media @mq_small {
-        float: left;
+    @media @mq_x_small {
         display: block;
+        float: left;
+        margin: 6rem 0 0 0;
+        width: ((2 / 12) * @pw_x_small);
+    }
+    @media @mq_small {
+        margin: 5rem 0 0 1rem;
         width: ((2 / 12) * @pw_small) - 1;
-        margin-top: 1rem;
     }
     @media @mq_medium {
-        width: ((2 / 12) * @pw_medium) - 1;
+        margin-left: 0;
+        margin: 1rem 0 0 1rem;
+        width: ((2 / 12) * @pw_medium) - 2;
     }
     @media @mq_large {
-        width: ((2 / 12) * @pw_large) - 1;
+        width: ((2 / 12) * @pw_large) - 2;
     }
     @media @mq_x_large {
-        width: ((2 / 12) * @pw_x_large) - 1;
+        width: ((2 / 12) * @pw_x_large) - 2;
     }
 }
 
@@ -45,16 +51,16 @@
 
 
 #email_joke {
-    margin: 0 auto;
-
     p {
         color: #FF0;
         padding: 0 0.5rem;
     }
-    @media @mq_2x_small {
+    @media @mq_baseline {
         display: block;
         position: relative;
         height: 5rem;
+        margin-left: 1rem;
+        width: 31rem;
 
         > div {
             position: absolute;
@@ -74,10 +80,8 @@
             clear: both;
         }
     }
-    @media @mq_x_small {
-        width: 32rem;
-    }
-    @media @mq_small {
+    @media @mq_2x_small {
+        margin: 0 auto;
         height: auto;
         text-align: center;
         display: table;
@@ -215,10 +219,15 @@
     margin: 0 auto;
     background-image: url("@{img_path}dancing_baby_170x230.gif");
 
-    @media @mq_2x_small {
+    @media @mq_baseline {
         width: 8.5rem;
         height: 11.5rem;
         background-size: 8.5rem 11.5rem;
+    }
+    @media @mq_2x_small {
+        width: 10.2rem;
+        height: 13.8rem;
+        background-size: 10.2rem 13.8rem;
     }
     @media @mq_small {
         width: 17rem;
@@ -229,7 +238,7 @@
     body > header & {
         position: absolute;
         top: 0;
-        @media @mq_2x_small {
+        @media @mq_baseline {
             right: 0;
         }
         @media @mq_medium {
@@ -266,7 +275,7 @@
         border-style: solid;
         border-color: #515151 #CCC #CCC #515151;
     }
-    @media @mq_2x_small {
+    @media @mq_baseline {
         dispalay: block;
         width: 100%;
 
@@ -284,7 +293,7 @@
             max-width: 100%;
         }
     }
-    @media @mq_medium {
+    @media @mq_x_small {
         display: table;
 
         tr {
@@ -329,7 +338,7 @@
                 text-decoration: none;
             }
             &:active {
-                @media @mq_2x_small {
+                @media @mq_baseline {
                     margin: 0 0.5rem;
                     padding: 0 0.5rem;
                 }
@@ -345,10 +354,13 @@
         }
         &:nth-child(1) {
 
-            @media @mq_2x_small {
+            @media @mq_baseline {
                 width: 50%;
             }
             @media @mq_small {
+                width: 22%;
+            }
+            @media @mq_medium {
                 width: 23%;
             }
             > span {
@@ -366,10 +378,13 @@
         }
         &:nth-child(2) {
 
-            @media @mq_2x_small {
+            @media @mq_baseline {
                 width: 50%;
             }
             @media @mq_small {
+                width: 24%;
+            }
+            @media @mq_medium {
                 width: 20%;
             }
             > span {
@@ -390,10 +405,13 @@
         }
         &:nth-child(3){
 
-            @media @mq_2x_small {
+            @media @mq_baseline {
                 width: 50%;
             }
             @media @mq_small {
+                width: 28%;
+            }
+            @media @mq_medium {
                 width: 30%;
             }
             > span {
@@ -414,10 +432,13 @@
         }
         &:nth-child(4) {
 
-            @media @mq_2x_small {
+            @media @mq_baseline {
                 width: 50%;
             }
             @media @mq_small {
+                width: 26%;
+            }
+            @media @mq_medium {
                 width: 27%;
             }
             > span {

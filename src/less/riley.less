@@ -9,9 +9,13 @@
     h2 {
         position: absolute;
 
-        @media @mq_2x_small {
+        @media @mq_baseline {
             top: 0;
             left: 0;
+        }
+        @media @mq_small {
+            left: 50%;
+            margin-left: -0.5 * @pw_small; 
         }
         @media @mq_medium {
             left: 50%;
@@ -27,8 +31,11 @@
     section {
         padding-top: 5rem;
 
-        @media @mq_2x_small {
+        @media @mq_baseline {
             background-position: 100% 100%;
+        }
+        @media @mq_small {
+            background-position: ((5 / 6) * @pw_x_small) 0;
         }
         @media @mq_small {
             background-position: ((5 / 6) * @pw_small) 0;

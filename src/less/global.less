@@ -1,19 +1,24 @@
 
 body {
     h1 {
-        line-height: 5rem;
         padding: 1rem 0 0rem 0;
 
-        @media @mq_2x_small {
-            font-size: 4rem;
+        @media @mq_baseline {
+            font-size: 3rem;
+            line-height: 4rem;
             text-align: center;
         }
-        @media @mq_x_small {
-            text-align: left;
+        @media @mq_2x_small {
+            font-size: 4rem;
+            line-height: 5rem;
             margin-left: 1rem;
         }
+        @media @mq_x_small {
+            font-size: 4rem;
+            line-height: 5rem;
+            text-align: left;
+        }
         @media @mq_small {
-            font-size: 4.5rem;
         }
         @media @mq_medium {
         }

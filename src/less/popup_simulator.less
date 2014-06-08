@@ -95,19 +95,23 @@
     }
     body > header & {
 
-        @media @mq_2x_small {
+        @media @mq_baseline {
             float: none;
             margin-left: 0;
             margin-bottom: 1rem;
         }
-        @media @mq_small {
+        @media @mq_x_small {
             margin-bottom: 0;
-            margin-left: 1rem;
-            float: left;
+            margin-right: 0rem;
+            float: right;
+            width: ((10 / 12) * @pw_x_small) - 2;
+        }
+        @media @mq_small {
+            margin-right: 1rem;
             width: ((10 / 12) * @pw_small) - 2;
         }
         @media @mq_medium {
-            width: ((10 / 12) * @pw_medium) - 1;
+            width: ((10 / 12) * @pw_medium) - 2;
         }
         @media @mq_large {
             width: ((10 / 12) * @pw_large) - 2;
