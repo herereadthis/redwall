@@ -24,12 +24,33 @@ module.exports = function(grunt) {
         },
         // compiles LESS file to minified CSS
         less: {
-            development: {
+            // $ grunt bellmaker will only compile what is needed for bellmaker submodule
+            bellmakerUncompressed: {
                 options: {
+                    paths: ["./bellmaker/src/less", "./bellmaker/src/demo/less"],
+                    cleancss: false
+                },
+                files: {
+                    "./bellmaker/src/main.css": "./bellmaker/src/less/main.less"
+                }
+            },
+            // output both a minified a full version of CSS for bellmaker
+            bellmakerMinified: {
+                options: {
+                    paths: ["./bellmaker/src/less", "./bellmaker/src/demo/less"],
+                    cleancss: true
+                },
+                files: {
+                    "./bellmaker/src/main.minified.css": "./bellmaker/src/less/main.less"
+                }
+            },
+            // 'less:redwall' will pull bellmaker's CSS into redwall CSS
+            redwall: {
+                options: {
+                    paths: ["./src/less", "./bellmaker/src/less"],
                     // yuicompress: true,
                     // compress: true,
-                    cleancss: true,
-                    paths: ["./src/less"]
+                    cleancss: true
                 },
                 files: {
                     "./src/main.css": "./src/less/main.less"
@@ -48,7 +69,7 @@ module.exports = function(grunt) {
         watch: {
             // runs less task when any less files change
             less: {
-                files: ["./src/less/*", "./bellmaker/src/less/*", , "./bellmaker/src/demo/less/*"],
+                files: ["./src/less/*", "./bellmaker/src/less/*", "./bellmaker/src/demo/less/*"],
                 tasks: ["less"]
             },
             html: {
@@ -61,11 +82,15 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
+    grunt.registerTask('bellmaker', [
+        'less:bellmakerUncompressed',
+        'less:bellmakerMinified'
+    ]);
     grunt.registerTask('default', [
         // 'uglify'
+        'less',
         'watch'
     ]);
-
     grunt.registerTask('devserver', [
         // 'uglify'
         'connect:livereload'
