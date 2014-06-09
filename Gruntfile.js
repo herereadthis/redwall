@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                     cleancss: false
                 },
                 files: {
-                    "./bellmaker/src/main.css": "./bellmaker/src/less/main.less"
+                    "./bellmaker/src/css/main.less.css": "./bellmaker/src/less/main.less"
                 }
             },
             // output both a minified a full version of CSS for bellmaker
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    "./bellmaker/src/main.minified.css": "./bellmaker/src/less/main.less"
+                    "./bellmaker/src/css/main.less-minified.css": "./bellmaker/src/less/main.less"
                 }
             },
             // 'less:redwall' will pull bellmaker's CSS into redwall CSS
@@ -54,6 +54,26 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "./src/main.css": "./src/less/main.less"
+                }
+            }
+        },
+        sass: {
+            minifiedSass: {
+                options: {
+                    style: 'compressed',
+                    precision: 4
+                },
+                files: {
+                    "./bellmaker/src/css/main.sass-minified.css": "./bellmaker/src/sass/main.scss"
+                }
+            },
+            uncompressedSass: {
+                options: {
+                    style: 'expanded',
+                    precision: 4
+                },
+                files: {
+                    "./bellmaker/src/css/main.sass.css": "./bellmaker/src/sass/main.scss"
                 }
             }
         },
@@ -74,11 +94,16 @@ module.exports = function(grunt) {
             },
             html: {
                 files: "**/*.html"
+            },
+            sass: {
+                files: ["./bellmaker/src/sass/*", "./bellmaker/src/demo/sass/*"],
+                tasks: ['sass']  
             }
         }
     });
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -89,7 +114,11 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         // 'uglify'
         'less',
+        'sass',
         'watch'
+    ]);
+    grunt.registerTask('makeSass', [
+        'sass'
     ]);
     grunt.registerTask('devserver', [
         // 'uglify'
