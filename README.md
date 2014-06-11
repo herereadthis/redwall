@@ -1,12 +1,23 @@
-redwall
+Redwall
 =======
 
-# Here Read This
+Redwall is the codebase of the website, "Here, Read This" at [herereadthis.com](http://herereadthis.com), and is created by [Jimmy Ha](https://github.com/herereadthis). The homepage is a tribute to 90s web design, while additional pages feature coding projects and photographic works.
+
+## Documentation
+
 (Incomplete) [extended documentation](https://github.com/herereadthis/redwall/blob/master/docs/readme.md) is located in `docs` directory.
 
-## Build
+### Get the Code
 
 ```
-npm install
-grunt
+$ git clone https://github.com/herereadthis/redwall.git
+$ cd redwall/
+$ python -m SimpleHTTPServer 8001
+```
+
+### Build
+
+```
+$ npm install
+$ grunt
 ```
