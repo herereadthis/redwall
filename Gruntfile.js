@@ -22,6 +22,12 @@ module.exports = function(grunt) {
                 }
             }
         },
+        jekyll: {
+            dev: {
+                src: "./bellmaker/README.md",
+                dest: './code/'
+            }
+        },
         // compiles LESS file to minified CSS
         less: {
             // $ grunt bellmaker will only compile what is needed for bellmaker submodule
@@ -102,6 +108,7 @@ module.exports = function(grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -116,6 +123,10 @@ module.exports = function(grunt) {
         'less',
         'sass',
         'watch'
+    ]);
+    grunt.registerTask('doJekyll', [
+        // 'uglify'
+        'jekyll'
     ]);
     grunt.registerTask('makeSass', [
         'sass'

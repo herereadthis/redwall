@@ -8,6 +8,10 @@
 
     h2 {
         position: absolute;
+        margin-top: 1rem;
+        font-weight: normal;
+        .font_heading;
+        z-index: 1;
 
         @media @mq_baseline {
             top: 0;
@@ -29,26 +33,41 @@
         }
     }
     section {
-        padding-top: 5rem;
+        padding-top: 6rem;
 
         @media @mq_baseline {
             background-position: 100% 100%;
         }
         @media @mq_small {
+            padding-right: (1 / 6) * @pw_x_small;
             background-position: ((5 / 6) * @pw_x_small) 0;
         }
         @media @mq_small {
+            padding-right: (1 / 6) * @pw_small;
             background-position: ((5 / 6) * @pw_small) 0;
         }
         @media @mq_medium {
+            padding-right: (1 / 6) * @pw_medium;
             background-position: ((5 / 6) * @pw_medium) 0;
         }
         @media @mq_large {
+            padding-right: (1 / 6) * @pw_large;
             background-position: ((5 / 6) * @pw_large) 0;
         }
         @media @mq_x_large {
+            padding-right: (1 / 6) * @pw_x_large;
             background-position: ((5 / 6) * @pw_x_large) 0;
         }
+    }
+    h3 {
+        .font_subheading;
+        padding-bottom: 0.5rem;
+    }
+    ul {
+        padding-right: 2rem;
+    }
+    li {
+        .font_standard;
     }
 }
 // blue
