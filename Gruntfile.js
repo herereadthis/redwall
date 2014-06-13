@@ -117,7 +117,9 @@ module.exports = function(grunt) {
                             var today = new Date(), yyyy, mm, dd;
                             yyyy = today.getFullYear();
                             mm = today.getMonth() + 1;
-                            dd = today.getDate()
+                            dd = today.getDate();
+                            if (mm < 10) {mm = '0' + mm;} 
+                            if (dd < 10) {dd = '0' + dd;}
                             return yyyy + '-' + mm + '-' + dd;
                         }
                     }]
