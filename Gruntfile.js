@@ -100,11 +100,31 @@ module.exports = function(grunt) {
                 tasks: ["less"]
             },
             html: {
-                files: "**/*.html"
+                files: ['**/*.html'],
+                tasks: ["xmlpoke:updateLastModified"]
             },
             sass: {
                 files: ["./bellmaker/src/sass/*", "./bellmaker/src/demo/sass/*"],
                 tasks: ['sass']  
+            }
+        },
+        xmlpoke: {
+            updateLastModified: {
+                options: {
+                    replacements: [{
+                        xpath: '/urlset/url/lastmod',
+                        value: function newDate() {
+                            var today = new Date(), yyyy, mm, dd;
+                            yyyy = today.getFullYear();
+                            mm = today.getMonth() + 1;
+                            dd = today.getDate()
+                            return yyyy + '-' + mm + '-' + dd;
+                        }
+                    }]
+                },
+                files: {
+                    './src/xml/sitemap.xml': './src/xml/sitemap.xml'
+                }
             }
         }
     });
@@ -114,10 +134,15 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-xmlpoke');
 
     grunt.registerTask('bellmaker', [
         'less:bellmakerUncompressed',
         'less:bellmakerMinified'
+    ]);
+    grunt.registerTask('sitemap', [
+        // 'uglify'
+        'xmlpoke'
     ]);
     grunt.registerTask('default', [
         // 'uglify'
