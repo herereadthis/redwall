@@ -5,3 +5,92 @@
 // Bellmaker is the master of media queries
 @import "../../bellmaker/src/less/bellmaker.less";
 
+// Bellmaker is the master of media queries
+@import "global_variables.less";
+
+body {
+    height: 100%;
+
+    > h1 {
+        display: none;
+    }
+}
+
+#container_404 {
+    margin: 0 auto;
+
+    @media @mq_baseline {
+        width: @pw_baseline;
+        display: block;
+    }
+    @media @mq_small {
+        width: @pw_small;
+        display: table;
+        height: 100%;
+    }
+    @media @mq_medium {
+        width: @pw_medium;
+    }
+    @media @mq_large {
+        width: @pw_large;
+    }
+    @media @mq_x_large {
+        width: @pw_x_large;
+    }
+    section {
+        margin: 0 auto;
+        background-image:
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, @wlg 0%, @wlg 100%),
+            linear-gradient(0deg, @wdg 0%, @wdg 100%),
+            linear-gradient(0deg, @wdg 0%, @wdg 100%);
+        background-repeat: no-repeat;
+        background-position: 
+            100% 0,
+            0 100%,
+            0 0,
+            0 0;
+
+        @media @mq_baseline {
+            background-size: 
+                0.2rem 100%,
+                100% 0.2rem,
+                100% 0.2rem,
+                0.2rem 100%;
+            padding: 0.2rem;
+        }
+        @media @mq_small {
+            background-size:
+                0.5rem 100%,
+                100% 0.5rem,
+                100% 0.5rem,
+                0.5rem 100%;
+            padding: 1rem;
+        }
+        @media @mq_medium {
+            background-size: 
+                0.5rem 100%,
+                100% 0.5rem,
+                100% 0.5rem,
+                0.5rem 100%;
+            padding: 0.5em;
+        }
+        @media @mq_large {
+        }
+        @media @mq_x_large {
+        }
+    }
+}
+#table_404 {
+
+    @media @mq_baseline {
+        display: block;
+    }
+    @media @mq_small {
+        width: @pw_small;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+
