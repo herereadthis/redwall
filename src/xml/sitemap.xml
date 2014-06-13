@@ -17,12 +17,12 @@
 		<loc>http://herereadthis.com/foaf.rdf</loc>
 		<lastmod>2014-06-13</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>1.5</priority>
+		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>http://herereadthis.com/404</loc>
 		<lastmod>2014-06-13</lastmod>
 		<changefreq>daily</changefreq>
-		<priority>1.5</priority>
+		<priority>0.5</priority>
 	</url>
 </urlset>
