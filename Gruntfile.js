@@ -6,6 +6,17 @@ module.exports = function(grunt) {
     grunt.initConfig({
         // imports the JSON metadata stored in package.json
         pkg: grunt.file.readJSON('package.json'),
+        bowercopy: {
+            build: {
+                options: {
+                    destPrefix: 'build/js'
+                },
+                files: {
+                    'jquery.js': 'jquery/dist/jquery.min.js',
+                    'require.js': 'requirejs/require.js'
+                }
+            }
+        },
         connect: {
             options: {
                 livereload: 35729,
@@ -39,8 +50,18 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    "./src/main.css": "./src/less/main.less",
-                    "./src/404.css": "./src/less/404.less"
+                    "./build/css/main.css": "./src/less/main.less",
+                    "./build/css/404.css": "./src/less/404.less"
+                }
+            }
+        },
+        requirejs: {
+            build: {
+                options: {
+                    baseUrl: "src/js/",
+                    mainConfigFile: "src/js/main.js",
+                    name: "main",
+                    out: "build/js/main.js"
                 }
             }
         },
@@ -62,6 +83,10 @@ module.exports = function(grunt) {
             html: {
                 files: ['**/*.html'],
                 tasks: ["xmlpoke:updateLastModified"]
+            },
+            js: {
+                files: ['./src/js/*'],
+                tasks: ['requirejs']
             }
         },
         xmlpoke: {
@@ -86,17 +111,21 @@ module.exports = function(grunt) {
             }
         }
     });
+    grunt.loadNpmTasks('grunt-bowercopy');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-xmlpoke');
 
     grunt.registerTask('default', [
         // 'uglify'
+        'bowercopy',
         'less',
+        'requirejs',
         'watch'
     ]);
     grunt.registerTask('devserver', [
