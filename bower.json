@@ -1,0 +1,24 @@
+{
+  "name": "redwall",
+  "version": "0.1.0",
+  "homepage": "http://herereadthis.com",
+  "authors": [
+    "Jimmy Ha <herereadthis@gmail.com>"
+  ],
+  "description": "Codebase for the Here, Read This website",
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    ".sass-cache",
+    "node_modules",
+    "bower_components",
+    "src/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bellmaker": "~0.1.4",
+    "requirejs": "~2.1.14",
+    "jquery": "~2.1.1"
+  }
+}

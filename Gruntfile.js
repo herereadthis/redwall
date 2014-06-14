@@ -30,30 +30,10 @@ module.exports = function(grunt) {
         },
         // compiles LESS file to minified CSS
         less: {
-            // $ grunt bellmaker will only compile what is needed for bellmaker submodule
-            bellmakerUncompressed: {
-                options: {
-                    paths: ["./bellmaker/src/less", "./bellmaker/src/demo/less"],
-                    cleancss: false
-                },
-                files: {
-                    "./bellmaker/src/css/main.less.css": "./bellmaker/src/less/main.less"
-                }
-            },
-            // output both a minified a full version of CSS for bellmaker
-            bellmakerMinified: {
-                options: {
-                    paths: ["./bellmaker/src/less", "./bellmaker/src/demo/less"],
-                    cleancss: true
-                },
-                files: {
-                    "./bellmaker/src/css/main.less-minified.css": "./bellmaker/src/less/main.less"
-                }
-            },
             // 'less:redwall' will pull bellmaker's CSS into redwall CSS
             redwall: {
                 options: {
-                    paths: ["./src/less", "./bellmaker/src/less"],
+                    paths: ["./src/less"],
                     // yuicompress: true,
                     // compress: true,
                     cleancss: true
@@ -61,26 +41,6 @@ module.exports = function(grunt) {
                 files: {
                     "./src/main.css": "./src/less/main.less",
                     "./src/404.css": "./src/less/404.less"
-                }
-            }
-        },
-        sass: {
-            minifiedSass: {
-                options: {
-                    style: 'compressed',
-                    precision: 4
-                },
-                files: {
-                    "./bellmaker/src/css/main.sass-minified.css": "./bellmaker/src/sass/main.scss"
-                }
-            },
-            uncompressedSass: {
-                options: {
-                    style: 'expanded',
-                    precision: 4
-                },
-                files: {
-                    "./bellmaker/src/css/main.sass.css": "./bellmaker/src/sass/main.scss"
                 }
             }
         },
@@ -96,16 +56,12 @@ module.exports = function(grunt) {
         watch: {
             // runs less task when any less files change
             less: {
-                files: ["./src/less/*", "./bellmaker/src/less/*", "./bellmaker/src/demo/less/*"],
+                files: ["./src/less/*"],
                 tasks: ["less"]
             },
             html: {
                 files: ['**/*.html'],
                 tasks: ["xmlpoke:updateLastModified"]
-            },
-            sass: {
-                files: ["./bellmaker/src/sass/*", "./bellmaker/src/demo/sass/*"],
-                tasks: ['sass']  
             }
         },
         xmlpoke: {
@@ -138,26 +94,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-xmlpoke');
 
-    grunt.registerTask('bellmaker', [
-        'less:bellmakerUncompressed',
-        'less:bellmakerMinified'
-    ]);
-    grunt.registerTask('sitemap', [
-        // 'uglify'
-        'xmlpoke'
-    ]);
     grunt.registerTask('default', [
         // 'uglify'
         'less',
-        'sass',
         'watch'
-    ]);
-    grunt.registerTask('doJekyll', [
-        // 'uglify'
-        'jekyll'
-    ]);
-    grunt.registerTask('makeSass', [
-        'sass'
     ]);
     grunt.registerTask('devserver', [
         // 'uglify'

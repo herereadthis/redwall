@@ -19,5 +19,6 @@ $ python -m SimpleHTTPServer 8001
 
 ```
 $ npm install
+$ bower install
 $ grunt
 ```

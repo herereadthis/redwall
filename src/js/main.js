@@ -14,7 +14,7 @@
             "ColorTuner": "color_tuner",
             "SocialFu": "social_fu",
             "Analytics": "analytics",
-            jquery: ['https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min', "lib/jquery.min"]
+            jquery: ['/src/components/jquery/dist/jquery.min']
         }
     });
     require(["jquery", "ColorTuner", "SocialFu", "Analytics"], function($, ColorTuner, SocialFu, Analytics) {
