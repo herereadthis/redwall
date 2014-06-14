@@ -98,6 +98,9 @@ var pixr = function(basePixel) {
 var polyDraw = function(polygon, canvasContext, fill) {
     canvasContext.fillStyle = fill;
 
+    for (var index = 0; index < polygon.length; index++) {
+        polygon[index] = pixr(polygon[index])
+    }
     canvasContext.beginPath();
     canvasContext.moveTo(polygon[0], polygon[1]);
     for ( var item = 2; item < polygon.length-1; item += 2 ) {
@@ -138,221 +141,45 @@ var makeBG = function() {
         poly17 = [],
         poly18 = [],
         poly19 = [];
-    poly1 = [
-        pixr(0), pixr(0),
-        pixr(35), pixr(0),
-        pixr(35), pixr(1),
-        pixr(1), pixr(1),
-        pixr(1), pixr(39),
-        pixr(0), pixr(39)
-    ];
+    poly1 = [0, 0, 35, 0, 35, 1, 1, 1, 1, 39, 0, 39];
     polyDraw(poly1, context, gVars.colors.dg);
-    poly2 = [
-        pixr(0), pixr(39),
-        pixr(35), pixr(39),
-        pixr(35), pixr(40),
-        pixr(0), pixr(40)
-
-    ];
+    poly2 = [0, 39, 35, 39, 35, 40, 0, 40];
     polyDraw(poly2, context, gVars.colors.lg);
-    poly3 = [
-        pixr(4), pixr(4),
-        pixr(28), pixr(4),
-        pixr(28), pixr(12),
-        pixr(27), pixr(12),
-        pixr(27), pixr(5),
-        pixr(5), pixr(5),
-        pixr(5), pixr(35),
-        pixr(4), pixr(35)
-    ];
+    poly3 = [4, 4, 28, 4, 28, 12, 27, 12, 27, 5, 5, 5, 5, 35, 4, 35];
     polyDraw(poly3, context, gVars.colors.dg);
-    poly4 = [
-        pixr(4), pixr(35),
-        pixr(9), pixr(35),
-        pixr(9), pixr(36),
-        pixr(4), pixr(36)
-    ];
+    poly4 = [4, 35, 9, 35, 9, 36, 4, 36];
     polyDraw(poly4, context, gVars.colors.b);
-    poly5 = [
-        pixr(24), pixr(35),
-        pixr(34), pixr(35),
-        pixr(34), pixr(25),
-        pixr(35), pixr(25),
-        pixr(35), pixr(36),
-        pixr(24), pixr(36)
-    ];
+    poly5 = [24, 35, 34, 35, 34, 25, 35, 25, 35, 36, 24, 36];
     polyDraw(poly5, context, gVars.colors.b);
-    poly6 = [
-        pixr(27), pixr(12),
-        pixr(35), pixr(12),
-        pixr(35), pixr(17),
-        pixr(34), pixr(17),
-        pixr(34), pixr(13),
-        pixr(27), pixr(13)
-    ];
+    poly6 = [27, 12, 35, 12, 35, 17, 34, 17, 34, 13, 27, 13];
     polyDraw(poly6, context, gVars.colors.b);
-    poly7 = [
-        pixr(28), pixr(5),
-        pixr(29), pixr(5),
-        pixr(29), pixr(6),
-        pixr(30), pixr(6),
-        pixr(30), pixr(7),
-        pixr(31), pixr(7),
-        pixr(31), pixr(8),
-        pixr(32), pixr(8),
-        pixr(32), pixr(9),
-        pixr(33), pixr(9),
-        pixr(33), pixr(10),
-        pixr(34), pixr(10),
-        pixr(34), pixr(11),
-        pixr(35), pixr(11),
-        pixr(35), pixr(12),
-        pixr(28), pixr(12)
-    ];
+    poly7 = [28, 5, 29, 5, 29, 6, 30, 6, 30, 7, 31, 7, 31, 8, 32, 8, 32, 9, 
+        33, 9, 33, 10, 34, 10, 34, 11, 35, 11, 35, 12, 28, 12];
     polyDraw(poly7, context, gVars.colors.dg);
-    poly8 = [
-        pixr(28), pixr(6),
-        pixr(29), pixr(6),
-        pixr(29), pixr(7),
-        pixr(30), pixr(7),
-        pixr(30), pixr(8),
-        pixr(31), pixr(8),
-        pixr(31), pixr(9),
-        pixr(32), pixr(9),
-        pixr(32), pixr(10),
-        pixr(33), pixr(10),
-        pixr(33), pixr(11),
-        pixr(34), pixr(11),
-        pixr(34), pixr(12),
-        pixr(35), pixr(12),
-        pixr(28), pixr(12)
-    ];
+    poly8 = [28, 6, 29, 6, 29, 7, 30, 7, 30, 8, 31, 8, 31, 9, 32, 9, 32, 10,
+        33, 10, 33, 11, 34, 11, 34, 12, 35, 12, 28, 12];
     polyDraw(poly8, context, gVars.colors.lg);
-    poly9 = [
-        pixr(28), pixr(7),
-        pixr(29), pixr(7),
-        pixr(29), pixr(8),
-        pixr(30), pixr(8),
-        pixr(30), pixr(9),
-        pixr(31), pixr(9),
-        pixr(31), pixr(10),
-        pixr(32), pixr(10),
-        pixr(32), pixr(11),
-        pixr(33), pixr(11),
-        pixr(33), pixr(12),
-        pixr(34), pixr(12),
-        pixr(28), pixr(12)
-    ];
+    poly9 = [28, 7, 29, 7, 29, 8, 30, 8, 30, 9, 31, 9, 31, 10, 32, 10, 32, 11,
+        33, 11, 33, 12, 34, 12, 28, 12];
     polyDraw(poly9, context, gVars.colors.w);
-    poly10 = [
-        pixr(7), pixr(7),
-        pixr(27), pixr(7),
-        pixr(27), pixr(13),
-        pixr(32), pixr(13),
-        pixr(32), pixr(18),
-        pixr(30), pixr(18),
-        pixr(30), pixr(20),
-        pixr(21), pixr(20),
-        // pixr(29), pixr(20),
-        // pixr(29), pixr(21),
-        // pixr(27), pixr(21),
-        // pixr(27), pixr(22),
-        // pixr(25), pixr(22),
-        // pixr(25), pixr(23),
-        // pixr(24), pixr(23),
-        // pixr(24), pixr(24),
-        // pixr(21), pixr(24),
-        pixr(21), pixr(25),
-        pixr(17), pixr(25),
-        pixr(17), pixr(26),
-        pixr(10), pixr(26),
-        pixr(10), pixr(33),
-        pixr(7), pixr(33)
-    ];
+    poly10 = [7, 7, 27, 7, 27, 13, 32, 13, 32, 18, 30, 18, 30, 20, 21, 20, 21,
+        25, 17, 25, 17, 26, 10, 26, 10, 33, 7, 33];
     polyDraw(poly10, context, gVars.colors.lg);
-    poly11 = [
-        pixr(9), pixr(36),
-        pixr(9), pixr(34),
-        pixr(10), pixr(34),
-        pixr(10), pixr(33),
-        pixr(12), pixr(33),
-        pixr(12), pixr(32),
-        pixr(13), pixr(32),
-        pixr(13), pixr(29),
-        pixr(17), pixr(29),
-        pixr(17), pixr(27),
-        pixr(18), pixr(27),
-        pixr(18), pixr(26),
-        pixr(23), pixr(26),
-        pixr(23), pixr(25),
-        pixr(24), pixr(25),
-        pixr(24), pixr(24),
-        pixr(26), pixr(24),
-        pixr(26), pixr(23),
-        pixr(28), pixr(23),
-        pixr(28), pixr(22),
-        pixr(29), pixr(22),
-        pixr(29), pixr(21),
-        pixr(31), pixr(21),
-        pixr(31), pixr(19),
-        pixr(32), pixr(19),
-        pixr(32), pixr(18),
-        pixr(33), pixr(18),
-        pixr(33), pixr(17),
-        pixr(35), pixr(17),
-        pixr(35), pixr(19),
-        pixr(34), pixr(19),
-        pixr(34), pixr(20),
-        pixr(33), pixr(20),
-        pixr(33), pixr(22),
-        pixr(32), pixr(22),
-        pixr(32), pixr(23),
-        pixr(30), pixr(23),
-        pixr(30), pixr(24),
-        pixr(29), pixr(24),
-        pixr(29), pixr(25),
-        pixr(27), pixr(25),
-        pixr(27), pixr(26),
-        pixr(25), pixr(26),
-        pixr(25), pixr(27),
-        pixr(23), pixr(27),
-        pixr(23), pixr(28),
-        pixr(19), pixr(28),
-        pixr(19), pixr(30),
-        pixr(17), pixr(30),
-        pixr(17), pixr(31),
-        pixr(15), pixr(31),
-        pixr(15), pixr(33),
-        pixr(14), pixr(33),
-        pixr(14), pixr(34),
-        pixr(12), pixr(34),
-        pixr(12), pixr(35),
-        pixr(11), pixr(35),
-        pixr(11), pixr(36)
-    ];
+    poly11 = [9, 36, 9, 34, 10, 34, 10, 33, 12, 33, 12, 32, 13, 32, 13, 29, 
+        17, 29, 17, 27, 18, 27, 18, 26, 23, 26, 23, 25, 24, 25, 24, 24, 26, 24,
+        26, 23, 28, 23, 28, 22, 29, 22, 29, 21, 31, 21, 31, 19, 32, 19, 32, 18,
+        33, 18, 33, 17, 35, 17, 35, 19, 34, 19, 34, 20, 33, 20, 33, 22, 32, 22,
+        32, 23, 30, 23, 30, 24, 29, 24, 29, 25, 27, 25, 27, 26, 25, 26, 25, 27,
+        23, 27, 23, 28, 19, 28, 19, 30, 17, 30, 17, 31, 15, 31, 15, 33, 14, 33,
+        14, 34, 12, 34, 12, 35, 11, 35, 11, 36];
     polyDraw(poly11, context, gVars.colors.dg);
-    poly12 = [
-        pixr(28), pixr(13),
-        pixr(34), pixr(13),
-        pixr(34), pixr(15),
-        pixr(29), pixr(15),
-        pixr(29), pixr(14),
-        pixr(28), pixr(14)
-    ];
+    poly12 = [28, 13, 34, 13, 34, 15, 29, 15, 29, 14, 28, 14];
     polyDraw(poly12, context, gVars.colors.dg);
-    poly13 = [
-        pixr(27), pixr(33),
-        pixr(27), pixr(32),
-        pixr(28), pixr(32),
-        pixr(28), pixr(31),
-        pixr(30), pixr(31),
-        pixr(30), pixr(30),
-        pixr(31), pixr(30),
-        pixr(31), pixr(28),
-        pixr(32), pixr(28),
-        pixr(32), pixr(33)
-    ];
+    poly13 = [27, 33, 27, 32, 28, 32, 28, 31, 30, 31, 30, 30, 31, 30, 31, 28,
+        32, 28, 32, 33];
     polyDraw(poly13, context, gVars.colors.lg);
+    poly14 = [ 8, 19, 9, 19, 9, 29, 12, 29, 12, 32, 9, 32, 9, 30, 8, 30];
+    polyDraw(poly14, context, gVars.colors.dg);
 
     return $('#broken_image_404').css({
         "background-image": "url(" + (canvas.toDataURL("image/png")) + ")"
