@@ -87,7 +87,14 @@ gVars = {
         w: 'rgb(255,255,255)',
         b: 'rgb(0,0,0)',
         lg: 'rgb(192,192,192)',
-        dg: 'rgb(128,128,128)'
+        dg: 'rgb(128,128,128)',
+        p: 'rgb(255,0,255)',
+        dp: 'rgb(128,0,128)',
+        lb: 'rgb(0,255,255)',
+        bl: 'rgb(0,0,255)',
+        db: 'rgb(0,0,128)',
+        gl: 'rgb(0,255,0)',
+        g: 'rgb(0,128,0)'
     }
 }
 gVars.pixelSize = (1 / gVars.cHeight) * gVars.canvasHeight;
@@ -109,38 +116,18 @@ var polyDraw = function(polygon, canvasContext, fill) {
     canvasContext.closePath();
     canvasContext.fill();
 }
-var makeBG = function() {
-
-    gVars.canvasWidth = $brokenImage.width();
-    gVars.canvasHeight = $brokenImage.height();
-    gVars.pixelSize = (1 / gVars.cHeight) * gVars.canvasHeight;
-
-    console.log(gVars);
+var greyScale = function(gVars) {
 
     canvas = document.createElement("canvas");
     canvas.width = gVars.canvasWidth;
     canvas.height = gVars.canvasHeight;
     context = canvas.getContext("2d");
 
-    var poly1 = [],
-        poly2 = [],
-        poly3 = [],
-        poly4 = [],
-        poly5 = [],
-        poly6 = [],
-        poly7 = [],
-        poly8 = [],
-        poly9 = [],
-        poly10 = [],
-        poly11 = [],
-        poly12 = [],
-        poly13 = [],
-        poly14 = [],
-        poly15 = [],
-        poly16 = [],
-        poly17 = [],
-        poly18 = [],
-        poly19 = [];
+    var poly1 = [],  poly2 = [],  poly3 = [],  poly4 = [],  poly5 = [],
+        poly6 = [],  poly7 = [],  poly8 = [],  poly9 = [],  poly10 = [],
+        poly11 = [], poly12 = [], poly13 = [], poly14 = [], poly15 = [],
+        poly16 = [], poly17 = [], poly18 = [], poly19 = [], poly20 = [],
+        poly21 = [], poly22 = [], poly23 = [], poly24 = [];
     poly1 = [0, 0, 35, 0, 35, 1, 1, 1, 1, 39, 0, 39];
     polyDraw(poly1, context, gVars.colors.dg);
     poly2 = [0, 39, 35, 39, 35, 40, 0, 40];
@@ -180,17 +167,126 @@ var makeBG = function() {
     polyDraw(poly13, context, gVars.colors.lg);
     poly14 = [ 8, 19, 9, 19, 9, 29, 12, 29, 12, 32, 9, 32, 9, 30, 8, 30];
     polyDraw(poly14, context, gVars.colors.dg);
+    poly15 = [ 8, 30, 12, 30, 12, 31, 8, 31];
+    polyDraw(poly15, context, gVars.colors.b);
+    poly16 = [9, 20, 10, 20, 10, 21, 11, 21, 11, 22, 12, 22, 12, 23, 13, 23,
+        13, 24, 14, 24, 14, 25, 15, 25, 15, 26, 16, 26, 16, 27, 9, 27];
+    polyDraw(poly16, context, gVars.colors.b);
+    poly17 = [9, 21, 10, 21,10, 22, 11, 22, 11, 23, 12, 23, 12, 24, 13, 24,
+        13, 25, 14, 25, 14, 26, 15, 26, 15, 27, 10, 27, 10, 29, 9, 29]
+    polyDraw(poly17, context, gVars.colors.w);
+    poly18 = [11, 15, 11, 10, 12, 10, 12, 9, 13, 9, 13, 8, 17, 8, 17, 14,
+        21, 14, 21, 17, 20, 17, 20, 19, 19, 19, 19, 20, 18, 20, 18, 19, 15, 19,
+        15, 18, 14, 18, 14, 17, 13, 17, 13, 15];
+    polyDraw(poly18, context, gVars.colors.dg);
+    poly19 = [12, 14, 12, 13, 14, 13, 14, 11, 16, 11, 16, 9, 17, 9, 17, 14];
+    polyDraw(poly19, context, gVars.colors.lg);
+    poly20 = [13, 10, 15, 10, 15, 11, 13, 11];
+    polyDraw(poly20, context, gVars.colors.w);
+    poly21 = [12, 16, 12, 14, 17, 14, 17, 9, 19, 9, 19, 11, 20, 11, 20, 14,
+        19, 14,19, 16, 17, 16, 17, 17, 14, 17, 14, 16];
+    polyDraw(poly21, context, gVars.colors.b);
+    poly22 = [20, 25, 20, 18, 29, 18, 29, 19, 30, 19, 30, 20, 21, 20, 21, 25];
+    polyDraw(poly22, context, gVars.colors.dg);
+    poly23 = [13, 14, 13, 13, 14, 13, 14, 12, 15, 12, 15, 11, 16, 11, 16, 10,
+        17, 10, 17, 11, 16, 11, 16, 12, 15, 12, 15, 13, 14, 13, 14, 14];
+    polyDraw(poly23, context, gVars.colors.dg);
+    poly24 = [28, 21, 28, 18, 29, 18, 29, 21];
+    polyDraw(poly24, context, gVars.colors.b);
+
+    return canvas;
+}
+var makeTriangle = function(gVars) {
+    canvas = document.createElement("canvas");
+    canvas.width = gVars.canvasWidth;
+    canvas.height = gVars.canvasHeight;
+    context = canvas.getContext("2d");
+
+    var poly1 = [], poly2 = [], poly3 = [], poly4 = [];
+    poly1 = [9, 30, 9, 29, 10, 29, 10, 23, 11, 23, 11, 24, 12, 24, 12, 26,
+        14, 26, 14, 27, 16, 27, 16, 28, 11, 28, 11, 30];
+    polyDraw(poly1, context, gVars.colors.p);
+    poly2 = [10, 30, 10, 28, 11, 28, 11, 27, 12, 27, 12, 28, 13, 28, 13, 29,
+        11, 29, 11, 30];
+    polyDraw(poly2, context, gVars.colors.dp);
+    poly3 = [12, 27, 12, 25, 13, 25, 13, 27];
+    polyDraw(poly3, context, gVars.colors.dp);
+    poly4 = [14, 28, 14, 27, 15, 27, 15, 28];
+    polyDraw(poly4, context, gVars.colors.dp);
+    return canvas;
+}
+var makeSquare = function(gVars) {
+    canvas = document.createElement("canvas");
+    canvas.width = gVars.canvasWidth;
+    canvas.height = gVars.canvasHeight;
+    context = canvas.getContext("2d");
+
+    var poly1 = [], poly2 = [], poly3 = [], poly4 = [], poly5 = [],
+        poly6 = [];
+
+    poly1 =[20, 19, 20, 18, 21, 18, 21, 19];
+    polyDraw(poly1, context, gVars.colors.lb);
+    poly2 = [21, 24, 21, 19, 27, 19, 27, 21, 23, 21, 23, 24];
+    polyDraw(poly2, context, gVars.colors.lb);
+    poly3 = [22, 23, 22, 22, 23, 22, 23, 21, 24, 21, 24, 20, 25, 20, 25, 19,
+        26, 19, 26, 20, 27, 20, 27, 22, 25, 22, 25, 23, 24, 23, 24, 24, 23, 24,
+        23, 23];
+    polyDraw(poly3, context, gVars.colors.bl);
+    poly4 = [23, 23, 23, 22, 24, 22, 24, 21, 25, 21, 25, 20, 26, 20, 26, 21,
+        25, 21, 25, 22, 24, 22, 24, 23];
+    polyDraw(poly4, context, gVars.colors.lb);
+    poly5 = [27, 21,27, 19, 28, 19, 28, 21];
+    polyDraw(poly5, context, gVars.colors.db);
+    poly6 = [21, 20, 21, 19, 22, 19, 22, 20];
+    polyDraw(poly6, context, gVars.colors.w);
+
+    return canvas;
+}
+var makeCircle = function(gVars) {
+    canvas = document.createElement("canvas");
+    canvas.width = gVars.canvasWidth;
+    canvas.height = gVars.canvasHeight;
+    context = canvas.getContext("2d");
+
+    var poly1 = [], poly2 = [], poly3 = [], poly4 = [];
+
+    poly1 = [12, 13, 12, 11, 13, 11, 13, 12, 14, 12, 14, 13];
+    polyDraw(poly1, context, gVars.colors.g);
+    poly2 = [14, 10, 14, 9, 16, 9, 16, 11, 15, 11, 15, 10];
+    polyDraw(poly2, context, gVars.colors.g);
+    poly3 = [13, 15, 13, 14, 14, 14, 14, 13, 16, 13, 16, 11, 17, 11, 17, 10,
+        18, 10, 18, 11, 19, 11, 19, 13, 18, 13, 18, 14, 17, 14, 17, 15, 15, 15,
+        15, 16, 14, 16, 14, 15];
+    polyDraw(poly3, context, gVars.colors.g);
+    poly4 = [16, 13, 16, 12, 17, 12, 17, 13];
+    polyDraw(poly4, context, gVars.colors.gl);
+
+    return canvas;
+}
+var makeBG = function(gVars) {
+    gVars.canvasWidth = $brokenImage.width();
+    gVars.canvasHeight = $brokenImage.height();
+    gVars.pixelSize = (1 / gVars.cHeight) * gVars.canvasHeight;
+
+    var canvas1 = greyScale(gVars);
+    var canvas2 = makeTriangle(gVars);
+    var canvas3 = makeSquare(gVars);
+    var canvas4 = makeCircle(gVars);
 
     return $('#broken_image_404').css({
-        "background-image": "url(" + (canvas.toDataURL("image/png")) + ")"
+        "background-image": "url(" + (canvas4.toDataURL("image/png")) + "), url(" +
+            (canvas3.toDataURL("image/png")) + "), url(" +
+            (canvas2.toDataURL("image/png")) + "), url(" +
+            (canvas1.toDataURL("image/png")) + ")"
     });
-
 }
-makeBG();
+
+makeBG(gVars);
+
 
 var _window = $(window);
 _window.resize(function() {
-    makeBG();
+    makeBG(gVars);
 });
 
 </script>
