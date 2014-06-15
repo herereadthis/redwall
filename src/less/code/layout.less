@@ -1,7 +1,7 @@
 
 html {
     background-image:
-        linear-gradient(90deg, #FFF 50%, #F5F5F5 50%);
+        linear-gradient(90deg, #FFF 50%, @code_grey_light 50%);
 
 }
 body {
@@ -13,86 +13,56 @@ body {
 
     @media @mq_baseline {
         background-image:
-            linear-gradient(90deg, #FFF (11 / 12) * @pw_baseline, #F5F5F5 (11 / 12) * @pw_baseline);
+            linear-gradient(90deg, #FFF (11 / 12) * @pw_baseline, @code_grey_light (11 / 12) * @pw_baseline);
         background-size: @pw_baseline 1rem;
     }
     @media @mq_2x_small {
         background-image:
-            linear-gradient(90deg, #FFF (11 / 12) * @pw_2x_small, #F5F5F5 (11 / 12) * @pw_2x_small);
+            linear-gradient(90deg, #FFF (11 / 12) * @pw_2x_small, @code_grey_light (11 / 12) * @pw_2x_small);
         background-size: @pw_2x_small 1rem;
     }
     @media @mq_x_small {
         background-image:
-            linear-gradient(90deg, #FFF (11 / 12) * @pw_x_small, #F5F5F5 (11 / 12) * @pw_x_small);
+            linear-gradient(90deg, #FFF (11 / 12) * @pw_x_small, @code_grey_light (11 / 12) * @pw_x_small);
         background-size: @pw_x_small 1rem;
     }
     @media @mq_small {
         background-image:
-            linear-gradient(90deg, #FFF (10 / 12) * @pw_small, #F5F5F5 (10 / 12) * @pw_small);
+            linear-gradient(90deg, #FFF (10 / 12) * @pw_small, @code_grey_light (10 / 12) * @pw_small);
         background-size: @pw_small 1rem;
     }
     @media @mq_medium {
         background-image:
-            linear-gradient(90deg, #FFF (10 / 12) * @pw_medium, #F5F5F5 (10 / 12) * @pw_medium);
+            linear-gradient(90deg, #FFF (10 / 12) * @pw_medium, @code_grey_light (10 / 12) * @pw_medium);
         background-size: @pw_medium 1rem;
     }
     @media @mq_large {
         background-image:
-            linear-gradient(90deg, #FFF (10 / 12) * @pw_large, #F5F5F5 (10 / 12) * @pw_large);
+            linear-gradient(90deg, #FFF (10 / 12) * @pw_large, @code_grey_light (10 / 12) * @pw_large);
         background-size: @pw_large 1rem;
     }
     @media @mq_x_large {
         background-image:
-            linear-gradient(90deg, #FFF (10 / 12) * @pw_x_large, #F5F5F5 (10 / 12) * @pw_x_large);
+            linear-gradient(90deg, #FFF (10 / 12) * @pw_x_large, @code_grey_light (10 / 12) * @pw_x_large);
         background-size: @pw_x_large 1rem;
     }
 
 }
-[role="banner"], [role="main"], [role="contentinfo"] {
-    @media @mq_baseline {
-    }
-    @media @mq_2x_small {
-        }
-        @media @mq_x_small {
-        }
-        @media @mq_small {
-        }
-        @media @mq_medium {
-        }
-        @media @mq_large {
-        }
-        @media @mq_x_large {
-        }
+
+a:link {
+    color: @code_a_link;
+    text-decoration:  none;
 }
-@code_hr_color: #D9D9D9;
-
-[role="banner"] {
-    height: 12rem;
-    background-size: 50% 0.5rem;
-    background-repeat: no-repeat;
-
-    &, & .bellmaker_container {
-        background-image:
-            linear-gradient(0deg, @code_hr_color 0%, @code_hr_color 20%, transparent 20%, transparent 40%, 
-                @code_hr_color 40%, @code_hr_color 60%, transparent 60%, transparent 80%, @code_hr_color 80%);  
-        background-position: 0% 100%; 
-        background-repeat: no-repeat;
-    }
-
-    .bellmaker_container {
-        height: 12rem;
-        margin: 0 auto;
-
-        background-size: 100% 0.5rem;
-    }
-    h1 {
-        padding-top: 3rem;
-        font-weight: 300;
-        font-size: 4rem;
-        line-height: 8rem;
-        text-transform: uppercase;
-    }
+a:visited {
+    color: @code_a_visited;
+    text-decoration: none;
 }
+a:hover {
+    color: @code_a_hover;
+    text-decoration: underline;
+}
+
+
 [role="main"] {
 
     section {
@@ -126,11 +96,20 @@ body {
             width: (8 / 12) * @pw_x_large;
         }
     }
+    h2, h3, p, ul {
+        padding-right: 2rem;
+    }
     h2 {
         font-weight: 300;
         font-size: 2.8rem;
         line-height: 4rem;
         padding: 0 0 1rem 0;
+    }
+    h3 {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 3rem;
+        padding: 0 0 0rem 0; 
     }
     p, li {
         .font_standard;
@@ -141,6 +120,18 @@ body {
     strong {
         font-weight: 700;
     }
+    ul {
+        margin: 0 0 2rem 0;
+    }
+    pre {
+        margin: 0 0 2rem 0;
+    }
+    code {
+        .font_standard;
+    }
 }
+
+
+
 [role="contentinfo"] {
 }
