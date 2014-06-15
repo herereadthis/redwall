@@ -50,6 +50,7 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
+                    "./build/css/code.css": "./src/less/code/code.less",
                     "./build/css/main.css": "./src/less/main.less",
                     "./build/css/404.css": "./src/less/404.less"
                 }
@@ -77,7 +78,7 @@ module.exports = function(grunt) {
         watch: {
             // runs less task when any less files change
             less: {
-                files: ["./src/less/*"],
+                files: ["./src/less/*", "./src/less/*/*"],
                 tasks: ["less"]
             },
             html: {
