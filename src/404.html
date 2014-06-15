@@ -51,25 +51,35 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png" /> -->
 
+    <script data-main="/src/js/main" src="/build/js/require.js"></script>
     <script data-main="/src/js/main" src="/build/js/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="/build/css/404.css" />
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
 </head>
 <body data-google-analytics="UA-37798496-1">
-    <h1>Here, Read This - 404</h1>
-    <div id="container_404">
-        <div id="table_404">
-            <section>
-                <div id="broken_image_404"></div>
-                <div id="info_404">
-                    <h2>404</h2>
-                    <p>You&rsquo;ve broken the Internets! You&rsquo;ve come to the wrong place.</p>
-                    <p><a href="http://herereadthis.com">Turn around</a>.</p>
-                </div>
-            </section>
+    <div id="wrapper_404">
+        <h1>Here, Read This - 404</h1>
+        <div id="container_404">
+            <div id="table_404">
+                <section>
+                    <div id="broken_image_404">
+                        <div id="broken_image_404_grey">
+                            <div id="broken_image_404_shapes">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="info_404">
+                        <h2>404</h2>
+                        <p>You&rsquo;ve broken the Internets!</p>
+                        <p>Move your mouse around this page for a surprise!</p>
+                        <p>This fun brought to you by <a href="http://herereadthis.com">Here, Read This</a>.</p>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
+
 
 <script>
 var $brokenImage = $('#broken_image_404'),
@@ -95,7 +105,14 @@ gVars = {
         db: 'rgb(0,0,128)',
         gl: 'rgb(0,255,0)',
         g: 'rgb(0,128,0)'
-    }
+    },
+    greys: {
+        lg: 192,
+        dg: 128
+    },
+    greyShift: 5,
+    greyFactor: 7,
+    mouseX: 0
 }
 gVars.pixelSize = (1 / gVars.cHeight) * gVars.canvasHeight;
 
@@ -128,10 +145,10 @@ var greyScale = function(gVars) {
         poly11 = [], poly12 = [], poly13 = [], poly14 = [], poly15 = [],
         poly16 = [], poly17 = [], poly18 = [], poly19 = [], poly20 = [],
         poly21 = [], poly22 = [], poly23 = [], poly24 = [];
-    poly1 = [0, 0, 35, 0, 35, 1, 1, 1, 1, 39, 0, 39];
-    polyDraw(poly1, context, gVars.colors.dg);
-    poly2 = [0, 39, 35, 39, 35, 40, 0, 40];
-    polyDraw(poly2, context, gVars.colors.lg);
+    // poly1 = [0, 0, 35, 0, 35, 1, 1, 1, 1, 39, 0, 39];
+    // polyDraw(poly1, context, gVars.colors.dg);
+    // poly2 = [0, 39, 35, 39, 35, 40, 0, 40];
+    // polyDraw(poly2, context, gVars.colors.lg);
     poly3 = [4, 4, 28, 4, 28, 12, 27, 12, 27, 5, 5, 5, 5, 35, 4, 35];
     polyDraw(poly3, context, gVars.colors.dg);
     poly4 = [4, 35, 9, 35, 9, 36, 4, 36];
@@ -263,30 +280,78 @@ var makeCircle = function(gVars) {
 
     return canvas;
 }
-var makeBG = function(gVars) {
+var getGreyShift = function(gVars, event) {
+    var mouseX = event.clientX;
+    var winX = $('#table_404 section').width();
+    var halfWinX = winX / 2;
+    var newMouseX = Math.round(((mouseX - halfWinX) / halfWinX) * gVars.greyShift);
+    return newMouseX;
+}
+
+$('#table_404 section').mousemove(function(event) {
+    var newMouseX = getGreyShift(gVars, event);
+
+    if (newMouseX != gVars.mouseX) {
+        gVars.mouseX = newMouseX;
+
+        var lightGrey = gVars.greys.lg + (newMouseX * gVars.greyFactor);
+        var darkGrey = gVars.greys.dg - (newMouseX * gVars.greyFactor);
+
+        gVars.colors.lg = 'rgb(' + lightGrey + ',' + lightGrey + ',' + lightGrey + ')';
+        gVars.colors.dg = 'rgb(' + darkGrey + ',' + darkGrey + ',' + darkGrey + ')';
+
+        var bgBorder = 'linear-gradient(0deg, '+gVars.colors.lg+' 0%, '+gVars.colors.lg+' 100%),' +
+                'linear-gradient(0deg, '+gVars.colors.lg+' 0%, '+gVars.colors.lg+' 100%),' +
+                'linear-gradient(0deg, '+gVars.colors.dg+' 0%, '+gVars.colors.dg+' 100%),' +
+                'linear-gradient(0deg, '+gVars.colors.dg+' 0%, '+gVars.colors.dg+' 100%)';
+
+        $('#table_404 section').css({
+            'background-image': bgBorder
+        });
+        // console.log(gVars.colors.lg, gVars.colors.dg);
+        makeBG($('#broken_image_404_grey'), gVars);
+    }
+});
+
+
+var makeBG = function($this, gVars) {
     gVars.canvasWidth = $brokenImage.width();
     gVars.canvasHeight = $brokenImage.height();
     gVars.pixelSize = (1 / gVars.cHeight) * gVars.canvasHeight;
 
     var canvas1 = greyScale(gVars);
+
+    return $('#broken_image_404').css({
+        "background-image": "url(" + (canvas1.toDataURL("image/png")) + ")"
+    });
+}
+
+var makeShapes = function(gVars) {
+    gVars.canvasWidth = $brokenImage.width();
+    gVars.canvasHeight = $brokenImage.height();
+    gVars.pixelSize = (1 / gVars.cHeight) * gVars.canvasHeight;
+
     var canvas2 = makeTriangle(gVars);
     var canvas3 = makeSquare(gVars);
     var canvas4 = makeCircle(gVars);
 
-    return $('#broken_image_404').css({
+    return $('#broken_image_404_shapes').css({
         "background-image": "url(" + (canvas4.toDataURL("image/png")) + "), url(" +
             (canvas3.toDataURL("image/png")) + "), url(" +
-            (canvas2.toDataURL("image/png")) + "), url(" +
-            (canvas1.toDataURL("image/png")) + ")"
+            (canvas2.toDataURL("image/png")) + ")"
     });
 }
 
-makeBG(gVars);
+makeBG($('#broken_image_404'), gVars);
+makeBG($('#broken_image_404_grey'), gVars);
+makeShapes(gVars);
 
 
 var _window = $(window);
 _window.resize(function() {
-    makeBG(gVars);
+    makeBG($('#broken_image_404'), gVars);
+    makeBG($('#broken_image_404_grey'), gVars);
+    makeShapes(gVars);
 });
 
 </script>
