@@ -1,0 +1,17 @@
+# Site settings
+title: "Here, Read This Code"
+email: your-email@domain.com
+description: "Open-source coding projects, and tutorials from Jimmy Ha at herereadthis.com"
+baseurl: "/code"
+url: "http://herereadthis.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+port: 9000
+
+destination: ../../code
+
+
+highlighter: pygments
