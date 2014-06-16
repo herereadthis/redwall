@@ -34,9 +34,12 @@ module.exports = function(grunt) {
             }
         },
         jekyll: {
-            dev: {
-                src: "./bellmaker/README.md",
-                dest: './code/'
+            build: {
+                options: {
+                    config: './src/jekyll_code/_config.yml',
+                    src: './src/jekyll_code',
+                    dest: './code'
+                }
             }
         },
         // compiles LESS file to minified CSS
@@ -85,6 +88,10 @@ module.exports = function(grunt) {
                 files: ['**/*.html'],
                 tasks: ["xmlpoke:updateLastModified"]
             },
+            jekyll: {
+                files: ["./src/jekyll_code/*", "./src/jekyll_code/*/*"],
+                tasks: ['jekyll']
+            },
             js: {
                 files: ['./src/js/*'],
                 tasks: ['requirejs']
@@ -126,6 +133,7 @@ module.exports = function(grunt) {
         // 'uglify'
         'bowercopy',
         'less',
+        'jekyll',
         'requirejs',
         'watch'
     ]);

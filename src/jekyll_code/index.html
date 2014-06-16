@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+
+<article>
+    <section>
+        <h2><a href="/code/bellmaker/">Bellmaker</a></h2>
+        
+        <p>The Bellmaker is a library of <strong>device-agnostic</strong> and <strong>device-specific</strong> media queries that will complement your exisiting CSS.</p>
+
+        <ul>
+            <li>It will help you make responsive websites, especially if you are using grid layouts.</li>
+            <li>It is free to use and modify as you please.</li>
+            <li>Both LESS (.less) and SASS (.scss) versions are available.</li>
+        </ul>
+
+        <p><a href="/code/bellmaker/">Continue Reading &raquo;</a></p>
+    </section>
+</article>
+
+
+<div class="home" style="display: none;">
+
+  <h1>Posts</h1>
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

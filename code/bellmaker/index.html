@@ -9,7 +9,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
   <head>
     <meta charset="utf-8">
-    <title property="dc:title">Here, Read This Code</title>
+    <title property="dc:title">Bellmaker</title>
 <!-- Metadata Standards + Dublin Core RDFA -->
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="keywords" content="Here, Read This, Jimmy Ha, web development, photography, Baking, Gardening" />
@@ -53,7 +53,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <link rel="stylesheet" type="text/css" href="/build/css/code.css" />
     <script data-main="/build/js/main" src="/build/js/require.js"></script>
 
-    <link rel="canonical" href="http://herereadthis.com/code/">
+    <link rel="canonical" href="http://herereadthis.com/code/bellmaker/">
 
     <!-- Custom CSS -->
     <!-- <link rel="stylesheet" href="/code/css/main.css"> -->
@@ -95,39 +95,109 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
         </svg>
       </a> -->
 
-    <article>
-    <section>
-        <h2><a href="/code/bellmaker/">Bellmaker</a></h2>
-        
-        <p>The Bellmaker is a library of <strong>device-agnostic</strong> and <strong>device-specific</strong> media queries that will complement your exisiting CSS.</p>
+    <article role="main">
+	<section>
+		<h2>Bellmaker</h2>
+<p>The Bellmaker is a library of <strong><em>device-agnostic</em></strong> <em>and</em> <strong><em>device-specific</em></strong> media queries that will complement your exisiting CSS. </p>
 
-        <ul>
-            <li>It will help you make responsive websites, especially if you are using grid layouts.</li>
-            <li>It is free to use and modify as you please.</li>
-            <li>Both LESS (.less) and SASS (.scss) versions are available.</li>
-        </ul>
+<ul>
+  <li>It will help you make <em>responsive websites</em>, especially if you are using grid layouts.</li>
+  <li>It is free to use and modify as you please.</li>
+  <li>Both <strong>LESS</strong> (.less) and <strong>SASS</strong> (.scss) versions are available.</li>
+</ul>
 
-        <p><a href="/code/bellmaker/">Continue Reading &raquo;</a></p>
-    </section>
+<h3 id="build">Build</h3>
+
+<div class="highlight"><pre><code class="ruby"><span class="err">$</span> <span class="n">git</span> <span class="nb">clone</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">herereadthis</span><span class="o">/</span><span class="n">bellmaker</span><span class="o">.</span><span class="n">git</span>
+<span class="err">$</span> <span class="n">cd</span> <span class="n">bellmaker</span><span class="o">/</span>
+<span class="err">$</span> <span class="n">npm</span> <span class="n">install</span>
+<span class="err">$</span> <span class="n">grunt</span></code></pre></div>
+
+<h3 id="view-the-demo">View the Demo</h3>
+
+<div class="highlight"><pre><code class="ruby"><span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="no">SimpleHTTPServer</span> <span class="mi">8001</span></code></pre></div>
+
+<p>Site will load at http://localhost:8001/</p>
+
+<hr />
+
+<h3 id="setup">Setup</h3>
+
+<p>The Bellmaker assumes you have basic terminal skills and knowledge of Git. Additionally, your project is using LESS/SASS and Grunt.</p>
+
+<h4 id="but-what-if-my-project-is-old-school">But what if my project is old school?</h4>
+
+<p>Maybe you write your novels on a typewriter. Maybe you develop your Tri-X in Rodinal. In which case, there is supplemental documentation for <a href="https://github.com/herereadthis/bellmaker/docs/old_school.md"><strong><em>using the Bellmaker as straight CSS</em></strong></a>.</p>
+
+<h3 id="css-importing">CSS importing</h3>
+
+<h4 id="recommended-add-the-bellmaker-as-a-bower-dependency">Recommended: Add the Bellmaker as a Bower dependency</h4>
+
+<div class="highlight"><pre><code class="ruby"><span class="err">$</span> <span class="n">bower</span> <span class="n">install</span> <span class="o">--</span><span class="n">save</span> <span class="n">bellmaker</span></code></pre></div>
+
+<h4 id="alternative-add-the-bellmaker-as-a-submodule">Alternative: Add the Bellmaker as a submodule</h4>
+
+<div class="highlight"><pre><code class="ruby"><span class="err">$</span> <span class="n">cd</span> <span class="n">my_repo</span>
+<span class="err">$</span> <span class="n">git</span> <span class="n">submodule</span> <span class="n">add</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">herereadthis</span><span class="o">/</span><span class="n">bellmaker</span><span class="o">.</span><span class="n">git</span>
+<span class="err">$</span> <span class="n">git</span> <span class="n">add</span> <span class="n">bellmaker</span> <span class="o">.</span><span class="n">gitmodules</span>
+<span class="err">$</span> <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;adds Bellmaker submodule&quot;</span></code></pre></div>
+
+<h4 id="as-less-add-to-your-imports">As LESS: Add to your imports</h4>
+
+<div class="highlight"><pre><code class="css"><span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/bellmaker.less&quot;</span><span class="p">;</span></code></pre></div>
+
+<h4 id="as-sass-add-mixins-partial-to-any-file-that-needs-media-queries">As SASS: Add mixins partial to any file that needs media queries</h4>
+
+<div class="highlight"><pre><code class="css"><span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/mixins_variables&quot;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/page_layout&quot;</span><span class="p">;</span></code></pre></div>
+
+<h4 id="reset-page-styling-to-make-10px--1rem">Reset page styling to make 10px = 1REM</h4>
+
+<div class="highlight"><pre><code class="css"><span class="nt">html</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">62</span><span class="o">.</span><span class="m">5</span><span class="o">%</span><span class="p">;</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">text</span><span class="o">-</span><span class="k">size</span><span class="o">-</span><span class="n">adjust</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+    <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="k">text</span><span class="o">-</span><span class="k">size</span><span class="o">-</span><span class="n">adjust</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+    <span class="c">/* existing attributes */</span>
+<span class="p">}</span>
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+    <span class="c">/* existing attributes */</span>
+<span class="p">}</span></code></pre></div>
+
+<hr />
+
+<h3 id="configuration">Configuration</h3>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
+    <span class="o">@</span><span class="n">media</span> <span class="o">@</span><span class="n">mq_baseline</span> <span class="err">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="o">@</span><span class="n">pw_baseline</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="k">@mq_2x_small</span> <span class="p">{</span>
+        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_2x_small</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="k">@mq_x_small</span> <span class="p">{</span>
+        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_x_small</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="k">@mq_small</span> <span class="p">{</span>
+        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_small</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="k">@mq_medium</span> <span class="p">{</span>
+        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_medium</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="k">@mq_large</span> <span class="p">{</span>
+        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_large</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="k">@mq_x_large</span> <span class="p">{</span>
+        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_x_large</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span></code></pre></div>
+
+<p><a href="http://badge.fury.io/bo/bellmaker"><img src="https://badge.fury.io/bo/bellmaker.svg" alt="Bower version" /></a></p>
+
+	<section>
 </article>
 
-
-<div class="home" style="display: none;">
-
-  <h1>Posts</h1>
-
-  <ul class="posts">
-    
-      <li>
-        <span class="post-date">Jun 15, 2014</span>
-        <a class="post-link" href="/code/jekyll/update/2014/06/15/welcome-to-jekyll/">Welcome to Jekyll!</a>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/code/feed.xml">via RSS</a></p>
-
-</div>
 
 
     <div class="page-content">
