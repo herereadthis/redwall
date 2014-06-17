@@ -154,7 +154,7 @@ article, [role="contentinfo"] {
     }
 }
 
-hr {
+hr, section + section:before {
     margin: 0 0 1.7rem 0;
     padding: 0.1rem 0 0 0;
     border-width: 0;
@@ -172,6 +172,10 @@ hr {
     @media @mq_x_large {
         margin-right: (2 / 12) * @pw_x_large;
     }
+}
+section + section:before {
+    display: block;
+    content: "";
 }
 
 

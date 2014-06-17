@@ -9,7 +9,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
   <head>
     <meta charset="utf-8">
-    <title property="dc:title">About</title>
+    <title property="dc:title">Mossflower</title>
 <!-- Metadata Standards + Dublin Core RDFA -->
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="keywords" content="Here, Read This, Jimmy Ha, web development, photography, Baking, Gardening" />
@@ -53,7 +53,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <link rel="stylesheet" type="text/css" href="/build/css/code.css" />
     <script data-main="/build/js/main" src="/build/js/require.js"></script>
 
-    <link rel="canonical" href="http://herereadthis.com/code/about/">
+    <link rel="canonical" href="http://herereadthis.com/code/mossflower/">
 
     <!-- Custom CSS -->
     <!-- <link rel="stylesheet" href="/code/css/main.css"> -->
@@ -99,20 +99,46 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
     <article role="main">
 	<section>
-		<h2>About</h2>
-<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+		<h2>Mossflower</h2>
+<p>Mossflower is a <strong>global reset</strong> CSS utility for both LESS and SASS.</p>
 
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
+<ul>
+  <li>Both robust and bare-bones; you won’t find yourself fighting against this utility.</li>
+  <li>It is <a href="https://github.com/herereadthis/mossflower">available on Github</a> to use and modify as you please.</li>
+  <li>It helps you spin up new web applications faster by <em>reducing boilderplate CSS</em>.</li>
+</ul>
 
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+<h3 id="build">Build</h3>
 
-<p style="color: #F00;">Raw HTML?</p>
+<div class="highlight"><pre><code class="html">$ git clone https://github.com/herereadthis/mossflower.git
+$ cd mossflower/
+$ npm install
+$ grunt</code></pre></div>
 
-<p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+<hr />
 
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
+<h3 id="setup">Setup</h3>
 
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+<p>The Bellmaker assumes you have basic terminal skills and knowledge of Git. Additionally, you should be using Grunt.</p>
+
+<h3 id="css-importing">CSS importing</h3>
+
+<h4 id="recommended-add-the-bellmaker-as-a-bower-dependency">Recommended: Add the Bellmaker as a Bower dependency</h4>
+
+<div class="highlight"><pre><code class="html">$ bower install --save mossflower</code></pre></div>
+
+<h4 id="alternative-add-mossflower-as-a-submodule">Alternative: Add Mossflower as a submodule</h4>
+
+<div class="highlight"><pre><code class="html">$ cd my_repo
+$ git submodule add https://github.com/herereadthis/mossflower.git
+$ git add mossflower .gitmodules
+$ git commit -m &quot;adds Mossflower submodule&quot;</code></pre></div>
+
+<h4 id="as-less-add-to-your-imports">As LESS: Add to your imports</h4>
+
+<div class="highlight"><pre><code class="css"><span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../mossflower/src/less/main.less&quot;</span><span class="p">;</span></code></pre></div>
+
+<p><a href="http://badge.fury.io/bo/mossflower"><img src="https://badge.fury.io/bo/mossflower.svg" alt="Bower version" /></a></p>
 
 	<section>
 </article>
