@@ -20,17 +20,25 @@ layout: default
     <section>
         <h2><a href="/code/mossflower/">Mossflower</a></h2>
 
-        <p>Mossflower is a <strong>global reset</strong> CSS utility for both LESS and SASS.</p>
+        <p>Mossflower is a <strong>global reset</strong> CSS utility for both LESS and SASS!</p>
 
         <ul>
             <li>Both robust and bare-bones; you won't find yourself fighting against this utility.</li>
             <li>It is free to use and modify as you please.</li>
             <li>It helps you spin up new web applications faster by <em>reducing boilderplate CSS</em>.</li>
         </ul>
-        </ul>
 
         <p><a href="/code/mossflower/">Continue Reading &raquo;</a></p>
     </section>
+    {% for post in site.posts %}
+    <section>
+        <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+
+        {{ post.excerpt }}
+
+        <p><a href="{{ post.url | prepend: site.baseurl }}">Continue Reading &raquo;</a></p>
+    </section>
+    {% endfor %}
 </article>
 
 
@@ -38,11 +46,13 @@ layout: default
 
   <h1>Posts</h1>
 
-  <ul class="posts">
+  <ul class="posts" style="display: none;">
     {% for post in site.posts %}
       <li>
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+        <p>{{ post.excerpt }}</p>
       </li>
     {% endfor %}
   </ul>

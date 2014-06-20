@@ -9,7 +9,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
   <head>
     <meta charset="utf-8">
-    <title property="dc:title">Welcome to Jekyll!</title>
+    <title property="dc:title">How to manage 3rd party libraries using Bower</title>
 <!-- Metadata Standards + Dublin Core RDFA -->
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="keywords" content="Here, Read This, Jimmy Ha, web development, photography, Baking, Gardening" />
@@ -53,7 +53,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <link rel="stylesheet" type="text/css" href="/build/css/code.css" />
     <script data-main="/build/js/main" src="/build/js/require.js"></script>
 
-    <link rel="canonical" href="http://herereadthis.com/code/jekyll/update/2014/06/15/welcome-to-jekyll/">
+    <link rel="canonical" href="http://herereadthis.com/code/2014/06/19/bower-how-to/">
 
     <!-- Custom CSS -->
     <!-- <link rel="stylesheet" href="/code/css/main.css"> -->
@@ -97,37 +97,37 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
         </svg>
       </a> -->
 
-      <header class="post-header">
-    <p class="meta">Jun 15, 2014</p>
+      <header class="post-header" style="display: none;">
+    <p class="meta">Jun 19, 2014</p>
   </header>
 
   <article class="post-content">
   </article>
 
+
+
 <article role="main">
-    <section class="bellmaker_container">
-    <h3>Welcome to Jekyll!</h3>
-    <p>You’ll find this post in your <code>_posts</code> directory - edit this post and re-build (or run with the <code>-w</code> switch) to see your changes!
-To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention: YYYY-MM-DD-name-of-post.ext.</p>
+	<section>
+		<h2>How to manage 3rd party libraries using Bower</h2>
+<p>Nearly every project requires third party libraries and frameworks (e.g. jQuery, Bootstrap), and it can get complicated keeping them updated and maintained. Fortunately, there’s <a href="http://bower.io">Bower</a>, a package manager that will take registered components and organize them as depencies.</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<h3 id="setup">Setup</h3>
 
-<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
-<span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span></code></pre></div>
+<p>Install Bower using npm</p>
 
-<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>.</p>
+<div class="highlight"><pre><code class="html">$ npm install -g bower</code></pre></div>
 
+<p>Make sure that your project is using npm</p>
 
-    </section>
+<div class="highlight"><pre><code class="html">$ cd my_project/
+$ npm install</code></pre></div>
+
+	<section>
 </article>
 
 
 
-<div class="post">
-</div>
+
 
     <div class="page-content">
       <div class="wrap">
