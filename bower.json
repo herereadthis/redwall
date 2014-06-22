@@ -20,6 +20,6 @@
     "bellmaker": "~1.0.0",
     "requirejs": "~2.1.14",
     "jquery": "~2.1.1",
-    "mossflower": "~0.1.0"
+    "mossflower": "~0.1.2"
   }
 }

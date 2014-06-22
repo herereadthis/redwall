@@ -113,7 +113,7 @@ Media queries in Bellmaker bubble up from smallest to largest, in sequence.
 For resolutions that would mostly likely occur on handheld devices, the Bellmaker will fill the container it is given. The resolutions covered are 320, 360, 480, 568, 640, and 720.
 
 {% raw %}
-<table class="smalltext_table">
+<table>
     <thead>
         <tr>
             <th>Breakpoint</th>
@@ -144,12 +144,6 @@ For resolutions that would mostly likely occur on handheld devices, the Bellmake
     </tbody>
 </table>
 {% endraw %}
-
-| Breakpoint | Width | iOS Devices | Other Devices |
-| ---- | ---- | ---- | ---- |
-| *320 - 480* | **100%** | iPhone Portrait | 720 HD:2, 1080 HD:3, WQHD:4 |
-| *480 - 640* | **100%** | iPhone Landscape | 768 WXGA:2 |
-| *640 - 768* | **100%** | | 720 HD:2 (landscape), 1080 HD:3 (landscape), WQHD:4 (landscape) |
 
 While a breakpoint at 640 pixels does exist, it's okay to skip because it would only become useful if a significant number of people frequently held their HD phones (e.g. Samsung GS5, HTC Hero) in landscape mode, but not many do unless they're gaming.
 

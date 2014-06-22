@@ -7,13 +7,13 @@ module.exports = function(grunt) {
         // imports the JSON metadata stored in package.json
         pkg: grunt.file.readJSON('package.json'),
         paths: {
-            app: 'src',
-            build: 'build'
+            src: './src',
+            build: './build'
         },
         bowercopy: {
             build: {
                 options: {
-                    destPrefix: 'build/js'
+                    destPrefix: '<%= paths.build %>/js'
                 },
                 files: {
                     'jquery.js': 'jquery/dist/jquery.min.js',
@@ -33,14 +33,14 @@ module.exports = function(grunt) {
                     passphrase: 'grunt',
                     open: 'http://localhost:9000',
                     // open: true,
-                    base: './src/index.html'
+                    base: '<%= paths.src %>/index.html'
                 }
             }
         },
         copy: {
             page404: {
-                src: './src/404.html',
-                dest: './build/404.html'
+                src: '<%= paths.src %>/404.html',
+                dest: '<%= paths.build %>/404.html'
             }
         },
         jekyll: {
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
             // 'less:redwall' will pull bellmaker's CSS into redwall CSS
             redwall: {
                 options: {
-                    paths: ["./src/less"],
+                    paths: ["<%= paths.src %>/less"],
                     // yuicompress: true,
                     // compress: true,
                     cleancss: true
@@ -72,10 +72,10 @@ module.exports = function(grunt) {
         requirejs: {
             build: {
                 options: {
-                    baseUrl: "src/js/",
-                    mainConfigFile: "src/js/main.js",
+                    baseUrl: "<%= paths.src %>/js/",
+                    mainConfigFile: "<%= paths.src %>/js/main.js",
                     name: "main",
-                    out: "build/js/main.js"
+                    out: "<%= paths.build %>/js/main.js"
                 }
             }
         },
@@ -91,7 +91,7 @@ module.exports = function(grunt) {
         watch: {
             // runs less task when any less files change
             page404: {
-                files: ["./src/404.html"],
+                files: ["<%= paths.src %>/404.html"],
                 tasks: ["copy:page404"]    
             },
             less: {
@@ -128,7 +128,7 @@ module.exports = function(grunt) {
                     }]
                 },
                 files: {
-                    './src/xml/sitemap.xml': './src/xml/sitemap.xml'
+                    '<%= paths.src %>/xml/sitemap.xml': '<%= paths.src %>/xml/sitemap.xml'
                 }
             }
         }
