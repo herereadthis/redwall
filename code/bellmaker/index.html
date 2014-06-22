@@ -153,6 +153,8 @@ $ git commit -m &quot;adds Bellmaker submodule&quot;</code></pre></div>
 <div class="highlight"><pre><code class="css"><span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/mixins_variables&quot;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/page_layout&quot;</span><span class="p">;</span></code></pre></div>
 
+<h3 id="configuration">Configuration</h3>
+
 <h4 id="reset-page-styling-to-make-10px--1rem">Reset page styling to make 10px = 1REM</h4>
 
 <div class="highlight"><pre><code class="css"><span class="nt">html</span> <span class="p">{</span>
@@ -167,9 +169,154 @@ $ git commit -m &quot;adds Bellmaker submodule&quot;</code></pre></div>
     <span class="c">/* existing attributes */</span>
 <span class="p">}</span></code></pre></div>
 
+<p><em>For more useful global CSS resets and utilities, check out out the companion <a href="/code/mossflower/">Mossflower</a> reset library.</em></p>
+
+<div class="highlight"><pre><code class="html">$ bower install --save mossflower</code></pre></div>
+
+<h4 id="add-vital-stuff-to-your-indexhtml-file">Add vital stuff to your index.html file</h4>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge,chrome=1&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-capable&quot;</span> <span class="na">content=</span><span class="s">&quot;yes&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-status-bar-style&quot;</span> <span class="na">content=</span><span class="s">&quot;black&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;</span> <span class="nt">/&gt;</span></code></pre></div>
+
 <hr />
 
-<h3 id="configuration">Configuration</h3>
+<h3 id="concepts">Concepts</h3>
+
+<p>Media queries in Bellmaker bubble up from smallest to largest, in sequence.</p>
+
+<h4 id="liquid-mobile">Liquid Mobile</h4>
+
+<p>For resolutions that would mostly likely occur on handheld devices, the Bellmaker will fill the container it is given. The resolutions covered are 320, 360, 480, 568, 640, and 720.</p>
+
+<table class="smalltext_table">
+    <thead>
+        <tr>
+            <th>Breakpoint</th>
+            <th>Width</th>
+            <th>iOS Devices</th>
+            <th>Other Devices</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>320 - 480</td>
+            <td>100%</td>
+            <td>iPhone Portrait</td>
+            <td>720 HD:2, 1080 HD:3, WQHD:4</td>
+        </tr>
+        <tr>
+            <td>480 - 640</td>
+            <td>100%</td>
+            <td>iPhone Landscape</td>
+            <td>768 WXGA:2</td>
+        </tr>
+        <tr>
+            <td>640 - 768</td>
+            <td>100%</td>
+            <td></td>
+            <td>720 HD:2 (landscape), 1080 HD:3 (landscape), WQHD:4 (landscape)</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Width</th>
+      <th>iOS Devices</th>
+      <th>Other Devices</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>320 - 480</em></td>
+      <td><strong>100%</strong></td>
+      <td>iPhone Portrait</td>
+      <td>720 HD:2, 1080 HD:3, WQHD:4</td>
+    </tr>
+    <tr>
+      <td><em>480 - 640</em></td>
+      <td><strong>100%</strong></td>
+      <td>iPhone Landscape</td>
+      <td>768 WXGA:2</td>
+    </tr>
+    <tr>
+      <td><em>640 - 768</em></td>
+      <td><strong>100%</strong></td>
+      <td> </td>
+      <td>720 HD:2 (landscape), 1080 HD:3 (landscape), WQHD:4 (landscape)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>While a breakpoint at 640 pixels does exist, it’s okay to skip because it would only become useful if a significant number of people frequently held their HD phones (e.g. Samsung GS5, HTC Hero) in landscape mode, but not many do unless they’re gaming.</p>
+
+<h4 id="column-snapping">Column Snapping</h4>
+
+<p>Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, as the screen gets larger, the elements on the page go to higher fixed widths. Each of the fixed widths was selected because they are divisible by 2, 3, 4, 6, 12, 16, and 24, which makes grid layouts easier. Resolution ranges were selected because the breakpoints are a best-fit for commonly-occurring screen resolutions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Fixed Width</th>
+      <th>3 Cols</th>
+      <th>4 Cols</th>
+      <th>12 Cols</th>
+      <th>16 Cols</th>
+      <th>24 Cols</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>768 - 1024</em></td>
+      <td><strong>768px</strong></td>
+      <td>256px</td>
+      <td>192px</td>
+      <td>64px</td>
+      <td>48px</td>
+      <td>32px</td>
+    </tr>
+    <tr>
+      <td><em>1024 - 1280</em></td>
+      <td><strong>960px</strong></td>
+      <td>320px</td>
+      <td>240px</td>
+      <td>80px</td>
+      <td>60px</td>
+      <td>40px</td>
+    </tr>
+    <tr>
+      <td><em>1280 - 1440</em></td>
+      <td><strong>1152px</strong></td>
+      <td>384px</td>
+      <td>288px</td>
+      <td>96px</td>
+      <td>72px</td>
+      <td>48px</td>
+    </tr>
+    <tr>
+      <td><em>1440 and up</em></td>
+      <td><strong>1344px</strong></td>
+      <td>448px</td>
+      <td>336px</td>
+      <td>112px</td>
+      <td>84px</td>
+      <td>56px</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For example, if your browser window is 1366 pixels wide, then the width of the page content will be 1152 pixels wide, giving you 3 columns of 384 pixels each, or 12 columns of 96 pixels each. The Bellmaker does not do an addtional larger breakpoint because 7 media queries is plenty enough, and designing for screen resolutions for 1600 or 1920 screens runs into usability difficulties with reading long lines of text.</p>
+
+<hr />
+
+<h3 id="usage">Usage</h3>
+
+<h4 id="device-agnostic-output-as-less">Device-agnostic output as LESS</h4>
 
 <div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
     <span class="o">@</span><span class="n">media</span> <span class="o">@</span><span class="n">mq_baseline</span> <span class="err">{</span>
@@ -194,6 +341,34 @@ $ git commit -m &quot;adds Bellmaker submodule&quot;</code></pre></div>
         <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_x_large</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="err">}</span></code></pre></div>
+
+<h4 id="device-agnostic-output-as-sass">Device-agnostic output as SASS</h4>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
+    <span class="o">@</span><span class="n">media</span> <span class="err">#{$</span><span class="n">da_baseline</span><span class="p">}</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_baseline</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_2x_small</span><span class="p">}</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_2x_small</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_x_small</span><span class="p">}</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_x_small</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_small</span><span class="p">}</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_small</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_medium</span><span class="p">}</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_medium</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_large</span><span class="p">}</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_large</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_x_large</span><span class="p">}</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_x_large</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span></code></pre></div>
+
+<p>Note: the abbreviation “da” stands for “device-agnostic,” and “pw” stands for “page width.”</p>
 
 <p><a href="http://badge.fury.io/bo/bellmaker"><img src="https://badge.fury.io/bo/bellmaker.svg" alt="Bower version" /></a></p>
 

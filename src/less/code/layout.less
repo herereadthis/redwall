@@ -154,6 +154,27 @@ article, [role="contentinfo"] {
     }
 }
 
+//tables
+
+article table {
+    margin: 0 0 2rem 0;
+
+    th {
+        text-align: left;
+    }
+    td {
+        vertical-align: top;
+    }
+    p {
+        margin: 0;
+    }
+    &.smalltext_table {
+        p {
+            .font_subtext;
+        }
+    }
+}
+
 hr, section + section:before {
     margin: 0 0 1.7rem 0;
     padding: 0.1rem 0 0 0;

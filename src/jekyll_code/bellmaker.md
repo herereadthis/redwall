@@ -69,6 +69,7 @@ $ git commit -m "adds Bellmaker submodule"
 @import "/PATH_TO/../bellmaker/src/less/page_layout";
 {% endhighlight %}
 
+### Configuration
 
 #### Reset page styling to make 10px = 1REM
 
@@ -86,9 +87,90 @@ body {
 }
 {% endhighlight %}
 
+*For more useful global CSS resets and utilities, check out out the companion [Mossflower](/code/mossflower/) reset library.*
+
+{% highlight html %}
+$ bower install --save mossflower
+{% endhighlight %}
+
+#### Add vital stuff to your index.html file
+
+{% highlight html %}
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+{% endhighlight %}
+
 ----------------------------
 
-### Configuration
+### Concepts
+
+Media queries in Bellmaker bubble up from smallest to largest, in sequence.
+
+#### Liquid Mobile
+
+For resolutions that would mostly likely occur on handheld devices, the Bellmaker will fill the container it is given. The resolutions covered are 320, 360, 480, 568, 640, and 720.
+
+{% raw %}
+<table class="smalltext_table">
+    <thead>
+        <tr>
+            <th>Breakpoint</th>
+            <th>Width</th>
+            <th>iOS Devices</th>
+            <th>Other Devices</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>320 - 480</td>
+            <td>100%</td>
+            <td>iPhone Portrait</td>
+            <td>720 HD:2, 1080 HD:3, WQHD:4</td>
+        </tr>
+        <tr>
+            <td>480 - 640</td>
+            <td>100%</td>
+            <td>iPhone Landscape</td>
+            <td>768 WXGA:2</td>
+        </tr>
+        <tr>
+            <td>640 - 768</td>
+            <td>100%</td>
+            <td></td>
+            <td>720 HD:2 (landscape), 1080 HD:3 (landscape), WQHD:4 (landscape)</td>
+        </tr>
+    </tbody>
+</table>
+{% endraw %}
+
+| Breakpoint | Width | iOS Devices | Other Devices |
+| ---- | ---- | ---- | ---- |
+| *320 - 480* | **100%** | iPhone Portrait | 720 HD:2, 1080 HD:3, WQHD:4 |
+| *480 - 640* | **100%** | iPhone Landscape | 768 WXGA:2 |
+| *640 - 768* | **100%** | | 720 HD:2 (landscape), 1080 HD:3 (landscape), WQHD:4 (landscape) |
+
+While a breakpoint at 640 pixels does exist, it's okay to skip because it would only become useful if a significant number of people frequently held their HD phones (e.g. Samsung GS5, HTC Hero) in landscape mode, but not many do unless they're gaming.
+
+#### Column Snapping
+
+Media queries in the Bellmaker create a pseudo-liquid snapping layout. That is, as the screen gets larger, the elements on the page go to higher fixed widths. Each of the fixed widths was selected because they are divisible by 2, 3, 4, 6, 12, 16, and 24, which makes grid layouts easier. Resolution ranges were selected because the breakpoints are a best-fit for commonly-occurring screen resolutions.
+
+| Breakpoint | Fixed Width | 3 Cols | 4 Cols | 12 Cols | 16 Cols | 24 Cols |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| *768 - 1024*  | **768px**  | 256px | 192px | 64px  | 48px | 32px |
+| *1024 - 1280* | **960px**  | 320px | 240px | 80px  | 60px | 40px |
+| *1280 - 1440* | **1152px** | 384px | 288px | 96px  | 72px | 48px |
+| *1440 and up* | **1344px** | 448px | 336px | 112px | 84px | 56px |
+
+For example, if your browser window is 1366 pixels wide, then the width of the page content will be 1152 pixels wide, giving you 3 columns of 384 pixels each, or 12 columns of 96 pixels each. The Bellmaker does not do an addtional larger breakpoint because 7 media queries is plenty enough, and designing for screen resolutions for 1600 or 1920 screens runs into usability difficulties with reading long lines of text.
+
+----------------------------
+
+### Usage
+
+#### Device-agnostic output as LESS
 
 {% highlight css %}
 .bellmaker_container {
@@ -115,6 +197,37 @@ body {
     }
 }
 {% endhighlight %}
+
+#### Device-agnostic output as SASS
+
+{% highlight css %}
+.bellmaker_container {
+    @media #{$da_baseline} {
+        width: $pw_baseline;
+    }
+    @media #{$da_2x_small} {
+        width: $pw_2x_small;
+    }
+    @media #{$da_x_small} {
+        width: $pw_x_small;
+    }
+    @media #{$da_small} {
+        width: $pw_small;
+    }
+    @media #{$da_medium} {
+        width: $pw_medium;
+    }
+    @media #{$da_large} {
+        width: $pw_large;
+    }
+    @media #{$da_x_large} {
+        width: $pw_x_large;
+    }
+}
+{% endhighlight %}
+
+Note: the abbreviation "da" stands for "device-agnostic," and "pw" stands for "page width."
+
 
 
 
