@@ -27,5 +27,14 @@
         a:hover {
             color: @code_a_hover;
         }
+        @media @da_baseline {
+            padding-left: 2rem;
+        }
+        @media @da_small {
+            padding-left: (1 / 12) * @pw_small;
+        }
+        @media @da_medium {
+            padding-left: 0;
+        }
     }
 }

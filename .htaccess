@@ -1,7 +1,7 @@
 # maybe add these http://www.queness.com/post/5421/17-useful-htaccess-tricks-and-tips
 
 #404 page
-ErrorDocument 404 /src/404.html
+ErrorDocument 404 /build/404.html
 
 
 # sets mime type for fonts

@@ -6,6 +6,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
         // imports the JSON metadata stored in package.json
         pkg: grunt.file.readJSON('package.json'),
+        paths: {
+            app: 'src',
+            build: 'build'
+        },
         bowercopy: {
             build: {
                 options: {
@@ -31,6 +35,12 @@ module.exports = function(grunt) {
                     // open: true,
                     base: './src/index.html'
                 }
+            }
+        },
+        copy: {
+            page404: {
+                src: './src/404.html',
+                dest: './build/404.html'
             }
         },
         jekyll: {
@@ -80,6 +90,10 @@ module.exports = function(grunt) {
         },
         watch: {
             // runs less task when any less files change
+            page404: {
+                files: ["./src/404.html"],
+                tasks: ["copy:page404"]    
+            },
             less: {
                 files: ["./src/less/*", "./src/less/*/*"],
                 tasks: ["less"]
@@ -121,6 +135,7 @@ module.exports = function(grunt) {
     });
     grunt.loadNpmTasks('grunt-bowercopy');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -132,6 +147,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         // 'uglify'
         'bowercopy',
+        'copy:page404',
         'less',
         'jekyll',
         'requirejs',

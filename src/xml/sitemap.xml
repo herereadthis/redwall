@@ -44,7 +44,7 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>http://herereadthis.com/src/404.html</loc>
+		<loc>http://herereadthis.com/build/404.html</loc>
 		<lastmod>2014-06-21</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.5</priority>
