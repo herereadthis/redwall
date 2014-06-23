@@ -1,15 +1,18 @@
 ---
-layout: page
-title: Bellmaker
-permalink: /bellmaker/
+layout:     post
+title:      "Bellmaker, a Media Query Package"
+date:       2014-06-21 20:30:10
+permalink:  bellmaker/
+tags:       css, less, sass
 ---
-
 
 The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** media queries that will complement your exisiting CSS. 
 
 * It will help you make *responsive websites*, especially if you are using grid layouts.
 * It is [available on Github](https://github.com/herereadthis/bellmaker) to use and modify as you please.
 * Both **LESS** and **SASS** versions are available, and will work with Bootstrap.
+
+<!--more-->
 
 ### Build
 
@@ -221,6 +224,76 @@ For example, if your browser window is 1366 pixels wide, then the width of the p
 {% endhighlight %}
 
 Note: the abbreviation "da" stands for "device-agnostic," and "pw" stands for "page width."
+
+#### Compiled as CSS
+
+{% highlight css %}
+@media only screen and (min-width: 320px) {
+    .bellmaker_container {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 480px) {
+    .bellmaker_container {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 640px) {
+    .bellmaker_container {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .bellmaker_container {
+        width: 76.8rem;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .bellmaker_container {
+        width: 96rem;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .bellmaker_container {
+        width: 115.2rem;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .bellmaker_container {
+        width: 134.4rem;
+    }
+}
+{% endhighlight %}
+
+{% raw %}
+<p>To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because <code>#container_id {}</code> would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify <code>@media @da_x_large {...}</code> As such, <strong>even though the Bellmaker does provide 7 breakpoints, <em>you can use just 4</em> as a bare minimum.</strong></p>
+{% endraw %}
+
+To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because {% highlight css %}#container_id {}{% endhighlight %} would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify {% highlight css %}@media @da_x_large {...}{% endhighlight %} As such, **even though the Bellmaker does provide 7 breakpoints,** ***you can use just 4*** **as a bare minimum.**
+
+#### As LESS
+
+{% highlight css %}
+.bellmaker_container {
+    @media @da_baseline {   width: @pw_baseline;}
+    @media @da_small {      width: @pw_small;}
+    @media @da_medium {     width: @pw_medium;}
+    @media @da_large {      width: @pw_large;}
+}
+{% endhighlight %}
+
+#### As SASS
+
+{% highlight css %}
+.bellmaker_container {
+    @media #{$da_baseline} {    width: $pw_baseline;}
+    @media #{$da_small} {       width: $pw_small;}
+    @media #{$da_medium} {      width: $pw_medium;}
+    @media #{$da_large} {       width: $pw_large;}
+}
+{% endhighlight %}
+
+Notice how the LESS/SASS variable names of the media queries just became very easy to remember?
 
 
 

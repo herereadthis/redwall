@@ -53,7 +53,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <link rel="stylesheet" type="text/css" href="/build/css/code.css" />
     <script data-main="/build/js/main" src="/build/js/require.js"></script>
 
-    <link rel="canonical" href="http://herereadthis.com/code/2014/06/19/bower-how-to/">
+    <link rel="canonical" href="http://herereadthis.com/code/bower-how-to/">
 
     <!-- Custom CSS -->
     <!-- <link rel="stylesheet" href="/code/css/main.css"> -->
@@ -73,13 +73,9 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
   <a class="page-link" href="/code/about/" style="display: none;">About</a>
 
-  <a class="page-link" href="/code/bellmaker/" style="display: none;">Bellmaker</a>
-
   <a class="page-link" href="/code/feed.xml" style="display: none;"></a>
 
   <a class="page-link" href="/code/" style="display: none;"></a>
-
-  <a class="page-link" href="/code/mossflower/" style="display: none;">Mossflower</a>
 
 
 
@@ -111,17 +107,142 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 		<h2>How to manage 3rd party libraries using Bower</h2>
 <p>Nearly every project requires third party libraries and frameworks (e.g. jQuery, Bootstrap), and it can get complicated keeping them updated and maintained. Fortunately, there’s <a href="http://bower.io">Bower</a>, a package manager that will take registered components and organize them as depencies.</p>
 
+<!--more-->
+
 <h3 id="setup">Setup</h3>
 
-<p>Install Bower using npm</p>
+<h4 id="install-bower-using-npm">Install Bower using npm</h4>
 
 <div class="highlight"><pre><code class="html">$ npm install -g bower</code></pre></div>
 
-<p>Make sure that your project is using npm</p>
+<h4 id="make-sure-that-your-project-is-using-npm">Make sure that your project is using npm</h4>
 
-<div class="highlight"><pre><code class="html">$ cd my_project/
+<div class="highlight"><pre><code class="html">$ cd myproject/
 $ npm install</code></pre></div>
 
+<p>All bower components will be installed by default at <code>./bower_components/</code>. you can change this by creating a <code>.bowerrc</code> file at root level. For example, I like to put my dependencies in <code>./src/components</code></p>
+
+<h4 id="custom-components-directory-bowerrc">Custom components directory (./.bowerrc)</h4>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span>
+  <span class="s2">&quot;directory&quot;</span><span class="o">:</span> <span class="s2">&quot;src/components&quot;</span>
+<span class="p">}</span></code></pre></div>
+
+<h4 id="add-a-component-such-as-jquery">Add a component, such as jQuery</h4>
+
+<div class="highlight"><pre><code class="html">$ bower install jquery</code></pre></div>
+
+<h4 id="if-you-dont-know-the-name-of-your-component-you-can-search-for-it-instead">If you don’t know the name of your component you can search for it instead</h4>
+
+<div class="highlight"><pre><code class="html">$ bower search [NAME]</code></pre></div>
+
+<hr />
+
+<h3 id="initialize-bower">Initialize Bower</h3>
+
+<div class="highlight"><pre><code class="html">$ bower init</code></pre></div>
+
+<p>It will ask you for a bunch of options, enter in information as needed, or just keep hitting &lt;ENTER&gt; to get the default answers.</p>
+
+<div class="highlight"><pre><code class="html">[?] name: <span class="nt">&lt;myproject&gt;</span>
+[?] version: <span class="nt">&lt;0.0.0&gt;</span>
+[?] description: 
+[?] main file: 
+[?] what types of modules does this package expose? 
+[?] keywords: 
+[?] authors: <span class="nt">&lt;John</span> <span class="na">Smith</span><span class="nt">&gt;</span>
+[?] license: <span class="nt">&lt;MIT&gt;</span>
+[?] homepage: 
+[?] set currently installed components as dependencies? <span class="nt">&lt;Yes&gt;</span>
+[?] add commonly ignored files to ignore list? <span class="nt">&lt;Yes&gt;</span>
+[?] would you like to mark this package as private which prevents it from being accidentally published to the registry? <span class="nt">&lt;Yes&gt;</span></code></pre></div>
+
+<p>It will generate a bower.json file for your approval</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;my_project&#39;</span><span class="p">,</span>
+  <span class="nx">version</span><span class="o">:</span> <span class="s1">&#39;0.0.0&#39;</span><span class="p">,</span>
+  <span class="nx">authors</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s1">&#39;John Smith &lt;john.smith@example.com&gt;&#39;</span>
+  <span class="p">],</span>
+  <span class="nx">license</span><span class="o">:</span> <span class="s1">&#39;MIT&#39;</span><span class="p">,</span>
+  <span class="nx">ignore</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s1">&#39;**/.*&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;node_modules&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;bower_components&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;test&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;tests&#39;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;jquery&quot;</span><span class="o">:</span> <span class="s2">&quot;~2.1.1&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Notice that it will show jQuery, because you have installed it as a component before initializing Bower.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;jquery&quot;</span><span class="o">:</span> <span class="s2">&quot;~2.1.1&quot;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>This means that the current version of jQuery for your project is 2.1.1. This version number comes from the <a href="https://github.com/jquery/jquery/releases/tag/2.1.1">jQuery Github release tag</a>. If you ever want to change the version of jQuery in the future, go to your bower.json file and change the version number.</p>
+
+<h4 id="install-all-dependencies-based-on-bowerjson">Install all dependencies based on bower.json</h4>
+
+<div class="highlight"><pre><code class="html">$ bower install</code></pre></div>
+
+<h4 id="install-a-new-dependency-after-bowerjson-has-been-created">Install a new dependency after bower.json has been created</h4>
+
+<div class="highlight"><pre><code class="html">$ bower install [name] --save</code></pre></div>
+
+<p>By running the above command, the component will be added, and your bower.json file will be updated accordingly.</p>
+
+<h4 id="update-dependencies-to-latest-version">Update dependencies to latest version</h4>
+
+<div class="highlight"><pre><code class="html">$ bower update</code></pre></div>
+
+<hr />
+
+<h3 id="registering-a-bower-package">Registering a Bower Package</h3>
+
+<p>Before you begin (assuming your project is hosted on Github),</p>
+
+<ul>
+  <li>Initialize a bower.json file, and set the version number to the next release you want it to be. The release tag comes in the form of #.#.#, where:
+    <ul>
+      <li>the first number is a major change that renders previous versions obsolete,</li>
+      <li>the second number indicates a new feature, and</li>
+      <li>the third number is a small patch.</li>
+    </ul>
+  </li>
+  <li>make sure you modify <code>"ignore": [...]</code> part of bower.json so that only essential items necessary get copied
+    <ul>
+      <li>For example, there probably is no need for the package to have build or .tmp files, or demo or example pages</li>
+    </ul>
+  </li>
+  <li>Commit and push the new bower.json file, along with any new changes.</li>
+  <li>Cut a release on Github
+    <ul>
+      <li>You can do from a terminal, but it’s easier to go to https://github.com/[MYNAME]/[MYPROJECT]/releases</li>
+      <li>Name the “Tag version” and the “Release title” the same as your version number</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="register-in-terminal">Register in terminal</h4>
+
+<div class="highlight"><pre><code class="html">bower register [app name] [git endpoint]</code></pre></div>
+
+<h4 id="example">Example</h4>
+
+<div class="highlight"><pre><code class="html">$ bower register MYPROJECT git://github.com/MYNAME/MYPROJECT.git
+Registering a package will make it visible and installable via the registry.
+Proceed (y/n)? y
+registered backbone.raphael to git://github.com/MYNAME/MYPROJECT.git</code></pre></div>
+
+
+		<footer>
+<p><em>Last updated: 22 June 2014</em></p>
+		</footer>
 	<section>
 </article>
 
