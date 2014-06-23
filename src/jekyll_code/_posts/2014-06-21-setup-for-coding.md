@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "How to Set Up Your Computer for Coding"
-date:       2014-06-22 20:30:10
+date:       2014-06-21 20:30:10
 permalink:  setup-for-coding/
 tags:       css, less, sass
 ---

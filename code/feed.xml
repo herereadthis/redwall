@@ -7,62 +7,6 @@
     <atom:link href="http://herereadthis.com/code/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>How to Set Up Your Computer for Coding</title>
-        <description>&lt;p&gt;It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;em&gt;Note: the &lt;code&gt;$&lt;/code&gt; does not mean something you should copy, it’s the prompt in your Terminal.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Also note: the instructions assume&lt;/em&gt; &lt;strong&gt;&lt;em&gt;you are using a Mac computer (OS X)&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;Most of the commands below will also work for Linux. But if you’re using a Windows machine, then I really don’t know what you’re doing, sorry.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;basic-installs&quot;&gt;Basic Installs&lt;/h3&gt;
-
-&lt;p&gt;First, install xCode from the App Store. It gives you command line tools.&lt;/p&gt;
-
-&lt;h4 id=&quot;install-homebrew-a-package-manager-for-os-x&quot;&gt;Install Homebrew, a package manager for OS X&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;
-    &lt;pre&gt;
-&lt;code&gt;$ ruby -e &quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;&lt;/code&gt;
-    &lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Basically, by installing Homebrew, “brew” is now a command in terminal. Check to see if the installation is working by running &lt;code&gt;brew doctor&lt;/code&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;update-brew&quot;&gt;Update Brew&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ brew update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Once you have Homebrew, you can isntall pip, which is a tool for installing python packages.&lt;/p&gt;
-
-&lt;h4 id=&quot;install-python--pip&quot;&gt;Install Python &amp;amp; Pip&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ brew install python
-$ curl -O http://python-distribute.org/distribute_setup.py
-$ python distribute_setup.py
-$ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-$ python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;github-setup&quot;&gt;Github Setup&lt;/h3&gt;
-
-&lt;p&gt;Github is basically the de facto tool for maintaining, hosting, deploying, and sharing code. It’s basically the social media for coders, but that would be an understatement. Before beginning, &lt;a href=&quot;https://github.com/&quot;&gt;create an account on Github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;node-package-manager&quot;&gt;Node Package Manager&lt;/h3&gt;
-
-&lt;p&gt;NPM is another package manager for a lot of very useful Javascript tools.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 22 Jun 2014 16:30:10 -0400</pubDate>
-        <link>http://herereadthis.com/code/setup-for-coding/</link>
-        <guid isPermaLink="true">http://herereadthis.com/code/setup-for-coding/</guid>
-      </item>
-    
-      <item>
         <title>Bellmaker, a Media Query Package</title>
         <description>&lt;p&gt;The Bellmaker is a library of &lt;strong&gt;&lt;em&gt;device-agnostic&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;and&lt;/em&gt; &lt;strong&gt;&lt;em&gt;device-specific&lt;/em&gt;&lt;/strong&gt; media queries that will complement your exisiting CSS. &lt;/p&gt;
 
@@ -376,6 +320,62 @@ $ git commit -m &amp;quot;adds Bellmaker submodule&amp;quot;&lt;/code&gt;&lt;/pr
         <pubDate>Sun, 22 Jun 2014 16:30:10 -0400</pubDate>
         <link>http://herereadthis.com/code/bellmaker/</link>
         <guid isPermaLink="true">http://herereadthis.com/code/bellmaker/</guid>
+      </item>
+    
+      <item>
+        <title>How to Set Up Your Computer for Coding</title>
+        <description>&lt;p&gt;It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;em&gt;Note: the &lt;code&gt;$&lt;/code&gt; does not mean something you should copy, it’s the prompt in your Terminal.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Also note: the instructions assume&lt;/em&gt; &lt;strong&gt;&lt;em&gt;you are using a Mac computer (OS X)&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;Most of the commands below will also work for Linux. But if you’re using a Windows machine, then I really don’t know what you’re doing, sorry.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-installs&quot;&gt;Basic Installs&lt;/h3&gt;
+
+&lt;p&gt;First, install xCode from the App Store. It gives you command line tools.&lt;/p&gt;
+
+&lt;h4 id=&quot;install-homebrew-a-package-manager-for-os-x&quot;&gt;Install Homebrew, a package manager for OS X&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;
+    &lt;pre&gt;
+&lt;code&gt;$ ruby -e &quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;&lt;/code&gt;
+    &lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Basically, by installing Homebrew, “brew” is now a command in terminal. Check to see if the installation is working by running &lt;code&gt;brew doctor&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;update-brew&quot;&gt;Update Brew&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ brew update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once you have Homebrew, you can isntall pip, which is a tool for installing python packages.&lt;/p&gt;
+
+&lt;h4 id=&quot;install-python--pip&quot;&gt;Install Python &amp;amp; Pip&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ brew install python
+$ curl -O http://python-distribute.org/distribute_setup.py
+$ python distribute_setup.py
+$ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+$ python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;github-setup&quot;&gt;Github Setup&lt;/h3&gt;
+
+&lt;p&gt;Github is basically the de facto tool for maintaining, hosting, deploying, and sharing code. It’s basically the social media for coders, but that would be an understatement. Before beginning, &lt;a href=&quot;https://github.com/&quot;&gt;create an account on Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;node-package-manager&quot;&gt;Node Package Manager&lt;/h3&gt;
+
+&lt;p&gt;NPM is another package manager for a lot of very useful Javascript tools.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 21 Jun 2014 16:30:10 -0400</pubDate>
+        <link>http://herereadthis.com/code/setup-for-coding/</link>
+        <guid isPermaLink="true">http://herereadthis.com/code/setup-for-coding/</guid>
       </item>
     
       <item>
