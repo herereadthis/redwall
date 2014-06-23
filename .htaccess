@@ -35,15 +35,15 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.rdf -f
 RewriteRule ^(.*)$ $1.rdf
 
-# redirect all urls that doesnÃ¢â‚¬â„¢t have a trailing slash to urls with a trailing slash
+# redirect all urls that doesn't have a trailing slash to urls with a trailing slash
 RewriteBase /
 # files that are existing will not get a slash added
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# url that shouldnÃ¢â‚¬â„¢t be rewritten
-RewriteCond %{REQUEST_URI} !apps/hrt/xml/foaf
-RewriteCond %{REQUEST_URI} !apps/hrt/xml/foaf#me
-# fires when a urls doesnÃ¢â‚¬â„¢t contain a trailing slash
+# url that shouldn't be rewritten
+RewriteCond %{REQUEST_URI} !build/xml/foaf
+RewriteCond %{REQUEST_URI} !build/xml/foaf#me
+# fires when a urls doesn't contain a trailing slash
 RewriteCond %{REQUEST_URI} !(.*)/$
 # 301 redirect to the url with the trailing slash appended
 RewriteRule ^(.*)$ http://herereadthis.com/$1/ [L,R=301] 

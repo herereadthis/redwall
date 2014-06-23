@@ -38,9 +38,17 @@ module.exports = function(grunt) {
             }
         },
         copy: {
-            page404: {
-                src: '<%= paths.src %>/404.html',
-                dest: '<%= paths.build %>/404.html'
+            build: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= paths.src %>',
+                    dest: '<%= paths.build %>',
+                    src: [
+                        '404.html',
+                        'xml/{,*/}*.*'
+                    ]
+                }]
             }
         },
         jekyll: {
@@ -90,9 +98,13 @@ module.exports = function(grunt) {
         },
         watch: {
             // runs less task when any less files change
-            page404: {
-                files: ["<%= paths.src %>/404.html"],
-                tasks: ["copy:page404"]    
+            build: {
+                files: [
+                    "<%= paths.src %>/404.html",
+                    "./src/xml/*",
+                    "./src/xml/*/*"
+                ],
+                tasks: ["copy:build"] 
             },
             less: {
                 files: ["./src/less/*", "./src/less/*/*"],
@@ -147,7 +159,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         // 'uglify'
         'bowercopy',
-        'copy:page404',
+        'copy',
         'less',
         'jekyll',
         'requirejs',
