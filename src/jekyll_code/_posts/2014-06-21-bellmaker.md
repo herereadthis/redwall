@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Bellmaker, a Media Query Package"
-date:       2014-06-21 20:30:10
+date:       2014-06-22 20:30:10
 permalink:  bellmaker/
 tags:       css, less, sass
 ---
