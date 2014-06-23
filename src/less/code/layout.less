@@ -145,6 +145,11 @@ article, [role="contentinfo"] {
     }
     ul {
         margin: 0 0 2rem 0;
+
+        ul {
+            margin: 0;
+            padding: 0 0 0 2rem;
+        }
     }
     code {
         .font_standard;
@@ -180,6 +185,11 @@ article {
         }
         p {
             margin: 0;
+            // inline code
+            > code {
+                background-color: @code_grey_light;
+                padding: 0.5rem;
+            }
         }
         &.smalltext_table {
             td {
@@ -199,11 +209,9 @@ article {
         pre {
             margin: 0;
             padding: 0.5rem 0;
-            overflow: auto;
         }
     }
 }
-
 hr, section + section:before {
     margin: 0 0 1.7rem 0;
     padding: 0.1rem 0 0 0;

@@ -13,7 +13,8 @@ port: 9000
 
 destination: ../../code
 
-
 highlighter: pygments
+
+excerpt_separator: "<!--more-->"
 
 

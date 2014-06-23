@@ -9,7 +9,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
   <head>
     <meta charset="utf-8">
-    <title property="dc:title">Bellmaker</title>
+    <title property="dc:title">Bellmaker, a Media Query Package</title>
 <!-- Metadata Standards + Dublin Core RDFA -->
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="keywords" content="Here, Read This, Jimmy Ha, web development, photography, Baking, Gardening" />
@@ -73,13 +73,9 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
   <a class="page-link" href="/code/about/" style="display: none;">About</a>
 
-  <a class="page-link" href="/code/bellmaker/" style="display: none;">Bellmaker</a>
-
   <a class="page-link" href="/code/feed.xml" style="display: none;"></a>
 
   <a class="page-link" href="/code/" style="display: none;"></a>
-
-  <a class="page-link" href="/code/mossflower/" style="display: none;">Mossflower</a>
 
 
 
@@ -97,9 +93,18 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
         </svg>
       </a> -->
 
-    <article role="main">
+      <header class="post-header" style="display: none;">
+    <p class="meta">Jun 21, 2014</p>
+  </header>
+
+  <article class="post-content">
+  </article>
+
+
+
+<article role="main">
 	<section>
-		<h2>Bellmaker</h2>
+		<h2>Bellmaker, a Media Query Package</h2>
 <p>The Bellmaker is a library of <strong><em>device-agnostic</em></strong> <em>and</em> <strong><em>device-specific</em></strong> media queries that will complement your exisiting CSS. </p>
 
 <ul>
@@ -107,6 +112,8 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
   <li>It is <a href="https://github.com/herereadthis/bellmaker">available on Github</a> to use and modify as you please.</li>
   <li>Both <strong>LESS</strong> and <strong>SASS</strong> versions are available, and will work with Bootstrap.</li>
 </ul>
+
+<!--more-->
 
 <h3 id="build">Build</h3>
 
@@ -339,10 +346,81 @@ $ git commit -m &quot;adds Bellmaker submodule&quot;</code></pre></div>
 
 <p>Note: the abbreviation “da” stands for “device-agnostic,” and “pw” stands for “page width.”</p>
 
+<h4 id="compiled-as-css">Compiled as CSS</h4>
+
+<div class="highlight"><pre><code class="css"><span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">320px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">480px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">640px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="m">76</span><span class="o">.</span><span class="m">8</span><span class="n">rem</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1024px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="m">96</span><span class="n">rem</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1280px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="m">115</span><span class="o">.</span><span class="m">2</span><span class="n">rem</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1440px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
+        <span class="k">width</span><span class="o">:</span> <span class="m">134</span><span class="o">.</span><span class="m">4</span><span class="n">rem</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because <code>#container_id {}</code> would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify <code>@media @da_x_large {...}</code> As such, <strong>even though the Bellmaker does provide 7 breakpoints, <em>you can use just 4</em> as a bare minimum.</strong></p>
+
+<p>To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because 
+&lt;div class="highlight"&gt;&lt;pre&gt;<code class="css"><span class="nf">#container_id</span> <span class="p">{}</span></code>&lt;/pre&gt;&lt;/div&gt;
+ would still be 100% width. Also, if you don’t feel like (or would rather delay) designing for very large screens, then there is no need to specify 
+&lt;div class="highlight"&gt;&lt;pre&gt;<code class="css"><span class="k">@media</span> <span class="k">@da_x_large</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span></code>&lt;/pre&gt;&lt;/div&gt;
+ As such, <strong>even though the Bellmaker does provide 7 breakpoints,</strong> <strong><em>you can use just 4</em></strong> <strong>as a bare minimum.</strong></p>
+
+<h4 id="as-less">As LESS</h4>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
+    <span class="o">@</span><span class="n">media</span> <span class="o">@</span><span class="n">da_baseline</span> <span class="err">{</span>   <span class="k">width</span><span class="o">:</span> <span class="o">@</span><span class="n">pw_baseline</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="k">@da_small</span> <span class="p">{</span>      <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="k">@da_medium</span> <span class="p">{</span>     <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_medium</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="k">@da_large</span> <span class="p">{</span>      <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_large</span><span class="p">;}</span>
+<span class="err">}</span></code></pre></div>
+
+<h4 id="as-sass">As SASS</h4>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
+    <span class="o">@</span><span class="n">media</span> <span class="err">#{$</span><span class="n">da_baseline</span><span class="p">}</span> <span class="p">{</span>    <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_baseline</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_small</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_medium</span><span class="p">}</span> <span class="p">{</span>      <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_medium</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_large</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_large</span><span class="p">;}</span>
+<span class="err">}</span></code></pre></div>
+
+<p>Notice how the LESS/SASS variable names of the media queries just became very easy to remember?</p>
+
 <p><a href="http://badge.fury.io/bo/bellmaker"><img src="https://badge.fury.io/bo/bellmaker.svg" alt="Bower version" /></a></p>
 
+		<footer>
+<p><em>Last updated: 22 June 2014</em></p>
+		</footer>
 	<section>
 </article>
+
+
 
 
 
