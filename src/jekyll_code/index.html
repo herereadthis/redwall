@@ -1,5 +1,7 @@
 ---
-layout: default
+layout:         default
+description:    Coding articles by Jimmy Ha, including projects on Github and tutorials
+tags:           coding
 ---
 
 
@@ -7,9 +9,7 @@ layout: default
     {% for post in site.posts %}
     <section>
         <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-
         {{ post.excerpt }}
-
         <p><a href="{{ post.url | prepend: site.baseurl }}">Continue Reading &raquo;</a></p>
     </section>
     {% endfor %}
@@ -20,16 +20,7 @@ layout: default
 
   <h1>Posts</h1>
 
-  <ul class="posts" style="display: none;">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 
-        <p>{{ post.excerpt }}</p>
-      </li>
-    {% endfor %}
-  </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 

@@ -13,10 +13,9 @@
 &lt;ul&gt;
   &lt;li&gt;It will help you make &lt;em&gt;responsive websites&lt;/em&gt;, especially if you are using grid layouts.&lt;/li&gt;
   &lt;li&gt;It is &lt;a href=&quot;https://github.com/herereadthis/bellmaker&quot;&gt;available on Github&lt;/a&gt; to use and modify as you please.&lt;/li&gt;
-  &lt;li&gt;Both &lt;strong&gt;LESS&lt;/strong&gt; and &lt;strong&gt;SASS&lt;/strong&gt; versions are available, and will work with Bootstrap.&lt;/li&gt;
+  &lt;li&gt;Both &lt;strong&gt;LESS&lt;/strong&gt; and &lt;strong&gt;SASS&lt;/strong&gt; versions are available, and will work with Bootstrap.
+&lt;!--more--&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;!--more--&gt;
 
 &lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
 
@@ -324,9 +323,8 @@ $ git commit -m &amp;quot;adds Bellmaker submodule&amp;quot;&lt;/code&gt;&lt;/pr
     
       <item>
         <title>How to Set Up Your Computer for Coding</title>
-        <description>&lt;p&gt;It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need.&lt;/p&gt;
-
-&lt;!--more--&gt;
+        <description>&lt;p&gt;It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need.
+&lt;!--more--&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Note: the &lt;code&gt;$&lt;/code&gt; does not mean something you should copy, it’s the prompt in your Terminal.&lt;/em&gt;&lt;/p&gt;
 
@@ -385,10 +383,9 @@ $ python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
   &lt;li&gt;Both robust and bare-bones; you won’t find yourself fighting against this utility.&lt;/li&gt;
   &lt;li&gt;It is &lt;a href=&quot;https://github.com/herereadthis/mossflower&quot;&gt;available on Github&lt;/a&gt; to use and modify as you please.&lt;/li&gt;
-  &lt;li&gt;It helps you spin up new web applications faster by &lt;em&gt;reducing boilderplate CSS&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;It helps you spin up new web applications faster by &lt;em&gt;reducing boilderplate CSS&lt;/em&gt;.
+&lt;!--more--&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;!--more--&gt;
 
 &lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
 
@@ -429,9 +426,8 @@ $ git commit -m &amp;quot;adds Mossflower submodule&amp;quot;&lt;/code&gt;&lt;/p
     
       <item>
         <title>How to manage 3rd party libraries using Bower</title>
-        <description>&lt;p&gt;Nearly every project requires third party libraries and frameworks (e.g. jQuery, Bootstrap), and it can get complicated keeping them updated and maintained. Fortunately, there’s &lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt;, a package manager that will take registered components and organize them as depencies.&lt;/p&gt;
-
-&lt;!--more--&gt;
+        <description>&lt;p&gt;Nearly every project requires third party libraries and frameworks (e.g. jQuery, Bootstrap), and it can get complicated keeping them updated and maintained. Fortunately, there’s &lt;a href=&quot;http://bower.io&quot;&gt;Bower&lt;/a&gt;, a package manager that will take registered components and organize them as depencies.
+&lt;!--more--&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;setup&quot;&gt;Setup&lt;/h3&gt;
 

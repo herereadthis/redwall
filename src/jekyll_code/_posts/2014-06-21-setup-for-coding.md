@@ -1,13 +1,13 @@
 ---
-layout:     post
-title:      "How to Set Up Your Computer for Coding"
-date:       2014-06-21 20:30:10
-permalink:  setup-for-coding/
-tags:       css, less, sass
+layout:         post
+title:          "How to Set Up Your Computer for Coding"
+date:           2014-06-21 20:30:10
+permalink:      setup-for-coding/
+description:    "It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need."
+tags:           css, less, sass
 ---
 
 It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need.
-
 <!--more-->
 
 *Note: the {% raw %}<code>$</code>{% endraw %} does not mean something you should copy, it's the prompt in your Terminal.*

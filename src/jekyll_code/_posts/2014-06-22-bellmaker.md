@@ -1,9 +1,10 @@
 ---
-layout:     post
-title:      "Bellmaker, a Media Query Package"
-date:       2014-06-22 20:30:10
-permalink:  bellmaker/
-tags:       css, less, sass
+layout:         post
+title:          "Bellmaker, a Media Query Package"
+date:           2014-06-22 20:30:10
+permalink:      bellmaker/
+description:    "The Bellmaker is a library of device-agnostic and device specific media queries that will complement your existing CSS."
+tags:           css, less, sass
 ---
 
 The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** media queries that will complement your exisiting CSS. 
@@ -11,7 +12,6 @@ The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** 
 * It will help you make *responsive websites*, especially if you are using grid layouts.
 * It is [available on Github](https://github.com/herereadthis/bellmaker) to use and modify as you please.
 * Both **LESS** and **SASS** versions are available, and will work with Bootstrap.
-
 <!--more-->
 
 ### Build

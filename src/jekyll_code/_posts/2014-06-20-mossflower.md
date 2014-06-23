@@ -1,9 +1,10 @@
 ---
-layout:     post
-title:      "Mossflower, a CSS Global Reset"
-date:       2014-06-20 20:30:10
-permalink:  mossflower/
-tags:       css, less, sass
+layout:     	post
+title:      	"Mossflower, a CSS Global Reset"
+date:       	2014-06-20 20:30:10
+permalink:  	mossflower/
+description:	"Mossflower is a global reset CSS utility for both LESS and SASS to help you spin up new websites."
+tags:       	css, less, sass
 ---
 
 Mossflower is a **global reset** CSS utility for both LESS and SASS.
@@ -11,7 +12,6 @@ Mossflower is a **global reset** CSS utility for both LESS and SASS.
 * Both robust and bare-bones; you won't find yourself fighting against this utility.
 * It is [available on Github](https://github.com/herereadthis/mossflower) to use and modify as you please.
 * It helps you spin up new web applications faster by *reducing boilderplate CSS*.
-
 <!--more-->
 
 ### Build

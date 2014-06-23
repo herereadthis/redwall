@@ -7,25 +7,14 @@ dc: http://purl.org/dc/terms/
 v: http://rdf.data-vocabulary.org/#
 owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
-  {% include head.html %}
+{% include head.html %}
+<body data-google-analytics="UA-37798496-1">
 
-    <body>
+{% include header.html %}
 
-    {% include header.html %}
+{{ content }}
 
-    {{ content }}
+{% include footer.html %}
 
-    <div class="page-content">
-      <div class="wrap">
-      </div>
-    </div>
-
-<article role="main">
-    <section>
-    </section>
-</article>
-
-    {% include footer.html %}
-
-    </body>
+</body>
 </html>

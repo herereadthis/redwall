@@ -3,13 +3,13 @@
     <title property="dc:title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 <!-- Metadata Standards + Dublin Core RDFA -->
     <meta name="robots" content="INDEX, FOLLOW" />
-    <meta name="keywords" content="Here, Read This, Jimmy Ha, web development, photography, Baking, Gardening" />
+    <meta name="keywords" content="herereadthis,github,{{ page.tags }}" />
     <meta property="dc:creator" name="author" content="Jimmy Ha" />
-    <meta property="dc:created" content="2013-01-15" />
+    <meta property="dc:created" content="{{ page.date | date: "%Y-%m-%d" }}" />
     <meta property="dc:language" content="en-US" />
 <!-- Open Graph RDFa -->
-    <meta property="og:title" content="Here, Read This" />
-    <meta property="og:description" name="description" content="{{ site.description }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:description" name="description" content="{% if page.description %}{{ page.description }}{% endif %}" />
     <!-- <meta property="og:type" content="website" /> -->
     <!-- <meta property="og:url" content="http://herereadthis.com/" /> -->
     <!-- <meta property="og:image" content="http://herereadthis.com/images/herereadthis_fb_320x320.jpg" /> -->
