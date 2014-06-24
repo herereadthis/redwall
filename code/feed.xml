@@ -7,7 +7,7 @@
     <atom:link href="http://herereadthis.com/code/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Bellmaker, a Media Query Package</title>
+        <title>Bellmaker, a media query package</title>
         <description>&lt;p&gt;The Bellmaker is a library of &lt;strong&gt;&lt;em&gt;device-agnostic&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;and&lt;/em&gt; &lt;strong&gt;&lt;em&gt;device-specific&lt;/em&gt;&lt;/strong&gt; media queries that will complement your exisiting CSS. &lt;/p&gt;
 
 &lt;ul&gt;
@@ -322,13 +322,28 @@ $ git commit -m &amp;quot;adds Bellmaker submodule&amp;quot;&lt;/code&gt;&lt;/pr
       </item>
     
       <item>
-        <title>How to Set Up Your Computer for Coding</title>
+        <title>How to set up your computer for coding</title>
         <description>&lt;p&gt;It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need.
 &lt;!--more--&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Note: the &lt;code&gt;$&lt;/code&gt; does not mean something you should copy, it’s the prompt in your Terminal.&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&quot;notes&quot;&gt;Notes:&lt;/h4&gt;
 
-&lt;p&gt;&lt;em&gt;Also note: the instructions assume&lt;/em&gt; &lt;strong&gt;&lt;em&gt;you are using a Mac computer (OS X)&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;Most of the commands below will also work for Linux. But if you’re using a Windows machine, then I really don’t know what you’re doing, sorry.&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The &lt;code&gt;$&lt;/code&gt; does not mean something you should copy, it’s the prompt in your Terminal.&lt;/li&gt;
+  &lt;li&gt;Any line that begins with &lt;code&gt;#&lt;/code&gt; is just a comment.&lt;/li&gt;
+  &lt;li&gt;The instructions assume &lt;em&gt;you are using a Mac computer (OS X).&lt;/em&gt; Most of the commands below will also work for Linux. But if you’re using a Windows machine, then I really don’t know what you’re doing, sorry.&lt;/li&gt;
+  &lt;li&gt;Some commands below require you to install globally. If your machine won’t allow you because of permissions, preface the command with &lt;code&gt;sudo&lt;/code&gt;. For example:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;
+    &lt;pre&gt;
+&lt;code&gt;# If this doesn&#39;t work:
+$ npm install less -g
+
+# try this
+$ sudo npm install less -g&lt;/code&gt;
+    &lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;basic-installs&quot;&gt;Basic Installs&lt;/h3&gt;
 
@@ -364,11 +379,32 @@ $ python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Github is basically the de facto tool for maintaining, hosting, deploying, and sharing code. It’s basically the social media for coders, but that would be an understatement. Before beginning, &lt;a href=&quot;https://github.com/&quot;&gt;create an account on Github&lt;/a&gt;.&lt;/p&gt;
 
+&lt;h4 id=&quot;install-git-with-homebrew&quot;&gt;Install Git with Homebrew&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ brew install git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To allow your computer to talk to Github, you have to make an SSH Key.&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;node-package-manager&quot;&gt;Node Package Manager&lt;/h3&gt;
 
-&lt;p&gt;NPM is another package manager for a lot of very useful Javascript tools.&lt;/p&gt;
+&lt;p&gt;NPM is another package manager for a lot of very useful Javascript tools. First, you will need to &lt;a href=&quot;http://nodejs.org&quot;&gt;install Node.js&lt;/a&gt;, a JavaScript platform. &lt;/p&gt;
+
+&lt;h4 id=&quot;check-if-npm-install-is-successful&quot;&gt;Check if NPM install is successful&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;# check npm install version
+$ npm -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;install-grunt-an-automated-javasscript-task-runner&quot;&gt;Install Grunt, an automated JavasScript task runner&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ sudo npm install -g bower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;install-bower-a-package-manager&quot;&gt;Install Bower, a package manager&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ sudo npm install -g bower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;For more information on Bower, read the tutorial,&lt;/em&gt; &lt;a href=&quot;/code/bower-how-to/&quot;&gt;“How to manage 3rd party libraries using Bower”&lt;/a&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Sat, 21 Jun 2014 16:30:10 -0400</pubDate>
@@ -377,7 +413,7 @@ $ python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </item>
     
       <item>
-        <title>Mossflower, a CSS Global Reset</title>
+        <title>Mossflower, a CSS global reset</title>
         <description>&lt;p&gt;Mossflower is a &lt;strong&gt;global reset&lt;/strong&gt; CSS utility for both LESS and SASS.&lt;/p&gt;
 
 &lt;ul&gt;
