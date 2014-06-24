@@ -44,6 +44,12 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
+		<loc>http://herereadthis.com/code/interaction-design/</loc>
+		<lastmod>2014-06-23</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
 		<loc>http://herereadthis.com/build/xml/foaf.rdf</loc>
 		<lastmod>2014-06-23</lastmod>
 		<changefreq>monthly</changefreq>

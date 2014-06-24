@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xml:lang="en"
+prefix="og: http://ogp.me/ns#
+fb: http://ogp.me/ns/fb#
+foaf: http://xmlns.com/foaf/0.1/
+dc: http://purl.org/dc/terms/
+v: http://rdf.data-vocabulary.org/#
+owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
+
+<head>
+    <meta charset="utf-8">
+    <title property="dc:title">Interaction design and user experience: essential concepts</title>
+<!-- Metadata Standards + Dublin Core RDFA -->
+    <meta name="robots" content="INDEX, FOLLOW" />
+    <meta name="keywords" content="herereadthis,github,interaction,design,user,experience,UI,UX" />
+    <meta property="dc:creator" name="author" content="Jimmy Ha" />
+    <meta property="dc:created" content="2014-06-24" />
+    <meta property="dc:language" content="en-US" />
+<!-- Open Graph RDFa -->
+    <meta property="og:title" content="Interaction design and user experience: essential concepts" />
+    <meta property="og:description" name="description" content="Using research from UX studies and known principles of user interface design, and maintaining best practices for device-agnostic development, here's some tips and clarification for working on appearance and behavior for sites." />
+    <!-- <meta property="og:type" content="website" /> -->
+    <!-- <meta property="og:url" content="http://herereadthis.com/" /> -->
+    <!-- <meta property="og:image" content="http://herereadthis.com/images/herereadthis_fb_320x320.jpg" /> -->
+    <!-- <meta property="og:image:type" content="image/jpeg" /> -->
+    <!-- <meta property="og:image:width" content="320" /> -->
+    <!-- <meta property="og:image:height" content="320" /> -->
+    <!-- <meta property="og:site_name" content="Here, Read This" /> -->
+<!-- browser-specific tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<!-- Facebook RDFa -->
+    <meta property="fb:admins" content="104276" />
+    <meta property="fb:app_id" content="146371075435162" />
+<!-- Bing Site Verification -->
+    <meta name="msvalidate.01" content="F7EE73CB34D5AF1C9DC816A5C75C32E6" />
+<!-- Google Site Verification -->
+    <meta name="google-site-verification" content="mczqUD0AU2jqxVwDld32k25wCRWJb5bMuQoCzvQCdfE" />
+<!-- Google Plus Verification -->
+    <link rel="author" href="https://plus.google.com/113505279995940079003" />
+<!-- Pinterest Site Verification -->
+    <meta name="p:domain_verify" content="642e03628ffc0809c6eab89aa14fb65b" />
+<!-- Friend of a Friend FOAF -->
+    <link rel="foaf:primaryTopic" type="application/rdf+xml" title="FOAF" href="http://herereadthis.com/build/xml/foaf.rdf" />
+<!-- Icons -->
+    <link rel="shortcut icon" href="/src/images/fav.ico" sizes="16x16 32x32 48x48" />
+
+
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/build/css/code.css" />
+    <script data-main="/build/js/main" src="/build/js/require.js"></script>
+
+    <link rel="canonical" href="http://herereadthis.com/code/interaction-design/">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/code/css/main.css"> -->
+
+</head>
+
+<body data-google-analytics="UA-37798496-1">
+
+<header role="banner">
+    <div class="bellmaker_container">
+        <h1><a href="/code" title="Here, Read This Code">Here, Read This Code</a></h1>
+    </div>
+</header>
+
+
+  <a class="page-link" href="/code/about/" style="display: none;">About</a>
+
+  <a class="page-link" href="/code/feed.xml" style="display: none;"></a>
+
+  <a class="page-link" href="/code/" style="display: none;"></a>
+
+
+
+
+
+<!--       <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a> -->
+
+  <header class="post-header" style="display: none;">
+    <p class="meta">Jun 24, 2014</p>
+  </header>
+
+  <article class="post-content">
+  </article>
+
+
+
+<article role="main">
+	<section>
+		<h2>Interaction design and user experience: essential concepts</h2>
+<p>Using research from UX studies and known principles of user interface design, and maintaining best practices for device-agnostic development, <strong><em>here’s some tips and clarification for working on appearance and behavior for sites.</em></strong></p>
+
+<ul>
+  <li><strong>Learnability</strong> - and nobody wants to read the manual. Oh look, an adorable cat video.</li>
+  <li><strong>Efficiency</strong> - how fast can you perform the task? </li>
+  <li><strong>Memorability</strong> - If you come back to it later, will you remember how to use it? And if you don’t, will it be okay?
+<!--more--></li>
+  <li><strong>Errors</strong> - how often do users mess up and how catastrophic are they? Does the interface handle errors well enough to help users recover?</li>
+  <li><strong>Satisfaction</strong> - was using it a nice experience or did you want to rip out your hair?</li>
+  <li><strong>Utility</strong> - does it actually do what you want it to do, with the features you need?</li>
+</ul>
+
+<p>One of the cardinal rules of web design is remembering that people spend 99% of their time doing something other than being on your website.</p>
+
+<hr />
+
+<h3 id="checklist-to-improve-usability">Checklist to improve Usability</h3>
+
+<h4 id="good-feedback-loops">Good Feedback Loops</h4>
+
+<p>There should be some status change or visual cue to inform users that their actions actually did something, e.g., clicking on buttons. Status changes and visual cues should be consistent and appropriately timed.</p>
+
+<h4 id="language-for-users">Language for Users</h4>
+
+<p>We often make the mistake of taking our database structure and turning that into a form. Additionally, we sometimes organize our websites like the way we organize the internal structure of the company or its hierarchy, instead of the users think and navigate.</p>
+
+<h4 id="preserve-browser-navigation">Preserve Browser Navigation</h4>
+
+<p>Users should be able to go backwards and forwards, as these actions typically serve as a proxy for “undo” and “redo.”</p>
+
+<h4 id="consistency">Consistency</h4>
+
+<p>If we have a menus and and navigation on the page, they should all work the same way. If we decide links are blue, then all links should be blue.</p>
+
+<h4 id="error-prevention">Error Prevention</h4>
+
+<p>Focus on design and layouts that aren’t error-prone by not being ambiguous or confusing, so users will be less likely to make mistakes</p>
+
+<h4 id="error-recovery">Error Recovery</h4>
+
+<p>When the user does mess up e.g., an typing letters into a input field for phone numbers, inform and provide a way for the use to handle the problem.</p>
+
+<h4 id="minimize-memory-load">Minimize Memory Load</h4>
+
+<p>Keep the user’s memory load at a low level by not forcing him/her to recall instructions or having to remember information from previous states or pages.</p>
+
+<h4 id="flexible-for-different-user-competencies">Flexible for different user competencies</h4>
+
+<p>Novice users should be able to move at a slower pace while experienced users should have access to shortcuts.</p>
+
+<h4 id="avoid-information-overload">Avoid Information Overload</h4>
+
+<p>Every addition of information onto a page becomes another piece to compete for the user’s attention. Fewer points of information means the user will have an easier time to make decisions</p>
+
+<h4 id="application-documentation">Application Documentation</h4>
+
+<p>Usually nobody wants to read the manual, but it’s good to have one as a reference anyway. Some sort of “Help” section whose content is focused towards completing tasks instead of describing features.</p>
+
+<hr />
+
+<h3 id="the-language-of-interaction--design">The Language of Interaction &amp; Design</h3>
+
+<p>You know all those intuitive things you feel about user interfaces and just assume everyone should do? Most of those “things” have names and have been thoroughly studied. Here are some….</p>
+
+<ul>
+  <li><strong>Call to Action - the thing that we want the user to do when arriving on a page,</strong> <em>which, hopefully, is the same thing the user wants to do when he/she arrives at that page.</em></li>
+</ul>
+
+<p>Everything else is secondary and maybe even unnecessary. Things having nothing to do with the call to action should not be competing for attention. For example, having big giant “Follow Us!” social media graphics will make the call to action about visiting Twitter.</p>
+
+<ul>
+  <li><strong>Barrier to Entry - the steps and complexities that user must take (or endure) before completing the call to action.</strong> The more complex, the less likely the call to action will be completed.</li>
+</ul>
+
+<p>A great example of minimizing barrier to entry came in E-Commerce a few years ago. Before the shift, users had to register for membership and create an account before shopping. Additionally, registration process would probably involve opening up your email app and clicking on a validation link. Nowadays, you can go to most e-commerce sites, put the thing you want into your shopping cart, and checkout as a guest without even having to register if you don’t feel like it.</p>
+
+<p>How many clicks, how many TOS to check, how much legalese to read, how much personal information must delivered before starting the call to action? However, we can’t remove all barriers to entry; they are often necessary, such a mechanism to check for age restrictions.</p>
+
+<ul>
+  <li><strong>Fitt’s Law</strong> - (more accurately, the “Accot-Zhai Steering Law” for 2D interfaces) <strong>the time it takes to acquire a target is a function of the distance and size of the target.</strong></li>
+</ul>
+
+<p>For example,  Apple recommends that buttons on iOS apps or webpages made for Mobile Safari should be no less than 44X44 pixels to prevent “fat fingering.” The other thing to consider is proximity - if the button or menu item or link is too close to another button, etc., the likelihood of clicking on the wrong thing increases.</p>
+
+<ul>
+  <li><strong>Hick’s Law - The time it takes to make a decision is a result of the number of choices available to the user.</strong></li>
+</ul>
+
+<p>You can choose between the white Apple earbuds that rest in your ear, or the white ones that go inside your ear canal. If you go to the Sony Store, you have a <a href="http://store.sony.com/earbuds/cat-27-catid-All-Earbuds">choice of 25 earbud models</a>, and each option is available in multiple colors. Good luck.</p>
+
+<p>The consequence of too many choices is that the user will feel overwhelmed and give up. Hick’s Law does not apply to complicated tasks or problem solving, however.</p>
+
+<ul>
+  <li><strong>Horror Vacui - The tendency to favor filling up blank spaces with stuff versus leaving them empty</strong> - which is the essence that drives minimalist design.</li>
+</ul>
+
+<p>There is an inverse relationship between empty spaces and perceived value. For example, window displays of high-end department stores typically have one or two dresses on simple racks, while discount stores crowd their displays with lots of bargains and SALE! SALE! SALE!</p>
+
+<p>In terms of page design, one of the most effective ways to promote or feature an element of significance or importance is not to use lots of arresting visual cues to capture the user’s attention, but just to leave it alone and keep it simple.</p>
+
+<ul>
+  <li><strong>Iconic Representation - Using pictorial images improves recognition and recall of signs and controls.</strong> Icons are a good way for relaying information or instructions.
+    <ul>
+      <li><strong><em>Similar Icons</em></strong> - images that are visually analogous to an action, object, or concept, like those “Falling Rocks” street signs.</li>
+      <li><strong><em>Example Icons</em></strong> - images of things commonly associated with the subject, such as a picture of a plane to symbolize an airport</li>
+      <li><strong><em>Symbolic Icons</em></strong> - images of things that are abstractions of the subject, e.g., a picture of lightning to represent high-voltage power lines</li>
+      <li><strong><em>Arbitrary Icons</em></strong> - images that have no relationship to the subject, but are learned over time, such as bio-hazard signs.</li>
+    </ul>
+  </li>
+  <li><strong>Operant Conditioning</strong> -  (i.e. positive vs. negative reinforcement) <strong>ways to modify behavior by rewarding desired actions and discouraging undesired actions</strong></li>
+</ul>
+
+<p>It’s something to consider when designing complex applications, in the context of delivering positive outcomes for users when they do what we want them to do. Also, they won’t be doing the things they find annoying.</p>
+
+<ul>
+  <li><strong>Pareto Principle</strong> - (also known as “80/20 Rule”) Basically, <strong>80% of the effects come from 20% of the causes.</strong> Sometimes it’s more like 75/25 or 85/15, but the idea is to remember that a lot of what you perceive to the result will typically come from a minority of the factors. The rule is useful for focusing your resources and possibly for cutting scope on tasks with diminishing returns. Some examples:
+    <ul>
+      <li>80% of your users will only use 20% of the features.
+        <ul>
+          <li>Do the other 80% of the features have to be there all the time then? If you hide that 80%, can your power users get to them easily?</li>
+        </ul>
+      </li>
+      <li>80% of your site activity comes from 20% of your users.
+        <ul>
+          <li>How do you cater to your core customers without alienating the lurkers? How can you pull in light users without angering your base? Are your analytics truly representative of your users are or are they skewed in favor towards a minority?</li>
+        </ul>
+      </li>
+      <li>80% of your requirements will be met with 20% of your development time.
+        <ul>
+          <li>The other 80% of development time will likely go towards refinement, bugfixes, code cleanup, accounting for fringe cases, browser compatibility, etc.</li>
+        </ul>
+      </li>
+      <li>80% of the errors come from 20% of the components.
+        <ul>
+          <li>Some things just tend to fail all the time.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Performance Load - the more effort it is to accomplish a task, the less likely the task will be accomplished successfully.</strong> How much cognitive load (perception, memory, problem solving) do we want to put on the user?</li>
+</ul>
+
+<p>We can minimize performance load by eliminating unnecessary information from displays, chunking information (group related bits together), and reduce the number of task steps by combining or automating them.</p>
+
+<ul>
+  <li><strong>Progressive Disclosure - Manage information complexity by displaying only the necessary or requested information at any given time.</strong>
+    <ul>
+      <li>Infrequently used controls are often hidden by a “More” button (See 80/20 Rule)</li>
+      <li>Are we giving info to someone who isn’t ready for, or interested in it?</li>
+    </ul>
+  </li>
+</ul>
+
+<p>We have to consider how much information to deliver at any moment to prevent overwhelming our users. Think clean and uncluttered versus disorienting and frustration.</p>
+
+<ul>
+  <li><strong>Proximity</strong> - (one of the keys to the rules of Gestalt) <strong>Things are are close together are perceived to more related than things that aren’t.</strong></li>
+</ul>
+
+<p>In our designs and applications, remember that one the strongest things to help users associate one element to another, or understand that two things aren’t related, is just distance. Where is the submit button located in relation to the form? How are sliders and check boxes and radio buttons aligned to the options?</p>
+
+<ul>
+  <li><strong>Serial Positioning</strong>  - If we ask the user to remember a bunch of things, <strong>it’s easier to remember the first and last things in a list.</strong></li>
+</ul>
+
+
+		<footer>
+<p><em>Last updated: 24 June 2014</em></p>
+		</footer>
+	<section>
+</article>
+
+
+
+
+
+<footer role="contentinfo">
+    <div class="bellmaker_container">
+        <section>
+            <p class="creative_commons_license"><a rel="license" class="creative_commons_image"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons License"><img
+                alt="Creative Commons License" 
+                src="http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg"
+                width="88" /></a>
+                <span><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Here, Read This</span> by
+                    <a xmlns:cc="http://creativecommons.org/ns#" href="http://herereadthis.com" property="cc:attributionName" rel="cc:attributionURL">Jimmy Ha</a> is licensed under a
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</span></p>
+
+<div id="social_linking">
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<path fill="#BBBBBB" d="M50,1.125C23.007,1.125,1.125,23.007,1.125,50S23.007,98.875,50,98.875S98.875,76.993,98.875,50S76.993,1.125,50,1.125z
+   M68.646,26.015l-6.76,0.003c-5.3,0-6.326,2.519-6.326,6.215v8.15h12.641l-0.005,12.766H55.561v32.757H42.376V53.148H31.354V40.383
+  h11.022v-9.414c0-10.925,6.675-16.875,16.42-16.875l9.851,0.015V26.015z"/>
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<path fill="#BBBBBB" d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M403.121,180.544
+  c0.146,3.254,0.221,6.528,0.221,9.819c0,100.311-76.354,215.982-215.979,215.982c-42.868,0-82.768-12.567-116.363-34.106
+  c5.938,0.703,11.981,1.062,18.108,1.062c35.565,0,68.295-12.138,94.275-32.496c-33.217-0.611-61.25-22.562-70.912-52.717
+  c4.637,0.885,9.392,1.361,14.283,1.361c6.923,0,13.629-0.928,19.999-2.662c-34.726-6.977-60.893-37.656-60.893-74.434
+  c0-0.32,0-0.639,0.008-0.955c10.235,5.685,21.939,9.1,34.382,9.494c-20.37-13.611-33.77-36.846-33.77-63.184
+  c0-13.911,3.744-26.952,10.278-38.162c37.439,45.927,93.374,76.146,156.462,79.314c-1.294-5.559-1.965-11.351-1.965-17.302
+  c0-41.92,33.99-75.906,75.909-75.906c21.833,0,41.562,9.218,55.409,23.97c17.29-3.404,33.537-9.721,48.206-18.42
+  c-5.668,17.727-17.705,32.603-33.376,41.997c15.354-1.834,29.983-5.916,43.597-11.952
+  C430.825,156.471,417.955,169.84,403.121,180.544z"/>
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<path fill="#BBBBBB" fill-rule="evenodd" clip-rule="evenodd" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+</svg>
+
+</div>
+
+            <div>&nbsp;</div>
+        </section>
+    </div>
+</footer>
+
+
+<footer class="site-footer" style="display: none;">
+
+<p>Site title: <span>Here, Read This Code</span></p>
+<p>Site email: <span>your-email@domain.com</span></p>
+<p>Site description: <span>Open-source coding projects, and tutorials from Jimmy Ha at herereadthis.com</span></p>
+
+
+</footer>
+
+
+</body>
+</html>
