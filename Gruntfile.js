@@ -71,9 +71,9 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    "./build/css/code.css": "./src/less/code/code.less",
-                    "./build/css/main.css": "./src/less/main.less",
-                    "./build/css/404.css": "./src/less/404.less"
+                    "<%= paths.build %>/css/code.css": "./src/less/code/code.less",
+                    "<%= paths.build %>/css/main.css": "./src/less/main.less",
+                    "<%= paths.build %>/css/404.css": "./src/less/404.less"
                 }
             }
         },
@@ -101,8 +101,7 @@ module.exports = function(grunt) {
             build: {
                 files: [
                     "<%= paths.src %>/404.html",
-                    "./src/xml/*",
-                    "./src/xml/*/*"
+                    "<%= paths.src %>/xml/foaf.rdf"
                 ],
                 tasks: ["copy:build"] 
             },
@@ -128,6 +127,7 @@ module.exports = function(grunt) {
                 options: {
                     replacements: [{
                         xpath: '/urlset/url/lastmod',
+                        // value: 'foo'
                         value: function newDate() {
                             var today = new Date(), yyyy, mm, dd;
                             yyyy = today.getFullYear();
@@ -140,7 +140,7 @@ module.exports = function(grunt) {
                     }]
                 },
                 files: {
-                    '<%= paths.src %>/xml/sitemap.xml': '<%= paths.src %>/xml/sitemap.xml'
+                    '<%= paths.build %>/xml/sitemap.xml': '<%= paths.src %>/xml/sitemap.xml'
                 }
             }
         }
