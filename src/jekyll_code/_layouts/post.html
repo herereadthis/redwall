@@ -6,19 +6,16 @@ layout: default
     <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
-  <article class="post-content">
-  </article>
-
 
 
 <article role="main">
-	<section>
+	<div class="content_container">
 		<h2>{{ page.title }}</h2>
 {{ content }}
 		<footer>
 <p><em>Last updated: {{ site.time | date_to_long_string }}</em></p>
 		</footer>
-	<section>
+	<div>
 </article>
 
 

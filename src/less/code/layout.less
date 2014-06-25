@@ -65,7 +65,7 @@ a:hover {
 
 article, [role="contentinfo"] {
 
-    section {
+    section, .content_container {
         margin: 0 auto;
         @media @da_baseline {
             padding: 2rem (1 / 12) * @pw_baseline 0;
@@ -159,6 +159,9 @@ article, [role="contentinfo"] {
 //tables
 
 article {
+    > h2 {
+        display: none;
+    }
     table {
         margin: 0 2rem 1.9rem 0;
         border: 0.1rem solid @code_grey_medium_light;

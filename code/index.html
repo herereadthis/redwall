@@ -18,7 +18,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <meta property="dc:language" content="en-US" />
 <!-- Open Graph RDFa -->
     <meta property="og:title" content="Here, Read This Code" />
-    <meta property="og:description" name="description" content="Coding articles by Jimmy Ha, including projects on Github and tutorials" />
+    <meta property="og:description" name="description" content="Coding articles by Jimmy Ha, including open-source projects, front-end tutorials, and UX discussion" />
     <!-- <meta property="og:type" content="website" /> -->
     <!-- <meta property="og:url" content="http://herereadthis.com/" /> -->
     <!-- <meta property="og:image" content="http://herereadthis.com/images/herereadthis_fb_320x320.jpg" /> -->
@@ -92,6 +92,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
       </a> -->
 
 <article>
+	<h2>Articles</h2>
     
     <section>
         <h2><a href="/code/interaction-design/">Interaction design and user experience: essential concepts</a></h2>
@@ -153,21 +154,14 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     
 </article>
 
-
-<div class="home" style="display: none;">
-
-  <h1>Posts</h1>
-
-
-
-  <p class="rss-subscribe">subscribe <a href="/code/feed.xml">via RSS</a></p>
-
-</div>
-
+<!--
+FEED URL: /code/feed.xml
+-->
 
 <footer role="contentinfo">
     <div class="bellmaker_container">
         <section>
+            <h4>Here, Read This Code: coding articles by Jimmy Ha for <a href="/" title="Here, Read This">herereadthis.com</a>.</h4>
             <p class="creative_commons_license"><a rel="license" class="creative_commons_image"
                 href="http://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons License"><img
                 alt="Creative Commons License" 
@@ -219,15 +213,37 @@ c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,
     </div>
 </footer>
 
+<!--
+    <canvas id="myCanvas" width="305" height="205"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
 
-<footer class="site-footer" style="display: none;">
+      context.beginPath();
+      context.moveTo(300, 0);
+      context.bezierCurveTo(300, 150, 275, 200, 200, 200);
+      context.bezierCurveTo(100, 200, 25, 150, 0, 100);
+      context.lineTo(0,200);
+      context.lineTo(300,200);
+      context.lineTo(300,0);
+      context.fillStyle = "blue";
+      context.fill();
+      context.lineWidth = 1;
 
+      // line color
+      context.strokeStyle = 'blue';
+      context.stroke();
+    </script>
+  </body>
+-->
+
+<!--
 <p>Site title: <span>Here, Read This Code</span></p>
 <p>Site email: <span>your-email@domain.com</span></p>
 <p>Site description: <span>Open-source coding projects, and tutorials from Jimmy Ha at herereadthis.com</span></p>
+-->
 
 
-</footer>
 
 
 </body>

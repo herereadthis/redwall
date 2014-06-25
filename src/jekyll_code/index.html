@@ -1,11 +1,12 @@
 ---
 layout:         default
-description:    Coding articles by Jimmy Ha, including projects on Github and tutorials
+description:    Coding articles by Jimmy Ha, including open-source projects, front-end tutorials, and UX discussion
 tags:           coding
 ---
 
 
 <article>
+	<h2>Articles</h2>
     {% for post in site.posts %}
     <section>
         <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
@@ -15,13 +16,6 @@ tags:           coding
     {% endfor %}
 </article>
 
-
-<div class="home" style="display: none;">
-
-  <h1>Posts</h1>
-
-
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<!--
+FEED URL: {{ "/feed.xml" | prepend: site.baseurl }}
+-->
