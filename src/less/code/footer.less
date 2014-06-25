@@ -11,8 +11,32 @@
 
     .bellmaker_container {
         margin: 0 auto;
-
+        padding-top: 0.5rem;
         background-size: 100% 0.5rem;
+    }
+
+    section {
+        padding-top: 0;
+
+        @media @da_small {
+            // should be 39.6rem
+            height: round(0.61803 * 10 * ((10 / 12) * @pw_small)) / 10;
+        }
+        @media @da_medium {
+            // should be 39.6rem
+            height: round(0.61803 * 10 * ((8 / 12) * @pw_medium)) / 10;
+        }
+        @media @da_large {
+            // should be 47.5rem
+            height: round(0.61803 * 10 * ((8 / 12) * @pw_large)) / 10;
+        }
+        @media @da_x_large {
+            // should be 55.4rem
+            height: round(0.61803 * 10 * ((8 / 12) * @pw_x_large)) / 10;
+        }
+        > *:first-child {
+            padding-top: 2rem;
+        }
     }
 
 }
