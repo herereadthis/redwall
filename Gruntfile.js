@@ -3,6 +3,7 @@
 module.exports = function(grunt) {
     // Do grunt-related things in here
     // Project configuration.
+    require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         // imports the JSON metadata stored in package.json
         pkg: grunt.file.readJSON('package.json'),
@@ -17,8 +18,7 @@ module.exports = function(grunt) {
                     destPrefix: '<%= paths.build %>/js'
                 },
                 files: {
-                    'jquery.js': 'jquery/dist/jquery.min.js',
-                    'require.js': 'requirejs/require.js'
+                    'jquery.js': 'jquery/dist/jquery.min.js'
                 }
             }
         },
@@ -148,17 +148,6 @@ module.exports = function(grunt) {
             }
         }
     });
-    grunt.loadNpmTasks('grunt-bowercopy');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-jekyll');
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-xmlpoke');
-
     grunt.registerTask('default', [
         // 'uglify'
         'bowercopy',
