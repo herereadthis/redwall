@@ -8,7 +8,8 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         paths: {
             src: './src',
-            build: './build'
+            build: './build',
+            components: './src/components'
         },
         bowercopy: {
             build: {
@@ -83,17 +84,19 @@ module.exports = function(grunt) {
                     baseUrl: "<%= paths.src %>/js/",
                     mainConfigFile: "<%= paths.src %>/js/main.js",
                     name: "main",
-                    out: "<%= paths.build %>/js/main.js"
+                    out: "<%= paths.build %>/js/main.js",
+                    optimize: 'uglify2',
                 }
             }
         },
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                preserveComments: false
             },
-            build: {
-                src: 'src/<%= pkg.name %>.js',
-                dest: 'build/<%= pkg.name %>.min.js'
+            require: {
+                files: {
+                    '<%= paths.build %>/js/require.js': ['<%= paths.components %>/**/require.js']
+                }
             }
         },
         watch: {
@@ -163,6 +166,7 @@ module.exports = function(grunt) {
         'less',
         'jekyll',
         'requirejs',
+        'uglify',
         'watch'
     ]);
     grunt.registerTask('devserver', [
