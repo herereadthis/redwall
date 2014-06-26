@@ -7,6 +7,112 @@
     <atom:link href="http://herereadthis.com/code/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>How to write fallback CSS for legacy Internet Explorer (IE8, IE7)</title>
+        <description>&lt;p&gt;It’s the nightmare of every front-end developer: supporting older versions of Internet Explorer (IE). You may not want to, but usually it’s because your company’s project needs to support customers still using older machines…or maybe you’re just a masochist. However, there are many ways to make your life easier by speeding up development while minimizing those mysterious errors when debugging.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-tricks-and-princiles&quot;&gt;Basic tricks and princiles&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Don’t pollute your current CSS&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Continue writing CSS as if you’re writing for the perfect, standards-compliant browser.&lt;/li&gt;
+      &lt;li&gt;Keep all legacy/fallback IE CSS in a separate stylesheet so it’ll be easier to manage.&lt;/li&gt;
+      &lt;li&gt;Call in IE CSS with conditional commenting. It’s easier handle than a bunch of IE-specific CSS hacks.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Forget about liquid layout&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Floats and percentages are already difficult enough, so a fixed-width page will allow you to set page elements faster&lt;/li&gt;
+      &lt;li&gt;From a practical standpoint, users on older Internet Explorer machines are most likely using old computers, which means they are using old, small monitors.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Good enough is good enough&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;You may want to explore magical polyfills to get your box shadows and transistions and rounded corners, but you’re just wasting your own time.&lt;/li&gt;
+      &lt;li&gt;Since IE machines are typically old, we should be keeping webpages as resource-light as possible anyway.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;tip-1-keep-all-ie-css-isolated&quot;&gt;Tip #1: Keep all IE CSS isolated&lt;/h3&gt;
+
+&lt;p&gt;If you scatter your IE CSS throughout your stylesheets with CSS hacks (e.g. the * star hack), then you will end up with a bunch of clutter, and debugging becomes much more complicated.&lt;/p&gt;
+
+&lt;h4 id=&quot;identify-ie-specific-classes-at-the-codebody-code-tag-with-conditional-commenting&quot;&gt;Identify IE-specific classes at the &lt;code&gt;&amp;lt;body /&amp;gt;&lt;/code&gt; tag with conditional commenting&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- HEAD tags go here --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- We will treat IE 7 and 8 as one entity --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 7]&amp;gt;&amp;lt;body class=&amp;quot;ie ie7 ie7_8&amp;quot;&amp;gt;&amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 8]&amp;gt;&amp;lt;body class=&amp;quot;ie ie8 ie7_8&amp;quot;&amp;gt;&amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Treat IE9 as a close approximation of standards compliancy --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 9]&amp;gt;&amp;lt;body class=&amp;quot;ie ie9&amp;quot;&amp;gt;&amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Because IE10 does not recognize conditional comments anyway. --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if (gt IE 9)|!(IE)]&amp;gt;&amp;lt;!--&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--&amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Insert Body&amp;#39;s content here --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then in your IE CSS stylesheet, you can target versions of IE independently or in groups. Obviously, if the user is on a modern browser like Chrome, Safari, Opera, or Firefox, all the IE-targeted CSS will be completely ignored.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;c&quot;&gt;/* target only IE7 */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.ie7&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* target only IE8 */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.ie8&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* target only IE9 */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.ie9&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* target IE7 and IE8 */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.ie7_8&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* target IE7, IE8, and IE9 */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.ie&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice that since any IE-specific CSS is identfied at the &lt;code&gt;body {}&lt;/code&gt; level, it is easier to override all other rules and inheritances without having to resort to a bunch of &lt;code&gt;!important&lt;/code&gt; declarations.&lt;/p&gt;
+
+&lt;p&gt;Also, when writing fallback IE, the vast majority of the problems come from IE7 and IE8, so it’s better to focus on those two. For example,&lt;/p&gt;
+
+&lt;h4 id=&quot;basic-css&quot;&gt;Basic CSS&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.ie7_8&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* styles go here */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.ie7_8&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.container&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;/* styles go here */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;as-precompiled-css-less-or-sass&quot;&gt;As precompiled CSS (LESS or SASS)&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.ie7_8&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;/* styles go here */&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;/* styles go here */&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Again, what we are concerned about is &lt;strong&gt;speed of development.&lt;/strong&gt; Writing CSS for older versions of IE is tedious and frustrating. There are many debates whether it’s better to use conditional commenting versus hacks, but the one thing that cannot be doubted is that debugging with conditional commenting is &lt;em&gt;faster.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;tip-2-set-your-page-to-a-fixed-with-of-984-pixels-984px&quot;&gt;Tip #2: Set your page to a fixed with of 984 pixels (984px)&lt;/h3&gt;
+
+&lt;p&gt;If your page is using a grid layout, or especially if you’re using frameworks such as Bootstrap or Foundation, then you’ve most likely set &lt;code&gt;box-sizing: border-box;&lt;/code&gt;. This means on IE7 machines, all your floats are going to break because of the paddings and margins. Save a lot of headaches by letting go of liquid columns.&lt;/p&gt;
+
+&lt;p&gt;984px was specifically chosen as a matter of praticality: Most users on IE7 or IE8 machines are likely working with old computers and old, small monitors. The majority will either be using 1024×768 or 1280×1024, so debugging time will be much faster with one lowest-common-denominator size.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 26 Jun 2014 03:30:10 -0400</pubDate>
+        <link>http://herereadthis.com/code/internet-explorer-legacy-css/</link>
+        <guid isPermaLink="true">http://herereadthis.com/code/internet-explorer-legacy-css/</guid>
+      </item>
+    
+      <item>
         <title>Interaction design and user experience: essential concepts</title>
         <description>&lt;p&gt;Using research from UX studies and known principles of user interface design, and maintaining best practices for device-agnostic development, &lt;strong&gt;&lt;em&gt;here’s some tips and clarification for working on appearance and behavior for sites.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
