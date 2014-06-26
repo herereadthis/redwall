@@ -2,37 +2,76 @@
 (function() {
 
   define(function(require) {
-    var $, exports, gVars, makeItHappen, makeLoops, moduleName, gVars;
+    var $, exports, gVars, makeItHappen, makeLoops, makeBG, moduleName, gVars;
     $ = require("jquery");
     exports = {};
     gVars = {
         canvasWidth: 0,
-        canvasHeight: 0
+        canvasHeight: 0,
+        sectionWidth: 0,
+        sectionPadding: 0,
+        bgTopPadding: 5,
+        bgBottomPadding: 30
     };
     moduleName = "code_footer";
     _window = $(window);
     makeLoops = function() {
-        var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext('2d');
+        var canvas, context;
+
+        canvas = document.createElement("canvas");
+        canvas.width = gVars.canvasWidth;
+        canvas.height = gVars.canvasHeight;
+        context = canvas.getContext("2d");
+
+        var rightEdge = Math.round((gVars.canvasWidth + gVars.sectionWidth) / 2);
+        var bottomEdge = gVars.canvasHeight;
+        var baseline = bottomEdge - gVars.bgBottomPadding
+        console.log(bottomEdge,baseline);
 
         context.beginPath();
-        context.moveTo(300, 0);
-        context.bezierCurveTo(300, 150, 275, 200, 200, 200);
-        context.bezierCurveTo(100, 200, 25, 150, 0, 100);
-        context.lineTo(0,200);
-        context.lineTo(300,200);
-        context.lineTo(300,0);
-        context.fillStyle = "blue";
+        context.moveTo(rightEdge, 0);
+        context.bezierCurveTo(rightEdge, 150, 275, bottomEdge - gVars.bgBottomPadding, 200, bottomEdge - gVars.bgBottomPadding);
+        context.bezierCurveTo(100, bottomEdge - gVars.bgBottomPadding, 25, 150, 0, 100);
+        context.lineTo(0,bottomEdge);
+        context.lineTo(rightEdge,bottomEdge);
+        context.lineTo(rightEdge,0);
+        context.fillStyle = "rgba(245,245,245,1)";
         context.fill();
-        context.lineWidth = 1;
+        context.lineWidth = 2;
 
         // line color
-        context.strokeStyle = 'blue';
+        context.strokeStyle = 'rgba(245,245,245,1)';
         context.stroke();
 
+        return canvas
+
     };
-    makeItHappen = function($this) {
+    makeBG = function($this) {
+        var sectionWidth, $section, $footerBackground;
+
         $section = $this.find('section');
+        $footerBackground = $this.find('#footer_background');
+        sectionWidth = $section.width();
+
+        if (sectionWidth != gVars.sectionWidth) {
+            gVars.sectionWidth = sectionWidth;
+            gVars.sectionPadding = parseInt($section.css('padding-right'), 10);
+            gVars.canvasWidth = $this.width();
+            gVars.canvasHeight = $this.height();
+            console.log(gVars);
+
+            var canvas1 = makeLoops();
+
+            return $footerBackground.css({
+                "background-image": "url(" + (canvas1.toDataURL("image/png")) + ")"
+            });
+        }
+    }
+    makeItHappen = function($this) {
+        makeBG($this);
+        _window.resize(function() {
+            makeBG($this);
+        });
     };
     exports.init = function($this) {
         var element;
