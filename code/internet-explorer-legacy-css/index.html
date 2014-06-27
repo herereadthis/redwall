@@ -96,8 +96,10 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <article role="main">
 	<div class="content_container">
 		<h2>How to write fallback CSS for legacy Internet Explorer (IE8, IE7)</h2>
-<p>It’s the nightmare of every front-end developer: supporting older versions of Internet Explorer (IE). You may not want to, but usually it’s because your company’s project needs to support customers still using older machines…or maybe you’re just a masochist. However, there are many ways to make your life easier by speeding up development while minimizing those mysterious errors when debugging.
+<p>It’s the nightmare of every front-end developer: supporting older versions of Internet Explorer (IE). You may not want to, but usually it’s because your company’s project needs to support customers still using older machines…or maybe you’re just a masochist. However, there are many ways to make your life easier by <strong>speeding up development</strong> while minimizing those mysterious errors when debugging.
 <!--more--></p>
+
+<p>Developing CSS for IE7 and IE8 definitely follows the 80/20 rule. 20% of your time is spent styling for modern browsers, 80% of your time is for IE. <strong>Every tip outlined below is meant to cut down your development time.</strong> Since basically the only reason why you are developing for IE is because you’re working on a paid project where your clients have angry customers, it’s better to spend your time on other tasks and scope.</p>
 
 <h3 id="basic-tricks-and-princiles">Basic tricks and princiles</h3>
 
@@ -125,7 +127,21 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <hr />
 
-<h3 id="tip-1-keep-all-ie-css-isolated">Tip #1: Keep all IE CSS isolated</h3>
+<h3 id="tip-1-download-virtualbox"><em>Tip #1:</em> Download VirtualBox</h3>
+
+<p>Since you are coding, I’m assuming you’re using a Mac or Linux machine. At any rate, you probably don’t have IE7 or IE8 on your computer so you need something to see your changes. <strong><a href="https://www.virtualbox.org/">VirtualBox is a free app for spinning up virtual machines</a></strong></p>
+
+<p>Next, visit <a href="https://www.modern.ie/en-us/virtualization-tools">www.modern.ie</a> to download the virtual machines you need. Select your OS, then select the “Virtual Box” option. It gives the option to download all the compressed files, or you can just use the cURL command given</p>
+
+<div class="highlight"><pre><code class="html"># download IE8 for Windows 7 on Mac
+$ curl -O -L &quot;https://www.modern.ie/vmdownload?platform=mac<span class="err">&amp;</span>virtPlatform=virtualbox<span class="err">&amp;</span>browserOS=IE8-Win7<span class="err">&amp;</span>parts=4<span class="err">&amp;</span>filename=VMBuild_20131127/VirtualBox/IE8_Win7/Mac/IE8.Win7.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar}&quot;
+
+# download IE7 for Vista on Mac
+$ curl -O -L &quot;https://www.modern.ie/vmdownload?platform=mac<span class="err">&amp;</span>virtPlatform=virtualbox<span class="err">&amp;</span>browserOS=IE7-Vista<span class="err">&amp;</span>parts=4<span class="err">&amp;</span>filename=VMBuild_20131127/VirtualBox/IE7_Vista/Mac/IE7.Vista.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar}&quot;</code></pre></div>
+
+<hr />
+
+<h3 id="tip-2-keep-all-ie-css-isolated"><em>Tip #2:</em> Keep all IE CSS isolated</h3>
 
 <p>If you scatter your IE CSS throughout your stylesheets with CSS hacks (e.g. the * star hack), then you will end up with a bunch of clutter, and debugging becomes much more complicated.</p>
 
@@ -146,6 +162,8 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <span class="c">&lt;!-- Insert Body&#39;s content here --&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>Only older versions of IE recognize the above condtional commenting. Modern browsers will ignore it all.</p>
 
 <p>Then in your IE CSS stylesheet, you can target versions of IE independently or in groups. Obviously, if the user is on a modern browser like Chrome, Safari, Opera, or Firefox, all the IE-targeted CSS will be completely ignored.</p>
 
@@ -184,15 +202,58 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <span class="err">}</span>
 <span class="err">}</span></code></pre></div>
 
-<p>Again, what we are concerned about is <strong>speed of development.</strong> Writing CSS for older versions of IE is tedious and frustrating. There are many debates whether it’s better to use conditional commenting versus hacks, but the one thing that cannot be doubted is that debugging with conditional commenting is <em>faster.</em></p>
+<p>Again, what we are concerned about is <strong>speed of development.</strong> Writing CSS for older versions of IE is tedious and frustrating. There are many debates whether it’s better to use conditional commenting versus hacks, but there’s one thing that cannot be doubted: debugging with conditional commenting is <em>faster.</em></p>
 
 <hr />
 
-<h3 id="tip-2-set-your-page-to-a-fixed-with-of-984-pixels-984px">Tip #2: Set your page to a fixed with of 984 pixels (984px)</h3>
+<h3 id="tip-3-set-your-page-to-a-fixed-with-of-984-pixels-984px"><em>Tip #3:</em> Set your page to a fixed with of 984 pixels (984px)</h3>
 
 <p>If your page is using a grid layout, or especially if you’re using frameworks such as Bootstrap or Foundation, then you’ve most likely set <code>box-sizing: border-box;</code>. This means on IE7 machines, all your floats are going to break because of the paddings and margins. Save a lot of headaches by letting go of liquid columns.</p>
 
-<p>984px was specifically chosen as a matter of praticality: Most users on IE7 or IE8 machines are likely working with old computers and old, small monitors. The majority will either be using 1024×768 or 1280×1024, so debugging time will be much faster with one lowest-common-denominator size.</p>
+<p>I’ve chosen 984px specifically as a matter of praticality: Most users on IE7 or IE8 machines are likely working with old computers and old, small monitors. The majority will either be using 1024×768 or 1280×1024, so debugging time will be much faster with one lowest-common-denominator size. (984px leaves from for the scrollbar)</p>
+
+<h4 id="grid-layout-with-984px">Grid layout with 984px</h4>
+
+<table>
+    <tbody>
+        <tr>
+            <td><strong>Columns</strong></td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>6</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td><strong>Width</strong></td>
+            <td>492</td>
+            <td>328</td>
+            <td>246</td>
+            <td>164</td>
+            <td>82</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>This does mean that for IE7, you will not be able to set column widths with percentages, but with actual pixel numbers.</p>
+
+<hr />
+
+<h3 id="tip-4-are-css3-polyfills-worth-it-no"><em>Tip #4:</em> Are CSS3 polyfills worth it? No.</h3>
+
+<p><strong>Forget about Modernizr, CSS3 PIE, Selectivr, and all other tools out there.</strong> Of course they work, and they do exactly what they are supposed to do. But you will waste your time picking the right library, the pouring through forums or StackOverflow or Github repos to find the right packages, then developing for them. You will survive if your IE doesn’t render CSS3.</p>
+
+<ul>
+  <li>rounded corners - flat design is all the rage anyway</li>
+  <li>drop shadows - It’s not 2008 anymore</li>
+  <li>gradients - just pick one color and go with it</li>
+</ul>
+
+<hr />
+
+<h3 id="tip-5-tackle-the-low-hanging-fruit-by-converting-everything-to-pixels"><em>Tip #5:</em> Tackle the low-hanging fruit by converting everything to pixels.</h3>
+
+<p>Wherever you use REMs or EMs, write the alternative CSS for IE in pixels. All your fonts and sizes will fit correctly afterwards.</p>
 
 
 		<footer>
