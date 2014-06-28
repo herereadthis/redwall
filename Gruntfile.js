@@ -47,7 +47,8 @@ module.exports = function(grunt) {
                     dest: '<%= paths.build %>',
                     src: [
                         '404.html',
-                        'xml/{,*/}*.*'
+                        'xml/{,*/}*.*',
+                        'images/code/{,*/}*.*'
                     ]
                 }]
             }
