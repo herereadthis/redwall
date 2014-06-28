@@ -5,6 +5,19 @@ date:           2014-06-26 7:30:10
 permalink:      internet-explorer-legacy-css/
 description:    "Supporting older versions of Internet Explorer (e.g. IE7, IE8) can be a nightmare but there are many options available to speed up development time while minimizing debugging errors"
 tags:           IE8, IE7, css
+image:
+    - url: internet-explorer-css--modern-ie--1920x1080.png
+      caption: '#### Visit [www.modern.ie](https://www.modern.ie/en-us/virtualization-tools) to download a VM' 
+      alt: 'Virtual machine VM downloads from Modern IE'
+    - url: internet-explorer-css--curl-ie8--1444x952.png
+      caption: '#### Terminal output for IE8 VM'
+      alt: 'Terminal output for IE8 VM'
+    - url: internet-explorer-css--virtualbox-settings--1352x1028.png
+      caption: '#### Configuring VM settings'
+      alt: 'Configuring VM settings'
+    - url: internet-explorer-css--launch-virtualbox--1336x804.png
+      caption: '#### VirtualBox Settings'
+      alt: 'Launch VirtualBox'
 ---
 
 It's the nightmare of every front-end developer: supporting older versions of Internet Explorer (IE). You may not want to, but usually it's because your company's project needs to support customers still using older machines...or maybe you're just a masochist. However, there are many ways to make your life easier by **speeding up development** while minimizing those mysterious errors when debugging.
@@ -31,15 +44,30 @@ Developing CSS for IE7 and IE8 definitely follows the 80/20 rule. 20% of your ti
 
 Since you are coding, I'm assuming you're using a Mac or Linux machine. At any rate, you probably don't have IE7 or IE8 on your computer so you need something to see your changes. **[VirtualBox is a free app for spinning up virtual machines](https://www.virtualbox.org/)**
 
-Next, visit [www.modern.ie](https://www.modern.ie/en-us/virtualization-tools) to download the virtual machines you need. Select your OS, then select the "Virtual Box" option. It gives the option to download all the compressed files, or you can just use the cURL command given
+{% figure_img 0 caption %}
+
+ Select your OS, then select the "Virtual Box" option to get a list of virtual machines. It gives the option to download all the compressed files, or you can just use the cURL command given.
+
 
 {% highlight html %}
-# download IE8 for Windows 7 on Mac
-$ curl -O -L "https://www.modern.ie/vmdownload?platform=mac&virtPlatform=virtualbox&browserOS=IE8-Win7&parts=4&filename=VMBuild_20131127/VirtualBox/IE8_Win7/Mac/IE8.Win7.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar}"
+# download IE8 for Windows XP on Mac
+$ curl -O -L "https://www.modern.ie/vmdownload?platform=mac&virtPlatform=virtualbox&browserOS=IE8-WinXP&parts=2&filename=VMBuild_20131127/VirtualBox/IE8_WinXP/Mac/IE8.WinXP.For.MacVirtualBox.part{1.sfx,2.rar}"
 
 # download IE7 for Vista on Mac
 $ curl -O -L "https://www.modern.ie/vmdownload?platform=mac&virtPlatform=virtualbox&browserOS=IE7-Vista&parts=4&filename=VMBuild_20131127/VirtualBox/IE7_Vista/Mac/IE7.Vista.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar}"
 {% endhighlight %}
+
+{% figure_img 1 caption %}
+
+For demo purposes, let's get the Windows XP machine for IE8. Running the cURL command will get two files, {% raw %}<code>IE8.WinXP.For.MacVirtualBox.part1.sfx</code>{% endraw %} and {% raw %}<code>IE8.WinXP.For.MacVirtualBox.part2.rar</code>{% endraw %}, downloaded to where your terminal is pointing. Extracting will get you a .OVA file: {% raw %}<code>IE8 - WinXP.ova</code>{% endraw %}
+
+{% figure_img 2 caption %}
+
+Double-clicking the .OVA file will launch settings in VirtualBox. Set aside lots of RAM for your VM.
+
+{% figure_img 3 caption %}
+
+
 
 --------------
 

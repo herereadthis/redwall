@@ -87,10 +87,9 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
         </svg>
       </a> -->
 
-  <header class="post-header" style="display: none;">
-    <p class="meta">Jun 26, 2014</p>
-  </header>
-
+<header class="post-header" style="display: none;">
+	<p class="meta">Jun 26, 2014</p>
+</header>
 
 
 <article role="main">
@@ -131,13 +130,29 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>Since you are coding, I’m assuming you’re using a Mac or Linux machine. At any rate, you probably don’t have IE7 or IE8 on your computer so you need something to see your changes. <strong><a href="https://www.virtualbox.org/">VirtualBox is a free app for spinning up virtual machines</a></strong></p>
 
-<p>Next, visit <a href="https://www.modern.ie/en-us/virtualization-tools">www.modern.ie</a> to download the virtual machines you need. Select your OS, then select the “Virtual Box” option. It gives the option to download all the compressed files, or you can just use the cURL command given</p>
+<figure><img src="/build/images/code//internet-explorer-css--modern-ie--1920x1080.png" alt="Virtual machine VM downloads from Modern IE" /><figcaption><h4 id="visit-wwwmoderniehttpswwwmodernieen-usvirtualization-tools-to-download-a-vm">Visit <a href="https://www.modern.ie/en-us/virtualization-tools">www.modern.ie</a> to download a VM</h4>
+</figcaption></figure>
 
-<div class="highlight"><pre><code class="html"># download IE8 for Windows 7 on Mac
-$ curl -O -L &quot;https://www.modern.ie/vmdownload?platform=mac<span class="err">&amp;</span>virtPlatform=virtualbox<span class="err">&amp;</span>browserOS=IE8-Win7<span class="err">&amp;</span>parts=4<span class="err">&amp;</span>filename=VMBuild_20131127/VirtualBox/IE8_Win7/Mac/IE8.Win7.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar}&quot;
+<p>Select your OS, then select the “Virtual Box” option to get a list of virtual machines. It gives the option to download all the compressed files, or you can just use the cURL command given.</p>
+
+<div class="highlight"><pre><code class="html"># download IE8 for Windows XP on Mac
+$ curl -O -L &quot;https://www.modern.ie/vmdownload?platform=mac<span class="err">&amp;</span>virtPlatform=virtualbox<span class="err">&amp;</span>browserOS=IE8-WinXP<span class="err">&amp;</span>parts=2<span class="err">&amp;</span>filename=VMBuild_20131127/VirtualBox/IE8_WinXP/Mac/IE8.WinXP.For.MacVirtualBox.part{1.sfx,2.rar}&quot;
 
 # download IE7 for Vista on Mac
 $ curl -O -L &quot;https://www.modern.ie/vmdownload?platform=mac<span class="err">&amp;</span>virtPlatform=virtualbox<span class="err">&amp;</span>browserOS=IE7-Vista<span class="err">&amp;</span>parts=4<span class="err">&amp;</span>filename=VMBuild_20131127/VirtualBox/IE7_Vista/Mac/IE7.Vista.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar}&quot;</code></pre></div>
+
+<figure><img src="/build/images/code//internet-explorer-css--curl-ie8--1444x952.png" alt="Terminal output for IE8 VM" /><figcaption><h4 id="terminal-output-for-ie8-vm">Terminal output for IE8 VM</h4>
+</figcaption></figure>
+
+<p>For demo purposes, let’s get the Windows XP machine for IE8. Running the cURL command will get two files, <code>IE8.WinXP.For.MacVirtualBox.part1.sfx</code> and <code>IE8.WinXP.For.MacVirtualBox.part2.rar</code>, downloaded to where your terminal is pointing. Extracting will get you a .OVA file: <code>IE8 - WinXP.ova</code></p>
+
+<figure><img src="/build/images/code//internet-explorer-css--virtualbox-settings--1352x1028.png" alt="Configuring VM settings" /><figcaption><h4 id="configuring-vm-settings">Configuring VM settings</h4>
+</figcaption></figure>
+
+<p>Double-clicking the .OVA file will launch settings in VirtualBox. Set aside lots of RAM for your VM.</p>
+
+<figure><img src="/build/images/code//internet-explorer-css--launch-virtualbox--1336x804.png" alt="Launch VirtualBox" /><figcaption><h4 id="virtualbox-settings">VirtualBox Settings</h4>
+</figcaption></figure>
 
 <hr />
 
@@ -257,7 +272,7 @@ $ curl -O -L &quot;https://www.modern.ie/vmdownload?platform=mac<span class="err
 
 
 		<footer>
-<p><em>Last updated: 27 June 2014</em></p>
+<p><em>Last updated: 28 June 2014</em></p>
 		</footer>
 	<div>
 </article>

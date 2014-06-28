@@ -5,6 +5,8 @@ description: "Open-source coding projects, and tutorials from Jimmy Ha at herere
 baseurl: "/code"
 url: "http://herereadthis.com"
 
+
+
 # Build settings
 markdown: kramdown
 permalink: pretty
@@ -16,5 +18,8 @@ destination: ../../code
 highlighter: pygments
 
 excerpt_separator: "<!--more-->"
+
+# custom stuff
+image_url: "/build/images/code/"
 
 
