@@ -62,7 +62,7 @@ a:hover {
 
 article, [role="contentinfo"] {
 
-    h2, h3, h4, p, ul, ol {
+    h2, h3, h4, p, ul, ol, figure.floated_figure {
         @media @da_small {
             padding-right: 2rem;
         }
@@ -75,6 +75,9 @@ article, [role="contentinfo"] {
         @media @da_x_large {
             padding-right: (1 / 12) * @pw_x_large;
         }
+    }
+    figcaption * {
+        padding-right: 0;
     }
     h2 {
         font-weight: 300;
@@ -185,6 +188,11 @@ section, .content_container {
             display: none;
         }
     }
+    &:only-child {
+        hr {
+            display: block;
+        }
+    }
 }
 
 hr {
@@ -236,8 +244,15 @@ figure {
         }
 
     }
-}
+    &.floated_figure {
+        float: right;
+        margin-left: 2rem;
 
+        & + * + * {
+            clear: both;
+        }
+    }
+}
 
 
 

@@ -18,6 +18,9 @@ image:
     - url: internet-explorer-css--launch-virtualbox--1336x804.png
       caption: '#### VirtualBox Settings'
       alt: 'Launch VirtualBox'
+    - url: internet-explorer-css--ie8--1600x1286.png
+      caption: '#### This site could use a lot of debugging'
+      alt: '#### This site could use a lot of debugging'
 ---
 
 It's the nightmare of every front-end developer: supporting older versions of Internet Explorer (IE). You may not want to, but usually it's because your company's project needs to support customers still using older machines...or maybe you're just a masochist. However, there are many ways to make your life easier by **speeding up development** while minimizing those mysterious errors when debugging.
@@ -46,7 +49,7 @@ Since you are coding, I'm assuming you're using a Mac or Linux machine. At any r
 
 {% figure_img 0 caption %}
 
- Select your OS, then select the "Virtual Box" option to get a list of virtual machines. It gives the option to download all the compressed files, or you can just use the cURL command given.
+Select your OS, then select the "Virtual Box" option to get a list of virtual machines. It gives the option to download all the compressed files, or you can just use the cURL command given.
 
 
 {% highlight html %}
@@ -63,13 +66,13 @@ For demo purposes, let's get the Windows XP machine for IE8. Running the cURL co
 
 {% figure_img 2 caption %}
 
-Double-clicking the .OVA file will launch settings in VirtualBox. Set aside lots of RAM for your VM.
+Double-clicking the .OVA file will launch settings in VirtualBox. Set aside lots of RAM for your VM. Now when you launch Virtual box, it'll display all the VMs you have. Clicking on the IE8 - WinXP machine will get you Internet Explorer 8 on your computer.
 
-{% figure_img 3 caption %}
+{% figure_img 4 caption %}
 
+Select "Tools" > "Developer Tools" to get to a very poor but still usable element inspector. One major flaw is that any change on a tag will not appear until you select onto another tag.
 
-
---------------
+----------------------
 
 ### *Tip #2:* Keep all IE CSS isolated
 

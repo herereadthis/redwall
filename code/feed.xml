@@ -62,10 +62,12 @@ $ curl -O -L &amp;quot;https://www.modern.ie/vmdownload?platform=mac&lt;span cla
 &lt;figure&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--virtualbox-settings--1352x1028.png&quot; alt=&quot;Configuring VM settings&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;configuring-vm-settings&quot;&gt;Configuring VM settings&lt;/h4&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
-&lt;p&gt;Double-clicking the .OVA file will launch settings in VirtualBox. Set aside lots of RAM for your VM.&lt;/p&gt;
+&lt;p&gt;Double-clicking the .OVA file will launch settings in VirtualBox. Set aside lots of RAM for your VM. Now when you launch Virtual box, it’ll display all the VMs you have. Clicking on the IE8 - WinXP machine will get you Internet Explorer 8 on your computer.&lt;/p&gt;
 
-&lt;figure&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--launch-virtualbox--1336x804.png&quot; alt=&quot;Launch VirtualBox&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;virtualbox-settings&quot;&gt;VirtualBox Settings&lt;/h4&gt;
+&lt;figure&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--ie8--1600x1286.png&quot; alt=&quot;#### This site could use a lot of debugging&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;this-site-could-use-a-lot-of-debugging&quot;&gt;This site could use a lot of debugging&lt;/h4&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Select “Tools” &amp;gt; “Developer Tools” to get to a very poor but still usable element inspector. One major flaw is that any change on a tag will not appear until you select onto another tag.&lt;/p&gt;
 
 &lt;hr /&gt;
 
