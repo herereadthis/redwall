@@ -62,7 +62,7 @@ a:hover {
 
 article, [role="contentinfo"] {
 
-    h2, h3, h4, p, ul, ol, figure.floated_figure {
+    h2, h3, h4, p, ul, ol {
         @media @da_small {
             padding-right: 2rem;
         }
@@ -221,6 +221,9 @@ figure {
     margin: 0 0 2rem 0;
 
     img {
+        &:hover {
+            cursor: pointer;
+        }
         @media @da_baseline {
             width: @pw_baseline;
         }
@@ -235,21 +238,62 @@ figure {
         }
         @media @da_medium {
             width: (3 / 12) * @pw_medium;
+            -webkit-transition: width 1s linear;
+            -moz-transition: width 1s linear;
+            -o-transition: width 1s linear;
+            transition: width 1s linear;
         }
         @media @da_large {
             width: (3 / 12) * @pw_large;
+            -webkit-transition: width 1s linear;
+            -moz-transition: width 1s linear;
+            -o-transition: width 1s linear;
+            transition: width 1s linear;
         }
         @media @da_x_large {
             width: (3 / 12) * @pw_x_large;
+            -webkit-transition: width 1s linear;
+            -moz-transition: width 1s linear;
+            -o-transition: width 1s linear;
+            transition: width 1s linear;
         }
-
     }
-    &.floated_figure {
-        float: right;
-        margin-left: 2rem;
 
-        & + * + * {
-            clear: both;
+    &.selected {
+        img {
+            @media @da_baseline {
+                width: @pw_baseline;
+            }
+            @media @da_2x_small {
+                width: @pw_x_small;
+            }
+            @media @da_2x_small {
+                width: @pw_x_small;
+            }
+            @media @da_small {
+                width: (10 / 12) * @pw_small;
+            }
+            @media @da_medium {
+                width: (8 / 12) * @pw_medium;
+                -webkit-transition: width 1s linear;
+                -moz-transition: width 1s linear;
+                -o-transition: width 1s linear;
+                transition: width 1s linear;
+            }
+            @media @da_large {
+                width: (8 / 12) * @pw_large;
+                -webkit-transition: width 1s linear;
+                -moz-transition: width 1s linear;
+                -o-transition: width 1s linear;
+                transition: width 1s linear;
+            }
+            @media @da_x_large {
+                width: (8 / 12) * @pw_x_large;
+                -webkit-transition: width 1s linear;
+                -moz-transition: width 1s linear;
+                -o-transition: width 1s linear;
+                transition: width 1s linear;
+            }    
         }
     }
 }

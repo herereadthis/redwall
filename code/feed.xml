@@ -43,7 +43,7 @@
 
 &lt;p&gt;Since you are coding, I’m assuming you’re using a Mac or Linux machine. At any rate, you probably don’t have IE7 or IE8 on your computer so you need something to see your changes. &lt;strong&gt;&lt;a href=&quot;https://www.virtualbox.org/&quot;&gt;VirtualBox is a free app for spinning up virtual machines&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;figure&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--modern-ie--1920x1080.png&quot; alt=&quot;Virtual machine VM downloads from Modern IE&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;visit-wwwmoderniehttpswwwmodernieen-usvirtualization-tools-to-download-a-vm&quot;&gt;Visit &lt;a href=&quot;https://www.modern.ie/en-us/virtualization-tools&quot;&gt;www.modern.ie&lt;/a&gt; to download a VM&lt;/h4&gt;
+&lt;figure data-module=&quot;image_expander&quot;&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--modern-ie--1920x1080.png&quot; alt=&quot;Virtual machine VM downloads from Modern IE&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;visit-wwwmoderniehttpswwwmodernieen-usvirtualization-tools-to-download-a-vm&quot;&gt;Visit &lt;a href=&quot;https://www.modern.ie/en-us/virtualization-tools&quot;&gt;www.modern.ie&lt;/a&gt; to download a VM&lt;/h4&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Select your OS, then select the “Virtual Box” option to get a list of virtual machines. It gives the option to download all the compressed files, or you can just use the cURL command given.&lt;/p&gt;
@@ -54,17 +54,17 @@ $ curl -O -L &amp;quot;https://www.modern.ie/vmdownload?platform=mac&lt;span cla
 # download IE7 for Vista on Mac
 $ curl -O -L &amp;quot;https://www.modern.ie/vmdownload?platform=mac&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;virtPlatform=virtualbox&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;browserOS=IE7-Vista&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;parts=4&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;filename=VMBuild_20131127/VirtualBox/IE7_Vista/Mac/IE7.Vista.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar}&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;figure&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--curl-ie8--1444x952.png&quot; alt=&quot;Terminal output for IE8 VM&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;terminal-output-for-ie8-vm&quot;&gt;Terminal output for IE8 VM&lt;/h4&gt;
+&lt;figure data-module=&quot;image_expander&quot;&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--curl-ie8--1444x952.png&quot; alt=&quot;Terminal output for IE8 VM&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;terminal-output-for-ie8-vm&quot;&gt;Terminal output for IE8 VM&lt;/h4&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;For demo purposes, let’s get the Windows XP machine for IE8. Running the cURL command will get two files, &lt;code&gt;IE8.WinXP.For.MacVirtualBox.part1.sfx&lt;/code&gt; and &lt;code&gt;IE8.WinXP.For.MacVirtualBox.part2.rar&lt;/code&gt;, downloaded to where your terminal is pointing. Extracting will get you a .OVA file: &lt;code&gt;IE8 - WinXP.ova&lt;/code&gt;&lt;/p&gt;
 
-&lt;figure&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--virtualbox-settings--1352x1028.png&quot; alt=&quot;Configuring VM settings&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;configuring-vm-settings&quot;&gt;Configuring VM settings&lt;/h4&gt;
+&lt;figure data-module=&quot;image_expander&quot;&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--virtualbox-settings--1352x1028.png&quot; alt=&quot;Configuring VM settings&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;configuring-vm-settings&quot;&gt;Configuring VM settings&lt;/h4&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Double-clicking the .OVA file will launch settings in VirtualBox. Set aside lots of RAM for your VM. Now when you launch Virtual box, it’ll display all the VMs you have. Clicking on the IE8 - WinXP machine will get you Internet Explorer 8 on your computer.&lt;/p&gt;
 
-&lt;figure&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--ie8--1600x1286.png&quot; alt=&quot;#### This site could use a lot of debugging&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;this-site-could-use-a-lot-of-debugging&quot;&gt;This site could use a lot of debugging&lt;/h4&gt;
+&lt;figure data-module=&quot;image_expander&quot;&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--ie8--1600x1286.png&quot; alt=&quot;#### This site could use a lot of debugging&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;this-site-could-use-a-lot-of-debugging&quot;&gt;This site could use a lot of debugging&lt;/h4&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
 &lt;p&gt;Select “Tools” &amp;gt; “Developer Tools” to get to a very poor but still usable element inspector. One major flaw is that any change on a tag will not appear until you select onto another tag.&lt;/p&gt;

@@ -63,9 +63,9 @@ module Jekyll
       @caption = Liquid::Template.parse("{{ page.image[#{@index}].caption | markdownify }}").render(context) if @caption
 
       if @class
-        figure = "<figure class=\"#{@class}\">"
+        figure = "<figure data-module=\"image_expander\" class=\"#{@class}\">"
       else
-        figure = "<figure>"
+        figure = "<figure data-module=\"image_expander\">"
       end
 
       figure += "<img src=\"#{@base_url}\/#{@src}\" alt=\"#{@alt}\"/>"
