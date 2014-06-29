@@ -147,7 +147,7 @@ Again, what we are concerned about is **speed of development.** Writing CSS for 
 
 ------------
 
-### *Tip #3:* Set your page to a fixed with of 984 pixels (984px)
+### *Tip #3:* Set your page's content to a fixed with of 984 pixels (984px)
 
 If your page is using a grid layout, or especially if you're using frameworks such as Bootstrap or Foundation, then you've most likely set {% raw %}<code>box-sizing: border-box;</code>{% endraw %}. This means on IE7 machines, all your floats are going to break because of the paddings and margins. Save a lot of headaches by letting go of liquid columns.
 
@@ -184,16 +184,100 @@ This does mean that for IE7, you will not be able to set column widths with perc
 
 ### *Tip #4:* Are CSS3 polyfills worth it? No.
 
-**Forget about Modernizr, CSS3 PIE, Selectivr, and all other tools out there.** Of course they work, and they do exactly what they are supposed to do. But you will waste your time picking the right library, the pouring through forums or StackOverflow or Github repos to find the right packages, then developing for them. You will survive if your IE doesn't render CSS3.
+**Forget about Modernizr, CSS3 PIE, Selectivr, and all other tools out there.**\* Of course they work, and they do exactly what they are supposed to do. But you will waste your time picking the right library, the pouring through forums or StackOverflow or Github repos to find the right packages, then developing for them. You will survive if your IE doesn't render CSS3.
 
 * rounded corners - flat design is all the rage anyway
-* drop shadows - It's not 2008 anymore
+* drop shadows - it's not 2008 anymore
 * gradients - just pick one color and go with it
+* transitions - it will just tax IE8 browser resources anyway.
+
+\****The only exception here is*** **[html5shiv](https://github.com/aFarkas/html5shiv)** ***but I believe it's overkill.*** The simplest approach is to {% raw %}<code>createElement</code>{% endraw %} all all your html5 elements and declare them as block elements in your CSS.
+
+#### Insert this JS snippet into your {% raw %}<code><HEAD /></code>{% endraw %}
+
+{% highlight javascript %}
+var html5Elements = [
+    'abbr', 'article', 'aside', 'bdi', 'data', 'datalist', 
+    'figcaption', 'figure', 'footer', 'header', 'main', 'mark', 'meter', 
+    'nav', 'output', 'progress', 'section', 'summary', 'time'];
+    headElement = document.head || document.getElementsByTagName('head')[0],
+    blockCSS = 'article,aside,figcaption,figure,footer,header,main,nav,section{display: block;}';
+    insertStyle = document.createElement('style');
+for (var i = 0; i < html5Elements.length; i++) {
+    document.createElement(html5Elements[i]);
+}
+insertStyle.type = 'text/css';
+if (insertStyle.styleSheet){
+    insertStyle.styleSheet.cssText = blockCSS;
+}
+else {
+    insertStyle.appendChild(document.createTextNode(blockCSS));
+}
+headElement.appendChild(insertStyle);
+{% endhighlight %}
+
+This JavaScript is also available as a [Gist on my Github](https://gist.github.com/herereadthis/f035f18a22b503d785a8) You can link to it by pasting: 
+
+{% highlight html %}
+<script src="https://gist.github.com/herereadthis/f035f18a22b503d785a8.js"></script>
+{% endhighlight %}
 
 
 -------------
 
 ### *Tip #5:* Tackle the low-hanging fruit by converting everything to pixels.
 
-Wherever you use REMs or EMs, write the alternative CSS for IE in pixels. All your fonts and sizes will fit correctly afterwards.
+Wherever you use REMs or EMs, write the alternative CSS for IE in pixels. All your fonts and sizes will fit correctly afterwards. Hopefully, you've [set your page defaults to 1REM = 10PX](/code/mossflower/) to make your life easier. Here's an example written in LESS:
+
+#### Original LESS
+{% highlight CSS %}
+[role="banner"] {
+    height: 12rem;
+    background-position: 0% 100%;
+
+    .bellmaker_container {
+        height: 12rem;
+        margin: 0 auto;
+    }
+    h1 {
+        padding-top: 3rem;
+        font-weight: 300;
+        font-size: 4rem;
+        line-height: 8rem;
+        text-transform: uppercase;
+
+        @media @da_baseline {
+            padding-left: 2rem;
+        }
+        @media @da_small {
+            padding-left: (1 / 12) * @pw_small;
+        }
+        @media @da_medium {
+            padding-left: 0;
+        }
+    }
+}
+{% endhighlight %}
+
+#### supplement for IE7 and IE8
+{% highlight CSS %}
+.ie7_8 {
+    [role="banner"] {
+        height: 120px;
+
+        .bellmaker_container {
+            height: 120px;
+        }
+        h1 {
+            padding-top: 30px;
+            font-size: 20px;
+            line-height: 80px;
+
+            padding-left: 0;
+        }
+    }
+}
+{% endhighlight %}
+
+Notice how the the media queries for the IE7/IE8 version went away? Since older Internet Explorer doesn't support media queries anyway, there's no need. Also, since content width has already been set to 984px, any calculations will be much simpler.
 
