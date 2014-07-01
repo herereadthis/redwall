@@ -281,3 +281,10 @@ Wherever you use REMs or EMs, write the alternative CSS for IE in pixels. All yo
 
 Notice how the the media queries for the IE7/IE8 version went away? Since older Internet Explorer doesn't support media queries anyway, there's no need. Also, since content width has already been set to 984px, any calculations will be much simpler.
 
+
+-------------
+
+### *Tip #6:* Use lots of {% raw %}<code>overflow: hidden;</code>{% endraw %}
+
+IE tends to bug out on containers with floated elements. It doesn't know how large the parent container ought to be, so it will add scrollbars.
+

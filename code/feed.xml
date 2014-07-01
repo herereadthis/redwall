@@ -263,6 +263,12 @@ $ curl -O -L &amp;quot;https://www.modern.ie/vmdownload?platform=mac&lt;span cla
 
 &lt;p&gt;Notice how the the media queries for the IE7/IE8 version went away? Since older Internet Explorer doesn’t support media queries anyway, there’s no need. Also, since content width has already been set to 984px, any calculations will be much simpler.&lt;/p&gt;
 
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;tip-6-use-lots-of-codeoverflow-hiddencode&quot;&gt;&lt;em&gt;Tip #6:&lt;/em&gt; Use lots of &lt;code&gt;overflow: hidden;&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;IE tends to bug out on containers with floated elements. It doesn’t know how large the parent container ought to be, so it will add scrollbars.&lt;/p&gt;
+
 </description>
         <pubDate>Thu, 26 Jun 2014 03:30:10 -0400</pubDate>
         <link>http://herereadthis.com/code/internet-explorer-legacy-css/</link>
