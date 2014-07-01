@@ -1,7 +1,17 @@
 
-html {
-    background-image:
-        linear-gradient(90deg, #FFF 50%, @code_grey_light 50%);
+html {  
+    @media @da_baseline {
+        background-image:
+            linear-gradient(90deg, @code_grey_light 0%, @code_grey_light 100%);
+        background-size: 1rem;
+        background-position: 100% 0;
+    }
+    @media @da_small {
+        background-image:
+            linear-gradient(90deg, #FFF 50%, @code_grey_light 50%);
+        background-size: 100% 1rem;
+        background-position: 0% 0%
+    }
 
 }
 body {
@@ -13,7 +23,7 @@ body {
 
     @media @da_baseline {
         background-image:
-            linear-gradient(90deg, #FFF (11 / 12) * @pw_baseline, @code_grey_light (11 / 12) * @pw_baseline);
+            linear-gradient(90deg, #FFF 0%, #FFF 100%);
         background-size: @pw_baseline 1rem;
     }
     @media @da_2x_small {
