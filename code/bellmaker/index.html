@@ -14,7 +14,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="keywords" content="herereadthis,github,css,less,sass" />
     <meta property="dc:creator" name="author" content="Jimmy Ha" />
-    <meta property="dc:created" content="2014-06-22" />
+    <meta property="dc:created" content="2014-07-11" />
     <meta property="dc:language" content="en-US" />
 <!-- Open Graph RDFa -->
     <meta property="og:title" content="Bellmaker, a media query package" />
@@ -88,7 +88,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
       </a> -->
 
 <header class="post-header" style="display: none;">
-	<p class="meta">Jun 22, 2014</p>
+	<p class="meta">Jul 11, 2014</p>
 </header>
 
 
@@ -373,13 +373,7 @@ $ git commit -m &quot;adds Bellmaker submodule&quot;</code></pre></div>
     <span class="p">}</span>
 <span class="p">}</span></code></pre></div>
 
-<p>To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because <code>#container_id {}</code> would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify <code>@media @da_x_large {...}</code> As such, <strong>even though the Bellmaker does provide 7 breakpoints, <em>you can use just 4</em> as a bare minimum.</strong></p>
-
-<p>To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because 
-&lt;div class="highlight"&gt;&lt;pre&gt;<code class="css"><span class="nf">#container_id</span> <span class="p">{}</span></code>&lt;/pre&gt;&lt;/div&gt;
- would still be 100% width. Also, if you don’t feel like (or would rather delay) designing for very large screens, then there is no need to specify 
-&lt;div class="highlight"&gt;&lt;pre&gt;<code class="css"><span class="k">@media</span> <span class="k">@da_x_large</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span></code>&lt;/pre&gt;&lt;/div&gt;
- As such, <strong>even though the Bellmaker does provide 7 breakpoints,</strong> <strong><em>you can use just 4</em></strong> <strong>as a bare minimum.</strong></p>
+<p>To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because <code>#container_id {}</code> would still be 100% width. Also, if you don’t feel like (or would rather delay) designing for very large screens, then there is no need to specify <code>@media @da_x_large {...}</code> As such, <strong>even though the Bellmaker does provide 7 breakpoints,</strong> <strong><em>you can use just 4</em></strong> <strong>as a bare minimum.</strong></p>
 
 <h4 id="as-less">As LESS</h4>
 
@@ -401,10 +395,37 @@ $ git commit -m &quot;adds Bellmaker submodule&quot;</code></pre></div>
 
 <p>Notice how the LESS/SASS variable names of the media queries just became very easy to remember?</p>
 
+<hr />
+
+<h3 id="bootstrap-integration">Bootstrap Integration</h3>
+
+<p>The Bellmaker will complement the Twitter Bootstrap framework for LESS. <a href="https://github.com/herereadthis/bellmaker/blob/master/src/demo/bootstrap_demo/index.html">A demo is available</a> if you load up <code>http://localhost:8002/src/demo/bootstrap_demo/</code>. </p>
+
+<h4 id="less-cascading-order">LESS Cascading Order</h4>
+
+<div class="highlight"><pre><code class="css"><span class="c">/* 1. Load main Bootstrap import file */</span>
+<span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bootstrap/less/bootstrap.less&quot;</span><span class="p">;</span>
+<span class="c">/* 2. Load main Bellmaker import file */</span>
+<span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/bellmaker.less&quot;</span><span class="p">;</span>
+<span class="c">/* 3. Load Bootstrap/Bellmaker integration add-on */</span>
+<span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/bootstrap_integration.less&quot;</span><span class="p">;</span></code></pre></div>
+
+<p>Now you will have 7 breakpoints in Bootstrap</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.col-bl-</span><span class="err">##</span>
+<span class="nc">.col-ss-</span><span class="err">##</span>
+<span class="nc">.col-xs-</span><span class="err">##</span>
+<span class="nc">.col-sm-</span><span class="err">##</span>
+<span class="nc">.col-md-</span><span class="err">##</span>
+<span class="nc">.col-lg-</span><span class="err">##</span>
+<span class="nc">.col-bl-</span><span class="err">##</span></code></pre></div>
+
+<hr />
+
 <p><a href="http://badge.fury.io/bo/bellmaker"><img src="https://badge.fury.io/bo/bellmaker.svg" alt="Bower version" /></a></p>
 
 		<footer>
-<p><em>Last updated: <time>30 June 2014</time></em></p>
+<p><em>Last updated: <time>11 July 2014</time></em></p>
 		</footer>
 	<div>
 </article>

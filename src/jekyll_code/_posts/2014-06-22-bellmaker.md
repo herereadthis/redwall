@@ -1,7 +1,7 @@
 ---
 layout:         post
 title:          "Bellmaker, a media query package"
-date:           2014-06-22 20:30:10
+date:           2014-07-11 20:30:10
 permalink:      bellmaker/
 description:    "The Bellmaker is a library of device-agnostic and device specific media queries that will complement your existing CSS."
 tags:           css, less, sass
@@ -265,11 +265,7 @@ Note: the abbreviation "da" stands for "device-agnostic," and "pw" stands for "p
 }
 {% endhighlight %}
 
-{% raw %}
-<p>To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because <code>#container_id {}</code> would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify <code>@media @da_x_large {...}</code> As such, <strong>even though the Bellmaker does provide 7 breakpoints, <em>you can use just 4</em> as a bare minimum.</strong></p>
-{% endraw %}
-
-To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because {% highlight css %}#container_id {}{% endhighlight %} would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify {% highlight css %}@media @da_x_large {...}{% endhighlight %} As such, **even though the Bellmaker does provide 7 breakpoints,** ***you can use just 4*** **as a bare minimum.**
+To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because {% raw %}<code>#container_id {}</code>{% endraw %} would still be 100% width. Also, if you don't feel like (or would rather delay) designing for very large screens, then there is no need to specify {% raw %}<code>@media @da_x_large {...}</code>{% endraw %} As such, **even though the Bellmaker does provide 7 breakpoints,** ***you can use just 4*** **as a bare minimum.**
 
 #### As LESS
 
@@ -294,6 +290,37 @@ To speed up development, there is always the option of skipping or omitting brea
 {% endhighlight %}
 
 Notice how the LESS/SASS variable names of the media queries just became very easy to remember?
+
+-------------
+
+### Bootstrap Integration
+
+The Bellmaker will complement the Twitter Bootstrap framework for LESS. [A demo is available](https://github.com/herereadthis/bellmaker/blob/master/src/demo/bootstrap_demo/index.html) if you load up {% raw %}<code>http://localhost:8002/src/demo/bootstrap_demo/</code>{% endraw %}. 
+
+#### LESS Cascading Order
+
+{% highlight css %}
+/* 1. Load main Bootstrap import file */
+@import "/PATH_TO/../bootstrap/less/bootstrap.less";
+/* 2. Load main Bellmaker import file */
+@import "/PATH_TO/../bellmaker/src/less/bellmaker.less";
+/* 3. Load Bootstrap/Bellmaker integration add-on */
+@import "/PATH_TO/../bellmaker/src/less/bootstrap_integration.less";
+{% endhighlight %}
+
+Now you will have 7 breakpoints in Bootstrap
+
+{% highlight css %}
+.col-bl-##
+.col-ss-##
+.col-xs-##
+.col-sm-##
+.col-md-##
+.col-lg-##
+.col-bl-##
+{% endhighlight %}
+
+-------------
 
 
 
