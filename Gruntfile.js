@@ -48,7 +48,8 @@ module.exports = function(grunt) {
                     src: [
                         '404.html',
                         'xml/{,*/}*.*',
-                        'images/code/{,*/}*.*'
+                        'images/code/{,*/}*.*',
+                        'images/homepage/{,*/}*.*'
                     ]
                 }]
             }
