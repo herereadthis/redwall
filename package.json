@@ -1,6 +1,6 @@
 {
   "name": "redwall",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Here, Read This",
   "keywords": [
     "less",
@@ -34,7 +34,7 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-bowercopy": "^1.0.1",
-    "grunt-contrib-connect": "^0.7.1",
+    "grunt-contrib-connect": "^0.8.0",
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-less": "^0.11.1",
     "grunt-contrib-requirejs": "^0.4.4",
@@ -42,7 +42,7 @@
     "grunt-contrib-uglify": "^0.5.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jekyll": "^0.4.2",
-    "grunt-xmlpoke": "^0.4.0",
+    "grunt-xmlpoke": "^0.5.0",
     "load-grunt-tasks": "^0.6.0"
   }
 }
