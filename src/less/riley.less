@@ -7,17 +7,15 @@
     // width: 87.2rem;
 
     h2 {
-        position: absolute;
         margin-top: 1rem;
         font-weight: normal;
         .font_heading;
-        z-index: 1;
 
         @media @da_baseline {
-            top: 0;
-            left: 0;
         }
         @media @da_small {
+            position: absolute;
+            z-index: 1;
             left: 50%;
             margin-left: -0.5 * @pw_small; 
         }
@@ -133,12 +131,14 @@
 #riley_foo {
     content: "";
     position: absolute;
-    display: block;
     top: 0;
     width: 100%;
     background-color: #0CC;
     bottom: 0;
     left: 50%;
+    @media @da_baseline {
+        display: none;
+    }
     @media @da_2x_small {
     }
     @media @da_x_small {
@@ -146,6 +146,7 @@
         margin-left: 0;
     }
     @media @da_small {
+        display: block;
         left: 83.3333%;
         margin-left: 0;
     }
