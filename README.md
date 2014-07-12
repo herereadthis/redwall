@@ -1,6 +1,8 @@
 Redwall
 =======
 
+[![devDependency Status](https://david-dm.org/herereadthis/redwall/dev-status.svg)](https://david-dm.org/herereadthis/redwall#info=devDependencies)
+
 Redwall is the codebase of the website, "Here, Read This" at [herereadthis.com](http://herereadthis.com), and is created by [Jimmy Ha](https://github.com/herereadthis). The homepage is a tribute to 90s web design, while additional pages feature coding projects and photographic works.
 
 ## Documentation
