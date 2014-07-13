@@ -1,6 +1,6 @@
 (function() {
     define(function(require) {
-        var $, exports, gVars, makeItHappen, makeLoops, makeBG, moduleName, gVars;
+        var $, exports, gVars, makeItHappen, makeLoops, makeBG, moduleName, gVars, phi;
         $ = require("jquery");
         exports = {};
         gVars = {
@@ -11,55 +11,73 @@
             bgTopPadding: 5,
             bgBottomPadding: 30
         };
+        phi = (1+ Math.sqrt(5))/2 - 1;
         moduleName = "code_footer";
         _window = $(window);
         makeLoops = function() {
-            var canvas, context;
-
+            var canvas,
+                context
+                
             canvas = document.createElement("canvas");
             canvas.width = gVars.canvasWidth;
             canvas.height = gVars.canvasHeight;
             context = canvas.getContext("2d");
 
-            var rightEdge = Math.round((gVars.canvasWidth + gVars.sectionWidth) / 2);
+            // X-COORDINATES
+            var maxWidth, rightEdge, leftEdge, phiXPoint, curve1P2X;
 
-            var leftEdge = Math.round((gVars.canvasWidth - gVars.sectionWidth) / 2);
+            // right edge of window
+            maxWidth = gVars.canvasWidth
+            // right edge of section space
+            rightEdge = Math.round((gVars.canvasWidth + gVars.sectionWidth) / 2);
+            // left edge of section space
+            leftEdge = Math.round((gVars.canvasWidth - gVars.sectionWidth) / 2);
+            // inflection point of section space
+            phiXPoint = rightEdge - (phi * gVars.sectionWidth);
+            // X-coordinate of P2
+            curve1P2X = (rightEdge - phiXPoint) * phi + phiXPoint;
 
-            var midPoint = Math.round((gVars.canvasWidth) / 2);
+            // Y -COORDINATES
+            var baseline, bottomEdge;
 
-            var bottomEdge = gVars.canvasHeight;
-            var baseline = bottomEdge - gVars.bgBottomPadding
-            console.log(bottomEdge,baseline);
-
-            rightEdge = rightEdge + 0;
+            // very bottom of window
+            baseline = gVars.canvasHeight;
+            // bottom edge of curves
+            bottomEdge = baseline - gVars.bgBottomPadding;
 
             context.beginPath();
-            context.moveTo(gVars.canvasWidth, 0);
+            // path begins at right edge of window
+            context.moveTo(maxWidth, 0);
+            // line to right edge of section space
             context.lineTo(rightEdge, 0);
-
+            // curve #1 goes from right edge of section space to inflection point
             context.bezierCurveTo(
-                rightEdge, 150, 
-                (rightEdge - midPoint)/2 + midPoint, bottomEdge - gVars.bgBottomPadding, 
-                midPoint, bottomEdge - gVars.bgBottomPadding);
-
+                rightEdge, bottomEdge * phi, 
+                curve1P2X, bottomEdge, 
+                phiXPoint, bottomEdge
+            );
+            // curve #2 goes from inflection point to left edge of section space
             context.bezierCurveTo(
-                (midPoint - leftEdge)/2 + leftEdge, bottomEdge - gVars.bgBottomPadding, 
-                leftEdge, 150, 
-                leftEdge, 100);
-
+                (phiXPoint - leftEdge)/2 + leftEdge, bottomEdge, 
+                leftEdge, (bottomEdge) * 0.75, 
+                leftEdge, (bottomEdge) / 2
+            );
+            // curve #3 goes from left edge of section space to left edge of window
             context.bezierCurveTo(
-                leftEdge, 150, 
-                leftEdge / 2, bottomEdge - gVars.bgBottomPadding, 
-                0, bottomEdge - gVars.bgBottomPadding);
-
-            context.lineTo(0,bottomEdge);
-
-            context.lineTo(gVars.canvasWidth,bottomEdge);
-            context.lineTo(gVars.canvasWidth,0);
+                leftEdge, (bottomEdge) * 0.75, 
+                leftEdge / 2, bottomEdge, 
+                0, bottomEdge
+            );
+            // line to bottom left of screen
+            context.lineTo(0,baseline);
+            // line to bottom right of screen
+            context.lineTo(maxWidth,baseline);
+            // line to starting point
+            context.lineTo(maxWidth,0);
             context.fillStyle = "rgba(245,245,245,1)";
             context.fill();
 
-
+            // stroke isn't needed to trace shape
             // context.lineWidth = 0;
             // context.strokeStyle = 'rgba(245,0,245,1)';
             // context.stroke();
