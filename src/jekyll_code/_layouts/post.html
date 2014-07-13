@@ -12,9 +12,11 @@ layout: default
 		<h2>{{ page.title }}</h2>
 {{ content }}
 		<footer>
-<p><em>Last updated: <time>{{ site.time | date_to_long_string }}</time></em></p>
+			<p><em><time property="dc:created" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%-d %B %Y" }}</time></em><br />
+				<em>By: <span property="dc:creator">Jimmy Ha</span><em><br />
+				<em>Last updated: <time property="dc:modified" datetime="{{ site.time | date: "%Y-%m-%d" }}">{{ site.time | date: "%-d %B %Y" }}</time></em></p>
 		</footer>
-	<div>
+	</div>
 </article>
 
 
