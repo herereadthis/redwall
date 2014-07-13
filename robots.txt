@@ -1,3 +1,4 @@
 User-agent: *
 
-Sitemap: http://herereadthis.com/src/xml/sitemap.xml
+Sitemap: http://herereadthis.com/build/xml/sitemap.xml
+Disallow: /src/
