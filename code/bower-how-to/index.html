@@ -191,6 +191,31 @@ $ npm install</code></pre></div>
 
 <hr />
 
+<h3 id="bowerjson-specifications">bower.json Specifications</h3>
+
+<h4 id="resolutions---dealing-with-package-conflicts">“resolutions” - dealing with package conflicts</h4>
+
+<p>Sometimes you will have packages that depend on other packages at different versions, and it will ask you to choose. For example,</p>
+
+<div class="highlight"><pre><code class="html">Unable to find a suitable version for jquery, please choose one:
+    1) jquery#~1.7 which resolved to 1.7.2 and is requird by typeahead.js#0.10.4
+    2) jquery#~1.9.1 which resolved to 1.9.1 and is required by bootstrap#3.0.3
+    3) jquery#&gt;=1.7 wich resolved to 2.1.1 and is required by mocha.events#0.0.3
+
+Prefix the choice with ! to persist it to bower.json
+
+[?] Answer:</code></pre></div>
+
+<p>This gets annoying and you can type something like <code>!3</code> to make it always go with 2.1.1. Your bower.json file will be updated with a <a href="https://github.com/bower/bower.json-spec#resolutions">resolution</a>:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="s2">&quot;resolutions&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;jquery&quot;</span><span class="o">:</span> <span class="s2">&quot;2.1.1&quot;</span>
+  <span class="p">},</span></code></pre></div>
+
+<p>You can always be proactive and add resolutions before they are needed as well.</p>
+
+<hr />
+
 <h3 id="registering-a-bower-package">Registering a Bower Package</h3>
 
 <p>Before you begin (assuming your project is hosted on Github),</p>

@@ -1021,6 +1021,31 @@ $ npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
+&lt;h3 id=&quot;bowerjson-specifications&quot;&gt;bower.json Specifications&lt;/h3&gt;
+
+&lt;h4 id=&quot;resolutions---dealing-with-package-conflicts&quot;&gt;“resolutions” - dealing with package conflicts&lt;/h4&gt;
+
+&lt;p&gt;Sometimes you will have packages that depend on other packages at different versions, and it will ask you to choose. For example,&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;Unable to find a suitable version for jquery, please choose one:
+    1) jquery#~1.7 which resolved to 1.7.2 and is requird by typeahead.js#0.10.4
+    2) jquery#~1.9.1 which resolved to 1.9.1 and is required by bootstrap#3.0.3
+    3) jquery#&amp;gt;=1.7 wich resolved to 2.1.1 and is required by mocha.events#0.0.3
+
+Prefix the choice with ! to persist it to bower.json
+
+[?] Answer:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This gets annoying and you can type something like &lt;code&gt;!3&lt;/code&gt; to make it always go with 2.1.1. Your bower.json file will be updated with a &lt;a href=&quot;https://github.com/bower/bower.json-spec#resolutions&quot;&gt;resolution&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;resolutions&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&amp;quot;jquery&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;2.1.1&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can always be proactive and add resolutions before they are needed as well.&lt;/p&gt;
+
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;registering-a-bower-package&quot;&gt;Registering a Bower Package&lt;/h3&gt;
 
 &lt;p&gt;Before you begin (assuming your project is hosted on Github),&lt;/p&gt;

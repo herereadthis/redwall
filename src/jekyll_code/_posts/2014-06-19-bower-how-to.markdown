@@ -127,6 +127,35 @@ $ bower update
 
 ------------------------
 
+### bower.json Specifications
+
+#### "resolutions" - dealing with package conflicts
+
+Sometimes you will have packages that depend on other packages at different versions, and it will ask you to choose. For example,
+
+{% highlight html %}
+Unable to find a suitable version for jquery, please choose one:
+    1) jquery#~1.7 which resolved to 1.7.2 and is requird by typeahead.js#0.10.4
+    2) jquery#~1.9.1 which resolved to 1.9.1 and is required by bootstrap#3.0.3
+    3) jquery#>=1.7 wich resolved to 2.1.1 and is required by mocha.events#0.0.3
+
+Prefix the choice with ! to persist it to bower.json
+
+[?] Answer:
+{% endhighlight %}
+
+This gets annoying and you can type something like {% raw %}<code>!3</code>{% endraw %} to make it always go with 2.1.1. Your bower.json file will be updated with a [resolution](https://github.com/bower/bower.json-spec#resolutions):
+
+{% highlight javascript %}
+  "resolutions": {
+    "jquery": "2.1.1"
+  },
+{% endhighlight %}
+
+You can always be proactive and add resolutions before they are needed as well.
+
+------------------------
+
 ### Registering a Bower Package
 
 Before you begin (assuming your project is hosted on Github),
