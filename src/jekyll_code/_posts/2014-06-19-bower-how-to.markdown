@@ -152,9 +152,9 @@ bower register [app name] [git endpoint]
 
 {% highlight html %}
 $ bower register MYPROJECT git://github.com/MYNAME/MYPROJECT.git
-Registering a package will make it visible and installable via the registry.
-Proceed (y/n)? y
-registered backbone.raphael to git://github.com/MYNAME/MYPROJECT.git
+[?] Registering a package will make it installable via the registry (https://bower.herokuapp.com), continue? Yes
+bower register      git://github.com/MYNAME/MYPROJECT.git
+Package MYPROJECT registered successfully!
 {% endhighlight %}
 
 
