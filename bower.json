@@ -20,7 +20,7 @@
     "bellmaker": "~1.2.1",
     "requirejs": "~2.1.14",
     "mossflower": "~0.1.5",
-    "sunflash": "~0.1.0"
+    "sunflash": "~0.1.2"
   },
   "resolutions": {
     "jquery": "~2.1.1"

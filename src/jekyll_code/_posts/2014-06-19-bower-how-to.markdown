@@ -147,9 +147,9 @@ Prefix the choice with ! to persist it to bower.json
 This gets annoying and you can type something like {% raw %}<code>!3</code>{% endraw %} to make it always go with 2.1.1. Your bower.json file will be updated with a [resolution](https://github.com/bower/bower.json-spec#resolutions):
 
 {% highlight javascript %}
-  "resolutions": {
+"resolutions": {
     "jquery": "2.1.1"
-  },
+},
 {% endhighlight %}
 
 You can always be proactive and add resolutions before they are needed as well.
