@@ -74,25 +74,28 @@
 
 #social_linking {
     li {
-        margin-left: 0.5rem;
+        margin-left: 0.4rem;
 
         &:first-child {
-            margin-left: -0.5rem;
+            margin-left: -0.3rem;
         }
         > a {
             border-radius: 50%;
-            border-width: 0.2rem;
             border-style: solid;
             width: 2.8rem;
             height: 2.8rem;
 
             &:link, &:visited {
+                margin: 0.1rem;
+                border-width: 0.2rem;
                 border-color: @code_grey_dark;
                 svg {
                     fill: @code_grey_dark;
                 }
             }
             &:hover {
+                margin: 0;
+                border-width: 0.3rem;
                 border-color: @code_a_hover;
                 svg {
                     fill: @code_a_hover;
@@ -100,32 +103,28 @@
             }
         }
     }
-    .facebook {
+    .facebook, .twitter {
         svg {
             width: 2.2rem;
             height: 2.2rem;
-            padding: 0.3rem 0.3rem 0.3rem 0.2rem;
+            padding: 0.3rem;
         }
     }
     .twitter {
         svg {
-            width: 2.2rem;
-            height: 2.2rem;
             padding: 0.3rem 0.2rem 0.3rem 0.4rem;  
         }
     }
-    .google {
-        svg {
-            width: 2rem;
-            height: 2rem;
-            padding: 0.4rem 0.3rem 0.4rem 0.5rem;
-        }
-    }
-    .github {
+    .google, .github, .pinterest {
         svg {
             width: 2rem;
             height: 2rem;
             padding: 0.4rem;
+        }
+    }
+    .google {
+        svg {
+            padding: 0.4rem 0.3rem 0.4rem 0.5rem;
         }
     }
 }
