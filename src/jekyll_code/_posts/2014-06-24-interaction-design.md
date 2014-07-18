@@ -21,6 +21,48 @@ One of the cardinal rules of web design is remembering that people spend 99% of 
 
 --------------
 
+### User Testing
+
+Our web application can become our baby or our embarrassment, but however we see it, we will be unable to see it without knowing how it came to be, and the motivations that created it. We need other people to look at it.
+
+#### How many users should we test in a qualitative study? 3 to 5
+
+So small? The essential thing here diminishing returns. Assuming you've found representative test subjects (e.g. recruiting actual cyclists to test a helmet-fitting app), the first user will provide a lot of insight; the second user will not provide as much, as much of his/her insight will overlap with the first user. By the time you get to the 5th user, you will have identified most of your problems. Each addition user is more likely to repeat the same concerns we've already heard and there is no need to waste time or money on hearing the same thing multiple times.
+
+Instead of having lots of users in a study, have a few users in multiple studies, as it would be a better use of budget distribution. Considering that we are have an agile development cycle, we have the opportunity to confirm fixes across each round or iteration of testing with just a few users to validate our changes.
+
+Obviously, this small number does have exceptions. If we are doing a statistical sampling, we'll need a great deal more than 5, aka, people actually taking the survey to collect data. More people may have to be tested if there are demographic issues, but only if the distinct groups are expected to behave in completely different ways, e.g., enrolled undergraduates vs. prospective highschool seniors visiting a college website. "Experienced computer users" vs. "novices" is not enough of a qualifier as they would still use the site to perform the same task.
+
+
+
+* People naturally want to do well on a test; **those participating in usability studies will have a high level of engagement** with the interface. So unless absolutely necessary, we observers should never talk. 
+  * The downside to this high level of engagement is to note if the user wants to do something drastic, like stopping the test. If he/she wants to stop at a certain point, it's more likely that person had the desire to quit for a while.{% raw %}<br /><br />{% endraw %}
+
+* While contrary to what we would imagine, **users are adept at being able to ignore the testing environment** and use the application as if they weren't being observed and monitored.
+  * Remember to ignore the user feedback if he/she goes beyond personal experience and attempts to speculate what "other users" might do. Put a stop to it immediately.
+  * Remind the user to "be yourself."{% raw %}<br /><br />{% endraw %}
+
+* What users say is not the priority and definitely should not decide fixes and changes. What they do is much more important. In other words, **what users say and what they do are different.**
+  * Instead of addressing what the users say they want, think about a design that is better at supporting them with better ease and efficiency.
+  * If a user says, "Yeah, I would do this survey for a prize," then the real conclusion here is, "the idea of a free iPad is pretty sweet."
+  * Users will also often say what they think we observers want to hear.
+  * Users rationalize their errors and externalize blame. Everyone does it; we're only human. "I would have clicked that TOS if the checkbox were bigger and a different color from the rest of the text, like, um, red..." does not mean we make the checkbox big and red. It only means the user didn't click on the TOS.{% raw %}<br /><br />{% endraw %}
+
+* **Don't take direct advice from user speculation.** "Well if 'X' were like this, then I'd do 'Z' instead of 'Y'" just translates to, "'X' didn't make sense."
+  * As an anecdote, Microsoft did some user testing before making Office 2007. They asked users to describe what new features would be desirable. As it turns out, most of the requested "new" features were already available on Office 2003; users just didn't know they existed. The real problem wasn't lack of features, it was discoverability.
+  * Most likely apocryphal, but apparently Henry Ford once said, “If I had asked people what they wanted, they would have said faster horses.”
+  * People can make opinions about anything, so they will form an opinion on any task you ask them to do simply because you asked them. Otherwise, it could be likely they wouldn't care for or even consider it. For example, if you want to roll out a feature X by asking users, "what do you think of feature X?" they will tell you lots of stuff, but it doesn't imply they would care about X if you didn't say anything.
+  * Design changes should not be premised on "users hated this thing" or "users wanted that thing" because the way those responses were derived means they don't necessarily represent preferences.{% raw %}<br /><br />{% endraw %}
+
+* **The most useful thing from what users say during testing are impressions and expectations.**
+  * "This site is gorgeous."
+  * "I came to this site thinking I would see X and instead I am seeing Y."
+  * "That app was simple to use and easy to understand."
+  * "I have no idea what's going here. It's so frustrating."
+  * "I was able to find X and do Y must faster than I thought."
+  
+--------------
+
 ### Checklist to improve Usability
 
 #### Good Feedback Loops
@@ -99,7 +141,7 @@ In terms of page design, one of the most effective ways to promote or feature an
   * ***Similar Icons*** - images that are visually analogous to an action, object, or concept, like those "Falling Rocks" street signs.
   * ***Example Icons*** - images of things commonly associated with the subject, such as a picture of a plane to symbolize an airport
   * ***Symbolic Icons*** - images of things that are abstractions of the subject, e.g., a picture of lightning to represent high-voltage power lines
-  * ***Arbitrary Icons*** - images that have no relationship to the subject, but are learned over time, such as bio-hazard signs.
+  * ***Arbitrary Icons*** - images that have no relationship to the subject, but are learned over time, such as bio-hazard signs.{% raw %}<br /><br />{% endraw %}
 
 * **Operant Conditioning** -  (i.e. positive vs. negative reinforcement) **ways to modify behavior by rewarding desired actions and discouraging undesired actions**
 
@@ -113,7 +155,7 @@ It's something to consider when designing complex applications, in the context o
   * 80% of your requirements will be met with 20% of your development time.
     * The other 80% of development time will likely go towards refinement, bugfixes, code cleanup, accounting for fringe cases, browser compatibility, etc.
   * 80% of the errors come from 20% of the components.
-    * Some things just tend to fail all the time.
+    * Some things just tend to fail all the time.{% raw %}<br /><br />{% endraw %}
 
 * **Performance Load - the more effort it is to accomplish a task, the less likely the task will be accomplished successfully.** How much cognitive load (perception, memory, problem solving) do we want to put on the user?
 

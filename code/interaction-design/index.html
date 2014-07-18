@@ -111,6 +111,59 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <hr />
 
+<h3 id="user-testing">User Testing</h3>
+
+<p>Our web application can become our baby or our embarrassment, but however we see it, we will be unable to see it without knowing how it came to be, and the motivations that created it. We need other people to look at it.</p>
+
+<h4 id="how-many-users-should-we-test-in-a-qualitative-study-3-to-5">How many users should we test in a qualitative study? 3 to 5</h4>
+
+<p>So small? The essential thing here diminishing returns. Assuming you’ve found representative test subjects (e.g. recruiting actual cyclists to test a helmet-fitting app), the first user will provide a lot of insight; the second user will not provide as much, as much of his/her insight will overlap with the first user. By the time you get to the 5th user, you will have identified most of your problems. Each addition user is more likely to repeat the same concerns we’ve already heard and there is no need to waste time or money on hearing the same thing multiple times.</p>
+
+<p>Instead of having lots of users in a study, have a few users in multiple studies, as it would be a better use of budget distribution. Considering that we are have an agile development cycle, we have the opportunity to confirm fixes across each round or iteration of testing with just a few users to validate our changes.</p>
+
+<p>Obviously, this small number does have exceptions. If we are doing a statistical sampling, we’ll need a great deal more than 5, aka, people actually taking the survey to collect data. More people may have to be tested if there are demographic issues, but only if the distinct groups are expected to behave in completely different ways, e.g., enrolled undergraduates vs. prospective highschool seniors visiting a college website. “Experienced computer users” vs. “novices” is not enough of a qualifier as they would still use the site to perform the same task.</p>
+
+<ul>
+  <li>People naturally want to do well on a test; <strong>those participating in usability studies will have a high level of engagement</strong> with the interface. So unless absolutely necessary, we observers should never talk. 
+    <ul>
+      <li>The downside to this high level of engagement is to note if the user wants to do something drastic, like stopping the test. If he/she wants to stop at a certain point, it’s more likely that person had the desire to quit for a while.<br /><br /></li>
+    </ul>
+  </li>
+  <li>While contrary to what we would imagine, <strong>users are adept at being able to ignore the testing environment</strong> and use the application as if they weren’t being observed and monitored.
+    <ul>
+      <li>Remember to ignore the user feedback if he/she goes beyond personal experience and attempts to speculate what “other users” might do. Put a stop to it immediately.</li>
+      <li>Remind the user to “be yourself.”<br /><br /></li>
+    </ul>
+  </li>
+  <li>What users say is not the priority and definitely should not decide fixes and changes. What they do is much more important. In other words, <strong>what users say and what they do are different.</strong>
+    <ul>
+      <li>Instead of addressing what the users say they want, think about a design that is better at supporting them with better ease and efficiency.</li>
+      <li>If a user says, “Yeah, I would do this survey for a prize,” then the real conclusion here is, “the idea of a free iPad is pretty sweet.”</li>
+      <li>Users will also often say what they think we observers want to hear.</li>
+      <li>Users rationalize their errors and externalize blame. Everyone does it; we’re only human. “I would have clicked that TOS if the checkbox were bigger and a different color from the rest of the text, like, um, red…” does not mean we make the checkbox big and red. It only means the user didn’t click on the TOS.<br /><br /></li>
+    </ul>
+  </li>
+  <li><strong>Don’t take direct advice from user speculation.</strong> “Well if ‘X’ were like this, then I’d do ‘Z’ instead of ‘Y’” just translates to, “‘X’ didn’t make sense.”
+    <ul>
+      <li>As an anecdote, Microsoft did some user testing before making Office 2007. They asked users to describe what new features would be desirable. As it turns out, most of the requested “new” features were already available on Office 2003; users just didn’t know they existed. The real problem wasn’t lack of features, it was discoverability.</li>
+      <li>Most likely apocryphal, but apparently Henry Ford once said, “If I had asked people what they wanted, they would have said faster horses.”</li>
+      <li>People can make opinions about anything, so they will form an opinion on any task you ask them to do simply because you asked them. Otherwise, it could be likely they wouldn’t care for or even consider it. For example, if you want to roll out a feature X by asking users, “what do you think of feature X?” they will tell you lots of stuff, but it doesn’t imply they would care about X if you didn’t say anything.</li>
+      <li>Design changes should not be premised on “users hated this thing” or “users wanted that thing” because the way those responses were derived means they don’t necessarily represent preferences.<br /><br /></li>
+    </ul>
+  </li>
+  <li><strong>The most useful thing from what users say during testing are impressions and expectations.</strong>
+    <ul>
+      <li>“This site is gorgeous.”</li>
+      <li>“I came to this site thinking I would see X and instead I am seeing Y.”</li>
+      <li>“That app was simple to use and easy to understand.”</li>
+      <li>“I have no idea what’s going here. It’s so frustrating.”</li>
+      <li>“I was able to find X and do Y must faster than I thought.”</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
 <h3 id="checklist-to-improve-usability">Checklist to improve Usability</h3>
 
 <h4 id="good-feedback-loops">Good Feedback Loops</h4>
@@ -201,7 +254,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
       <li><strong><em>Similar Icons</em></strong> - images that are visually analogous to an action, object, or concept, like those “Falling Rocks” street signs.</li>
       <li><strong><em>Example Icons</em></strong> - images of things commonly associated with the subject, such as a picture of a plane to symbolize an airport</li>
       <li><strong><em>Symbolic Icons</em></strong> - images of things that are abstractions of the subject, e.g., a picture of lightning to represent high-voltage power lines</li>
-      <li><strong><em>Arbitrary Icons</em></strong> - images that have no relationship to the subject, but are learned over time, such as bio-hazard signs.</li>
+      <li><strong><em>Arbitrary Icons</em></strong> - images that have no relationship to the subject, but are learned over time, such as bio-hazard signs.<br /><br /></li>
     </ul>
   </li>
   <li><strong>Operant Conditioning</strong> -  (i.e. positive vs. negative reinforcement) <strong>ways to modify behavior by rewarding desired actions and discouraging undesired actions</strong></li>
@@ -229,7 +282,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
       </li>
       <li>80% of the errors come from 20% of the components.
         <ul>
-          <li>Some things just tend to fail all the time.</li>
+          <li>Some things just tend to fail all the time.<br /><br /></li>
         </ul>
       </li>
     </ul>
