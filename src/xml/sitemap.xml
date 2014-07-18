@@ -50,6 +50,12 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
+		<loc>http://herereadthis.com/code/information-architecture/</loc>
+		<lastmod>2014-07-18</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
 		<loc>http://herereadthis.com/code/internet-explorer-legacy-css/</loc>
 		<lastmod>2014-06-23</lastmod>
 		<changefreq>daily</changefreq>

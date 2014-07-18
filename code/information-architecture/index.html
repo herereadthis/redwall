@@ -9,18 +9,18 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <head>
     <meta charset="utf-8">
-    <title property="dc:title">Here, Read This Code</title>
+    <title property="dc:title">Create information architecture (IA) for your web application</title>
 <!-- Metadata Standards + Dublin Core RDFA -->
     <meta name="robots" content="INDEX, FOLLOW" />
-    <meta name="keywords" content="herereadthis,github,coding" />
+    <meta name="keywords" content="herereadthis,github,information,architecture" />
     <meta property="dc:creator" name="author" content="Jimmy Ha" />
-    <meta property="dc:created" content="" />
+    <meta property="dc:created" content="2014-07-18" />
     <meta property="dc:language" content="en-US" />
 <!-- Open Graph RDFa -->
-    <meta property="og:title" content="Here, Read This Code" />
-    <meta property="og:description" name="description" content="Coding articles by Jimmy Ha, including open-source projects, front-end tutorials, and UX discussion" />
+    <meta property="og:title" content="Create information architecture (IA) for your web application" />
+    <meta property="og:description" name="description" content="Information Architecture (IA) as the high-level, structured organization of a site, intended to organize content, facilitate design, and improve user interaction" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://herereadthis.com/code/" />
+    <meta property="og:url" content="http://herereadthis.com/code/information-architecture/" />
     <!-- <meta property="og:image" content="http://herereadthis.com/images/herereadthis_fb_320x320.jpg" /> -->
     <!-- <meta property="og:image:type" content="image/jpeg" /> -->
     <!-- <meta property="og:image:width" content="320" /> -->
@@ -52,7 +52,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <link rel="stylesheet" type="text/css" href="/build/css/code.css" />
     <script data-main="/build/js/main" src="/build/js/require.js"></script>
 
-    <link rel="canonical" href="http://herereadthis.com/code/">
+    <link rel="canonical" href="http://herereadthis.com/code/information-architecture/">
 
 </head>
 
@@ -87,103 +87,139 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
         </svg>
       </a> -->
 
-<article>
-	<h2>Articles</h2>
-    
-    <section>
-        <h2><a href="/code/interaction-design/">Interaction design and user experience: essential concepts</a></h2>
-        <p>Using research from UX studies and known principles of user interface design, and maintaining best practices for device-agnostic development, <strong><em>here’s some tips and clarification for working on appearance and behavior for sites.</em></strong></p>
-
-<ul>
-  <li><strong>Learnability</strong> - and nobody wants to read the manual. Oh look, an adorable cat video.</li>
-  <li><strong>Efficiency</strong> - how fast can you perform the task? </li>
-  <li><strong>Memorability</strong> - If you come back to it later, will you remember how to use it? And if you don’t, will it be okay?</li>
-</ul>
+<header class="post-header" style="display: none;">
+	<p class="meta">Jul 18, 2014</p>
+</header>
 
 
-        <p><a href="/code/interaction-design/">Continue Reading &raquo;</a></p>
-	    <hr />
-    </section>
-    
-    <section>
-        <h2><a href="/code/information-architecture/">Create information architecture (IA) for your web application</a></h2>
-        <p><strong><em>We shall define Information Architecture (IA) as the high-level, structured organization of the site.</em></strong> On a deeper level, IA will concern itself with:</p>
+<article role="main">
+	<div class="content_container">
+		<h2>Create information architecture (IA) for your web application</h2>
+<p><strong><em>We shall define Information Architecture (IA) as the high-level, structured organization of the site.</em></strong> On a deeper level, IA will concern itself with:</p>
 
 <ul>
   <li>what content is on the site, along with the scope of content</li>
   <li>how users get to the content</li>
   <li>the needs of the different kinds of users visiting the site</li>
   <li>how the content is organized</li>
-  <li>the intent, purpose and tone of the site</li>
+  <li>the intent, purpose and tone of the site
+<!--more--></li>
 </ul>
 
-
-        <p><a href="/code/information-architecture/">Continue Reading &raquo;</a></p>
-	    <hr />
-    </section>
-    
-    <section>
-        <h2><a href="/code/bellmaker/">Bellmaker, a media query package</a></h2>
-        <p>The Bellmaker is a library of <strong><em>device-agnostic</em></strong> <em>and</em> <strong><em>device-specific</em></strong> media queries that will complement your exisiting CSS. </p>
+<p>By creating the IA for a project, we hope to:</p>
 
 <ul>
-  <li>It will help you make <em>responsive websites</em>, especially if you are using grid layouts.</li>
-  <li>It is <a href="https://github.com/herereadthis/bellmaker">available on Github</a> to use and modify as you please.</li>
-  <li>Both <strong>LESS</strong> and <strong>SASS</strong> versions are available, and will work with Bootstrap.</li>
+  <li>Improve usability for the site</li>
+  <li>Provide documentation for coding implementation</li>
+  <li>Allow for faster iterative design</li>
+  <li>Build solid requirements needed for the site</li>
 </ul>
 
+<p>IA, if done correctly, will address the following concerns:</p>
 
-        <p><a href="/code/bellmaker/">Continue Reading &raquo;</a></p>
-	    <hr />
-    </section>
-    
-    <section>
-        <h2><a href="/code/internet-explorer-legacy-css/">How to write fallback CSS for legacy Internet Explorer (IE8, IE7)</a></h2>
-        <p>It’s the nightmare of every front-end developer: supporting older versions of Internet Explorer (IE). You may not want to, but usually it’s because your company’s project needs to support customers still using older machines…or maybe you’re just a masochist. However, there are many ways to make your life easier by <strong>speeding up development</strong> while minimizing those mysterious errors when debugging.</p>
+<ol>
+  <li><strong><em>Organize the content of the site the way customers want to find it,</em></strong> vs how we internally organize the data (e.g. managerial structure, database structure, or just arbitrary preference)</li>
+  <li>Allow design to be determined by content and intent; we will let <strong><em>form follow function</em></strong></li>
+  <li><strong><em>Determine major points of user errors</em></strong> and frustrations, and find optimal solutions.</li>
+</ol>
 
+<hr />
 
-        <p><a href="/code/internet-explorer-legacy-css/">Continue Reading &raquo;</a></p>
-	    <hr />
-    </section>
-    
-    <section>
-        <h2><a href="/code/setup-for-coding/">How to set up your computer for coding</a></h2>
-        <p>It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need.</p>
+<h3 id="our-example">Our example</h3>
 
+<p>For the purposes of demonstration, let’s suppose we want to build a web application that helps people pick the right bicycle helmet to buy. There are lots of factors to consider, including the user’s age, level of competition, cost, and particular sport. An Olympic track cyclist has many different needs than city bike messenger, and so on.</p>
 
-        <p><a href="/code/setup-for-coding/">Continue Reading &raquo;</a></p>
-	    <hr />
-    </section>
-    
-    <section>
-        <h2><a href="/code/mossflower/">Mossflower, a CSS global reset</a></h2>
-        <p>Mossflower is a <strong>global reset</strong> CSS utility for both LESS and SASS.</p>
+<hr />
+
+<h3 id="identify-short-term-and-long-term-business-goals">1. Identify short-term and long-term business goals</h3>
+
+<p>It may seem a strange to start with business intentions first, but for most serious web applications and sites, you will need money to keep things going. Never forget that the cash needs to keep flowing!</p>
+
+<p>Typically for project development cycles, there’s an initial phase of just trying to get a product out the door, followed by a latter, mature phase more concerned with monetization and expansion. For each phase identify what is and what isn’t out of scope.</p>
+
+<h4 id="overall-objectives--expectations-short-term-goals">Overall Objectives &amp; Expectations (short-term goals)</h4>
 
 <ul>
-  <li>Both robust and bare-bones; you won’t find yourself fighting against this utility.</li>
-  <li>It is <a href="https://github.com/herereadthis/mossflower">available on Github</a> to use and modify as you please.</li>
-  <li>It helps you spin up new web applications faster by <em>reducing boilderplate CSS</em>.</li>
+  <li><strong><em>Production Release by [DEADLINE], in-scope:</em></strong>
+    <ul>
+      <li>Surface skinning</li>
+      <li>On a philosophic level, present the information such that it cannotes an application rather than a site for articles</li>
+      <li>Identify user flow and interaction to address potetianal weak points  (user bounces, usability errors, etc)</li>
+      <li>Create navigation which will emphasize product offering and personal choice selections</li>
+      <li>Rudimentary style guide</li>
+      <li>Display discoverability with the intent to provide solutions for users</li>
+      <li>Responsive design, which will cater both to the viewport size and/or device constraints</li>
+    </ul>
+  </li>
+  <li><strong><em>Out-of-scope:</em></strong>
+    <ul>
+      <li>Users will not be able to create user profiles or account pages</li>
+      <li>Search results will be a simplistic algorithm instead of smart-search or user-catered results</li>
+      <li>No built-in ability for social media sharing</li>
+      <li>No system for user commenting</li>
+    </ul>
+  </li>
 </ul>
 
+<h4 id="phase-2-goals">Phase 2 Goals</h4>
 
-        <p><a href="/code/mossflower/">Continue Reading &raquo;</a></p>
-	    <hr />
-    </section>
-    
-    <section>
-        <h2><a href="/code/bower-how-to/">How to manage 3rd party libraries using Bower</a></h2>
-        <p>Nearly every project requires third party libraries and frameworks (e.g. jQuery, Bootstrap), and it can get complicated keeping them updated and maintained. Fortunately, there’s <a href="http://bower.io">Bower</a>, a package manager that will take registered components and organize them as depencies.</p>
+<p>Long-term goals will not be part of the initial launch, but must be considered as part of IA and design so that when these features are implemented, they won’t simply appear as “bolted on,” but are consistent with the baseline user interaction.</p>
+
+<ul>
+  <li><strong><em>In-scope:</em></strong>
+    <ul>
+      <li>User profile pages with saved user preferences</li>
+      <li>Product review pages</li>
+      <li>Articles related to cycling or cycling safety</li>
+      <li>Social media will become baked-in</li>
+      <li>Users will be able to leave feedback or comments</li>
+      <li>Promote site to build user base</li>
+      <li>Monetization through advertisements</li>
+      <li>Do analytics on users and their cycling and helmet needs</li>
+    </ul>
+  </li>
+  <li><strong><em>Out-of-scope:</em></strong>
+    <ul>
+      <li>No E-commerce portal to sell bicycle helmets (perhaps move to a phase 3?)</li>
+      <li>Don’t make a native mobile application, stick with mobile web</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="more-to-come">More to come…</h3>
+
+<p><em>Who puts articles online before finishing them? I do. Check back in a few days.</em></p>
+
+<hr />
+
+<h3 id="clarify-user-intent">2. Clarify user intent</h3>
+
+<p>The goal of building user profiles is not necessarily to determine “who” the users are. Building IA for for targeted demographics is an approach that comes form traditional marketing and marketing research.</p>
+
+<h4 id="why-would-anyone-want-to-come-to-this-site">Why would anyone want to come to this site?</h4>
+
+<hr />
+
+<h3 id="build-products-around-users-needs">3. Build products around users’ needs</h3>
+
+<hr />
+
+<h3 id="create-a-site-interaction-model">4. Create a site interaction model</h3>
+
+<hr />
+
+<h3 id="outline-the-web-application-paths-and-hierarchy">5. Outline the web application paths and hierarchy</h3>
 
 
-        <p><a href="/code/bower-how-to/">Continue Reading &raquo;</a></p>
-	    <hr />
-    </section>
-    
+		<footer>
+			<p><em><time property="dc:created" datetime="2014-07-18">18 July 2014</time></em><br />
+				<em>By: <span property="dc:creator">Jimmy Ha</span><em><br />
+				<em>Last updated: <time property="dc:modified" datetime="2014-07-18">18 July 2014</time></em></p>
+		</footer>
+	</div>
 </article>
-
-<!--
-FEED URL: /code/feed.xml
--->
 
 <footer role="contentinfo" data-module="code_footer">
     <div id="footer_background" data-module="code_footer">

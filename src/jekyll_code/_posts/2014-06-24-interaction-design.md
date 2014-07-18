@@ -1,7 +1,7 @@
 ---
 layout:         post
 title:          "Interaction design and user experience: essential concepts"
-date:           2014-06-24 20:30:10
+date:           2014-07-18 20:30:10
 permalink:      interaction-design/
 description:    "Using research from UX studies and known principles of user interface design, and maintaining best practices for device-agnostic development, here's some tips and clarification for working on appearance and behavior for sites."
 tags:           interaction, design, user, experience, UI, UX
@@ -60,7 +60,7 @@ Obviously, this small number does have exceptions. If we are doing a statistical
   * "That app was simple to use and easy to understand."
   * "I have no idea what's going here. It's so frustrating."
   * "I was able to find X and do Y must faster than I thought."
-  
+
 --------------
 
 ### Checklist to improve Usability
