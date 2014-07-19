@@ -101,30 +101,34 @@
                     fill: @code_a_hover;
                 }
             }
+            &:active, &:focus {
+                margin: 0;
+                border-width: 0.2rem;
+                border-color: @code_a_visited;
+                padding: 0.1rem;
+                svg {
+                    fill: @code_a_visited;
+                }
+            }
         }
     }
     .facebook, .twitter {
-        svg {
-            width: 2.2rem;
-            height: 2.2rem;
-            padding: 0.3rem;
-        }
+        width: 2.2rem;
+        height: 2.2rem;
+        padding: 0.3rem;
     }
     .twitter {
-        svg {
-            padding: 0.3rem 0.2rem 0.3rem 0.4rem;  
-        }
+        padding: 0.3rem 0.2rem 0.3rem 0.4rem;  
     }
-    .google, .github, .pinterest {
-        svg {
-            width: 2rem;
-            height: 2rem;
-            padding: 0.4rem;
-        }
+    .googleplus, .github, .pinterest {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.4rem;
     }
-    .google {
-        svg {
-            padding: 0.4rem 0.3rem 0.4rem 0.5rem;
-        }
+    .googleplus {
+        padding: 0.4rem 0.3rem 0.4rem 0.5rem;
     }
+}
+#post_social_footer {
+
 }

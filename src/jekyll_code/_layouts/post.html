@@ -3,18 +3,33 @@ layout: default
 ---
 
 <header class="post-header" style="display: none;">
-	<p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 </header>
 
 
 <article role="main">
-	<div class="content_container">
-		<h2>{{ page.title }}</h2>
+    <div class="content_container">
+        <h2>{{ page.title }}</h2>
 {{ content }}
-		<footer>
-			<p><em><time property="dc:created" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%-d %B %Y" }}</time></em><br />
-				<em>By: <span property="dc:creator">Jimmy Ha</span><em><br />
-				<em>Last updated: <time property="dc:modified" datetime="{{ site.time | date: "%Y-%m-%d" }}">{{ site.time | date: "%-d %B %Y" }}</time></em></p>
-		</footer>
-	</div>
+        <footer>
+            <p><em><time property="dc:created" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%-d %B %Y" }}</time></em><br />
+                <em>By: <span property="dc:creator">Jimmy Ha</span></em><br />
+                <em>Last updated: <time property="dc:modified" datetime="{{ site.time | date: "%Y-%m-%d" }}">{{ site.time | date: "%-d %B %Y" }}</time></em></p>
+
+            <h4>Share this article:</h4>
+            <ul id="post_social" class="sunflash_navmenu">
+                <li>
+                    <a href="https://twitter.com/intent/tweet?text=%22{{ page.title }}%22&amp;url={{ page.url | prepend: site.url site.baseurl }}&amp;via=herereadthis">Twitter</a>
+                </li>
+                <li> | </li>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url site.baseurl }}">Facebook</a>
+                </li>
+                <li> | </li>
+                <li>
+                    <a href="https://plus.google.com/share?url={{ page.url | prepend: site.url site.baseurl }}">Google+</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 </article>
