@@ -74,26 +74,6 @@
 
 #social_linking {
     li {
-        margin-left: 0.4rem;
-
-        @media @da_baseline {
-            &:first-child {
-                margin-left: -0.3rem;
-            }
-            > a {
-                width: 3.8rem;
-                height: 3.8rem;
-            }
-        }
-        @media @da_small {
-            &:first-child {
-                margin-left: -0.3rem;
-            }
-            > a {
-                width: 2.8rem;
-                height: 2.8rem;
-            }
-        }
         > a {
             border-radius: 50%;
             border-style: solid;
@@ -126,17 +106,30 @@
         }
     }
     @media @da_baseline {
+        margin: 0 -2rem 0 -1rem;
+
+        li {
+            margin-left: 0.6rem;
+
+            &:first-child {
+                margin-left: 0.7rem;
+            }
+            > a {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
         .facebook, .twitter {
-            width: 3.2rem;
-            height: 3.2rem;
+            width: 3.4rem;
+            height: 3.4rem;
             padding: 0.3rem;
         }
         .twitter {
             padding: 0.3rem 0.2rem 0.3rem 0.4rem;  
         }
         .googleplus, .github, .pinterest, .vimeo {
-            width: 3rem;
-            height: 3rem;
+            width: 3.2rem;
+            height: 3.2rem;
             padding: 0.4rem;
         }
         .googleplus {
@@ -144,6 +137,19 @@
         }
     }
     @media @da_small {
+        margin: 0 0 0 -0.1rem;
+
+        li {
+            margin-left: 0.4rem;
+
+            &:first-child {
+                margin-left: 0rem;
+            }
+            > a {
+                width: 2.8rem;
+                height: 2.8rem;
+            }
+        }
         .facebook, .twitter {
             width: 2.2rem;
             height: 2.2rem;
