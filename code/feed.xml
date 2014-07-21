@@ -169,11 +169,11 @@
 
 &lt;p&gt;Select your OS, then select the “Virtual Box” option to get a list of virtual machines. It gives the option to download all the compressed files, or you can just use the cURL command given.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;# download IE8 for Windows XP on Mac
-$ curl -O -L &amp;quot;https://www.modern.ie/vmdownload?platform=mac&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;virtPlatform=virtualbox&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;browserOS=IE8-WinXP&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;parts=2&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;filename=VMBuild_20131127/VirtualBox/IE8_WinXP/Mac/IE8.WinXP.For.MacVirtualBox.part{1.sfx,2.rar}&amp;quot;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# download IE8 for Windows XP on Mac&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -O -L &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://www.modern.ie/vmdownload?platform=mac&amp;amp;virtPlatform=virtualbox&amp;amp;browserOS=IE8-WinXP&amp;amp;parts=2&amp;amp;filename=VMBuild_20131127/VirtualBox/IE8_WinXP/Mac/IE8.WinXP.For.MacVirtualBox.part{1.sfx,2.rar}&amp;quot;&lt;/span&gt;
 
-# download IE7 for Vista on Mac
-$ curl -O -L &amp;quot;https://www.modern.ie/vmdownload?platform=mac&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;virtPlatform=virtualbox&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;browserOS=IE7-Vista&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;parts=4&lt;span class=&quot;err&quot;&gt;&amp;amp;&lt;/span&gt;filename=VMBuild_20131127/VirtualBox/IE7_Vista/Mac/IE7.Vista.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar}&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;c&quot;&gt;# download IE7 for Vista on Mac&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -O -L &lt;span class=&quot;s2&quot;&gt;&amp;quot;https://www.modern.ie/vmdownload?platform=mac&amp;amp;virtPlatform=virtualbox&amp;amp;browserOS=IE7-Vista&amp;amp;parts=4&amp;amp;filename=VMBuild_20131127/VirtualBox/IE7_Vista/Mac/IE7.Vista.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar}&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure data-module=&quot;image_expander&quot;&gt;&lt;img src=&quot;/build/images/code//internet-explorer-css--curl-ie8--1444x952.png&quot; alt=&quot;Terminal output for IE8 VM&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;terminal-output-for-ie8-vm&quot;&gt;Terminal output for IE8 VM&lt;/h4&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
@@ -635,14 +635,15 @@ $ curl -O -L &amp;quot;https://www.modern.ie/vmdownload?platform=mac&lt;span cla
 
 &lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ git clone https://github.com/herereadthis/bellmaker.git
-$ cd bellmaker/
-$ npm install
-$ grunt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Clone the repo&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/herereadthis/bellmaker.git
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;bellmaker/
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;grunt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;view-the-demo&quot;&gt;View the Demo&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ python -m SimpleHTTPServer 8001&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python -m SimpleHTTPServer 8001&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Site will load at http://localhost:8001/&lt;/p&gt;
 
@@ -660,14 +661,14 @@ $ grunt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;recommended-add-the-bellmaker-as-a-bower-dependency&quot;&gt;Recommended: Add the Bellmaker as a Bower dependency&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ bower install --save bellmaker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install --save bellmaker&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;alternative-add-the-bellmaker-as-a-submodule&quot;&gt;Alternative: Add the Bellmaker as a submodule&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ cd my_repo
-$ git submodule add https://github.com/herereadthis/bellmaker.git
-$ git add bellmaker .gitmodules
-$ git commit -m &amp;quot;adds Bellmaker submodule&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;my_repo
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git submodule add https://github.com/herereadthis/bellmaker.git
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add bellmaker .gitmodules
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;adds Bellmaker submodule&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;as-less-add-to-your-imports&quot;&gt;As LESS: Add to your imports&lt;/h4&gt;
 
@@ -696,7 +697,7 @@ $ git commit -m &amp;quot;adds Bellmaker submodule&amp;quot;&lt;/code&gt;&lt;/pr
 
 &lt;p&gt;&lt;em&gt;For more useful global CSS resets and utilities, check out out the companion &lt;a href=&quot;/code/mossflower/&quot;&gt;Mossflower&lt;/a&gt; reset library.&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ bower install --save mossflower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install --save mossflower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;add-vital-stuff-to-your-indexhtml-file&quot;&gt;Add vital stuff to your index.html file&lt;/h4&gt;
 
@@ -972,15 +973,12 @@ $ git commit -m &amp;quot;adds Bellmaker submodule&amp;quot;&lt;/code&gt;&lt;/pr
   &lt;li&gt;Some commands below require you to install globally. If your machine won’t allow you because of permissions, preface the command with &lt;code&gt;sudo&lt;/code&gt;. For example:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;
-    &lt;pre&gt;
-&lt;code&gt;# If this doesn&#39;t work:
-$ npm install less -g
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# If this doesn&amp;#39;t work:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install less -g
+&lt;span class=&quot;c&quot;&gt;# try this&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install less -g&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-# try this
-$ sudo npm install less -g&lt;/code&gt;
-    &lt;/pre&gt;
-&lt;/div&gt;
+&lt;hr /&gt;
 
 &lt;h3 id=&quot;basic-installs&quot;&gt;Basic Installs&lt;/h3&gt;
 
@@ -988,27 +986,26 @@ $ sudo npm install less -g&lt;/code&gt;
 
 &lt;h4 id=&quot;install-homebrew-a-package-manager-for-os-x&quot;&gt;Install Homebrew, a package manager for OS X&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;
-    &lt;pre&gt;
-&lt;code&gt;$ ruby -e &quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;&lt;/code&gt;
-    &lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ruby -e &lt;span class=&quot;s2&quot;&gt;&amp;quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Basically, by installing Homebrew, “brew” is now a command in terminal. Check to see if the installation is working by running &lt;code&gt;brew doctor&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;update-brew&quot;&gt;Update Brew&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ brew update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Check your version of Homebrew&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew doctor
+&lt;span class=&quot;c&quot;&gt;# Update if needed&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Once you have Homebrew, you can isntall pip, which is a tool for installing python packages.&lt;/p&gt;
 
 &lt;h4 id=&quot;install-python--pip&quot;&gt;Install Python &amp;amp; Pip&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ brew install python
-$ curl -O http://python-distribute.org/distribute_setup.py
-$ python distribute_setup.py
-$ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-$ python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install python
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -O http://python-distribute.org/distribute_setup.py
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python distribute_setup.py
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
@@ -1018,9 +1015,55 @@ $ python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;install-git-with-homebrew&quot;&gt;Install Git with Homebrew&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ brew install git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install git
+&lt;span class=&quot;c&quot;&gt;# Confirm your installation&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git --version
+&lt;span class=&quot;c&quot;&gt;# Use your credentials from your github account creation&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config --global user.name &lt;span class=&quot;s2&quot;&gt;&amp;quot;GITHUB_USERNAME&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config --global user.email &lt;span class=&quot;s2&quot;&gt;&amp;quot;EMAIL@EXAMPLE.COM&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;To allow your computer to talk to Github, you have to make an SSH Key.&lt;/p&gt;
+&lt;p&gt;To allow your computer to talk to Github, you have to make an SSH Key. That is, every time you push or pull, your computer will authenticate automatically so you won’t have to enter your username/password.&lt;/p&gt;
+
+&lt;h3 id=&quot;create-ssh-key&quot;&gt;Create SSH Key&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.ssh
+&lt;span class=&quot;c&quot;&gt;# Check to see if you don&amp;#39;t already have stuff there&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# If you do, open the folder in Finder and move them to a backup&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ls -lha
+&lt;span class=&quot;c&quot;&gt;# Generate key&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh-keygen -t rsa -C &lt;span class=&quot;s2&quot;&gt;&amp;quot;EMAIL@EXAMPLE.COM&amp;quot;&lt;/span&gt;
+Generating public/private rsa key pair.
+&lt;span class=&quot;c&quot;&gt;# Press &amp;quot;Enter&amp;quot; here&lt;/span&gt;
+Enter file in which to save the key &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/Users/herereadthis/.ssh/id_rsa&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: 
+Enter passphrase &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;empty &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;no passphrase&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You will be prompted to created a password. Some people leave it blank, but I recommend you create one anyway, and make sure it is not the same password as the one to your github account. If the ssh key creation is successful, you’ll see something like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;Your identification has been saved in /home/demo/.ssh/id_rsa.
+Your public key has been saved in /home/demo/.ssh/id_rsa.pub.
+The key fingerprint is:
+3f:ed:44:4a:27:38:93:67:8c:74:4e:4d:dd:0a:c6:35 EMAIL@EXAMPLE.COM
+The key&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s randomart image is:
++--&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; RSA 2048&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;----+
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;      ++  .oo.   &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;      .  o.E     &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;        + .  o   &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;  . &lt;span class=&quot;nv&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; .        &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; + &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; .      &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;   E + &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; o       &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;    . o S o .    &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;     . ++        &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;                 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
++-----------------+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;copy-your-new-ssh-key&quot;&gt;Copy your new SSH key&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pbcopy &amp;lt; ~/.ssh/id_rsa.pub&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;figure data-module=&quot;image_expander&quot;&gt;&lt;img src=&quot;/build/images/code//setup-for-coding-github-2048x1536.png&quot; alt=&quot;Add SSH key to Github profile&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;add-ssh-key-to-github-profile&quot;&gt;Add SSH key to Github profile&lt;/h4&gt;
+&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Go to your Github profile (from the homepage, click “Edit Profile”), choose “SSH Keys,” and click “Add SSH Key”. Choose a name that you can remember and will identify the machine you’re using. Then, in the text area, paste the key that you had previously copied. Success!&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1030,18 +1073,32 @@ $ python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;check-if-npm-install-is-successful&quot;&gt;Check if NPM install is successful&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;# check npm install version
-$ npm -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# check npm install version&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;install-grunt-an-automated-javasscript-task-runner&quot;&gt;Install Grunt, an automated JavasScript task runner&lt;/h4&gt;
+&lt;h4 id=&quot;install-very-userful-node-packages&quot;&gt;Install very userful node packages&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ sudo npm install -g bower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;install-bower-a-package-manager&quot;&gt;Install Bower, a package manager&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ sudo npm install -g bower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Install Grunt, an automated JavasScript task runner\&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install -g bower
+&lt;span class=&quot;c&quot;&gt;# Bower, a package manager&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install -g bower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;em&gt;For more information on Bower, read the tutorial,&lt;/em&gt; &lt;a href=&quot;/code/bower-how-to/&quot;&gt;“How to manage 3rd party libraries using Bower”&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;install-optional-node-packages&quot;&gt;Install optional node packages&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# LESS, a CSS preprocessor&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install less -g
+&lt;span class=&quot;c&quot;&gt;# Jekyll, a website/blogging platform also used on GitHub pages&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install generator-jekyllrb -g&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;more-to-come&quot;&gt;More to Come:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ruby, Ruby gems, applications (Sublime, VirtualBox), browser settings&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Sat, 21 Jun 2014 00:00:00 -0400</pubDate>
@@ -1062,10 +1119,11 @@ $ npm -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ git clone https://github.com/herereadthis/mossflower.git
-$ cd mossflower/
-$ npm install
-$ grunt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Clone the repo&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/herereadthis/mossflower.git
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;mossflower/
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;grunt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
@@ -1077,14 +1135,14 @@ $ grunt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;recommended-add-the-bellmaker-as-a-bower-dependency&quot;&gt;Recommended: Add the Bellmaker as a Bower dependency&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ bower install --save mossflower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install --save mossflower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;alternative-add-mossflower-as-a-submodule&quot;&gt;Alternative: Add Mossflower as a submodule&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ cd my_repo
-$ git submodule add https://github.com/herereadthis/mossflower.git
-$ git add mossflower .gitmodules
-$ git commit -m &amp;quot;adds Mossflower submodule&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;my_repo
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git submodule add https://github.com/herereadthis/mossflower.git
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add mossflower .gitmodules
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;adds Mossflower submodule&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;as-less-add-to-your-imports&quot;&gt;As LESS: Add to your imports&lt;/h4&gt;
 
@@ -1106,12 +1164,12 @@ $ git commit -m &amp;quot;adds Mossflower submodule&amp;quot;&lt;/code&gt;&lt;/p
 
 &lt;h4 id=&quot;install-bower-using-npm&quot;&gt;Install Bower using npm&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ npm install -g bower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install -g bower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;make-sure-that-your-project-is-using-npm&quot;&gt;Make sure that your project is using npm&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ cd myproject/
-$ npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myproject/
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;All bower components will be installed by default at &lt;code&gt;./bower_components/&lt;/code&gt;. you can change this by creating a &lt;code&gt;.bowerrc&lt;/code&gt; file at root level. For example, I like to put my dependencies in &lt;code&gt;./src/components&lt;/code&gt;&lt;/p&gt;
 
@@ -1123,32 +1181,32 @@ $ npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;add-a-component-such-as-jquery&quot;&gt;Add a component, such as jQuery&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ bower install jquery&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install jquery&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;if-you-dont-know-the-name-of-your-component-you-can-search-for-it-instead&quot;&gt;If you don’t know the name of your component you can search for it instead&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ bower search [NAME]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower search &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;NAME&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;initialize-bower&quot;&gt;Initialize Bower&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ bower init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;It will ask you for a bunch of options, enter in information as needed, or just keep hitting &amp;lt;ENTER&amp;gt; to get the default answers.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;[?] name: &lt;span class=&quot;nt&quot;&gt;&amp;lt;myproject&amp;gt;&lt;/span&gt;
-[?] version: &lt;span class=&quot;nt&quot;&gt;&amp;lt;0.0.0&amp;gt;&lt;/span&gt;
-[?] description: 
-[?] main file: 
-[?] what types of modules does this package expose? 
-[?] keywords: 
-[?] authors: &lt;span class=&quot;nt&quot;&gt;&amp;lt;John&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;Smith&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-[?] license: &lt;span class=&quot;nt&quot;&gt;&amp;lt;MIT&amp;gt;&lt;/span&gt;
-[?] homepage: 
-[?] set currently installed components as dependencies? &lt;span class=&quot;nt&quot;&gt;&amp;lt;Yes&amp;gt;&lt;/span&gt;
-[?] add commonly ignored files to ignore list? &lt;span class=&quot;nt&quot;&gt;&amp;lt;Yes&amp;gt;&lt;/span&gt;
-[?] would you like to mark this package as private which prevents it from being accidentally published to the registry? &lt;span class=&quot;nt&quot;&gt;&amp;lt;Yes&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; name: &amp;lt;myproject&amp;gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; version: &amp;lt;0.0.0&amp;gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; description: 
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; main file: 
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; what types of modules does this package expose? 
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; keywords: 
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; authors: &amp;lt;John Smith&amp;gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; license: &amp;lt;MIT&amp;gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; homepage: 
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;currently installed components as dependencies? &amp;lt;Yes&amp;gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; add commonly ignored files to ignore list? &amp;lt;Yes&amp;gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; would you like to mark this package as private which prevents it from being accidentally published to the registry? &amp;lt;Yes&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;It will generate a bower.json file for your approval&lt;/p&gt;
 
@@ -1179,19 +1237,16 @@ $ npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;This means that the current version of jQuery for your project is 2.1.1. This version number comes from the &lt;a href=&quot;https://github.com/jquery/jquery/releases/tag/2.1.1&quot;&gt;jQuery Github release tag&lt;/a&gt;. If you ever want to change the version of jQuery in the future, go to your bower.json file and change the version number.&lt;/p&gt;
 
-&lt;h4 id=&quot;install-all-dependencies-based-on-bowerjson&quot;&gt;Install all dependencies based on bower.json&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ bower install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;install-a-new-dependency-after-bowerjson-has-been-created&quot;&gt;Install a new dependency after bower.json has been created&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ bower install [name] --save&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Install all dependencies based on bower.json&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install
+&lt;span class=&quot;c&quot;&gt;# Install a new dependency after bower.json has been created&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;name&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; --save&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;By running the above command, the component will be added, and your bower.json file will be updated accordingly.&lt;/p&gt;
 
 &lt;h4 id=&quot;update-dependencies-to-latest-version&quot;&gt;Update dependencies to latest version&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ bower update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
@@ -1248,12 +1303,12 @@ Prefix the choice with ! to persist it to bower.json
 
 &lt;h4 id=&quot;register-in-terminal&quot;&gt;Register in terminal&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;bower register [app name] [git endpoint]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower register &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;app name&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;git endpoint&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;$ bower register MYPROJECT git://github.com/MYNAME/MYPROJECT.git
-[?] Registering a package will make it installable via the registry (https://bower.herokuapp.com), continue? Yes
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower register MYPROJECT git://github.com/MYNAME/MYPROJECT.git
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;?&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; Registering a package will make it installable via the registry &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;https://bower.herokuapp.com&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;? Yes
 bower register      git://github.com/MYNAME/MYPROJECT.git
 Package MYPROJECT registered successfully!&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 

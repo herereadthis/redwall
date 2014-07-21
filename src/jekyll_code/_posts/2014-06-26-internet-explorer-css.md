@@ -53,7 +53,7 @@ Since you are coding, I'm assuming you're using a Mac or Linux machine. At any r
 Select your OS, then select the "Virtual Box" option to get a list of virtual machines. It gives the option to download all the compressed files, or you can just use the cURL command given.
 
 
-{% highlight html %}
+{% highlight bash %}
 # download IE8 for Windows XP on Mac
 $ curl -O -L "https://www.modern.ie/vmdownload?platform=mac&virtPlatform=virtualbox&browserOS=IE8-WinXP&parts=2&filename=VMBuild_20131127/VirtualBox/IE8_WinXP/Mac/IE8.WinXP.For.MacVirtualBox.part{1.sfx,2.rar}"
 

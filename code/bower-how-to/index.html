@@ -102,12 +102,12 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="install-bower-using-npm">Install Bower using npm</h4>
 
-<div class="highlight"><pre><code class="html">$ npm install -g bower</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>npm install -g bower</code></pre></div>
 
 <h4 id="make-sure-that-your-project-is-using-npm">Make sure that your project is using npm</h4>
 
-<div class="highlight"><pre><code class="html">$ cd myproject/
-$ npm install</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span><span class="nb">cd </span>myproject/
+<span class="nv">$ </span>npm install</code></pre></div>
 
 <p>All bower components will be installed by default at <code>./bower_components/</code>. you can change this by creating a <code>.bowerrc</code> file at root level. For example, I like to put my dependencies in <code>./src/components</code></p>
 
@@ -119,32 +119,32 @@ $ npm install</code></pre></div>
 
 <h4 id="add-a-component-such-as-jquery">Add a component, such as jQuery</h4>
 
-<div class="highlight"><pre><code class="html">$ bower install jquery</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower install jquery</code></pre></div>
 
 <h4 id="if-you-dont-know-the-name-of-your-component-you-can-search-for-it-instead">If you don’t know the name of your component you can search for it instead</h4>
 
-<div class="highlight"><pre><code class="html">$ bower search [NAME]</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower search <span class="o">[</span>NAME<span class="o">]</span></code></pre></div>
 
 <hr />
 
 <h3 id="initialize-bower">Initialize Bower</h3>
 
-<div class="highlight"><pre><code class="html">$ bower init</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower init</code></pre></div>
 
 <p>It will ask you for a bunch of options, enter in information as needed, or just keep hitting &lt;ENTER&gt; to get the default answers.</p>
 
-<div class="highlight"><pre><code class="html">[?] name: <span class="nt">&lt;myproject&gt;</span>
-[?] version: <span class="nt">&lt;0.0.0&gt;</span>
-[?] description: 
-[?] main file: 
-[?] what types of modules does this package expose? 
-[?] keywords: 
-[?] authors: <span class="nt">&lt;John</span> <span class="na">Smith</span><span class="nt">&gt;</span>
-[?] license: <span class="nt">&lt;MIT&gt;</span>
-[?] homepage: 
-[?] set currently installed components as dependencies? <span class="nt">&lt;Yes&gt;</span>
-[?] add commonly ignored files to ignore list? <span class="nt">&lt;Yes&gt;</span>
-[?] would you like to mark this package as private which prevents it from being accidentally published to the registry? <span class="nt">&lt;Yes&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="o">[</span>?<span class="o">]</span> name: &lt;myproject&gt;
+<span class="o">[</span>?<span class="o">]</span> version: &lt;0.0.0&gt;
+<span class="o">[</span>?<span class="o">]</span> description: 
+<span class="o">[</span>?<span class="o">]</span> main file: 
+<span class="o">[</span>?<span class="o">]</span> what types of modules does this package expose? 
+<span class="o">[</span>?<span class="o">]</span> keywords: 
+<span class="o">[</span>?<span class="o">]</span> authors: &lt;John Smith&gt;
+<span class="o">[</span>?<span class="o">]</span> license: &lt;MIT&gt;
+<span class="o">[</span>?<span class="o">]</span> homepage: 
+<span class="o">[</span>?<span class="o">]</span> <span class="nb">set </span>currently installed components as dependencies? &lt;Yes&gt;
+<span class="o">[</span>?<span class="o">]</span> add commonly ignored files to ignore list? &lt;Yes&gt;
+<span class="o">[</span>?<span class="o">]</span> would you like to mark this package as private which prevents it from being accidentally published to the registry? &lt;Yes&gt;</code></pre></div>
 
 <p>It will generate a bower.json file for your approval</p>
 
@@ -175,19 +175,16 @@ $ npm install</code></pre></div>
 
 <p>This means that the current version of jQuery for your project is 2.1.1. This version number comes from the <a href="https://github.com/jquery/jquery/releases/tag/2.1.1">jQuery Github release tag</a>. If you ever want to change the version of jQuery in the future, go to your bower.json file and change the version number.</p>
 
-<h4 id="install-all-dependencies-based-on-bowerjson">Install all dependencies based on bower.json</h4>
-
-<div class="highlight"><pre><code class="html">$ bower install</code></pre></div>
-
-<h4 id="install-a-new-dependency-after-bowerjson-has-been-created">Install a new dependency after bower.json has been created</h4>
-
-<div class="highlight"><pre><code class="html">$ bower install [name] --save</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="c"># Install all dependencies based on bower.json</span>
+<span class="nv">$ </span>bower install
+<span class="c"># Install a new dependency after bower.json has been created</span>
+<span class="nv">$ </span>bower install <span class="o">[</span>name<span class="o">]</span> --save</code></pre></div>
 
 <p>By running the above command, the component will be added, and your bower.json file will be updated accordingly.</p>
 
 <h4 id="update-dependencies-to-latest-version">Update dependencies to latest version</h4>
 
-<div class="highlight"><pre><code class="html">$ bower update</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower update</code></pre></div>
 
 <hr />
 
@@ -244,12 +241,12 @@ Prefix the choice with ! to persist it to bower.json
 
 <h4 id="register-in-terminal">Register in terminal</h4>
 
-<div class="highlight"><pre><code class="html">bower register [app name] [git endpoint]</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower register <span class="o">[</span>app name<span class="o">]</span> <span class="o">[</span>git endpoint<span class="o">]</span></code></pre></div>
 
 <h4 id="example">Example</h4>
 
-<div class="highlight"><pre><code class="html">$ bower register MYPROJECT git://github.com/MYNAME/MYPROJECT.git
-[?] Registering a package will make it installable via the registry (https://bower.herokuapp.com), continue? Yes
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower register MYPROJECT git://github.com/MYNAME/MYPROJECT.git
+<span class="o">[</span>?<span class="o">]</span> Registering a package will make it installable via the registry <span class="o">(</span>https://bower.herokuapp.com<span class="o">)</span>, <span class="k">continue</span>? Yes
 bower register      git://github.com/MYNAME/MYPROJECT.git
 Package MYPROJECT registered successfully!</code></pre></div>
 

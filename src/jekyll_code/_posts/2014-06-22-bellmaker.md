@@ -17,7 +17,8 @@ The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** 
 
 ### Build
 
-{% highlight html %}
+{% highlight bash %}
+# Clone the repo
 $ git clone https://github.com/herereadthis/bellmaker.git
 $ cd bellmaker/
 $ npm install
@@ -26,7 +27,7 @@ $ grunt
 
 ### View the Demo
 
-{% highlight html %}
+{% highlight bash %}
 $ python -m SimpleHTTPServer 8001
 {% endhighlight %}
 
@@ -47,13 +48,13 @@ Maybe you write your novels on a typewriter. Maybe you develop your Tri-X in Rod
 
 #### Recommended: Add the Bellmaker as a Bower dependency
 
-{% highlight html %}
+{% highlight bash %}
 $ bower install --save bellmaker
 {% endhighlight %}
 
 #### Alternative: Add the Bellmaker as a submodule
 
-{% highlight html %}
+{% highlight bash %}
 $ cd my_repo
 $ git submodule add https://github.com/herereadthis/bellmaker.git
 $ git add bellmaker .gitmodules
@@ -93,7 +94,7 @@ body {
 
 *For more useful global CSS resets and utilities, check out out the companion [Mossflower](/code/mossflower/) reset library.*
 
-{% highlight html %}
+{% highlight bash %}
 $ bower install --save mossflower
 {% endhighlight %}
 

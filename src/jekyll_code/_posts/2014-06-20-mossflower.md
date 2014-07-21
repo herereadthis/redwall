@@ -17,7 +17,8 @@ Mossflower is a **global reset** CSS utility for both LESS and SASS.
 
 ### Build
 
-{% highlight html %}
+{% highlight bash %}
+# Clone the repo
 $ git clone https://github.com/herereadthis/mossflower.git
 $ cd mossflower/
 $ npm install
@@ -34,13 +35,13 @@ The Bellmaker assumes you have basic terminal skills and knowledge of Git. Addit
 
 #### Recommended: Add the Bellmaker as a Bower dependency
 
-{% highlight html %}
+{% highlight bash %}
 $ bower install --save mossflower
 {% endhighlight %}
 
 #### Alternative: Add Mossflower as a submodule
 
-{% highlight html %}
+{% highlight bash %}
 $ cd my_repo
 $ git submodule add https://github.com/herereadthis/mossflower.git
 $ git add mossflower .gitmodules

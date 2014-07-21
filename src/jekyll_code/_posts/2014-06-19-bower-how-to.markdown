@@ -15,13 +15,13 @@ Nearly every project requires third party libraries and frameworks (e.g. jQuery,
 
 #### Install Bower using npm
 
-{% highlight html %}
+{% highlight bash %}
 $ npm install -g bower
 {% endhighlight %}
 
 #### Make sure that your project is using npm
 
-{% highlight html %}
+{% highlight bash %}
 $ cd myproject/
 $ npm install
 {% endhighlight %}
@@ -38,13 +38,13 @@ All bower components will be installed by default at {% raw %}<code>./bower_comp
 
 #### Add a component, such as jQuery
 
-{% highlight html %}
+{% highlight bash %}
 $ bower install jquery
 {% endhighlight %}
 
 #### If you don't know the name of your component you can search for it instead
 
-{% highlight html %}
+{% highlight bash %}
 $ bower search [NAME]
 {% endhighlight %}
 
@@ -52,13 +52,13 @@ $ bower search [NAME]
 
 ### Initialize Bower
 
-{% highlight html %}
+{% highlight bash %}
 $ bower init
 {% endhighlight %}
 
 It will ask you for a bunch of options, enter in information as needed, or just keep hitting &lt;ENTER&gt; to get the default answers.
 
-{% highlight html %}
+{% highlight bash %}
 [?] name: <myproject>
 [?] version: <0.0.0>
 [?] description: 
@@ -106,23 +106,19 @@ Notice that it will show jQuery, because you have installed it as a component be
 
 This means that the current version of jQuery for your project is 2.1.1. This version number comes from the [jQuery Github release tag](https://github.com/jquery/jquery/releases/tag/2.1.1). If you ever want to change the version of jQuery in the future, go to your bower.json file and change the version number.
 
-#### Install all dependencies based on bower.json
-
-{% highlight html %}
+{% highlight bash %}
+# Install all dependencies based on bower.json
 $ bower install
-{% endhighlight %}
-
-#### Install a new dependency after bower.json has been created
-
-{% highlight html %}
+# Install a new dependency after bower.json has been created
 $ bower install [name] --save
 {% endhighlight %}
+
 
 By running the above command, the component will be added, and your bower.json file will be updated accordingly.
 
 #### Update dependencies to latest version
 
-{% highlight html %}
+{% highlight bash %}
 $ bower update
 {% endhighlight %}
 
@@ -174,13 +170,13 @@ Before you begin (assuming your project is hosted on Github),
 
 #### Register in terminal
 
-{% highlight html %}
-bower register [app name] [git endpoint]
+{% highlight bash %}
+$ bower register [app name] [git endpoint]
 {% endhighlight %}
 
 #### Example
 
-{% highlight html %}
+{% highlight bash %}
 $ bower register MYPROJECT git://github.com/MYNAME/MYPROJECT.git
 [?] Registering a package will make it installable via the registry (https://bower.herokuapp.com), continue? Yes
 bower register      git://github.com/MYNAME/MYPROJECT.git

@@ -107,15 +107,12 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
   <li>Some commands below require you to install globally. If your machine won’t allow you because of permissions, preface the command with <code>sudo</code>. For example:</li>
 </ol>
 
-<div class="highlight">
-    <pre>
-<code># If this doesn't work:
-$ npm install less -g
+<div class="highlight"><pre><code class="bash"><span class="c"># If this doesn&#39;t work:</span>
+<span class="nv">$ </span>npm install less -g
+<span class="c"># try this</span>
+<span class="nv">$ </span>sudo npm install less -g</code></pre></div>
 
-# try this
-$ sudo npm install less -g</code>
-    </pre>
-</div>
+<hr />
 
 <h3 id="basic-installs">Basic Installs</h3>
 
@@ -123,27 +120,26 @@ $ sudo npm install less -g</code>
 
 <h4 id="install-homebrew-a-package-manager-for-os-x">Install Homebrew, a package manager for OS X</h4>
 
-<div class="highlight">
-    <pre>
-<code>$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"</code>
-    </pre>
-</div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>ruby -e <span class="s2">&quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;</span></code></pre></div>
 
 <p>Basically, by installing Homebrew, “brew” is now a command in terminal. Check to see if the installation is working by running <code>brew doctor</code></p>
 
 <h4 id="update-brew">Update Brew</h4>
 
-<div class="highlight"><pre><code class="html">$ brew update</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="c"># Check your version of Homebrew</span>
+<span class="nv">$ </span>brew doctor
+<span class="c"># Update if needed</span>
+<span class="nv">$ </span>brew update</code></pre></div>
 
 <p>Once you have Homebrew, you can isntall pip, which is a tool for installing python packages.</p>
 
 <h4 id="install-python--pip">Install Python &amp; Pip</h4>
 
-<div class="highlight"><pre><code class="html">$ brew install python
-$ curl -O http://python-distribute.org/distribute_setup.py
-$ python distribute_setup.py
-$ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-$ python get-pip.py</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install python
+<span class="nv">$ </span>curl -O http://python-distribute.org/distribute_setup.py
+<span class="nv">$ </span>python distribute_setup.py
+<span class="nv">$ </span>curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+<span class="nv">$ </span>python get-pip.py</code></pre></div>
 
 <hr />
 
@@ -153,9 +149,55 @@ $ python get-pip.py</code></pre></div>
 
 <h4 id="install-git-with-homebrew">Install Git with Homebrew</h4>
 
-<div class="highlight"><pre><code class="html">$ brew install git</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install git
+<span class="c"># Confirm your installation</span>
+<span class="nv">$ </span>git --version
+<span class="c"># Use your credentials from your github account creation</span>
+<span class="nv">$ </span>git config --global user.name <span class="s2">&quot;GITHUB_USERNAME&quot;</span>
+<span class="nv">$ </span>git config --global user.email <span class="s2">&quot;EMAIL@EXAMPLE.COM&quot;</span></code></pre></div>
 
-<p>To allow your computer to talk to Github, you have to make an SSH Key.</p>
+<p>To allow your computer to talk to Github, you have to make an SSH Key. That is, every time you push or pull, your computer will authenticate automatically so you won’t have to enter your username/password.</p>
+
+<h3 id="create-ssh-key">Create SSH Key</h3>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span><span class="nb">cd</span> ~/.ssh
+<span class="c"># Check to see if you don&#39;t already have stuff there</span>
+<span class="c"># If you do, open the folder in Finder and move them to a backup</span>
+<span class="nv">$ </span>ls -lha
+<span class="c"># Generate key</span>
+<span class="nv">$ </span>ssh-keygen -t rsa -C <span class="s2">&quot;EMAIL@EXAMPLE.COM&quot;</span>
+Generating public/private rsa key pair.
+<span class="c"># Press &quot;Enter&quot; here</span>
+Enter file in which to save the key <span class="o">(</span>/Users/herereadthis/.ssh/id_rsa<span class="o">)</span>: 
+Enter passphrase <span class="o">(</span>empty <span class="k">for </span>no passphrase<span class="o">)</span>:</code></pre></div>
+
+<p>You will be prompted to created a password. Some people leave it blank, but I recommend you create one anyway, and make sure it is not the same password as the one to your github account. If the ssh key creation is successful, you’ll see something like this:</p>
+
+<div class="highlight"><pre><code class="bash">Your identification has been saved in /home/demo/.ssh/id_rsa.
+Your public key has been saved in /home/demo/.ssh/id_rsa.pub.
+The key fingerprint is:
+3f:ed:44:4a:27:38:93:67:8c:74:4e:4d:dd:0a:c6:35 EMAIL@EXAMPLE.COM
+The key<span class="err">&#39;</span>s randomart image is:
++--<span class="o">[</span> RSA 2048<span class="o">]</span>----+
+<span class="p">|</span>      ++  .oo.   <span class="p">|</span>
+<span class="p">|</span>      .  o.E     <span class="p">|</span>
+<span class="p">|</span>        + .  o   <span class="p">|</span>
+<span class="p">|</span>  . <span class="nv">0</span> <span class="o">=</span> .        <span class="p">|</span>
+<span class="p">|</span>    <span class="o">=</span> + <span class="o">=</span> .      <span class="p">|</span>
+<span class="p">|</span>   E + <span class="o">=</span> o       <span class="p">|</span>
+<span class="p">|</span>    . o S o .    <span class="p">|</span>
+<span class="p">|</span>     . ++        <span class="p">|</span>
+<span class="p">|</span>                 <span class="p">|</span>
++-----------------+</code></pre></div>
+
+<h4 id="copy-your-new-ssh-key">Copy your new SSH key</h4>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre></div>
+
+<figure data-module="image_expander"><img src="/build/images/code//setup-for-coding-github-2048x1536.png" alt="Add SSH key to Github profile" /><figcaption><h4 id="add-ssh-key-to-github-profile">Add SSH key to Github profile</h4>
+</figcaption></figure>
+
+<p>Go to your Github profile (from the homepage, click “Edit Profile”), choose “SSH Keys,” and click “Add SSH Key”. Choose a name that you can remember and will identify the machine you’re using. Then, in the text area, paste the key that you had previously copied. Success!</p>
 
 <hr />
 
@@ -165,24 +207,38 @@ $ python get-pip.py</code></pre></div>
 
 <h4 id="check-if-npm-install-is-successful">Check if NPM install is successful</h4>
 
-<div class="highlight"><pre><code class="html"># check npm install version
-$ npm -v</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="c"># check npm install version</span>
+<span class="nv">$ </span>npm -v</code></pre></div>
 
-<h4 id="install-grunt-an-automated-javasscript-task-runner">Install Grunt, an automated JavasScript task runner</h4>
+<h4 id="install-very-userful-node-packages">Install very userful node packages</h4>
 
-<div class="highlight"><pre><code class="html">$ sudo npm install -g bower</code></pre></div>
-
-<h4 id="install-bower-a-package-manager">Install Bower, a package manager</h4>
-
-<div class="highlight"><pre><code class="html">$ sudo npm install -g bower</code></pre></div>
+<div class="highlight"><pre><code class="bash"><span class="c"># Install Grunt, an automated JavasScript task runner\</span>
+<span class="nv">$ </span>sudo npm install -g bower
+<span class="c"># Bower, a package manager</span>
+<span class="nv">$ </span>sudo npm install -g bower</code></pre></div>
 
 <p><em>For more information on Bower, read the tutorial,</em> <a href="/code/bower-how-to/">“How to manage 3rd party libraries using Bower”</a>.</p>
+
+<h4 id="install-optional-node-packages">Install optional node packages</h4>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># LESS, a CSS preprocessor</span>
+<span class="nv">$ </span>sudo npm install less -g
+<span class="c"># Jekyll, a website/blogging platform also used on GitHub pages</span>
+<span class="nv">$ </span>sudo npm install generator-jekyllrb -g</code></pre></div>
+
+<hr />
+
+<h3 id="more-to-come">More to Come:</h3>
+
+<ul>
+  <li>Ruby, Ruby gems, applications (Sublime, VirtualBox), browser settings</li>
+</ul>
 
 
         <footer>
             <p><em><time property="dc:created" datetime="2014-06-21">21 June 2014</time></em><br />
                 <em>By: <span property="dc:creator">Jimmy Ha</span></em><br />
-                <em>Last updated: <time property="dc:modified" datetime="2014-06-24">24 June 2014</time></em></p>
+                <em>Last updated: <time property="dc:modified" datetime="2014-07-17">17 July 2014</time></em></p>
 
             <h4>Share this article:</h4>
             <ul id="post_social" class="sunflash_navmenu">
