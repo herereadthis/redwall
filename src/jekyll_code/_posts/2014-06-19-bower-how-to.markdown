@@ -1,7 +1,8 @@
 ---
 layout:         post
 title:          "How to manage 3rd party libraries using Bower"
-date:           2014-06-19 20:30:10
+created:        2014-06-19
+modified:       2014-07-15
 permalink:      bower-how-to/
 description:    "Bower is a package manager that will help you keep all your 3rd party libraries (e.g. jQuery) updated and maintained."
 tags:           bower, github

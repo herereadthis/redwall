@@ -1,7 +1,8 @@
 ---
 layout:         post
 title:          "How to set up your computer for coding"
-date:           2014-06-21 20:30:10
+created:        2014-06-21
+modified:		2014-06-24
 permalink:      setup-for-coding/
 description:    "It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need."
 tags:           css, less, sass

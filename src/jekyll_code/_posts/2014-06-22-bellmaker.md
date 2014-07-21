@@ -1,7 +1,8 @@
 ---
 layout:         post
 title:          "Bellmaker, a media query package"
-date:           2014-07-11 20:30:10
+created:        2014-06-16
+modified:       2014-07-11
 permalink:      bellmaker/
 description:    "The Bellmaker is a library of device-agnostic and device specific media queries that will complement your existing CSS."
 tags:           css, less, sass

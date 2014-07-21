@@ -1,7 +1,8 @@
 ---
 layout:     	post
 title:      	"Mossflower, a CSS global reset"
-date:       	2014-06-20 20:30:10
+created:       	2014-06-20
+modified:		2014-06-23
 permalink:  	mossflower/
 description:	"Mossflower is a global reset CSS utility for both LESS and SASS to help you spin up new websites."
 tags:       	css, less, sass

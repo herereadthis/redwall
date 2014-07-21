@@ -1,7 +1,8 @@
 ---
 layout:         post
 title:          "Interaction design and user experience: essential concepts"
-date:           2014-07-18 20:30:10
+created:        2014-06-24
+modified:       2014-07-18
 permalink:      interaction-design/
 description:    "Using research from UX studies and known principles of user interface design, and maintaining best practices for device-agnostic development, here's some tips and clarification for working on appearance and behavior for sites."
 tags:           interaction, design, user, experience, UI, UX

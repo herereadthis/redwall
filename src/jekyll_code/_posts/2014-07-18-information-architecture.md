@@ -1,8 +1,9 @@
 ---
 layout:         post
 title:          "Create information architecture (IA) for your web application (Part 1)"
-date:           2014-07-18 8:30:10
-permalink:      information-architecture/
+created:        2014-07-18
+modified:       2014-07-20
+permalink:      information-architecture-part-1/
 description:    "Information Architecture (IA) as the high-level, structured organization of a site, intended to organize content, facilitate design, and improve user interaction"
 tags:           information, architecture
 ---

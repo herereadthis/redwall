@@ -7,16 +7,18 @@ tags:           coding
 
 <article>
 	<h2>Articles</h2>
-    {% for post in site.posts %}
+    {% sorted_for post in site.posts reversed sort_by:modified %}
     <section>
         <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         {{ post.excerpt }}
         <p><a href="{{ post.url | prepend: site.baseurl }}">Continue Reading &raquo;</a></p>
 	    <hr />
     </section>
-    {% endfor %}
+    {% endsorted_for %}
 </article>
 
 <!--
+	    {% for post in site.posts %}
+	     {% endfor %}
 FEED URL: {{ "/feed.xml" | prepend: site.baseurl }}
 -->
