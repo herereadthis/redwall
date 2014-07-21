@@ -30,11 +30,11 @@ IA, if done correctly, will address the following concerns:
 2. Allow design to be determined by content and intent; we will let ***form follow function***
 3. ***Determine major points of user errors*** and frustrations, and find optimal solutions.
 
-Since there is are lot of topics to cover, IA will be split into 3 articles
+#### Since there are lot of topics to cover, IA will be split into 3 articles:
 
-* Part 1 (this article) will define scope, strategy and determining user needs.
-* Part 2 will illustrate building products and applications, and modelling site interaction.
-* Part 3 concerns surface-level site hierarchy, user experience, and graphic design.
+* *Part 1* (this article) will define scope, strategy and determining user needs.
+* *Part 2* will illustrate building products and applications, and modelling site interaction.
+* *Part 3* concerns surface-level site hierarchy, user experience, and graphic design.
 
 ----------------
 
@@ -85,17 +85,17 @@ Long-term goals will not be part of the initial launch, but must be considered a
 
 ----------------
 
-### More to come...
-
-*Who puts articles online before finishing them? I do. Check back in a few days.*
-
-----------------
-
 ### 2. Clarify user intent
 
 The goal of building user profiles is not necessarily to determine "who" the users are. Building IA for for targeted demographics is an approach that comes form traditional marketing and marketing research.
 
 #### Why would anyone want to come to this site?
+
+----------------
+
+### More to come...
+
+*Who puts articles online before finishing them? I do. Check back in a few days.*
 
 
 
