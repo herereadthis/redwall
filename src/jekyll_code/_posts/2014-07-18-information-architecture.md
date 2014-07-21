@@ -1,6 +1,6 @@
 ---
 layout:         post
-title:          "Create information architecture (IA) for your web application"
+title:          "Create information architecture (IA) for your web application (Part 1)"
 date:           2014-07-18 8:30:10
 permalink:      information-architecture/
 description:    "Information Architecture (IA) as the high-level, structured organization of a site, intended to organize content, facilitate design, and improve user interaction"
@@ -28,6 +28,12 @@ IA, if done correctly, will address the following concerns:
 1. ***Organize the content of the site the way customers want to find it,*** vs how we internally organize the data (e.g. managerial structure, database structure, or just arbitrary preference)
 2. Allow design to be determined by content and intent; we will let ***form follow function***
 3. ***Determine major points of user errors*** and frustrations, and find optimal solutions.
+
+Since there is are lot of topics to cover, IA will be split into 3 articles
+
+* Part 1 (this article) will define scope, strategy and determining user needs.
+* Part 2 will illustrate building products and applications, and modelling site interaction.
+* Part 3 concerns surface-level site hierarchy, user experience, and graphic design.
 
 ----------------
 
@@ -92,15 +98,4 @@ The goal of building user profiles is not necessarily to determine "who" the use
 
 
 
-----------------
-
-### 3. Build products around users' needs
-
-----------------
-
-### 4. Create a site interaction model
-
-----------------
-
-### 5. Outline the web application paths and hierarchy
 
