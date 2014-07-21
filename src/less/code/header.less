@@ -3,39 +3,35 @@
     background-repeat: no-repeat;
 
     @media @da_baseline {
+        h1 {
+            padding: 2rem 2rem 2rem 1rem;
+            line-height: 5rem; 
+        }
     }
     @media @da_2x_small {
         height: 12rem;
-    }
 
+        h1 {
+            padding: 3rem 0 0 (1 / 12) * @pw_2x_small;
+            line-height: 8rem;
+        }
+        .bellmaker_container {
+            height: 12rem;
+        }
+    }
     &, & .bellmaker_container {
         .triple_hr;
         background-position: 0% 100%;
     }
-
     .bellmaker_container {
         margin: 0 auto;
         background-size: 100% 0.5rem;
-
-        @media @da_baseline {
-        }
-        @media @da_2x_small {
-            height: 12rem;
-        }
     }
     h1 {
         font-weight: 300;
         font-size: 4rem;
         text-transform: uppercase;
 
-        @media @da_baseline {
-            padding: 2rem 2rem 2rem 1rem;
-            line-height: 5rem;
-        }
-        @media @da_2x_small {
-            padding: 3rem 0 0 (1 / 12) * @pw_2x_small;
-            line-height: 8rem;
-        }
         @media @da_x_small {
             padding: 3rem 0 0 2rem;
         }

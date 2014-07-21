@@ -1,0 +1,43 @@
+// tables --------------------------------------
+// ---------------------------------------------
+table {
+    margin: 0 2rem 1.9rem 0;
+    border: 0.1rem solid @code_grey_medium_light;
+
+    // @media @da_medium {
+    //     margin: 0  (1 / 12) * @pw_medium 2rem;
+    // }
+    th {
+        text-align: left;
+    }
+    th, td {
+        padding: 0.5rem 1rem 0.4rem;
+        vertical-align: top;
+        .font_standard;
+        &:first-child {
+            padding-left: 0.9rem;
+        }
+        &:last-child {
+            padding-left: 0.4rem;
+        }
+    }
+    td {
+        border-top: 0.1rem solid @code_grey_medium_light;
+    }
+    p {
+        margin: 0;
+        // inline code
+        > code {
+            background-color: @code_grey_light;
+            padding: 0.5rem;
+        }
+    }
+    &.smalltext_table {
+        td {
+            .font_subtext;
+        }
+    }
+    &.wide_table {
+
+    }
+}
