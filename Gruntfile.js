@@ -153,17 +153,18 @@ module.exports = function(grunt) {
         }
     });
     grunt.registerTask('default', [
-        // 'uglify'
         'bowercopy',
         'copy',
         'less',
         'jekyll',
         'requirejs',
-        'uglify',
-        'watch'
+        'uglify'
     ]);
     grunt.registerTask('devserver', [
         // 'uglify'
         'connect:livereload'
+    ]);
+    grunt.registerTask('server', [
+        'watch'
     ]);
 };

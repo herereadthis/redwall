@@ -74,6 +74,7 @@
         > a {
             border-radius: 50%;
             border-style: solid;
+            background-color: #FFF;
 
             &:link, &:visited {
                 margin: 0.1rem;
@@ -109,7 +110,7 @@
         margin: 0 -2rem 0 -1rem;
 
         li {
-            height: 4.6rem;
+            height: 5rem;
             margin-left: 0.6rem;
 
             &:first-child {
@@ -121,27 +122,44 @@
             }
         }
         .facebook, .twitter {
-            width: 3.4rem;
-            height: 3.4rem;
-            padding: 0.3rem;
-        }
-        .twitter {
-            padding: 0.3rem 0.2rem 0.3rem 0.4rem;  
-        }
-        .googleplus, .github, .pinterest, .vimeo {
             width: 3.2rem;
             height: 3.2rem;
             padding: 0.4rem;
         }
-        .googleplus {
-            padding: 0.4rem 0.3rem 0.4rem 0.5rem;
+        .googleplus, .github, .pinterest, .vimeo {
+            width: 3rem;
+            height: 3rem;
+            padding: 0.5rem;
         }
+    }
+    @media @ds_common_9_16 @orientation_portrait {
+        margin: 0 -2rem 0 -1rem;
+
+        li {
+            height: 5rem;
+            margin-left: 0.8rem;
+
+            &:first-child {
+                margin-left: 1.6rem;
+            }
+            > a {
+                width: 4.2rem;
+                height: 4.2rem;
+            }
+        }
+        .facebook, .twitter {
+            padding: 0.5rem;
+        }
+        .googleplus, .github, .pinterest, .vimeo {
+            padding: 0.6rem;
+        }
+
     }
     @media @da_small {
         margin: 0 0 0 -0.1rem;
 
         li {
-            height: 3.4rem;
+            height: 4rem;
             margin-left: 0.4rem;
 
             &:first-child {
@@ -155,10 +173,18 @@
         .facebook, .twitter {
             width: 2.2rem;
             height: 2.2rem;
+            padding: 0.3rem;
+        }
+        .twitter {
+            padding: 0.3rem 0.2rem 0.3rem 0.4rem;  
         }
         .googleplus, .github, .pinterest, .vimeo {
             width: 2rem;
             height: 2rem;
+            padding: 0.4rem;
+        }
+        .googleplus {
+            padding: 0.4rem 0.3rem 0.4rem 0.5rem;
         }
     }
 }
