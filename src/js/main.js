@@ -1,22 +1,34 @@
 (function() {
     requirejs.config({
         paths: {
+            // retro homepage
+            'Retromator': 'retromator',
             "ColorTuner": "color_tuner",
             "SocialFu": "social_fu",
-            "Analytics": "analytics",
+            // coding blog
+            'CodeBlog': 'code_blog',
             "CodeFooter": "code_footer",
             "ImageExpander": "image_expander",
-            "jquery": '../components/jquery/dist/jquery.min'
+            // google analytics
+            "Analytics": "analytics",
+            // jQuery
+            "jquery": '../components/jquery/dist/jquery.min',
+            // dummy modules for testing
+            'purchase': 'purchase',
+            'products': 'products',
+            'credits': 'credits'
         }
     });
-    require(["jquery", "ColorTuner", "SocialFu", "Analytics", "CodeFooter", "ImageExpander"], function($, ColorTuner, SocialFu, Analytics, CodeFooter, ImageExpander) {
+    require(['Retromator', 'CodeBlog', 'Analytics'], function(Retromator, CodeBlog, Analytics) {
         // if (Modernizr.touch === false) {
         //       HeadMore.init();
         // }
-        ColorTuner.init();
-        SocialFu.init();
-        CodeFooter.init();
-        ImageExpander.init();
+        Retromator.init();
+        CodeBlog.init();
+        // ColorTuner.init();
+        // SocialFu.init();
+        // CodeFooter.init();
+        // ImageExpander.init();
         return Analytics.track();
     });
 }).call(this);

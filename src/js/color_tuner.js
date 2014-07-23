@@ -6,7 +6,6 @@
     $ = require("jquery");
     exports = {};
     moduleName = "color_tuner";
-    _window = $(window);
     // hexToRgb function taken from
     // http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
     hexToRgb = function(hex) {
@@ -24,7 +23,6 @@
         } : null;
     };
     makeShape = function($this) {
-        // alert('foo');
         var colors,
             hexBegin = $this.data('color-begin'),
             hexEnd = $this.data('color-end'),
@@ -74,7 +72,7 @@
             return makeItHappen($this);
         }
         else {
-            element = $("body").find("[data-module=\"" + moduleName + "\"]");
+            element = $('[data-module="' + moduleName + '"]');
             return element.each(function() {
                 return makeItHappen($(this));
             });
