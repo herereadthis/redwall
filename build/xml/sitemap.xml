@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>http://herereadthis.com/</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 		<!-- PageMap Schema: https://developers.google.com/custom-search/docs/structured_data#pagemaps -->
@@ -15,61 +15,61 @@
 	</url>
 	<url>
 		<loc>http://herereadthis.com/code/</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://herereadthis.com/code/bellmaker/</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://herereadthis.com/code/mossflower/</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://herereadthis.com/code/bower-how-to/</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://herereadthis.com/code/setup-for-coding/</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://herereadthis.com/code/interaction-design/</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://herereadthis.com/code/information-architecture-part-1/</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://herereadthis.com/code/internet-explorer-legacy-css/</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>http://herereadthis.com/build/xml/foaf.rdf</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>http://herereadthis.com/build/404.html</loc>
-		<lastmod>2014-07-22</lastmod>
+		<lastmod>2014-07-23</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.5</priority>
 	</url>

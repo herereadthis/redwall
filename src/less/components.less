@@ -314,7 +314,7 @@
 
 [data-module="social_fu"] {
     overflow: auto;
-    padding: 0 0 2rem 0;
+    padding: 2rem 0;
 
     li {
         display: block;
@@ -324,20 +324,39 @@
             display: block;
         }
         > span {
+            position: relative;
+            z-index: 5;
             font-size: 2rem;
             line-height: 2.5rem;
             margin: 0 1rem;
+            padding: 0;
             font-weight: bold;
             font-family: "Courier New", "Monaco", monospace;
             font-family: "Microsoft Sans Serif", serif;
             font-weight: bold;
             text-decoration: underline;
+            transform-style: flat;
+            transition: all 250ms ease-out;
 
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -2;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: all 250ms ease-out;
+            }
             &:hover {
                 margin: 0 0.9rem;
                 padding: 0 0.1rem;
                 cursor: pointer;
                 text-decoration: none;
+
+                &:before {
+                    box-shadow: 0 0 2rem 0 rgba(255, 255, 0, 0.75);
+                }
             }
         }
         @media @da_baseline {
@@ -463,5 +482,4 @@
     a {
         display: none;
     }
-
 }
