@@ -15,6 +15,20 @@ The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** 
 * Both **LESS** and **SASS** versions are available, and will work with Bootstrap.
 <!--more-->
 
+{% raw %}
+<ul id="github_badges" class="sunflash_navmenu">
+    <li><a href="http://badge.fury.io/bo/bellmaker">
+            <img alt="Bower version" src="https://badge.fury.io/bo/bellmaker.svg" />
+        </a></li>
+    <li><a href="http://travis-ci.org/herereadthis/bellmaker">
+            <img alt="Build Status" src="https://secure.travis-ci.org/herereadthis/bellmaker.svg?branch=master" />
+        </a></li>
+    <li><a href="https://david-dm.org/herereadthis/bellmaker#info=devDependencies">
+            <img alt="Bower version" src="https://david-dm.org/herereadthis/bellmaker/dev-status.svg" />
+        </a></li>
+</ul>
+{% endraw %}
+
 ### Build
 
 {% highlight bash %}
@@ -328,4 +342,3 @@ Now you will have 7 breakpoints in Bootstrap
 
 
 
-[![Bower version](https://badge.fury.io/bo/bellmaker.svg)](http://badge.fury.io/bo/bellmaker)

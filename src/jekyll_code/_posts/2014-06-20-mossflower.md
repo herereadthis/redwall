@@ -15,6 +15,20 @@ Mossflower is a **global reset** CSS utility for both LESS and SASS.
 * It helps you spin up new web applications faster by *reducing boilderplate CSS*.
 <!--more-->
 
+{% raw %}
+<ul id="github_badges" class="sunflash_navmenu">
+	<li><a href="http://badge.fury.io/bo/mossflower">
+			<img alt="Bower version" src="https://badge.fury.io/bo/mossflower.svg" />
+		</a></li>
+	<li><a href="http://travis-ci.org/herereadthis/mossflower">
+			<img alt="Build Status" src="https://secure.travis-ci.org/herereadthis/mossflower.svg?branch=master" />
+		</a></li>
+	<li><a href="https://david-dm.org/herereadthis/mossflower#info=devDependencies">
+			<img alt="Bower version" src="https://david-dm.org/herereadthis/mossflower/dev-status.svg" />
+		</a></li>
+</ul>
+{% endraw %}
+
 ### Build
 
 {% highlight bash %}

@@ -1,9 +1,12 @@
 {
   "name": "redwall",
-  "version": "0.2.2",
+  "version": "0.3.2",
   "homepage": "http://herereadthis.com",
   "authors": [
-    "Jimmy Ha <herereadthis@gmail.com>"
+    {
+      "name": "Jimmy Ha",
+      "homepage": "http://herereadthis.com"
+    }
   ],
   "description": "Codebase for the Here, Read This website",
   "license": "GPL",
@@ -17,9 +20,9 @@
     "tests"
   ],
   "dependencies": {
-    "bellmaker": "~0.3.2",
+    "bellmaker": "~0.3.3",
+    "mossflower": "~0.1.6",
     "requirejs": "~2.1.14",
-    "mossflower": "~0.1.5",
     "sunflash": "~0.1.4"
   },
   "resolutions": {

@@ -633,6 +633,18 @@
 &lt;!--more--&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;ul id=&quot;github_badges&quot; class=&quot;sunflash_navmenu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;http://badge.fury.io/bo/bellmaker&quot;&gt;
+            &lt;img alt=&quot;Bower version&quot; src=&quot;https://badge.fury.io/bo/bellmaker.svg&quot; /&gt;
+        &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://travis-ci.org/herereadthis/bellmaker&quot;&gt;
+            &lt;img alt=&quot;Build Status&quot; src=&quot;https://secure.travis-ci.org/herereadthis/bellmaker.svg?branch=master&quot; /&gt;
+        &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://david-dm.org/herereadthis/bellmaker#info=devDependencies&quot;&gt;
+            &lt;img alt=&quot;Bower version&quot; src=&quot;https://david-dm.org/herereadthis/bellmaker/dev-status.svg&quot; /&gt;
+        &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Clone the repo&lt;/span&gt;
@@ -952,7 +964,6 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://badge.fury.io/bo/bellmaker&quot;&gt;&lt;img src=&quot;https://badge.fury.io/bo/bellmaker.svg&quot; alt=&quot;Bower version&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 22 Jun 2014 00:00:00 -0400</pubDate>
         <link>http://herereadthis.com/code/bellmaker/</link>
@@ -997,7 +1008,7 @@
 &lt;span class=&quot;c&quot;&gt;# Update if needed&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Once you have Homebrew, you can isntall pip, which is a tool for installing python packages.&lt;/p&gt;
+&lt;p&gt;Once you have Homebrew, you can install pip, which is a tool for installing python packages.&lt;/p&gt;
 
 &lt;h4 id=&quot;install-python--pip&quot;&gt;Install Python &amp;amp; Pip&lt;/h4&gt;
 
@@ -1006,6 +1017,13 @@
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python distribute_setup.py
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;install-important-pip-packages&quot;&gt;Install important Pip packages&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Install virtualenv, used for creating isolated Python environments&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install virtualenv
+&lt;span class=&quot;c&quot;&gt;# Install Fabric, a command line tool for streamlining tasks and SSH&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install Fabric&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
@@ -1076,10 +1094,11 @@ The key&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s randomart image
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# check npm install version&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;install-very-userful-node-packages&quot;&gt;Install very userful node packages&lt;/h4&gt;
+&lt;h4 id=&quot;install-very-useful-node-packages&quot;&gt;Install very useful node packages&lt;/h4&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Install Grunt, an automated JavasScript task runner\&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install -g bower
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install -g grunt
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install -g grunt-cli
 &lt;span class=&quot;c&quot;&gt;# Bower, a package manager&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install -g bower&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -1115,6 +1134,18 @@ The key&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s randomart image
   &lt;li&gt;It is &lt;a href=&quot;https://github.com/herereadthis/mossflower&quot;&gt;available on Github&lt;/a&gt; to use and modify as you please.&lt;/li&gt;
   &lt;li&gt;It helps you spin up new web applications faster by &lt;em&gt;reducing boilderplate CSS&lt;/em&gt;.
 &lt;!--more--&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul id=&quot;github_badges&quot; class=&quot;sunflash_navmenu&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;http://badge.fury.io/bo/mossflower&quot;&gt;
+			&lt;img alt=&quot;Bower version&quot; src=&quot;https://badge.fury.io/bo/mossflower.svg&quot; /&gt;
+		&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;http://travis-ci.org/herereadthis/mossflower&quot;&gt;
+			&lt;img alt=&quot;Build Status&quot; src=&quot;https://secure.travis-ci.org/herereadthis/mossflower.svg?branch=master&quot; /&gt;
+		&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://david-dm.org/herereadthis/mossflower#info=devDependencies&quot;&gt;
+			&lt;img alt=&quot;Bower version&quot; src=&quot;https://david-dm.org/herereadthis/mossflower/dev-status.svg&quot; /&gt;
+		&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;

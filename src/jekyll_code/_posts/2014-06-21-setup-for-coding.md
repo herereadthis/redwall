@@ -52,7 +52,7 @@ $ brew doctor
 $ brew update
 {% endhighlight %}
 
-Once you have Homebrew, you can isntall pip, which is a tool for installing python packages.
+Once you have Homebrew, you can install pip, which is a tool for installing python packages.
 
 #### Install Python & Pip
 
@@ -62,6 +62,15 @@ $ curl -O http://python-distribute.org/distribute_setup.py
 $ python distribute_setup.py
 $ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 $ python get-pip.py
+{% endhighlight %}
+
+#### Install important Pip packages
+
+{% highlight bash %}
+# Install virtualenv, used for creating isolated Python environments
+$ pip install virtualenv
+# Install Fabric, a command line tool for streamlining tasks and SSH
+$ pip install Fabric
 {% endhighlight %}
 
 -------------
@@ -142,11 +151,12 @@ NPM is another package manager for a lot of very useful Javascript tools. First,
 $ npm -v
 {% endhighlight %}
 
-#### Install very userful node packages
+#### Install very useful node packages
 
 {% highlight bash %}
 # Install Grunt, an automated JavasScript task runner\
-$ sudo npm install -g bower
+$ sudo npm install -g grunt
+$ sudo npm install -g grunt-cli
 # Bower, a package manager
 $ sudo npm install -g bower
 {% endhighlight %}

@@ -50,7 +50,6 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type="text/css" href="/build/css/code.css" />
-    <script data-main="/build/js/main" src="/build/js/require.js"></script>
 
     <link rel="canonical" href="http://herereadthis.com/code/setup-for-coding/">
 
@@ -131,7 +130,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <span class="c"># Update if needed</span>
 <span class="nv">$ </span>brew update</code></pre></div>
 
-<p>Once you have Homebrew, you can isntall pip, which is a tool for installing python packages.</p>
+<p>Once you have Homebrew, you can install pip, which is a tool for installing python packages.</p>
 
 <h4 id="install-python--pip">Install Python &amp; Pip</h4>
 
@@ -140,6 +139,13 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <span class="nv">$ </span>python distribute_setup.py
 <span class="nv">$ </span>curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 <span class="nv">$ </span>python get-pip.py</code></pre></div>
+
+<h4 id="install-important-pip-packages">Install important Pip packages</h4>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># Install virtualenv, used for creating isolated Python environments</span>
+<span class="nv">$ </span>pip install virtualenv
+<span class="c"># Install Fabric, a command line tool for streamlining tasks and SSH</span>
+<span class="nv">$ </span>pip install Fabric</code></pre></div>
 
 <hr />
 
@@ -210,10 +216,11 @@ The key<span class="err">&#39;</span>s randomart image is:
 <div class="highlight"><pre><code class="bash"><span class="c"># check npm install version</span>
 <span class="nv">$ </span>npm -v</code></pre></div>
 
-<h4 id="install-very-userful-node-packages">Install very userful node packages</h4>
+<h4 id="install-very-useful-node-packages">Install very useful node packages</h4>
 
 <div class="highlight"><pre><code class="bash"><span class="c"># Install Grunt, an automated JavasScript task runner\</span>
-<span class="nv">$ </span>sudo npm install -g bower
+<span class="nv">$ </span>sudo npm install -g grunt
+<span class="nv">$ </span>sudo npm install -g grunt-cli
 <span class="c"># Bower, a package manager</span>
 <span class="nv">$ </span>sudo npm install -g bower</code></pre></div>
 
@@ -321,5 +328,6 @@ The key<span class="err">&#39;</span>s randomart image is:
 
 
 
+    <script data-main="/build/js/main" src="/build/js/require.js"></script>
 </body>
 </html>
