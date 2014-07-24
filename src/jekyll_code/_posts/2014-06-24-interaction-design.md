@@ -22,6 +22,48 @@ One of the cardinal rules of web design is remembering that people spend 99% of 
 
 --------------
 
+### Keeping track of the buzzwords
+
+A great primer on these concepts comes from an older but still highly relevant book, *The Elements of User Experience,* by Jesse James Garrett. One of the books's premises is that the web has two facets: a **platform for functionality** that is concerned with tasks and problem-solving, and **medium for information** delivery that users can search and absorb. We will use that book's definitions for our terms:
+
+#### User needs
+
+* "the goals for the site that come from outside our organization— specifically from the people who will use our site"
+
+#### Product objectives
+
+* our business goals for the site that are "balanced against user needs"
+
+#### Functional specifications
+
+* "a detailed description of the 'feature set' of the product" 
+
+#### Content Requirements
+
+* "a description of the various content elements that will be required"
+
+#### Interaction design
+
+* "how the system behaves in response to the user" 
+
+#### Information architecture (IA)
+
+* "the arrangement of content elements to facilitate human understanding" 
+
+#### Information design
+
+* "the presentation of information in a way that facilitates understanding"
+
+#### Interface design
+
+* how interface elements are arranged "to enable users to interact with the functionality of the system"
+
+#### Navigation design
+
+* "the set of screen elements that allow the user to move through the information architecture," that serves as the interface for the information resource
+
+--------------
+
 ### User Testing
 
 Our web application can become our baby or our embarrassment, but however we see it, we will be unable to see it without knowing how it came to be, and the motivations that created it. We need other people to look at it.

@@ -414,6 +414,66 @@
 
 &lt;hr /&gt;
 
+&lt;h3 id=&quot;keeping-track-of-the-buzzwords&quot;&gt;Keeping track of the buzzwords&lt;/h3&gt;
+
+&lt;p&gt;A great primer on these concepts comes from an older but still highly relevant book, &lt;em&gt;The Elements of User Experience,&lt;/em&gt; by Jesse James Garrett. One of the books’s premises is that the web has two facets: a &lt;strong&gt;platform for functionality&lt;/strong&gt; that is concerned with tasks and problem-solving, and &lt;strong&gt;medium for information&lt;/strong&gt; delivery that users can search and absorb. We will use that book’s definitions for our terms:&lt;/p&gt;
+
+&lt;h4 id=&quot;user-needs&quot;&gt;User needs&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“the goals for the site that come from outside our organization— specifically from the people who will use our site”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;product-objectives&quot;&gt;Product objectives&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;our business goals for the site that are “balanced against user needs”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;functional-specifications&quot;&gt;Functional specifications&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“a detailed description of the ‘feature set’ of the product” &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;content-requirements&quot;&gt;Content Requirements&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“a description of the various content elements that will be required”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;interaction-design&quot;&gt;Interaction design&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“how the system behaves in response to the user” &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;information-architecture-ia&quot;&gt;Information architecture (IA)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“the arrangement of content elements to facilitate human understanding” &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;information-design&quot;&gt;Information design&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“the presentation of information in a way that facilitates understanding”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;interface-design&quot;&gt;Interface design&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;how interface elements are arranged “to enable users to interact with the functionality of the system”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;navigation-design&quot;&gt;Navigation design&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“the set of screen elements that allow the user to move through the information architecture,” that serves as the interface for the information resource&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;user-testing&quot;&gt;User Testing&lt;/h3&gt;
 
 &lt;p&gt;Our web application can become our baby or our embarrassment, but however we see it, we will be unable to see it without knowing how it came to be, and the motivations that created it. We need other people to look at it.&lt;/p&gt;
