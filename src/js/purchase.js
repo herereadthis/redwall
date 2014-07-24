@@ -4,9 +4,6 @@ define(["credits","products"], function(credits,products) {
  
   return {
     purchaseProduct: function() {
-
-
- 
       var credit = credits.getCredits();
       if(credit > 0){
         products.reserveProduct();
