@@ -10,7 +10,7 @@
             "CodeFooter": "code_footer",
             "ImageExpander": "image_expander",
             // google analytics
-            "Analytics": "analytics",
+            "Analytics": "../components/greeneyes/src/js/analytics",
             // jQuery
             "jquery": '../components/jquery/dist/jquery.min',
             // dummy modules for testing
