@@ -21,14 +21,11 @@
     });
     require(['Retromator', 'CodeBlog', 'Analytics'], function(Retromator, CodeBlog, Analytics) {
         // if (Modernizr.touch === false) {
-        //       HeadMore.init();
         // }
+        // utilities on home page
         Retromator.init();
+        // utilities on coding blog
         CodeBlog.init();
-        // ColorTuner.init();
-        // SocialFu.init();
-        // CodeFooter.init();
-        // ImageExpander.init();
         return Analytics.track();
     });
 }).call(this);
