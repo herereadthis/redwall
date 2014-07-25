@@ -131,21 +131,21 @@ module.exports = function(grunt) {
         },
         xmlpoke: {
             updateLastModified: {
-                options: {
-                    replacements: [{
-                        xpath: '/urlset/url/lastmod',
-                        // value: 'foo'
-                        value: function newDate() {
-                            var today = new Date(), yyyy, mm, dd;
-                            yyyy = today.getFullYear();
-                            mm = today.getMonth() + 1;
-                            dd = today.getDate();
-                            if (mm < 10) {mm = '0' + mm;} 
-                            if (dd < 10) {dd = '0' + dd;}
-                            return yyyy + '-' + mm + '-' + dd;
-                        }
-                    }]
-                },
+                // options: {
+                //     replacements: [{
+                //         xpath: '/urlset/url/lastmod',
+                //         // value: 'foo'
+                //         value: function newDate() {
+                //             var today = new Date(), yyyy, mm, dd;
+                //             yyyy = today.getFullYear();
+                //             mm = today.getMonth() + 1;
+                //             dd = today.getDate();
+                //             if (mm < 10) {mm = '0' + mm;} 
+                //             if (dd < 10) {dd = '0' + dd;}
+                //             return yyyy + '-' + mm + '-' + dd;
+                //         }
+                //     }]
+                // },
                 files: {
                     '<%= paths.build %>/xml/sitemap.xml': '<%= paths.src %>/xml/sitemap.xml'
                 }

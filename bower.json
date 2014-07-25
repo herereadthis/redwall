@@ -20,7 +20,7 @@
     "tests"
   ],
   "dependencies": {
-    "bellmaker": "~0.3.3",
+    "bellmaker": "~0.3.4",
     "greeneyes": "~0.1.0",
     "mossflower": "~0.1.6",
     "requirejs": "~2.1.14",
