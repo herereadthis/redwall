@@ -52,6 +52,15 @@ $ brew doctor
 $ brew update
 {% endhighlight %}
 
+#### Install Ruby, an interpreted object-oriented scripting language
+
+{% highlight bash %}
+# Check to see if you already have Ruby
+$ ruby --version
+# Install Ruby if you don't have it
+$ brew install ruby
+{% endhighlight %}
+
 Once you have Homebrew, you can install pip, which is a tool for installing python packages.
 
 #### Install Python & Pip

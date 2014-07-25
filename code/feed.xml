@@ -1068,6 +1068,13 @@
 &lt;span class=&quot;c&quot;&gt;# Update if needed&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;h4 id=&quot;install-ruby-an-interpreted-object-oriented-scripting-language&quot;&gt;Install Ruby, an interpreted object-oriented scripting language&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Check to see if you already have Ruby&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ruby --version
+&lt;span class=&quot;c&quot;&gt;# Install Ruby if you don&amp;#39;t have it&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install ruby&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Once you have Homebrew, you can install pip, which is a tool for installing python packages.&lt;/p&gt;
 
 &lt;h4 id=&quot;install-python--pip&quot;&gt;Install Python &amp;amp; Pip&lt;/h4&gt;
