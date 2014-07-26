@@ -3,45 +3,6 @@
 }
 
 
-// Homepage stuff ------------------------------
-// ---------------------------------------------
-[data-header-panel] {
-    box-sizing: border-box;
-    margin-right: 1rem;
-
-    a {
-        display: block;
-        border: 0.2rem solid #00F;
-    }
-    img {
-        width: 100%;
-    }
-
-    @media @da_baseline {
-        display: none;
-    }
-    @media @da_x_small {
-        display: block;
-        float: left;
-        margin: 6rem 0 0 0;
-        width: ((2 / 12) * @pw_x_small);
-    }
-    @media @da_small {
-        margin: 5rem 0 0 1rem;
-        width: ((2 / 12) * @pw_small) - 1;
-    }
-    @media @da_medium {
-        margin-left: 0;
-        margin: 1rem 0 0 1rem;
-        width: ((2 / 12) * @pw_medium) - 2;
-    }
-    @media @da_large {
-        width: ((2 / 12) * @pw_large) - 2;
-    }
-    @media @da_x_large {
-        width: ((2 / 12) * @pw_x_large) - 2;
-    }
-}
 
 .before_text_1 {
     &:before {
