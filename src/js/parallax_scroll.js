@@ -26,7 +26,11 @@
     moduleName = "parallax_scroll";
 
     bgSettings = function($this) {
+        $banner = $('[role="banner"]');
+        $nextArticle = $banner.next();
 
+        bannerHeight = $banner.height();
+        console.log(bannerHeight);
     };
     makeItHappen = function($this) {
       return bgSettings($this);
