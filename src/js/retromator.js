@@ -10,6 +10,7 @@
 
     makeItHappen = function($this) {
         // purchase.purchaseProduct();
+        ParallaxScroll.init();
         SocialFu.init();
         ColorTuner.init();
     };
