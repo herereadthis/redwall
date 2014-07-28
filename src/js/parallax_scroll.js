@@ -31,6 +31,12 @@
 
         bannerHeight = $banner.height();
         console.log(bannerHeight);
+
+        var bgPosition, bgRepeat;
+
+        bgPosition = $this.css('background-position');
+        bgRepeat = $this.css('background-repeat');
+        console.log(bgPosition, bgRepeat);
     };
     makeItHappen = function($this) {
       return bgSettings($this);
