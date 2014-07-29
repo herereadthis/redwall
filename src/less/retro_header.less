@@ -19,11 +19,10 @@
     @media @da_x_small {
         display: block;
         float: left;
-        margin: 6rem 0 0 0;
+        margin: 0;
         width: ((2 / 12) * @pw_x_small);
     }
     @media @da_small {
-        margin: 5rem 0 0 1rem;
         width: ((2 / 12) * @pw_small) - 1;
     }
     @media @da_medium {
@@ -39,6 +38,61 @@
     }
 }
 
+
+
+
+
 #construction {
     height: 5rem;
+    background-color: rgba(255,0,0,0.50);
+
+    @media @da_baseline {
+    }
+    @media @da_x_small {
+        float: right;
+        width: @pw_x_small;
+    }
+    @media @da_small {
+        width: @pw_small;
+    }
+    @media @da_medium {
+        width: ((10 / 12) * @pw_medium);
+    }
+    @media @da_large {
+        width: ((10 / 12) * @pw_large);
+    }
+    @media @da_x_large {
+        width: ((10 / 12) * @pw_x_large);
+    }
 }
+
+
+[role="banner"] .popup_box_simulator {
+
+    @media @da_baseline {
+        float: none;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+    @media @da_x_small {
+        margin-bottom: 0;
+        margin-right: 0rem;
+        float: right;
+        width: ((10 / 12) * @pw_x_small) - 2;
+    }
+    @media @da_small {
+        margin-right: 1rem;
+        width: ((10 / 12) * @pw_small) - 2;
+    }
+    @media @da_medium {
+        width: ((10 / 12) * @pw_medium) - 2;
+    }
+    @media @da_large {
+        width: ((10 / 12) * @pw_large) - 2;
+    }
+    @media @da_x_large {
+        width: ((10 / 12) * @pw_x_large) - 2;
+    }
+}
+
+

@@ -26,11 +26,11 @@
     moduleName = "parallax_scroll";
 
     bgSettings = function($this) {
-        $banner = $('[role="banner"]');
-        $nextArticle = $banner.next();
+        // $banner = $('[role="banner"]');
+        // $nextArticle = $banner.next();
 
-        bannerHeight = $banner.height();
-        console.log(bannerHeight);
+        // bannerHeight = $banner.height();
+        // console.log(bannerHeight);
 
         var bgPosition, bgRepeat;
 
