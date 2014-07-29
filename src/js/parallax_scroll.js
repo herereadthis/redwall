@@ -34,7 +34,27 @@
 
         var bgPosition, bgRepeat;
 
-        bgPosition = $this.css('background-position');
+        bgPosition = $this.css('background-position').split(' ');
+        console.log(bgPosition.length);
+        // you can state background position as one value that doubles for x/y.
+        // if so, make both values equal.
+        if (bgPosition.length === 1) {
+            bgPosition[1] = bgPosition[0];
+        }
+        // it should grab top|center|etc as percentages, but we'll force it.
+        var _i, _len;
+
+        for (_i = 0; _i < 2; _i++) {
+            if (bgPosition[_i] === "center") {
+                bgPosition[_i] = '50%';
+            }
+            else if (bgPosition[_i] === "top" || bgPosition[_i] === "left") {
+                bgPosition[_i] = '0%';
+            }
+            else if (bgPosition[_i] === "bottom" || bgPosition[_i] === "right") {
+                bgPosition[_i] = '100%';
+            }
+        }
         bgRepeat = $this.css('background-repeat');
         console.log(bgPosition, bgRepeat);
     };
