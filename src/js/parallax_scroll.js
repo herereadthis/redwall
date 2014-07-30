@@ -19,7 +19,7 @@
 (function() {
 
   define(function(require) {
-    var $, exports, gVars , makeItHappen, moduleName, bgSettings, $window;
+    var $, exports, gVars , makeItHappen, moduleName, bgSettings, scroller, $window;
     $ = require("jquery");
     exports = {};
     $window = $(window);
@@ -27,7 +27,9 @@
 
     bgSettings = function($this) {
 
-        var bgPosition, bgRepeat, bgSize, bgImage;
+        var bgParam = {},
+            bgPosition, bgRepeat, bgSize, bgImage,
+            parallaxSpeed;
 
         // bgImage = $this.css('background-image');
         // bgSize = $this.css('background-size').split(' ');
@@ -58,12 +60,34 @@
                 }
             }
         }
+        // parallax Speed is a measure of percentage. 0=fixed, 100=scroll
+        parallaxSpeed = $this.data('parallax-speed') ? $this.data('parallax-speed') : 50;
 
+        bgParam = {
+            bgPosition: bgPosition,
+            parallaxSpeed: parallaxSpeed
+        }
 
-        console.log(bgPosition);
+        return bgParam;
+    };
+    scroller = function(bgParam, $this) {
+        var offsetCoords, topOffset;
+
+        offsetCoords = $this.offset(),
+        topOffset = offsetCoords.top;
+
+        $window.scroll(function() {
+            // If this section is in view
+            if ( ($window.scrollTop() + $window.height()) > (topOffset) &&
+                ( (topOffset + $this.height()) > $window.scrollTop() ) ) {
+
+                console.log('in view');
+            }
+        });
     };
     makeItHappen = function($this) {
-      return bgSettings($this);
+        var bgParam = bgSettings($this);
+        scroller(bgParam, $this);
     };
     exports.init = function($this) {
         var element;
