@@ -5,8 +5,7 @@
             'Retromator': 'retromator',
             "ColorTuner": "color_tuner",
             "SocialFu": "social_fu",
-            "ParallaxScroll": "parallax_scroll",
-            // "ParallaxScroll": "../components/greeneyes/src/js/parallax_scroll",
+            "ParallaxScroll": "../components/greeneyes/src/js/parallax_scroll",
             // coding blog
             'CodeBlog': 'code_blog',
             "CodeFooter": "code_footer",
