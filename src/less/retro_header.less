@@ -44,7 +44,7 @@
 
 #construction {
     height: 5rem;
-    background-color: rgba(255,0,0,0.50);
+    background: transparent url("@{img_path}under_construction_572x44.gif") scroll no-repeat 50% 0.3rem;
 
     @media @da_baseline {
     }
@@ -57,12 +57,15 @@
     }
     @media @da_medium {
         width: ((10 / 12) * @pw_medium);
+        background-position: 3.4rem 0.3rem;
     }
     @media @da_large {
         width: ((10 / 12) * @pw_large);
+        background-position: 9.8rem 0.3rem;
     }
     @media @da_x_large {
         width: ((10 / 12) * @pw_x_large);
+        background-position: 16.2rem 0.3rem;
     }
 }
 

@@ -26,23 +26,21 @@
     moduleName = "parallax_scroll";
 
     bgSettings = function($this) {
-        // $banner = $('[role="banner"]');
-        // $nextArticle = $banner.next();
 
-        // bannerHeight = $banner.height();
-        // console.log(bannerHeight);
+        var bgPosition, bgRepeat, bgSize, bgImage;
 
-        var bgPosition, bgRepeat;
+        // bgImage = $this.css('background-image');
+        // bgSize = $this.css('background-size').split(' ');
+        // bgRepeat = $this.css('background-repeat');
 
         bgPosition = $this.css('background-position').split(' ');
-        console.log(bgPosition.length);
         // you can state background position as one value that doubles for x/y.
         // if so, make both values equal.
         if (bgPosition.length === 1) {
             bgPosition[1] = bgPosition[0];
         }
         // it should grab top|center|etc as percentages, but we'll force it.
-        var _i, _len;
+        var _i, _j;
 
         for (_i = 0; _i < 2; _i++) {
             if (bgPosition[_i] === "center") {
@@ -54,9 +52,15 @@
             else if (bgPosition[_i] === "bottom" || bgPosition[_i] === "right") {
                 bgPosition[_i] = '100%';
             }
+            if ( /%/.test(bgPosition[_i]) ) {
+                if (parseInt(bgPosition[_i], 10) === 0) {
+                    bgPosition[_i] = 0;
+                }
+            }
         }
-        bgRepeat = $this.css('background-repeat');
-        console.log(bgPosition, bgRepeat);
+
+
+        console.log(bgPosition);
     };
     makeItHappen = function($this) {
       return bgSettings($this);
