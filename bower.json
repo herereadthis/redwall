@@ -21,7 +21,7 @@
   ],
   "dependencies": {
     "bellmaker": "~0.3.4",
-    "greeneyes": "~0.1.1",
+    "greeneyes": "~0.1.2",
     "mossflower": "~0.1.6",
     "requirejs": "~2.1.14",
     "sunflash": "~0.1.5",
