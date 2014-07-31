@@ -242,6 +242,21 @@ The key<span class="err">&#39;</span>s randomart image is:
 
 <hr />
 
+<h3 id="productivity-shortcuts">Productivity Shortcuts</h3>
+
+<h4 id="add-bash-aliases">Add Bash Aliases</h4>
+
+<p>Locate a file at <code>~/.bash_profile</code> and add the following lines. Basically each “alias” is a shortcut for writing much longer commands. For example, with the following alias, you can just type <code>cfr</code> to fetch and reset the master branch of your repository.</p>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># go up one directory level</span>
+<span class="nb">alias</span> ..<span class="o">=</span><span class="s1">&#39;cd ../&#39;</span> 
+<span class="c"># go up two directory levels</span>
+<span class="nb">alias</span> ..<span class="o">=</span><span class="s1">&#39;cd ../&#39;</span> 
+<span class="c"># make sure you git branch is up-to-date</span>
+<span class="nb">alias </span><span class="nv">cfr</span><span class="o">=</span><span class="s1">&#39;git checkout master;git fetch --all;git reset --hard origin/master&#39;</span></code></pre></div>
+
+<hr />
+
 <h3 id="more-to-come">More to Come:</h3>
 
 <ul>

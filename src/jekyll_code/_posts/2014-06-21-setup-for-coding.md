@@ -183,6 +183,23 @@ $ sudo npm install generator-jekyllrb -g
 
 -------------
 
+### Productivity Shortcuts
+
+#### Add Bash Aliases
+
+Locate a file at {% raw %}<code>~/.bash_profile</code>{% endraw %} and add the following lines. Basically each "alias" is a shortcut for writing much longer commands. For example, with the following alias, you can just type {% raw %}<code>cfr</code>{% endraw %} to fetch and reset the master branch of your repository.
+
+{% highlight bash %}
+# go up one directory level
+alias ..='cd ../' 
+# go up two directory levels
+alias ..='cd ../' 
+# make sure you git branch is up-to-date
+alias cfr='git checkout master;git fetch --all;git reset --hard origin/master'
+{% endhighlight %}
+
+-------------
+
 ### More to Come:
 
 * Ruby, Ruby gems, applications (Sublime, VirtualBox), browser settings
