@@ -80,6 +80,9 @@ $ python get-pip.py
 $ pip install virtualenv
 # Install Fabric, a command line tool for streamlining tasks and SSH
 $ pip install Fabric
+# Install Grip: "GitHub Readme Instant Preview"
+$ pip install grip
+# then to preview a file, run $ grip FILENAME.md
 {% endhighlight %}
 
 -------------

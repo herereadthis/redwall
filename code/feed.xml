@@ -1090,7 +1090,10 @@
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Install virtualenv, used for creating isolated Python environments&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install virtualenv
 &lt;span class=&quot;c&quot;&gt;# Install Fabric, a command line tool for streamlining tasks and SSH&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install Fabric&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install Fabric
+&lt;span class=&quot;c&quot;&gt;# Install Grip: &amp;quot;GitHub Readme Instant Preview&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install grip
+&lt;span class=&quot;c&quot;&gt;# then to preview a file, run $ grip FILENAME.md&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
