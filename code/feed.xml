@@ -1182,6 +1182,15 @@ The key&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s randomart image
 
 &lt;h3 id=&quot;productivity-shortcuts&quot;&gt;Productivity Shortcuts&lt;/h3&gt;
 
+&lt;h4 id=&quot;useful-terminal-commands&quot;&gt;Useful Terminal commands&lt;/h4&gt;
+
+&lt;p&gt;Below are lesser-known terminal commands that are good to know&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Display disc usage information (-h means &amp;quot;human readable&amp;quot;)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;df -h
+&lt;span class=&quot;c&quot;&gt;# Display a summary of your current directory (-s means &amp;quot;summary&amp;quot;)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;du -sh *&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h4 id=&quot;add-bash-aliases&quot;&gt;Add Bash Aliases&lt;/h4&gt;
 
 &lt;p&gt;Locate a file at &lt;code&gt;~/.bash_profile&lt;/code&gt; and add the following lines. Basically each “alias” is a shortcut for writing much longer commands. For example, with the following alias, you can just type &lt;code&gt;cfr&lt;/code&gt; to fetch and reset the master branch of your repository.&lt;/p&gt;
@@ -1189,9 +1198,20 @@ The key&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s randomart image
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# go up one directory level&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt; ..&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;cd ../&amp;#39;&lt;/span&gt; 
 &lt;span class=&quot;c&quot;&gt;# go up two directory levels&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt; ..&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;cd ../&amp;#39;&lt;/span&gt; 
+&lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt; ...&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;cd ../../&amp;#39;&lt;/span&gt; 
+&lt;span class=&quot;c&quot;&gt;# go to Desktop&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;desk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;cd ~/Desktop/&amp;#39;&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# make sure you git branch is up-to-date&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cfr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;git checkout master;git fetch --all;git reset --hard origin/master&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cfr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;git checkout master;git fetch --all;git reset --hard origin/master&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# if you keep all your repos in one spot, get to by typing &amp;quot;repo REPO_NAME&amp;quot;&lt;/span&gt;
+repo&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;MY_GITHUB_FOLDER_PATH/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# create a directory and move into that directory: &amp;quot;mcd DIRECTORY_NAME&amp;quot;&lt;/span&gt;
+mcd&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	mkdir -p &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 

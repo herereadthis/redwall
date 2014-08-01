@@ -244,6 +244,15 @@ The key<span class="err">&#39;</span>s randomart image is:
 
 <h3 id="productivity-shortcuts">Productivity Shortcuts</h3>
 
+<h4 id="useful-terminal-commands">Useful Terminal commands</h4>
+
+<p>Below are lesser-known terminal commands that are good to know</p>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># Display disc usage information (-h means &quot;human readable&quot;)</span>
+<span class="nv">$ </span>df -h
+<span class="c"># Display a summary of your current directory (-s means &quot;summary&quot;)</span>
+<span class="nv">$ </span>du -sh *</code></pre></div>
+
 <h4 id="add-bash-aliases">Add Bash Aliases</h4>
 
 <p>Locate a file at <code>~/.bash_profile</code> and add the following lines. Basically each “alias” is a shortcut for writing much longer commands. For example, with the following alias, you can just type <code>cfr</code> to fetch and reset the master branch of your repository.</p>
@@ -251,9 +260,20 @@ The key<span class="err">&#39;</span>s randomart image is:
 <div class="highlight"><pre><code class="bash"><span class="c"># go up one directory level</span>
 <span class="nb">alias</span> ..<span class="o">=</span><span class="s1">&#39;cd ../&#39;</span> 
 <span class="c"># go up two directory levels</span>
-<span class="nb">alias</span> ..<span class="o">=</span><span class="s1">&#39;cd ../&#39;</span> 
+<span class="nb">alias</span> ...<span class="o">=</span><span class="s1">&#39;cd ../../&#39;</span> 
+<span class="c"># go to Desktop</span>
+<span class="nb">alias </span><span class="nv">desk</span><span class="o">=</span><span class="s1">&#39;cd ~/Desktop/&#39;</span>
 <span class="c"># make sure you git branch is up-to-date</span>
-<span class="nb">alias </span><span class="nv">cfr</span><span class="o">=</span><span class="s1">&#39;git checkout master;git fetch --all;git reset --hard origin/master&#39;</span></code></pre></div>
+<span class="nb">alias </span><span class="nv">cfr</span><span class="o">=</span><span class="s1">&#39;git checkout master;git fetch --all;git reset --hard origin/master&#39;</span>
+<span class="c"># if you keep all your repos in one spot, get to by typing &quot;repo REPO_NAME&quot;</span>
+repo<span class="o">()</span> <span class="o">{</span>
+	<span class="nb">cd </span>MY_GITHUB_FOLDER_PATH/<span class="nv">$1</span>
+<span class="o">}</span>
+<span class="c"># create a directory and move into that directory: &quot;mcd DIRECTORY_NAME&quot;</span>
+mcd<span class="o">()</span> <span class="o">{</span>
+	mkdir -p <span class="nv">$1</span>
+	<span class="nb">cd</span> <span class="nv">$1</span>
+<span class="o">}</span></code></pre></div>
 
 <hr />
 

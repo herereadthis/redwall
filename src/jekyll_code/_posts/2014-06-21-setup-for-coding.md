@@ -185,6 +185,17 @@ $ sudo npm install generator-jekyllrb -g
 
 ### Productivity Shortcuts
 
+#### Useful Terminal commands
+
+Below are lesser-known terminal commands that are good to know
+
+{% highlight bash %}
+# Display disc usage information (-h means "human readable")
+$ df -h
+# Display a summary of your current directory (-s means "summary")
+$ du -sh *
+{% endhighlight %}
+
 #### Add Bash Aliases
 
 Locate a file at {% raw %}<code>~/.bash_profile</code>{% endraw %} and add the following lines. Basically each "alias" is a shortcut for writing much longer commands. For example, with the following alias, you can just type {% raw %}<code>cfr</code>{% endraw %} to fetch and reset the master branch of your repository.
@@ -193,9 +204,20 @@ Locate a file at {% raw %}<code>~/.bash_profile</code>{% endraw %} and add the f
 # go up one directory level
 alias ..='cd ../' 
 # go up two directory levels
-alias ..='cd ../' 
+alias ...='cd ../../' 
+# go to Desktop
+alias desk='cd ~/Desktop/'
 # make sure you git branch is up-to-date
 alias cfr='git checkout master;git fetch --all;git reset --hard origin/master'
+# if you keep all your repos in one spot, get to by typing "repo REPO_NAME"
+repo() {
+	cd MY_GITHUB_FOLDER_PATH/$1
+}
+# create a directory and move into that directory: "mcd DIRECTORY_NAME"
+mcd() {
+	mkdir -p $1
+	cd $1
+}
 {% endhighlight %}
 
 -------------
