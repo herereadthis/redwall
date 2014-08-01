@@ -96,10 +96,6 @@ The goal of building user profiles is not necessarily to determine "who" the use
 
 {% raw %}
 <style>
-/*.arrow_swing {
-  font-size: 2rem;
-  text-align: center;
-}*/
 .arrow_swing td:first-child {
   text-align: right;
 }

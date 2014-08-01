@@ -118,10 +118,6 @@
 &lt;h4 id=&quot;user-dimensions&quot;&gt;User Dimensions&lt;/h4&gt;
 
 &lt;style&gt;
-/*.arrow_swing {
-  font-size: 2rem;
-  text-align: center;
-}*/
 .arrow_swing td:first-child {
   text-align: right;
 }
