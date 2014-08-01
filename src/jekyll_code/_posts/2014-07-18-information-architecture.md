@@ -91,6 +91,53 @@ The goal of building user profiles is not necessarily to determine "who" the use
 
 #### Why would anyone want to come to this site?
 
+
+#### User Dimensions
+
+{% raw %}
+<style>
+/*.arrow_swing {
+  font-size: 2rem;
+  text-align: center;
+}*/
+.arrow_swing td:first-child {
+  text-align: right;
+}
+.arrow_swing td:nth-child(2) {
+  font-size: 2rem;
+  text-align: center;
+}
+.arrow_swing td:last-child {
+}
+</style>
+<!--&#8592;&#8594;-->
+<table class="arrow_swing">
+    <tbody>
+        <tr>
+            <td>Leisurely</td>
+            <td class="arrow_swing">&#8644;</td>
+            <td>Competitive athlete</td>
+        </tr>
+        <tr>
+            <td>Child/ youth</td>
+            <td class="arrow_swing">&#8644;</td>
+            <td>Adult</td>
+        </tr>
+        <tr>
+            <td>Budget-concerned</td>
+            <td class="arrow_swing">&#8644;</td>
+            <td>Professional usage</td>
+        </tr>
+        <tr>
+            <td>Style &amp; comfort</td>
+            <td class="arrow_swing">&#8644;</td>
+            <td>Safety-oriented</td>
+        </tr>
+    </tbody>
+</table>
+{% endraw %}
+
+
 ----------------
 
 ### More to come...

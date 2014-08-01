@@ -115,6 +115,50 @@
 
 &lt;h4 id=&quot;why-would-anyone-want-to-come-to-this-site&quot;&gt;Why would anyone want to come to this site?&lt;/h4&gt;
 
+&lt;h4 id=&quot;user-dimensions&quot;&gt;User Dimensions&lt;/h4&gt;
+
+&lt;style&gt;
+/*.arrow_swing {
+  font-size: 2rem;
+  text-align: center;
+}*/
+.arrow_swing td:first-child {
+  text-align: right;
+}
+.arrow_swing td:nth-child(2) {
+  font-size: 2rem;
+  text-align: center;
+}
+.arrow_swing td:last-child {
+}
+&lt;/style&gt;
+
+&lt;!--&amp;#8592;&amp;#8594;--&gt;
+&lt;table class=&quot;arrow_swing&quot;&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Leisurely&lt;/td&gt;
+            &lt;td class=&quot;arrow_swing&quot;&gt;&amp;#8644;&lt;/td&gt;
+            &lt;td&gt;Competitive athlete&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Child/ youth&lt;/td&gt;
+            &lt;td class=&quot;arrow_swing&quot;&gt;&amp;#8644;&lt;/td&gt;
+            &lt;td&gt;Adult&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Budget-concerned&lt;/td&gt;
+            &lt;td class=&quot;arrow_swing&quot;&gt;&amp;#8644;&lt;/td&gt;
+            &lt;td&gt;Professional usage&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Style &amp;amp; comfort&lt;/td&gt;
+            &lt;td class=&quot;arrow_swing&quot;&gt;&amp;#8644;&lt;/td&gt;
+            &lt;td&gt;Safety-oriented&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;more-to-come&quot;&gt;More to come…&lt;/h3&gt;
