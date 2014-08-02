@@ -1,6 +1,6 @@
 ---
 layout:         post
-title:          "Greeneyes, a RequireJS module library"
+title:          "<em>Greeneyes</em>, a RequireJS module library"
 created:        2014-08-01
 modified:       2014-08-01
 permalink:      greeneyes-requirejs/

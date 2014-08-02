@@ -1,6 +1,6 @@
 ---
 layout:     	post
-title:      	"Mossflower, a CSS global reset"
+title:      	"<em>Mossflower</em>, a CSS global reset"
 created:       	2014-06-20
 modified:		2014-06-23
 permalink:  	mossflower/
