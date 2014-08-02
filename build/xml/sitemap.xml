@@ -62,6 +62,12 @@
 		<priority>0.6</priority>
 	</url>
 	<url>
+		<loc>http://herereadthis.com/code/greeneyes-requirejs/</loc>
+		<lastmod>2014-08-01</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
 		<loc>http://herereadthis.com/build/xml/foaf.rdf</loc>
 		<lastmod>2014-08-01</lastmod>
 		<changefreq>monthly</changefreq>

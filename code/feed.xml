@@ -196,11 +196,15 @@
 
 &lt;h3 id=&quot;dropdown-menu-navigation&quot;&gt;Dropdown menu navigation&lt;/h3&gt;
 
+&lt;p&gt;This module will create a nested menu where the child elements will be hidden by default and are toggled into view by clicking on the parent items.&lt;/p&gt;
+
 &lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/4&quot;&gt;GitHub issue #4&lt;/a&gt;)&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;content-tab-widget&quot;&gt;Content tab widget&lt;/h3&gt;
+
+&lt;p&gt;This module creates a box with a list of tabs at the top that will switch out the content below.&lt;/p&gt;
 
 &lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/3&quot;&gt;GitHub issue #3&lt;/a&gt;)&lt;/p&gt;
 
@@ -208,11 +212,15 @@
 
 &lt;h3 id=&quot;collapsible-accordion-content&quot;&gt;Collapsible accordion content&lt;/h3&gt;
 
+&lt;p&gt;This module will create a menu listing such that pressing any of the list items will expand to show more content. This module is useful for compressing a lot of content to only show what the user wants to read.&lt;/p&gt;
+
 &lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/1&quot;&gt;GitHub issue #1&lt;/a&gt;)&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;tooltips-and-popovers&quot;&gt;Tooltips and popovers&lt;/h3&gt;
+
+&lt;p&gt;This module will create tiny modals that will appear adjacent to the item on which you click. It is useful for displaying help text.&lt;/p&gt;
 
 &lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/2&quot;&gt;GitHub issue #2&lt;/a&gt;)&lt;/p&gt;
 

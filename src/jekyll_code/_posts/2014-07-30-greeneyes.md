@@ -222,11 +222,15 @@ You will have to define your background image yourself in your CSS. The parallax
 
 ### Dropdown menu navigation
 
+This module will create a nested menu where the child elements will be hidden by default and are toggled into view by clicking on the parent items.
+
 Coming soon ([GitHub issue #4](https://github.com/herereadthis/greeneyes/issues/4))
 
 ----------------
 
 ### Content tab widget
+
+This module creates a box with a list of tabs at the top that will switch out the content below.
 
 Coming soon ([GitHub issue #3](https://github.com/herereadthis/greeneyes/issues/3))
 
@@ -234,11 +238,15 @@ Coming soon ([GitHub issue #3](https://github.com/herereadthis/greeneyes/issues/
 
 ### Collapsible accordion content
 
+This module will create a menu listing such that pressing any of the list items will expand to show more content. This module is useful for compressing a lot of content to only show what the user wants to read.
+
 Coming soon ([GitHub issue #1](https://github.com/herereadthis/greeneyes/issues/1))
 
 ----------------
 
 ### Tooltips and popovers
+
+This module will create tiny modals that will appear adjacent to the item on which you click. It is useful for displaying help text.
 
 Coming soon ([GitHub issue #2](https://github.com/herereadthis/greeneyes/issues/2))
 
