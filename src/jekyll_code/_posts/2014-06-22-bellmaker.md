@@ -36,6 +36,7 @@ The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** 
 $ git clone https://github.com/herereadthis/bellmaker.git
 $ cd bellmaker/
 $ npm install
+$ bower install
 $ grunt
 {% endhighlight %}
 

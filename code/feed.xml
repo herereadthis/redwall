@@ -7,6 +7,103 @@
     <atom:link href="http://herereadthis.com/code/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Greeneyes, a RequireJS module library</title>
+        <description>&lt;p&gt;Greeneyes is collection of useful JavaScript utilities and widgets (and accompanying CSS) written in AMD format to be used with RequireJS.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The library includes tools that most websites will use, which will help your website get up and running.&lt;/li&gt;
+  &lt;li&gt;It is &lt;a href=&quot;https://github.com/herereadthis/greeneyes&quot;&gt;available on Github&lt;/a&gt; to use and modify as you please.&lt;/li&gt;
+  &lt;li&gt;Its organization is very &lt;strong&gt;modular and scalable&lt;/strong&gt; - only take an use what you need.
+&lt;!--more--&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul id=&quot;github_badges&quot; class=&quot;sunflash_navmenu&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;http://badge.fury.io/bo/greeneyes&quot;&gt;
+            &lt;img alt=&quot;Bower version&quot; src=&quot;https://badge.fury.io/bo/greeneyes.svg&quot; /&gt;
+        &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://travis-ci.org/herereadthis/greeneyes&quot;&gt;
+            &lt;img alt=&quot;Build Status&quot; src=&quot;https://secure.travis-ci.org/herereadthis/greeneyes.svg?branch=master&quot; /&gt;
+        &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://david-dm.org/herereadthis/greeneyes#info=devDependencies&quot;&gt;
+            &lt;img alt=&quot;Bower version&quot; src=&quot;https://david-dm.org/herereadthis/greeneyes/dev-status.svg&quot; /&gt;
+        &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;greeneyes-module-listing&quot;&gt;Greeneyes module listing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Analytics&lt;/strong&gt; - doubles as the Google Analytics plugin&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Parallax Scroll&lt;/strong&gt; - makes background images scroll at relative speeds&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dropdown Menu&lt;/strong&gt; - toggle for hiding/showing dropdown menus&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Clone the repo&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/herereadthis/greeneyes.git
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;greeneyes/
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;grunt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;greeneyes-setup&quot;&gt;Greeneyes Setup&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;You will need RequireJS,&lt;/strong&gt; which is JavaScript file and module loader. This article assumes you already know the basics. I recommend installing RequireJS as a bower dependency.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Get Greeneyes&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install greeneyes --save
+&lt;span class=&quot;c&quot;&gt;# Get RequireJS&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install requirejs --save&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;One of the goals in creating Greeneeys was modularity, in order to prevent unecessary bloat. Unlike many other frameworks out there, you only to add paths to the modules you need. &lt;/p&gt;
+
+&lt;h4 id=&quot;repomainjs&quot;&gt;repo/main.js&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;requirejs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Only add the ones you need, e.g., &lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&amp;quot;Analytics&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[BOWER_PATH]/greeneyes/src/js/analytics&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&amp;quot;DropdownMenu&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[BOWER_PATH]/greeneyes/src/js/dropdown_menu&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then use Grunt to compile your JS. Your page will only call one JavaScript file instead of having to pull in a million separate files.&lt;/p&gt;
+
+&lt;h4 id=&quot;repogruntfilejs&quot;&gt;repo/Gruntfile.js&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;requirejs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;baseUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;%= paths.src %&amp;gt;/js/&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;mainConfigFile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;%= paths.src %&amp;gt;/js/main.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;main&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;%= paths.build %&amp;gt;/js/main.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;optimize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;uglify2&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;html-configuration&quot;&gt;HTML Configuration&lt;/h3&gt;
+
+&lt;p&gt;Greeneyes was created such that you will not have to pollute your HTML with a bunch of javascript commands. It will use a data attribute &lt;code&gt;[data-module=&quot;&quot;]&lt;/code&gt; to sniff for the correct module to apply. For example, here is how to apply the parallax scroll module to a section:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-module=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;parallax_scroll&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Some modules have user-defined-variables that allow you to modify what happens. (Don’t worry, a complete listing of parameters will be given below.) The parallax scroller has an additional data attribute to determine relative speed. Here is how to make backgrounds scroll in reverse order to page scroll:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-module=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;parallax_scroll&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-parallax-speed=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-50&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+</description>
+        <pubDate>Wed, 30 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://herereadthis.com/code/greeneyes-requirejs/</link>
+        <guid isPermaLink="true">http://herereadthis.com/code/greeneyes-requirejs/</guid>
+      </item>
+    
+      <item>
         <title>Create information architecture (IA) for your web application (Part 1)</title>
         <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;We shall define Information Architecture (IA) as the high-level, structured organization of the site.&lt;/em&gt;&lt;/strong&gt; On a deeper level, IA will concern itself with:&lt;/p&gt;
 
@@ -751,6 +848,7 @@
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/herereadthis/bellmaker.git
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;bellmaker/
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm install
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bower install
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;grunt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;view-the-demo&quot;&gt;View the Demo&lt;/h3&gt;
