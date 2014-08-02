@@ -1,8 +1,8 @@
 ---
 layout:         post
 title:          "Greeneyes, a RequireJS module library"
-created:        2014-07-30
-modified:       2014-07-30
+created:        2014-08-01
+modified:       2014-08-01
 permalink:      greeneyes-requirejs/
 description:    "Greeneyes is collection of useful JavaScript utilities and widgets (and accompanying CSS) written in AMD format to be used with RequireJS"
 tags:           RequireJS, AMD, Javascript
@@ -179,6 +179,10 @@ This module does require you to import the parallax scrolling CSS file.
 {% highlight css %}
 /* import LESS version */
 @import "[BOWER_PATH]/greeneyes/src/less/parallax_scroll.less";
+/* Or the SASS version */
+@import "[BOWER_PATH]/greeneyes/src/sass/parallax_scroll.scss";
+/* Or just straight CSS */
+@import "[BOWER_PATH]/greeneyes/src/css/parallax_scroll.css";
 {% endhighlight %}
 
 {% raw %}
