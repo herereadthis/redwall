@@ -7,7 +7,7 @@
     <atom:link href="http://herereadthis.com/code/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>&lt;em&gt;Greeneyes&lt;/em&gt;, a RequireJS module library</title>
+        <title>Greeneyes, a RequireJS module library</title>
         <description>&lt;p&gt;Greeneyes is collection of useful JavaScript utilities and widgets (and accompanying CSS) written in AMD format to be used with RequireJS.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -135,9 +135,12 @@
 &lt;style&gt;
 .starfield {
     background-image: url(&quot;/build/images/css/space_bg.gif&quot;);
+    background-position: 0 0;
+    background-attachment: fixed;
 }
 .nested_code {
-	margin-bottom: 2rem;
+	margin: 2rem 0;
+    height: 35rem;
 }
 .nested_code .highlight {
 	float: left;
@@ -147,7 +150,7 @@
 }
 &lt;/style&gt;
 
-&lt;div class=&quot;starfield nested_code&quot; data-module=&quot;parallax_scroll&quot; style=&quot;height: 23.4rem;&quot;&gt;
+&lt;div class=&quot;starfield nested_code&quot; data-module=&quot;parallax_scroll&quot;&gt;
 
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Default is 50% --&amp;gt;&lt;/span&gt;
@@ -165,7 +168,7 @@
 &lt;span class=&quot;c&quot;&gt;/* Or just straight CSS */&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[BOWER_PATH]/greeneyes/src/css/parallax_scroll.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class=&quot;starfield nested_code&quot; data-module=&quot;parallax_scroll&quot; data-parallax-speed=&quot;150&quot; style=&quot;height: 23.4rem;margin-top: 2rem;&quot;&gt;
+&lt;div class=&quot;starfield nested_code&quot; data-module=&quot;parallax_scroll&quot; data-parallax-speed=&quot;150&quot;&gt;
 
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 150% speed --&amp;gt;&lt;/span&gt;
@@ -182,7 +185,7 @@
 &lt;span class=&quot;c&quot;&gt;/* This is not okay */&lt;/span&gt;
 &lt;span class=&quot;nc&quot;&gt;.parallax_background&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;background-position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;div class=&quot;starfield nested_code&quot; data-module=&quot;parallax_scroll&quot; data-parallax-speed=&quot;-50&quot; style=&quot;height: 23.4rem;margin-top: 2rem;&quot;&gt;
+&lt;div class=&quot;starfield nested_code&quot; data-module=&quot;parallax_scroll&quot; data-parallax-speed=&quot;-50&quot;&gt;
 
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- -50% = reverse scroll --&amp;gt;&lt;/span&gt;
@@ -952,7 +955,7 @@
       </item>
     
       <item>
-        <title>&lt;em&gt;Bellmaker&lt;/em&gt;, a media query package</title>
+        <title>Bellmaker, a respoonsive media query package</title>
         <description>&lt;p&gt;The Bellmaker is a library of &lt;strong&gt;&lt;em&gt;device-agnostic&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;and&lt;/em&gt; &lt;strong&gt;&lt;em&gt;device-specific&lt;/em&gt;&lt;/strong&gt; media queries that will complement your exisiting CSS. &lt;/p&gt;
 
 &lt;ul&gt;
@@ -1501,7 +1504,7 @@ mcd&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&
       </item>
     
       <item>
-        <title>&lt;em&gt;Mossflower&lt;/em&gt;, a CSS global reset</title>
+        <title>Mossflower, a CSS global reset</title>
         <description>&lt;p&gt;Mossflower is a &lt;strong&gt;global reset&lt;/strong&gt; CSS utility for both LESS and SASS.&lt;/p&gt;
 
 &lt;ul&gt;

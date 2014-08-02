@@ -9,7 +9,7 @@ tags:           coding
 	<h2>Articles</h2>
     {% sorted_for post in site.posts reversed sort_by:modified %}
     <section>
-        <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <h2><a href="{{ post.url | prepend: site.baseurl }}">{% if post.repo_title %}{{ post.repo_title }}{% else %}{{ post.title }}{% endif %}</a></h2>
         {{ post.excerpt }}
         <p><a href="{{ post.url | prepend: site.baseurl }}">Continue Reading &raquo;</a></p>
 	    <hr />

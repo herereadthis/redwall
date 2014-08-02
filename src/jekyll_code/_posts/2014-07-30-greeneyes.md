@@ -1,6 +1,7 @@
 ---
 layout:         post
-title:          "<em>Greeneyes</em>, a RequireJS module library"
+title:          "Greeneyes, a RequireJS module library"
+repo_title:     "<em>Greeneyes</em>, a RequireJS module library"
 created:        2014-08-01
 modified:       2014-08-01
 permalink:      greeneyes-requirejs/
@@ -150,9 +151,12 @@ This module makes the container&rsquo;s background scroll at different rates ver
 <style>
 .starfield {
     background-image: url("/build/images/css/space_bg.gif");
+    background-position: 0 0;
+    background-attachment: fixed;
 }
 .nested_code {
-	margin-bottom: 2rem;
+	margin: 2rem 0;
+    height: 35rem;
 }
 .nested_code .highlight {
 	float: left;
@@ -164,7 +168,7 @@ This module makes the container&rsquo;s background scroll at different rates ver
 {% endraw %}
 
 {% raw %}
-<div class="starfield nested_code" data-module="parallax_scroll" style="height: 23.4rem;">
+<div class="starfield nested_code" data-module="parallax_scroll">
 {% endraw %}
 {% highlight html %}
 <!-- Default is 50% -->
@@ -186,7 +190,7 @@ This module does require you to import the parallax scrolling CSS file.
 {% endhighlight %}
 
 {% raw %}
-<div class="starfield nested_code" data-module="parallax_scroll" data-parallax-speed="150" style="height: 23.4rem;margin-top: 2rem;">
+<div class="starfield nested_code" data-module="parallax_scroll" data-parallax-speed="150">
 {% endraw %}
 {% highlight html %}
 <!-- 150% speed -->
@@ -207,7 +211,7 @@ You will have to define your background image yourself in your CSS. The parallax
 {% endhighlight %}
 
 {% raw %}
-<div class="starfield nested_code" data-module="parallax_scroll" data-parallax-speed="-50" style="height: 23.4rem;margin-top: 2rem;">
+<div class="starfield nested_code" data-module="parallax_scroll" data-parallax-speed="-50">
 {% endraw %}
 {% highlight html %}
 <!-- -50% = reverse scroll -->

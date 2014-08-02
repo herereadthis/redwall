@@ -1,6 +1,7 @@
 ---
 layout:         post
-title:          "<em>Bellmaker</em>, a media query package"
+title:          "Bellmaker, a respoonsive media query package"
+repo_title:     "<em>Bellmaker</em>, a responsive media query package"
 created:        2014-06-16
 modified:       2014-07-11
 permalink:      bellmaker/

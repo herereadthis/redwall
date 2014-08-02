@@ -9,7 +9,7 @@ layout: default
 
 <article role="main">
     <div class="content_container">
-        <h2>{{ page.title }}</h2>
+        <h2>{% if page.repo_title %}{{ page.repo_title }}{% else %}{{ page.title }}{% endif %}</h2>
 {{ content }}
         <footer>
             <p><em><time property="dc:created" datetime="{{ page.created | date: "%Y-%m-%d" }}">{{ page.created | date: "%-d %B %Y" }}</time></em><br />
