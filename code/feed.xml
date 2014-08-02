@@ -33,8 +33,11 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Analytics&lt;/strong&gt; - doubles as the Google Analytics plugin&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Parallax Scroll&lt;/strong&gt; - makes background images scroll at relative speeds&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Dropdown Menu&lt;/strong&gt; - toggle for hiding/showing dropdown menus&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Parallax scroll&lt;/strong&gt; - makes background images scroll at relative speeds&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dropdown menu&lt;/strong&gt; - toggle for hiding/showing dropdown menus (coming later)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Content tabs&lt;/strong&gt; - hide/show blocks of content based on menu buttons (coming later)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Accordion content&lt;/strong&gt; - Collapsible, stacked content (coming later)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Popover/ tooltips&lt;/strong&gt; - Collapsible, stacked content (coming later)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
@@ -88,7 +91,7 @@
 
 &lt;h3 id=&quot;html-configuration&quot;&gt;HTML Configuration&lt;/h3&gt;
 
-&lt;p&gt;Greeneyes was created such that you will not have to pollute your HTML with a bunch of javascript commands. It will use a data attribute &lt;code&gt;[data-module=&quot;&quot;]&lt;/code&gt; to sniff for the correct module to apply. For example, here is how to apply the parallax scroll module to a section:&lt;/p&gt;
+&lt;p&gt;Greeneyes was created such that you will not have to pollute your HTML with a bunch of javascript commands. Most modules will use a data attribute &lt;code&gt;[data-module=&quot;&quot;]&lt;/code&gt; to sniff for the correct module to apply. For example, here is how to apply the parallax scroll module to a section:&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-module=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;parallax_scroll&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -97,6 +100,123 @@
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;section&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-module=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;parallax_scroll&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-parallax-speed=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-50&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
+
+&lt;h3 id=&quot;google-analytics&quot;&gt;Google Analytics&lt;/h3&gt;
+
+&lt;p&gt;This module replaces the standard Google analytics plugin &lt;strong&gt;(&lt;a href=&quot;https://github.com/herereadthis/redwall/graphs/punch-card&quot;&gt;view on GitHub&lt;/a&gt;)&lt;/strong&gt;. The main advantage here is that you will get to remove inline JavaScript on your page. &lt;em&gt;Note: Unlike the other Greeneyes modules, this one does not need a&lt;/em&gt; &lt;code&gt;[data-module=&quot;&quot;]&lt;/code&gt; &lt;em&gt;attribute.&lt;/em&gt; &lt;/p&gt;
+
+&lt;h4 id=&quot;get-the-module&quot;&gt;Get the module&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Add the path to your main.js configuration&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;requirejs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;paths&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Only add the ones you need, e.g., &lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&amp;quot;Analytics&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[BOWER_PATH]/greeneyes/src/js/analytics&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// call the module in main.js&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Analytics&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;...&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Analytics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;...)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// initialize Google Analytics module&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;Analytics&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;track&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;call-the-module-in-your-html-in-your-codebody-code-tag&quot;&gt;Call the module in your HTML in your &lt;code&gt;&amp;lt;body /&amp;gt;&lt;/code&gt; tag&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-google-analytics=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;UA-########-#&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;parallax-background-scrolling&quot;&gt;Parallax background scrolling&lt;/h3&gt;
+
+&lt;p&gt;This module makes the container’s background scroll at different rates versus page scroll. Parallax speed is expressed as a percentage. Set parallax speed with attribute &lt;code&gt;[data-parallax-speed=&quot;##&quot;&lt;/code&gt;. At 0%, the background is fixed to the window. At 50%, the background will scroll at half the speed of the window scroll. At 200%, the background will scroll at twice rate as window scroll. If you do not set a parallax speed, the module will default to 50%.&lt;/p&gt;
+
+&lt;style&gt;
+.starfield {
+    background-image: url(&quot;/build/images/css/space_bg.gif&quot;);
+}
+.nested_code {
+	margin-bottom: 2rem;
+}
+.nested_code .highlight {
+	float: left;
+	margin: 2rem 0 0 2rem;
+	padding: 0.5rem 1rem;
+	background-color: rgba(255,255,255,0.75);
+}
+&lt;/style&gt;
+
+&lt;div class=&quot;starfield nested_code&quot; data-module=&quot;parallax_scroll&quot; style=&quot;height: 23.4rem;&quot;&gt;
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Default is 50% --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-module=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;parallax_scroll&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;p&gt;This module does require you to import the parallax scrolling CSS file.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;c&quot;&gt;/* import LESS version */&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[BOWER_PATH]/greeneyes/src/less/parallax_scroll.less&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;starfield nested_code&quot; data-module=&quot;parallax_scroll&quot; data-parallax-speed=&quot;150&quot; style=&quot;height: 23.4rem;margin-top: 2rem;&quot;&gt;
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 150% speed --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-module=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;parallax_scroll&amp;quot;&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;data-parallax-speed=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;150&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;p&gt;You will have to define your background image yourself in your CSS. The parallax scrolling works by isolating the background positioning of your image. Therefore, while you can set x-position as percentage, you must express y-position as a finite value.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;c&quot;&gt;/* This is okay */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.parallax_background&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;background-position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* This is not okay */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.parallax_background&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;background-position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;starfield nested_code&quot; data-module=&quot;parallax_scroll&quot; data-parallax-speed=&quot;-50&quot; style=&quot;height: 23.4rem;margin-top: 2rem;&quot;&gt;
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- -50% = reverse scroll --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-module=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;parallax_scroll&amp;quot;&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;data-parallax-speed=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;-50&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;dropdown-menu-navigation&quot;&gt;Dropdown menu navigation&lt;/h3&gt;
+
+&lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/4&quot;&gt;GitHub issue #4&lt;/a&gt;)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;content-tab-widget&quot;&gt;Content tab widget&lt;/h3&gt;
+
+&lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/3&quot;&gt;GitHub issue #3&lt;/a&gt;)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;collapsible-accordion-content&quot;&gt;Collapsible accordion content&lt;/h3&gt;
+
+&lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/1&quot;&gt;GitHub issue #1&lt;/a&gt;)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;tooltips-and-popovers&quot;&gt;Tooltips and popovers&lt;/h3&gt;
+
+&lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/2&quot;&gt;GitHub issue #2&lt;/a&gt;)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;more-to-come&quot;&gt;More to come…&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Who puts articles online before finishing them? I do. Check back in a few days.&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 30 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://herereadthis.com/code/greeneyes-requirejs/</link>

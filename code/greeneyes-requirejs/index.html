@@ -119,8 +119,11 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <ul>
   <li><strong>Analytics</strong> - doubles as the Google Analytics plugin</li>
-  <li><strong>Parallax Scroll</strong> - makes background images scroll at relative speeds</li>
-  <li><strong>Dropdown Menu</strong> - toggle for hiding/showing dropdown menus</li>
+  <li><strong>Parallax scroll</strong> - makes background images scroll at relative speeds</li>
+  <li><strong>Dropdown menu</strong> - toggle for hiding/showing dropdown menus (coming later)</li>
+  <li><strong>Content tabs</strong> - hide/show blocks of content based on menu buttons (coming later)</li>
+  <li><strong>Accordion content</strong> - Collapsible, stacked content (coming later)</li>
+  <li><strong>Popover/ tooltips</strong> - Collapsible, stacked content (coming later)</li>
 </ul>
 
 <h3 id="build">Build</h3>
@@ -174,7 +177,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h3 id="html-configuration">HTML Configuration</h3>
 
-<p>Greeneyes was created such that you will not have to pollute your HTML with a bunch of javascript commands. It will use a data attribute <code>[data-module=""]</code> to sniff for the correct module to apply. For example, here is how to apply the parallax scroll module to a section:</p>
+<p>Greeneyes was created such that you will not have to pollute your HTML with a bunch of javascript commands. Most modules will use a data attribute <code>[data-module=""]</code> to sniff for the correct module to apply. For example, here is how to apply the parallax scroll module to a section:</p>
 
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;section</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
@@ -183,6 +186,123 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;section</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span> <span class="na">data-parallax-speed=</span><span class="s">&quot;-50&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
 <hr />
+
+<h3 id="google-analytics">Google Analytics</h3>
+
+<p>This module replaces the standard Google analytics plugin <strong>(<a href="https://github.com/herereadthis/redwall/graphs/punch-card">view on GitHub</a>)</strong>. The main advantage here is that you will get to remove inline JavaScript on your page. <em>Note: Unlike the other Greeneyes modules, this one does not need a</em> <code>[data-module=""]</code> <em>attribute.</em> </p>
+
+<h4 id="get-the-module">Get the module</h4>
+
+<div class="highlight"><pre><code class="javascript"><span class="c1">// Add the path to your main.js configuration</span>
+<span class="nx">requirejs</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
+    <span class="nx">paths</span><span class="o">:</span> <span class="p">{</span>
+        <span class="c1">// Only add the ones you need, e.g., </span>
+        <span class="s2">&quot;Analytics&quot;</span><span class="o">:</span> <span class="s2">&quot;[BOWER_PATH]/greeneyes/src/js/analytics&quot;</span><span class="p">,</span>
+        <span class="p">...</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="c1">// call the module in main.js</span>
+<span class="nx">require</span><span class="p">([</span><span class="s1">&#39;Analytics&#39;</span><span class="p">,</span><span class="s1">&#39;...&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Analytics</span><span class="p">,</span> <span class="p">...)</span> <span class="p">{</span>
+	<span class="c1">// initialize Google Analytics module</span>
+    <span class="nx">Analytics</span><span class="p">.</span><span class="nx">track</span><span class="p">();</span>
+    <span class="p">...</span>
+<span class="p">});</span></code></pre></div>
+
+<h4 id="call-the-module-in-your-html-in-your-codebody-code-tag">Call the module in your HTML in your <code>&lt;body /&gt;</code> tag</h4>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;body</span> <span class="na">data-google-analytics=</span><span class="s">&quot;UA-########-#&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+<hr />
+
+<h3 id="parallax-background-scrolling">Parallax background scrolling</h3>
+
+<p>This module makes the container’s background scroll at different rates versus page scroll. Parallax speed is expressed as a percentage. Set parallax speed with attribute <code>[data-parallax-speed="##"</code>. At 0%, the background is fixed to the window. At 50%, the background will scroll at half the speed of the window scroll. At 200%, the background will scroll at twice rate as window scroll. If you do not set a parallax speed, the module will default to 50%.</p>
+
+<style>
+.starfield {
+    background-image: url("/build/images/css/space_bg.gif");
+}
+.nested_code {
+	margin-bottom: 2rem;
+}
+.nested_code .highlight {
+	float: left;
+	margin: 2rem 0 0 2rem;
+	padding: 0.5rem 1rem;
+	background-color: rgba(255,255,255,0.75);
+}
+</style>
+
+<div class="starfield nested_code" data-module="parallax_scroll" style="height: 23.4rem;">
+
+
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Default is 50% --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+
+</div>
+
+<p>This module does require you to import the parallax scrolling CSS file.</p>
+
+<div class="highlight"><pre><code class="css"><span class="c">/* import LESS version */</span>
+<span class="k">@import</span> <span class="s2">&quot;[BOWER_PATH]/greeneyes/src/less/parallax_scroll.less&quot;</span><span class="p">;</span></code></pre></div>
+
+<div class="starfield nested_code" data-module="parallax_scroll" data-parallax-speed="150" style="height: 23.4rem;margin-top: 2rem;">
+
+
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- 150% speed --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span>
+	<span class="na">data-parallax-speed=</span><span class="s">&quot;150&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+
+</div>
+
+<p>You will have to define your background image yourself in your CSS. The parallax scrolling works by isolating the background positioning of your image. Therefore, while you can set x-position as percentage, you must express y-position as a finite value.</p>
+
+<div class="highlight"><pre><code class="css"><span class="c">/* This is okay */</span>
+<span class="nc">.parallax_background</span> <span class="p">{</span><span class="k">background-position</span><span class="o">:</span> <span class="k">center</span> <span class="m">0</span><span class="n">rem</span><span class="p">;}</span>
+<span class="c">/* This is not okay */</span>
+<span class="nc">.parallax_background</span> <span class="p">{</span><span class="k">background-position</span><span class="o">:</span> <span class="k">left</span> <span class="k">bottom</span><span class="p">;}</span></code></pre></div>
+
+<div class="starfield nested_code" data-module="parallax_scroll" data-parallax-speed="-50" style="height: 23.4rem;margin-top: 2rem;">
+
+
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- -50% = reverse scroll --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span>
+	<span class="na">data-parallax-speed=</span><span class="s">&quot;-50&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+
+</div>
+
+<hr />
+
+<h3 id="dropdown-menu-navigation">Dropdown menu navigation</h3>
+
+<p>Coming soon (<a href="https://github.com/herereadthis/greeneyes/issues/4">GitHub issue #4</a>)</p>
+
+<hr />
+
+<h3 id="content-tab-widget">Content tab widget</h3>
+
+<p>Coming soon (<a href="https://github.com/herereadthis/greeneyes/issues/3">GitHub issue #3</a>)</p>
+
+<hr />
+
+<h3 id="collapsible-accordion-content">Collapsible accordion content</h3>
+
+<p>Coming soon (<a href="https://github.com/herereadthis/greeneyes/issues/1">GitHub issue #1</a>)</p>
+
+<hr />
+
+<h3 id="tooltips-and-popovers">Tooltips and popovers</h3>
+
+<p>Coming soon (<a href="https://github.com/herereadthis/greeneyes/issues/2">GitHub issue #2</a>)</p>
+
+<hr />
+
+<h3 id="more-to-come">More to come…</h3>
+
+<p><em>Who puts articles online before finishing them? I do. Check back in a few days.</em></p>
 
         <footer>
             <p><em><time property="dc:created" datetime="2014-07-30">30 July 2014</time></em><br />
