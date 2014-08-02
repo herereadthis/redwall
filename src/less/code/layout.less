@@ -67,30 +67,97 @@ a:hover {
 }
 
 
-article, [role="contentinfo"] {
+.text_container {
+    @media @da_baseline {
+        h2 { 
+            font-size: 2.8rem;
+            line-height: 4rem;
+            padding-bottom: 1rem;
+        }
+        h3 {     
+            font-size: 2rem;
+            line-height: 3rem;
 
-    h2, h3, h4, p, ul, ol {
-        @media @da_small {
+            code {
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+        }
+        h4, p, li, code {
+            .font_standard;
+        }
+        p, ul, ol {
+            margin: 0 0 2rem 0;
+        }  
+        ul, ol {
+            ul, ol {
+                padding-left: 2rem;
+            }
+        }
+        .highlight {
+            margin: 0 2rem 1rem 0;
+
+            pre {
+                margin: 0;
+                padding: 0.5rem 0;
+            }
+        }
+    }
+    @media @da_small {
+        h2, h3, h4, p, ul, ol {
             padding-right: 2rem;
         }
-        @media @da_medium {
+    }
+    @media @da_medium {
+        h2, h3, h4, p, ul, ol {
             padding-right: (1 / 12) * @pw_medium;
         }
-        @media @da_large {
+        h2 { 
+            font-size: 2.8rem;
+            line-height: 3.9rem;
+            padding-bottom: 0.5rem;
+        }
+        h3 {     
+            font-size: 2.1rem;
+            line-height: 3.3rem;
+
+            code {
+                font-size: 2.1rem;
+                line-height: 3.3rem;
+            }
+        }
+        h4, p, li, code {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+        }
+        p, ul, ol {
+            margin: 0 0 2.2rem 0;
+        }  
+        ul, ol {
+            ul, ol {
+                padding-left: 2.2rem;
+            }
+        }
+        .highlight {
+            margin: 0 2.2rem 1.1rem 0;
+        }
+    }
+    @media @da_large {
+        h2, h3, h4, p, ul, ol {
             padding-right: (1 / 12) * @pw_large;
         }
-        @media @da_x_large {
+    }
+    @media @da_x_large {
+        h2, h3, h4, p, ul, ol {
             padding-right: (1 / 12) * @pw_x_large;
         }
     }
+
     figcaption * {
         padding-right: 0;
     }
     h2 {
         font-weight: 300;
-        font-size: 2.8rem;
-        line-height: 4rem;
-        padding-bottom: 1rem;
 
         a:link, a:visited {
             color: #000;
@@ -99,59 +166,22 @@ article, [role="contentinfo"] {
             color: @code_a_hover;
         }
     }
+    > h2 {
+        display: none;
+    }
     h3 {
         font-weight: 400;
-        font-size: 2rem;
-        line-height: 3rem;
-        padding: 0 0 0rem 0; 
     }
     h4 {
         font-weight: 700;
         font-style: italic;
-        .font_standard;
-    }
-    p, li {
-        .font_standard;
-    }
-    p {
-        margin: 0 0 2rem 0;
     }
     strong {
         font-weight: 700;
     }
     ul, ol {
-        margin: 0 0 2rem 0;
-
         ul, ol {
             margin: 0;
-            padding: 0 0 0 2rem;
-        }
-    }
-}
-
-
-// spefically child elements of articles -------
-// ---------------------------------------------
-article {
-    > h2 {
-        display: none;
-    }
-    // code
-    code {
-        .font_standard;
-    }
-    h3 code {
-        font-size: 2rem;
-        line-height: 3rem;
-    }
-    .highlight {
-        // margin: 0.5rem 2rem 1.5rem 0;
-        // border: 0.1rem solid @code_grey_medium_light;
-        margin: 0 2rem 1rem 0;
-
-        pre {
-            margin: 0;
-            padding: 0.5rem 0;
         }
     }
 }
@@ -175,7 +205,7 @@ section, .content_container {
         width: (10 / 12) * @pw_x_small;
     }
     @media @da_small {
-        padding: 2rem (1 / 12) * @pw_small 0;
+        padding: 2.2rem (1 / 12) * @pw_small 0;
         width: (10 / 12) * @pw_small;
     }
     @media @da_medium {
