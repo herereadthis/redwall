@@ -186,6 +186,10 @@ In terms of page design, one of the most effective ways to promote or feature an
   * ***Symbolic Icons*** - images of things that are abstractions of the subject, e.g., a picture of lightning to represent high-voltage power lines
   * ***Arbitrary Icons*** - images that have no relationship to the subject, but are learned over time, such as bio-hazard signs.{% raw %}<br /><br />{% endraw %}
 
+* **Information Foraging - users will progress where the cues best define the desired outcome,** which means they want to consume the most with the least amount of effort. They will follow a good ***information scent.*** 
+
+This concept comes from &ldquo;optimal foraging theory,&rdquo; an explanation of how animals hunt for food. For example, to make links and navigation successful, use plain language that explicitly describe what users will find when clicking. Another key aspect is when a user arrives where he or she wants, the information is easy to consume.
+
 * **Operant Conditioning** -  (i.e. positive vs. negative reinforcement) **ways to modify behavior by rewarding desired actions and discouraging undesired actions**
 
 It's something to consider when designing complex applications, in the context of delivering positive outcomes for users when they do what we want them to do. Also, they won't be doing the things they find annoying.
