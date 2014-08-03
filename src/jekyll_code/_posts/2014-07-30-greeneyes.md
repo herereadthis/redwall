@@ -114,7 +114,7 @@ Some modules have user-defined-variables that allow you to modify what happens. 
 
 ### Google Analytics
 
-This module replaces the standard Google analytics plugin **([view on GitHub](https://github.com/herereadthis/redwall/graphs/punch-card))**. The main advantage here is that you will get to remove inline JavaScript on your page. *Note: Unlike the other Greeneyes modules, this one does not need a* {% raw %}<code>[data-module=""]</code>{% endraw %} *attribute.* 
+This module replaces the standard Google analytics plugin **([view on GitHub](https://github.com/herereadthis/greeneyes/blob/master/src/js/analytics.js))**. The main advantage here is that you will get to remove inline JavaScript on your page. *Note: Unlike the other Greeneyes modules, this one does not need a* {% raw %}<code>[data-module=""]</code>{% endraw %} *attribute.* 
 
 #### Get the module
 
@@ -145,7 +145,7 @@ require(['Analytics','...'], function(Analytics, ...) {
 
 ### Parallax background scrolling
 
-This module makes the container&rsquo;s background scroll at different rates versus page scroll. Parallax speed is expressed as a percentage. Set parallax speed with attribute {% raw %}<code>[data-parallax-speed="##"</code>{% endraw %}. At 0%, the background is fixed to the window. At 50%, the background will scroll at half the speed of the window scroll. At 200%, the background will scroll at twice rate as window scroll. If you do not set a parallax speed, the module will default to 50%.
+This module makes the container&rsquo;s background scroll at different rates versus page scroll **([view on GitHub](https://github.com/herereadthis/greeneyes/blob/master/src/js/parallax_scroll.js))**. Parallax speed is expressed as a percentage. Set parallax speed with attribute {% raw %}<code>[data-parallax-speed="##"]</code>{% endraw %}. At 0%, the background is fixed to the window. At 50%, the background will scroll at half the speed of the window scroll. At 200%, the background will scroll at twice rate as window scroll. *If you do not set a parallax speed, the module will default to 50%.*
 
 {% raw %}
 <style>
@@ -185,8 +185,6 @@ This module does require you to import the parallax scrolling CSS file.
 @import "[BOWER_PATH]/greeneyes/src/less/parallax_scroll.less";
 /* Or the SASS version */
 @import "[BOWER_PATH]/greeneyes/src/sass/parallax_scroll.scss";
-/* Or just straight CSS */
-@import "[BOWER_PATH]/greeneyes/src/css/parallax_scroll.css";
 {% endhighlight %}
 
 {% raw %}
@@ -201,7 +199,7 @@ This module does require you to import the parallax scrolling CSS file.
 </div>
 {% endraw %}
 
-You will have to define your background image yourself in your CSS. The parallax scrolling works by isolating the background positioning of your image. Therefore, while you can set x-position as percentage, you must express y-position as a finite value.
+You will have to define your background image yourself in your CSS. The parallax scrolling works by isolating the background positioning of your image. The parallax scroll does have default CSS, but if you want to customize your positioning, you must express the y-position as a finite value (x-position can be anything).
 
 {% highlight css %}
 /* This is okay */
@@ -226,7 +224,7 @@ You will have to define your background image yourself in your CSS. The parallax
 
 ### Dropdown menu navigation
 
-This module will create a nested menu where the child elements will be hidden by default and are toggled into view by clicking on the parent items.
+This module will create a nested menu where the child elements will be hidden by default and are toggled into view by clicking on the parent items **([view on GitHub](https://github.com/herereadthis/greeneyes/blob/master/src/js/dropdown_menu.js))**.
 
 Coming soon ([GitHub issue #4](https://github.com/herereadthis/greeneyes/issues/4))
 
@@ -234,7 +232,7 @@ Coming soon ([GitHub issue #4](https://github.com/herereadthis/greeneyes/issues/
 
 ### Content tab widget
 
-This module creates a box with a list of tabs at the top that will switch out the content below.
+This module creates a box with a list of tabs at the top that will switch out the content below **([view on GitHub](https://github.com/herereadthis/greeneyes/blob/master/src/js/content_tabs.js))**.
 
 Coming soon ([GitHub issue #3](https://github.com/herereadthis/greeneyes/issues/3))
 
@@ -242,7 +240,7 @@ Coming soon ([GitHub issue #3](https://github.com/herereadthis/greeneyes/issues/
 
 ### Collapsible accordion content
 
-This module will create a menu listing such that pressing any of the list items will expand to show more content. This module is useful for compressing a lot of content to only show what the user wants to read.
+This module will create a menu listing such that pressing any of the list items will expand to show more content **([view on GitHub](https://github.com/herereadthis/greeneyes/blob/master/src/js/accordion.js))**. You will want to use it for compressing a lot of content to only show what the user wants to read.
 
 Coming soon ([GitHub issue #1](https://github.com/herereadthis/greeneyes/issues/1))
 
@@ -250,7 +248,7 @@ Coming soon ([GitHub issue #1](https://github.com/herereadthis/greeneyes/issues/
 
 ### Tooltips and popovers
 
-This module will create tiny modals that will appear adjacent to the item on which you click. It is useful for displaying help text.
+This module will create tiny modals that will appear adjacent to the item on which you click **([view on GitHub](https://github.com/herereadthis/greeneyes/blob/master/src/js/popover.js))**. It is useful for displaying help text.
 
 Coming soon ([GitHub issue #2](https://github.com/herereadthis/greeneyes/issues/2))
 

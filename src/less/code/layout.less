@@ -140,11 +140,48 @@ a:hover {
         }
         .highlight {
             margin: 0 2.2rem 1.1rem 0;
+
+            pre {
+                padding: 0.5rem 0 0.6rem 0;
+            }
         }
     }
     @media @da_large {
         h2, h3, h4, p, ul, ol {
             padding-right: (1 / 12) * @pw_large;
+        }
+        h2 { 
+            font-size: 3.2rem;
+            line-height: 4.4rem;
+            padding-bottom: 0.5rem;
+        }
+        h3 {     
+            font-size: 2.4rem;
+            line-height: 3.9rem;
+
+            code {
+                font-size: 2.4rem;
+                line-height: 3.9rem;
+            }
+        }
+        h4, p, li, code {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+        }
+        p, ul, ol {
+            margin: 0 0 2.6rem 0;
+        }  
+        ul, ol {
+            ul, ol {
+                padding-left: 2.6rem;
+            }
+        }
+        .highlight {
+            margin: 0 2.6rem 1.3rem 0;
+
+            pre {
+                padding: 0.6rem 0 0.7rem 0;
+            }
         }
     }
     @media @da_x_large {
@@ -189,7 +226,7 @@ a:hover {
 
 
 
-section, .content_container {
+.content_container {
     margin: 0 auto;
 
     @media @da_baseline {
@@ -205,19 +242,19 @@ section, .content_container {
         width: (10 / 12) * @pw_x_small;
     }
     @media @da_small {
-        padding: 2.2rem (1 / 12) * @pw_small 0;
+        padding: 2rem (1 / 12) * @pw_small 0;
         width: (10 / 12) * @pw_small;
     }
     @media @da_medium {
-        padding: 2rem (2 / 12) * @pw_medium 0;
+        padding: 2.2rem (2 / 12) * @pw_medium 0;
         width: (8 / 12) * @pw_medium;
     }
     @media @da_large {
-        padding: 2rem (2 / 12) * @pw_large 0;
+        padding: 2.2rem (2 / 12) * @pw_large 0;
         width: (8 / 12) * @pw_large;
     }
     @media @da_x_large {
-        padding: 2rem (2 / 12) * @pw_x_large 0;
+        padding: 2.2rem (2 / 12) * @pw_x_large 0;
         width: (8 / 12) * @pw_x_large;
     }
     hr:last-child {
@@ -237,16 +274,19 @@ section, .content_container {
 }
 
 hr {
-    margin: 0 0 1.7rem 0;
-    padding: 0.1rem 0 0 0;
     border-width: 0;
     border-top: 0.1rem solid @code_grey_medium_light;
     border-bottom: 0.1rem solid @code_grey_medium_light;
+    @media @da_baseline {
+        margin: 0 0 1.7rem 0;
+        padding: 0.1rem 0 0 0;
+    }
     @media @da_small {
         margin-right: (2 / 12) * @pw_small;
     }
     @media @da_medium {
         margin-right: (2 / 12) * @pw_medium;
+        margin-bottom: 1.9rem;
     }
     @media @da_large {
         margin-right: (2 / 12) * @pw_large;

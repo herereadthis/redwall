@@ -8,7 +8,7 @@ tags:           coding
 <article class="text_container">
 	<h2>Articles</h2>
     {% sorted_for post in site.posts reversed sort_by:modified %}
-    <section>
+    <section class="content_container">
         <h2><a href="{{ post.url | prepend: site.baseurl }}">{% if post.repo_title %}{{ post.repo_title }}{% else %}{{ post.title }}{% endif %}</a></h2>
         {{ post.excerpt }}
         <p><a href="{{ post.url | prepend: site.baseurl }}">Continue Reading &raquo;</a></p>

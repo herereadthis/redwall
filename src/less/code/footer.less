@@ -2,48 +2,77 @@
 
 [role="contentinfo"] {
     margin-top: 4rem;
-    background-size: 50% 0.5rem;
     background-repeat: no-repeat;
 
-    &, & .bellmaker_container {
-        .triple_hr;
-        background-position: 0% 0%;
+    @media @da_baseline {
+        background-size: 50% 0.5rem;
+
+        &, & .bellmaker_container {
+            .triple_hr;
+            background-position: 0% 0%;
+        }
+        .bellmaker_container {
+            padding-top: 0.5rem;
+            background-size: 100% 0.5rem;
+        }
+        .content_container {
+            padding-top: 0;
+
+            > h4:first-child {
+                padding-top: 2rem;
+            }
+        }
     }
-
-    .bellmaker_container {
-        margin: 0 auto;
-        padding-top: 0.5rem;
-        background-size: 100% 0.5rem;
-    }
-
-    section {
-        padding-top: 0;
-
-        @media @da_small {
+    @media @da_small {
+        .content_container {
             // should be 39.6rem
             // height: round(0.61803 * 10 * ((10 / 12) * @pw_small)) / 10;
             height: 64rem + @footer_bg_padding_bottom;
         }
-        @media @da_medium {
+    }
+    @media @da_medium {
+        .content_container {
             // should be 39.6rem
             // height: round(0.61803 * 10 * ((8 / 12) * @pw_medium)) / 10;
             height: 64rem + @footer_bg_padding_bottom;
         }
-        @media @da_large {
+        .content_container {
+            > h4:first-child {
+                padding-top: 2.2rem;
+            }
+        }
+    }
+    @media @da_large {
+        background-size: 50% 0.7rem;
+
+        &, & .bellmaker_container {
+            .triple_hr2;
+        }
+        .bellmaker_container {
+            padding-top: 0.7rem;
+            background-size: 100% 0.7rem;
+        }
+        .content_container {
             // should be 47.5rem
             // height: round(0.61803 * 10 * ((8 / 12) * @pw_large)) / 10;
             height: 48rem + @footer_bg_padding_bottom;
         }
-        @media @da_x_large {
+        .content_container {
+            > h4:first-child {
+                padding-top: 2.6rem;
+            }
+        }
+    }
+    @media @da_x_large {
+        .content_container {
             // should be 55.4rem
             // height: round(0.61803 * 10 * ((8 / 12) * @pw_x_large)) / 10;
             height: 41rem + @footer_bg_padding_bottom;
         }
-        > *:first-child {
-            padding-top: 2rem;
-        }
     }
-
+    .bellmaker_container {
+        margin: 0 auto;
+    }
 }
 #footer_background {
     background-repeat: no-repeat;
@@ -54,18 +83,24 @@
     padding-top: 2rem;
     overflow: hidden;
 
-    .creative_commons_image {
-        display: block;
-        float: left;
-        width: 8.8rem;
-        height: 3.1rem;
-        margin: 0.5rem 0.5rem 0.4rem 0;
-        text-indent: -9999px;
-        background: transparent url("@{img_path}icon_logo_sprites.png") scroll no-repeat 0 -10rem;
-        background-size: 10rem 20rem;
-    }
     > span {
         display: block;
+    }
+}
+.creative_commons_image {
+    display: block;
+    float: left;
+    width: 8.8rem;
+    height: 3.1rem;
+    text-indent: -9999px;
+    background: transparent url("@{img_path}icon_logo_sprites.png") scroll no-repeat 0 -10rem;
+    background-size: 10rem 20rem;
+
+    @media @da_baseline {
+        margin: 0.5rem 0.5rem 0.4rem 0;
+    }
+    @media @da_medium {
+        margin: 0.6rem 0.5rem 0.5rem 0;
     }
 }
 
@@ -185,6 +220,38 @@
         }
         .googleplus {
             padding: 0.4rem 0.3rem 0.4rem 0.5rem;
+        }
+    }
+    @media @da_medium {
+        margin: 0 0 0 -0.1rem;
+
+        li {
+            height: 4.4rem;
+            margin-left: 0.4rem;
+
+            &:first-child {
+                margin-left: 0rem;
+            }
+            > a {
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+        }
+        .facebook, .twitter {
+            width: 2.4rem;
+            height: 2.4rem;
+            padding: 0.4rem;
+        }
+        .twitter {
+            padding: 0.4rem 0.3rem 0.4rem 0.5rem;  
+        }
+        .googleplus, .github, .pinterest, .vimeo {
+            width: 2.2rem;
+            height: 2.2rem;
+            padding: 0.5rem;
+        }
+        .googleplus {
+            padding: 0.5rem 0.4rem 0.5rem 0.6rem;
         }
     }
 }

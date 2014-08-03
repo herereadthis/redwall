@@ -1,7 +1,6 @@
 // figures -------------------------------------
 // ---------------------------------------------
 figure {
-    margin: 0 0 2rem 0;
     
     img {
         &:hover {
@@ -9,6 +8,8 @@ figure {
         }
     }
     @media @da_baseline {
+        margin: 0 0 2rem 0;
+
         img {
             width: @pw_baseline;
         }
@@ -49,6 +50,8 @@ figure {
         }
     }
     @media @da_medium {
+        margin: 0 0 2.2rem 0;
+
         img {
             width: (3 / 12) * @pw_medium;
             -webkit-transition: width 1s linear;

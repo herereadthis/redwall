@@ -103,7 +103,7 @@
 
 &lt;h3 id=&quot;google-analytics&quot;&gt;Google Analytics&lt;/h3&gt;
 
-&lt;p&gt;This module replaces the standard Google analytics plugin &lt;strong&gt;(&lt;a href=&quot;https://github.com/herereadthis/redwall/graphs/punch-card&quot;&gt;view on GitHub&lt;/a&gt;)&lt;/strong&gt;. The main advantage here is that you will get to remove inline JavaScript on your page. &lt;em&gt;Note: Unlike the other Greeneyes modules, this one does not need a&lt;/em&gt; &lt;code&gt;[data-module=&quot;&quot;]&lt;/code&gt; &lt;em&gt;attribute.&lt;/em&gt; &lt;/p&gt;
+&lt;p&gt;This module replaces the standard Google analytics plugin &lt;strong&gt;(&lt;a href=&quot;https://github.com/herereadthis/greeneyes/blob/master/src/js/analytics.js&quot;&gt;view on GitHub&lt;/a&gt;)&lt;/strong&gt;. The main advantage here is that you will get to remove inline JavaScript on your page. &lt;em&gt;Note: Unlike the other Greeneyes modules, this one does not need a&lt;/em&gt; &lt;code&gt;[data-module=&quot;&quot;]&lt;/code&gt; &lt;em&gt;attribute.&lt;/em&gt; &lt;/p&gt;
 
 &lt;h4 id=&quot;get-the-module&quot;&gt;Get the module&lt;/h4&gt;
 
@@ -130,7 +130,7 @@
 
 &lt;h3 id=&quot;parallax-background-scrolling&quot;&gt;Parallax background scrolling&lt;/h3&gt;
 
-&lt;p&gt;This module makes the container’s background scroll at different rates versus page scroll. Parallax speed is expressed as a percentage. Set parallax speed with attribute &lt;code&gt;[data-parallax-speed=&quot;##&quot;&lt;/code&gt;. At 0%, the background is fixed to the window. At 50%, the background will scroll at half the speed of the window scroll. At 200%, the background will scroll at twice rate as window scroll. If you do not set a parallax speed, the module will default to 50%.&lt;/p&gt;
+&lt;p&gt;This module makes the container’s background scroll at different rates versus page scroll &lt;strong&gt;(&lt;a href=&quot;https://github.com/herereadthis/greeneyes/blob/master/src/js/parallax_scroll.js&quot;&gt;view on GitHub&lt;/a&gt;)&lt;/strong&gt;. Parallax speed is expressed as a percentage. Set parallax speed with attribute &lt;code&gt;[data-parallax-speed=&quot;##&quot;]&lt;/code&gt;. At 0%, the background is fixed to the window. At 50%, the background will scroll at half the speed of the window scroll. At 200%, the background will scroll at twice rate as window scroll. &lt;em&gt;If you do not set a parallax speed, the module will default to 50%.&lt;/em&gt;&lt;/p&gt;
 
 &lt;style&gt;
 .starfield {
@@ -164,9 +164,7 @@
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;c&quot;&gt;/* import LESS version */&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[BOWER_PATH]/greeneyes/src/less/parallax_scroll.less&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;/* Or the SASS version */&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[BOWER_PATH]/greeneyes/src/sass/parallax_scroll.scss&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;/* Or just straight CSS */&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[BOWER_PATH]/greeneyes/src/css/parallax_scroll.css&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;[BOWER_PATH]/greeneyes/src/sass/parallax_scroll.scss&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&quot;starfield nested_code&quot; data-module=&quot;parallax_scroll&quot; data-parallax-speed=&quot;150&quot;&gt;
 
@@ -178,7 +176,7 @@
 
 &lt;/div&gt;
 
-&lt;p&gt;You will have to define your background image yourself in your CSS. The parallax scrolling works by isolating the background positioning of your image. Therefore, while you can set x-position as percentage, you must express y-position as a finite value.&lt;/p&gt;
+&lt;p&gt;You will have to define your background image yourself in your CSS. The parallax scrolling works by isolating the background positioning of your image. The parallax scroll does have default CSS, but if you want to customize your positioning, you must express the y-position as a finite value (x-position can be anything).&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;c&quot;&gt;/* This is okay */&lt;/span&gt;
 &lt;span class=&quot;nc&quot;&gt;.parallax_background&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;background-position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;center&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
@@ -199,7 +197,7 @@
 
 &lt;h3 id=&quot;dropdown-menu-navigation&quot;&gt;Dropdown menu navigation&lt;/h3&gt;
 
-&lt;p&gt;This module will create a nested menu where the child elements will be hidden by default and are toggled into view by clicking on the parent items.&lt;/p&gt;
+&lt;p&gt;This module will create a nested menu where the child elements will be hidden by default and are toggled into view by clicking on the parent items &lt;strong&gt;(&lt;a href=&quot;https://github.com/herereadthis/greeneyes/blob/master/src/js/dropdown_menu.js&quot;&gt;view on GitHub&lt;/a&gt;)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/4&quot;&gt;GitHub issue #4&lt;/a&gt;)&lt;/p&gt;
 
@@ -207,7 +205,7 @@
 
 &lt;h3 id=&quot;content-tab-widget&quot;&gt;Content tab widget&lt;/h3&gt;
 
-&lt;p&gt;This module creates a box with a list of tabs at the top that will switch out the content below.&lt;/p&gt;
+&lt;p&gt;This module creates a box with a list of tabs at the top that will switch out the content below &lt;strong&gt;(&lt;a href=&quot;https://github.com/herereadthis/greeneyes/blob/master/src/js/content_tabs.js&quot;&gt;view on GitHub&lt;/a&gt;)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/3&quot;&gt;GitHub issue #3&lt;/a&gt;)&lt;/p&gt;
 
@@ -215,7 +213,7 @@
 
 &lt;h3 id=&quot;collapsible-accordion-content&quot;&gt;Collapsible accordion content&lt;/h3&gt;
 
-&lt;p&gt;This module will create a menu listing such that pressing any of the list items will expand to show more content. This module is useful for compressing a lot of content to only show what the user wants to read.&lt;/p&gt;
+&lt;p&gt;This module will create a menu listing such that pressing any of the list items will expand to show more content &lt;strong&gt;(&lt;a href=&quot;https://github.com/herereadthis/greeneyes/blob/master/src/js/accordion.js&quot;&gt;view on GitHub&lt;/a&gt;)&lt;/strong&gt;. You will want to use it for compressing a lot of content to only show what the user wants to read.&lt;/p&gt;
 
 &lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/1&quot;&gt;GitHub issue #1&lt;/a&gt;)&lt;/p&gt;
 
@@ -223,7 +221,7 @@
 
 &lt;h3 id=&quot;tooltips-and-popovers&quot;&gt;Tooltips and popovers&lt;/h3&gt;
 
-&lt;p&gt;This module will create tiny modals that will appear adjacent to the item on which you click. It is useful for displaying help text.&lt;/p&gt;
+&lt;p&gt;This module will create tiny modals that will appear adjacent to the item on which you click &lt;strong&gt;(&lt;a href=&quot;https://github.com/herereadthis/greeneyes/blob/master/src/js/popover.js&quot;&gt;view on GitHub&lt;/a&gt;)&lt;/strong&gt;. It is useful for displaying help text.&lt;/p&gt;
 
 &lt;p&gt;Coming soon (&lt;a href=&quot;https://github.com/herereadthis/greeneyes/issues/2&quot;&gt;GitHub issue #2&lt;/a&gt;)&lt;/p&gt;
 

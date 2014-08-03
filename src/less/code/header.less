@@ -1,43 +1,73 @@
 [role="banner"] {
-    background-size: 50% 0.5rem;
-    background-repeat: no-repeat;
 
     @media @da_baseline {
+        background-size: 50% 0.5rem;
+
         h1 {
             padding: 2rem 2rem 2rem 1rem;
+            font-size: 4.2rem;
             line-height: 5rem; 
+        }
+        .bellmaker_container {
+            background-size: 100% 0.5rem;
+        }
+        &, & .bellmaker_container {
+            .triple_hr;
+            background-position: 0% 100%;
+        }
+    }
+    @media @da_x_small {
+        h1 {
+            padding: 3rem 0 0 2rem;
         }
     }
     @media @da_2x_small {
+        &, .bellmaker_container {
+            height: 12rem;
+        }
         height: 12rem;
 
         h1 {
             padding: 3rem 0 0 (1 / 12) * @pw_2x_small;
             line-height: 8rem;
         }
-        .bellmaker_container {
-            height: 12rem;
+    }
+    @media @da_medium {
+        &, .bellmaker_container {
+            height: 13.2rem;
+        }
+        h1 {
+            font-size: 4.2rem;
+            line-height: 5.5rem;
+            padding: 4.4rem 0 0 0rem;
         }
     }
-    &, & .bellmaker_container {
-        .triple_hr;
-        background-position: 0% 100%;
+    @media @da_large {
+        background-size: 50% 0.7rem;
+
+        &, .bellmaker_container {
+            height: 15.6rem;
+        }
+        h1 {
+            font-size: 4.8rem;
+            line-height: 6.5rem;
+            padding: 5.2rem 0 0 0rem;
+        }
+        .bellmaker_container {
+            background-size: 100% 0.7rem;
+        }
+        &, & .bellmaker_container {
+            .triple_hr2;
+        }
     }
+
     .bellmaker_container {
         margin: 0 auto;
-        background-size: 100% 0.5rem;
     }
     h1 {
         font-weight: 300;
-        font-size: 4rem;
         text-transform: uppercase;
 
-        @media @da_x_small {
-            padding: 3rem 0 0 2rem;
-        }
-        @media @da_medium {
-            padding: 3rem 0 0 0rem;
-        }
         a:link, a:visited {
             color: #000;
         }

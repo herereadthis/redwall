@@ -1,15 +1,31 @@
 // components ----------------------------------
 // ---------------------------------------------
 #github_badges {
-    li {
-        font-size: 2rem;
-        margin-left: 0.5rem;
+    @media @da_baseline {
+        li {
+            font-size: 2rem;
+            margin: 0 0 0 0.5rem;
 
-        &:first-child {
-            margin-left: 0;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        li, a, img {
+            height: 2rem;
         }
     }
-    li, a, img {
-        height: 2rem;
+    @media @da_medium {
+        li {
+            margin: 0.1rem 0 0.1rem 0.5rem;
+        }
+    }
+    @media @da_large {
+        li {
+            font-size: 2.2rem;
+            margin: 0.2rem 0 0.2rem 0.5rem;
+        }
+        li, a, img {
+            height: 2.2rem;
+        }
     }
 }
