@@ -3,7 +3,7 @@ layout:         post
 title:          "Greeneyes, a RequireJS module library"
 repo_title:     "<em>Greeneyes</em>, a RequireJS module library"
 created:        2014-08-01
-modified:       2014-08-01
+modified:       2014-08-04
 permalink:      greeneyes-requirejs/
 description:    "Greeneyes is collection of useful JavaScript utilities and widgets (and accompanying CSS) written in AMD format to be used with RequireJS"
 tags:           RequireJS, AMD, Javascript
@@ -140,6 +140,14 @@ require(['Analytics','...'], function(Analytics, ...) {
 {% highlight html %}
 <body data-google-analytics="UA-########-#">
 {% endhighlight %}
+
+#### Alternative: specify the ID number directly
+
+{% highlight javascript %}
+Analytics.track('UA-########-#');
+{% endhighlight %}
+
+Then you don't need to specify {% raw %}<code>[data-google-analytics=""]</code>{% endraw %}.
 
 ----------------
 
