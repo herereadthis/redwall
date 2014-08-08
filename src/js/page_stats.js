@@ -33,6 +33,7 @@
             productionURL = productionURL.substring(0, productionURL.length - 1);
             jsonFile = "http://redwall.herereadthis.com/api/page_stats/";
             totalHits = 0;
+            console.log(productionURL);
 
             if (productionURL != "http:\/\/herereadthis.com") {
                 console.log("not testing on production");
