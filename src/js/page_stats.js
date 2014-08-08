@@ -32,7 +32,7 @@
         showPageStats = function() {
             var canonical, jsonFile, documentURL, productionURL, addPageHit, productionHost;
 
-            canonical = $('[rel="canonical"]').attr('href');
+            canonical = $('[rel="canonical"]').attr('href').getHostname();
             documentURL = encodeURIComponent(window.location.pathname);
             productionHost = window.location.host;
             console.log(productionHost);
