@@ -26,39 +26,38 @@
 
         };
         showPageStats = function() {
-            var jsonFile, documentURL, host, origin;
+            var jsonFile, documentURL, productionURL, addPageHit;
 
             documentURL = encodeURIComponent(window.location.pathname);
-            host = encodeURIComponent(window.location.host);
+            productionURL = window.location.href;
+            productionURL = productionURL.substring(0, productionURL.length - 1);
             jsonFile = "http://redwall.herereadthis.com/api/page_stats/";
-            origin = window.location.origin;
+            totalHits = 0;
 
-            if (origin != "http:\/\/herereadthis.com") {
+            if (productionURL != "http:\/\/herereadthis.com") {
                 console.log("not testing on production");
             }
             else {
                 console.log("testing page stats on production");
-                jsonFile = jsonFile + "?url=" + host;
+                addPageHit = jsonFile + "?url=http%3A%2F%2Fherereadthis.com" + documentURL;
+                $.getJSON(addPageHit, function(data) {
+                    var getJSON, urlPath, _i, row;
+                    getJSON = data;
+                    urlPath = decodeURIComponent(documentURL);
+                    console.log("page hits: " + data.page_hits);
+                });
             }
+
             $.getJSON(jsonFile, function(data) {
-                var getJSON, urlPath, _i, row;
-                getJSON = data;
-                urlPath = decodeURIComponent(documentURL);
-                for (_i in getJSON) {
-                    row = getJSON[_i];
-                    if (row.url_path === urlPath) {
-                        console.log("page hits: " + row.page_hits);
-                    }
+                var totalHits, _row, entryPageHits;
+                totalHits = 0
+                for (_row in data) {
+                    entryPageHits = parseInt(data[_row].page_hits, 10);
+                    console.log(entryPageHits, "?");
+                    totalHits = totalHits + entryPageHits;
                 }
+                console.log("total hits: " + totalHits);
             });
-
-            // $.getJSON(jsonFile, function(data) {
-            //     var getPageStats = data;
-            //     // console.log(getPageStats.length);
-            //     // // $this.append(JSON.stringify(fubar));
-            //     // console.log(getPageStats);
-
-            // });
 
         }
         makeItHappen = function() {
