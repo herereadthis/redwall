@@ -25,21 +25,26 @@
             });
 
         };
+        String.prototype.getHostname = function () {
+            var re = new RegExp('^(?:f|ht)tp(?:s)?://([^/]+)');
+            return this.match(re) [1].toString();
+        },
         showPageStats = function() {
-            var jsonFile, documentURL, productionURL, addPageHit, productionHost;
+            var canonical, jsonFile, documentURL, productionURL, addPageHit, productionHost;
 
+            canonical = $('[rel="canonical"]').attr('href');
             documentURL = encodeURIComponent(window.location.pathname);
             productionHost = window.location.host;
             console.log(productionHost);
             jsonFile = "http://redwall.herereadthis.com/api/page_stats/";
             totalHits = 0;
 
-            if (productionHost != "herereadthis.com") {
+            if (productionHost != canonical) {
                 console.log("not testing on production");
             }
             else {
                 console.log("testing page stats on production");
-                addPageHit = jsonFile + "?url=http%3A%2F%2Fherereadthis.com" + documentURL;
+                addPageHit = jsonFile + "?url=http%3A%2F%2F" + canonical + documentURL;
                 $.getJSON(addPageHit, function(data) {
                     var getJSON, urlPath, _i, row;
                     getJSON = data;
@@ -50,10 +55,9 @@
 
             $.getJSON(jsonFile, function(data) {
                 var totalHits, _row, entryPageHits;
-                totalHits = 0
+                totalHits = 0;
                 for (_row in data) {
                     entryPageHits = parseInt(data[_row].page_hits, 10);
-                    console.log(entryPageHits, "?");
                     totalHits = totalHits + entryPageHits;
                 }
                 console.log("total hits: " + totalHits);

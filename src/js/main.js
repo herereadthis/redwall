@@ -23,13 +23,15 @@
             'credits': 'credits'
         }
     });
-    require(['Retromator', 'CodeBlog', 'Analytics'], function(Retromator, CodeBlog, Analytics) {
+    require(['Retromator', 'CodeBlog', 'PageStats', 'Analytics'],
+        function(Retromator, CodeBlog, PageStats, Analytics) {
         // if (Modernizr.touch === false) {
         // }
         // utilities on home page
         Retromator.init();
         // utilities on coding blog
         CodeBlog.init();
+        PageStats.init();
         return Analytics.track();
     });
 }).call(this);
