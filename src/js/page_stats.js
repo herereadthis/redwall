@@ -26,9 +26,10 @@
 
         };
         showPageStats = function() {
-            var jsonFile, documentURL, origin;
+            var jsonFile, documentURL, host, origin;
 
             documentURL = encodeURIComponent(window.location.pathname);
+            host = encodeURIComponent(window.location.host);
             jsonFile = "http://redwall.herereadthis.com/api/page_stats/";
             origin = window.location.origin;
 
@@ -37,7 +38,7 @@
             }
             else {
                 console.log("testing page stats on production");
-                jsonFile = jsonFile + "?url=" + documentURL;
+                jsonFile = jsonFile + "?url=" + host;
             }
             $.getJSON(jsonFile, function(data) {
                 var getJSON, urlPath, _i, row;
