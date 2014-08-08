@@ -26,16 +26,15 @@
 
         };
         showPageStats = function() {
-            var jsonFile, documentURL, productionURL, addPageHit;
+            var jsonFile, documentURL, productionURL, addPageHit, productionHost;
 
             documentURL = encodeURIComponent(window.location.pathname);
-            productionURL = window.location.href;
-            productionURL = productionURL.substring(0, productionURL.length - 1);
+            productionHost = window.location.host;
+            console.log(productionHost);
             jsonFile = "http://redwall.herereadthis.com/api/page_stats/";
             totalHits = 0;
-            console.log(productionURL);
 
-            if (productionURL != "http:\/\/herereadthis.com") {
+            if (productionHost != "herereadthis.com") {
                 console.log("not testing on production");
             }
             else {
