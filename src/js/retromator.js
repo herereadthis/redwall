@@ -1,6 +1,6 @@
 (function() {
 
-  define(['jquery', 'ColorTuner', 'SocialFu', 'ParallaxScroll', "purchase"], function($, ColorTuner, SocialFu, ParallaxScroll, purchase) {
+  define(['jquery', 'ColorTuner', 'SocialFu', 'ParallaxScroll', "PageStats"], function($, ColorTuner, SocialFu, ParallaxScroll, PageStats) {
     var exports, gVars, makeItHappen, moduleName;
     exports = {};
     gVars = {};
@@ -11,6 +11,7 @@
         ParallaxScroll.init();
         SocialFu.init();
         ColorTuner.init();
+        PageStats.init();
     };
     exports.init = function($this) {
         var $element;
