@@ -30,21 +30,30 @@
             return this.match(re) [1].toString();
         },
         showPageStats = function() {
-            var canonical, jsonFile, documentURL, productionURL, addPageHit, productionHost;
-
-            canonical = $('[rel="canonical"]').attr('href').getHostname();
+            var jsonFile, documentURL, productionURL, addPageHit, productionHost, meta;
+            String.prototype.getHostname = function () {
+                var re = new RegExp('^(?:f|ht)tp(?:s)?://([^/]+)');
+                return this.match(re) [1].toString();
+            }
+            meta = {
+                canonical: $('[rel="canonical"]').attr('href').getHostname(),
+                pageTitle: encodeURIComponent($('title').text())
+                // descript: encodeURIComponent($('[name="description"]').attr('content'))
+            }
             documentURL = encodeURIComponent(window.location.pathname);
             productionHost = window.location.host;
             console.log(productionHost);
             jsonFile = "http://redwall.herereadthis.com/api/page_stats/";
             totalHits = 0;
 
-            if (productionHost != canonical) {
+            if (productionHost != meta.canonical) {
                 console.log("not testing on production");
             }
             else {
-                console.log("testing page stats on production");
-                addPageHit = jsonFile + "?url=http%3A%2F%2F" + canonical + documentURL;
+                addPageHit = jsonFile + "?url=http%3A%2F%2F" + meta.canonical + documentURL + 
+                    "&addclick=true" +
+                    "&description=" + meta.pageTitle;
+                console.log(addPageHit);
                 $.getJSON(addPageHit, function(data) {
                     var getJSON, urlPath, _i, row;
                     getJSON = data;
