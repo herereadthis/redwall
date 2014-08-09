@@ -52,7 +52,7 @@
             else {
                 addPageHit = jsonFile + "?url=http%3A%2F%2F" + meta.canonical + documentURL + 
                     "&addclick=true" +
-                    "&description=" + meta.pageTitle;
+                    "&title=" + meta.pageTitle;
                 console.log(addPageHit);
                 $.getJSON(addPageHit, function(data) {
                     var getJSON, urlPath, _i, row;
