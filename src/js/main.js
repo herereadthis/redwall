@@ -4,6 +4,7 @@
             // retro homepage
             'Retromator': 'retromator',
             "ColorTuner": "color_tuner",
+            "HitCounter": "hit_counter",
             "SocialFu": "social_fu",
             // coding blog
             'CodeBlog': 'code_blog',
