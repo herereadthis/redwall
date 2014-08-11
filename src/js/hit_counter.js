@@ -21,23 +21,23 @@
             context.fillStyle = color;
             context.fill();
         };
-        arrayCheck = function(testArray, hitDigit, colorOn, colorOff) {
+        arrayCheck = function(testArray, hitDigit, colors) {
             if (testArray.indexOf(hitDigit) === -1) {
-                return colorOff;
+                return colors.off;
             }
             else {
-                return colorOn;
+                return colors.on;
             }
         };
         canvasNum = function($this, hitDigit) {
-            // $this.html(hitDigit);
-            var colorOn, colorOff;
 
-            colorOn = "rgba(0,255,0,1)";
-            colorOff = "rgba(0,255,0,0.2)";
+            var colors = {
+                on: "rgba(0,255,0,1)",
+                off: "rgba(0,255,0,0.15)"
+            }
 
             var canvas,
-                context, cArray;
+                context, cArray, shapeArray;
 
             cArray = {
                 tb: [0,2,3,5,6,7,8,9],
@@ -48,45 +48,47 @@
                 bl: [0,2,6,8],
                 br: [0,1,3,4,5,6,7,8,9]
             }
+            sArray = {
+                tb: [6,4, 10,0, 30,0, 34,4, 30,8, 10,8],
+                mb: [6,36, 10,32, 30,32, 34,36, 30,40, 10,40],
+                bb: [6,68, 10,64, 30,64, 34,68, 30,72, 10,72],
+                tl: [0,10, 4,6, 8,10, 8,30, 4,34, 0,30],
+                tr: [32,10, 36,6, 40,10, 40,30, 36,34, 32,30],
+                bl: [0,42, 4,38, 8,42, 8,62, 4,66, 0,62],
+                br: [32,42, 36,38, 40,42, 40,62, 36,66, 32,62]
+            }
                 
             canvas = document.createElement("canvas");
-            canvas.width = 20;
-            canvas.height = 36;
+            canvas.width = 40;
+            canvas.height = 72;
 
             topBar = canvas.getContext("2d");
-            tbArray = [3,2, 5,0, 15,0, 17,2, 15,4, 5,4];
-            tbColor = arrayCheck(cArray.tb, hitDigit, colorOn, colorOff);
-            polyDraw(topBar, tbArray, tbColor);
+            tbColor = arrayCheck(cArray.tb, hitDigit, colors);
+            polyDraw(topBar, sArray.tb, tbColor);
 
             midBar = canvas.getContext("2d");
-            mbArray = [3,18, 5,16, 15,16, 17,18, 15,20, 5,20];
-            mbColor = arrayCheck(cArray.mb, hitDigit, colorOn, colorOff);
-            polyDraw(midBar, mbArray, mbColor);
+            mbColor = arrayCheck(cArray.mb, hitDigit, colors);
+            polyDraw(midBar, sArray.mb, mbColor);
 
             bottomBar = canvas.getContext("2d");
-            bbArray = [3,34, 5,32, 15,32, 17,34, 15,36, 5,36];
-            bbColor = arrayCheck(cArray.bb, hitDigit, colorOn, colorOff);
-            polyDraw(bottomBar, bbArray, bbColor);
+            bbColor = arrayCheck(cArray.bb, hitDigit, colors);
+            polyDraw(bottomBar, sArray.bb, bbColor);
 
             topLeft = canvas.getContext("2d");
-            tlArray = [0,5, 2,3, 4,5, 4,15, 2,17, 0,15];
-            tlColor = arrayCheck(cArray.tl, hitDigit, colorOn, colorOff);
-            polyDraw(topLeft, tlArray, tlColor);
+            tlColor = arrayCheck(cArray.tl, hitDigit, colors);
+            polyDraw(topLeft, sArray.tl, tlColor);
 
             topRight = canvas.getContext("2d");
-            trArray = [16,5, 18,3, 20,5, 20,15, 18,17, 16,15];
-            trColor = arrayCheck(cArray.tr, hitDigit, colorOn, colorOff);
-            polyDraw(topRight, trArray, trColor);
+            trColor = arrayCheck(cArray.tr, hitDigit, colors);
+            polyDraw(topRight, sArray.tr, trColor);
 
             bottomLeft = canvas.getContext("2d");
-            blArray = [0,21, 2,19, 4,21, 4,31, 2,33, 0,31];
-            blColor = arrayCheck(cArray.bl, hitDigit, colorOn, colorOff);
-            polyDraw(bottomLeft, blArray, blColor);
+            blColor = arrayCheck(cArray.bl, hitDigit, colors);
+            polyDraw(bottomLeft, sArray.bl, blColor);
 
             bottomRight = canvas.getContext("2d");
-            brArray = [16,21, 18,19, 20,21, 20,31, 18,33, 16,31];
-            brColor = arrayCheck(cArray.br, hitDigit, colorOn, colorOff);
-            polyDraw(bottomRight, brArray, brColor);
+            brColor = arrayCheck(cArray.br, hitDigit, colors);
+            polyDraw(bottomRight, sArray.br, brColor);
 
 
 
