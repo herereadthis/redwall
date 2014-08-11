@@ -2,7 +2,7 @@
     define(['jquery', 'PageStats'],
         function($, PageStats) {
         var exports, gVars, makeItHappen, dVars, moduleName, makeNumbers, 
-            addNumberCell, canvasNum, polyDraw;
+            addNumberCell, canvasNum, polyDraw, setParentWidth;
         exports = {};
         gVars = {
             figures: 6
@@ -10,7 +10,18 @@
         dVars= {};
         moduleName = 'hit_counter';
         _window = $(window);
-        polyDraw = function(context,polyArray, color) {
+        // checks to see if a number exists in an array.
+        // return one color if true, another color if false.
+        arrayCheck = function(testArray, hitDigit, colors) {
+            if (testArray.indexOf(hitDigit) === -1) {
+                return colors.off;
+            }
+            else {
+                return colors.on;
+            }
+        };
+        // draws a polygon, given the context, the array of coordinates, and color
+        polyDraw = function(context, polyArray, color) {
             var coords;
             context.beginPath();
             context.moveTo(polyArray[0], polyArray[1]);
@@ -21,84 +32,73 @@
             context.fillStyle = color;
             context.fill();
         };
-        arrayCheck = function(testArray, hitDigit, colors) {
-            if (testArray.indexOf(hitDigit) === -1) {
-                return colors.off;
-            }
-            else {
-                return colors.on;
-            }
-        };
         canvasNum = function($this, hitDigit) {
+            var canvas, colors, lcd, key, obj, cMatch;
 
-            var colors = {
+            colors = {
                 on: "rgba(0,255,0,1)",
                 off: "rgba(0,255,0,0.15)"
             }
-
-            var canvas,
-                context, cArray, shapeArray;
-
-            cArray = {
-                tb: [0,2,3,5,6,7,8,9],
-                mb: [2,3,4,5,6,8,9],
-                bb: [0,2,3,5,6,8],
-                tl: [0,4,5,6,8,9],
-                tr: [0,1,2,3,4,7,8,9],
-                bl: [0,2,6,8],
-                br: [0,1,3,4,5,6,7,8,9]
-            }
-            sArray = {
-                tb: [6,4, 10,0, 30,0, 34,4, 30,8, 10,8],
-                mb: [6,36, 10,32, 30,32, 34,36, 30,40, 10,40],
-                bb: [6,68, 10,64, 30,64, 34,68, 30,72, 10,72],
-                tl: [0,10, 4,6, 8,10, 8,30, 4,34, 0,30],
-                tr: [32,10, 36,6, 40,10, 40,30, 36,34, 32,30],
-                bl: [0,42, 4,38, 8,42, 8,62, 4,66, 0,62],
-                br: [32,42, 36,38, 40,42, 40,62, 36,66, 32,62]
-            }
-                
             canvas = document.createElement("canvas");
-            canvas.width = 40;
-            canvas.height = 72;
-
-            topBar = canvas.getContext("2d");
-            tbColor = arrayCheck(cArray.tb, hitDigit, colors);
-            polyDraw(topBar, sArray.tb, tbColor);
-
-            midBar = canvas.getContext("2d");
-            mbColor = arrayCheck(cArray.mb, hitDigit, colors);
-            polyDraw(midBar, sArray.mb, mbColor);
-
-            bottomBar = canvas.getContext("2d");
-            bbColor = arrayCheck(cArray.bb, hitDigit, colors);
-            polyDraw(bottomBar, sArray.bb, bbColor);
-
-            topLeft = canvas.getContext("2d");
-            tlColor = arrayCheck(cArray.tl, hitDigit, colors);
-            polyDraw(topLeft, sArray.tl, tlColor);
-
-            topRight = canvas.getContext("2d");
-            trColor = arrayCheck(cArray.tr, hitDigit, colors);
-            polyDraw(topRight, sArray.tr, trColor);
-
-            bottomLeft = canvas.getContext("2d");
-            blColor = arrayCheck(cArray.bl, hitDigit, colors);
-            polyDraw(bottomLeft, sArray.bl, blColor);
-
-            bottomRight = canvas.getContext("2d");
-            brColor = arrayCheck(cArray.br, hitDigit, colors);
-            polyDraw(bottomRight, sArray.br, brColor);
-
-
-
-
+            canvas.width = 120;
+            canvas.height = 240;
+            // object of all the bars to make lcd numbers
+            // cMatch represents when the bar is "on" for that specific number
+            // poly is the shape of the bar
+            lcd = {
+                // top horizontal bar
+                tb: {
+                    cMatch: [0,2,3,5,6,7,8,9],
+                    poly: [18,12, 30,0, 90,0, 102,12, 90,24, 30,24]
+                },
+                // middle horizontal bar
+                mb: {
+                    cMatch: [2,3,4,5,6,8,9],
+                    poly: [18,108, 30,96, 90,96, 102,108, 90,120, 30,120]
+                },
+                // bottom horizontal bar
+                bb: {
+                    cMatch: [0,2,3,5,6,8],
+                    poly: [18,204, 30,192, 90,192, 102,204, 90,216, 30,216]  
+                },
+                // top left vertical bar
+                tl: {
+                    cMatch: [0,4,5,6,8,9],
+                    poly: [0,30, 12,18, 24,30, 24,90, 12,102, 0,90]
+                },
+                // top right vertical bar
+                tr: {
+                    cMatch: [0,1,2,3,4,7,8,9], 
+                    poly: [96,30, 108,18, 120,30, 120,90, 108,102, 96,90]
+                },
+                // bottom left vertical bar
+                bl: {
+                    cMatch: [0,2,6,8],
+                    poly: [0,126, 12,114, 24,126, 24,186, 12,198, 0,186]
+                },
+                // bottom right vertical bar
+                br: {
+                    cMatch: [0,1,3,4,5,6,7,8,9],
+                    poly: [96,126, 108,114, 120,126, 120,186, 108,198, 96,186] 
+                }
+            }
+            // loop through lcd object
+            for ( key in lcd) {
+                // isolate the specific bar
+                obj = lcd[key];
+                // determine if bar is "on" or "off" color for that specific digit
+                cMatch = arrayCheck(obj.cMatch, hitDigit, colors);
+                // create context for canvas for the spcific bar
+                obj.context = canvas.getContext("2d");
+                // draw the bar
+                polyDraw(obj.context, obj.poly, cMatch);
+            }
+            
             return $this.css({
                 "background-image": "url(" + (canvas.toDataURL("image/png")) + ")"
             });
-
-
         };
+        // creates a block to write number, and gives ID and data attribute
         addNumberCell = function($this, placeNumber) {
             var placeNumberClass = 'counter_digit_' + placeNumber;
             $counterContainer = $this.find('#' + moduleName);
@@ -106,6 +106,7 @@
             $counterContainer.prepend($('<div />').addClass(placeNumberClass).
                 attr('data-hit-digit', 0));
         };
+        // adds blocks to container based on specified number
         makeNumbers = function($this, pageHits) {
             var _i, _len, pageHits;
             _len = dVars.figures;
@@ -113,11 +114,23 @@
                 addNumberCell($this, _i);
             }
         };
+        // sets width of hit counter box to prevent shrinkage
+        setParentWidth = function($this, figures) {
+            // var containerWidth, cellWidth;
+            var containerWidth = 0;
+            $this.find('[data-hit-digit]').each(function() {
+                containerWidth += $(this).outerWidth();
+            });
+
+            // containerWidth = $this.find('[data-hit-digit]').outerWidth() * figures;
+            $('#hit_counter').width(containerWidth);
+        };
         makeItHappen = function($this) {
             dVars.figures = parseInt($this.data('hit-counter-figures'), 10) || gVars.figures;
             var canonical = $('[rel="canonical"]').attr('href');
             var jsonFile = 'http://redwall.herereadthis.com/api/page_stats/?url=' + canonical;
             makeNumbers($this, dVars.figures);
+            setParentWidth($this, dVars.figures);
             $.ajax({
                 url: jsonFile,
                 type: 'get',

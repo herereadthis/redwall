@@ -14,7 +14,7 @@
 
 
 [data-module="hit_counter"] {
-    padding: 1rem 0;
+    padding: 2rem 0 1rem 0;
     margin: 0 auto;
     text-align: center;
     display: table;
@@ -22,7 +22,7 @@
     width: auto;
     p {
         color: #FF0;
-        padding: 0 0.5rem;
+        padding: 1rem 0.5rem 0 0.5rem;
     }
     > div {
         float: none;
@@ -30,35 +30,38 @@
         vertical-align: top;
     }
 }
-
 #hit_counter {
     position: relative;
-    padding: 1px;
+    padding: 0.1rem;
     z-index: 6;
     overflow: auto;
-    border: 1px solid #808080;
+    border: 0.1rem solid #808080;
     border-width: 0.1rem;
     border-style: solid;
     border-color: #C0C0C0 #404040 #404040 #C0C0C0;
-    box-shadow: 
-        inset 0px 0px 0 1px #808080;
+    box-shadow: inset 0 0 0 0.1rem #808080;
 
     div {
-        width: 2rem;
-        height: 3.6rem;
-        border-width: 0.1rem;
+        width: 1.6rem;
+        height: 2.9rem;
+        border-width: 0.1rem 0rem;
+        // return to border-width: 0.1rem if we wan to split cells
+        // border-width: 0.1rem;
         border-style: solid;
         border-color: #404040 #C0C0C0 #C0C0C0 #404040;
         float: left;
-        font-family: "courier new", "courier", monospace;
-        color: #0F0;
-        // padding: 0.3rem 0 0.2rem 0;
         padding: 0.3rem;
+        background-color: #000;
         background-position: 0.3rem 0.3rem;
         background-repeat: no-repeat;
-        background-size: 2rem 3.6rem;
-        background-color: #000;
+        background-size: 1.6rem 3.2rem;
         text-align: center;
+        &:first-child {
+            border-left: 0.1rem solid #404040;
+        }
+        &:last-child {
+            border-right: 0.1rem solid #C0C0C0;
+        }
     }
 }
 
