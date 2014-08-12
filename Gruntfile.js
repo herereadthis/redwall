@@ -125,7 +125,7 @@ module.exports = function(grunt) {
                 tasks: ['jekyll']
             },
             js: {
-                files: ['./src/js/*'],
+                files: ['./src/js/*', '<%= paths.components %>/greeneyes/src/js/*'],
                 tasks: ['requirejs']
             }
         },
