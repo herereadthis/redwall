@@ -154,31 +154,64 @@
 }
 
 .cinnamon_fantasy {
+    position: relative;
+
     &:after {
+        position: absolute;
+        bottom: 0;
         content: "";
         display: block;
-        background: transparent url("@{img_path}unicorn_623x150.jpg") scroll repeat 0% 0%;
+        clear: both;
+        background: transparent url("@{img_path}unicorn_623x150.jpg") scroll repeat 50% 100%;
         background-size: contain;
+        width: 100%;
+    }
+    @media @da_baseline {
+        padding-bottom: 24.0770vw;
 
-        @media @da_baseline {
+        &:after {
             height: 24.0770vw;
         }
-        @media @da_2x_small {
+    }
+    @media @da_2x_small {
+        padding-bottom: 16.0513vw;
+
+        &:after {
             height: 16.0513vw;
         }
-        @media @da_x_small {
+    }
+    @media @da_x_small {
+        padding-bottom: 12.0385vw;
+
+        &:after {
             height: 12.0385vw;
         }
-        @media @da_small {
+    }
+    @media @da_small {
+        padding-bottom: 9.6308vw;
+
+        &:after {
             height: 9.6308vw;
         }
-        @media @da_medium {
+    }
+    @media @da_medium {
+        padding-bottom: 8.02568vw;
+
+        &:after {
             height: 8.02568vw;
         }
-        @media @da_large {
+    }
+    @media @da_large {
+        padding-bottom: 6.0193vw;
+
+        &:after {
             height: 6.0193vw;
         }
-        @media @da_x_large {
+    }
+    @media @da_x_large {
+        padding-bottom: 6.0193vw;
+
+        &:after {
             height: 6.0193vw;
         }
     }
