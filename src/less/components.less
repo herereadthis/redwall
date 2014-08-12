@@ -157,9 +157,30 @@
     &:after {
         content: "";
         display: block;
-        background: transparent url("@{img_path}unicorn_673x150.jpg") scroll repeat 0% 0%;
-        height: 7.5rem;
-        background-size: 33.65rem 7.5rem;
+        background: transparent url("@{img_path}unicorn_623x150.jpg") scroll repeat 0% 0%;
+        background-size: contain;
+
+        @media @da_baseline {
+            height: 24.0770vw;
+        }
+        @media @da_2x_small {
+            height: 16.0513vw;
+        }
+        @media @da_x_small {
+            height: 12.0385vw;
+        }
+        @media @da_small {
+            height: 9.6308vw;
+        }
+        @media @da_medium {
+            height: 8.02568vw;
+        }
+        @media @da_large {
+            height: 6.0193vw;
+        }
+        @media @da_x_large {
+            height: 6.0193vw;
+        }
     }
 }
 
