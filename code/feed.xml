@@ -1363,10 +1363,14 @@
 &lt;h4 id=&quot;install-python--pip&quot;&gt;Install Python &amp;amp; Pip&lt;/h4&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install python
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -O http://python-distribute.org/distribute_setup.py
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python distribute_setup.py
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo easy_install pip&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;!--
+	$ curl -O http://python-distribute.org/distribute_setup.py
+$ python distribute_setup.py
+$ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+$ python get-pip.py
+--&gt;
 
 &lt;h4 id=&quot;install-important-pip-packages&quot;&gt;Install important Pip packages&lt;/h4&gt;
 
@@ -1378,6 +1382,25 @@
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install grip
 &lt;span class=&quot;c&quot;&gt;# then to preview a file, run $ grip FILENAME.md&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;h4 id=&quot;install-django-a-web-framework-for-python&quot;&gt;Install Django, a web framework for python&lt;/h4&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install django
+&lt;span class=&quot;c&quot;&gt;# confirm your Django install&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;import django; print(django.get_version())&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# CD to where you keep your repositories&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;PATH_TO&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;/mysites/
+&lt;span class=&quot;c&quot;&gt;# Attempt to run django-admin to create your new project&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;django-admin startproject my_django_app
+&lt;span class=&quot;c&quot;&gt;# It may not work (-bash: django-admin: command not found)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# In which case, symlink your django-admin&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# your path to python may be different&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo ln -s /library/Python/2.7/site-packages/django/bin/django-admin.py /usr/local/bin/django-admin.py
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;django-admin.py startproject my_django_app
+&lt;span class=&quot;c&quot;&gt;# confirm installation, you should see a page at 127.0.0.1:8000/&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;my_django_app
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python manage.py runserver&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;!-- https://code.djangoproject.com/wiki/InstallationPitfalls --&gt;
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;github-setup&quot;&gt;Github Setup&lt;/h3&gt;

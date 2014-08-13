@@ -67,11 +67,15 @@ Once you have Homebrew, you can install pip, which is a tool for installing pyth
 
 {% highlight bash %}
 $ brew install python
-$ curl -O http://python-distribute.org/distribute_setup.py
+$ sudo easy_install pip
+{% endhighlight %}
+
+<!--
+	$ curl -O http://python-distribute.org/distribute_setup.py
 $ python distribute_setup.py
 $ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 $ python get-pip.py
-{% endhighlight %}
+-->
 
 #### Install important Pip packages
 
@@ -85,6 +89,26 @@ $ pip install grip
 # then to preview a file, run $ grip FILENAME.md
 {% endhighlight %}
 
+#### Install Django, a web framework for python
+
+{% highlight bash %}
+$ pip install django
+# confirm your Django install
+$ python -c "import django; print(django.get_version())"
+# CD to where you keep your repositories
+$ cd [PATH_TO]/mysites/
+# Attempt to run django-admin to create your new project
+$ django-admin startproject my_django_app
+# It may not work (-bash: django-admin: command not found)
+# In which case, symlink your django-admin
+# your path to python may be different
+$ sudo ln -s /library/Python/2.7/site-packages/django/bin/django-admin.py /usr/local/bin/django-admin.py
+$ django-admin.py startproject my_django_app
+# confirm installation, you should see a page at 127.0.0.1:8000/
+$ cd my_django_app
+$ python manage.py runserver
+{% endhighlight %}
+<!-- https://code.djangoproject.com/wiki/InstallationPitfalls -->
 -------------
 
 ### Github Setup

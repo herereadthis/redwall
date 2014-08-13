@@ -142,10 +142,14 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <h4 id="install-python--pip">Install Python &amp; Pip</h4>
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install python
-<span class="nv">$ </span>curl -O http://python-distribute.org/distribute_setup.py
-<span class="nv">$ </span>python distribute_setup.py
-<span class="nv">$ </span>curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-<span class="nv">$ </span>python get-pip.py</code></pre></div>
+<span class="nv">$ </span>sudo easy_install pip</code></pre></div>
+
+<!--
+	$ curl -O http://python-distribute.org/distribute_setup.py
+$ python distribute_setup.py
+$ curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+$ python get-pip.py
+-->
 
 <h4 id="install-important-pip-packages">Install important Pip packages</h4>
 
@@ -157,6 +161,25 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <span class="nv">$ </span>pip install grip
 <span class="c"># then to preview a file, run $ grip FILENAME.md</span></code></pre></div>
 
+<h4 id="install-django-a-web-framework-for-python">Install Django, a web framework for python</h4>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>pip install django
+<span class="c"># confirm your Django install</span>
+<span class="nv">$ </span>python -c <span class="s2">&quot;import django; print(django.get_version())&quot;</span>
+<span class="c"># CD to where you keep your repositories</span>
+<span class="nv">$ </span><span class="nb">cd</span> <span class="o">[</span>PATH_TO<span class="o">]</span>/mysites/
+<span class="c"># Attempt to run django-admin to create your new project</span>
+<span class="nv">$ </span>django-admin startproject my_django_app
+<span class="c"># It may not work (-bash: django-admin: command not found)</span>
+<span class="c"># In which case, symlink your django-admin</span>
+<span class="c"># your path to python may be different</span>
+<span class="nv">$ </span>sudo ln -s /library/Python/2.7/site-packages/django/bin/django-admin.py /usr/local/bin/django-admin.py
+<span class="nv">$ </span>django-admin.py startproject my_django_app
+<span class="c"># confirm installation, you should see a page at 127.0.0.1:8000/</span>
+<span class="nv">$ </span><span class="nb">cd </span>my_django_app
+<span class="nv">$ </span>python manage.py runserver</code></pre></div>
+
+<!-- https://code.djangoproject.com/wiki/InstallationPitfalls -->
 <hr />
 
 <h3 id="github-setup">Github Setup</h3>
