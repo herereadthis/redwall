@@ -112,6 +112,12 @@ module.exports = function(grunt) {
                 ],
                 tasks: ["copy:build"] 
             },
+            images: {
+                files: [
+                    "<%= paths.src %>/images/{,*/}*.*"
+                ],
+                tasks: ["copy:build"]   
+            },
             less: {
                 files: ["./src/less/*", "./src/less/*/*"],
                 tasks: ["less"]

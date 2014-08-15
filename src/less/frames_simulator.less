@@ -158,11 +158,24 @@
         }
     }
 }
+/*
 .frames_arrows {
     position: absolute;
     width: 1.6rem;
     height: 1.6rem;
     background-image: url("@{img_path}win95_sprites.png");
+    background-size: 8rem 10rem;
+}
+*/
+.frames_arrows {
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url("@{img_path}win95_sprites.png");
+        background-size: 8rem 10rem;
+    }
 }
 .frames_scrollbar {
     position: absolute;
@@ -177,21 +190,15 @@
     background-size: 0.2rem 0.2rem;
     background-position: 0 0, 0.1rem 0.1rem;
 
-    &:before, &:after {
-        content: "";
-        position: absolute;
-        width: 1.6rem;
-        height: 1.6rem;
-        background-image: url("@{img_path}win95_sprites.png");
-    }
     &:before {
         top: 0;
         left: 0;
+        background-position: 0rem -2rem;
     }
     &:after {
         bottom: 0;
         left: 0;
-        background-position: -1.6rem 0;
+        background-position: -1.6rem -2rem;
     }
     span {
         top: 1.6rem;
@@ -246,21 +253,14 @@
         right: 75%;
         left: 0.4rem;
     }
-    &:before, &:after {
-        content: "";
-        position: absolute;
-        width: 1.6rem;
-        height: 1.6rem;
-        background-image: url("@{img_path}win95_sprites.png");
-    }
     &:before {
         top: 0;
         left: 0;
-        background-position: -3.2rem 0;
+        background-position: -3.2rem -2rem;
     }
     &:after {
         top: 0;
-        background-position: -4.8rem 0;
+        background-position: -4.8rem -2rem;
 
         @media @da_baseline {
             right: 1.9rem;
@@ -306,7 +306,7 @@
         linear-gradient(180deg, @wdg 0.0rem, @wdg 0.1rem,
             @wlg 0.1rem, @wlg 1.5rem, #FFF 1.5rem, #FFF 1.6rem,
             @wlg 1.6rem, @wlg 1.6rem);
-    background-size: 16rem 6rem, 16rem 6rem, 100% 1.7rem;
-    background-position: 0 -2rem, 100% -4rem, 0 0;
+    background-size: 16rem 20rem, 16rem 20rem, 100% 1.7rem;
+    background-position: 0 0rem, 100% -2rem, 0 0;
     background-repeat: no-repeat;
 }

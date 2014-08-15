@@ -84,7 +84,8 @@
             content: "";
             display: block;
             background-image: url("@{img_path}win95_sprites.png");
-            background-position: -6.4rem 0;
+            background-position: 0 -3rem;
+            background-size: 4rem 5rem;
             width: 1.6rem;
             height: 1.6rem;
             position: absolute;
@@ -93,12 +94,18 @@
         }
     }
 }
-.popup_button, .popup_button > span {
+.popup_button {
+    position: absolute;
+    top: 0.6rem;
     display: block;
     width: 1.6rem;
     height: 1.4rem;
-    background-repeat: no-repeat;
+    text-indent: -9999px;
+    background-image: url("@{img_path}win95_sprites.png");
+    background-repeat: no-repeat; 
+    background-size: 8rem 10rem;
 }
+/*
 .popup_button {
     position: absolute;
     top: 0.6rem;
@@ -119,9 +126,11 @@
 
     }
 }
+*/
 .popup_close {
     right: 0.6rem;
-
+    background-position: -3.2rem -4rem;
+    /*
     > span {
         background-image:
             linear-gradient(0deg, @wlg 0%, @wlg 100%),
@@ -148,10 +157,12 @@
             0.1rem 0.3rem,0.1rem 0.5rem,0.1rem 0.5rem,
             0.8rem 0.7rem;
     }
+    */
 }
 .popup_resize {
     right: 2.4rem;
-
+    background-position: -1.6rem -4rem;
+    /*
     > span {
         background-image:
             linear-gradient(0deg, @wlg 0%, @wlg 100%),
@@ -163,10 +174,12 @@
         background-size:
             0.6rem 0.5rem,0.7rem 0.6rem,0.9rem 0.9rem,0.9rem 0.9rem;
     }
+    */
 }
 .popup_minimize {
     right: 4rem;
-
+    background-position: 0rem -4rem;
+    /*
     > span {
         background-image:
             linear-gradient(0deg, #000000 0%, #000000 100%);
@@ -174,4 +187,5 @@
             0.4rem 0.9rem;
         background-size: 0.6rem 0.2rem;
     }
+    */
 }
