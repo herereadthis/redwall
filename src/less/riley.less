@@ -1,4 +1,6 @@
-
+[data-module="riley_fu"] {
+    background-repeat: repeat-y;
+}
 
 #riley {
     background-color: rgba(115, 194, 251, 0.5);
@@ -34,27 +36,21 @@
         padding-top: 6rem;
 
         @media @da_baseline {
-            background-position: 100% 100%;
         }
         @media @da_small {
             padding-right: (1 / 6) * @pw_x_small;
-            background-position: ((5 / 6) * @pw_x_small) 0;
         }
         @media @da_small {
             padding-right: (1 / 6) * @pw_small;
-            background-position: ((5 / 6) * @pw_small) 0;
         }
         @media @da_medium {
             padding-right: (1 / 6) * @pw_medium;
-            background-position: ((5 / 6) * @pw_medium) 0;
         }
         @media @da_large {
             padding-right: (1 / 6) * @pw_large;
-            background-position: ((5 / 6) * @pw_large) 0;
         }
         @media @da_x_large {
             padding-right: (1 / 6) * @pw_x_large;
-            background-position: ((5 / 6) * @pw_x_large) 0;
         }
     }
     h3 {
@@ -69,12 +65,14 @@
     }
 }
 
-.riley_test {
-    height: 200px;
+
+#rf {
+    width: 87.2rem;
+    height: 10rem;
+    margin: 5rem auto;
     background-repeat: repeat-y;
 }
-
-
+/*
 // blue
 @rb_b1: #0090D9;
 @rb_b2: #388AED;
@@ -101,9 +99,7 @@
 @rb_y2: #CFA632;
 @rb_y3: #D8AD34;
 
-
 .riley_bg {
-    /*min-height: 200px;*/
     background-image: linear-gradient(90deg,
         @rb_b1 0.0rem,  @rb_b1 0.8rem,  @rb_p1 0.8rem,  @rb_p1 1.6rem,  @rb_b2 1.6rem,  @rb_b2 2.4rem,
         @rb_y1 2.4rem,  @rb_y1 3.2rem,  @rb_b3 3.2rem,  @rb_b3 4.0rem,  @rb_p2 4.0rem,  @rb_p2 4.8rem,
@@ -145,6 +141,7 @@
     background-size: 87.2rem 100%;
     background-repeat: no-repeat;
 }
+*/
 #riley_foo {
     content: "";
     position: absolute;
