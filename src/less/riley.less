@@ -69,140 +69,79 @@
     }
 }
 
-#riley_test {
+.riley_test {
     height: 200px;
     background-repeat: repeat-y;
 }
+
+
 // blue
-@rb_001: #0E90D2;
-@rb_003: #3F8BE6;
-@rb_005: #0B90D7;
-@rb_007: #0B91D6;
-@rb_011: #0E8FD6;
-@rb_013: #408AE9;
-@rb_016: #0D90D7;
-@rb_018: #3A8BE6;
-@rb_020: #0B91D7;
-@rb_021: #198FC8;
-@rb_022: #198FC8;
-@rb_025: #3E8DE7;
-@rb_028: #0C95D7;
-@rb_031: #3B8CE6;
-@rb_033: #0C8FD7;
-@rb_035: #0B8EDA;
-@rb_037: #398CE9;
-@rb_038: #1092D5;
-@rb_040: #0D94DB;
-@rb_042: #3D8DEB;
-@rb_044: #0D91D9;
-@rb_046: #428AEB;
-@rb_048: #3F8DE9;
-@rb_051: #3E8DEC;
-@rb_053: #3E8CEC;
-@rb_056: #3E8CEE;
-@rb_058: #3C8FEE;
-@rb_059: #0B95DC;
-@rb_061: #0B94DC;
-@rb_064: #3E8FEB;
-@rb_066: #0C91DC;
-@rb_069: #0A97DC;
-@rb_073: #3C8FEB;
-@rb_076: #4590EA;
-@rb_079: #0C94D3;
-@rb_081: #0D94DB;
-@rb_084: #0D98DC;
-@rb_086: #4692EC;
-@rb_090: #0A9CE0;
-@rb_092: #4A94F0;
-@rb_094: #4894EF;
-@rb_095: #0A98DC;
-@rb_097: #0B98DC;
-@rb_099: #3C96EA;
-@rb_100: #0B98DD;
-@rb_102: #4294EC;
-@rb_105: #4495EE;
-@rb_107: #4796EA;
-@rb_108: #0E99E3;
-@rb_109: #309BF0;
-
+@rb_b1: #0090D9;
+@rb_b2: #388AED;
+@rb_b3: #008DDB;
+@rb_b4: #068ECA;
+@rb_b5: #0097DF;
+@rb_b6: #0093DE;
+@rb_b7: #3694ED;
+@rb_b8: #4192F0;
+@rb_b9: #009AE5;
+@rb_b0: #2799F3;
 // pink
-@rb_002: #C96977;
-@rb_006: #CB6573;
-@rb_008: #CB6676;
-@rb_012: #CB6371;
-@rb_014: #C96474;
-@rb_017: #CA6774;
-@rb_027: #CC6874;
-@rb_029: #CF6671;
-@rb_034: #CA6571;
-@rb_039: #CC6670;
-@rb_045: #CC6571;
-@rb_054: #D06674;
-@rb_057: #D4AB34;
-@rb_065: #D16772;
-@rb_072: #D36770;
-@rb_078: #D36974;
-@rb_087: #D56875;
-@rb_093: #D26D78;
-@rb_101: #D16E7C;
-@rb_104: #D56C7C;
-
+@rb_p1: #D3707E;
+@rb_p2: #CD6472;
+@rb_p3: #D46773;
 // black
-@rb_009: #202B3D;
-@rb_023: #182A46;
-
+@rb_k1: #202B3D;
+@rb_k2: #182A46;
 // white
-@rb_015: #E2EBF7;
-@rb_062: #EFF2F6;
-
+@rb_w1: #E2EBF7;
+@rb_w2: #EFF2F6;
 // yellow
-@rb_024: #D4A934;
-@rb_004: #CFA632;
-@rb_089: #D8AD34;
-
-
+@rb_y1: #D4A934;
+@rb_y2: #CFA632;
+@rb_y3: #D8AD34;
 
 
 .riley_bg {
     /*min-height: 200px;*/
     background-image: linear-gradient(90deg,
-        @rb_001 0.0rem,  @rb_001 0.8rem,  @rb_002 0.8rem,  @rb_002 1.6rem,  @rb_003 1.6rem,  @rb_003 2.4rem,
-        @rb_004 2.4rem,  @rb_004 3.2rem,  @rb_005 3.2rem,  @rb_005 4.0rem,  @rb_006 4.0rem,  @rb_006 4.8rem,
-        @rb_007 4.8rem,  @rb_007 5.6rem,  @rb_008 5.6rem,  @rb_008 6.4rem,  @rb_009 6.4rem,  @rb_009 7.2rem,
-        @rb_004 7.2rem,  @rb_004 8.0rem,  @rb_011 8.0rem,  @rb_011 8.8rem,  @rb_012 8.8rem,  @rb_012 9.6rem,
-        @rb_013 9.6rem,  @rb_013 10.4rem, @rb_014 10.4rem, @rb_014 11.2rem, @rb_015 11.2rem, @rb_015 12.0rem,
-        @rb_016 12.0rem, @rb_016 12.8rem, @rb_017 12.8rem, @rb_017 13.6rem, @rb_018 13.6rem, @rb_018 14.4rem,
-        @rb_004 14.4rem, @rb_004 15.2rem, @rb_020 15.2rem, @rb_020 16.0rem, @rb_004 16.0rem, @rb_004 16.8rem,
-        @rb_022 16.8rem, @rb_022 17.6rem, @rb_023 17.6rem, @rb_023 18.4rem, @rb_024 18.4rem, @rb_024 19.2rem,
-        @rb_025 19.2rem, @rb_025 20.0rem, @rb_015 20.0rem, @rb_015 20.8rem, @rb_027 20.8rem, @rb_027 21.6rem,
-        @rb_028 21.6rem, @rb_028 22.4rem, @rb_029 22.4rem, @rb_029 23.2rem, @rb_023 23.2rem, @rb_023 24.0rem,
-        @rb_031 24.0rem, @rb_031 24.8rem, @rb_004 24.8rem, @rb_004 25.6rem, @rb_033 25.6rem, @rb_033 26.4rem,
-        @rb_034 26.4rem, @rb_034 27.2rem, @rb_035 27.2rem, @rb_035 28.0rem, @rb_015 28.0rem, @rb_015 28.8rem,
-        @rb_037 28.8rem, @rb_037 29.6rem, @rb_038 29.6rem, @rb_038 30.4rem, @rb_039 30.4rem, @rb_039 31.2rem,
-        @rb_040 31.2rem, @rb_040 32.0rem, @rb_024 32.0rem, @rb_024 32.8rem, @rb_042 32.8rem, @rb_042 33.6rem,
-        @rb_023 33.6rem, @rb_023 34.4rem, @rb_044 34.4rem, @rb_044 35.2rem, @rb_045 35.2rem, @rb_045 36.0rem,
-        @rb_046 36.0rem, @rb_046 36.8rem, @rb_024 36.8rem, @rb_024 37.6rem, @rb_048 37.6rem, @rb_048 38.4rem,
-        @rb_015 38.4rem, @rb_015 39.2rem, @rb_024 39.2rem, @rb_024 40.0rem, @rb_051 40.0rem, @rb_051 40.8rem,
-        @rb_024 40.8rem, @rb_024 41.6rem, @rb_053 41.6rem, @rb_053 42.4rem, @rb_054 42.4rem, @rb_054 43.2rem,
-        @rb_009 43.2rem, @rb_009 44.0rem, @rb_056 44.0rem, @rb_056 44.8rem, @rb_057 44.8rem, @rb_057 45.6rem,
-        @rb_058 45.6rem, @rb_058 46.4rem, @rb_059 46.4rem, @rb_059 47.2rem, @rb_089 47.2rem, @rb_089 48.0rem,
-        @rb_061 48.0rem, @rb_061 48.8rem, @rb_062 48.8rem, @rb_062 49.6rem, @rb_024 49.6rem, @rb_024 50.4rem,
-        @rb_064 50.4rem, @rb_064 51.2rem, @rb_065 51.2rem, @rb_065 52.0rem, @rb_066 52.0rem, @rb_066 52.8rem,
-        @rb_023 52.8rem, @rb_023 53.6rem, @rb_089 53.6rem, @rb_089 54.4rem, @rb_069 54.4rem, @rb_069 55.2rem,
-        @rb_089 55.2rem, @rb_089 56.0rem, @rb_062 56.0rem, @rb_062 56.8rem, @rb_072 56.8rem, @rb_072 57.6rem,
-        @rb_073 57.6rem, @rb_073 58.4rem, @rb_009 58.4rem, @rb_009 59.2rem, @rb_024 59.2rem, @rb_024 60.0rem,
-        @rb_076 60.0rem, @rb_076 60.8rem, @rb_024 60.8rem, @rb_024 61.6rem, @rb_078 61.6rem, @rb_078 62.4rem,
-        @rb_079 62.4rem, @rb_079 63.2rem, @rb_024 63.2rem, @rb_024 64.0rem, @rb_081 64.0rem, @rb_081 64.8rem,
-        @rb_062 64.8rem, @rb_062 65.6rem, @rb_089 65.6rem, @rb_089 66.4rem, @rb_084 66.4rem, @rb_084 67.2rem,
-        @rb_089 67.2rem, @rb_089 68.0rem, @rb_086 68.0rem, @rb_086 68.8rem, @rb_087 68.8rem, @rb_087 69.6rem,
-        @rb_009 69.6rem, @rb_009 70.4rem, @rb_089 70.4rem, @rb_089 71.2rem, @rb_090 71.2rem, @rb_090 72.0rem,
-        @rb_089 72.0rem, @rb_089 72.8rem, @rb_092 72.8rem, @rb_092 73.6rem, @rb_093 73.6rem, @rb_093 74.4rem,
-        @rb_094 74.4rem, @rb_094 75.2rem, @rb_095 75.2rem, @rb_095 76.0rem, @rb_062 76.0rem, @rb_062 76.8rem,
-        @rb_097 76.8rem, @rb_097 77.6rem, @rb_089 77.6rem, @rb_089 78.4rem, @rb_099 78.4rem, @rb_099 79.2rem,
-        @rb_100 79.2rem, @rb_100 80.0rem, @rb_101 80.0rem, @rb_101 80.8rem, @rb_102 80.8rem, @rb_102 81.6rem,
-        @rb_023 81.6rem, @rb_023 82.4rem, @rb_104 82.4rem, @rb_104 83.2rem, @rb_105 83.2rem, @rb_105 84.0rem,
-        @rb_024 84.0rem, @rb_024 84.8rem, @rb_107 84.8rem, @rb_107 85.6rem, @rb_108 85.6rem, @rb_108 86.4rem,
-        @rb_109 86.4rem, @rb_109 87.2rem);
+        @rb_b1 0.0rem,  @rb_b1 0.8rem,  @rb_p1 0.8rem,  @rb_p1 1.6rem,  @rb_b2 1.6rem,  @rb_b2 2.4rem,
+        @rb_y1 2.4rem,  @rb_y1 3.2rem,  @rb_b3 3.2rem,  @rb_b3 4.0rem,  @rb_p2 4.0rem,  @rb_p2 4.8rem,
+        @rb_b3 4.8rem,  @rb_b3 5.6rem,  @rb_p2 5.6rem,  @rb_p2 6.4rem,  @rb_k1 6.4rem,  @rb_k1 7.2rem,
+        @rb_y1 7.2rem,  @rb_y1 8.0rem,  @rb_b4 8.0rem,  @rb_b4 8.8rem,  @rb_p2 8.8rem,  @rb_p2 9.6rem,
+        @rb_b2 9.6rem,  @rb_b2 10.4rem, @rb_p2 10.4rem, @rb_p2 11.2rem, @rb_w1 11.2rem, @rb_w1 12.0rem,
+        @rb_b1 12.0rem, @rb_b1 12.8rem, @rb_p2 12.8rem, @rb_p2 13.6rem, @rb_b2 13.6rem, @rb_b2 14.4rem,
+        @rb_y1 14.4rem, @rb_y1 15.2rem, @rb_b3 15.2rem, @rb_b3 16.0rem, @rb_y1 16.0rem, @rb_y1 16.8rem,
+        @rb_b4 16.8rem, @rb_b4 17.6rem, @rb_k2 17.6rem, @rb_k2 18.4rem, @rb_y1 18.4rem, @rb_y1 19.2rem,
+        @rb_b2 19.2rem, @rb_b2 20.0rem, @rb_w1 20.0rem, @rb_w1 20.8rem, @rb_p2 20.8rem, @rb_p2 21.6rem,
+        @rb_b5 21.6rem, @rb_b5 22.4rem, @rb_p3 22.4rem, @rb_p3 23.2rem, @rb_k2 23.2rem, @rb_k2 24.0rem,
+        @rb_b2 24.0rem, @rb_b2 24.8rem, @rb_y1 24.8rem, @rb_y1 25.6rem, @rb_b3 25.6rem, @rb_b3 26.4rem,
+        @rb_p2 26.4rem, @rb_p2 27.2rem, @rb_b3 27.2rem, @rb_b3 28.0rem, @rb_w1 28.0rem, @rb_w1 28.8rem,
+        @rb_b2 28.8rem, @rb_b2 29.6rem, @rb_b1 29.6rem, @rb_b1 30.4rem, @rb_p2 30.4rem, @rb_p2 31.2rem,
+        @rb_b6 31.2rem, @rb_b6 32.0rem, @rb_y1 32.0rem, @rb_y1 32.8rem, @rb_b2 32.8rem, @rb_b2 33.6rem,
+        @rb_k2 33.6rem, @rb_k2 34.4rem, @rb_b6 34.4rem, @rb_b6 35.2rem, @rb_p2 35.2rem, @rb_p2 36.0rem,
+        @rb_b2 36.0rem, @rb_b2 36.8rem, @rb_y1 36.8rem, @rb_y1 37.6rem, @rb_b2 37.6rem, @rb_b2 38.4rem,
+        @rb_w1 38.4rem, @rb_w1 39.2rem, @rb_y1 39.2rem, @rb_y1 40.0rem, @rb_b2 40.0rem, @rb_b2 40.8rem,
+        @rb_y1 40.8rem, @rb_y1 41.6rem, @rb_b2 41.6rem, @rb_b2 42.4rem, @rb_p2 42.4rem, @rb_p2 43.2rem,
+        @rb_k1 43.2rem, @rb_k1 44.0rem, @rb_b2 44.0rem, @rb_b2 44.8rem, @rb_y1 44.8rem, @rb_y1 45.6rem,
+        @rb_b2 45.6rem, @rb_b2 46.4rem, @rb_b6 46.4rem, @rb_b6 47.2rem, @rb_y3 47.2rem, @rb_y3 48.0rem,
+        @rb_b6 48.0rem, @rb_b6 48.8rem, @rb_w1 48.8rem, @rb_w1 49.6rem, @rb_y1 49.6rem, @rb_y1 50.4rem,
+        @rb_b2 50.4rem, @rb_b2 51.2rem, @rb_p3 51.2rem, @rb_p3 52.0rem, @rb_b6 52.0rem, @rb_b6 52.8rem,
+        @rb_k2 52.8rem, @rb_k2 53.6rem, @rb_y3 53.6rem, @rb_y3 54.4rem, @rb_b6 54.4rem, @rb_b6 55.2rem,
+        @rb_y3 55.2rem, @rb_y3 56.0rem, @rb_w1 56.0rem, @rb_w1 56.8rem, @rb_p3 56.8rem, @rb_p3 57.6rem,
+        @rb_b7 57.6rem, @rb_b7 58.4rem, @rb_k1 58.4rem, @rb_k1 59.2rem, @rb_y1 59.2rem, @rb_y1 60.0rem,
+        @rb_b2 60.0rem, @rb_b2 60.8rem, @rb_y1 60.8rem, @rb_y1 61.6rem, @rb_p3 61.6rem, @rb_p3 62.4rem,
+        @rb_b5 62.4rem, @rb_b5 63.2rem, @rb_y1 63.2rem, @rb_y1 64.0rem, @rb_b6 64.0rem, @rb_b6 64.8rem,
+        @rb_w1 64.8rem, @rb_w1 65.6rem, @rb_y3 65.6rem, @rb_y3 66.4rem, @rb_b5 66.4rem, @rb_b5 67.2rem,
+        @rb_y3 67.2rem, @rb_y3 68.0rem, @rb_b8 68.0rem, @rb_b8 68.8rem, @rb_p3 68.8rem, @rb_p3 69.6rem,
+        @rb_k1 69.6rem, @rb_k1 70.4rem, @rb_y3 70.4rem, @rb_y3 71.2rem, @rb_b9 71.2rem, @rb_b9 72.0rem,
+        @rb_y3 72.0rem, @rb_y3 72.8rem, @rb_b8 72.8rem, @rb_b8 73.6rem, @rb_p1 73.6rem, @rb_p1 74.4rem,
+        @rb_b8 74.4rem, @rb_b8 75.2rem, @rb_b5 75.2rem, @rb_b5 76.0rem, @rb_w1 76.0rem, @rb_w1 76.8rem,
+        @rb_b5 76.8rem, @rb_b5 77.6rem, @rb_y3 77.6rem, @rb_y3 78.4rem, @rb_b7 78.4rem, @rb_b7 79.2rem,
+        @rb_b5 79.2rem, @rb_b5 80.0rem, @rb_p3 80.0rem, @rb_p3 80.8rem, @rb_b8 80.8rem, @rb_b8 81.6rem,
+        @rb_k2 81.6rem, @rb_k2 82.4rem, @rb_p1 82.4rem, @rb_p1 83.2rem, @rb_b8 83.2rem, @rb_b8 84.0rem,
+        @rb_y1 84.0rem, @rb_y1 84.8rem, @rb_b8 84.8rem, @rb_b8 85.6rem, @rb_b9 85.6rem, @rb_b9 86.4rem,
+        @rb_b0 86.4rem, @rb_b0 87.2rem);
     background-size: 87.2rem 100%;
     background-repeat: no-repeat;
 }
