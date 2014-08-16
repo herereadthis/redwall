@@ -107,8 +107,15 @@ $ django-admin.py startproject my_django_app
 # confirm installation, you should see a page at 127.0.0.1:8000/
 $ cd my_django_app
 $ python manage.py runserver
+# create a database
+$ python manage.py syncdb
 {% endhighlight %}
+
+<!--
+$ python manage.py startapp polls
+-->
 <!-- https://code.djangoproject.com/wiki/InstallationPitfalls -->
+
 -------------
 
 ### Github Setup

@@ -1398,9 +1398,15 @@ $ python get-pip.py
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;django-admin.py startproject my_django_app
 &lt;span class=&quot;c&quot;&gt;# confirm installation, you should see a page at 127.0.0.1:8000/&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;my_django_app
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python manage.py runserver&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python manage.py runserver
+&lt;span class=&quot;c&quot;&gt;# create a database&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python manage.py syncdb&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;!--
+$ python manage.py startapp polls
+--&gt;
 &lt;!-- https://code.djangoproject.com/wiki/InstallationPitfalls --&gt;
+
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;github-setup&quot;&gt;Github Setup&lt;/h3&gt;
