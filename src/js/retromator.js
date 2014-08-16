@@ -1,7 +1,7 @@
 (function() {
 
-  define(['jquery', 'ColorTuner', 'SocialFu', 'ParallaxScroll', 'HitCounter'],
-    function($, ColorTuner, SocialFu, ParallaxScroll, HitCounter) {
+  define(['jquery', 'ColorTuner', 'SocialFu', 'ParallaxScroll', 'HitCounter', 'RileyFu'],
+    function($, ColorTuner, SocialFu, ParallaxScroll, HitCounter, RileyFu) {
     var exports, gVars, makeItHappen, moduleName;
     exports = {};
     gVars = {};
@@ -13,6 +13,7 @@
         SocialFu.init();
         ColorTuner.init();
         HitCounter.init();
+        RileyFu.init();
     };
     exports.init = function($this) {
         var $element;

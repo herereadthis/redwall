@@ -6,30 +6,18 @@
         gVars = {
             colWidth: 8,
             colLenth: "",
+            breakpoint: [768, 1024, 1280],
+            query: [768, 960, 1152]
         }
         $window = $(window);
         $document = $(document);
         rileyColors = {
-            b1: '#0090D9',
-            b2: '#388AED',
-            b3: '#008DDB',
-            b4: '#068ECA',
-            b5: '#0097DF',
-            b6: '#0093DE',
-            b7: '#3694ED',
-            b8: '#4192F0',
-            b9: '#009AE5',
-            b0: '#2799F3',
-            p1: '#D3707E',
-            p2: '#CD6472',
-            p3: '#D46773',
-            k1: '#202B3D',
-            k2: '#182A46',
-            w1: '#E2EBF7',
-            w2: '#EFF2F6',
-            y1: '#D4A934',
-            y2: '#CFA632',
-            y3: '#D8AD34'
+            b1: '#0090D9', b2: '#388AED', b3: '#008DDB', b4: '#068ECA', b5: '#0097DF',
+            b6: '#0093DE', b7: '#3694ED', b8: '#4192F0', b9: '#009AE5', b0: '#2799F3',
+            p1: '#D3707E', p2: '#CD6472', p3: '#D46773',
+            k1: '#202B3D', k2: '#182A46',
+            w1: '#E2EBF7', w2: '#EFF2F6',
+            y1: '#D4A934', y2: '#CFA632', y3: '#D8AD34'
         };
         rileyColumns = [
             'b1', 'p1', 'b2', 'y1', 'b3', 'p2', 'b3', 'p2', 'k1', 'y1', 'b4', 'p2',
@@ -72,7 +60,6 @@
                 thisRect = rileyRect[i];
                 context.fillStyle = thisRect.fill;
                 context.fillRect(thisRect.x, thisRect.y, thisRect.w, thisRect.h);
-
             }
             $this.css({
                 "background-image": "url(" + (canvas.toDataURL("image/png")) + ")"
@@ -82,20 +69,20 @@
         sizer = function($this) {
             var _width, bgPos, bgX;
             _width = $(document).width();
-            if (_width < 768) {
+            if (_width < gVars.breakpoint[0]) {
                 bgX = (11 / 12) * _width;
             }
-            else if (_width < 1024) {
-                bgX = ((_width - 768) / 2) + ((5 / 6) * 768);
+            else if (_width < gVars.breakpoint[1]) {
+                bgX = ((_width - gVars.query[0]) / 2) + ((5 / 6) * gVars.query[0]);
             }
-            else if (_width < 1280) {
-                bgX = ((_width - 960) / 2) + ((5 / 6) * 960);
+            else if (_width < gVars.breakpoint[2]) {
+                bgX = ((_width - gVars.query[1]) / 2) + ((5 / 6) * gVars.query[1]);
             }
             else {
-                bgX = ((_width - 1152) / 2) + ((5 / 6) * 1152);
+                bgX = ((_width - gVars.query[2]) / 2) + ((5 / 6) * gVars.query[2]);
             }
-            bgX = bgX.toString();
-            bgPos = bgX + 'px 0';
+            bgX = (Math.round(bgX) / 10).toString();
+            bgPos = bgX + 'rem 0';
             $this.css('background-position', bgPos);
         };
         makeItHappen = function($this) {
