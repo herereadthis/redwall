@@ -16,7 +16,7 @@
             // "ParallaxScroll": "parallax_scroll",
             "ParallaxScroll": "../components/greeneyes/src/js/parallax_scroll",
             // google analytics
-            "Analytics": "../components/greeneyes/src/js/analytics",
+            "Analytics": "../components/greeneyes/src/js/google_analytics_universal",
             // jQuery
             "jquery": '../components/jquery/dist/jquery.min',
             // dummy modules for testing
