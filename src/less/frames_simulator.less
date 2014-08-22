@@ -83,16 +83,55 @@
     width: 100%;
     height: 2.2rem;
     border-top: 0.1rem solid #FFF;
-    position: absolute;
     top: -2.1rem;
     background-color: @wlg;
     padding-right: 1.3rem;
     box-sizing: border-box;
+
+    &:before, &:after {
+        display: block;
+        content: "";
+        height: 2rem;
+        position: absolute;
+        background-image: url("@{img_path}win95_sprites.png");
+        background-size: 10rem 14rem;
+
+    }
+    &:before {
+        background-position: 0rem -12rem;
+        width: 8.6rem;
+        left: 2.2rem;
+    }
+    &:after {
+        width: 0.8rem;
+        left: 0;
+        border-right: 0.1rem solid @wdg;
+        border-bottom: 0.1rem solid @wdg;
+        background-position: -8rem -2rem;
+    }
     @media @da_baseline {
         padding-left: 8.9rem;
+
+        &:before {
+            display: none;
+        }
+        &:after {
+            top: 0.4rem;
+        }
+    }
+    @media @da_2x_small {
+        padding-left: 18.8rem;
+        &:before {
+            display: block;
+            top: 0.4rem;
+        }
     }
     @media @da_small {
-        padding-left: 18.8rem;
+        position: absolute;
+
+        &:before, &:after {
+            top: 0;
+        }
     }
 
     span {
@@ -128,6 +167,19 @@
         background-repeat: no-repeat;
         font: normal normal normal 1.3rem/1.3rem "courier", monospace;
         padding: 0.5rem 0 0.2rem 0.6rem;
+
+        &:before {
+            display: block;
+            position: absolute;
+            content: "";
+            top: -0.1rem;
+            left: -6.8rem;
+            width: 7rem;
+            height: 2rem;
+            background-image: url("@{img_path}win95_sprites.png");
+            background-size: 10rem 14rem;
+            background-position: 0 -10rem;
+        }
     }
 }
 
@@ -217,8 +269,8 @@
     position: absolute;
     width: 1.6rem;
     height: 1.6rem;
-    background-image: url("@{img_path}win95_sprites.png");
-    background-size: 8rem 10rem;
+    background: @wlg url("@{img_path}win95_sprites.png");
+    background-size: 10rem 14rem;
 }
 .frames_address_bar span:after {
     right: 0.1rem;
@@ -228,7 +280,6 @@
 }
 .frames_scrollbar {
     position: absolute;
-    top: 0.4rem;
     right: 0.3rem;
     bottom: 0.5rem;
     width: 1.6rem;
@@ -238,6 +289,12 @@
         linear-gradient(45deg, @wlg 25%, transparent 25%, transparent 75%, @wlg 75%, @wlg);
     background-size: 0.2rem 0.2rem;
     background-position: 0 0, 0.1rem 0.1rem;
+    @media @da_baseline {
+        top: 2.6rem;
+    }
+    @media @da_small {
+        top: 0.4rem;
+    }
 
     &:before {
         top: 0;
@@ -355,7 +412,7 @@
         linear-gradient(180deg, @wdg 0.0rem, @wdg 0.1rem,
             @wlg 0.1rem, @wlg 1.5rem, #FFF 1.5rem, #FFF 1.6rem,
             @wlg 1.6rem, @wlg 1.6rem);
-    background-size: 16rem 20rem, 16rem 20rem, 100% 1.7rem;
+    background-size: 20rem 28rem, 20rem 28rem, 100% 1.7rem;
     background-position: 0 0rem, 100% -2rem, 0 0;
     background-repeat: no-repeat;
 }
