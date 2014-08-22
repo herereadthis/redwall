@@ -1,5 +1,4 @@
 #frames_foo {
-    padding: 0.3rem 0 0.5rem 0;
     overflow: auto;
     position: relative;
     display: table;
@@ -24,12 +23,6 @@
 
         linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%),
         linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%);
-    background-size:
-        100% 0.2rem,
-        0.1rem 100%, 100% 0.1rem, 0.1rem 100%, 100% 0.3rem,
-        0.2rem 100%, 100% 0.2rem, 0.2rem 100%, 100% 0.4rem,
-        0.3rem 100%, 100% 0.3rem, 0.3rem 100%, 100% 0.5rem,
-        100% 0.4rem, 0.4rem 100%;
     background-position: 
         0 100%,
         0 0,0 0,100% 0%,0% 100%,
@@ -40,10 +33,24 @@
 
     @media @da_baseline {
         display: block;
+        padding: 0rem 0 0.5rem 0;
+        background-size:
+            100% 0.2rem,
+            0.1rem 100%, 100% 2.2rem, 0.1rem 100%, 100% 0.3rem,
+            0.2rem 100%, 100% 2.3rem, 0.2rem 100%, 100% 0.4rem,
+            0.3rem 100%, 100% 2.4rem, 0.3rem 100%, 100% 0.5rem,
+            100% 0.4rem, 0.4rem 100%;
     }
     @media @da_small {
         display: table;
+        padding: 0.3rem 0 0.5rem 0;
         margin-top: 2.1rem;
+        background-size:
+            100% 0.2rem,
+            0.1rem 100%, 100% 0.1rem, 0.1rem 100%, 100% 0.3rem,
+            0.2rem 100%, 100% 0.2rem, 0.2rem 100%, 100% 0.4rem,
+            0.3rem 100%, 100% 0.3rem, 0.3rem 100%, 100% 0.5rem,
+            100% 0.4rem, 0.4rem 100%;
     }
     &:after {
         content: "";
@@ -81,12 +88,15 @@
 }
 .frames_address_bar {
     width: 100%;
-    height: 2.2rem;
+    height: 2.1rem;
     border-top: 0.1rem solid #FFF;
     top: -2.1rem;
     background-color: @wlg;
     padding-right: 1.3rem;
     box-sizing: border-box;
+    background-image: url("@{img_path}win95_sprites.png");
+    background-size: 10rem 14rem;
+    background-repeat: no-repeat;
 
     &:before, &:after {
         display: block;
@@ -111,19 +121,21 @@
     }
     @media @da_baseline {
         padding-left: 8.9rem;
+        background-position: 2.1rem -10rem;
 
         &:before {
             display: none;
+            top: 0.1rem;
         }
         &:after {
-            top: 0.4rem;
+            top: 0.1rem;
         }
     }
     @media @da_2x_small {
         padding-left: 18.8rem;
+        background-position: 12rem -10rem;
         &:before {
             display: block;
-            top: 0.4rem;
         }
     }
     @media @da_small {
@@ -203,10 +215,13 @@
 
     @media @da_baseline {
         min-height: 10rem;
-        width: 100%;
+        background-position: 0 0, 0 0.3rem;
+        margin-right: 0.3rem;
     }
     @media @da_small {
         width: 25%;
+        margin-right: 0rem;
+        background-position: 0 0;
     }
     @media @da_medium {
         section {
@@ -291,13 +306,18 @@
     background-position: 0 0, 0.1rem 0.1rem;
     @media @da_baseline {
         top: 2.6rem;
+        &:before {
+            top: -0.1rem;
+        }
     }
     @media @da_small {
         top: 0.4rem;
+        &:before {
+            top: 0rem;
+        }
     }
 
     &:before {
-        top: 0;
         left: 0;
         background-position: 0rem -2rem;
     }
