@@ -2,21 +2,22 @@
     define(['jquery', 'PageStats'],
         function($, PageStats) {
         // global variables
-        var exports, gVars, dVars, moduleName, lcd;
+        var exports, gVars, dVars, moduleName, lcd,
         // methods
-        var makeItHappen, makeNumbers, canvasNum, polyDraw, setParentWidth;
+            makeItHappen, makeNumbers, canvasNum, polyDraw, setParentWidth,
+            arrayCheck;
         exports = {};
         gVars = {
             figures: 6,
-            colorOn: "rgba(0,255,0,1)",
-            colorOff: "rgba(0,255,0,0.18)",
+            colorOn: 'rgba(0,255,0,1)',
+            colorOff: 'rgba(0,255,0,0.18)',
             cWidth: 120,
             cHeight: 240
         };
         dVars= {};
         moduleName = 'hit_counter';
         // object of all the bars to make lcd numbers
-        // cMatch represents when the bar is "on" for that specific number
+        // cMatch represents when the bar is 'on' for that specific number
         // poly is the shape of the bar
         lcd = {
             // top horizontal bar
@@ -54,7 +55,7 @@
                 cMatch: [0,1,3,4,5,6,7,8,9],
                 poly: [96,126, 108,114, 120,126, 120,186, 108,198, 96,186] 
             }
-        }
+        };
         // checks to see if a number exists in an array.
         // return one color if true, another color if false.
         arrayCheck = function(testArray, hitDigit) {
@@ -80,7 +81,7 @@
         canvasNum = function($this, hitDigit) {
             var canvas, key, obj, cMatch;
 
-            canvas = document.createElement("canvas");
+            canvas = document.createElement('canvas');
             canvas.width = gVars.cWidth;
             canvas.height = gVars.cHeight;
 
@@ -88,22 +89,22 @@
             for (key in lcd) {
                 // isolate the specific bar
                 obj = lcd[key];
-                // determine if bar is "on" or "off" color for that specific digit
+                // determine if bar is 'on' or 'off' color for that specific digit
                 cMatch = arrayCheck(obj.cMatch, hitDigit);
                 // create context for canvas for the spcific bar
-                obj.context = canvas.getContext("2d");
+                obj.context = canvas.getContext('2d');
                 // draw the bar
                 polyDraw(obj.context, obj.poly, cMatch);
             }
             
             return $this.css({
-                "background-image": "url(" + (canvas.toDataURL("image/png")) + ")"
+                'background-image': 'url(' + (canvas.toDataURL('image/png')) + ')'
             });
         };
         // adds blocks to container based on specified number
         makeNumbers = function($this, figures) {
             var _i, placeNumberClass, $counterContainer, hitNum;
-            for (_i = 0; _i < figures; _i++) {
+            for (_i = 0; _i < figures; _i += 1) {
                 // addNumberCell($this, _i);
                 placeNumberClass = 'counter_digit_' + _i;
                 hitNum = dVars.hitArray;
@@ -135,15 +136,15 @@
                 dVars.hitString = dVars.pageHits.toString();
                 dVars.hitSize = dVars.hitString.length;
                 dVars.hitArray = dVars.hitString.split('');
-                for (num in dVars.hitArray) {
+                for (var num in dVars.hitArray) {
                     dVars.hitArray[num] = parseInt(dVars.hitArray[num], 10);
                 }
                 // reverse the array of numbers because it will loop starting
                 // from the lowest number up.
                 dVars.hitArray.reverse();
-                for (num in dVars.hitArray) {
-                    placeNumberClass = '.counter_digit_' + num;
-                    $this.find(placeNumberClass).data('hit-digit', dVars.hitArray[num]);
+                for (var item in dVars.hitArray) {
+                    placeNumberClass = '.counter_digit_' + item;
+                    $this.find(placeNumberClass).data('hit-digit', dVars.hitArray[item]);
                 }
                 var hitDigit;
                 $this.find('div').each(function(index, element) {
@@ -157,7 +158,7 @@
                 return makeItHappen($this);
             }
             else {
-                element = $("body").find("[data-module=\"" + moduleName + "\"]");
+                element = $('[data-module="' + moduleName + '"]');
                 return element.each(function() {
                     return makeItHappen($(this));
                 });

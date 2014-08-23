@@ -1,14 +1,15 @@
 (function() {
     define(['jquery'], function($) {
-        var exports, rileyColors, gVars, moduleName, rileyColumns, rileyRect, $window, $document;
-        var makeItHappen, makeShape, makeRileyRect, drawCanvas;
+        var exports, rileyColors, gVars, moduleName, rileyColumns, rileyRect,
+            $window, $document,
+            makeItHappen, makeShape, makeRileyRect, drawCanvas, sizer;
         exports = {};
         gVars = {
             colWidth: 8,
-            colLenth: "",
+            colLenth: '',
             breakpoint: [768, 1024, 1280],
             query: [768, 960, 1152]
-        }
+        };
         $window = $(window);
         $document = $(document);
         rileyColors = {
@@ -32,7 +33,7 @@
             'b0'
         ];
         rileyRect = [];
-        moduleName = "riley_fu";
+        moduleName = 'riley_fu';
 
         makeShape = function(x, y, w, h, fill) {
             this.x = x;
@@ -43,7 +44,7 @@
         };
         makeRileyRect = function() {
             var _i, getColor;
-            for (_i = 0;_i < gVars.colLenth;_i++) {
+            for (_i = 0;_i < gVars.colLenth;_i += 1) {
                 getColor = rileyColors[rileyColumns[_i]];
                 rileyRect.push(new makeShape((_i * gVars.colWidth), 0, gVars.colWidth, gVars.colWidth, getColor));
             }
@@ -51,10 +52,10 @@
         drawCanvas = function($this) {
             var canvas, context, thisRect;
                 
-            canvas = document.createElement("canvas");
+            canvas = document.createElement('canvas');
             canvas.width = gVars.colWidth * gVars.colLenth;
             canvas.height = gVars.colWidth;
-            context = canvas.getContext("2d");
+            context = canvas.getContext('2d');
 
             for (var i in rileyRect) {
                 thisRect = rileyRect[i];
@@ -62,7 +63,7 @@
                 context.fillRect(thisRect.x, thisRect.y, thisRect.w, thisRect.h);
             }
             $this.css({
-                "background-image": "url(" + (canvas.toDataURL("image/png")) + ")"
+                'background-image': 'url(' + (canvas.toDataURL('image/png')) + ')'
             });
 
         };
@@ -100,7 +101,7 @@
                 return makeItHappen($this);
             }
             else {
-                element = $("body").find("[data-module=\"" + moduleName + "\"]");
+                element = $('[data-module="' + moduleName + '"]');
                 return element.each(function() {
                     return makeItHappen($(this));
                 });

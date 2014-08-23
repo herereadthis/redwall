@@ -65,30 +65,37 @@ module.exports = function(grunt) {
                 }
             }
         },
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc'
+            },
+            beforeconcat: ['Gruntfile.js', '<%= paths.src %>/js/*']
+            // afterconcat: ['<%= paths.build %>/js/main.js']
+        },
         // compiles LESS file to minified CSS
         less: {
             // 'less:redwall' will pull bellmaker's CSS into redwall CSS
             redwall: {
                 options: {
-                    paths: ["<%= paths.src %>/less"],
+                    paths: ['<%= paths.src %>/less'],
                     // yuicompress: true,
                     // compress: true,
                     cleancss: true
                 },
                 files: {
-                    "<%= paths.build %>/css/code.css": "./src/less/code/code.less",
-                    "<%= paths.build %>/css/main.css": "./src/less/main.less",
-                    "<%= paths.build %>/css/404.css": "./src/less/404.less"
+                    '<%= paths.build %>/css/code.css': './src/less/code/code.less',
+                    '<%= paths.build %>/css/main.css': './src/less/main.less',
+                    '<%= paths.build %>/css/404.css': './src/less/404.less'
                 }
             }
         },
         requirejs: {
             build: {
                 options: {
-                    baseUrl: "<%= paths.src %>/js/",
-                    mainConfigFile: "<%= paths.src %>/js/main.js",
-                    name: "main",
-                    out: "<%= paths.build %>/js/main.js",
+                    baseUrl: '<%= paths.src %>/js/',
+                    mainConfigFile: '<%= paths.src %>/js/main.js',
+                    name: 'main',
+                    out: '<%= paths.build %>/js/main.js',
                     optimize: 'uglify2',
                 }
             }
@@ -107,27 +114,27 @@ module.exports = function(grunt) {
             // runs less task when any less files change
             build: {
                 files: [
-                    "<%= paths.src %>/404.html",
-                    "<%= paths.src %>/xml/foaf.rdf"
+                    '<%= paths.src %>/404.html',
+                    '<%= paths.src %>/xml/foaf.rdf'
                 ],
-                tasks: ["copy:build"] 
+                tasks: ['copy:build'] 
             },
             images: {
                 files: [
-                    "<%= paths.src %>/images/{,*/}*.*"
+                    '<%= paths.src %>/images/{,*/}*.*'
                 ],
-                tasks: ["copy:build"]   
+                tasks: ['copy:build']   
             },
             less: {
-                files: ["./src/less/*", "./src/less/*/*"],
-                tasks: ["less"]
+                files: ['./src/less/*', './src/less/*/*'],
+                tasks: ['less']
             },
             html: {
                 files: ['**/*.html'],
-                tasks: ["xmlpoke:updateLastModified"]
+                tasks: ['xmlpoke:updateLastModified']
             },
             jekyll: {
-                files: ["./src/jekyll_code/*", "./src/jekyll_code/*/*"],
+                files: ['./src/jekyll_code/*', './src/jekyll_code/*/*'],
                 tasks: ['jekyll']
             },
             js: {

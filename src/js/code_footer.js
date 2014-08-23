@@ -1,7 +1,8 @@
 (function() {
-    define(function(require) {
-        var $, exports, gVars, makeItHappen, makeLoops, makeBG, moduleName, gVars, phi;
-        $ = require("jquery");
+    define(['jquery'], function($) {
+        var exports, gVars, phi, moduleName, $window,
+            makeLoops, makeBG, makeItHappen;
+        $ = require('jquery');
         exports = {};
         gVars = {
             canvasWidth: 0,
@@ -12,22 +13,22 @@
             bgBottomPadding: 30
         };
         phi = (1+ Math.sqrt(5))/2 - 1;
-        moduleName = "code_footer";
-        _window = $(window);
+        moduleName = 'code_footer';
+        $window = $(window);
         makeLoops = function() {
             var canvas,
-                context
+                context;
                 
-            canvas = document.createElement("canvas");
+            canvas = document.createElement('canvas');
             canvas.width = gVars.canvasWidth;
             canvas.height = gVars.canvasHeight;
-            context = canvas.getContext("2d");
+            context = canvas.getContext('2d');
 
             // X-COORDINATES
             var maxWidth, rightEdge, leftEdge, phiXPoint, curve1P2X;
 
             // right edge of window
-            maxWidth = gVars.canvasWidth
+            maxWidth = gVars.canvasWidth;
             // right edge of section space
             rightEdge = Math.round((gVars.canvasWidth + gVars.sectionWidth) / 2);
             // left edge of section space
@@ -74,7 +75,7 @@
             context.lineTo(maxWidth,baseline);
             // line to starting point
             context.lineTo(maxWidth,0);
-            context.fillStyle = "rgba(245,245,245,1)";
+            context.fillStyle = 'rgba(245,245,245,1)';
             context.fill();
 
             // stroke isn't needed to trace shape
@@ -82,7 +83,7 @@
             // context.strokeStyle = 'rgba(245,0,245,1)';
             // context.stroke();
 
-            return canvas
+            return canvas;
 
         };
         makeBG = function($this) {
@@ -92,23 +93,23 @@
             $footerBackground = $this.find('#footer_background');
             sectionWidth = $section.width();
 
-            if (sectionWidth != gVars.sectionWidth) {
+            if (sectionWidth !== gVars.sectionWidth) {
                 gVars.sectionWidth = sectionWidth;
                 gVars.sectionPadding = parseInt($section.css('padding-right'), 10);
                 gVars.canvasWidth = $this.width();
                 gVars.canvasHeight = $this.height();
-                console.log(gVars);
+                window.console.log(gVars);
 
                 var canvas1 = makeLoops();
 
                 return $footerBackground.css({
-                    "background-image": "url(" + (canvas1.toDataURL("image/png")) + ")"
+                    'background-image': 'url(' + (canvas1.toDataURL('image/png')) + ')'
                 });
             }
-        }
+        };
         makeItHappen = function($this) {
             makeBG($this);
-            _window.resize(function() {
+            $window.resize(function() {
                 makeBG($this);
             });
         };
@@ -118,7 +119,7 @@
                 return makeItHappen($this);
             }
             else {
-                element = $("body").find("[data-module=\"" + moduleName + "\"]");
+                element = $('[data-module="' + moduleName + '"]');
                 return element.each(function() {
                     return makeItHappen($(this));
                 });

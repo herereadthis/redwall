@@ -17,11 +17,12 @@
 //     data-color-end="00F">Hello, World!</span>
 
 (function() {
-    define(function(require) {
-        var $, exports, gVars, hextToRgb, makeItHappen, makeShape, moduleName;
-        $ = require("jquery");
+    define(['jquery'], function($) {
+        var exports, gVars, moduleName,
+            hexToRgb, makeItHappen, makeShape;
+        $ = require('jquery');
         exports = {};
-        moduleName = "color_tuner";
+        moduleName = 'color_tuner';
         // hexToRgb function taken from
         // http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
         hexToRgb = function(hex) {
@@ -71,15 +72,15 @@
             letterArray = letters.split('');
 
             // for each letter in array...
-            for (_i = 0, _len = letterArray.length; _i < _len; _i++) {
+            for (_i = 0, _len = letterArray.length; _i < _len; _i += 1) {
                 increment = _i / (letterArray.length - 1);
                 // each RGB value gets one more increment of the diff value
                 diffR = Math.round(colors.begin.r + increment * colors.diff.r);
                 diffG = Math.round(colors.begin.g + increment * colors.diff.g);
                 diffB = Math.round(colors.begin.b + increment * colors.diff.b);
                 // output each letter wrapped with inline style of new color
-                letterArray[_i] = '<span style="color: rgb(' + diffR + ',' + diffG
-                    + ',' + diffB + ');">' + letterArray[_i] + '</span>';
+                letterArray[_i] = '<span style="color: rgb(' + diffR + ',' +
+                    diffG + ',' + diffB + ');">' + letterArray[_i] + '</span>';
             }
             // join all the letters together, and spit out as final presentation
             lettersWithColors = letterArray.join('');

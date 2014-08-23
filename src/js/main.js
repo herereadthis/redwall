@@ -1,24 +1,24 @@
 (function() {
-    requirejs.config({
+    require.config({
         paths: {
             // retro homepage
             'Retromator': 'retromator',
-            "ColorTuner": "color_tuner",
-            "HitCounter": "hit_counter",
-            "RileyFu": "riley_fu",
-            "SocialFu": "social_fu",
+            'ColorTuner': 'color_tuner',
+            'HitCounter': 'hit_counter',
+            'RileyFu': 'riley_fu',
+            'SocialFu': 'social_fu',
             // coding blog
             'CodeBlog': 'code_blog',
-            "CodeFooter": "code_footer",
-            "ImageExpander": "image_expander",
+            'CodeFooter': 'code_footer',
+            'ImageExpander': 'image_expander',
             // shared stuffs! 
-            "PageStats": "page_stats",
-            // "ParallaxScroll": "parallax_scroll",
-            "ParallaxScroll": "../components/greeneyes/src/js/parallax_scroll",
+            'PageStats': 'page_stats',
+            // 'ParallaxScroll': 'parallax_scroll',
+            'ParallaxScroll': '../components/greeneyes/src/js/parallax_scroll',
             // google analytics
-            "Analytics": "../components/greeneyes/src/js/google_analytics_universal",
+            'Analytics': '../components/greeneyes/src/js/google_analytics_universal',
             // jQuery
-            "jquery": '../components/jquery/dist/jquery.min',
+            'jquery': '../components/jquery/dist/jquery.min',
             // dummy modules for testing
             'purchase': 'purchase',
             'products': 'products',

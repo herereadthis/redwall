@@ -1,6 +1,6 @@
-define(["credits","products"], function(credits,products) {
+define(['credits','products'], function(credits,products) {
  
-  // console.log("Function : purchaseProduct");
+  // console.log('Function : purchaseProduct');
  
   return {
     purchaseProduct: function() {
@@ -11,5 +11,5 @@ define(["credits","products"], function(credits,products) {
       }
       return false;
     }
-  }
+  };
 });

@@ -6,7 +6,7 @@
     var exports, gVars, makeItHappen, moduleName;
     exports = {};
     gVars = {};
-    moduleName = "code_blog";
+    moduleName = 'code_blog';
 
     makeItHappen = function($this) {
         // purchase.purchaseProduct();

@@ -14,7 +14,7 @@
     var exports, gVars , makeItHappen, moduleName, bgSettings, scroller, $window;
     exports = {};
     $window = $(window);
-    moduleName = "parallax_scroll";
+    moduleName = 'parallax_scroll';
     // options
     var defaultParallaxSpeed;
     defaultParallaxSpeed = 50;
@@ -37,14 +37,14 @@
             bgPosition[1] = bgPosition[0];
         }
         // it should grab top|center|etc as percentages, but we'll force it.
-        for (_i = 0; _i < 2; _i++) {
-            if (bgPosition[_i] === "center") {
+        for (_i = 0; _i < 2; _i += 1) {
+            if (bgPosition[_i] === 'center') {
                 bgPosition[_i] = '50%';
             }
-            else if (bgPosition[_i] === "top" || bgPosition[_i] === "left") {
+            else if (bgPosition[_i] === 'top' || bgPosition[_i] === 'left') {
                 bgPosition[_i] = '0%';
             }
-            else if (bgPosition[_i] === "bottom" || bgPosition[_i] === "right") {
+            else if (bgPosition[_i] === 'bottom' || bgPosition[_i] === 'right') {
                 bgPosition[_i] = '100%';
             }
             if ( /%/.test(bgPosition[_i]) ) {
@@ -66,14 +66,14 @@
         bgParam = {
             bgPosition: bgPosition,
             parallaxSpeed: parallaxSpeed
-        }
+        };
         return bgParam;
     };
     scroller = function(bgParam, $this) {
         var offsetCoords, topOffset, scrollSpeed, yPosition, newBgPosition;
 
         // we only want the y-offset
-        offsetCoords = $this.offset(),
+        offsetCoords = $this.offset();
         topOffset = offsetCoords.top;
 
         $window.scroll(function() {
