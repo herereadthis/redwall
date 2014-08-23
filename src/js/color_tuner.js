@@ -17,6 +17,7 @@
 //     data-color-end="00F">Hello, World!</span>
 
 (function() {
+    'use strict';
     define(['jquery'], function($) {
         var exports, moduleName,
             hexToRgb, makeItHappen, makeShape;

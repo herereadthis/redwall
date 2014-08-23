@@ -1,4 +1,5 @@
 (function() {
+    'use strict';
     define(['jquery'], function($) {
         var exports, gVars, phi, moduleName, $window,
             makeLoops, makeBG, makeItHappen;

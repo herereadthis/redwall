@@ -9,6 +9,7 @@
   "nonbsp": true,
   "plusplus": true,
   "quotmark": "single",
+  "strict": true,
   "undef": true,
   "unused": true,
 

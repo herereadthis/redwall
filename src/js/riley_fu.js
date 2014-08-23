@@ -1,4 +1,5 @@
 (function() {
+    'use strict';
     define(['jquery'], function($) {
         var exports, rileyColors, gVars, moduleName, rileyColumns, rileyRect,
             $window, $document,

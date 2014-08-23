@@ -1,6 +1,7 @@
 
 // The "wrapper" function
 module.exports = function(grunt) {
+    'use strict';
     // Do grunt-related things in here
     // Project configuration.
     require('load-grunt-tasks')(grunt);

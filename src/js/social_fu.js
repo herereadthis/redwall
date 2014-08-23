@@ -1,5 +1,5 @@
 (function() {
-
+    'use strict';
     define(['jquery'], function($) {
         var exports, makeItHappen, moduleName;
         $ = require('jquery');

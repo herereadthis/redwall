@@ -1,4 +1,5 @@
 (function() {
+    'use strict';
     define(['jquery'], function($) {
         // global variables
         var exports, gVars, dVars, moduleName, lcd,

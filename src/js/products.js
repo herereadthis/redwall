@@ -1,9 +1,10 @@
 define(function() {
-  return {
-    reserveProduct: function() {
-      window.console.log('Function : reserveProduct');
- 
-      return true;
-    }
-  };
+    'use strict';
+    return {
+        reserveProduct: function() {
+            window.console.log('Function : reserveProduct');
+
+            return true;
+        }
+    };
 });

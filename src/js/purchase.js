@@ -1,4 +1,5 @@
 define(['credits','products'], function(credits,products) {
+    'use strict';
  
   // console.log('Function : purchaseProduct');
  

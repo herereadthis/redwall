@@ -1,5 +1,6 @@
 define(function() {
-  // console.log('Function : getCredits');
+    'use strict';
+    // console.log('Function : getCredits');
  
   return {
     getCredits: function() {
