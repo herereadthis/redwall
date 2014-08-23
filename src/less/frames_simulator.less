@@ -8,21 +8,21 @@
 
         linear-gradient(0deg, @wlg 0%, @wlg 100%),
         linear-gradient(0deg, @wlg 0%, @wlg 100%),
-        linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%),
-        linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%),
+        linear-gradient(0deg, #FFF 0%, #FFF 100%),
+        linear-gradient(0deg, #FFF 0%, #FFF 100%),
 
         linear-gradient(0deg, @wdg 0%, @wdg 100%),
         linear-gradient(0deg, @wdg 0%, @wdg 100%),
         linear-gradient(0deg, @wlg 0%, @wlg 100%),
         linear-gradient(0deg, @wlg 0%, @wlg 100%),
 
-        linear-gradient(0deg, #000000 0%, #000000 100%),
-        linear-gradient(0deg, #000000 0%, #000000 100%),
-        linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%),
-        linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%),
+        linear-gradient(0deg, #000 0%, #000 100%),
+        linear-gradient(0deg, #000 0%, #000 100%),
+        linear-gradient(0deg, #FFF 0%, #FFF 100%),
+        linear-gradient(0deg, #FFF 0%, #FFF 100%),
 
-        linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%),
-        linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 100%);
+        linear-gradient(0deg, #FFF 0%, #FFF 100%),
+        linear-gradient(0deg, #FFF 0%, #FFF 100%);
     background-position: 
         0 100%,
         0 0,0 0,100% 0%,0% 100%,
@@ -40,6 +40,28 @@
             0.2rem 100%, 100% 2.3rem, 0.2rem 100%, 100% 0.4rem,
             0.3rem 100%, 100% 2.4rem, 0.3rem 100%, 100% 0.5rem,
             100% 0.4rem, 0.4rem 100%;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+        }
+        &:before {
+            left: 100%;
+            margin-left: -1.8rem;
+        }
+        &:after {
+            display: none;
+        }
+    }
+    @media @da_2x_small {
+        &:after {
+            background-image:
+                linear-gradient(90deg, @wlg 0.0rem, @wlg 0.1rem,
+                    #FFF 0.1rem, #FFF 0.2rem);
+            background-size:
+                0.2rem 100%;
+            background-position:
+                0.1rem 0;
+        }
     }
     @media @da_small {
         display: table;
@@ -51,30 +73,14 @@
             0.2rem 100%, 100% 0.2rem, 0.2rem 100%, 100% 0.4rem,
             0.3rem 100%, 100% 0.3rem, 0.3rem 100%, 100% 0.5rem,
             100% 0.4rem, 0.4rem 100%;
-    }
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0.3rem;
-        right: 75%;
-        bottom: 0.4rem;
-        width: 0.8rem;
-        background-color: #FFF;
-        background-repeat: no-repeat;
-        @media @da_baseline {
-            display: none;
-        }
-        @media @da_2x_small {
-            background-image:
-                linear-gradient(90deg, @wlg 0.0rem, @wlg 0.1rem,
-                    #FFF 0.1rem, #FFF 0.2rem);
-            background-size:
-                0.2rem 100%;
-            background-position:
-                0.1rem 0;
-        }
-        @media @da_small {
+        &:before, &:after {
             display: block;
+        }
+        &:before {
+            left: 25%;
+            margin-left: -2.4rem;
+        }
+        &:after {
             background-image:
                 linear-gradient(90deg, @wlg 0.0rem, @wlg 0.1rem,
                     #FFF 0.1rem, #FFF 0.2rem, @wlg 0.2rem, @wlg 0.4rem,
@@ -84,6 +90,22 @@
             background-position:
                 0.1rem 0;
         }
+    }
+    &:before {
+        bottom: 0;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: @wlg;
+        bottom: 0.5rem;
+        z-index: 1;
+    }
+    &:after {
+        top: 0.3rem;
+        right: 75%;
+        bottom: 0.4rem;
+        width: 0.8rem;
+        background-color: #FFF;
+        background-repeat: no-repeat;
     }
 }
 .frames_address_bar {
@@ -121,15 +143,15 @@
         &:after {
             top: 0.1rem;
         }
+        span:before {
+            display: none;
+        }
     }
     @media @da_2x_small {
         padding: 0 1.3rem 0 18.8rem;
         background-position: 12rem -12rem;
         &:before {
             display: block;
-        }
-        span:before {
-            display: none;
         }
     }
     @media @da_x_small {
@@ -191,84 +213,87 @@
     }
 }
 
-.frames_column {
-    @media @da_baseline {
+
+@media @da_baseline {
+    .frames_column {
         display: block;
     }
-    @media @da_small {
-        display: table-cell;
-    }
-}
-.frames_nav_column {
-    box-sizing: border-box;
-    background-image:
-        linear-gradient(90deg, @wlg 0, @wlg 0.1rem, @wdg 0.1rem, @wdg 0.2rem,
-            #000 0.2rem, #000 0.3rem, #FFF 0.3rem),
-        linear-gradient(0deg, #FFF 0%, #FFF 100%);
-    background-size: 0.4rem 100%, 100% 0.1rem;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-
-    @media @da_baseline {
+    .frames_nav_column {
         min-height: 10rem;
         background-position: 0 0, 0 0.3rem;
         margin-right: 0.3rem;
+        box-sizing: border-box;
+        background-image:
+            linear-gradient(90deg, @wlg 0, @wlg 0.1rem, @wdg 0.1rem, @wdg 0.2rem,
+                #000 0.2rem, #000 0.3rem, #FFF 0.3rem),
+            linear-gradient(0deg, #FFF 0%, #FFF 100%);
+        background-size: 0.4rem 100%, 100% 0.1rem;
+        background-position: 0 0.3rem;
+        background-repeat: no-repeat;
     }
-    @media @da_small {
-        width: 25%;
-        margin-right: 0rem;
-        background-position: 0 0;
-    }
-    @media @da_medium {
-        section {
-            float: right;
-            width: 0.25 * @pw_medium;
-        }
-    }
-    @media @da_large {
-        section {
-            float: right;
-            width: 0.25 * @pw_large;
-        }
-    }
-    @media @da_x_large {
-        section {
-            float: right;
-            width: 0.25 * @pw_x_large;
-        }
-    }
-}
-.frames_main_column {
-    box-sizing: border-box;
-    padding: 0 1.9rem 5rem 0;
-    background-image:
-        linear-gradient(90deg, #FFF 0, #FFF 0.1rem, @wlg 0.1rem, @wlg 0.2rem, #FFF 0.2rem),
-        url("@{img_path}fire_600x50.gif");
-    background-size: 0.3rem 100%, 60rem 5rem;
-
-    @media @da_baseline {
+    .frames_main_column {
         width: 100%;
         background-position: 100% 0, 0.4rem 100%;
         background-repeat: no-repeat;
         margin-bottom: 1.6rem;
+        box-sizing: border-box;
+        padding: 0 1.9rem 5rem 0;
+        background-image:
+            linear-gradient(90deg, #FFF 0, #FFF 0.1rem, @wlg 0.1rem, @wlg 0.2rem, #FFF 0.2rem),
+            url("@{img_path}fire_600x50.gif");
+        background-size: 0.3rem 100%, 60rem 5rem;
     }
-    @media @da_small {
+}
+@media @da_small {
+    .frames_column {
+        display: table-cell;
+    }
+    .frames_nav_column {
+        width: 25%;
+        margin-right: 0rem;
+        background-position: 0 0;
+    }
+    .frames_main_column {
         width: 75%;
         margin-bottom: 0;
         background-position: 100% 0, 0 100%;
         background-repeat: no-repeat, repeat-x;
     }
-    @media @da_medium {
+}
+@media @da_medium {
+    .frames_nav_column {
+        section {
+            float: right;
+            width: 0.25 * @pw_medium;
+        }
+    }
+    .frames_main_column {
         section {
             width: 0.75 * @pw_medium;
         }
     }
-    @media @da_large {
+}
+@media @da_large {
+    .frames_nav_column {
+        section {
+            float: right;
+            width: 0.25 * @pw_large;
+        }
+    }
+    .frames_main_column {
         section {
             width: 0.75 * @pw_large;
         }
     }
-    @media @da_x_large {
+}
+@media @da_x_large {
+    .frames_nav_column {
+        section {
+            float: right;
+            width: 0.25 * @pw_x_large;
+        }
+    }
+    .frames_main_column {
         section {
             width: 0.75 * @pw_x_large;
         }
@@ -288,9 +313,11 @@
 }
 .frames_arrows {
     background-image:
-        linear-gradient(0deg, @wlg 0%, @wlg 100%),
         linear-gradient(45deg, @wlg 25%, transparent 25%, transparent 75%, @wlg 75%, @wlg), 
         linear-gradient(45deg, @wlg 25%, transparent 25%, transparent 75%, @wlg 75%, @wlg);
+    background-size: 0.2rem 0.2rem;
+    background-position: 0.1rem 0.1rem;
+    background-color: #FFF;
 }
 .frames_scrollbar {
     position: absolute;
@@ -298,8 +325,6 @@
     bottom: 0.5rem;
     width: 1.6rem;
     background-color: #FFF;
-    background-size: 0 0, 0.2rem 0.2rem, 0.2rem 0.2rem;
-    background-position: 0 0, 0.1rem 0.1rem;
     @media @da_baseline {
         top: 2.6rem;
         &:before {
@@ -348,19 +373,6 @@
     position: absolute;
     height: 1.6rem;
     bottom: 0.5rem;
-    background-color: #FFF;
-    background-size: 
-        2.4rem 1.6rem,
-        0.2rem 0.2rem,
-        0.2rem 0.2rem;
-    background-position:
-        100% 100%,
-        0 0,
-        0.1rem 0.1rem;
-    background-repeat:
-        no-repeat,
-        repeat,
-        repeat; 
 
     @media @da_baseline {
         right: 0;
