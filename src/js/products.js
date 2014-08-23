@@ -1,4 +1,4 @@
-define(function(products) {
+define(function() {
   return {
     reserveProduct: function() {
       window.console.log('Function : reserveProduct');

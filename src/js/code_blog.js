@@ -8,7 +8,7 @@
     gVars = {};
     moduleName = 'code_blog';
 
-    makeItHappen = function($this) {
+    makeItHappen = function() {
         // purchase.purchaseProduct();
         ParallaxScroll.init();
         CodeFooter.init();

@@ -1,6 +1,5 @@
 (function() {
-    define(['jquery', 'PageStats'],
-        function($, PageStats) {
+    define(['jquery'], function($) {
         // global variables
         var exports, gVars, dVars, moduleName, lcd,
         // methods
@@ -103,7 +102,7 @@
         };
         // adds blocks to container based on specified number
         makeNumbers = function($this, figures) {
-            var _i, placeNumberClass, $counterContainer, hitNum;
+            var _i, placeNumberClass, hitNum;
             for (_i = 0; _i < figures; _i += 1) {
                 // addNumberCell($this, _i);
                 placeNumberClass = 'counter_digit_' + _i;
@@ -113,7 +112,7 @@
                 }
         };
         // sets width of hit counter box to prevent shrinkage
-        setParentWidth = function($this, figures) {
+        setParentWidth = function($this) {
             var containerWidth = 0;
             $this.find('[data-hit-digit]').each(function() {
                 containerWidth += $(this).outerWidth();
@@ -126,7 +125,7 @@
             jsonFile = 'http://redwall.herereadthis.com/api/page_stats/?url=' + canonical;
             dVars.figures = parseInt($this.data('hit-counter-figures'), 10) || gVars.figures;
             makeNumbers($this, dVars.figures);
-            setParentWidth($this, dVars.figures);
+            setParentWidth($this);
             $.ajax({
                 url: jsonFile,
                 type: 'get',
@@ -146,7 +145,6 @@
                     placeNumberClass = '.counter_digit_' + item;
                     $this.find(placeNumberClass).data('hit-digit', dVars.hitArray[item]);
                 }
-                var hitDigit;
                 $this.find('div').each(function(index, element) {
                     canvasNum($(element), $(element).data('hit-digit'));
                 });

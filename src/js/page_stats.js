@@ -1,6 +1,6 @@
 (function() {
     define(['jquery'], function($) {
-        var exports,  makeItHappen, moduleName, exampleAjax, showPageStats;
+        var exports,  makeItHappen, moduleName, showPageStats;
         exports = {};
         moduleName = 'page_stats';
         // exampleAjax = function($this) {
@@ -30,7 +30,7 @@
             return this.match(re) [1].toString();
         };
         showPageStats = function() {
-            var jsonFile, documentURL, productionURL, addPageHit,
+            var jsonFile, documentURL, addPageHit,
                 productionHost, meta, totalHits;
             String.prototype.getHostname = function () {
                 var re = new RegExp('^(?:f|ht)tp(?:s)?://([^/]+)');
@@ -55,7 +55,7 @@
                     '&addclick=true' +
                     '&title=' + meta.pageTitle;
                 $.getJSON(addPageHit, function(data) {
-                    var getJSON, urlPath, _i, row;
+                    var getJSON, urlPath;
                     getJSON = data;
                     urlPath = decodeURIComponent(documentURL);
                     window.console.log('page hits: ' + data.page_hits);

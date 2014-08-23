@@ -7,7 +7,7 @@
     gVars = {};
     moduleName = 'retromator';
 
-    makeItHappen = function($this) {
+    makeItHappen = function() {
         // purchase.purchaseProduct();
         ParallaxScroll.init();
         SocialFu.init();

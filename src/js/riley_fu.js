@@ -2,7 +2,7 @@
     define(['jquery'], function($) {
         var exports, rileyColors, gVars, moduleName, rileyColumns, rileyRect,
             $window, $document,
-            makeItHappen, makeShape, makeRileyRect, drawCanvas, sizer;
+            makeItHappen, MakeShape, makeRileyRect, drawCanvas, sizer;
         exports = {};
         gVars = {
             colWidth: 8,
@@ -35,7 +35,7 @@
         rileyRect = [];
         moduleName = 'riley_fu';
 
-        makeShape = function(x, y, w, h, fill) {
+        MakeShape = function(x, y, w, h, fill) {
             this.x = x;
             this.y = y;
             this.w = w;
@@ -46,7 +46,7 @@
             var _i, getColor;
             for (_i = 0;_i < gVars.colLenth;_i += 1) {
                 getColor = rileyColors[rileyColumns[_i]];
-                rileyRect.push(new makeShape((_i * gVars.colWidth), 0, gVars.colWidth, gVars.colWidth, getColor));
+                rileyRect.push(new MakeShape((_i * gVars.colWidth), 0, gVars.colWidth, gVars.colWidth, getColor));
             }
         };
         drawCanvas = function($this) {

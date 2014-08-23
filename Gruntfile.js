@@ -139,7 +139,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['./src/js/*', '<%= paths.components %>/greeneyes/src/js/*'],
-                tasks: ['requirejs']
+                tasks: ['requirejs', 'jshint']
             }
         },
         xmlpoke: {
@@ -170,6 +170,7 @@ module.exports = function(grunt) {
         'copy',
         'less',
         'jekyll',
+        'jshint',
         'requirejs',
         'uglify'
     ]);

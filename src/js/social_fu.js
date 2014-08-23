@@ -1,12 +1,12 @@
 (function() {
 
     define(['jquery'], function($) {
-        var exports, gVars, makeItHappen, moduleName;
+        var exports, makeItHappen, moduleName;
         $ = require('jquery');
         exports = {};
         moduleName = 'social_fu';
         makeItHappen = function($this) {
-            $this.children().each(function( index ) {
+            $this.children().each(function() {
                 var linkHref = $(this).find('a').attr('href'),
                     linkTitle = $(this).find('a').attr('title');
                 $(this).children('span').attr({

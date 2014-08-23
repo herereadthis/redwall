@@ -1,4 +1,4 @@
-define(function(credits) {
+define(function() {
   // console.log('Function : getCredits');
  
   return {

@@ -11,7 +11,7 @@
 (function() {
 
   define(['jquery'], function($) {
-    var exports, gVars , makeItHappen, moduleName, bgSettings, scroller, $window;
+    var exports, makeItHappen, moduleName, bgSettings, scroller, $window;
     exports = {};
     $window = $(window);
     moduleName = 'parallax_scroll';
@@ -20,11 +20,7 @@
     defaultParallaxSpeed = 50;
 
     bgSettings = function($this) {
-
-        var bgParam,
-            bgPosition, bgRepeat, bgSize, bgImage,
-            parallaxSpeed,
-            _i;
+        var bgParam, bgPosition, parallaxSpeed, _i;
 
         // bgImage = $this.css('background-image');
         // bgSize = $this.css('background-size').split(' ');

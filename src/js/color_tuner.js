@@ -18,7 +18,7 @@
 
 (function() {
     define(['jquery'], function($) {
-        var exports, gVars, moduleName,
+        var exports, moduleName,
             hexToRgb, makeItHappen, makeShape;
         $ = require('jquery');
         exports = {};
@@ -44,7 +44,7 @@
                 hexBegin = $this.data('color-begin') ? $this.data('color-begin') : '000',
                 hexEnd = $this.data('color-end') ? $this.data('color-end') : 'FFF',
                 letters = $this.text(),
-                letterCount, lettersWithColors, letterArray = [],
+                lettersWithColors, letterArray = [],
                 _i, _len,
                 increment, diffR, diffG, diffB;
             // build array of colors, separated as RGB
