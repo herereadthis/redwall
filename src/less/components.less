@@ -17,17 +17,35 @@
     padding: 2rem 0 1rem 0;
     margin: 0 auto;
     text-align: center;
-    display: table;
     border-spacing: 0;
     width: auto;
     p {
         color: #FF0;
-        padding: 1rem 0.5rem 0 0.5rem;
     }
     > div {
         float: none;
-        display: table-cell;
-        vertical-align: top;
+    }
+    @media @da_baseline {
+        display: block;
+
+        > div {
+            display: block;
+        }
+        p {
+            padding: 0rem 0.5rem 0 0.5rem;
+        }
+
+    }
+    @media @da_x_small {
+        display: table;
+
+        > div {
+            display: table-cell;
+            vertical-align: top;
+        }
+        p {
+            padding: 1rem 0.5rem 0 0.5rem;
+        }
     }
 }
 [data-module="hit_counter"] {
@@ -42,6 +60,7 @@
     border-color: #C0C0C0 #404040 #404040 #C0C0C0;
     box-shadow: inset 0 0 0 0.1rem #808080;
     background-color: #000;
+    margin: 0 auto;
 
     div {
         width: 2.2rem;
