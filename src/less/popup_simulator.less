@@ -79,18 +79,17 @@
         color: #FFF;
         font-size: 1.2rem;
         line-height: 1.6rem;
+        background-color: transparent;
+        background-image: none;
 
         &:before {
-            content: "";
-            display: block;
-            background-image: url("@{img_path}win95_sprites.png");
-            background-position: 0 -3rem;
-            background-size: 5rem 7rem;
+            background-position: 0 -4rem;
+            background-size: 6rem 9rem;
             width: 1.6rem;
             height: 1.6rem;
-            position: absolute;
             top: 0.5rem;
             left: 0.6rem;
+            background-color: transparent;
         }
     }
 }
@@ -101,8 +100,10 @@
     width: 1.6rem;
     height: 1.4rem;
     text-indent: -9999px;
-    background: @wlg url("@{img_path}win95_sprites.png") no-repeat;
-    background-size: 10rem 14rem;
+
+    &:before, &:after {
+        display: none;
+    }
 }
 /*
 .popup_button {
@@ -128,7 +129,7 @@
 */
 .popup_close {
     right: 0.6rem;
-    background-position: -3.2rem -4rem;
+    background-position: -8rem -8rem;
     /*
     > span {
         background-image:
@@ -160,7 +161,7 @@
 }
 .popup_resize {
     right: 2.4rem;
-    background-position: -1.6rem -4rem;
+    background-position: -6.4rem -8rem;
     /*
     > span {
         background-image:
@@ -177,7 +178,7 @@
 }
 .popup_minimize {
     right: 4rem;
-    background-position: 0rem -4rem;
+    background-position: -4.8rem -8rem;
     /*
     > span {
         background-image:

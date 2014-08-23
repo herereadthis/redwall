@@ -91,24 +91,15 @@
     height: 2.1rem;
     border-top: 0.1rem solid #FFF;
     top: -2.1rem;
-    background-color: @wlg;
     padding-right: 1.3rem;
     box-sizing: border-box;
-    background-image: url("@{img_path}win95_sprites.png");
-    background-size: 10rem 14rem;
     background-repeat: no-repeat;
 
     &:before, &:after {
-        display: block;
-        content: "";
         height: 2rem;
-        position: absolute;
-        background-image: url("@{img_path}win95_sprites.png");
-        background-size: 10rem 14rem;
-
     }
     &:before {
-        background-position: 0rem -12rem;
+        background-position: 0rem -14rem;
         width: 8.6rem;
         left: 2.2rem;
     }
@@ -117,11 +108,11 @@
         left: 0;
         border-right: 0.1rem solid @wdg;
         border-bottom: 0.1rem solid @wdg;
-        background-position: -8rem -2rem;
+        background-position: -8rem -6rem;
     }
     @media @da_baseline {
-        padding-left: 8.9rem;
-        background-position: 2.1rem -10rem;
+        padding: 0 1.3rem 0 8.9rem;
+        background-position: 2.1rem -12rem;
 
         &:before {
             display: none;
@@ -132,9 +123,19 @@
         }
     }
     @media @da_2x_small {
-        padding-left: 18.8rem;
-        background-position: 12rem -10rem;
+        padding: 0 1.3rem 0 18.8rem;
+        background-position: 12rem -12rem;
         &:before {
+            display: block;
+        }
+        span:before {
+            display: none;
+        }
+    }
+    @media @da_x_small {
+        padding: 0 12.2rem 0 18.8rem;
+
+        span:before {
             display: block;
         }
     }
@@ -145,7 +146,6 @@
             top: 0;
         }
     }
-
     span {
         display: block;
         position: relative;
@@ -181,16 +181,12 @@
         padding: 0.5rem 0 0.2rem 0.6rem;
 
         &:before {
-            display: block;
-            position: absolute;
-            content: "";
             top: -0.1rem;
-            left: -6.8rem;
-            width: 7rem;
+            right: -10.7rem;
+            width: 10.3rem;
             height: 2rem;
-            background-image: url("@{img_path}win95_sprites.png");
-            background-size: 10rem 14rem;
-            background-position: 0 -10rem;
+            background-position: 0 -16rem;
+            background-color: transparent;
         }
     }
 }
@@ -280,18 +276,21 @@
 }
 .frames_arrows:before, .frames_arrows:after,
 .frames_address_bar span:after {
-    content: "";
-    position: absolute;
     width: 1.6rem;
     height: 1.6rem;
-    background: @wlg url("@{img_path}win95_sprites.png");
-    background-size: 10rem 14rem;
 }
 .frames_address_bar span:after {
+    // the address bar down-arrow
     right: 0.1rem;
     top: 0.2rem;
     height: 1.7rem;
-    background-position: -6.4rem -2rem;
+    background-position: -6.4rem -6rem;
+}
+.frames_arrows {
+    background-image:
+        linear-gradient(0deg, @wlg 0%, @wlg 100%),
+        linear-gradient(45deg, @wlg 25%, transparent 25%, transparent 75%, @wlg 75%, @wlg), 
+        linear-gradient(45deg, @wlg 25%, transparent 25%, transparent 75%, @wlg 75%, @wlg);
 }
 .frames_scrollbar {
     position: absolute;
@@ -299,10 +298,7 @@
     bottom: 0.5rem;
     width: 1.6rem;
     background-color: #FFF;
-    background-image:
-        linear-gradient(45deg, @wlg 25%, transparent 25%, transparent 75%, @wlg 75%, @wlg), 
-        linear-gradient(45deg, @wlg 25%, transparent 25%, transparent 75%, @wlg 75%, @wlg);
-    background-size: 0.2rem 0.2rem;
+    background-size: 0 0, 0.2rem 0.2rem, 0.2rem 0.2rem;
     background-position: 0 0, 0.1rem 0.1rem;
     @media @da_baseline {
         top: 2.6rem;
@@ -316,15 +312,14 @@
             top: 0rem;
         }
     }
-
     &:before {
         left: 0;
-        background-position: 0rem -2rem;
+        background-position: 0rem -6rem;
     }
     &:after {
         bottom: 0;
         left: 0;
-        background-position: -1.6rem -2rem;
+        background-position: -1.6rem -6rem;
     }
     span {
         top: 1.6rem;
@@ -354,10 +349,6 @@
     height: 1.6rem;
     bottom: 0.5rem;
     background-color: #FFF;
-    background-image:
-        linear-gradient(0deg, @wlg 0%, @wlg 100%),
-        linear-gradient(45deg, @wlg 25%, transparent 25%, transparent 75%, @wlg 75%, @wlg), 
-        linear-gradient(45deg, @wlg 25%, transparent 25%, transparent 75%, @wlg 75%, @wlg);
     background-size: 
         2.4rem 1.6rem,
         0.2rem 0.2rem,
@@ -382,11 +373,11 @@
     &:before {
         top: 0;
         left: 0;
-        background-position: -3.2rem -2rem;
+        background-position: -3.2rem -6rem;
     }
     &:after {
         top: 0;
-        background-position: -4.8rem -2rem;
+        background-position: -4.8rem -6rem;
 
         @media @da_baseline {
             right: 1.9rem;
@@ -405,7 +396,7 @@
     span {
         position: absolute;
         display: block;
-        background-color: #C0C0C0;
+        background-color: @wlg;
         background-image:
             linear-gradient(0deg, #000 0, #000 100%),
             linear-gradient(0deg, #000 0, #000 100%),
@@ -429,10 +420,11 @@
     background-image:
         url("@{img_path}win95_sprites.png"),
         url("@{img_path}win95_sprites.png"),
+        url("@{img_path}win95_sprites.png"),
         linear-gradient(180deg, @wdg 0.0rem, @wdg 0.1rem,
             @wlg 0.1rem, @wlg 1.5rem, #FFF 1.5rem, #FFF 1.6rem,
             @wlg 1.6rem, @wlg 1.6rem);
-    background-size: 20rem 28rem, 20rem 28rem, 100% 1.7rem;
-    background-position: 0 0rem, 100% -2rem, 0 0;
+    background-size: 12rem 18rem, 12rem 18rem, 12rem 18rem, 100% 1.7rem;
+    background-position: 0 0, 19.8rem -2rem, 100% -2rem, 0 0;
     background-repeat: no-repeat;
 }
