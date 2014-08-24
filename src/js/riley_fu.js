@@ -46,7 +46,7 @@
         makeRileyRect = function() {
             var _i, getColor;
             for (_i = 0;_i < gVars.colLenth;_i += 1) {
-                getColor = rileyColors[rileyColumns[_i]];
+                getColor = rileyColors[rileyColumns[gVars.colLenth - _i - 1]];
                 rileyRect.push(new MakeShape((_i * gVars.colWidth), 0, gVars.colWidth, gVars.colWidth, getColor));
             }
         };
@@ -69,20 +69,28 @@
 
         };
         sizer = function($this) {
-            var _width, bgPos, bgX;
+            var _width, bgPos, bgX, bgWidth;
             _width = $(document).width();
+            bgWidth = -1 * gVars.colWidth * gVars.colLenth;
+
+            window.console.log(bgWidth);
             if (_width < gVars.breakpoint[0]) {
-                bgX = (11 / 12) * _width;
+                bgX = bgWidth + (11 / 12) * _width;
+                // bgX = (11 / 12) * _width;
             }
             else if (_width < gVars.breakpoint[1]) {
-                bgX = ((_width - gVars.query[0]) / 2) + ((5 / 6) * gVars.query[0]);
+                bgX = bgWidth + ((_width - gVars.query[0]) / 2) + ((1 / 6) * gVars.query[0]);
+                // bgX = ((_width - gVars.query[0]) / 2) + ((5 / 6) * gVars.query[0]);
             }
             else if (_width < gVars.breakpoint[2]) {
-                bgX = ((_width - gVars.query[1]) / 2) + ((5 / 6) * gVars.query[1]);
+                bgX = bgWidth + ((_width - gVars.query[1]) / 2) + ((1 / 6) * gVars.query[1]);
+                // bgX = ((_width - gVars.query[1]) / 2) + ((5 / 6) * gVars.query[1]);
             }
             else {
-                bgX = ((_width - gVars.query[2]) / 2) + ((5 / 6) * gVars.query[2]);
+                bgX = bgWidth + ((_width - gVars.query[2]) / 2) + ((1 / 6) * gVars.query[2]);
+                // bgX = ((_width - gVars.query[2]) / 2) + ((5 / 6) * gVars.query[2]);
             }
+            window.console.log(bgWidth);
             bgX = (Math.round(bgX) / 10).toString();
             bgPos = bgX + 'rem 0';
             $this.css('background-position', bgPos);
