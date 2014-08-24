@@ -52,7 +52,8 @@ module.exports = function(grunt) {
                         'images/branding/{,*/}*.*',
                         'images/code/{,*/}*.*',
                         'images/css/{,*/}*.*',
-                        'images/homepage/{,*/}*.*'
+                        'images/homepage/{,*/}*.*',
+                        'media/*.*'
                     ]
                 }]
             }
@@ -122,9 +123,7 @@ module.exports = function(grunt) {
                 tasks: ['copy:build'] 
             },
             images: {
-                files: [
-                    '<%= paths.src %>/images/{,*/}*.*'
-                ],
+                files: ['<%= paths.src %>/images/{,*/}*.*'],
                 tasks: ['copy:build']   
             },
             less: {
@@ -142,6 +141,10 @@ module.exports = function(grunt) {
             js: {
                 files: ['./src/js/*', '<%= paths.components %>/greeneyes/src/js/*'],
                 tasks: ['requirejs', 'jshint']
+            },
+            media: {
+                files: ['<%= paths.src %>/media/*.*'],
+                tasks: ['copy:build']   
             }
         },
         xmlpoke: {
