@@ -28,7 +28,7 @@ permalink: /resume/
             <table cellpadding="0" border="0" cellspacing="0" id="technical_experience">
                 <tr>
                     <td><p>Frameworks</p></td>
-                    <td><p>Django, Backbone.js, Angular.js, Wordpress</p></td>
+                    <td><p>Django, Backbone.js, Angular.js, Jekyll, Wordpress</p></td>
                 </tr>
                 <tr>
                     <td><p>JavaScript</p></td>
