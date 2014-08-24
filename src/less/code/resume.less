@@ -14,7 +14,6 @@ td {
     vertical-align: top;
 }
 tr td:nth-child(1) {
-    width: 10rem;
     color: #666;
 }
 tr td:nth-child(2) {
@@ -38,9 +37,13 @@ h1 {
 article {
     h2 {
         font-variant: small-caps;
+        font-weight: 700;
     }
 }
 aside {
+    h2 {
+        font-weight: 600;
+    }
     span {
         color: #666;
     }
@@ -76,6 +79,20 @@ aside {
     }
     article {
         padding-top: 2rem;
+        td {
+            display: block;
+        }
+        padding-bottom: 4rem;
+    }
+    tr td:nth-child(1) {
+    }
+    #technical_experience {
+        td:first-child {
+            padding-top: 1rem;
+        }
+        tr:first-child td:first-child {
+            padding-top: 0;
+        }
     }
 
 }
@@ -120,9 +137,23 @@ aside {
         > h2 {
             padding-top: 2rem;
         }
+        td {
+            display: table-cell;
+        }
     }
     section:last-of-type {
         padding-bottom: 6rem;
+    }
+    tr td:nth-child(1) {
+        width: 10rem;
+        span {
+            display: block;
+        }
+    }
+    #technical_experience {
+        td:first-child {
+            padding-top: 0rem;
+        }
     }
 }
 @media @da_medium {
@@ -142,7 +173,7 @@ aside {
 }
 @media print {
     body {
-        margin: 3rem 0;
+        margin: 3.5rem 0;
     }
     .bellmaker_container {
         width: 100%;
@@ -160,7 +191,7 @@ aside {
         }
     }
     article {
-        padding: 2rem 4rem 0 1.5rem;
+        padding: 2rem 6rem 0 1.5rem;
         display: table-cell;
         width: 70%;
         float: right;
@@ -172,6 +203,9 @@ aside {
     }
     tr td:nth-child(1) {
         width: 8rem;
+        span {
+            display: block;
+        }
     }
     section {
         padding-bottom: 2rem;
