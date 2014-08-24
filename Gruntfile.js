@@ -85,6 +85,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     '<%= paths.build %>/css/code.css': './src/less/code/code.less',
+                    '<%= paths.build %>/css/resume.css': './src/less/code/resume.less',
                     '<%= paths.build %>/css/main.css': './src/less/main.less',
                     '<%= paths.build %>/css/404.css': './src/less/404.less'
                 }
