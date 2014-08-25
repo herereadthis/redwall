@@ -36,7 +36,7 @@ permalink: /resume/
                 </tr>
                 <tr>
                     <td><p>Workflow</p></td>
-                    <td><p>JIRA, Travis CI, SCRUM, Git, Mocha, Python Fabric, OpenShift, Trac</p></td>
+                    <td><p>JIRA, Travis CI, SCRUM, Git, Unit Testing, Python Fabric, OpenShift, Trac</p></td>
                 </tr>
                 <tr>
                     <td><p>Frontend</p></td>
