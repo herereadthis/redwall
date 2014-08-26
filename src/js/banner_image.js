@@ -16,11 +16,11 @@
                 var lowestHitObject;
                 lowestHitObject = data[0];
 
-                $this.html($('<a />').attr({
+                $this.find('a').attr({
                             'title': lowestHitObject.title,
                             'href': '#'
                         }
-                    ).html($('<img />')));
+                    ).html($('<img />'));
                 $this.find('img').attr({
                     'src': lowestHitObject.url,
                     'alt': lowestHitObject.description
