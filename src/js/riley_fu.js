@@ -73,7 +73,6 @@
             _width = $(document).width();
             bgWidth = -1 * gVars.colWidth * gVars.colLenth;
 
-            window.console.log(bgWidth);
             if (_width < gVars.breakpoint[0]) {
                 bgX = bgWidth + (11 / 12) * _width;
                 // bgX = (11 / 12) * _width;
@@ -90,7 +89,6 @@
                 bgX = bgWidth + ((_width - gVars.query[2]) / 2) + ((1 / 6) * gVars.query[2]);
                 // bgX = ((_width - gVars.query[2]) / 2) + ((5 / 6) * gVars.query[2]);
             }
-            window.console.log(bgWidth);
             bgX = (Math.round(bgX) / 10).toString();
             bgPos = bgX + 'rem 0';
             $this.css('background-position', bgPos);
