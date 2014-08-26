@@ -4,6 +4,7 @@
         paths: {
             // retro homepage
             'Retromator': 'retromator',
+            'BannerImage': 'banner_image',
             'ColorTuner': 'color_tuner',
             'HitCounter': 'hit_counter',
             'RileyFu': 'riley_fu',
