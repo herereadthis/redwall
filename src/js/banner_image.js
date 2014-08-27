@@ -22,7 +22,7 @@
                         }
                     ).html($('<img />'));
                 $this.find('img').attr({
-                    'src': lowestHitObject.url,
+                    'src': lowestHitObject.thumbnail,
                     'alt': lowestHitObject.description
                 });
             });
