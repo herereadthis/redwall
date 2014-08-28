@@ -1,16 +1,21 @@
 
 // Retro Header --------------------------------
 // ---------------------------------------------
-#header_panel {
+[data-module="banner_image"] {
     box-sizing: border-box;
     margin-right: 1rem;
 
     a {
         display: block;
         border: 0.2rem solid #00F;
+        background-color: @color_maya_blue;
     }
     img {
         width: 100%;
+    }
+    span {
+        display: block;
+        text-align: center;
     }
 
     @media @da_baseline {
@@ -26,6 +31,10 @@
         a {
             height: 10 * (((2 / 12) * @pw_x_small) - 0.4rem) * 1.618;
         }
+        span {
+            font-size: 1.5rem;
+            padding: 0rem 1rem 0 1rem;
+        }
     }
     @media @da_small {
         width: ((2 / 12) * @pw_small) - 1;
@@ -33,6 +42,10 @@
 
         a {
             height: (((2 / 12) * @pw_small) - 1.4rem) * 1.618;
+        }
+        span {
+            font-size: 1.5rem;
+            padding: 8rem 1rem 0 1rem;
         }
     }
     @media @da_medium {
@@ -44,6 +57,10 @@
         a {
             height: (((2 / 12) * @pw_medium) - 2.4rem) * 1.618;
         }
+        span {
+            font-size: 2rem;
+            padding: 8rem 1.5rem 0 1.5rem;
+        }
     }
     @media @da_large {
         width: ((2 / 12) * @pw_large) - 2;
@@ -52,6 +69,10 @@
         a {
             height: (((2 / 12) * @pw_large) - 2.4rem) * 1.618;
         }
+        span {
+            font-size: 2.5rem;
+            padding: 10rem 2rem 0 2rem;
+        }
     }
     @media @da_x_large {
         width: ((2 / 12) * @pw_x_large) - 2;
@@ -59,6 +80,10 @@
 
         a {
             height: (((2 / 12) * @pw_x_large) - 2.4rem) * 1.618;
+        }
+        span {
+            font-size: 3rem;
+            padding: 11rem 3rem 0 3rem;
         }
     }
 }

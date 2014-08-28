@@ -11,6 +11,9 @@
 
         getImage = function($this) {
             var jsonFile;
+            $this.on('click', 'a', function (e) {
+                e.preventDefault();
+            });
             jsonFile = 'http://redwall.herereadthis.com/api/banner_image/?sort=hits';
             $.getJSON(jsonFile, function(data) {
                 var lowestHitObject;
@@ -26,7 +29,6 @@
                     'alt': lowestHitObject.description
                 });
             });
-            // window.console.log($this.html());
         };
         makeItHappen = function($this) {
             getImage($this);
