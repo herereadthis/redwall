@@ -9,13 +9,19 @@
         display: block;
         border: 0.2rem solid #00F;
         background-color: @color_maya_blue;
+        position: relative;
     }
     img {
         width: 100%;
+        top: 0;
+        position: relative;
+        z-index: 3;
     }
     span {
         display: block;
         text-align: center;
+            position: absolute;
+            z-index: 1;
     }
 
     @media @da_baseline {

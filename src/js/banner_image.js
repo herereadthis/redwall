@@ -23,7 +23,7 @@
                             'title': lowestHitObject.title,
                             'href': '#'
                         }
-                    ).html($('<img />'));
+                    ).append($('<img />'));
                 $this.find('img').attr({
                     'src': lowestHitObject.thumbnail,
                     'alt': lowestHitObject.description
