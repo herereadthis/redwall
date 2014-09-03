@@ -4,11 +4,11 @@
         paths: {
             // retro homepage
             'Retromator': 'retromator',
-            'BannerImage': 'banner_image',
+            'BannerImage': 'retromator/banner_image',
             'ColorTuner': 'color_tuner',
-            'HitCounter': 'hit_counter',
-            'RileyFu': 'riley_fu',
-            'SocialFu': 'social_fu',
+            'HitCounter': 'retromator/hit_counter',
+            'RileyFu': 'retromator/riley_fu',
+            'SocialFu': 'retromator/social_fu',
             // coding blog
             'CodeBlog': 'code_blog',
             'CodeFooter': 'code_footer',
