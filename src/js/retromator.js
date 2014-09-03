@@ -1,7 +1,7 @@
 (function() {
     'use strict';
-    define(['jquery', 'ColorTuner', 'SocialFu', 'ParallaxScroll', 'HitCounter', 'RileyFu', 'BannerImage'],
-        function($, ColorTuner, SocialFu, ParallaxScroll, HitCounter, RileyFu, BannerImage) {
+    define(['jquery', 'ColorShift', 'SocialFu', 'ParallaxScroll', 'HitCounter', 'RileyFu', 'BannerImage'],
+        function($, ColorShift, SocialFu, ParallaxScroll, HitCounter, RileyFu, BannerImage) {
         var exports, gVars, makeItHappen, moduleName;
         exports = {};
         gVars = {};
@@ -12,7 +12,7 @@
             BannerImage.init();
             ParallaxScroll.init();
             SocialFu.init();
-            ColorTuner.init();
+            ColorShift.init();
             HitCounter.init();
             RileyFu.init();
         };

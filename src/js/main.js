@@ -5,7 +5,7 @@
             // retro homepage
             'Retromator': 'retromator',
             'BannerImage': 'retromator/banner_image',
-            'ColorTuner': 'color_tuner',
+            'ColorShift': '../components/greeneyes/src/js/color_shift',
             'HitCounter': 'retromator/hit_counter',
             'RileyFu': 'retromator/riley_fu',
             'SocialFu': 'retromator/social_fu',
