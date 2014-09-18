@@ -50,7 +50,6 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/build/images/branding/apple-touch-icon-120x120-precomposed.png" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,300italic,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type="text/css" href="/build/css/code.css" />
-    <meta name="robots" content="NOINDEX, NOFOLLOW" />
 </head>
 <body data-module="code_blog" data-google-analytics="UA-37798496-1">
 
@@ -385,6 +384,134 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <hr />
 
+<h3 id="device-specific-targeting">Device-Specific Targeting</h3>
+
+<p>In most cases, the device-agnostic media queries will cover everything you need. But if you need to target a specific device:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Devices</th>
+      <th>Query Suffix</th>
+      <th>Pixel Ratio</th>
+      <th>Aspect Ratio</th>
+      <th>Display Resolution</th>
+      <th>Actual Resolution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google Nexus 4</td>
+      <td>ds_768_wxga2</td>
+      <td>2</td>
+      <td>2:3</td>
+      <td>384×640</td>
+      <td>768×1280</td>
+    </tr>
+    <tr>
+      <td>Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S</td>
+      <td>ds_720p_hd2</td>
+      <td>2</td>
+      <td>9:16</td>
+      <td>360×640</td>
+      <td>720×1280</td>
+    </tr>
+    <tr>
+      <td>Samsung GN3; iPhone 6 Plus</td>
+      <td>ds_full_hd2</td>
+      <td>2</td>
+      <td>9:16</td>
+      <td>560×960</td>
+      <td>1080×1920</td>
+    </tr>
+    <tr>
+      <td>Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4+; Sony Xperia Z1+</td>
+      <td>ds_1080_hd3</td>
+      <td>3</td>
+      <td>9:16</td>
+      <td>1080×1920</td>
+      <td>360×640</td>
+    </tr>
+    <tr>
+      <td>LG G3</td>
+      <td>ds_wqhd4</td>
+      <td>4</td>
+      <td>9:16</td>
+      <td>360×640</td>
+      <td>1440×2560</td>
+    </tr>
+    <tr>
+      <td>iPhone 1-3</td>
+      <td>ds_iphone_early</td>
+      <td>1</td>
+      <td>2:3</td>
+      <td>320×480</td>
+      <td>320×480</td>
+    </tr>
+    <tr>
+      <td>iPhone 4(s)</td>
+      <td>ds_iphone_4</td>
+      <td>2</td>
+      <td>2:3</td>
+      <td>320×480</td>
+      <td>640×960</td>
+    </tr>
+    <tr>
+      <td>iPhone 5(s)(c)</td>
+      <td>ds_iphone_5</td>
+      <td>2</td>
+      <td>9:16</td>
+      <td>320×568</td>
+      <td>640×1136</td>
+    </tr>
+    <tr>
+      <td>iPhone 6</td>
+      <td>ds_iphone_6</td>
+      <td>2</td>
+      <td>9:16</td>
+      <td>375×667</td>
+      <td>750×1334</td>
+    </tr>
+    <tr>
+      <td>All iPads</td>
+      <td>ds_ipad</td>
+      <td>N/A</td>
+      <td>3:4</td>
+      <td>768×1024</td>
+      <td>768×1024</td>
+    </tr>
+    <tr>
+      <td>iPad 1-2; iPad Mini 1</td>
+      <td>ds_ipad_early</td>
+      <td>1</td>
+      <td>3:4</td>
+      <td>768×1024</td>
+      <td>768×1024</td>
+    </tr>
+    <tr>
+      <td>iPad 3+; iPad Air; iPad Mini 2</td>
+      <td>ds_ipad_retina</td>
+      <td>2</td>
+      <td>3:4</td>
+      <td>1536×2056</td>
+      <td>768×1024</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To write the media query for your phone just choose from the “Query Suffix” column that matches your device. There are two ways to target orientation: 1) add _landscape or _portrait to target the device by orientation, or 2) add @orientation_landscape/portrait.</p>
+
+<div class="highlight"><pre><code class="css"><span class="c">/* Target iPhone 6 specifically */</span>
+<span class="k">@media</span> <span class="k">@ds_iphone6</span> <span class="p">{}</span>
+<span class="c">/* Target iPhone6 in landscape mode */</span>
+<span class="k">@media</span> <span class="k">@ds_iphone6_landscape</span> <span class="p">{}</span>
+<span class="k">@media</span> <span class="k">@ds_iphone6</span> <span class="k">@orientation_landscape</span> <span class="p">{}</span>
+<span class="c">/* Target iPhone6 in portrait mode */</span>
+<span class="k">@media</span> <span class="k">@ds_iphone6_portrait</span> <span class="p">{}</span>
+<span class="k">@media</span> <span class="k">@ds_iphone6</span> <span class="k">@orientation_portrait</span> <span class="p">{}</span></code></pre></div>
+
+<hr />
+
 <h3 id="bootstrap-integration">Bootstrap Integration</h3>
 
 <p>The Bellmaker will complement the Twitter Bootstrap framework for LESS. <a href="https://github.com/herereadthis/bellmaker/blob/master/src/demo/bootstrap_demo/index.html">A demo is available</a> if you load up <code>http://localhost:8002/src/demo/bootstrap_demo/</code>. </p>
@@ -414,7 +541,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
         <footer>
             <p><em><time property="dc:created" datetime="2014-06-16">16 June 2014</time></em><br />
                 <em>By: <span property="dc:creator">Jimmy Ha</span></em><br />
-                <em>Last updated: <time property="dc:modified" datetime="2014-07-11">11 July 2014</time></em></p>
+                <em>Last updated: <time property="dc:modified" datetime="2014-09-17">17 September 2014</time></em></p>
 
             <h4>Share this article:</h4>
             <ul id="post_social" class="sunflash_navmenu">
