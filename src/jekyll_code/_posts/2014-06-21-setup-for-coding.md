@@ -2,7 +2,7 @@
 layout:         post
 title:          "How to set up your computer for coding"
 created:        2014-06-21
-modified:		2014-07-17
+modified:		2014-09-25
 permalink:      setup-for-coding/
 description:    "It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need."
 tags:           css, less, sass
@@ -29,11 +29,21 @@ $ npm install less -g
 $ sudo npm install less -g
 {% endhighlight %}
 
+However, don't think of sudo a easy way out. Sudo should always be a last resort
+
 ----------------
 
 ### Basic Installs
 
-First, install xCode from the App Store. It gives you command line tools.
+First **[install iTerm](http://iterm.sourceforge.net/downloads.shtml)**, a terminal app to use the command line in OSX.
+
+Next, **[install Xcode](https://developer.apple.com/xcode/downloads/) from the App Store.
+
+{% highlight bash %}
+# test Xcode installation
+$ xcode-select -p
+# you should see /Applications/Xcode.app/Contents/Developer
+{% endhighlight %}
 
 #### Install Homebrew, a package manager for OS X
 
@@ -66,6 +76,9 @@ Once you have Homebrew, you can install pip, which is a tool for installing pyth
 #### Install Python & Pip
 
 {% highlight bash %}
+# You should already have Python try:
+$ which python
+# if you don't see anything then install with homebrew
 $ brew install python
 $ sudo easy_install pip
 {% endhighlight %}
@@ -82,6 +95,9 @@ $ python get-pip.py
 {% highlight bash %}
 # Install virtualenv, used for creating isolated Python environments
 $ pip install virtualenv
+$ pip install virtualenvwrapper
+# to use virtualenv tools, use:
+$ source /usr/local/bin/virtualenvwrapper.sh
 # Install Fabric, a command line tool for streamlining tasks and SSH
 $ pip install Fabric
 # Install Grip: "GitHub Readme Instant Preview"
@@ -128,9 +144,9 @@ Github is basically the de facto tool for maintaining, hosting, deploying, and s
 $ brew install git
 # Confirm your installation
 $ git --version
-# Use your credentials from your github account creation
-$ git config --global user.name "GITHUB_USERNAME"
-$ git config --global user.email "EMAIL@EXAMPLE.COM"
+# Use your own credentials from your github account creation
+$ git config --global user.name "John Smith"
+$ git config --global user.email EMAIL@EXAMPLE.COM
 {% endhighlight %}
 
 To allow your computer to talk to Github, you have to make an SSH Key. That is, every time you push or pull, your computer will authenticate automatically so you won't have to enter your username/password.
@@ -185,11 +201,10 @@ Go to your Github profile (from the homepage, click "Edit Profile"), choose "SSH
 
 ### Node Package Manager
 
-NPM is another package manager for a lot of very useful Javascript tools. First, you will need to [install Node.js](http://nodejs.org), a JavaScript platform. 
-
-#### Check if NPM install is successful
+NPM is another package manager for a lot of very useful Javascript tools. Use Homebrew.
 
 {% highlight bash %}
+$ brew install node
 # check npm install version
 $ npm -v
 {% endhighlight %}

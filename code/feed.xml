@@ -1460,11 +1460,19 @@
 &lt;span class=&quot;c&quot;&gt;# try this&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install less -g&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;However, don’t think of sudo a easy way out. Sudo should always be a last resort&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;basic-installs&quot;&gt;Basic Installs&lt;/h3&gt;
 
-&lt;p&gt;First, install xCode from the App Store. It gives you command line tools.&lt;/p&gt;
+&lt;p&gt;First &lt;strong&gt;&lt;a href=&quot;http://iterm.sourceforge.net/downloads.shtml&quot;&gt;install iTerm&lt;/a&gt;&lt;/strong&gt;, a terminal app to use the command line in OSX.&lt;/p&gt;
+
+&lt;p&gt;Next, **&lt;a href=&quot;https://developer.apple.com/xcode/downloads/&quot;&gt;install Xcode&lt;/a&gt; from the App Store.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# test Xcode installation&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;xcode-select -p
+&lt;span class=&quot;c&quot;&gt;# you should see /Applications/Xcode.app/Contents/Developer&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;install-homebrew-a-package-manager-for-os-x&quot;&gt;Install Homebrew, a package manager for OS X&lt;/h4&gt;
 
@@ -1490,7 +1498,10 @@
 
 &lt;h4 id=&quot;install-python--pip&quot;&gt;Install Python &amp;amp; Pip&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install python
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# You should already have Python try:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;which python
+&lt;span class=&quot;c&quot;&gt;# if you don&amp;#39;t see anything then install with homebrew&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install python
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo easy_install pip&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;!--
@@ -1504,6 +1515,9 @@ $ python get-pip.py
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Install virtualenv, used for creating isolated Python environments&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install virtualenv
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install virtualenvwrapper
+&lt;span class=&quot;c&quot;&gt;# to use virtualenv tools, use:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; /usr/local/bin/virtualenvwrapper.sh
 &lt;span class=&quot;c&quot;&gt;# Install Fabric, a command line tool for streamlining tasks and SSH&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install Fabric
 &lt;span class=&quot;c&quot;&gt;# Install Grip: &amp;quot;GitHub Readme Instant Preview&amp;quot;&lt;/span&gt;
@@ -1546,9 +1560,9 @@ $ python manage.py startapp polls
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install git
 &lt;span class=&quot;c&quot;&gt;# Confirm your installation&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git --version
-&lt;span class=&quot;c&quot;&gt;# Use your credentials from your github account creation&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config --global user.name &lt;span class=&quot;s2&quot;&gt;&amp;quot;GITHUB_USERNAME&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config --global user.email &lt;span class=&quot;s2&quot;&gt;&amp;quot;EMAIL@EXAMPLE.COM&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;c&quot;&gt;# Use your own credentials from your github account creation&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config --global user.name &lt;span class=&quot;s2&quot;&gt;&amp;quot;John Smith&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config --global user.email EMAIL@EXAMPLE.COM&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;To allow your computer to talk to Github, you have to make an SSH Key. That is, every time you push or pull, your computer will authenticate automatically so you won’t have to enter your username/password.&lt;/p&gt;
 
@@ -1597,11 +1611,10 @@ The key&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s randomart image
 
 &lt;h3 id=&quot;node-package-manager&quot;&gt;Node Package Manager&lt;/h3&gt;
 
-&lt;p&gt;NPM is another package manager for a lot of very useful Javascript tools. First, you will need to &lt;a href=&quot;http://nodejs.org&quot;&gt;install Node.js&lt;/a&gt;, a JavaScript platform. &lt;/p&gt;
+&lt;p&gt;NPM is another package manager for a lot of very useful Javascript tools. Use Homebrew.&lt;/p&gt;
 
-&lt;h4 id=&quot;check-if-npm-install-is-successful&quot;&gt;Check if NPM install is successful&lt;/h4&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# check npm install version&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install node
+&lt;span class=&quot;c&quot;&gt;# check npm install version&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;install-very-useful-node-packages&quot;&gt;Install very useful node packages&lt;/h4&gt;

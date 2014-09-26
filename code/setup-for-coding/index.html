@@ -85,11 +85,19 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <span class="c"># try this</span>
 <span class="nv">$ </span>sudo npm install less -g</code></pre></div>
 
+<p>However, don’t think of sudo a easy way out. Sudo should always be a last resort</p>
+
 <hr />
 
 <h3 id="basic-installs">Basic Installs</h3>
 
-<p>First, install xCode from the App Store. It gives you command line tools.</p>
+<p>First <strong><a href="http://iterm.sourceforge.net/downloads.shtml">install iTerm</a></strong>, a terminal app to use the command line in OSX.</p>
+
+<p>Next, **<a href="https://developer.apple.com/xcode/downloads/">install Xcode</a> from the App Store.</p>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># test Xcode installation</span>
+<span class="nv">$ </span>xcode-select -p
+<span class="c"># you should see /Applications/Xcode.app/Contents/Developer</span></code></pre></div>
 
 <h4 id="install-homebrew-a-package-manager-for-os-x">Install Homebrew, a package manager for OS X</h4>
 
@@ -115,7 +123,10 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="install-python--pip">Install Python &amp; Pip</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install python
+<div class="highlight"><pre><code class="bash"><span class="c"># You should already have Python try:</span>
+<span class="nv">$ </span>which python
+<span class="c"># if you don&#39;t see anything then install with homebrew</span>
+<span class="nv">$ </span>brew install python
 <span class="nv">$ </span>sudo easy_install pip</code></pre></div>
 
 <!--
@@ -129,6 +140,9 @@ $ python get-pip.py
 
 <div class="highlight"><pre><code class="bash"><span class="c"># Install virtualenv, used for creating isolated Python environments</span>
 <span class="nv">$ </span>pip install virtualenv
+<span class="nv">$ </span>pip install virtualenvwrapper
+<span class="c"># to use virtualenv tools, use:</span>
+<span class="nv">$ </span><span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh
 <span class="c"># Install Fabric, a command line tool for streamlining tasks and SSH</span>
 <span class="nv">$ </span>pip install Fabric
 <span class="c"># Install Grip: &quot;GitHub Readme Instant Preview&quot;</span>
@@ -171,9 +185,9 @@ $ python manage.py startapp polls
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install git
 <span class="c"># Confirm your installation</span>
 <span class="nv">$ </span>git --version
-<span class="c"># Use your credentials from your github account creation</span>
-<span class="nv">$ </span>git config --global user.name <span class="s2">&quot;GITHUB_USERNAME&quot;</span>
-<span class="nv">$ </span>git config --global user.email <span class="s2">&quot;EMAIL@EXAMPLE.COM&quot;</span></code></pre></div>
+<span class="c"># Use your own credentials from your github account creation</span>
+<span class="nv">$ </span>git config --global user.name <span class="s2">&quot;John Smith&quot;</span>
+<span class="nv">$ </span>git config --global user.email EMAIL@EXAMPLE.COM</code></pre></div>
 
 <p>To allow your computer to talk to Github, you have to make an SSH Key. That is, every time you push or pull, your computer will authenticate automatically so you won’t have to enter your username/password.</p>
 
@@ -222,11 +236,10 @@ The key<span class="err">&#39;</span>s randomart image is:
 
 <h3 id="node-package-manager">Node Package Manager</h3>
 
-<p>NPM is another package manager for a lot of very useful Javascript tools. First, you will need to <a href="http://nodejs.org">install Node.js</a>, a JavaScript platform. </p>
+<p>NPM is another package manager for a lot of very useful Javascript tools. Use Homebrew.</p>
 
-<h4 id="check-if-npm-install-is-successful">Check if NPM install is successful</h4>
-
-<div class="highlight"><pre><code class="bash"><span class="c"># check npm install version</span>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install node
+<span class="c"># check npm install version</span>
 <span class="nv">$ </span>npm -v</code></pre></div>
 
 <h4 id="install-very-useful-node-packages">Install very useful node packages</h4>
@@ -293,7 +306,7 @@ mcd<span class="o">()</span> <span class="o">{</span>
         <footer>
             <p><em><time property="dc:created" datetime="2014-06-21">21 June 2014</time></em><br />
                 <em>By: <span property="dc:creator">Jimmy Ha</span></em><br />
-                <em>Last updated: <time property="dc:modified" datetime="2014-07-17">17 July 2014</time></em></p>
+                <em>Last updated: <time property="dc:modified" datetime="2014-09-25">25 September 2014</time></em></p>
 
             <h4>Share this article:</h4>
             <ul id="post_social" class="sunflash_navmenu">
