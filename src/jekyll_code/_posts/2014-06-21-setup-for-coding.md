@@ -37,7 +37,7 @@ However, don't think of sudo a easy way out. Sudo should always be a last resort
 
 First **[install iTerm](http://iterm.sourceforge.net/downloads.shtml)**, a terminal app to use the command line in OSX.
 
-Next, **[install Xcode](https://developer.apple.com/xcode/downloads/) from the App Store.
+Next, **[install Xcode](https://developer.apple.com/xcode/downloads/)** from the App Store.
 
 {% highlight bash %}
 # test Xcode installation
