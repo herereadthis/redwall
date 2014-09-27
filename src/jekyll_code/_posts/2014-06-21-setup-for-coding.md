@@ -193,6 +193,14 @@ The key's randomart image is:
 $ pbcopy < ~/.ssh/id_rsa.pub
 {% endhighlight %}
 
+Also, you need to add Github to your ~/.ssh/known_hosts so that the authenticity of github.com can be established.
+
+{% highlight bash %}
+$ ssh -T git@github.com
+# you should get a response that says,
+Hi GITHUB_USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
+{% endhighlight %}
+
 {% figure_img 0 caption %}
 
 Go to your Github profile (from the homepage, click "Edit Profile"), choose "SSH Keys," and click "Add SSH Key". Choose a name that you can remember and will identify the machine you're using. Then, in the text area, paste the key that you had previously copied. Success!
@@ -212,7 +220,7 @@ $ npm -v
 #### Install very useful node packages
 
 {% highlight bash %}
-# Install Grunt, an automated JavasScript task runner\
+# Install Grunt, an automated JavasScript task runner
 $ sudo npm install -g grunt
 $ sudo npm install -g grunt-cli
 # Bower, a package manager
