@@ -3,7 +3,7 @@ layout:         post
 title:          "Bellmaker, a respoonsive media query package"
 repo_title:     "<em>Bellmaker</em>, a responsive media query package"
 created:        2014-06-16
-modified:       2014-09-17
+modified:       2014-09-29
 permalink:      bellmaker/
 description:    "The Bellmaker is a library of device-agnostic and device specific media queries that will complement your existing CSS."
 tags:           css, less, sass
@@ -317,15 +317,17 @@ In most cases, the device-agnostic media queries will cover everything you need.
 
 | Devices | Query Suffix | Pixel Ratio | Aspect Ratio | Display Resolution | Actual Resolution | 
 | ---- | ---- | ---- | ---- | ---- | ---- |
-| Google Nexus 4 | ds_768_wxga2 | 2 | 2:3 | 384×640 | 768×1280 | 
 | Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S | ds_720p_hd2 | 2 | 9:16 | 360×640 | 720×1280 |
-| Samsung GN3; iPhone 6 Plus | ds_full_hd2 | 2 | 9:16 | 560×960 | 1080×1920 |
-| Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4+; Sony Xperia Z1+ | ds_1080_hd3 | 3 | 9:16 | 1080×1920 | 360×640 |
-| LG G3 | ds_wqhd4 | 4 | 9:16  | 360×640 | 1440×2560 |
+| Google Nexus 4 | ds_768_wxga2 | 2 | 3:5 | 384×640 | 768×1280 | 
+| Nokia Lumia 920, 925, 928 | ds_768_wxga24 | 2.4 | 3:5 | 320×533 | 768×1280 | 
+| Samsung GN1 | ds_800_wxga2 | 2 | 5:8 | 400×640 | 800×1280 | 
+| Google Nexus 5; HTC Hero M7, M8; LG G2; Samsung GS4, GS5; Sony Xperia Z1, Z2 | ds_1080_hd3 | 3 | 9:16 | 1080×1920 | 360×640 |
+| LG G3, Samsung GN4 | ds_wqhd4 | 4 | 9:16  | 360×640 | 1440×2560 |
 | iPhone 1-3 | ds_iphone_early | 1 | 2:3 | 320×480 | 320×480 |
 | iPhone 4(s) | ds_iphone_4 | 2 | 2:3 | 320×480 | 640×960 |
-| iPhone 5(s)(c) | ds_iphone_5 | 2 | 9:16 | 320×568 | 640×1136 |
-| iPhone 6 | ds_iphone_6 | 2 | 9:16 | 375×667 | 750×1334 |
+| iPhone 5(s)(c) | ds_iphone_5 | 2 | 40:71 | 320×568 | 640×1136 |
+| iPhone 6 | ds_iphone_6 | 2 | 375:667 | 375×667 | 750×1334 |
+| iPhone 6 Plus | ds_iphone_6_plus | 3 | 9:16 | 414×736 | 1242×2208 |
 | All iPads | ds_ipad | N/A | 3:4 | 768×1024 | 768×1024 |
 | iPad 1-2; iPad Mini 1 | ds_ipad_early | 1 | 3:4 | 768×1024 | 768×1024 |
 | iPad 3+; iPad Air; iPad Mini 2 | ds_ipad_retina | 2 | 3:4 | 1536×2056 | 768×1024 |

@@ -93,7 +93,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>First <strong><a href="http://iterm.sourceforge.net/downloads.shtml">install iTerm</a></strong>, a terminal app to use the command line in OSX.</p>
 
-<p>Next, **<a href="https://developer.apple.com/xcode/downloads/">install Xcode</a> from the App Store.</p>
+<p>Next, <strong><a href="https://developer.apple.com/xcode/downloads/">install Xcode</a></strong> from the App Store.</p>
 
 <div class="highlight"><pre><code class="bash"><span class="c"># test Xcode installation</span>
 <span class="nv">$ </span>xcode-select -p
@@ -227,6 +227,12 @@ The key<span class="err">&#39;</span>s randomart image is:
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre></div>
 
+<p>Also, you need to add Github to your ~/.ssh/known_hosts so that the authenticity of github.com can be established.</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>ssh -T git@github.com
+<span class="c"># you should get a response that says,</span>
+Hi GITHUB_USERNAME! You<span class="err">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.</code></pre></div>
+
 <figure data-module="image_expander"><img src="/build/images/code//setup-for-coding-github-2048x1536.png" alt="Add SSH key to Github profile" /><figcaption><h4 id="add-ssh-key-to-github-profile">Add SSH key to Github profile</h4>
 </figcaption></figure>
 
@@ -244,7 +250,7 @@ The key<span class="err">&#39;</span>s randomart image is:
 
 <h4 id="install-very-useful-node-packages">Install very useful node packages</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Install Grunt, an automated JavasScript task runner\</span>
+<div class="highlight"><pre><code class="bash"><span class="c"># Install Grunt, an automated JavasScript task runner</span>
 <span class="nv">$ </span>sudo npm install -g grunt
 <span class="nv">$ </span>sudo npm install -g grunt-cli
 <span class="c"># Bower, a package manager</span>

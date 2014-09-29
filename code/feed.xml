@@ -1299,14 +1299,6 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Google Nexus 4&lt;/td&gt;
-      &lt;td&gt;ds_768_wxga2&lt;/td&gt;
-      &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;2:3&lt;/td&gt;
-      &lt;td&gt;384×640&lt;/td&gt;
-      &lt;td&gt;768×1280&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
       &lt;td&gt;Blackberry Z30; Motorola Droid Maxx, Razr HD; Samsung GN2; Sony Xperia S&lt;/td&gt;
       &lt;td&gt;ds_720p_hd2&lt;/td&gt;
       &lt;td&gt;2&lt;/td&gt;
@@ -1315,15 +1307,31 @@
       &lt;td&gt;720×1280&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Samsung GN3; iPhone 6 Plus&lt;/td&gt;
-      &lt;td&gt;ds_full_hd2&lt;/td&gt;
+      &lt;td&gt;Google Nexus 4&lt;/td&gt;
+      &lt;td&gt;ds_768_wxga2&lt;/td&gt;
       &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;9:16&lt;/td&gt;
-      &lt;td&gt;560×960&lt;/td&gt;
-      &lt;td&gt;1080×1920&lt;/td&gt;
+      &lt;td&gt;3:5&lt;/td&gt;
+      &lt;td&gt;384×640&lt;/td&gt;
+      &lt;td&gt;768×1280&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Google Nexus 5; HTC Hero M7+; LG G2; Samsung GS4+; Sony Xperia Z1+&lt;/td&gt;
+      &lt;td&gt;Nokia Lumia 920, 925, 928&lt;/td&gt;
+      &lt;td&gt;ds_768_wxga24&lt;/td&gt;
+      &lt;td&gt;2.4&lt;/td&gt;
+      &lt;td&gt;3:5&lt;/td&gt;
+      &lt;td&gt;320×533&lt;/td&gt;
+      &lt;td&gt;768×1280&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Samsung GN1&lt;/td&gt;
+      &lt;td&gt;ds_800_wxga2&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;5:8&lt;/td&gt;
+      &lt;td&gt;400×640&lt;/td&gt;
+      &lt;td&gt;800×1280&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Google Nexus 5; HTC Hero M7, M8; LG G2; Samsung GS4, GS5; Sony Xperia Z1, Z2&lt;/td&gt;
       &lt;td&gt;ds_1080_hd3&lt;/td&gt;
       &lt;td&gt;3&lt;/td&gt;
       &lt;td&gt;9:16&lt;/td&gt;
@@ -1331,7 +1339,7 @@
       &lt;td&gt;360×640&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;LG G3&lt;/td&gt;
+      &lt;td&gt;LG G3, Samsung GN4&lt;/td&gt;
       &lt;td&gt;ds_wqhd4&lt;/td&gt;
       &lt;td&gt;4&lt;/td&gt;
       &lt;td&gt;9:16&lt;/td&gt;
@@ -1358,7 +1366,7 @@
       &lt;td&gt;iPhone 5(s)(c)&lt;/td&gt;
       &lt;td&gt;ds_iphone_5&lt;/td&gt;
       &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;9:16&lt;/td&gt;
+      &lt;td&gt;40:71&lt;/td&gt;
       &lt;td&gt;320×568&lt;/td&gt;
       &lt;td&gt;640×1136&lt;/td&gt;
     &lt;/tr&gt;
@@ -1366,9 +1374,17 @@
       &lt;td&gt;iPhone 6&lt;/td&gt;
       &lt;td&gt;ds_iphone_6&lt;/td&gt;
       &lt;td&gt;2&lt;/td&gt;
-      &lt;td&gt;9:16&lt;/td&gt;
+      &lt;td&gt;375:667&lt;/td&gt;
       &lt;td&gt;375×667&lt;/td&gt;
       &lt;td&gt;750×1334&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;iPhone 6 Plus&lt;/td&gt;
+      &lt;td&gt;ds_iphone_6_plus&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;9:16&lt;/td&gt;
+      &lt;td&gt;414×736&lt;/td&gt;
+      &lt;td&gt;1242×2208&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;All iPads&lt;/td&gt;
@@ -1468,7 +1484,7 @@
 
 &lt;p&gt;First &lt;strong&gt;&lt;a href=&quot;http://iterm.sourceforge.net/downloads.shtml&quot;&gt;install iTerm&lt;/a&gt;&lt;/strong&gt;, a terminal app to use the command line in OSX.&lt;/p&gt;
 
-&lt;p&gt;Next, **&lt;a href=&quot;https://developer.apple.com/xcode/downloads/&quot;&gt;install Xcode&lt;/a&gt; from the App Store.&lt;/p&gt;
+&lt;p&gt;Next, &lt;strong&gt;&lt;a href=&quot;https://developer.apple.com/xcode/downloads/&quot;&gt;install Xcode&lt;/a&gt;&lt;/strong&gt; from the App Store.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# test Xcode installation&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;xcode-select -p
@@ -1602,6 +1618,12 @@ The key&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s randomart image
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pbcopy &amp;lt; ~/.ssh/id_rsa.pub&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;Also, you need to add Github to your ~/.ssh/known_hosts so that the authenticity of github.com can be established.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh -T git@github.com
+&lt;span class=&quot;c&quot;&gt;# you should get a response that says,&lt;/span&gt;
+Hi GITHUB_USERNAME! You&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;ve successfully authenticated, but GitHub does not provide shell access.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;figure data-module=&quot;image_expander&quot;&gt;&lt;img src=&quot;/build/images/code//setup-for-coding-github-2048x1536.png&quot; alt=&quot;Add SSH key to Github profile&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;add-ssh-key-to-github-profile&quot;&gt;Add SSH key to Github profile&lt;/h4&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
 
@@ -1619,7 +1641,7 @@ The key&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s randomart image
 
 &lt;h4 id=&quot;install-very-useful-node-packages&quot;&gt;Install very useful node packages&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Install Grunt, an automated JavasScript task runner\&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# Install Grunt, an automated JavasScript task runner&lt;/span&gt;
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install -g grunt
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo npm install -g grunt-cli
 &lt;span class=&quot;c&quot;&gt;# Bower, a package manager&lt;/span&gt;
