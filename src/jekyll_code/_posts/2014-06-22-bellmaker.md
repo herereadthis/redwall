@@ -189,27 +189,13 @@ For example, if your browser window is 1366 pixels wide, then the width of the p
 
 {% highlight css %}
 .bellmaker_container {
-    @media @mq_baseline {
-        width: @pw_baseline;
-    }
-    @media @mq_2x_small {
-        width: @pw_2x_small;
-    }
-    @media @mq_x_small {
-        width: @pw_x_small;
-    }
-    @media @mq_small {
-        width: @pw_small;
-    }
-    @media @mq_medium {
-        width: @pw_medium;
-    }
-    @media @mq_large {
-        width: @pw_large;
-    }
-    @media @mq_x_large {
-        width: @pw_x_large;
-    }
+    @media @mq_baseline {   width: @pw_baseline;}
+    @media @mq_2x_small {   width: @pw_2x_small;}
+    @media @mq_x_small {    width: @pw_x_small;}
+    @media @mq_small {      width: @pw_small;}
+    @media @mq_medium {     width: @pw_medium;}
+    @media @mq_large {      width: @pw_large;}
+    @media @mq_x_large {    width: @pw_x_large;}
 }
 {% endhighlight %}
 
@@ -217,27 +203,13 @@ For example, if your browser window is 1366 pixels wide, then the width of the p
 
 {% highlight css %}
 .bellmaker_container {
-    @media #{$da_baseline} {
-        width: $pw_baseline;
-    }
-    @media #{$da_2x_small} {
-        width: $pw_2x_small;
-    }
-    @media #{$da_x_small} {
-        width: $pw_x_small;
-    }
-    @media #{$da_small} {
-        width: $pw_small;
-    }
-    @media #{$da_medium} {
-        width: $pw_medium;
-    }
-    @media #{$da_large} {
-        width: $pw_large;
-    }
-    @media #{$da_x_large} {
-        width: $pw_x_large;
-    }
+    @media #{$da_baseline} {    width: $pw_baseline;}
+    @media #{$da_2x_small} {    width: $pw_2x_small;}
+    @media #{$da_x_small} {     width: $pw_x_small;}
+    @media #{$da_small} {       width: $pw_small;}
+    @media #{$da_medium} {      width: $pw_medium;}
+    @media #{$da_large} {       width: $pw_large;}
+    @media #{$da_x_large} {     width: $pw_x_large;}
 }
 {% endhighlight %}
 
@@ -247,39 +219,25 @@ Note: the abbreviation "da" stands for "device-agnostic," and "pw" stands for "p
 
 {% highlight css %}
 @media only screen and (min-width: 320px) {
-    .bellmaker_container {
-        width: 100%;
-    }
+    .bellmaker_container {width: 100%;}
 }
 @media only screen and (min-width: 480px) {
-    .bellmaker_container {
-        width: 100%;
-    }
+    .bellmaker_container {width: 100%;}
 }
 @media only screen and (min-width: 640px) {
-    .bellmaker_container {
-        width: 100%;
-    }
+    .bellmaker_container {width: 100%;}
 }
 @media only screen and (min-width: 768px) {
-    .bellmaker_container {
-        width: 76.8rem;
-    }
+    .bellmaker_container {width: 76.8rem;}
 }
 @media only screen and (min-width: 1024px) {
-    .bellmaker_container {
-        width: 96rem;
-    }
+    .bellmaker_container {width: 96rem;}
 }
 @media only screen and (min-width: 1280px) {
-    .bellmaker_container {
-        width: 115.2rem;
-    }
+    .bellmaker_container {width: 115.2rem;}
 }
 @media only screen and (min-width: 1440px) {
-    .bellmaker_container {
-        width: 134.4rem;
-    }
+    .bellmaker_container {width: 134.4rem;}
 }
 {% endhighlight %}
 
@@ -321,7 +279,7 @@ In most cases, the device-agnostic media queries will cover everything you need.
 | Google Nexus 4 | ds_768_wxga2 | 2 | 3:5 | 384×640 | 768×1280 | 
 | Nokia Lumia 920, 925, 928 | ds_768_wxga24 | 2.4 | 3:5 | 320×533 | 768×1280 | 
 | Samsung GN1 | ds_800_wxga2 | 2 | 5:8 | 400×640 | 800×1280 | 
-| Google Nexus 5; HTC Hero M7, M8; LG G2; Samsung GS4, GS5; Sony Xperia Z1, Z2 | ds_1080_hd3 | 3 | 9:16 | 1080×1920 | 360×640 |
+| Google Nexus 5; HTC Hero M7, M8; LG G2; Samsung GS4, GS5, GN3; Sony Xperia Z1, Z2 | ds_1080_hd3 | 3 | 9:16 | 1080×1920 | 360×640 |
 | LG G3, Samsung GN4 | ds_wqhd4 | 4 | 9:16  | 360×640 | 1440×2560 |
 | iPhone 1-3 | ds_iphone_early | 1 | 2:3 | 320×480 | 320×480 |
 | iPhone 4(s) | ds_iphone_4 | 2 | 2:3 | 320×480 | 640×960 |
@@ -336,14 +294,59 @@ To write the media query for your phone just choose from the "Query Suffix" colu
 
 {% highlight css %}
 /* Target iPhone 6 specifically */
-@media @ds_iphone6 {}
-/* Target iPhone6 in landscape mode */
-@media @ds_iphone6_landscape {}
-@media @ds_iphone6 @orientation_landscape {}
+@media @ds_iphone_6 {}
+/* Target iPhone_6 in landscape mode */
+@media @ds_iphone_6_landscape {}
+@media @ds_iphone_6 @orientation_landscape {}
 /* Target iPhone6 in portrait mode */
-@media @ds_iphone6_portrait {}
-@media @ds_iphone6 @orientation_portrait {}
+@media @ds_iphone_6_portrait {}
+@media @ds_iphone_6 @orientation_portrait {}
 {% endhighlight %}
+
+-------------
+
+### Aspect Ratio Targeting
+
+**You can save a lot of time by targeting groups of devices** by using aspect ratios instead. For example, the Samsung Galaxy S series and Motorola Droid actually render the same 360×640 pixels, which mean the share the same 9:16 aspect ratio. Use the ```ds_ratio_9_16``` variable. ("ds" stands for device-specific)
+
+{% highlight css %}
+/* Target all 9:16 phones (LESS) */
+@media @ds_ratio_9_16 {
+    #container_id   {width: 100%;}
+}
+{% endhighlight %}
+
+{% highlight css %}
+/* Target all 9:16 phones (SASS) */
+@media #{ds_ratio_9_16} {
+    #container_id   {width: 100%;}
+}
+{% endhighlight %}
+
+{% highlight css %}
+/* Compiled as CSS */
+@media only screen and (device-aspect-ratio: 9/16) {
+    #container_id   {width: 100%;}
+}
+{% endhighlight %}
+
+Here is the complete listing of how to target phones by aspect ratio:
+
+| Aspect Ratio | Query Suffix | Brand | Models |
+| ---- | ---- | ----| ---- |
+| 9:16 | ds_ratio_9_16 | Blackberry | Z30 |
+| 9:16 | ds_ratio_9_16 | Google | Nexus 5 |
+| 9:16 | ds_ratio_9_16 | HTC | Hero M7/M8 |
+| 9:16 | ds_ratio_9_16 | LG | G2/G3 |
+| 9:16 | ds_ratio_9_16 | Motorola | Droid Maxx, Razr HD |
+| 9:16 | ds_ratio_9_16 | Samsung | GN2/GN3, GS4/GS5 |
+| 9:16 | ds_ratio_9_16 | Sony | Xperia S/Z1/Z2 |
+| 3:5 | ds_ratio_3_5 | Nokia | Lumia 920/925/928 |
+| 5:8 | ds_ratio_5_8 | Samsung | GN1 |
+| 2:3 | ds_ratio_2_3 | Apple | iPhone 1/2/3/4 |
+| 3:4 | ds_ratio_3_4 | Apple | iPad 1/2/3/4, Air, Mini |
+
+Unfortunately Bellmaker doesn't have aspect ratio targeting for the iPhone 5 and 6, because they have very unique screens. Just use ```ds_iphone_5``` and ```ds_iphone_6``` instead.
 
 -------------
 

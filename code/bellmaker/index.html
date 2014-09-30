@@ -271,53 +271,25 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <h4 id="device-agnostic-output-as-less">Device-agnostic output as LESS</h4>
 
 <div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
-    <span class="o">@</span><span class="n">media</span> <span class="o">@</span><span class="n">mq_baseline</span> <span class="err">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="o">@</span><span class="n">pw_baseline</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="k">@mq_2x_small</span> <span class="p">{</span>
-        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_2x_small</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="k">@mq_x_small</span> <span class="p">{</span>
-        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_x_small</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="k">@mq_small</span> <span class="p">{</span>
-        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_small</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="k">@mq_medium</span> <span class="p">{</span>
-        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_medium</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="k">@mq_large</span> <span class="p">{</span>
-        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_large</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="k">@mq_x_large</span> <span class="p">{</span>
-        <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_x_large</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="o">@</span><span class="n">media</span> <span class="o">@</span><span class="n">mq_baseline</span> <span class="err">{</span>   <span class="k">width</span><span class="o">:</span> <span class="o">@</span><span class="n">pw_baseline</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="k">@mq_2x_small</span> <span class="p">{</span>   <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_2x_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="k">@mq_x_small</span> <span class="p">{</span>    <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_x_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="k">@mq_small</span> <span class="p">{</span>      <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="k">@mq_medium</span> <span class="p">{</span>     <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_medium</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="k">@mq_large</span> <span class="p">{</span>      <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_large</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="k">@mq_x_large</span> <span class="p">{</span>    <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_x_large</span><span class="p">;}</span>
 <span class="err">}</span></code></pre></div>
 
 <h4 id="device-agnostic-output-as-sass">Device-agnostic output as SASS</h4>
 
 <div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
-    <span class="o">@</span><span class="n">media</span> <span class="err">#{$</span><span class="n">da_baseline</span><span class="p">}</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_baseline</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_2x_small</span><span class="p">}</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_2x_small</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_x_small</span><span class="p">}</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_x_small</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_small</span><span class="p">}</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_small</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_medium</span><span class="p">}</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_medium</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_large</span><span class="p">}</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_large</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_x_large</span><span class="p">}</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_x_large</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="o">@</span><span class="n">media</span> <span class="err">#{$</span><span class="n">da_baseline</span><span class="p">}</span> <span class="p">{</span>    <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_baseline</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_2x_small</span><span class="p">}</span> <span class="p">{</span>    <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_2x_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_x_small</span><span class="p">}</span> <span class="p">{</span>     <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_x_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_small</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_medium</span><span class="p">}</span> <span class="p">{</span>      <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_medium</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_large</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_large</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_x_large</span><span class="p">}</span> <span class="p">{</span>     <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_x_large</span><span class="p">;}</span>
 <span class="err">}</span></code></pre></div>
 
 <p>Note: the abbreviation “da” stands for “device-agnostic,” and “pw” stands for “page width.”</p>
@@ -325,39 +297,25 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <h4 id="compiled-as-css">Compiled as CSS</h4>
 
 <div class="highlight"><pre><code class="css"><span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">320px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
 <span class="p">}</span>
 <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">480px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
 <span class="p">}</span>
 <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">640px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
 <span class="p">}</span>
 <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="m">76</span><span class="o">.</span><span class="m">8</span><span class="n">rem</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">76</span><span class="o">.</span><span class="m">8</span><span class="n">rem</span><span class="p">;}</span>
 <span class="p">}</span>
 <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1024px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="m">96</span><span class="n">rem</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">96</span><span class="n">rem</span><span class="p">;}</span>
 <span class="p">}</span>
 <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1280px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="m">115</span><span class="o">.</span><span class="m">2</span><span class="n">rem</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">115</span><span class="o">.</span><span class="m">2</span><span class="n">rem</span><span class="p">;}</span>
 <span class="p">}</span>
 <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1440px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.bellmaker_container</span> <span class="p">{</span>
-        <span class="k">width</span><span class="o">:</span> <span class="m">134</span><span class="o">.</span><span class="m">4</span><span class="n">rem</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">134</span><span class="o">.</span><span class="m">4</span><span class="n">rem</span><span class="p">;}</span>
 <span class="p">}</span></code></pre></div>
 
 <p>To speed up development, there is always the option of skipping or omitting breakpoints. In the above code, there is no need to declare breakpoints at 480px or 640px because <code>#container_id {}</code> would still be 100% width. Also, if you don’t feel like (or would rather delay) designing for very large screens, then there is no need to specify <code>@media @da_x_large {...}</code> As such, <strong>even though the Bellmaker does provide 7 breakpoints,</strong> <strong><em>you can use just 4</em></strong> <strong>as a bare minimum.</strong></p>
@@ -433,7 +391,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
       <td>800×1280</td>
     </tr>
     <tr>
-      <td>Google Nexus 5; HTC Hero M7, M8; LG G2; Samsung GS4, GS5; Sony Xperia Z1, Z2</td>
+      <td>Google Nexus 5; HTC Hero M7, M8; LG G2; Samsung GS4, GS5, GN3; Sony Xperia Z1, Z2</td>
       <td>ds_1080_hd3</td>
       <td>3</td>
       <td>9:16</td>
@@ -518,13 +476,117 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <p>To write the media query for your phone just choose from the “Query Suffix” column that matches your device. There are two ways to target orientation: 1) add _landscape or _portrait to target the device by orientation, or 2) add @orientation_landscape/portrait.</p>
 
 <div class="highlight"><pre><code class="css"><span class="c">/* Target iPhone 6 specifically */</span>
-<span class="k">@media</span> <span class="k">@ds_iphone6</span> <span class="p">{}</span>
-<span class="c">/* Target iPhone6 in landscape mode */</span>
-<span class="k">@media</span> <span class="k">@ds_iphone6_landscape</span> <span class="p">{}</span>
-<span class="k">@media</span> <span class="k">@ds_iphone6</span> <span class="k">@orientation_landscape</span> <span class="p">{}</span>
+<span class="k">@media</span> <span class="k">@ds_iphone_6</span> <span class="p">{}</span>
+<span class="c">/* Target iPhone_6 in landscape mode */</span>
+<span class="k">@media</span> <span class="k">@ds_iphone_6_landscape</span> <span class="p">{}</span>
+<span class="k">@media</span> <span class="k">@ds_iphone_6</span> <span class="k">@orientation_landscape</span> <span class="p">{}</span>
 <span class="c">/* Target iPhone6 in portrait mode */</span>
-<span class="k">@media</span> <span class="k">@ds_iphone6_portrait</span> <span class="p">{}</span>
-<span class="k">@media</span> <span class="k">@ds_iphone6</span> <span class="k">@orientation_portrait</span> <span class="p">{}</span></code></pre></div>
+<span class="k">@media</span> <span class="k">@ds_iphone_6_portrait</span> <span class="p">{}</span>
+<span class="k">@media</span> <span class="k">@ds_iphone_6</span> <span class="k">@orientation_portrait</span> <span class="p">{}</span></code></pre></div>
+
+<hr />
+
+<h3 id="aspect-ratio-targeting">Aspect Ratio Targeting</h3>
+
+<p><strong>You can save a lot of time by targeting groups of devices</strong> by using aspect ratios instead. For example, the Samsung Galaxy S series and Motorola Droid actually render the same 360×640 pixels, which mean the share the same 9:16 aspect ratio. Use the <code>ds_ratio_9_16</code> variable. (“ds” stands for device-specific)</p>
+
+<div class="highlight"><pre><code class="css"><span class="c">/* Target all 9:16 phones (LESS) */</span>
+<span class="k">@media</span> <span class="k">@ds_ratio_9_16</span> <span class="p">{</span>
+    <span class="nf">#container_id</span>   <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
+<span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="css"><span class="c">/* Target all 9:16 phones (SASS) */</span>
+<span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="nt">ds_ratio_9_16</span><span class="p">}</span> <span class="p">{</span>
+    <span class="m">#contai</span><span class="n">ner_id</span>   <span class="err">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
+<span class="err">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="css"><span class="c">/* Compiled as CSS */</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">device-aspect-ratio</span><span class="o">:</span> <span class="nt">9</span><span class="o">/</span><span class="nt">16</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nf">#container_id</span>   <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Here is the complete listing of how to target phones by aspect ratio:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect Ratio</th>
+      <th>Query Suffix</th>
+      <th>Brand</th>
+      <th>Models</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9:16</td>
+      <td>ds_ratio_9_16</td>
+      <td>Blackberry</td>
+      <td>Z30</td>
+    </tr>
+    <tr>
+      <td>9:16</td>
+      <td>ds_ratio_9_16</td>
+      <td>Google</td>
+      <td>Nexus 5</td>
+    </tr>
+    <tr>
+      <td>9:16</td>
+      <td>ds_ratio_9_16</td>
+      <td>HTC</td>
+      <td>Hero M7/M8</td>
+    </tr>
+    <tr>
+      <td>9:16</td>
+      <td>ds_ratio_9_16</td>
+      <td>LG</td>
+      <td>G2/G3</td>
+    </tr>
+    <tr>
+      <td>9:16</td>
+      <td>ds_ratio_9_16</td>
+      <td>Motorola</td>
+      <td>Droid Maxx, Razr HD</td>
+    </tr>
+    <tr>
+      <td>9:16</td>
+      <td>ds_ratio_9_16</td>
+      <td>Samsung</td>
+      <td>GN2/GN3, GS4/GS5</td>
+    </tr>
+    <tr>
+      <td>9:16</td>
+      <td>ds_ratio_9_16</td>
+      <td>Sony</td>
+      <td>Xperia S/Z1/Z2</td>
+    </tr>
+    <tr>
+      <td>3:5</td>
+      <td>ds_ratio_3_5</td>
+      <td>Nokia</td>
+      <td>Lumia 920/925/928</td>
+    </tr>
+    <tr>
+      <td>5:8</td>
+      <td>ds_ratio_5_8</td>
+      <td>Samsung</td>
+      <td>GN1</td>
+    </tr>
+    <tr>
+      <td>2:3</td>
+      <td>ds_ratio_2_3</td>
+      <td>Apple</td>
+      <td>iPhone 1/2/3/4</td>
+    </tr>
+    <tr>
+      <td>3:4</td>
+      <td>ds_ratio_3_4</td>
+      <td>Apple</td>
+      <td>iPad 1/2/3/4, Air, Mini</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Unfortunately Bellmaker doesn’t have aspect ratio targeting for the iPhone 5 and 6, because they have very unique screens. Just use <code>ds_iphone_5</code> and <code>ds_iphone_6</code> instead.</p>
 
 <hr />
 
