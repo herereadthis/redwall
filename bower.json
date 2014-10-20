@@ -20,15 +20,12 @@
     "tests"
   ],
   "dependencies": {
-    "bellmaker": "~0.3.6",
-    "greeneyes": "~0.1.4",
-    "mossflower": "~0.1.6",
+    "bellmaker": "~0.4.1",
+    "greeneyes": "~0.1.6",
+    "mossflower": "~0.1.9",
     "requirejs": "~2.1.14",
     "sunflash": "~0.1.5",
     "jquery": "~2.1.1"
   },
-  "devDependencies": {
-    "greeneyes": "~0.1.5",
-    "bellmaker": "~0.3.8"
-  }
+  "devDependencies": {}
 }
