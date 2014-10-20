@@ -231,7 +231,9 @@ The key<span class="err">&#39;</span>s randomart image is:
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>ssh -T git@github.com
 <span class="c"># you should get a response that says,</span>
-Hi GITHUB_USERNAME! You<span class="err">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.</code></pre></div>
+Hi GITHUB_USERNAME! You<span class="err">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
+<span class="c"># Another way to ensure everything is okay is to add Git to your Keychain</span>
+<span class="nv">$ </span>git config --global credential.helper osxkeychain</code></pre></div>
 
 <figure data-module="image_expander"><img src="/build/images/code//setup-for-coding-github-2048x1536.png" alt="Add SSH key to Github profile" /><figcaption><h4 id="add-ssh-key-to-github-profile">Add SSH key to Github profile</h4>
 </figcaption></figure>
@@ -246,7 +248,9 @@ Hi GITHUB_USERNAME! You<span class="err">&#39;</span>ve successfully authenticat
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install node
 <span class="c"># check npm install version</span>
-<span class="nv">$ </span>npm -v</code></pre></div>
+<span class="nv">$ </span>npm -v
+<span class="c"># Troubleshooting - if you can run npm install on a repo becase of permissions, run:</span>
+<span class="nv">$ </span>sudo chown -R <span class="sb">`</span>whoami<span class="sb">`</span> ~/.npm</code></pre></div>
 
 <h4 id="install-very-useful-node-packages">Install very useful node packages</h4>
 
@@ -312,7 +316,7 @@ mcd<span class="o">()</span> <span class="o">{</span>
         <footer>
             <p><em><time property="dc:created" datetime="2014-06-21">21 June 2014</time></em><br />
                 <em>By: <span property="dc:creator">Jimmy Ha</span></em><br />
-                <em>Last updated: <time property="dc:modified" datetime="2014-09-25">25 September 2014</time></em></p>
+                <em>Last updated: <time property="dc:modified" datetime="2014-10-19">19 October 2014</time></em></p>
 
             <h4>Share this article:</h4>
             <ul id="post_social" class="sunflash_navmenu">

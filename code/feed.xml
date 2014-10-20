@@ -1684,7 +1684,9 @@ The key&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;s randomart image
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ssh -T git@github.com
 &lt;span class=&quot;c&quot;&gt;# you should get a response that says,&lt;/span&gt;
-Hi GITHUB_USERNAME! You&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;ve successfully authenticated, but GitHub does not provide shell access.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+Hi GITHUB_USERNAME! You&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;ve successfully authenticated, but GitHub does not provide shell access.
+&lt;span class=&quot;c&quot;&gt;# Another way to ensure everything is okay is to add Git to your Keychain&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config --global credential.helper osxkeychain&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure data-module=&quot;image_expander&quot;&gt;&lt;img src=&quot;/build/images/code//setup-for-coding-github-2048x1536.png&quot; alt=&quot;Add SSH key to Github profile&quot; /&gt;&lt;figcaption&gt;&lt;h4 id=&quot;add-ssh-key-to-github-profile&quot;&gt;Add SSH key to Github profile&lt;/h4&gt;
 &lt;/figcaption&gt;&lt;/figure&gt;
@@ -1699,7 +1701,9 @@ Hi GITHUB_USERNAME! You&lt;span class=&quot;err&quot;&gt;&amp;#39;&lt;/span&gt;v
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;brew install node
 &lt;span class=&quot;c&quot;&gt;# check npm install version&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm -v&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm -v
+&lt;span class=&quot;c&quot;&gt;# Troubleshooting - if you can run npm install on a repo becase of permissions, run:&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo chown -R &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;whoami&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt; ~/.npm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;install-very-useful-node-packages&quot;&gt;Install very useful node packages&lt;/h4&gt;
 

@@ -2,7 +2,7 @@
 layout:         post
 title:          "How to set up your computer for coding"
 created:        2014-06-21
-modified:		2014-09-25
+modified:		2014-10-19
 permalink:      setup-for-coding/
 description:    "It takes a lot to get a computer ready to begin writing code, including getting the right applications, packages, testing environments, etc. Here are all the best tools and things you need."
 tags:           css, less, sass
@@ -199,6 +199,8 @@ Also, you need to add Github to your ~/.ssh/known_hosts so that the authenticity
 $ ssh -T git@github.com
 # you should get a response that says,
 Hi GITHUB_USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
+# Another way to ensure everything is okay is to add Git to your Keychain
+$ git config --global credential.helper osxkeychain
 {% endhighlight %}
 
 {% figure_img 0 caption %}
@@ -215,6 +217,8 @@ NPM is another package manager for a lot of very useful Javascript tools. Use Ho
 $ brew install node
 # check npm install version
 $ npm -v
+# Troubleshooting - if you can run npm install on a repo becase of permissions, run:
+$ sudo chown -R `whoami` ~/.npm
 {% endhighlight %}
 
 #### Install very useful node packages
