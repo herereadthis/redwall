@@ -2,9 +2,13 @@
 // The "wrapper" function
 module.exports = function(grunt) {
     'use strict';
-    // Do grunt-related things in here
-    // Project configuration.
+
+    // Time how long tasks take. Can help when optimizing build times
+    require('time-grunt')(grunt);
+
+    // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
+    
     grunt.initConfig({
         // imports the JSON metadata stored in package.json
         pkg: grunt.file.readJSON('package.json'),

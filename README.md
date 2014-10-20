@@ -22,7 +22,7 @@ $ python -m SimpleHTTPServer 8001
 
 ```
 $ npm install
-$ bower install
-$ grunt
+$ npm run bower
+$ npm run grunt
 ```
 
