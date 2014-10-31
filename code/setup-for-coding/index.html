@@ -80,7 +80,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
   <li>Some commands below require you to install globally. If your machine won’t allow you because of permissions, preface the command with <code>sudo</code>. For example:</li>
 </ol>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># If this doesn&#39;t work:</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># If this doesn&#39;t work:</span>
 <span class="nv">$ </span>npm install less -g
 <span class="c"># try this</span>
 <span class="nv">$ </span>sudo npm install less -g</code></pre></div>
@@ -95,26 +95,26 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>Next, <strong><a href="https://developer.apple.com/xcode/downloads/">install Xcode</a></strong> from the App Store.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># test Xcode installation</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># test Xcode installation</span>
 <span class="nv">$ </span>xcode-select -p
 <span class="c"># you should see /Applications/Xcode.app/Contents/Developer</span></code></pre></div>
 
 <h4 id="install-homebrew-a-package-manager-for-os-x">Install Homebrew, a package manager for OS X</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>ruby -e <span class="s2">&quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ruby -e <span class="s2">&quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;</span></code></pre></div>
 
 <p>Basically, by installing Homebrew, “brew” is now a command in terminal. Check to see if the installation is working by running <code>brew doctor</code></p>
 
 <h4 id="update-brew">Update Brew</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Check your version of Homebrew</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Check your version of Homebrew</span>
 <span class="nv">$ </span>brew doctor
 <span class="c"># Update if needed</span>
 <span class="nv">$ </span>brew update</code></pre></div>
 
 <h4 id="install-ruby-an-interpreted-object-oriented-scripting-language">Install Ruby, an interpreted object-oriented scripting language</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Check to see if you already have Ruby</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Check to see if you already have Ruby</span>
 <span class="nv">$ </span>ruby --version
 <span class="c"># Install Ruby if you don&#39;t have it</span>
 <span class="nv">$ </span>brew install ruby</code></pre></div>
@@ -123,7 +123,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="install-python--pip">Install Python &amp; Pip</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># You should already have Python try:</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># You should already have Python try:</span>
 <span class="nv">$ </span>which python
 <span class="c"># if you don&#39;t see anything then install with homebrew</span>
 <span class="nv">$ </span>brew install python
@@ -138,7 +138,7 @@ $ python get-pip.py
 
 <h4 id="install-important-pip-packages">Install important Pip packages</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Install virtualenv, used for creating isolated Python environments</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Install virtualenv, used for creating isolated Python environments</span>
 <span class="nv">$ </span>pip install virtualenv
 <span class="nv">$ </span>pip install virtualenvwrapper
 <span class="c"># to use virtualenv tools, use:</span>
@@ -151,7 +151,7 @@ $ python get-pip.py
 
 <h4 id="install-django-a-web-framework-for-python">Install Django, a web framework for python</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>pip install django
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>pip install django
 <span class="c"># confirm your Django install</span>
 <span class="nv">$ </span>python -c <span class="s2">&quot;import django; print(django.get_version())&quot;</span>
 <span class="c"># CD to where you keep your repositories</span>
@@ -182,7 +182,7 @@ $ python manage.py startapp polls
 
 <h4 id="install-git-with-homebrew">Install Git with Homebrew</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install git
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>brew install git
 <span class="c"># Confirm your installation</span>
 <span class="nv">$ </span>git --version
 <span class="c"># Use your own credentials from your github account creation</span>
@@ -193,7 +193,7 @@ $ python manage.py startapp polls
 
 <h3 id="create-ssh-key">Create SSH Key</h3>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span><span class="nb">cd</span> ~/.ssh
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd</span> ~/.ssh
 <span class="c"># Check to see if you don&#39;t already have stuff there</span>
 <span class="c"># If you do, open the folder in Finder and move them to a backup</span>
 <span class="nv">$ </span>ls -lha
@@ -202,11 +202,11 @@ $ python manage.py startapp polls
 Generating public/private rsa key pair.
 <span class="c"># Press &quot;Enter&quot; here</span>
 Enter file in which to save the key <span class="o">(</span>/Users/herereadthis/.ssh/id_rsa<span class="o">)</span>: 
-Enter passphrase <span class="o">(</span>empty <span class="k">for </span>no passphrase<span class="o">)</span>:</code></pre></div>
+Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:</code></pre></div>
 
 <p>You will be prompted to created a password. Some people leave it blank, but I recommend you create one anyway, and make sure it is not the same password as the one to your github account. If the ssh key creation is successful, you’ll see something like this:</p>
 
-<div class="highlight"><pre><code class="bash">Your identification has been saved in /home/demo/.ssh/id_rsa.
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">Your identification has been saved in /home/demo/.ssh/id_rsa.
 Your public key has been saved in /home/demo/.ssh/id_rsa.pub.
 The key fingerprint is:
 3f:ed:44:4a:27:38:93:67:8c:74:4e:4d:dd:0a:c6:35 EMAIL@EXAMPLE.COM
@@ -225,11 +225,11 @@ The key<span class="err">&#39;</span>s randomart image is:
 
 <h4 id="copy-your-new-ssh-key">Copy your new SSH key</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre></div>
 
 <p>Also, you need to add Github to your ~/.ssh/known_hosts so that the authenticity of github.com can be established.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>ssh -T git@github.com
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ssh -T git@github.com
 <span class="c"># you should get a response that says,</span>
 Hi GITHUB_USERNAME! You<span class="err">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.
 <span class="c"># Another way to ensure everything is okay is to add Git to your Keychain</span>
@@ -246,7 +246,7 @@ Hi GITHUB_USERNAME! You<span class="err">&#39;</span>ve successfully authenticat
 
 <p>NPM is another package manager for a lot of very useful Javascript tools. Use Homebrew.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>brew install node
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>brew install node
 <span class="c"># check npm install version</span>
 <span class="nv">$ </span>npm -v
 <span class="c"># Troubleshooting - if you can run npm install on a repo becase of permissions, run:</span>
@@ -254,7 +254,7 @@ Hi GITHUB_USERNAME! You<span class="err">&#39;</span>ve successfully authenticat
 
 <h4 id="install-very-useful-node-packages">Install very useful node packages</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Install Grunt, an automated JavasScript task runner</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Install Grunt, an automated JavasScript task runner</span>
 <span class="nv">$ </span>sudo npm install -g grunt
 <span class="nv">$ </span>sudo npm install -g grunt-cli
 <span class="c"># Bower, a package manager</span>
@@ -264,7 +264,7 @@ Hi GITHUB_USERNAME! You<span class="err">&#39;</span>ve successfully authenticat
 
 <h4 id="install-optional-node-packages">Install optional node packages</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># LESS, a CSS preprocessor</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># LESS, a CSS preprocessor</span>
 <span class="nv">$ </span>sudo npm install less -g
 <span class="c"># Jekyll, a website/blogging platform also used on GitHub pages</span>
 <span class="nv">$ </span>sudo npm install generator-jekyllrb -g</code></pre></div>
@@ -277,7 +277,7 @@ Hi GITHUB_USERNAME! You<span class="err">&#39;</span>ve successfully authenticat
 
 <p>Below are lesser-known terminal commands that are good to know</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Display disc usage information (-h means &quot;human readable&quot;)</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Display disc usage information (-h means &quot;human readable&quot;)</span>
 <span class="nv">$ </span>df -h
 <span class="c"># Display a summary of your current directory (-s means &quot;summary&quot;)</span>
 <span class="nv">$ </span>du -sh *</code></pre></div>
@@ -286,7 +286,7 @@ Hi GITHUB_USERNAME! You<span class="err">&#39;</span>ve successfully authenticat
 
 <p>Locate a file at <code>~/.bash_profile</code> and add the following lines. Basically each “alias” is a shortcut for writing much longer commands. For example, with the following alias, you can just type <code>cfr</code> to fetch and reset the master branch of your repository.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># go up one directory level</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># go up one directory level</span>
 <span class="nb">alias</span> ..<span class="o">=</span><span class="s1">&#39;cd ../&#39;</span> 
 <span class="c"># go up two directory levels</span>
 <span class="nb">alias</span> ...<span class="o">=</span><span class="s1">&#39;cd ../../&#39;</span> 

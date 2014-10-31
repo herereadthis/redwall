@@ -75,38 +75,38 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="install-bower-using-npm">Install Bower using npm</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>npm install -g bower</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>npm install -g bower</code></pre></div>
 
 <h4 id="make-sure-that-your-project-is-using-npm">Make sure that your project is using npm</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span><span class="nb">cd </span>myproject/
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>myproject/
 <span class="nv">$ </span>npm install</code></pre></div>
 
 <p>All bower components will be installed by default at <code>./bower_components/</code>. you can change this by creating a <code>.bowerrc</code> file at root level. For example, I like to put my dependencies in <code>./src/components</code></p>
 
 <h4 id="custom-components-directory-bowerrc">Custom components directory (./.bowerrc)</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
   <span class="s2">&quot;directory&quot;</span><span class="o">:</span> <span class="s2">&quot;src/components&quot;</span>
 <span class="p">}</span></code></pre></div>
 
 <h4 id="add-a-component-such-as-jquery">Add a component, such as jQuery</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower install jquery</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower install jquery</code></pre></div>
 
 <h4 id="if-you-dont-know-the-name-of-your-component-you-can-search-for-it-instead">If you don’t know the name of your component you can search for it instead</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower search <span class="o">[</span>NAME<span class="o">]</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower search <span class="o">[</span>NAME<span class="o">]</span></code></pre></div>
 
 <hr />
 
 <h3 id="initialize-bower">Initialize Bower</h3>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower init</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower init</code></pre></div>
 
 <p>It will ask you for a bunch of options, enter in information as needed, or just keep hitting &lt;ENTER&gt; to get the default answers.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="o">[</span>?<span class="o">]</span> name: &lt;myproject&gt;
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>?<span class="o">]</span> name: &lt;myproject&gt;
 <span class="o">[</span>?<span class="o">]</span> version: &lt;0.0.0&gt;
 <span class="o">[</span>?<span class="o">]</span> description: 
 <span class="o">[</span>?<span class="o">]</span> main file: 
@@ -121,7 +121,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>It will generate a bower.json file for your approval</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
   <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;my_project&#39;</span><span class="p">,</span>
   <span class="nx">version</span><span class="o">:</span> <span class="s1">&#39;0.0.0&#39;</span><span class="p">,</span>
   <span class="nx">authors</span><span class="o">:</span> <span class="p">[</span>
@@ -142,13 +142,13 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>Notice that it will show jQuery, because you have installed it as a component before initializing Bower.</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;jquery&quot;</span><span class="o">:</span> <span class="s2">&quot;~2.1.1&quot;</span>
 <span class="p">}</span></code></pre></div>
 
 <p>This means that the current version of jQuery for your project is 2.1.1. This version number comes from the <a href="https://github.com/jquery/jquery/releases/tag/2.1.1">jQuery Github release tag</a>. If you ever want to change the version of jQuery in the future, go to your bower.json file and change the version number.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Install all dependencies based on bower.json</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Install all dependencies based on bower.json</span>
 <span class="nv">$ </span>bower install
 <span class="c"># Install a new dependency after bower.json has been created</span>
 <span class="nv">$ </span>bower install <span class="o">[</span>name<span class="o">]</span> --save</code></pre></div>
@@ -157,7 +157,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="update-dependencies-to-latest-version">Update dependencies to latest version</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower update</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower update</code></pre></div>
 
 <hr />
 
@@ -167,7 +167,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>Sometimes you will have packages that depend on other packages at different versions, and it will ask you to choose. For example,</p>
 
-<div class="highlight"><pre><code class="html">Unable to find a suitable version for jquery, please choose one:
+<div class="highlight"><pre><code class="language-html" data-lang="html">Unable to find a suitable version for jquery, please choose one:
     1) jquery#~1.7 which resolved to 1.7.2 and is requird by typeahead.js#0.10.4
     2) jquery#~1.9.1 which resolved to 1.9.1 and is required by bootstrap#3.0.3
     3) jquery#&gt;=1.7 wich resolved to 2.1.1 and is required by mocha.events#0.0.3
@@ -178,7 +178,7 @@ Prefix the choice with ! to persist it to bower.json
 
 <p>This gets annoying and you can type something like <code>!3</code> to make it always go with 2.1.1. Your bower.json file will be updated with a <a href="https://github.com/bower/bower.json-spec#resolutions">resolution</a>:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="s2">&quot;resolutions&quot;</span><span class="o">:</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;resolutions&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;jquery&quot;</span><span class="o">:</span> <span class="s2">&quot;2.1.1&quot;</span>
 <span class="p">},</span></code></pre></div>
 
@@ -214,11 +214,11 @@ Prefix the choice with ! to persist it to bower.json
 
 <h4 id="register-in-terminal">Register in terminal</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower register <span class="o">[</span>app name<span class="o">]</span> <span class="o">[</span>git endpoint<span class="o">]</span></code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower register <span class="o">[</span>app name<span class="o">]</span> <span class="o">[</span>git endpoint<span class="o">]</span></code></pre></div>
 
 <h4 id="example">Example</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower register MYPROJECT git://github.com/MYNAME/MYPROJECT.git
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower register MYPROJECT git://github.com/MYNAME/MYPROJECT.git
 <span class="o">[</span>?<span class="o">]</span> Registering a package will make it installable via the registry <span class="o">(</span>https://bower.herokuapp.com<span class="o">)</span>, <span class="k">continue</span>? Yes
 bower register      git://github.com/MYNAME/MYPROJECT.git
 Package MYPROJECT registered successfully!</code></pre></div>
