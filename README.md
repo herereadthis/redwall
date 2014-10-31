@@ -22,6 +22,7 @@ $ python -m SimpleHTTPServer 8001
 
 ```
 $ npm install
+$ gem install jekyll
 $ npm run bower
 $ npm run grunt
 ```
