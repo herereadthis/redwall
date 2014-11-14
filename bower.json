@@ -20,9 +20,9 @@
     "tests"
   ],
   "dependencies": {
-    "bellmaker": "~0.4.1",
+    "bellmaker": "~0.4.8",
     "greeneyes": "~0.1.6",
-    "mossflower": "~0.1.9",
+    "mossflower": "~0.1.11",
     "requirejs": "~2.1.14",
     "sunflash": "~0.1.5",
     "jquery": "~2.1.1"
