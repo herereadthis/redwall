@@ -102,7 +102,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h3 id="build">Build</h3>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Clone the repo</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Clone the repo</span>
 <span class="nv">$ </span>git clone https://github.com/herereadthis/greeneyes.git
 <span class="nv">$ </span><span class="nb">cd </span>greeneyes/
 <span class="nv">$ </span>npm install
@@ -115,7 +115,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p><strong>You will need RequireJS,</strong> which is JavaScript file and module loader. This article assumes you already know the basics. I recommend installing RequireJS as a bower dependency.</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Get Greeneyes</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Get Greeneyes</span>
 <span class="nv">$ </span>bower install greeneyes --save
 <span class="c"># Get RequireJS</span>
 <span class="nv">$ </span>bower install requirejs --save</code></pre></div>
@@ -124,7 +124,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="repomainjs">repo/main.js</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">requirejs</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">requirejs</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
     <span class="nx">paths</span><span class="o">:</span> <span class="p">{</span>
         <span class="c1">// Only add the ones you need, e.g., </span>
         <span class="s2">&quot;Analytics&quot;</span><span class="o">:</span> <span class="s2">&quot;[BOWER_PATH]/greeneyes/src/js/analytics&quot;</span><span class="p">,</span>
@@ -137,7 +137,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="repogruntfilejs">repo/Gruntfile.js</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">requirejs</span><span class="o">:</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">requirejs</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">build</span><span class="o">:</span> <span class="p">{</span>
         <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
             <span class="nx">baseUrl</span><span class="o">:</span> <span class="s2">&quot;&lt;%= paths.src %&gt;/js/&quot;</span><span class="p">,</span>
@@ -153,11 +153,11 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>Greeneyes was created such that you will not have to pollute your HTML with a bunch of javascript commands. Most modules will use a data attribute <code>[data-module=""]</code> to sniff for the correct module to apply. For example, here is how to apply the parallax scroll module to a section:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;section</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span><span class="nt">&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
 <p>Some modules have user-defined-variables that allow you to modify what happens. (Don’t worry, a complete listing of parameters will be given below.) The parallax scroller has an additional data attribute to determine relative speed. Here is how to make backgrounds scroll in reverse order to page scroll:</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;section</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span> <span class="na">data-parallax-speed=</span><span class="s">&quot;-50&quot;</span><span class="nt">&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span> <span class="na">data-parallax-speed=</span><span class="s">&quot;-50&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
 <hr />
 
@@ -167,7 +167,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="get-the-module">Get the module</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="c1">// Add the path to your main.js configuration</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Add the path to your main.js configuration</span>
 <span class="nx">requirejs</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
     <span class="nx">paths</span><span class="o">:</span> <span class="p">{</span>
         <span class="c1">// Only add the ones you need, e.g., </span>
@@ -184,11 +184,11 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="call-the-module-in-your-html-in-your-codebody-code-tag">Call the module in your HTML in your <code>&lt;body /&gt;</code> tag</h4>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;body</span> <span class="na">data-google-analytics=</span><span class="s">&quot;UA-########-#&quot;</span><span class="nt">&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body</span> <span class="na">data-google-analytics=</span><span class="s">&quot;UA-########-#&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
 <h4 id="alternative-specify-the-id-number-directly">Alternative: specify the ID number directly</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">Analytics</span><span class="p">.</span><span class="nx">track</span><span class="p">(</span><span class="s1">&#39;UA-########-#&#39;</span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Analytics</span><span class="p">.</span><span class="nx">track</span><span class="p">(</span><span class="s1">&#39;UA-########-#&#39;</span><span class="p">);</span></code></pre></div>
 
 <p>Then you don’t need to specify <code>[data-google-analytics=""]</code>.</p>
 
@@ -219,7 +219,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <div class="starfield nested_code" data-module="parallax_scroll">
 
 
-<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Default is 50% --&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Default is 50% --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
 
@@ -227,7 +227,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>This module does require you to import the parallax scrolling CSS file.</p>
 
-<div class="highlight"><pre><code class="css"><span class="c">/* import LESS version */</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* import LESS version */</span>
 <span class="k">@import</span> <span class="s2">&quot;[BOWER_PATH]/greeneyes/src/less/parallax_scroll.less&quot;</span><span class="p">;</span>
 <span class="c">/* Or the SASS version */</span>
 <span class="k">@import</span> <span class="s2">&quot;[BOWER_PATH]/greeneyes/src/sass/parallax_scroll.scss&quot;</span><span class="p">;</span></code></pre></div>
@@ -235,7 +235,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <div class="starfield nested_code" data-module="parallax_scroll" data-parallax-speed="150">
 
 
-<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- 150% speed --&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- 150% speed --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span>
 	<span class="na">data-parallax-speed=</span><span class="s">&quot;150&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
@@ -244,7 +244,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>You will have to define your background image yourself in your CSS. The parallax scrolling works by isolating the background positioning of your image. The parallax scroll does have default CSS, but if you want to customize your positioning, you must express the y-position as a finite value (x-position can be anything).</p>
 
-<div class="highlight"><pre><code class="css"><span class="c">/* This is okay */</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* This is okay */</span>
 <span class="nc">.parallax_background</span> <span class="p">{</span><span class="k">background-position</span><span class="o">:</span> <span class="k">center</span> <span class="m">0</span><span class="n">rem</span><span class="p">;}</span>
 <span class="c">/* This is not okay */</span>
 <span class="nc">.parallax_background</span> <span class="p">{</span><span class="k">background-position</span><span class="o">:</span> <span class="k">left</span> <span class="k">bottom</span><span class="p">;}</span></code></pre></div>
@@ -252,7 +252,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 <div class="starfield nested_code" data-module="parallax_scroll" data-parallax-speed="-50">
 
 
-<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- -50% = reverse scroll --&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- -50% = reverse scroll --&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">data-module=</span><span class="s">&quot;parallax_scroll&quot;</span>
 	<span class="na">data-parallax-speed=</span><span class="s">&quot;-50&quot;</span><span class="nt">&gt;</span></code></pre></div>
 

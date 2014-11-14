@@ -3,7 +3,7 @@ layout:         post
 title:          "Bellmaker, a respoonsive media query package"
 repo_title:     "<em>Bellmaker</em>, a responsive media query package"
 created:        2014-06-16
-modified:       2014-09-29
+modified:       2014-10-30
 permalink:      bellmaker/
 description:    "The Bellmaker is a library of device-agnostic and device specific media queries that will complement your existing CSS."
 tags:           css, less, sass
@@ -26,6 +26,9 @@ The Bellmaker is a library of ***device-agnostic*** *and* ***device-specific*** 
         </a></li>
     <li><a href="https://david-dm.org/herereadthis/bellmaker#info=devDependencies">
             <img alt="Bower version" src="https://david-dm.org/herereadthis/bellmaker/dev-status.svg" />
+        </a></li>
+    <li><a href="https://codeclimate.com/github/herereadthis/bellmaker">
+            <img alt="Code Climate" src="https://codeclimate.com/github/herereadthis/bellmaker/badges/gpa.svg" />
         </a></li>
 </ul>
 {% endraw %}
@@ -347,6 +350,82 @@ Here is the complete listing of how to target phones by aspect ratio:
 | 3:4 | ds_ratio_3_4 | Apple | iPad 1/2/3/4, Air, Mini |
 
 Unfortunately Bellmaker doesn't have aspect ratio targeting for the iPhone 5 and 6, because they have very unique screens. Just use ```ds_iphone_5``` and ```ds_iphone_6``` instead.
+
+------------------------
+
+## Math Operators
+
+Box-model dimensions and offsets can use mixins, which will range from breakpoints ```da_small``` to ```da_x_large```. Breakpoints ```da_baseline```, ```da_2x_small```, and ```da_x_small``` are not part of the math operators because sizing for them is done as percentages. 
+
+Use these mixins especially for moving columns around. Remember that offsets and factors will be calculated as REM units.
+
+
+{% highlight css %}
+/* LESS: Offset mixin: */
+.bellmaker_offset(@attribute,@offset) {};
+/* LESS Factor mixin: */
+.bellmaker_factor(@attribute,@factor) {};
+{% endhighlight %}
+
+{% highlight css %}
+/* SASS: Offset mixin: */
+@include bellmaker_offset($attribute,$offset) {};
+/* SASS Factor mixin: */
+@include bellmaker_factor($attribute,$factor) {};
+{% endhighlight %}
+
+#### Example: offset left padding
+
+{% highlight css %}
+/* As LESS: section will now always be 30rem width less than parent */
+/* container, so that a 30rem sidebar can floated right */
+section {
+    float: left;
+    .bellmaker_offset(width, -30);
+}
+aside {
+    float: right;
+    width: 30rem;
+}
+{% endhighlight %}
+
+{% highlight css %}
+/* As SASS */
+section {
+    float: left;
+    @include bellmaker_offset(width, -30);
+}
+aside {
+    float: right;
+    width: 30rem;
+}
+{% endhighlight %}
+
+
+{% highlight css %}
+/* output */
+section {
+    float: left;
+}
+@media only screen and (min-width: 768px) {
+    section {width: 448px;}
+}
+@media only screen and (min-width: 1024px) {
+    section {width: 660px;}
+}
+@media only screen and (min-width: 1280px) {
+    section {width: 852px;}
+}
+@media only screen and (min-width: 1440px) {
+    section {width: 1044px;}
+}
+aside {
+    float: right;
+    width: 30rem;
+}
+{% endhighlight %}
+
+Available attributes are ```width```, ```height```, ```padding-top```, ```padding-right```, ```padding-bottom```, ```padding-left```, ```padding-top```, ```padding-right```, ```padding-bottom```, ```padding-left```, ```margin-top```, ```margin-right```, ```margin-bottom```, and ```margin-left```.
 
 -------------
 

@@ -87,11 +87,14 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
     <li><a href="https://david-dm.org/herereadthis/bellmaker#info=devDependencies">
             <img alt="Bower version" src="https://david-dm.org/herereadthis/bellmaker/dev-status.svg" />
         </a></li>
+    <li><a href="https://codeclimate.com/github/herereadthis/bellmaker">
+            <img alt="Code Climate" src="https://codeclimate.com/github/herereadthis/bellmaker/badges/gpa.svg" />
+        </a></li>
 </ul>
 
 <h3 id="build">Build</h3>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Clone the repo</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Clone the repo</span>
 <span class="nv">$ </span>git clone https://github.com/herereadthis/bellmaker.git
 <span class="nv">$ </span><span class="nb">cd </span>bellmaker/
 <span class="nv">$ </span>npm install
@@ -100,7 +103,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h3 id="view-the-demo">View the Demo</h3>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>python -m SimpleHTTPServer 8001</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python -m SimpleHTTPServer 8001</code></pre></div>
 
 <p>Site will load at http://localhost:8001/</p>
 
@@ -118,47 +121,47 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="recommended-add-the-bellmaker-as-a-bower-dependency">Recommended: Add the Bellmaker as a Bower dependency</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower install --save bellmaker</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower install --save bellmaker</code></pre></div>
 
 <h4 id="alternative-add-the-bellmaker-as-a-submodule">Alternative: Add the Bellmaker as a submodule</h4>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span><span class="nb">cd </span>my_repo
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">cd </span>my_repo
 <span class="nv">$ </span>git submodule add https://github.com/herereadthis/bellmaker.git
 <span class="nv">$ </span>git add bellmaker .gitmodules
 <span class="nv">$ </span>git commit -m <span class="s2">&quot;adds Bellmaker submodule&quot;</span></code></pre></div>
 
 <h4 id="as-less-add-to-your-imports">As LESS: Add to your imports</h4>
 
-<div class="highlight"><pre><code class="css"><span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/bellmaker.less&quot;</span><span class="p">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/bellmaker.less&quot;</span><span class="p">;</span></code></pre></div>
 
 <h4 id="as-sass-add-mixins-partial-to-any-file-that-needs-media-queries">As SASS: Add mixins partial to any file that needs media queries</h4>
 
-<div class="highlight"><pre><code class="css"><span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/mixins_variables&quot;</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/mixins_variables&quot;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/page_layout&quot;</span><span class="p">;</span></code></pre></div>
 
 <h3 id="configuration">Configuration</h3>
 
 <h4 id="reset-page-styling-to-make-10px--1rem">Reset page styling to make 10px = 1REM</h4>
 
-<div class="highlight"><pre><code class="css"><span class="nt">html</span> <span class="p">{</span>
-    <span class="k">font-size</span><span class="o">:</span> <span class="m">62</span><span class="o">.</span><span class="m">5</span><span class="o">%</span><span class="p">;</span>
-    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">text</span><span class="o">-</span><span class="k">size</span><span class="o">-</span><span class="n">adjust</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
-    <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="k">text</span><span class="o">-</span><span class="k">size</span><span class="o">-</span><span class="n">adjust</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">html</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">62.5%</span><span class="p">;</span>
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">text</span><span class="o">-</span><span class="k">size</span><span class="o">-</span><span class="n">adjust</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="k">text</span><span class="o">-</span><span class="k">size</span><span class="o">-</span><span class="n">adjust</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
     <span class="c">/* existing attributes */</span>
 <span class="p">}</span>
 <span class="nt">body</span> <span class="p">{</span>
-    <span class="k">font-size</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
     <span class="k">font-size</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
     <span class="c">/* existing attributes */</span>
 <span class="p">}</span></code></pre></div>
 
 <p><em>For more useful global CSS resets and utilities, check out out the companion <a href="/code/mossflower/">Mossflower</a> reset library.</em></p>
 
-<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>bower install --save mossflower</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower install --save mossflower</code></pre></div>
 
 <h4 id="add-vital-stuff-to-your-indexhtml-file">Add vital stuff to your index.html file</h4>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge,chrome=1&quot;</span> <span class="nt">/&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge,chrome=1&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-capable&quot;</span> <span class="na">content=</span><span class="s">&quot;yes&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-status-bar-style&quot;</span> <span class="na">content=</span><span class="s">&quot;black&quot;</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;</span> <span class="nt">/&gt;</span></code></pre></div>
@@ -270,7 +273,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="device-agnostic-output-as-less">Device-agnostic output as LESS</h4>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
     <span class="o">@</span><span class="n">media</span> <span class="o">@</span><span class="n">mq_baseline</span> <span class="err">{</span>   <span class="k">width</span><span class="o">:</span> <span class="o">@</span><span class="n">pw_baseline</span><span class="p">;}</span>
     <span class="k">@media</span> <span class="k">@mq_2x_small</span> <span class="p">{</span>   <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_2x_small</span><span class="p">;}</span>
     <span class="k">@media</span> <span class="k">@mq_x_small</span> <span class="p">{</span>    <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_x_small</span><span class="p">;}</span>
@@ -282,28 +285,28 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="device-agnostic-output-as-sass">Device-agnostic output as SASS</h4>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
     <span class="o">@</span><span class="n">media</span> <span class="err">#{$</span><span class="n">da_baseline</span><span class="p">}</span> <span class="p">{</span>    <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_baseline</span><span class="p">;}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_2x_small</span><span class="p">}</span> <span class="p">{</span>    <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_2x_small</span><span class="p">;}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_x_small</span><span class="p">}</span> <span class="p">{</span>     <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_x_small</span><span class="p">;}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_small</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_small</span><span class="p">;}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_medium</span><span class="p">}</span> <span class="p">{</span>      <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_medium</span><span class="p">;}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_large</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_large</span><span class="p">;}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_x_large</span><span class="p">}</span> <span class="p">{</span>     <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_x_large</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="o">$</span><span class="nt">da_2x_small</span><span class="p">}</span> <span class="p">{</span>    <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_2x_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="o">$</span><span class="nt">da_x_small</span><span class="p">}</span> <span class="p">{</span>     <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_x_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="o">$</span><span class="nt">da_small</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="o">$</span><span class="nt">da_medium</span><span class="p">}</span> <span class="p">{</span>      <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_medium</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="o">$</span><span class="nt">da_large</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_large</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="o">$</span><span class="nt">da_x_large</span><span class="p">}</span> <span class="p">{</span>     <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_x_large</span><span class="p">;}</span>
 <span class="err">}</span></code></pre></div>
 
 <p>Note: the abbreviation “da” stands for “device-agnostic,” and “pw” stands for “page width.”</p>
 
 <h4 id="compiled-as-css">Compiled as CSS</h4>
 
-<div class="highlight"><pre><code class="css"><span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">320px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">320px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;}</span>
 <span class="p">}</span>
 <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">480px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;}</span>
 <span class="p">}</span>
 <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">640px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
+    <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;}</span>
 <span class="p">}</span>
 <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
     <span class="nc">.bellmaker_container</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">76</span><span class="o">.</span><span class="m">8</span><span class="n">rem</span><span class="p">;}</span>
@@ -322,7 +325,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="as-less">As LESS</h4>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
     <span class="o">@</span><span class="n">media</span> <span class="o">@</span><span class="n">da_baseline</span> <span class="err">{</span>   <span class="k">width</span><span class="o">:</span> <span class="o">@</span><span class="n">pw_baseline</span><span class="p">;}</span>
     <span class="k">@media</span> <span class="k">@da_small</span> <span class="p">{</span>      <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_small</span><span class="p">;}</span>
     <span class="k">@media</span> <span class="k">@da_medium</span> <span class="p">{</span>     <span class="nt">width</span><span class="o">:</span> <span class="k">@pw_medium</span><span class="p">;}</span>
@@ -331,11 +334,11 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <h4 id="as-sass">As SASS</h4>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.bellmaker_container</span> <span class="p">{</span>
     <span class="o">@</span><span class="n">media</span> <span class="err">#{$</span><span class="n">da_baseline</span><span class="p">}</span> <span class="p">{</span>    <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_baseline</span><span class="p">;}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_small</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_small</span><span class="p">;}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_medium</span><span class="p">}</span> <span class="p">{</span>      <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_medium</span><span class="p">;}</span>
-    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="err">$</span><span class="nt">da_large</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_large</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="o">$</span><span class="nt">da_small</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_small</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="o">$</span><span class="nt">da_medium</span><span class="p">}</span> <span class="p">{</span>      <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_medium</span><span class="p">;}</span>
+    <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="o">$</span><span class="nt">da_large</span><span class="p">}</span> <span class="p">{</span>       <span class="k">width</span><span class="o">:</span> <span class="err">$</span><span class="n">pw_large</span><span class="p">;}</span>
 <span class="err">}</span></code></pre></div>
 
 <p>Notice how the LESS/SASS variable names of the media queries just became very easy to remember?</p>
@@ -475,7 +478,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>To write the media query for your phone just choose from the “Query Suffix” column that matches your device. There are two ways to target orientation: 1) add _landscape or _portrait to target the device by orientation, or 2) add @orientation_landscape/portrait.</p>
 
-<div class="highlight"><pre><code class="css"><span class="c">/* Target iPhone 6 specifically */</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* Target iPhone 6 specifically */</span>
 <span class="k">@media</span> <span class="k">@ds_iphone_6</span> <span class="p">{}</span>
 <span class="c">/* Target iPhone_6 in landscape mode */</span>
 <span class="k">@media</span> <span class="k">@ds_iphone_6_landscape</span> <span class="p">{}</span>
@@ -490,19 +493,19 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p><strong>You can save a lot of time by targeting groups of devices</strong> by using aspect ratios instead. For example, the Samsung Galaxy S series and Motorola Droid actually render the same 360×640 pixels, which mean the share the same 9:16 aspect ratio. Use the <code>ds_ratio_9_16</code> variable. (“ds” stands for device-specific)</p>
 
-<div class="highlight"><pre><code class="css"><span class="c">/* Target all 9:16 phones (LESS) */</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* Target all 9:16 phones (LESS) */</span>
 <span class="k">@media</span> <span class="k">@ds_ratio_9_16</span> <span class="p">{</span>
-    <span class="nf">#container_id</span>   <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
+    <span class="nf">#container_id</span>   <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;}</span>
 <span class="p">}</span></code></pre></div>
 
-<div class="highlight"><pre><code class="css"><span class="c">/* Target all 9:16 phones (SASS) */</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* Target all 9:16 phones (SASS) */</span>
 <span class="k">@media</span> <span class="err">#</span><span class="p">{</span><span class="nt">ds_ratio_9_16</span><span class="p">}</span> <span class="p">{</span>
-    <span class="m">#contai</span><span class="n">ner_id</span>   <span class="err">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
+    <span class="m">#contai</span><span class="n">ner_id</span>   <span class="err">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;}</span>
 <span class="err">}</span></code></pre></div>
 
-<div class="highlight"><pre><code class="css"><span class="c">/* Compiled as CSS */</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* Compiled as CSS */</span>
 <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">device-aspect-ratio</span><span class="o">:</span> <span class="nt">9</span><span class="o">/</span><span class="nt">16</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nf">#container_id</span>   <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;}</span>
+    <span class="nf">#container_id</span>   <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;}</span>
 <span class="p">}</span></code></pre></div>
 
 <p>Here is the complete listing of how to target phones by aspect ratio:</p>
@@ -590,13 +593,77 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <hr />
 
+<h2 id="math-operators">Math Operators</h2>
+
+<p>Box-model dimensions and offsets can use mixins, which will range from breakpoints <code>da_small</code> to <code>da_x_large</code>. Breakpoints <code>da_baseline</code>, <code>da_2x_small</code>, and <code>da_x_small</code> are not part of the math operators because sizing for them is done as percentages. </p>
+
+<p>Use these mixins especially for moving columns around. Remember that offsets and factors will be calculated as REM units.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* LESS: Offset mixin: */</span>
+<span class="nc">.bellmaker_offset</span><span class="o">(</span><span class="k">@attribute</span><span class="o">,</span><span class="k">@offset</span><span class="o">)</span> <span class="p">{};</span>
+<span class="c">/* LESS Factor mixin: */</span>
+<span class="nc">.bellmaker_factor</span><span class="o">(</span><span class="k">@attribute</span><span class="o">,</span><span class="k">@factor</span><span class="o">)</span> <span class="p">{};</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* SASS: Offset mixin: */</span>
+<span class="k">@include</span> <span class="nt">bellmaker_offset</span><span class="o">($</span><span class="nt">attribute</span><span class="o">,$</span><span class="nt">offset</span><span class="o">)</span> <span class="p">{}</span><span class="o">;</span>
+<span class="c">/* SASS Factor mixin: */</span>
+<span class="k">@include</span> <span class="nt">bellmaker_factor</span><span class="o">($</span><span class="nt">attribute</span><span class="o">,$</span><span class="nt">factor</span><span class="o">)</span> <span class="p">{}</span><span class="o">;</span></code></pre></div>
+
+<h4 id="example-offset-left-padding">Example: offset left padding</h4>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* As LESS: section will now always be 30rem width less than parent */</span>
+<span class="c">/* container, so that a 30rem sidebar can floated right */</span>
+<span class="nt">section</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="o">.</span><span class="n">bellmaker_offset</span><span class="p">(</span><span class="k">width</span><span class="o">,</span> <span class="m">-30</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">aside</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">30</span><span class="n">rem</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* As SASS */</span>
+<span class="nt">section</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="o">@</span><span class="n">include</span> <span class="n">bellmaker_offset</span><span class="p">(</span><span class="k">width</span><span class="o">,</span> <span class="m">-30</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nt">aside</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">30</span><span class="n">rem</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* output */</span>
+<span class="nt">section</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">section</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">448px</span><span class="p">;}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1024px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">section</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">660px</span><span class="p">;}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1280px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">section</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">852px</span><span class="p">;}</span>
+<span class="p">}</span>
+<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1440px</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">section</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">1044px</span><span class="p">;}</span>
+<span class="p">}</span>
+<span class="nt">aside</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span>
+    <span class="k">width</span><span class="o">:</span> <span class="m">30</span><span class="n">rem</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Available attributes are <code>width</code>, <code>height</code>, <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, <code>padding-left</code>, <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, <code>padding-left</code>, <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, and <code>margin-left</code>.</p>
+
+<hr />
+
 <h3 id="bootstrap-integration">Bootstrap Integration</h3>
 
 <p>The Bellmaker will complement the Twitter Bootstrap framework for LESS. <a href="https://github.com/herereadthis/bellmaker/blob/master/src/demo/bootstrap_demo/index.html">A demo is available</a> if you load up <code>http://localhost:8002/src/demo/bootstrap_demo/</code>. </p>
 
 <h4 id="less-cascading-order">LESS Cascading Order</h4>
 
-<div class="highlight"><pre><code class="css"><span class="c">/* 1. Load main Bootstrap import file */</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* 1. Load main Bootstrap import file */</span>
 <span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bootstrap/less/bootstrap.less&quot;</span><span class="p">;</span>
 <span class="c">/* 2. Load main Bellmaker import file */</span>
 <span class="k">@import</span> <span class="s2">&quot;/PATH_TO/../bellmaker/src/less/bellmaker.less&quot;</span><span class="p">;</span>
@@ -605,7 +672,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
 
 <p>Now you will have 7 breakpoints in Bootstrap</p>
 
-<div class="highlight"><pre><code class="css"><span class="nc">.col-bl-</span><span class="err">##</span>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.col-bl-</span><span class="err">##</span>
 <span class="nc">.col-ss-</span><span class="err">##</span>
 <span class="nc">.col-xs-</span><span class="err">##</span>
 <span class="nc">.col-sm-</span><span class="err">##</span>
@@ -619,7 +686,7 @@ owl: http://www.w3.org/2002/07/owl#" class="no-js no-touch">
         <footer>
             <p><em><time property="dc:created" datetime="2014-06-16">16 June 2014</time></em><br />
                 <em>By: <span property="dc:creator">Jimmy Ha</span></em><br />
-                <em>Last updated: <time property="dc:modified" datetime="2014-09-29">29 September 2014</time></em></p>
+                <em>Last updated: <time property="dc:modified" datetime="2014-10-30">30 October 2014</time></em></p>
 
             <h4>Share this article:</h4>
             <ul id="post_social" class="sunflash_navmenu">
