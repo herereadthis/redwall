@@ -55,6 +55,12 @@ module.exports = function (grunt) {
             gruntfile: {
                 files: ['Gruntfile.js']
             },
+            xml: {
+                files: [
+                    '<%= yeoman.app %>/xml/{,*/}*.xml',
+                    '<%= yeoman.app %>/xml/{,*/}*.rdf'],
+                tasks: ['newer:copy:xml']
+            },
             livereload: {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
@@ -62,6 +68,7 @@ module.exports = function (grunt) {
                 files: [
                     '<%= yeoman.app %>/{,*/}*.html',
                     '.tmp/styles/{,*/}*.css',
+                    '.tmp/xml/{,*/}*.xml',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
             }
@@ -335,7 +342,8 @@ module.exports = function (grunt) {
                             '*.html',
                             'views/{,*/}*.html',
                             'images/{,*/}*.{webp}',
-                            'fonts/{,*/}*.*'
+                            'fonts/{,*/}*.*',
+                            'xml/{,*/}*.*'
                         ]
                     },
                     {
@@ -345,6 +353,12 @@ module.exports = function (grunt) {
                         src: ['generated/*']
                     }
                 ]
+            },
+            xml: {
+                expand: true,
+                cwd: '<%= yeoman.app %>/xml',
+                dest: '.tmp/xml/',
+                src: '{,*/}*.xml'
             },
             styles: {
                 expand: true,
@@ -357,12 +371,15 @@ module.exports = function (grunt) {
         // Run some tasks in parallel to speed up the build process
         concurrent: {
             server: [
+                'copy:xml',
                 'copy:styles'
             ],
             test: [
+                'copy:xml',
                 'copy:styles'
             ],
             dist: [
+                'copy:xml',
                 'copy:styles',
                 'imagemin',
                 'svgmin'
