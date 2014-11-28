@@ -5,6 +5,7 @@
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
+    "grunt-cli": "^0.1.13",
     "grunt-concurrent": "^0.5.0",
     "grunt-contrib-clean": "^0.5.0",
     "grunt-contrib-concat": "^0.4.0",
@@ -37,6 +38,10 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "grunt": "./node_modules/grunt-cli/bin/grunt",
+    "bower": "./node_modules/bower/bin/bower install",
+    "server": "./node_modules/grunt-cli/bin/grunt serve",
+    "prod": "./node_modules/grunt-cli/bin/grunt serve:dist"
   }
 }

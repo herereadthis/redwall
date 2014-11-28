@@ -1,79 +1,220 @@
-/* Space out content a bit */
+html {
+  font-size: 62.5%;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow: -moz-scrollbars-vertical;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  position: relative;
+  text-rendering: optimizelegibility;
+  font-size: 1em;
+  line-height: 1;
+  font-family: Helvetica, Arial, sans-serif;
 }
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+body,
+table,
+td,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+p,
+img,
+figure {
+  margin: 0;
 }
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
+ul,
+ol {
+  padding-left: 0;
 }
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+a:link,
+a:visited {
+  text-decoration: none;
 }
-
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
+a:hover {
+  text-decoration: underline;
+}
+pre {
+  overflow: auto;
+}
+code {
+  white-space: pre-wrap;
+}
+pre > code {
+  white-space: pre;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
+.bellmaker_container {
+  margin-right: auto;
+  margin-left: auto;
+  overflow: auto;
+}
+@media only screen and (min-width: 320px) {
+  .bellmaker_container {
+    width: 100%;
   }
 }
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+@media only screen and (min-width: 480px) {
+  .bellmaker_container {
+    width: 100%;
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+}
+@media only screen and (min-width: 640px) {
+  .bellmaker_container {
+    width: 100%;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+  .bellmaker_container {
+    width: 76.8rem;
   }
+}
+@media only screen and (min-width: 1024px) {
+  .bellmaker_container {
+    width: 96rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .bellmaker_container {
+    width: 115.2rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .bellmaker_container {
+    width: 134.4rem;
+  }
+}
+.sunflash_navmenu {
+  overflow: auto;
+}
+.sunflash_navmenu li {
+  display: block;
+  float: left;
+  list-style-type: none;
+}
+.sunflash_navmenu li a {
+  display: block;
+}
+[role="banner"] {
+  overflow: auto;
+}
+[role="banner"] > span {
+  display: block;
+  display: none;
+  color: #FFF;
+  font-size: 1.2rem;
+  height: 1.5rem;
+}
+[role="banner"] > div {
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: auto;
+}
+[role="contentinfo"] > section {
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+[role="contentinfo"] p,
+[role="contentinfo"] h2 {
+  color: #FF0;
+  font: normal normal normal 1.5rem/2rem "Times New Roman", serif;
+  padding: 0 0 2rem 0;
+}
+body article {
+  clear: both;
+}
+body article > section {
+  box-sizing: border-box;
+  position: relative;
+  clear: both;
+}
+body article > section:last-of-type {
+  padding-bottom: 2rem;
+}
+h1 {
+  padding: 1rem 0 0rem 0;
+}
+@media only screen and (min-width: 320px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 480px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-left: 1rem;
+  }
+}
+@media only screen and (min-width: 640px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+    text-align: left;
+  }
+}
+img {
+  display: block;
+}
+p img {
+  display: inline;
+}
+p {
+  font: normal normal bold 18px/25px 'Microsoft Sans Serif', sans-serif;
+  /*font: normal normal normal 50px/50px Helvetica, Arial, sans-serif;*/
+  color: #000;
+}
+hr {
+  height: 2px;
+  border: 0;
+  margin: 19px auto;
+  padding: 0;
+}
+.font_subtext {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.font_standard {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.font_subheading {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+.font_heading {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.retro_spriter,
+.retro_spriter:before,
+.retro_spriter:after {
+  background-color: #c0c0c0;
+  background-image: url("../images/css/win95_sprites.png");
+  background-size: 12rem 18rem;
+}
+.retro_spriter:before,
+.retro_spriter:after {
+  display: block;
+  content: "";
+  position: absolute;
 }
