@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" dir="ltr" xml:lang="en" class="no-js"
+prefix="og: http://ogp.me/ns#
+fb: http://ogp.me/ns/fb#
+foaf: http://xmlns.com/foaf/0.1/
+dc: http://purl.org/dc/terms/
+v: http://rdf.data-vocabulary.org/#
+owl: http://www.w3.org/2002/07/owl#"
+ng-app="redwallApp">
+<head>
+    <meta charset="utf-8">
+    <title property="dc:title" data-ng-bind-html="title">Here, Read This</title>
+<!-- Metadata Standards + Dublin Core RDFA -->
+    <meta name="robots" content="INDEX, FOLLOW" />
+    <meta name="keywords" content="Here, Read This, Jimmy Ha, web development, photography, Baking, Gardening" />
+    <meta property="dc:creator" name="author" content="Jimmy Ha" />
+    <meta property="dc:created" content="2014-01-15" />
+    <meta property="dc:language" content="en-US" />
+<!-- Open Graph RDFa -->
+    <meta property="og:title" content="Here, Read This" />
+    <meta property="og:description" name="description" content="A website by Jimmy Ha about photography, gardening, and baking." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://herereadthis.com/" />
+    <meta property="og:image" content="/images/branding/herereadthis_fb_320x320.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="320" />
+    <meta property="og:image:height" content="320" />
+    <meta property="og:site_name" content="Here, Read This" />
+<!-- browser-specific tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<!-- Facebook RDFa -->
+    <meta property="fb:admins" content="104276" />
+    <meta property="fb:app_id" content="146371075435162" />
+<!-- Bing Site Verification -->
+    <meta name="msvalidate.01" content="F7EE73CB34D5AF1C9DC816A5C75C32E6" />
+<!-- Google Site Verification -->
+    <meta name="google-site-verification" content="mczqUD0AU2jqxVwDld32k25wCRWJb5bMuQoCzvQCdfE" />
+<!-- Google Plus Verification -->
+    <link rel="author" href="https://plus.google.com/113505279995940079003" />
+    <link rel="publisher" href="https://plus.google.com/110556642392047316226" />
+<!-- Pinterest Site Verification -->
+    <meta name="p:domain_verify" content="642e03628ffc0809c6eab89aa14fb65b" />
+<!-- Friend of a Friend FOAF -->
+    <link rel="foaf:primaryTopic" type="application/rdf+xml" title="FOAF" href="http://herereadthis.com/build/xml/foaf.rdf" />
+    <link rel="canonical" href="http://herereadthis.com/" />
+
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+<body>
+
+<header role="banner" class="starfield" data-module="parallax_scroll" data-parallax-speed="-50">
+    <!--<span>&lt;!DOCTYPE html PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;</span>-->
+    <div class="bellmaker_container">
+        <div id="construction" role="presentation"></div>
+        <div id="header_panel" data-module="banner_image">
+            <a href=""><span>Stand by for a 90s image!</span></a>
+        </div>
+        <div class="popup_box_simulator" typeof="foaf:Person" resource="#/me/">
+            <span class="retro_spriter">Welcome to my site!</span>
+            <h1 data-module="color_shift" data-color-begin="F00" data-color-end="FF9600">Here, Read This!</h1>
+            <p>Hi! My Name is
+                <span property="foaf:name">
+                    <span property="foaf:nick">Jimmy</span>
+                    <span property="foaf:family_name">Ha</span>
+                </span>
+                <span property="foaf:givenname" content="James"></span>
+                <span property="foaf:logo" content="http://herereadthis.com/build/images/branding/herereadthis_logo.svg"></span>
+                and I 
+                <span property="v:title" content="UX Web Developer">make web pages</span>,
+                <span resource="http://herereadthis.com/" property="v:url foaf:homepage"></span> specializing in user interface development and Django environments. I live and play in the
+                <span property="v:Postal" resource="#/me/address/" typeof="v:Address">
+                    <span property="v:locality" content="Washington"></span>
+                    <span property="v:region">DC</span>
+                </span> metro area.
+                <span property="foaf:based_near" resource="#/me/geo/" typeof="geo:point" prefix="geo: http://www.w3.org/2003/01/geo/wgs84_pos#">
+                    <span property="geo:lat" content="38.886757"></span>
+                    <span property="geo:long" content="-77.041626"></span>
+                </span>
+                I do 
+                <span property="foaf:topic_interest">photography</span> with a Hasselblad camera, 
+                <span property="foaf:topic_interest" content="gardening">grow roses</span>, 
+                <span property="foaf:topic_interest" content="baking">bake pastries</span>, 
+                dance at <span property="foaf:topic_interest" content="Burning Man">Burner festivals</span>,
+                and practice <span property="foaf:topic_interest">Kyudo</span>.
+                I put Sriracha on everything.</p>
+            <a class="popup_button retro_spriter popup_close">Close</a>
+            <a class="popup_button retro_spriter popup_resize">Resize</a>
+            <a class="popup_button retro_spriter popup_minimize">Minimize</a>
+        </div>
+    </div>
+</header>
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-37798496-1');
+    ga('send', 'pageview');
+</script>
+
+<!-- build:js(.) scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<!-- endbuild -->
+</body>
+</html>
