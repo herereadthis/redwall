@@ -59,10 +59,48 @@ ng-app="redwallApp">
     <!-- endbuild -->
 </head>
 <body>
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+
+<header role="banner" class="starfield" data-module="parallax_scroll" data-parallax-speed="-50">
+    <!--<span>&lt;!DOCTYPE html PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;</span>-->
+    <div class="bellmaker_container">
+        <div id="construction" role="presentation"></div>
+        <div id="header_panel" data-module="banner_image">
+            <a href=""><span>Stand by for a 90s image!</span></a>
+        </div>
+        <div class="popup_box_simulator" typeof="foaf:Person" resource="#/me/">
+            <span class="retro_spriter">Welcome to my site!</span>
+            <h1 data-module="color_shift" data-color-begin="F00" data-color-end="FF9600">Here, Read This!</h1>
+            <p>Hi! My Name is
+                <span property="foaf:name">
+                    <span property="foaf:nick">Jimmy</span>
+                    <span property="foaf:family_name">Ha</span>
+                </span>
+                <span property="foaf:givenname" content="James"></span>
+                <span property="foaf:logo" content="http://herereadthis.com/build/images/branding/herereadthis_logo.svg"></span>
+                and I 
+                <span property="v:title" content="UX Web Developer">make web pages</span>,
+                <span resource="http://herereadthis.com/" property="v:url foaf:homepage"></span> specializing in user interface development and Django environments. I live and play in the
+                <span property="v:Postal" resource="#/me/address/" typeof="v:Address">
+                    <span property="v:locality" content="Washington"></span>
+                    <span property="v:region">DC</span>
+                </span> metro area.
+                <span property="foaf:based_near" resource="#/me/geo/" typeof="geo:point" prefix="geo: http://www.w3.org/2003/01/geo/wgs84_pos#">
+                    <span property="geo:lat" content="38.886757"></span>
+                    <span property="geo:long" content="-77.041626"></span>
+                </span>
+                I do 
+                <span property="foaf:topic_interest">photography</span> with a Hasselblad camera, 
+                <span property="foaf:topic_interest" content="gardening">grow roses</span>, 
+                <span property="foaf:topic_interest" content="baking">bake pastries</span>, 
+                dance at <span property="foaf:topic_interest" content="Burning Man">Burner festivals</span>,
+                and practice <span property="foaf:topic_interest">Kyudo</span>.
+                I put Sriracha on everything.</p>
+            <a class="popup_button retro_spriter popup_close">Close</a>
+            <a class="popup_button retro_spriter popup_resize">Resize</a>
+            <a class="popup_button retro_spriter popup_minimize">Minimize</a>
+        </div>
+    </div>
+</header>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
