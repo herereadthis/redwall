@@ -167,16 +167,16 @@ module.exports = function (grunt) {
                 ]
             }
         },
-    less: {
-      noonvale: {
-        options: {
-            paths: ['<%= yeoman.app %>/less']
+        less: {
+            noonvale: {
+                options: {
+                    paths: ['<%= yeoman.app %>/less']
+                },
+                files: {
+                    '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/less/main.less'
+                }
+            }
         },
-        files: {
-          '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/less/main.less'
-        }
-      }
-    },
 
         // Automatically inject Bower components into the app
         wiredep: {
@@ -413,7 +413,7 @@ module.exports = function (grunt) {
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
-    'less',
+        'less',
         'concat',
         'ngAnnotate',
         'copy:dist',
