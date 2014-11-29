@@ -7,6 +7,6 @@ angular.module('redwallApp')
             restrict: 'E',
             link: function(scope, element, attrs) {
             },
-            templateUrl: '/scripts/components/retroArt/retro-art.html'
+            templateUrl: '/scripts/homepage/retro-art.html'
         };
     });

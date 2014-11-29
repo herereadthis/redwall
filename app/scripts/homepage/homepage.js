@@ -14,4 +14,12 @@ angular.module('redwallApp')
       'AngularJS',
       'Karma'
     ];
-  });
+  })
+    .directive('homepage', function() {
+        return {
+            restrict: 'E',
+            link: function() {
+            },
+            templateUrl: '/scripts/homepage/homepage.html'
+        };
+    });
