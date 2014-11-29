@@ -23,8 +23,8 @@ angular
         $routeProvider
             .when('/', {
                 title: 'Here, Read This',
-                templateUrl: 'views/main.html',
-                controller: 'MainCtrl'
+                templateUrl: 'views/homepage.html',
+                controller: 'HomepageController'
             })
             .when('/about', {
                 templateUrl: 'views/about.html',

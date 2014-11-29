@@ -8,7 +8,7 @@
  * Controller of the redwallApp
  */
 angular.module('redwallApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('HomepageController', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
