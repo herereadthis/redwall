@@ -34,7 +34,10 @@ module.exports = function (grunt) {
                 tasks: ['wiredep']
             },
             js: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+                files: [
+                    '<%= yeoman.app %>/scripts/{,*/}*.js',
+                    '<%= yeoman.app %>/scripts/components/{,*/}*.js'
+                ],
                 tasks: ['newer:jshint:all'],
                 options: {
                     livereload: '<%= connect.options.livereload %>'
@@ -45,7 +48,10 @@ module.exports = function (grunt) {
                 tasks: ['newer:jshint:test', 'karma']
             },
             less: {
-                files: ['<%= yeoman.app %>/less/{,*/}*.less'],
+                files: [
+                    '<%= yeoman.app %>/less/{,*/}*.less',
+                    '<%= yeoman.app %>/scripts/components/{,*/}*.less'
+                ],
                 tasks: ['less']
             },
             styles: {
@@ -67,6 +73,7 @@ module.exports = function (grunt) {
                 },
                 files: [
                     '<%= yeoman.app %>/{,*/}*.html',
+                    '<%= yeoman.app %>/scripts/components/**/*.html',
                     '.tmp/styles/{,*/}*.css',
                     '.tmp/xml/{,*/}*.xml',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -298,7 +305,11 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd: '<%= yeoman.dist %>',
-                        src: ['*.html', 'views/{,*/}*.html'],
+                        src: [
+                            '*.html',
+                            'views/{,*/}*.html', 
+                            'scripts/components/{,*/}*.html'
+                        ],
                         dest: '<%= yeoman.dist %>'
                     }
                 ]
@@ -341,6 +352,7 @@ module.exports = function (grunt) {
                             '.htaccess',
                             '*.html',
                             'views/{,*/}*.html',
+                            'scripts/components/{,*/}*.html',
                             'images/{,*/}*.{webp}',
                             'fonts/{,*/}*.*',
                             'xml/{,*/}*.*'
