@@ -1,6 +1,16 @@
 'use strict';
 
-// inspired by http://jsfiddle.net/jaredwilli/SfJ8c/
+// The Parallax Scroller
+// takes your background and allows it scroll relative to window scroll
+
+// Your container must contain the directive
+//      data-parallax-scroll
+// You can set the relative scrolling with attribute
+//      [data-parallax-speed="NUMBER"]
+// Where number is expressed as a percentage
+// Note that negativ numbers are allowed and create an awesome dizzying effect.
+// 0 = fixed to window, and 100 = fixed to scroll
+
 angular.module('redwallApp')
     .directive('parallaxScroll', ['$window', function($window) {
         // window.console.log($window.width());
