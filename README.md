@@ -10,20 +10,18 @@ Redwall is the codebase of the website, "Here, Read This" at [herereadthis.com](
 
 (Incomplete) [extended documentation](https://github.com/herereadthis/redwall/blob/master/docs/readme.md) is located in `docs` directory.
 
-### Get the Code
-
-```
-$ git clone https://github.com/herereadthis/redwall.git
-$ cd redwall/
-$ python -m SimpleHTTPServer 8001
-```
-
 ### Build
 
 ```
+# install packages
 $ npm install
+# install Jekyll
 $ gem install jekyll
+# get bower dependencies
 $ npm run bower
+# run grunt automated tasks
 $ npm run grunt
+# browser will load URL at localhost:9000
+$ npm run server
 ```
 
