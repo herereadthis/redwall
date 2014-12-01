@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('redwallApp')
-    .directive('retroArt', function() {
+    .directive('retroRules', function() {
         return {
             restrict: 'E',
             link: function(scope, element, attrs) {
             },
-            templateUrl: '/scripts/homepage/retro-art.html'
+            templateUrl: '/scripts/homepage/retro-rules.html'
         };
     });

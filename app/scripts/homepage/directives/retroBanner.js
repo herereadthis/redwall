@@ -1,6 +1,5 @@
 'use strict';
 
-// draws heavily from http://jsfiddle.net/jaredwilli/SfJ8c/
 angular.module('redwallApp')
     .directive('retroBanner', function() {
         return {
