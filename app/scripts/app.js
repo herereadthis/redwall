@@ -54,4 +54,6 @@ angular
                 $rootScope.title = defaultTitle;
             }
         });
+
+        $rootScope.location = 'http://herereadthis.com' + $location.path();
     }]);
