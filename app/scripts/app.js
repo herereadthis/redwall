@@ -19,21 +19,27 @@ angular
         'ngSanitize',
         'ngTouch'
     ])
-    .config(function ($routeProvider) {
-        $routeProvider
-            .when('/', {
-                title: 'Here, Read This',
-                templateUrl: 'views/homepage.html',
-                controller: 'HomepageController'
-            })
-            .when('/about', {
-                templateUrl: 'views/about.html',
-                controller: 'AboutCtrl'
-            })
-            .otherwise({
-                redirectTo: '/'
-            });
-    })
+    .config(
+    [
+        '$routeProvider',
+        '$locationProvider',
+        function ($routeProvider, $locationProvider) {
+            $routeProvider
+                .when('/', {
+                    title: 'Here, Read This',
+                    templateUrl: 'views/homepage.html',
+                    controller: 'HomepageController'
+                })
+                .when('/about', {
+                    templateUrl: 'views/about.html',
+                    controller: 'AboutCtrl'
+                })
+                .otherwise({
+                    redirectTo: '/'
+                });
+            // use the HTML5 History API
+            $locationProvider.html5Mode(true);
+        }])
     // http://stackoverflow.com/questions/12506329/
     // how-to-dynamically-change-header-based-on-angularjs-partial-view
     .run(['$location', '$rootScope', function ($location, $rootScope) {
