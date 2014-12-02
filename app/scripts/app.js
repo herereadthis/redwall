@@ -17,7 +17,9 @@ angular
         'ngResource',
         'ngRoute',
         'ngSanitize',
-        'ngTouch'
+        'ngTouch',
+        'pageCountService',
+        'greeterService'
     ])
     .config(
     [
