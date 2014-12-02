@@ -12,7 +12,7 @@ Redwall is the codebase of the website, "Here, Read This" at [herereadthis.com](
 
 ### Build
 
-```
+```bash
 # install packages
 $ npm install
 # install Jekyll
