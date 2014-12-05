@@ -20,10 +20,8 @@
 //     data-color-end="00F">Hello, World!</span>
 
 
-
 angular.module('redwallApp')
     .directive('colorShift', ['$window', function($window) {
-        // window.console.log($window.width());
         return {
             restrict: 'A',
             scope: {
@@ -105,4 +103,3 @@ angular.module('redwallApp')
             }
         };
     }]);
-

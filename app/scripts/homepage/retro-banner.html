@@ -6,8 +6,9 @@
             <a href=""><span>Stand by for a 90s image!</span></a>
         </div>
         <popup-box-simulator
-            data-title-bar="'Welcome to my site!'">
-            <p>Hi! My Name is
+            data-title-bar="'Welcome to my site!'"
+            data-popup-title="'Here, Read This!'">
+            <p typeof="foaf:Person" resource="#/me/">Hi! My Name is
                 <span property="foaf:name">
                     <span property="foaf:nick">Jimmy</span>
                     <span property="foaf:family_name">Ha</span>
@@ -33,12 +34,5 @@
                 and practice <span property="foaf:topic_interest">Kyudo</span>.
                 I put Sriracha on everything.</p>
         </popup-box-simulator>
-        <div class="popup_box_simulator" typeof="foaf:Person" resource="#/me/">
-            <span class="retro_spriter">Welcome to my site!</span>
-            <h1><span  data-color-shift data-color-begin="'F00'" data-color-end="'FF9600'">Here, Read This!</span></h1>
-            <a class="popup_button retro_spriter popup_close">Close</a>
-            <a class="popup_button retro_spriter popup_resize">Resize</a>
-            <a class="popup_button retro_spriter popup_minimize">Minimize</a>
-        </div>
     </div>
 </header>
