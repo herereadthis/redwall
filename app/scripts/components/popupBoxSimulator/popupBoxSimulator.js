@@ -5,7 +5,9 @@ angular.module('redwallApp')
         return {
             restrict: 'E',
             transclude: true,
-            scope: {},
+            scope: {
+                titleBar: '='
+            },
             controller: function($scope) {
             },
             link: function(scope, element) {

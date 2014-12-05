@@ -5,12 +5,8 @@
         <div id="header_panel" data-module="banner_image">
             <a href=""><span>Stand by for a 90s image!</span></a>
         </div>
-        <popup-box-simulator>
-            <p>Funsies</p>
-        </popup-box-simulator>
-        <div class="popup_box_simulator" typeof="foaf:Person" resource="#/me/">
-            <span class="retro_spriter">Welcome to my site!</span>
-            <h1 data-color-shift data-color-begin="'F00'" data-color-end="'FF9600'">Here, Read This!</h1>
+        <popup-box-simulator
+            data-title-bar="'Welcome to my site!'">
             <p>Hi! My Name is
                 <span property="foaf:name">
                     <span property="foaf:nick">Jimmy</span>
@@ -36,6 +32,10 @@
                 dance at <span property="foaf:topic_interest" content="Burning Man">Burner festivals</span>,
                 and practice <span property="foaf:topic_interest">Kyudo</span>.
                 I put Sriracha on everything.</p>
+        </popup-box-simulator>
+        <div class="popup_box_simulator" typeof="foaf:Person" resource="#/me/">
+            <span class="retro_spriter">Welcome to my site!</span>
+            <h1><span  data-color-shift data-color-begin="'F00'" data-color-end="'FF9600'">Here, Read This!</span></h1>
             <a class="popup_button retro_spriter popup_close">Close</a>
             <a class="popup_button retro_spriter popup_resize">Resize</a>
             <a class="popup_button retro_spriter popup_minimize">Minimize</a>
