@@ -7,12 +7,17 @@ angular.module('redwallApp')
             transclude: true,
             scope: {
                 titleBar: '=',
-                popupTitle: '='
+                popupTitle: '=',
+                colorShiftStart: '=',
+                colorShiftEnd: '='
             },
-            controller: function($scope) {
-            },
+            controller: [
+                '$scope',
+                'colorShift',
+                function($scope, colorShift) {
+                $scope.colorShiftTitle = colorShift.letters($scope.popupTitle);
+            }],
             link: function(scope, element) {
-                element.find('h1').text(scope.popupTitle);
             },
             templateUrl: '/scripts/components/popupBoxSimulator/popup-box-simulator.html'
         };
