@@ -8,13 +8,13 @@
  * Controller of the redwallApp
  */
 angular.module('redwallApp')
-  .controller('HomepageController', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  })
+    .controller('HomepageController', function ($scope) {
+        $scope.awesomeThings = [
+            'HTML5 Boilerplate',
+            'AngularJS',
+            'Karma'
+        ];
+    })
     .directive('homepage', function() {
         return {
             restrict: 'E',

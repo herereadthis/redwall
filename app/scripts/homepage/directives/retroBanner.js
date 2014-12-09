@@ -6,6 +6,9 @@ angular.module('redwallApp')
             restrict: 'E',
             link: function(scope, element, attrs) {
             },
+            controller: ['colorShift', function(colorShift) {
+                colorShift.greet('aowurgha;sgij');
+            }],
             templateUrl: '/scripts/homepage/retro-banner.html'
         };
     });

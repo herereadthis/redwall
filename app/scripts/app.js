@@ -18,7 +18,8 @@ angular
         'ngRoute',
         'ngSanitize',
         'ngTouch',
-        'pageCountService'
+        'pageCountService',
+        'colorShiftService'
     ])
     .config(
     [
