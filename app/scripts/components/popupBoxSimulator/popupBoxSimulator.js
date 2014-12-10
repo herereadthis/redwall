@@ -13,14 +13,16 @@ angular.module('redwallApp')
             },
             controller: [
                 '$scope',
+                '$sce',
                 'colorShift',
-                function ($scope, colorShift) {
+                function ($scope, $sce, colorShift) {
                     var colorShiftParams = {
                         colorBegin: $scope.colorShiftStart,
                         colorEnd: $scope.colorShiftEnd,
                         title: $scope.popupTitle
                     };
-                    $scope.colorShiftTitle = colorShift.letters(colorShiftParams);
+                    // $scope.colorShiftTitle =  $sce.trustAsHtml(colorShift.letters(colorShiftParams));
+                    $scope.colorShiftTitle =  colorShift.letters(colorShiftParams);
                 }],
             link: function (scope, element) {
             },

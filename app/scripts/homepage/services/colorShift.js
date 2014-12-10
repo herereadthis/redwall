@@ -2,7 +2,7 @@
 
 var colorShiftService = angular.module('colorShiftService', []);
 
-colorShiftService.factory('colorShift', function () {
+colorShiftService.factory('colorShift', ['$sce', function ($sce) {
     var hexToRgb, letterColorize;
 
     hexToRgb = function (hex) {
@@ -72,16 +72,13 @@ colorShiftService.factory('colorShift', function () {
                 g: colorParams.end.g - colorParams.begin.g,
                 b: colorParams.end.b - colorParams.begin.b
             };
-            window.console.log(colorParams);
 
             // split character string and build as array
             letterArray = letters.split('');
 
-            colorShiftTitle = letterColorize(letterArray, colorParams);
-            
-            window.console.log(colorShiftTitle);
+            colorShiftTitle = $sce.trustAsHtml(letterColorize(letterArray, colorParams));
 
             return(colorShiftTitle);
         }
     };
-});
+}]);
