@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('redwallApp')
-    .directive('popupBoxSimulator', function() {
+    .directive('popupBoxSimulator', function () {
         return {
             restrict: 'AE',
             transclude: true,
@@ -14,10 +14,15 @@ angular.module('redwallApp')
             controller: [
                 '$scope',
                 'colorShift',
-                function($scope, colorShift) {
-                $scope.colorShiftTitle = colorShift.letters($scope.popupTitle);
-            }],
-            link: function(scope, element) {
+                function ($scope, colorShift) {
+                    var colorShiftParams = {
+                        colorBegin: $scope.colorShiftStart,
+                        colorEnd: $scope.colorShiftEnd,
+                        title: $scope.popupTitle
+                    };
+                    $scope.colorShiftTitle = colorShift.letters(colorShiftParams);
+                }],
+            link: function (scope, element) {
             },
             templateUrl: '/scripts/components/popupBoxSimulator/popup-box-simulator.html'
         };
