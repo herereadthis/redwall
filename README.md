@@ -13,7 +13,19 @@ Redwall is the codebase of the website, "Here, Read This" at [herereadthis.com](
 
 ### Build
 
+You will need NPM
+
 ```bash
+$ brew install node
+```
+
+```bash
+# 1-step build:
+$ npm run all
+```
+
+```bash
+# Alternative: detailed install
 # install packages
 $ npm install
 # install Jekyll
