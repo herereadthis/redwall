@@ -48,6 +48,6 @@
     "bower": "./node_modules/bower/bin/bower install",
     "server": "./node_modules/grunt-cli/bin/grunt serve",
     "prod": "./node_modules/grunt-cli/bin/grunt serve:dist",
-    "all": "npm install;./node_modules/bower/bin/bower install;./node_modules/grunt-cli/bin/grunt;./node_modules/grunt-cli/bin/grunt serve",
+    "all": "npm install;./node_modules/bower/bin/bower install;./node_modules/grunt-cli/bin/grunt;./node_modules/grunt-cli/bin/grunt serve"
   }
 }

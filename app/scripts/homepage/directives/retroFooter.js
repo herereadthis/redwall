@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('redwallApp')
-    .directive('retroArt', function() {
+    .directive('retroFooter', function() {
         return {
             restrict: 'E',
             link: function(scope, element, attrs) {
