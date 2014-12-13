@@ -1,0 +1,12 @@
+<ul resource="#/me/" typeof="foaf:Person">
+    <li ng-repeat="account in socialData" property="foaf:account"
+        resource="#/me/{{ account.text | lowercase }}/" typeof="foaf:OnlineAccount">
+        <span property="foaf:accountServiceHomepage" resource="{{ account.resourceUrl }}">
+            <span>{{ account.text }}</span>
+        </span>
+        <a rel="foaf:homepage"
+           href="{{ account.url }}"
+           property="foaf:accountName" title="{{ account.name }}">{{ account.text }}</a></li>
+</ul>
+
+
