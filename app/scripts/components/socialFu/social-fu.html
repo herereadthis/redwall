@@ -2,7 +2,8 @@
     <li ng-repeat="account in socialData" property="foaf:account"
         resource="#/me/{{ account.text | lowercase }}/" typeof="foaf:OnlineAccount">
         <span property="foaf:accountServiceHomepage" resource="{{ account.resourceUrl }}">
-            <span>{{ account.text }}</span>
+            <span ng-click="referral(account.url)"
+                  title="{{ account.text }}">{{ account.text }}</span>
         </span>
         <a rel="foaf:homepage"
            href="{{ account.url }}"

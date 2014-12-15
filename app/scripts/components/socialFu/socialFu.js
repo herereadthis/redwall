@@ -9,7 +9,8 @@ angular.module('redwallApp')
             },
             controller: [
                 '$scope',
-                function ($scope) {
+                '$window',
+                function ($scope, $window) {
                     window.console.log('social fu');
 
                     $scope.socialData = [
@@ -37,9 +38,14 @@ angular.module('redwallApp')
                             url: 'http://pinterest.com/herereadthis/',
                             account: 'herereadthis'
                         }
-                    ]
+                    ];
+                    $scope.referral = function(url) {
+                        window.console.log(url);
+                        $window.location.href = url;
+                    }
                 }],
             link: function (scope, element) {
+
             },
             templateUrl: '/scripts/components/socialFu/social-fu.html'
         };
