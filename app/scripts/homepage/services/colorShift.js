@@ -1,5 +1,24 @@
 'use strict';
 
+// The Color Shifter
+// takes a string of characters and gives it a color range as you define them.
+// Formatting.....
+// 
+// Required directive
+//     * data-color-shift
+// 
+// optional data attributes
+// you can define them with 3 (e.g. "F00") or 6 (e.g. "FF0000") characters
+//     * data-color-begin = HEX_COLOR
+//     * data-color-end = HEX_COLOR
+// if you don't specify, it'll just fade from black to white
+// 
+// SAMPLE:
+// <span
+//     data-color-shift
+//     data-color-begin="F00"
+//     data-color-end="00F">Hello, World!</span>
+
 var colorShiftService = angular.module('colorShiftService', []);
 
 colorShiftService.factory('colorShift', ['$sce', function ($sce) {
