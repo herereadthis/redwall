@@ -33,14 +33,20 @@ angular
                     controller: 'HomepageController'
                 })
                 .when('/about', {
+                    title: 'About',
                     templateUrl: 'views/about.html',
                     controller: 'AboutCtrl'
+                })
+                .when('/link-of-the-day', {
+                    title: 'Link of the Day',
+                    templateUrl: 'views/link-of-the-day.html',
+                    controller: 'LinkOfTheDayController'
                 })
                 .otherwise({
                     redirectTo: '/'
                 });
             // use the HTML5 History API
-            $locationProvider.html5Mode(true);
+            $locationProvider.html5Mode(false);
         }])
     // http://stackoverflow.com/questions/12506329/
     // how-to-dynamically-change-header-based-on-angularjs-partial-view

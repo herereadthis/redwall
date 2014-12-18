@@ -1,0 +1,20 @@
+
+<header role="banner">
+    <h1>Link of the Day</h1>
+</header>
+
+
+
+<div>
+    <section class="bellmaker_container">
+
+        <ul>
+            <li data-ng-repeat="thing in awesomeThings">{{ thing}}</li>
+        </ul>
+        <article data-ng-repeat="story in linkData">
+            <h3><a href="{{ story.url }}" title="{{ story.title }}" ng-bind-html="story.title"></a></h3>
+            <div ng-bind-html="story.summary">
+            </div>
+        </article>
+    </section>
+</div>
