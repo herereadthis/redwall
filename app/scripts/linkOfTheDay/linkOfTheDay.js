@@ -23,6 +23,13 @@ angular.module('redwallApp')
                 summary: ''
             }
             {
+                date: '20141217',
+                title: 'Zettai Ryouiki (絶対領域)',
+                url: '',
+                image: '',
+                summary: 'Zettai Ryouiki (絶対領域) literally translates to “absolute territory”.'
+            },
+            {
                 date: '20141216',
                 title: 'Lost in Translation: The world&rsquo;s most unique words?',
                 url: 'http://www.bbc.com/culture/story/20141216-ten-untranslatable-words',
@@ -61,6 +68,13 @@ angular.module('redwallApp')
                 date: '20141211',
                 title: 'Peru to take legal action over Greenpeace stunt at ancient Nazca lines',
                 url: 'http://www.theguardian.com/world/2014/dec/10/peru-legal-action-greenpeace-stunt-nazca-lines',
+                image: '',
+                summary: ''
+            },
+            {
+                date: '20141210',
+                title: 'The Moors Murders',
+                url: 'http://en.wikipedia.org/wiki/Moors_murders',
                 image: '',
                 summary: ''
             }
