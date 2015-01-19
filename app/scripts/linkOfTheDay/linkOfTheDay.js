@@ -14,7 +14,14 @@ angular.module('redwallApp')
             'AngularJS',
             'Karma'
         ];
-        $scope.linkData = [
+        $scope.linkData = [,
+            {
+                date: '20141218',
+                title: 'Yiwu: The Chinese city where Christmas is made and sold',
+                url: 'http://www.bbc.com/future/story/20141218-the-hidden-home-of-christmas',
+                image: '',
+                summary: ''
+            }
             {
                 date: '20141216',
                 title: 'Lost in Translation: The world&rsquo;s most unique words?',
