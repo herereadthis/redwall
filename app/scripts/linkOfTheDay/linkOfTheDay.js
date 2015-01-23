@@ -58,6 +58,13 @@ angular.module('redwallApp')
                 summary: ''
             },
             {
+                date: '2015-01-16',
+                title: 'Fibonacci Zoetrope Sculptures',
+                url: 'https://vimeo.com/116582567',
+                image: '',
+                summary: ''
+            },
+            {
                 date: '2015-01-11',
                 title: 'No. 37: Big Wedding or Small?: Quiz: The 36 Questions That Lead to Love',
                 url: 'http://www.nytimes.com/2015/01/11/fashion/no-37-big-wedding-or-small.html',
