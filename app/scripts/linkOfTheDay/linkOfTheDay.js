@@ -45,6 +45,13 @@ angular.module('redwallApp')
             },
             {
                 date: '2015-01-18',
+                title: 'Where are Israeli Women?',
+                url: 'http://www.newyorker.com/news/news-desk/jerusalem-haredim-women-equality',
+                image: '',
+                summary: ''
+            },
+            {
+                date: '2015-01-17',
                 title: 'HOW LEGO BECAME THE APPLE OF TOYS',
                 url: 'http://www.fastcompany.com/3040223/when-it-clicks-it-clicks',
                 image: '',
