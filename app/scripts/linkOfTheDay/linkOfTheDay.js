@@ -58,6 +58,20 @@ angular.module('redwallApp')
                 summary: ''
             },
             {
+                date: '2015-01-11',
+                title: 'No. 37: Big Wedding or Small?: Quiz: The 36 Questions That Lead to Love',
+                url: 'http://www.nytimes.com/2015/01/11/fashion/no-37-big-wedding-or-small.html',
+                image: '',
+                summary: ''
+            },
+            {
+                date: '2014-12-19',
+                title: 'Bodh Gaya',
+                url: 'http://en.wikipedia.org/wiki/Bodh_Gaya',
+                image: '',
+                summary: ''
+            },
+            {
                 date: '2014-12-18',
                 title: 'Yiwu: The Chinese city where Christmas is made and sold',
                 url: 'http://www.bbc.com/future/story/20141218-the-hidden-home-of-christmas',
