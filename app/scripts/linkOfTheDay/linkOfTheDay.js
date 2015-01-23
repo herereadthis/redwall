@@ -23,6 +23,13 @@ angular.module('redwallApp')
                 summary: '<p>So basically, someone tried to superglue it back together, fucked up, then got glue on its face, tried to scratch it off with a spatula, and got the face all dented and marred.</p><p>I would have loved to be in that room.... &ldquo;Dammit, stop making it worse!&rdquo;</p>'
             },
             {
+                date: '2015-01-21',
+                title: 'Android Netrunner – The Game Designer’s Game',
+                url: 'http://gamedesignreviews.com/scrapbook/android-netrunner-the-game-designers-game/',
+                image: '',
+                summary: ''
+            },
+            {
                 date: '2014-12-18',
                 title: 'Yiwu: The Chinese city where Christmas is made and sold',
                 url: 'http://www.bbc.com/future/story/20141218-the-hidden-home-of-christmas',
