@@ -14,14 +14,21 @@ angular.module('redwallApp')
             'AngularJS',
             'Karma'
         ];
-        $scope.linkData = [,
+        $scope.linkData = [
+            {
+                date: '2015-01-22',
+                title: 'King Tut&39;s beard &39;hastily glued back on with epoxy&39;',
+                url: 'http://www.telegraph.co.uk/news/worldnews/africaandindianocean/egypt/11361822/King-Tuts-beard-hastily-glued-back-on-with-epoxy.html',
+                image: '',
+                summary: '<p>So basically, someone tried to superglue it back together, fucked up, then got glue on its face, tried to scratch it off with a spatula, and got the face all dented and marred.</p><p>I would have loved to be in that room.... &ldquo;Dammit, stop making it worse!&rdquo;</p>'
+            },
             {
                 date: '2014-12-18',
                 title: 'Yiwu: The Chinese city where Christmas is made and sold',
                 url: 'http://www.bbc.com/future/story/20141218-the-hidden-home-of-christmas',
                 image: '',
                 summary: ''
-            }
+            },
             {
                 date: '2014-12-17',
                 title: 'Zettai Ryouiki (絶対領域)',
