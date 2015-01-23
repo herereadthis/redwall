@@ -30,6 +30,13 @@ angular.module('redwallApp')
                 summary: ''
             },
             {
+                date: '2015-01-20',
+                title: 'HOW LEGO BECAME THE APPLE OF TOYS',
+                url: 'http://www.fastcompany.com/3040223/when-it-clicks-it-clicks',
+                image: '',
+                summary: ''
+            },
+            {
                 date: '2014-12-18',
                 title: 'Yiwu: The Chinese city where Christmas is made and sold',
                 url: 'http://www.bbc.com/future/story/20141218-the-hidden-home-of-christmas',
