@@ -24,20 +24,27 @@ angular.module('redwallApp')
             },
             {
                 date: '2015-01-21',
+                title: 'Rebecca Léveillé-Guay',
+                url: 'http://www.rleveille.com',
+                image: '',
+                summary: ''
+            },
+            {
+                date: '2015-01-20',
                 title: 'Android Netrunner – The Game Designer’s Game',
                 url: 'http://gamedesignreviews.com/scrapbook/android-netrunner-the-game-designers-game/',
                 image: '',
                 summary: ''
             },
             {
-                date: '2015-01-20',
+                date: '2015-01-19',
                 title: 'Why Magic: The Gathering struggles to stay relevant to casual players',
                 url: 'http://www.avclub.com/article/why-magic-the-gathering-struggles-to-stay-relevant-106217',
                 image: '',
                 summary: ''
             },
             {
-                date: '2015-01-20',
+                date: '2015-01-18',
                 title: 'HOW LEGO BECAME THE APPLE OF TOYS',
                 url: 'http://www.fastcompany.com/3040223/when-it-clicks-it-clicks',
                 image: '',
