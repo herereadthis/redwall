@@ -238,6 +238,22 @@ angular.module('redwallApp')
                 image: '',
                 summary: '',
                 source: 'Aeon Magazine'
+            },
+            {
+                date: '2014-11-30',
+                title: 'The End of Apps As We Know Them',
+                url: 'http://blog.intercom.io/the-end-of-apps-as-we-know-them/',
+                image: '',
+                summary: '',
+                source: 'Inside Intercom'
+            },
+            {
+                date: '2014-11-15',
+                title: 'Why Netrunner Matters',
+                url: 'http://killscreendaily.com/articles/why-netrunner-matters/',
+                image: '',
+                summary: '',
+                source: 'Kill Screen'
             }
         ];
     })
