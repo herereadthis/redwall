@@ -188,6 +188,30 @@ angular.module('redwallApp')
                 image: '',
                 summary: '',
                 source: 'BBC'
+            },
+            {
+                date: '2014-12-04',
+                title: 'Cheating the Beautiful Game',
+                url: 'http://www.newyorker.com/the-sporting-scene/cheating-the-beautiful-game',
+                image: '',
+                summary: '',
+                source: 'New Yorker'
+            },
+            {
+                date: '2014-12-03',
+                title: 'Cheating the Beautiful Game',
+                url: 'http://www.newyorker.com/the-sporting-scene/cheating-the-beautiful-game',
+                image: '',
+                summary: '',
+                source: 'New Yorker'
+            },
+            {
+                date: '2014-12-02',
+                title: 'Darkness',
+                url: 'http://english.bouletcorp.com/2012/02/01/darkness/',
+                image: '',
+                summary: '',
+                source: 'The Bouletcorp'
             }
         ];
     })
