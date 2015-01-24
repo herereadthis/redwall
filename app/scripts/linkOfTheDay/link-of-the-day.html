@@ -1,20 +1,18 @@
 
-<header role="banner">
-    <h1>Link of the Day</h1>
-</header>
+<div id="link_of_the_day">
+
+    <header role="banner" class="bellmaker_container">
+        <h1>Link of the Day</h1>
+    </header>
 
 
-
-<div>
-    <section class="bellmaker_container">
-
-        <ul>
-            <li data-ng-repeat="thing in awesomeThings">{{ thing}}</li>
-        </ul>
+    <div class="bellmaker_container">
         <article data-ng-repeat="story in linkData">
-            <h3><a href="{{ story.url }}" title="{{ story.title }}" ng-bind-html="story.title"></a></h3>
+            <h3 ng-bind-html="story.title"></h3>
+            <time>{{ story.date | date: 'd MMM yyyy' }}</time>
             <div ng-bind-html="story.summary">
             </div>
+            <p>Source: <a href="{{ story.url }}" title="{{ story.title }}">{{ story.source }}</a></p>
         </article>
-    </section>
+    </div>
 </div>
