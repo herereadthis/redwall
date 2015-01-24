@@ -212,6 +212,14 @@ angular.module('redwallApp')
                 image: '',
                 summary: '',
                 source: 'The Bouletcorp'
+            },
+            {
+                date: '2014-12-01',
+                title: 'Hallucinogenic nights',
+                url: 'http://aeon.co/magazine/psychology/the-terror-and-the-bliss-of-sleep-paralysis/',
+                image: '',
+                summary: '',
+                source: 'Aeon Magazine'
             }
         ];
     })
