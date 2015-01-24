@@ -154,6 +154,20 @@ angular.module('redwallApp')
                 url: 'http://www.huffingtonpost.com/2014/05/27/spanish-words-no-translation_n_5399000.html',
                 image: '',
                 summary: ''
+            },
+            {
+                date: '2014-12-08',
+                title: 'Juliane Koepcke',
+                url: 'http://en.wikipedia.org/wiki/Juliane_Koepcke',
+                image: '',
+                summary: ''
+            },
+            {
+                date: '2014-12-07',
+                title: 'In Defense Of Spielberg’s WAR OF THE WORLDS',
+                url: 'http://badassdigest.com/2013/02/19/in-defense-of-spielbergs-war-of-the-worlds/',
+                image: '',
+                summary: ''
             }
         ];
     })
