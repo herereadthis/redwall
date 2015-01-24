@@ -147,6 +147,13 @@ angular.module('redwallApp')
                 url: 'http://en.wikipedia.org/wiki/Moors_murders',
                 image: '',
                 summary: ''
+            },
+            {
+                date: '2014-12-09',
+                title: '10 Spanish Words That Have No English Translation',
+                url: 'http://www.huffingtonpost.com/2014/05/27/spanish-words-no-translation_n_5399000.html',
+                image: '',
+                summary: ''
             }
         ];
     })
