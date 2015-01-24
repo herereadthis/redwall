@@ -139,7 +139,8 @@ angular.module('redwallApp')
                 title: 'Peru to take legal action over Greenpeace stunt at ancient Nazca lines',
                 url: 'http://www.theguardian.com/world/2014/dec/10/peru-legal-action-greenpeace-stunt-nazca-lines',
                 image: '',
-                summary: ''
+                summary: '',
+                source: 'Guardian'
             },
             {
                 date: '2014-12-10',
