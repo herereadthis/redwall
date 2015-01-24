@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - "0.11"
 before_script:
-  - npm run bower
+#  - npm run bower
+  - npm install bower
+  - npm install grunt
 script:
-  - npm run grunt
+  - grunt
+#  - npm run grunt
