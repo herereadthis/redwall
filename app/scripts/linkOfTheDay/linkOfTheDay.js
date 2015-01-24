@@ -168,6 +168,13 @@ angular.module('redwallApp')
                 url: 'http://badassdigest.com/2013/02/19/in-defense-of-spielbergs-war-of-the-worlds/',
                 image: '',
                 summary: ''
+            },
+            {
+                date: '2014-12-06',
+                title: 'Having Gone Largely Unnoticed In The ‘Game Of Thrones’ Series, It’s Now Impossible To Take Your Eyes Off It',
+                url: 'http://smatterist.com/749/gone-largely-unnoticed-game-thrones-series-now-impossible-take-eyes/',
+                image: '',
+                summary: ''
             }
         ];
     })
