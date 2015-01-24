@@ -146,35 +146,48 @@ angular.module('redwallApp')
                 title: 'The Moors Murders',
                 url: 'http://en.wikipedia.org/wiki/Moors_murders',
                 image: '',
-                summary: ''
+                summary: '',
+                source: 'Wikipedia'
             },
             {
                 date: '2014-12-09',
                 title: '10 Spanish Words That Have No English Translation',
                 url: 'http://www.huffingtonpost.com/2014/05/27/spanish-words-no-translation_n_5399000.html',
                 image: '',
-                summary: ''
+                summary: '',
+                source: 'Huffington Post'
             },
             {
                 date: '2014-12-08',
                 title: 'Juliane Koepcke',
                 url: 'http://en.wikipedia.org/wiki/Juliane_Koepcke',
                 image: '',
-                summary: ''
+                summary: '',
+                source: 'Wikipedia'
             },
             {
                 date: '2014-12-07',
                 title: 'In Defense Of Spielberg’s WAR OF THE WORLDS',
                 url: 'http://badassdigest.com/2013/02/19/in-defense-of-spielbergs-war-of-the-worlds/',
                 image: '',
-                summary: ''
+                summary: '',
+                source: 'Baddass Digest'
             },
             {
                 date: '2014-12-06',
                 title: 'Having Gone Largely Unnoticed In The ‘Game Of Thrones’ Series, It’s Now Impossible To Take Your Eyes Off It',
                 url: 'http://smatterist.com/749/gone-largely-unnoticed-game-thrones-series-now-impossible-take-eyes/',
                 image: '',
-                summary: ''
+                summary: '',
+                source: 'Smatterist'
+            },
+            {
+                date: '2014-12-05',
+                title: 'Languages: Why we must save dying tongues',
+                url: 'http://www.bbc.com/future/story/20140606-why-we-must-save-dying-languages',
+                image: '',
+                summary: '',
+                source: 'BBC'
             }
         ];
     })
