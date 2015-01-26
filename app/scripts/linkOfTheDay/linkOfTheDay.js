@@ -27,6 +27,14 @@ angular.module('redwallApp')
 
                     $scope.linkData = [
                         {
+                            date: '2015-01-23',
+                            title: 'Air catalog SkyMall seeks bankruptcy protection',
+                            url: 'http://www.usatoday.com/story/todayinthesky/2015/01/23/airline-catalog-skymall-files-for-bankruptcy/22213809/',
+                            image: '',
+                            summary: '',
+                            source: 'USA Today'
+                        },
+                        {
                             date: '2015-01-22',
                             title: 'King Tut&#39;s beard &#39;hastily glued back on with epoxy&#39;',
                             url: 'http://www.telegraph.co.uk/news/worldnews/africaandindianocean/egypt/11361822/King-Tuts-beard-hastily-glued-back-on-with-epoxy.html',
