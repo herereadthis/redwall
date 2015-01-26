@@ -99,6 +99,13 @@ angular.module('redwallApp')
                             source: 'YouTube'
                         },
                         {
+                            date: '20141220',
+                            title: 'Houshi',
+                            url: 'https://vimeo.com/114879061',
+                            image: '',
+                            summary: ''
+                        },
+                        {
                             date: '2014-12-19',
                             title: 'Bodh Gaya',
                             url: 'http://en.wikipedia.org/wiki/Bodh_Gaya',
