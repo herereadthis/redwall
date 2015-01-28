@@ -36,11 +36,11 @@ angular.module('redwallApp')
                         },
                         {
                             date: '2015-01-26',
-                            title: 'asdf',
-                            url: 'asdf',
+                            title: 'Photos: Everyone In NYC Is Currently On Line At The Grocery Store',
+                            url: 'http://gothamist.com/2015/01/26/snowpocalypse_supermarket.php',
                             image: '',
                             summary: '',
-                            source: 'Tasdf'
+                            source: 'Gothamist'
                         },
                         {
                             date: '2015-01-25',
