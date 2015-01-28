@@ -28,11 +28,11 @@ angular.module('redwallApp')
                     $scope.linkData = [
                         {
                             date: '2015-01-27',
-                            title: 'asdf',
-                            url: 'asdf',
+                            title: 'Not a Very P.C. Thing to Say',
+                            url: 'http://nymag.com/daily/intelligencer/2015/01/not-a-very-pc-thing-to-say.html?mid=nymag_press',
                             image: '',
                             summary: '',
-                            source: 'Tasdf'
+                            source: 'New York Magazine'
                         },
                         {
                             date: '2015-01-26',
