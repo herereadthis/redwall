@@ -27,6 +27,33 @@ angular.module('redwallApp')
 
                     $scope.linkData = [
                         {
+                            date: '2015-01-31',
+                            title: 'Weather map goes crazy live on the air',
+                            url: 'https://www.youtube.com/watch?v=iXuc7SAyk2s',
+                            image: '',
+                            summary: '<p>Local Phoenix weatherman Cory McCloskey has to deal with a messed up weather map on live TV, and handles himself so well. I don&rsquo;t want to quote what he says, because it will spoil the hilarity.</p><p>Also, the man is rocking a pretty nice suit.</p>',
+                            source: 'YouTube',
+                            author: 'FOX 10 Phoenix'
+                        },
+                        {
+                            date: '2015-01-30',
+                            title: 'Why does food taste different on planes?',
+                            url: 'http://www.bbc.com/future/story/20150112-why-in-flight-food-tastes-weird',
+                            image: '',
+                            summary: '',
+                            source: 'BBC',
+                            author: 'Katia Moskvitch'
+                        },
+                        {
+                            date: '2015-01-29',
+                            title: 'The Cruelty and Controversy of Beijing&rsquo;s Black Market for Dogs',
+                            url: 'http://www.vice.com/read/how-not-to-buy-a-dog-in-beijing',
+                            image: '',
+                            summary: '',
+                            source: 'Vice',
+                            author: 'Nona Tepper'
+                        },
+                        {
                             date: '2015-01-28',
                             title: 'Why Vending Machines Are So Popular in Japan',
                             url: 'http://kotaku.com/why-vending-machines-are-so-popular-in-japan-1682336996',
@@ -76,7 +103,11 @@ angular.module('redwallApp')
                             url: 'http://www.usatoday.com/story/todayinthesky/2015/01/23/airline-catalog-skymall-files-for-bankruptcy/22213809/',
                             image: '',
                             summary: '',
-                            source: 'USA Today'
+                            source: 'USA Today',
+                            author: [
+                                'Ben Mutzabaugh',
+                                'Kevin McCoy'
+                            ]
                         },
                         {
                             date: '2015-01-22',
