@@ -27,12 +27,23 @@ angular.module('redwallApp')
 
                     $scope.linkData = [
                         {
+                            date: '2015-01-28',
+                            title: 'Why Vending Machines Are So Popular in Japan',
+                            url: 'http://kotaku.com/why-vending-machines-are-so-popular-in-japan-1682336996',
+                            image: '',
+                            summary: '',
+                            source: 'Kotaku',
+                            author: 'Brian Ashcraft'
+                        },
+                        {
                             date: '2015-01-27',
                             title: 'Not a Very P.C. Thing to Say',
                             url: 'http://nymag.com/daily/intelligencer/2015/01/not-a-very-pc-thing-to-say.html?mid=nymag_press',
                             image: '',
                             summary: '',
-                            source: 'New York Magazine'
+                            source: 'New York Magazine',
+                            author: 'Johnathan Chait'
+
                         },
                         {
                             date: '2015-01-26',
@@ -44,11 +55,12 @@ angular.module('redwallApp')
                         },
                         {
                             date: '2015-01-25',
-                            title: 'asdf',
-                            url: 'asdf',
+                            title: 'The Terrible Sea Lion',
+                            url: 'http://wondermark.com/1k62/',
                             image: '',
                             summary: '',
-                            source: 'Tasdf'
+                            source: 'Wondermark',
+                            author: 'David Malki'
                         },
                         {
                             date: '2015-01-24',
