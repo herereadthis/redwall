@@ -46,12 +46,12 @@ angular.module('redwallApp')
                         },
                         {
                             date: '2015-02-01',
-                            title: 'asdf',
-                            url: 'asdf',
+                            title: 'Katy Perry’s Sharks Were The Best Part Of The Super Bowl',
+                            url: 'http://www.buzzfeed.com/kristinchirico/katy-perrys-sharks-were-the-best-part-of-the-super-bowl-half#.eb2xnMNMR',
                             image: '',
-                            summary: 'asdf',
-                            source: 'asdf',
-                            author: 'asdf'
+                            summary: '<p>Katy Perry just won Burning Man. She arrived onto the field riding a giant golden tiger art car. There were lots of cool lighting effects and choreography, and then....</p><p>She performed a song set in a trippy acid landscape with talking trees and beach balls, and of course, dancing sharks. You want a dancing shark costume, I want a dancing shark costume.</p>',
+                            source: 'BuzzFeed',
+                            author: 'Kristin Chirico'
                         },
                         {
                             date: '2015-01-31',
