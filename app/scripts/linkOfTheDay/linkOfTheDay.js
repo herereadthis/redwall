@@ -31,7 +31,7 @@ angular.module('redwallApp')
                             title: 'Misophonia is a newly identified condition for people hypersensitive to sound',
                             url: 'http://www.washingtonpost.com/national/health-science/misophonia-is-a-newly-identified-condition-for-people-hypersensitive-to-sound/2014/12/01/7c392782-69ba-11e4-a31c-77759fc1eacc_story.html',
                             image: '',
-                            summary: 'asdf',
+                            summary: '<p>Mouth breathers; croaky vocal fry and uptalk; incessant throat-clearing, sniffling, or coughing; snoring, loud chewing....</p><p>Today I learned there&rsquo;s a word for when certain sound triggers make you go angry nuts: &ldquo;misphonia.&rdquo; It&rsquo;s the reason why I spent $300 on noise-cancelling Bose earphones, and why I always have a an extra set of earplugs in my backpack or pocket.</p><p>I actually pick and choose friends based on the sounds that come out of their mouths. All this time I just though I had really sensitive hearing. Turns out I&rsquo;m just a jerk.</p>',
                             source: 'Washington Post',
                             author: 'Meeri N. Kim'
                         },
