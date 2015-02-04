@@ -105,7 +105,8 @@ angular.module('redwallApp')
                             url: 'http://gothamist.com/2015/01/26/snowpocalypse_supermarket.php',
                             image: '',
                             summary: '',
-                            source: 'Gothamist'
+                            source: 'Gothamist',
+                            author: 'Nell Casey'
                         },
                         {
                             date: '2015-01-25',
@@ -122,7 +123,8 @@ angular.module('redwallApp')
                             url: 'http://www.thefourohfive.com/news/article/a-pre-reasonable-doubt-mixtape-by-jay-z-has-surfaced-142',
                             image: '',
                             summary: '',
-                            source: 'The 405'
+                            source: 'The 405',
+                            author: 'Russell Thomas'
                         },
                         {
                             date: '2015-01-23',
@@ -142,7 +144,8 @@ angular.module('redwallApp')
                             url: 'http://www.telegraph.co.uk/news/worldnews/africaandindianocean/egypt/11361822/King-Tuts-beard-hastily-glued-back-on-with-epoxy.html',
                             image: '',
                             summary: '<p>So basically, someone tried to superglue it back together, fucked up, then got glue on its face, tried to scratch it off with a spatula, and got the face all dented and marred.</p><p>I would have loved to be in that room.... &ldquo;Dammit, stop making it worse!&rdquo;</p>',
-                            source: 'BBC'
+                            source: 'Telegraph',
+                            author: 'Harriet Alexander'
                         },
                         {
                             date: '2015-01-21',
@@ -158,7 +161,8 @@ angular.module('redwallApp')
                             url: 'http://gamedesignreviews.com/scrapbook/android-netrunner-the-game-designers-game/',
                             image: '',
                             summary: '',
-                            source: 'Game Design Reviews'
+                            source: 'Game Design Reviews',
+                            author: 'Krystian Majewski'
                         },
                         {
                             date: '2015-01-19',
@@ -166,7 +170,8 @@ angular.module('redwallApp')
                             url: 'http://www.avclub.com/article/why-magic-the-gathering-struggles-to-stay-relevant-106217',
                             image: '',
                             summary: '',
-                            source: 'A.V. Club'
+                            source: 'A.V. Club',
+                            author: 'Steve Heisler'
                         },
                         {
                             date: '2015-01-18',
@@ -174,7 +179,8 @@ angular.module('redwallApp')
                             url: 'http://www.newyorker.com/news/news-desk/jerusalem-haredim-women-equality',
                             image: '',
                             summary: '',
-                            source: 'New Yorker'
+                            source: 'New Yorker',
+                            author: ''
                         },
                         {
                             date: '2015-01-17',
@@ -182,7 +188,8 @@ angular.module('redwallApp')
                             url: 'http://www.fastcompany.com/3040223/when-it-clicks-it-clicks',
                             image: '',
                             summary: '',
-                            source: 'Fast Company'
+                            source: 'Fast Company',
+                            author: ''
                         },
                         {
                             date: '2015-01-16',
@@ -190,7 +197,8 @@ angular.module('redwallApp')
                             url: 'https://vimeo.com/116582567',
                             image: '',
                             summary: '',
-                            source: 'Vimeo'
+                            source: 'Vimeo',
+                            author: ''
                         },
                         {
                             date: '2015-01-11',
@@ -198,7 +206,8 @@ angular.module('redwallApp')
                             url: 'http://www.nytimes.com/2015/01/11/fashion/no-37-big-wedding-or-small.html',
                             image: '',
                             summary: '',
-                            source: 'New York Times'
+                            source: 'New York Times',
+                            author: ''
                         },
                         {
                             date: '2015-01-08',
@@ -206,14 +215,16 @@ angular.module('redwallApp')
                             url: 'https://www.youtube.com/watch?v=8HzsJG0Sb_s',
                             image: '',
                             summary: '',
-                            source: 'YouTube'
+                            source: 'YouTube',
+                            author: ''
                         },
                         {
                             date: '20141220',
                             title: 'Houshi',
                             url: 'https://vimeo.com/114879061',
                             image: '',
-                            summary: ''
+                            summary: '',
+                            author: ''
                         },
                         {
                             date: '2014-12-19',
@@ -221,7 +232,8 @@ angular.module('redwallApp')
                             url: 'http://en.wikipedia.org/wiki/Bodh_Gaya',
                             image: '',
                             summary: '',
-                            source:'BBC'
+                            source:'BBC',
+                            author: ''
                         },
                         {
                             date: '2014-12-18',
@@ -229,7 +241,8 @@ angular.module('redwallApp')
                             url: 'http://www.bbc.com/future/story/20141218-the-hidden-home-of-christmas',
                             image: '',
                             summary: '',
-                            source: 'BBC'
+                            source: 'BBC',
+                            author: ''
                         },
                         {
                             date: '2014-12-17',
@@ -237,7 +250,8 @@ angular.module('redwallApp')
                             url: 'http://en.wikipedia.org/wiki/Zettai_ryoiki',
                             image: '',
                             summary: 'Zettai Ryouiki (絶対領域) literally translates to “absolute territory”.',
-                            source: 'Wikipedia'
+                            source: 'Wikipedia',
+                            author: ''
                         },
                         {
                             date: '2014-12-16',
@@ -245,7 +259,8 @@ angular.module('redwallApp')
                             url: 'http://www.bbc.com/culture/story/20141216-ten-untranslatable-words',
                             image: '',
                             summary: '',
-                            source: 'BBC'
+                            source: 'BBC',
+                            author: ''
                         },
                         {
                             date: '2014-12-15',
@@ -253,7 +268,8 @@ angular.module('redwallApp')
                             url: 'http://www.washingtonpost.com/news/the-intersect/wp/2014/12/15/from-lycos-to-ask-jeeves-to-facebook-tracking-the-20-most-popular-web-sites-every-year-since-1996/?tid=trending_strip_5',
                             image: '',
                             summary: '',
-                            source: 'Washington Post'
+                            source: 'Washington Post',
+                            author: ''
                         },
                         {
                             date: '2014-12-14',
@@ -261,7 +277,8 @@ angular.module('redwallApp')
                             url: 'http://bangkok.coconuts.co/2014/12/12/instant-noodle-attack-and-other-weirdness-forces-air-asia-flight-back-bangkok',
                             image: '',
                             summary: '',
-                            source: 'Coconuts Bangkok'
+                            source: 'Coconuts Bangkok',
+                            author: ''
                         },
                         {
                             date: '2014-12-13',
@@ -269,7 +286,8 @@ angular.module('redwallApp')
                             url: 'http://www.newyorker.com/news/news-desk/inside-collapse-new-republic',
                             image: '',
                             summary: '',
-                            source: 'New Yorker'
+                            source: 'New Yorker',
+                            author: ''
                         },
                         {
                             date: '2014-12-12',
@@ -277,7 +295,8 @@ angular.module('redwallApp')
                             url: 'http://www.bbc.com/news/world-asia-30390724',
                             image: '',
                             summary: '<p>So facinating that a major executive of a company (and the daughter of the owner, no less) would resign over something. Yes, she deserves to be removed from her position, but it&rsquos so refreshing to see a powerful person actually have to face consequences.</p>',
-                            source: 'BBC'
+                            source: 'BBC',
+                            author: ''
                         },
                         {
                             date: '2014-12-11',
@@ -285,15 +304,17 @@ angular.module('redwallApp')
                             url: 'http://www.theguardian.com/world/2014/dec/10/peru-legal-action-greenpeace-stunt-nazca-lines',
                             image: '',
                             summary: '',
-                            source: 'Guardian'
+                            source: 'Guardian',
+                            author: ''
                         },
                         {
                             date: '2014-12-10',
-                            title: 'The Moors Murders',
-                            url: 'http://en.wikipedia.org/wiki/Moors_murders',
+                            title: '50+ Designers Share Their Top 3 Design Trends For 2015',
+                            url: 'http://foundersgrid.com/design-trends-2015',
                             image: '',
                             summary: '',
-                            source: 'Wikipedia'
+                            source: 'Founders Grid',
+                            author: ''
                         },
                         {
                             date: '2014-12-09',
@@ -301,7 +322,8 @@ angular.module('redwallApp')
                             url: 'http://www.huffingtonpost.com/2014/05/27/spanish-words-no-translation_n_5399000.html',
                             image: '',
                             summary: '',
-                            source: 'Huffington Post'
+                            source: 'Huffington Post',
+                            author: ''
                         },
                         {
                             date: '2014-12-08',
@@ -309,7 +331,8 @@ angular.module('redwallApp')
                             url: 'http://en.wikipedia.org/wiki/Juliane_Koepcke',
                             image: '',
                             summary: '',
-                            source: 'Wikipedia'
+                            source: 'Wikipedia',
+                            author: ''
                         },
                         {
                             date: '2014-12-07',
@@ -317,7 +340,8 @@ angular.module('redwallApp')
                             url: 'http://badassdigest.com/2013/02/19/in-defense-of-spielbergs-war-of-the-worlds/',
                             image: '',
                             summary: '',
-                            source: 'Baddass Digest'
+                            source: 'Baddass Digest',
+                            author: ''
                         },
                         {
                             date: '2014-12-06',
@@ -325,7 +349,8 @@ angular.module('redwallApp')
                             url: 'http://smatterist.com/749/gone-largely-unnoticed-game-thrones-series-now-impossible-take-eyes/',
                             image: '',
                             summary: '',
-                            source: 'Smatterist'
+                            source: 'Smatterist',
+                            author: ''
                         },
                         {
                             date: '2014-12-05',
@@ -333,15 +358,17 @@ angular.module('redwallApp')
                             url: 'http://www.bbc.com/future/story/20140606-why-we-must-save-dying-languages',
                             image: '',
                             summary: '',
-                            source: 'BBC'
+                            source: 'BBC',
+                            author: ''
                         },
                         {
                             date: '2014-12-04',
-                            title: 'Cheating the Beautiful Game',
-                            url: 'http://www.newyorker.com/the-sporting-scene/cheating-the-beautiful-game',
+                            title: 'The Moors Murders',
+                            url: 'http://en.wikipedia.org/wiki/Moors_murders',
                             image: '',
                             summary: '',
-                            source: 'New Yorker'
+                            source: 'Wikipedia',
+                            author: ''
                         },
                         {
                             date: '2014-12-03',
