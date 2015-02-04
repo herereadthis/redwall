@@ -28,21 +28,21 @@ angular.module('redwallApp')
                     $scope.linkData = [
                         {
                             date: '2015-02-03',
-                            title: 'asdf',
-                            url: 'asdf',
+                            title: 'Misophonia is a newly identified condition for people hypersensitive to sound',
+                            url: 'http://www.washingtonpost.com/national/health-science/misophonia-is-a-newly-identified-condition-for-people-hypersensitive-to-sound/2014/12/01/7c392782-69ba-11e4-a31c-77759fc1eacc_story.html',
                             image: '',
                             summary: 'asdf',
-                            source: 'asdf',
-                            author: 'asdf'
+                            source: 'Washington Post',
+                            author: 'Meeri N. Kim'
                         },
                         {
                             date: '2015-02-02',
-                            title: 'asdf',
-                            url: 'asdf',
+                            title: 'Simon Cockerell who&rsquo;s been to North Korea 140 TIMES shares his unrivalled insight',
+                            url: 'http://www.dailymail.co.uk/news/article-2929744/Killer-high-heels-dog-ribs-gravy-Bend-Like-Beckham-smash-man-visited-150-TIMES.html',
                             image: '',
                             summary: 'asdf',
-                            source: 'asdf',
-                            author: 'asdf'
+                            source: 'Daily Mail',
+                            author: 'Jamie Fullerton'
                         },
                         {
                             date: '2015-02-01',
