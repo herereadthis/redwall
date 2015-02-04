@@ -349,7 +349,8 @@ angular.module('redwallApp')
                             url: 'http://www.newyorker.com/the-sporting-scene/cheating-the-beautiful-game',
                             image: '',
                             summary: '',
-                            source: 'New Yorker'
+                            source: 'New Yorker',
+                            author: 'Alan Burdick'
                         },
                         {
                             date: '2014-12-02',
@@ -357,7 +358,8 @@ angular.module('redwallApp')
                             url: 'http://english.bouletcorp.com/2012/02/01/darkness/',
                             image: '',
                             summary: '',
-                            source: 'Bouletcorp'
+                            source: 'Bouletcorp',
+                            author: 'Boulet'
                         },
                         {
                             date: '2014-12-01',
@@ -365,7 +367,8 @@ angular.module('redwallApp')
                             url: 'http://aeon.co/magazine/psychology/the-terror-and-the-bliss-of-sleep-paralysis/',
                             image: '',
                             summary: '',
-                            source: 'Aeon Magazine'
+                            source: 'Aeon Magazine',
+                            author: 'Karen Emslie',
                         },
                         {
                             date: '2014-11-30',
@@ -373,7 +376,8 @@ angular.module('redwallApp')
                             url: 'http://blog.intercom.io/the-end-of-apps-as-we-know-them/',
                             image: '',
                             summary: '',
-                            source: 'Inside Intercom'
+                            source: 'Inside Intercom',
+                            author: 'Paul Adams'
                         },
                         {
                             date: '2014-11-15',
@@ -381,7 +385,8 @@ angular.module('redwallApp')
                             url: 'http://killscreendaily.com/articles/why-netrunner-matters/',
                             image: '',
                             summary: '',
-                            source: 'Kill Screen'
+                            source: 'Kill Screen',
+                            author: 'Clayton Purdom'
                         }
                     ];
                 }
