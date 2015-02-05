@@ -7,3 +7,4 @@ bower_components
 .DS_store
 src/styles/main.css
 app/styles/
+app/json/min

@@ -153,6 +153,18 @@ module.exports = function (grunt) {
             }
         },
 
+        jsonmin: {
+            dev: {
+                options: {
+                    stripWhitespace: true,
+                    stripComments: true
+                },
+                files: {
+                    '<%= yeoman.app %>/json/min/linkoftheday.json': '<%= yeoman.app %>/json/linkoftheday.json'
+                }
+            }
+        },
+
         // Empties folders to start fresh
         clean: {
             dist: {
