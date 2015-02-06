@@ -1,30 +1,35 @@
 [
     {
         "date": "2015-02-05",
-        "title": "asdf",
-        "url": "",
+        "title": "Friendship Is Complicated: Art, commerce, and the battle for the soul of My Little Pony.",
+        "url": "http://blog.longreads.com/2015/01/28/friendship-is-complicated/",
         "image": "",
         "summary": "",
-        "source": "",
-        "author": ""
+        "source": "Longreads",
+        "author": "Maria Bustillos"
     },
     {
         "date": "2015-02-04",
-        "title": "asdf",
-        "url": "",
+        "title": "The Regulation of Ant Colony Foraging Activity without Spatial Information",
+        "url": "http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002670",
         "image": "",
         "summary": "",
-        "source": "",
-        "author": ""
+        "source": "Public Library of Science",
+        "author": [
+            "Balaji Prabhakar",
+            "Balaji Prabhakar",
+            "Katherine N. Dektar",
+            "Deborah M. Gordon"
+        ]
     },
     {
         "date": "2015-02-03",
-        "title": "asdf",
-        "url": "",
+        "title": "One Man’s Quest to Rid Wikipedia of Exactly One Grammatical Mistake",
+        "url": "https://medium.com/backchannel/meet-the-ultimate-wikignome-10508842caad",
         "image": "",
         "summary": "",
-        "source": "",
-        "author": ""
+        "source": "Medium",
+        "author": "Andrew McMillen"
     },
     {
         "date": "2015-02-03",
