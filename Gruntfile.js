@@ -33,6 +33,14 @@ module.exports = function (grunt) {
                 files: ['bower.json'],
                 tasks: ['wiredep']
             },
+            html: {
+                files: [
+                    '<%= yeoman.app %>/scripts/{,*/}*.html',
+                    '<%= yeoman.app %>/scripts/components/{,*/}*.html',
+                    '<%= yeoman.app %>/scripts/homepage/{,*/}*.html'
+                ],
+                tasks: ['newer:jshint:all']
+            },
             js: {
                 files: [
                     '<%= yeoman.app %>/scripts/{,*/}*.js',
@@ -85,9 +93,11 @@ module.exports = function (grunt) {
                 files: [
                     '<%= yeoman.app %>/{,*/}*.html',
                     '<%= yeoman.app %>/scripts/components/**/*.html',
+                    '<%= yeoman.app %>/scripts/**/*.html',
                     '<%= yeoman.app %>/scripts/homepage/**/*.html',
                     '.tmp/styles/{,*/}*.css',
                     '.tmp/xml/{,*/}*.xml',
+                    '.tmp/json/{,*/}*.json',
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
                     '<%= yeoman.app %>/scripts/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]

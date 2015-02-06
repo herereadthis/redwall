@@ -6,14 +6,15 @@
         <p>By <a href="/" title="Here, Read This">Here, Read This</a></p>
     </header>
 
-
     <div class="bellmaker_container">
         <article data-ng-repeat="story in linkData">
-            <h3 ng-bind-html="story.title"></h3>
             <time>{{ story.date | date: 'd MMM yyyy' }}</time>
-            <div ng-bind-html="story.summary">
+            <div>
+                <h3 ng-bind-html="story.title"></h3>
+                <div ng-bind-html="story.summary">
+                </div>
+                <p>Source: <a href="{{ story.url }}" title="{{ story.title }}">{{ story.source }}</a></p>
             </div>
-            <p>Source: <a href="{{ story.url }}" title="{{ story.title }}">{{ story.source }}</a></p>
         </article>
     </div>
 </div>

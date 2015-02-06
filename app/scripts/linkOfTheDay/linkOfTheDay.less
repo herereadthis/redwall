@@ -5,6 +5,9 @@
     .bellmaker_container {
         @media @da_small {
             width: 64rem;
+        } 
+        @media @da_medium {
+            width: 96rem;
         }
     }
 
@@ -16,6 +19,10 @@
     }
 
     article {
+        > div {
+            float: left;
+            width: 64rem;
+        }
         h3 {
             font-size: 3.6rem;
             line-height: 4.5rem;
@@ -24,12 +31,23 @@
         }
         p {
             font-weight: normal;
-            font-size: 1.8rem;
-            line-height: 2.7rem;
+            font-size: 1.6rem;
+            line-height: 3rem;
             font-family: 'Arvo', serif;
+            padding-bottom: 3rem;
         }
         time {
+            float: left;
+            width: 14rem;
             font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            text-align: right;
+            box-sizing: border-box;
+            margin-top: 1rem;
+            margin-right: 2rem;
+            border-right: 0.1rem solid #555;
+            padding-right: 0.9rem;
         }
     }
 }
