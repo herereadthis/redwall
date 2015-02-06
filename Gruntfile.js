@@ -64,6 +64,14 @@ module.exports = function (grunt) {
             gruntfile: {
                 files: ['Gruntfile.js']
             },
+            json: {
+                files: [
+                    '<%= yeoman.app %>/json/{,*/}*.json'],
+                tasks: [
+                    'jsonmin',
+                    'newer:copy:json'
+                ]
+            },
             xml: {
                 files: [
                     '<%= yeoman.app %>/xml/{,*/}*.xml',
@@ -160,7 +168,7 @@ module.exports = function (grunt) {
                     stripComments: true
                 },
                 files: {
-                    '<%= yeoman.app %>/json/min/linkoftheday.json': '<%= yeoman.app %>/json/linkoftheday.json'
+                    '<%= yeoman.app %>/json/min/linkoftheday.min.json': '<%= yeoman.app %>/json/linkoftheday.json'
                 }
             }
         },
@@ -374,7 +382,8 @@ module.exports = function (grunt) {
                             'scripts/{,*/}*.html',
                             'images/{,*/}*.{webp}',
                             'fonts/{,*/}*.*',
-                            'xml/{,*/}*.*'
+                            'xml/*',
+                            'json/*'
                         ]
                     },
                     {
@@ -391,6 +400,13 @@ module.exports = function (grunt) {
                 dest: '.tmp/xml/',
                 src: '{,*/}*.xml'
             },
+            json: {
+                expand: true,
+                cwd: '<%= yeoman.app %>/json/min',
+                dest: '.tmp/json/',
+                flatten: true,
+                src: '{,*/}*.json'
+            },
             styles: {
                 expand: true,
                 cwd: '<%= yeoman.app %>/styles',
@@ -403,14 +419,17 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'copy:xml',
+                'copy:json',
                 'copy:styles'
             ],
             test: [
                 'copy:xml',
+                'copy:json',
                 'copy:styles'
             ],
             dist: [
                 'copy:xml',
+                'copy:json',
                 'copy:styles',
                 'imagemin',
                 'svgmin'
