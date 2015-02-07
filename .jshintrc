@@ -23,6 +23,7 @@
     "browser": true,
 
     "globals": {
-        "angular": false
+        "angular": false,
+        "_": false
     }
 }

@@ -10,20 +10,22 @@
         <aside>
             <h2>Sort</h2>
             <h3>Source</h3>
-            <ul>
+            <ul class="">
                 <li ng-repeat="story in linkData">
                     <span>{{ story.source }}</span>
                 </li>
             </ul>
         </aside>
-        <article data-ng-repeat="story in linkData">
-            <time>{{ story.date | date: 'd MMM yyyy' }}</time>
-            <div>
-                <h3 ng-bind-html="story.title"></h3>
-                <div ng-bind-html="story.summary">
+        <div id="article_container">
+            <article data-ng-repeat="story in linkData">
+                <time>{{ story.date | date: 'd MMM yyyy' }}</time>
+                <div>
+                    <h3 ng-bind-html="story.title"></h3>
+                    <div ng-bind-html="story.summary">
+                    </div>
+                    <p>Source: <a href="{{ story.url }}" title="{{ story.title }}">{{ story.source }}</a></p>
                 </div>
-                <p>Source: <a href="{{ story.url }}" title="{{ story.title }}">{{ story.source }}</a></p>
-            </div>
-        </article>
+            </article>
+        </div>
     </div>
 </div>

@@ -27,11 +27,21 @@
             width: 14rem;
             margin-left: 2rem;
         }
+
+    }
+    #article_container {
+        float: left;
+        @media @da_small {
+            width: 70.4rem;
+        }
+        @media @da_medium {
+            width: 80rem;
+            float: left;
+        }
     }
 
     article {
         @media @da_small {
-            width: 70.4rem;
 
             > div {
                 width: 60rem;
@@ -43,8 +53,6 @@
             }
         }
         @media @da_medium {
-            width: 80rem;
-            float: left;
 
             > div {
                 width: 64rem;

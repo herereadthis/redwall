@@ -28,6 +28,11 @@ angular.module('redwallApp')
 
                     $http.get('json/linkoftheday.min.json').success(function(data) {
                         $scope.linkData = data;
+                        $scope.foo = _.uniq(data, function(story) {
+                            return story.source;
+                        });
+                        window.console.log($scope.foo);
+                        
                     });
                 }
             ],
