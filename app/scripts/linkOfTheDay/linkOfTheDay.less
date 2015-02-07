@@ -27,8 +27,20 @@
             width: 14rem;
             margin-left: 2rem;
         }
-
     }
+    .source_sort {
+        li {
+            list-style-type: none;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            font-family: 'Arvo', serif;
+        }
+    }
+    .source_sort_count {
+        color: #808080;
+    }
+
+
     #article_container {
         float: left;
         @media @da_small {
@@ -41,6 +53,14 @@
     }
 
     article {
+        padding-bottom: 3rem;
+
+        &:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
         @media @da_small {
 
             > div {

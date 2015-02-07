@@ -10,10 +10,10 @@
         <aside>
             <h2>Sort</h2>
             <h3>Source</h3>
-            <ul class="">
+            <ul class="source_sort">
                 <li ng-repeat="source in sourceObject | orderBy:'source'">
-                    <span ng-bind-html="source.source"></span>
-                    <span>({{ source.count}})</span>
+                    <a href><span ng-bind-html="source.source"></span></a>
+                    <span class="source_sort_count">({{ source.count}})</span>
                 </li>
             </ul>
         </aside>
