@@ -4,7 +4,6 @@
 
     .bellmaker_container {
         @media @da_small {
-            width: 64rem;
         } 
         @media @da_medium {
             width: 96rem;
@@ -18,10 +17,39 @@
         font-family: 'Josefin Sans', sans-serif;
     }
 
+
+    aside {
+        @media @da_small {
+            float: none;
+        } 
+        @media @da_medium {
+            float: right;
+            width: 14rem;
+            margin-left: 2rem;
+        }
+    }
+
     article {
+        @media @da_small {
+            width: 65.4rem;
+
+            > div {
+                width: 54rem;
+            }
+            time {
+                width: 9.4rem;
+                float: left;
+            }
+        }
+        @media @da_medium {
+            width: 80rem;
+
+            > div {
+                width: 64rem;
+            }
+        }
         > div {
             float: left;
-            width: 64rem;
         }
         h3 {
             font-size: 3.6rem;
@@ -37,8 +65,6 @@
             padding-bottom: 3rem;
         }
         time {
-            float: left;
-            width: 14rem;
             font-family: 'Josefin Sans', sans-serif;
             font-size: 1.6rem;
             line-height: 2rem;
