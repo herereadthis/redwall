@@ -24,15 +24,18 @@ angular.module('redwallApp')
                 '$scope',
                 '$http',
                 function ($scope, $http) {
-                    window.console.log('asdf');
-
                     $http.get('json/linkoftheday.min.json').success(function(data) {
-                        $scope.linkData = data;
-                        $scope.foo = _.uniq(data, function(story) {
-                            return story.source;
-                        });
-                        window.console.log($scope.foo);
+                        var sourceCount;
+
+                        sourceCount = _.countBy(data, 'source');
                         
+                        $scope.linkData = data;
+                        $scope.sourceObject = _.map(sourceCount, function(val, key) {
+                            return {
+                                source: key,
+                                count: val
+                            };
+                        });
                     });
                 }
             ],

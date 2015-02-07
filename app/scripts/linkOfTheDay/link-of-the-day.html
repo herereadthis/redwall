@@ -11,8 +11,9 @@
             <h2>Sort</h2>
             <h3>Source</h3>
             <ul class="">
-                <li ng-repeat="story in linkData">
-                    <span>{{ story.source }}</span>
+                <li ng-repeat="source in sourceObject | orderBy:'source'">
+                    <span ng-bind-html="source.source"></span>
+                    <span>({{ source.count}})</span>
                 </li>
             </ul>
         </aside>
