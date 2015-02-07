@@ -31,14 +31,15 @@
 
     article {
         @media @da_small {
-            width: 65.4rem;
+            width: 70.4rem;
 
             > div {
-                width: 54rem;
+                width: 60rem;
             }
             time {
-                width: 9.4rem;
                 float: left;
+                width: 7.9rem;
+                margin-right: 1.5rem;
             }
         }
         @media @da_medium {
@@ -46,6 +47,12 @@
 
             > div {
                 width: 64rem;
+            }
+            time {
+                width: 14rem;
+                margin-right: 2rem;
+                border-right: 0.1rem solid #555;
+                padding-right: 0.9rem;
             }
         }
         > div {
@@ -71,9 +78,6 @@
             text-align: right;
             box-sizing: border-box;
             margin-top: 1rem;
-            margin-right: 2rem;
-            border-right: 0.1rem solid #555;
-            padding-right: 0.9rem;
         }
     }
 }
