@@ -23,6 +23,11 @@
                 <time class="article_date_long">{{ story.date | date: 'EEE, d MMMM yyyy' }}</time>
                 <div>
                     <h3 ng-bind-html="story.title"></h3>
+                    <span ng-if="story.video">
+                        <object ng-if="story.source == 'YouTube'"
+                                width="640" height="360"
+                                data="{{ story.video }}"></object>
+                    </span>
                     <div ng-bind-html="story.summary">
                     </div>
                     <p>Source: <a href="{{ story.url }}" title="{{ story.title }}">{{ story.source }}</a></p>
@@ -31,3 +36,4 @@
         </div>
     </div>
 </div>
+

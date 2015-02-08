@@ -28,7 +28,7 @@ angular.module('redwallApp')
                         var sourceCount;
 
                         sourceCount = _.countBy(data, 'source');
-                        
+                        $scope.limit = 2;
                         $scope.linkData = data;
                         $scope.sourceObject = _.map(sourceCount, function(val, key) {
                             return {
