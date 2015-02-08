@@ -30,13 +30,25 @@ angular.module('redwallApp')
                         sourceCount = _.countBy(data, 'source');
                         $scope.limit = 2;
                         $scope.linkData = data;
+                        $scope.sourceSize = data.length;
                         $scope.sourceObject = _.map(sourceCount, function(val, key) {
                             return {
                                 source: key,
                                 count: val
                             };
                         });
+                        $scope.query = '';
                     });
+                    $scope.filterSource = function(source) {
+                        if (_.isNull(source) || _.isUndefined(source)) {
+                            $scope.query = '';
+                        }
+                        else {
+                            $scope.query = {
+                                source: source
+                            };
+                        }
+                    };
                 }
             ],
             templateUrl: '/scripts/linkOfTheDay/link-of-the-day.html'

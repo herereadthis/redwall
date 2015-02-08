@@ -11,14 +11,18 @@
             <h2>Sort</h2>
             <h3>Source</h3>
             <ul class="source_sort">
+                <li>
+                    <a href ng-click="filterSource()"><span>All Sources</span></a>
+                    <span class="source_sort_count">({{ sourceSize }})</span>
+                </li>
                 <li ng-repeat="source in sourceObject | orderBy:'source'">
-                    <a href><span ng-bind-html="source.source"></span></a>
+                    <a href ng-click="filterSource(source.source)"><span ng-bind-html="source.source"></span></a>
                     <span class="source_sort_count">({{ source.count}})</span>
                 </li>
             </ul>
         </aside>
         <div id="article_container">
-            <article data-ng-repeat="story in linkData">
+            <article data-ng-repeat="story in linkData | filter:query:true">
                 <time class="article_date_short">{{ story.date | date: 'd MMM yyyy' }}</time>
                 <time class="article_date_long">{{ story.date | date: 'EEE, d MMMM yyyy' }}</time>
                 <div>
