@@ -19,7 +19,8 @@
         </aside>
         <div id="article_container">
             <article data-ng-repeat="story in linkData">
-                <time>{{ story.date | date: 'd MMM yyyy' }}</time>
+                <time class="article_date_short">{{ story.date | date: 'd MMM yyyy' }}</time>
+                <time class="article_date_long">{{ story.date | date: 'EEE, d MMMM yyyy' }}</time>
                 <div>
                     <h3 ng-bind-html="story.title"></h3>
                     <div ng-bind-html="story.summary">

@@ -6,14 +6,22 @@
         @media @da_small {
         } 
         @media @da_medium {
-            width: 96rem;
+        }
+        @media @da_large {
+            width: 115.2rem;
         }
     }
-
+    [role="banner"] {
+        p {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+    }
     h1 {
-        font-size: 4.5rem;
-        line-height: 6.3rem;
-        font-weight: 300;
+        font-size: 4.8rem;
+        line-height: 7.5rem;
+        font-weight: 400;
         font-family: 'Josefin Sans', sans-serif;
     }
 
@@ -26,6 +34,9 @@
             float: right;
             width: 14rem;
             margin-left: 2rem;
+        }
+        @media @da_large {
+            width: 30rem;
         }
     }
     .source_sort {
@@ -50,6 +61,9 @@
             width: 80rem;
             float: left;
         }
+        @media @da_large {
+            width: 83.2rem;
+        }
     }
 
     article {
@@ -70,10 +84,13 @@
                 float: left;
                 width: 7.9rem;
                 margin-right: 1.5rem;
+
+                &.article_date_long {
+                    display: none;
+                }
             }
         }
         @media @da_medium {
-
             > div {
                 width: 64rem;
             }
@@ -82,6 +99,18 @@
                 margin-right: 2rem;
                 border-right: 0.1rem solid #555;
                 padding-right: 0.9rem;
+
+                &.article_date_short {
+                    display: none;
+                }
+                &.article_date_long {
+                    display: block;
+                }
+            }
+        }
+        @media @da_large {
+            time {
+                width: 17.2rem;
             }
         }
         > div {
@@ -90,7 +119,7 @@
         h3 {
             font-size: 3.6rem;
             line-height: 4.5rem;
-            font-weight: 400;
+            font-weight: 300;
             font-family: 'Josefin Sans', sans-serif;
         }
         p {
@@ -101,6 +130,7 @@
             padding-bottom: 3rem;
         }
         time {
+            display: block;
             font-family: 'Josefin Sans', sans-serif;
             font-size: 1.6rem;
             line-height: 2rem;
