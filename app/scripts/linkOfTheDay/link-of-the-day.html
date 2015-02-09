@@ -27,17 +27,17 @@
                 <time class="article_date_long">{{ story.date | date: 'EEE, d MMMM yyyy' }}</time>
                 <div>
                     <h3 ng-bind-html="story.title"></h3>
-                    <span ng-if="story.image">
+                    <span ng-if="mediaExists(story.image)">
                         <image width="100%" src="{{ story.image }}" />
                     </span>
-                    <span ng-if="story.video">
+                    <span ng-if="mediaExists(story.video)">
                         <object ng-if="story.source == 'YouTube'"
                                 width="640" height="360"
                                 data="{{ story.video }}"></object>
                     </span>
                     <div ng-bind-html="story.summary">
                     </div>
-                    <p>Source: <a href="{{ story.url }}" title="{{ story.title }}">{{ story.source }}</a></p>
+                    <p>Source: <a href="{{ story.url }}" title="{{ story.title }}" ng-bind-html="story.source"></a></p>
                 </div>
             </article>
         </div>

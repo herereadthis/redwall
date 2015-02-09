@@ -39,6 +39,7 @@ angular.module('redwallApp')
                         });
                         $scope.query = '';
                     });
+
                     $scope.filterSource = function(source) {
                         if (_.isNull(source) || _.isUndefined(source)) {
                             $scope.query = '';
@@ -47,6 +48,14 @@ angular.module('redwallApp')
                             $scope.query = {
                                 source: source
                             };
+                        }
+                    };
+                    $scope.mediaExists = function(media) {
+                        if (_.isNull(media) || _.isUndefined(media) || media === '') {
+                            return false;
+                        }
+                        else {
+                            return true;
                         }
                     };
                 }
