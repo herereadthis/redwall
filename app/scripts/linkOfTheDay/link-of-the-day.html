@@ -23,13 +23,16 @@
             </ul>
         </aside>
         <div id="article_container">
-            <article data-ng-repeat="story in linkData | filter:query:true">
+            <article data-ng-repeat="story in linkData | filter:query">
                 <time class="article_date_short">{{ story.date | date: 'd MMM yyyy' }}</time>
                 <time class="article_date_long">{{ story.date | date: 'EEE, d MMMM yyyy' }}</time>
                 <div>
                     <h3 ng-bind-html="story.title"></h3>
                     <span ng-if="mediaExists(story.image)">
                         <image width="100%" src="{{ story.image }}" />
+                        <p class="image_credit" ng-if="mediaExists(story.imageCredit)"><em>Image credit:
+                            <span ng-bind-html="story.imageCredit"></span></em>
+                        </p>
                     </span>
                     <span ng-if="mediaExists(story.video)">
                         <object ng-if="story.source == 'YouTube'"
