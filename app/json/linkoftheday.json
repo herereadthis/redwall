@@ -1,5 +1,15 @@
 [
     {
+        "date": "2015-02-09",
+        "title": "The Port of Rotterdam",
+        "url": "https://www.youtube.com/watch?v=SPTa8EiYBlQ",
+        "image": "",
+        "video": "https://www.youtube.com/v/SPTa8EiYBlQ",
+        "summary": "<p>(Well you do have to get over the cheesy dubstep.) Rotterdam is one of the world&rsquo;s largest and most busiest ports. This video doesn&rsquo;t have aerial footage of the port, but it definitely gives a sense of scale and the craziness that happens there</p><p>Most importantly, it is very beautiful in its presentation of the activity, the people, the dramatic views. One gets a sense that Rotterdam is one vast, extremely intricate machines of so many moving components.</p>",
+        "source": "YouTube",
+        "author": "Havenbedrijf Rotterdam"
+    },
+    {
         "date": "2015-02-08",
         "title": "River of Faith: A film about the Kumbh Mela 2013",
         "url": "https://www.youtube.com/watch?v=cQNoimABjMQ",
@@ -157,8 +167,8 @@
         "date": "2015-01-25",
         "title": "The Terrible Sea Lion",
         "url": "http://wondermark.com/1k62/",
-        "image": "",
-        "summary": "",
+        "image": "http://wondermark.com/c/2014-09-19-1062sea.png",
+        "summary": "<p>A delightful comic a those goddamn sea lions&mdash;you know&mdash;the ones we encounter so very often..</p><p>(Hint: it&rsquo;s not actually about sea lions.)</p>",
         "source": "Wondermark",
         "author": "David Malki"
     },
@@ -454,10 +464,10 @@
         "author": "Paul Adams"
     },
     {
-        "date": "2014-11-15",
+        "date": "2014-11-29",
         "title": "Why Netrunner Matters",
         "url": "http://killscreendaily.com/articles/why-netrunner-matters/",
-        "image": "",
+        "image": "http://killscreendaily.com/media/img/articles/creation.jpg",
         "summary": "",
         "source": "Kill Screen",
         "author": "Clayton Purdom"
