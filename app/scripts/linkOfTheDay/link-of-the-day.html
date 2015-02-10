@@ -11,6 +11,17 @@
         <aside>
             <h2>Sort</h2>
             <h3>Source</h3>
+            <ul class="source_type_sort">
+                <li>
+                    <a href ng-click="filterSource()"><span>All Source Types</span></a>
+                    <span class="source_sort_count">({{ sourceSize }})</span>
+                </li>
+                <li ng-repeat="sourceType in sourceTypeObject | orderBy:'sourceType'">
+                    <a href ng-click="filterSourceType(sourceType.sourceType)"><span ng-bind-html="sourceType.sourceType"></span></a>
+                    <span class="source_sort_count">({{ sourceType.count}})</span>
+                </li>
+            </ul>
+            <h3>Publication</h3>
             <ul class="source_sort">
                 <li>
                     <a href ng-click="filterSource()"><span>All Sources</span></a>

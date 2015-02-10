@@ -6,6 +6,7 @@
         "video": "https://www.youtube.com/v/SPTa8EiYBlQ",
         "summary": "<p>(Well you do have to get over the cheesy dubstep.) Rotterdam is one of the world&rsquo;s largest and most busiest ports. This video doesn&rsquo;t have aerial footage of the port, but it definitely gives a sense of scale and the craziness that happens there</p><p>Most importantly, it is very beautiful in its presentation of the activity, the people, the dramatic views. One gets a sense that Rotterdam is one vast, extremely intricate machines of so many moving components.</p>",
         "source": "YouTube",
+        "sourceType": "video",
         "author": "Havenbedrijf Rotterdam"
     },
     {
@@ -15,6 +16,7 @@
         "video": "https://www.youtube.com/v/cQNoimABjMQ",
         "summary": "<p>Every 3 years, millions of Hindus make a pilgramage and bathes at a sacred river for one and half months. They become the largest human gatherings in the world.</p><p>I once showed an Indian friend a video of Burning Man. Spiritualism, rampant nudity, lots of people high on drugs, fire everywhere, camping, and beautiful outfits... then he pointed out to me the Burn is basically a very tiny version of Kumbh Mela.</p>",
         "source": "YouTube",
+        "sourceType": "video",
         "author": "Namit Arora"
     },
     {
@@ -24,6 +26,7 @@
         "image": "",
         "summary": "<p>Here's a interesting commentary pointing how so many articles that are our clickbait and reinforcement of our own echo chambers. Then again, this article reinforces my own personal belief that the wealth of stuff on the Internet only isolates and entrenches us.</p><p><em>&ldquo;The Perfect Response is, in essence, not a radical new perspective, but simply a person saying a thing you agree with to a person you disagree with. It&rsquo;s a kind of linguistic record-scratch, a perfectly crafted gotcha that ostensibly stops trolls in their troll-tracks and forces them to deeply reconsider the sad wreckage of their wasted lives. Which means the Perfect Response is also largely a figment of the internet&rsquo;s imagination.&rdquo;</em></p>",
         "source": "New York Magazine",
+        "sourceType": "magazine",
         "author": "Adam Sternbergh"
     },
     {
@@ -31,8 +34,9 @@
         "title": "The Year of Outrage",
         "url": "http://www.slate.com/articles/life/culturebox/2014/12/the_year_of_outrage_2014_everything_you_were_angry_about_on_social_media.html",
         "image": "",
-        "summary": "<p>One of the greatest things I&rsquo;ve seen: a giant chart, one link for each day of 2014, listing the thing that caused the most outrage.</p><p>After clicking around, I've decided on a new resolution for 2015: I will no longer post any stories describing current events that infuriate me, nor will I join in any online pissing-contest argument about something in or about the news.</p><p>It&rsquo;s only when you actually count the number of articles you see each day about Fox News, vaccine truthers, police brutality, Pegida, NFL wife beaters, ‪#‎hastag‬ this and ‪#‎hashtag‬ that&mdash;rabble rabble rabble&mdash;it becomes that much obvious that so many people spend so much time being angry clickbaiters.</p>",
+        "summary": "<p>One of the greatest things I&rsquo;ve seen: a giant chart, one link for each day of 2014, listing the thing that caused the most outrage.</p><p>After clicking around, I've decided on a new resolution for 2015: I will no longer post any stories describing current events that infuriate me, nor will I join in any online pissing-contest argument about something in or about the news.</p><p>It&rsquo;s only when you actually count the number of articles you see each day about Fox News, vaccine truthers, police brutality, Pegida, NFL wife beaters, ‪&num;hashtag‬ this and ‪&num;hashtag‬ that&mdash;rabble rabble rabble&mdash;it becomes that much obvious that so many people spend so much time being angry clickbaiters.</p>",
         "source": "Slate Magazine",
+        "sourceType": "magazine",
         "author": [
             "Julia Turner",
             "Choire Sicha",
@@ -55,6 +59,7 @@
         "imageCredit": "Pat Barrett",
         "summary": "<p>Here is the saga of Lauren Faust (also of <em>Powerpuff Girls</em>) the creator of the hit TV show <em>My Little Pony: Friendship is Magic</em> and its aftermath. The show was inspired by the Hasbro toy line and was meant to empower its young, female audience. (Side effect: adored by bronies.)</p><p>Faust quit doing the show after a spinoff was made: <em>Equestria Girls</em>. This show was different. The ponies anthropomorphized into slutty little teenagers, obsessed with their hair and clothes being popular. What the fuck? The whole point was to sell toys. In fact, it has always been about the toys. The show is nothing more than a long, glorified toy commercial.</p><p>Also, bronies... the article talkes about bronies too.</p>",
         "source": "Longreads",
+        "sourceType": "long form",
         "author": "Maria Bustillos"
     },
     {
@@ -63,6 +68,7 @@
         "url": "http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002670",
         "summary": "<p>Harvester Ants have a very special way of gathering seeds. Each worker ant is sent out to find a seed and won&rsquo;t come back until it finds food. Obviously, some ants die if they find nothing. However, if food is plentiful, that means more ants are coming back. If more ants are coming back then more ants are sent out from the colony to find food</p><p>What was just described is basically how Transmission Control Protocol (TCP/IP) works. When a source sends data to a destination, the file is sent in a series of packets. When the destination receives each packet it sends an acknowledgement back to the source. This feedback loop tells the source how much bandwidth is available: if the acknowledgements are returning slowly, then it means the line is congested and so the source will send packets with less frequency.</p><p>In other words, ants are the Internet.</p>",
         "source": "Public Library of Science",
+        "sourceType": "journal",
         "author": [
             "Balaji Prabhakar",
             "Balaji Prabhakar",
@@ -77,6 +83,7 @@
         "image": "",
         "summary": "",
         "source": "Medium",
+        "sourceType": "long form",
         "author": "Andrew McMillen"
     },
     {
@@ -86,15 +93,18 @@
         "image": "",
         "summary": "<p>Mouth breathers; croaky vocal fry, uptalk and that fucking hissing &ldquo;s&rdquo; sibilence; incessant throat-clearing, sniffling, or coughing; snoring, loud chewing....</p><p>Today I learned there&rsquo;s a word for when certain sound triggers make you go angry nuts: &ldquo;misphonia.&rdquo; It&rsquo;s the reason why I spent $300 on noise-cancelling Bose earphones, and why I always have a an extra set of earplugs in my backpack or pocket.</p><p>I actually pick and choose friends based on the sounds that come out of their mouths. All this time I just though I had really sensitive hearing. Turns out I&rsquo;m just a jerk.</p>",
         "source": "Washington Post",
+        "sourceType": "news",
         "author": "Meeri N. Kim"
     },
     {
         "date": "2015-02-02",
         "title": "Simon Cockerell who&rsquo;s been to North Korea 140 TIMES shares his unrivalled insight",
         "url": "http://www.dailymail.co.uk/news/article-2929744/Killer-high-heels-dog-ribs-gravy-Bend-Like-Beckham-smash-man-visited-150-TIMES.html",
-        "image": "",
+        "image": "http://i.dailymail.co.uk/i/pix/2015/01/28/2523638D00000578-2929744-image-a-43_1422447061219.jpg",
+        "imageCredit": "Simon Cockerell",
         "summary": "asdf",
         "source": "Daily Mail",
+        "sourceType": "news",
         "author": "Jamie Fullerton"
     },
     {
@@ -104,6 +114,7 @@
         "image": "",
         "summary": "<p>Katy Perry just won Burning Man. She arrived onto the field riding a giant golden tiger art car. There were lots of cool lighting effects and choreography, and then....</p><p>She performed a song set in a trippy acid landscape with talking trees and beach balls, and of course, dancing sharks. You want a dancing shark costume, I want a dancing shark costume.</p>",
         "source": "BuzzFeed",
+        "sourceType": "blog",
         "author": "Kristin Chirico"
     },
     {
@@ -114,6 +125,7 @@
         "video": "https://www.youtube.com/v/iXuc7SAyk2s",
         "summary": "<p>Local Phoenix weatherman Cory McCloskey has to deal with a messed up weather map on live TV, and handles himself so well. I don&rsquo;t want to quote what he says, because it will spoil the hilarity.</p><p>Also, the man is rocking a pretty nice suit.</p>",
         "source": "YouTube",
+        "sourceType": "video",
         "author": "FOX 10 Phoenix"
     },
     {
@@ -123,6 +135,7 @@
         "image": "",
         "summary": "",
         "source": "BBC",
+        "sourceType": "news",
         "author": "Katia Moskvitch"
     },
     {
@@ -132,6 +145,7 @@
         "image": "",
         "summary": "",
         "source": "Vice",
+        "sourceType": "long form",
         "author": "Nona Tepper"
     },
     {
@@ -141,6 +155,7 @@
         "image": "",
         "summary": "",
         "source": "Kotaku",
+        "sourceType": "blog",
         "author": "Brian Ashcraft"
     },
     {
@@ -150,6 +165,7 @@
         "image": "",
         "summary": "",
         "source": "New York Magazine",
+        "sourceType": "magazine",
         "author": "Johnathan Chait"
     },
     {
@@ -159,6 +175,7 @@
         "image": "",
         "summary": "",
         "source": "Gothamist",
+        "sourceType": "blog",
         "author": "Nell Casey"
     },
     {
@@ -168,6 +185,7 @@
         "image": "http://wondermark.com/c/2014-09-19-1062sea.png",
         "summary": "<p>A delightful comic a those goddamn sea lions&mdash;you know&mdash;the ones we encounter so very often..</p><p>(Hint: it&rsquo;s not actually about sea lions.)</p>",
         "source": "Wondermark",
+        "sourceType": "blog",
         "author": "David Malki"
     },
     {
@@ -176,7 +194,8 @@
         "url": "http://www.thefourohfive.com/news/article/a-pre-reasonable-doubt-mixtape-by-jay-z-has-surfaced-142",
         "image": "",
         "summary": "",
-        "source": "The 405",
+        "source": "405",
+        "sourceType": "blog",
         "author": "Russell Thomas"
     },
     {
@@ -186,6 +205,7 @@
         "image": "",
         "summary": "",
         "source": "USA Today",
+        "sourceType": "news",
         "author": [
             "Ben Mutzabaugh",
             "Kevin McCoy"
@@ -198,6 +218,7 @@
         "image": "http://i.telegraph.co.uk/multimedia/archive/03174/Tutankhamen_broken_3174186b.jpg",
         "summary": "<p>So basically, someone tried to superglue it back together, fucked up, then got glue on its face, tried to scratch it off with a spatula, and got the face all dented and marred.</p><p>I would have loved to be in that room.... &ldquo;Dammit, stop making it worse!&rdquo;</p>",
         "source": "Telegraph",
+        "sourceType": "news",
         "author": "Harriet Alexander"
     },
     {
@@ -206,7 +227,8 @@
         "url": "http://www.rleveille.com/paintings.html",
         "image": "",
         "summary": "",
-        "source": "Rebecca L&eacute;veill&eacute;-Guay"
+        "source": "Rebecca L&eacute;veill&eacute;-Guay",
+        "sourceType": "gallery"
     },
     {
         "date": "2015-01-20",
@@ -215,6 +237,7 @@
         "image": "",
         "summary": "",
         "source": "Game Design Reviews",
+        "sourceType": "blog",
         "author": "Krystian Majewski"
     },
     {
@@ -224,6 +247,7 @@
         "image": "",
         "summary": "",
         "source": "A.V. Club",
+        "sourceType": "blog",
         "author": "Steve Heisler"
     },
     {
@@ -233,6 +257,7 @@
         "image": "",
         "summary": "",
         "source": "New Yorker",
+        "sourceType": "magazine",
         "author": ""
     },
     {
@@ -251,6 +276,7 @@
         "image": "",
         "summary": "",
         "source": "Vimeo",
+        "sourceType": "video",
         "author": ""
     },
     {
@@ -260,6 +286,7 @@
         "image": "",
         "summary": "",
         "source": "New York Times",
+        "sourceType": "news",
         "author": ""
     },
     {
@@ -270,6 +297,7 @@
         "video": "https://www.youtube.com/v/8HzsJG0Sb_s",
         "summary": "",
         "source": "YouTube",
+        "sourceType": "video",
         "author": ""
     },
     {
@@ -279,6 +307,7 @@
         "image": "",
         "summary": "",
         "source": "Vimeo",
+        "sourceType": "video",
         "author": ""
     },
     {
@@ -288,6 +317,7 @@
         "image": "",
         "summary": "",
         "source": "Wikipedia",
+        "sourceType": "wiki",
         "author": ""
     },
     {
@@ -297,6 +327,7 @@
         "image": "",
         "summary": "",
         "source": "BBC",
+        "sourceType": "news",
         "author": ""
     },
     {
@@ -306,6 +337,7 @@
         "image": "",
         "summary": "Zettai Ryouiki (絶対領域) literally translates to “absolute territory”.",
         "source": "Wikipedia",
+        "sourceType": "wiki",
         "author": ""
     },
     {
@@ -315,6 +347,7 @@
         "image": "",
         "summary": "<p>Languages fascinate me because I often wonder if you don&rsquo;t have the words to describe what you&rsquo;re feeling, can you really feel it? Then, do people with different languages think and feel in the same way? The BBC has compiled some words gathered by Ella Frances Sanders in her book, <em>Lost in Translation</em>.</p><ul><li><strong>Mangata</strong>&mdash;&ldquo;the road-like reflection of the moon in the water.&rdquo; (Swedish)</li><li><strong>Akihi</strong>&mdash;&ldquo;listening to directions and then walking off and promptly forgetting them.&rdquo; (Hawaiian)</li><li><strong>Hiraeth</strong>&mdash;&ldquo;a homesickness for somewhere you cannot return to, the nostalgia and the grief for the lost places of your past, places that never were.&rdquo; (Welsh)</li><li><strong>Iktsuarpok</strong>&mdash;&ldquo;the act of repeatedly  going outside to keep checking if someone (anyone) is coming.&rdquo; (Inuit)</li><li><strong>Kummerspeck</strong>&mdash;literally, &ldquo;grief bacon,&rdquo; or the &ldquo;excess weight gained from emotional over-eating&rdquo; (German)</li><li><strong>Wabi-Sabi</strong>&mdash;&ldquo;finding beauty in the imperfections, an acceptance of the cycle of life and death&rdquo; (Japanese)</li><li><strong>Pisan Zapra</strong>&mdash;&ldquo;the time needed to eat a banana&rdquo; (Malay)</li><li><strong>Kalpa</strong>&mdash;&ldquo;the passing of time on a grand, cosmological scale&rdquo; (Sanskrit)</li><li><strong>Tsundoku</strong>&mdash;&ldquo;leaving a book unread after buying it, typically piled up together with other unread books&rdquo; (Japanese)</li><li><strong>Boketto</strong>&mdash;&ldquo;gazing vacantly into the distance without really thinking about anything specific&rdquo; (Japanese)</li></ul>",
         "source": "BBC",
+        "sourceType": "news",
         "author": "Fiona Macdonald"
     },
     {
@@ -324,6 +357,7 @@
         "image": "",
         "summary": "",
         "source": "Washington Post",
+        "sourceType": "news",
         "author": ""
     },
     {
@@ -333,6 +367,7 @@
         "image": "",
         "summary": "",
         "source": "Coconuts Bangkok",
+        "sourceType": "blog",
         "author": ""
     },
     {
@@ -342,6 +377,7 @@
         "image": "",
         "summary": "",
         "source": "New Yorker",
+        "sourceType": "magazine",
         "author": ""
     },
     {
@@ -351,6 +387,7 @@
         "image": "http://static4.businessinsider.com/image/548b1c926bb3f7f92dcd3beb-1200-924/korean-air-heather-cho.jpg",
         "summary": "<p>Heather Cho (조현아) was the vice president; while a flight was getting ready to depart, a flight attendent served her nuts in a bag instead of on a plate. The flight attendant was forced to kneel and apologize, but it was wasn't enough for Cho, so she ordered the plane to be turned around.</p><p>So facinating that a major executive of a company (and the daughter of the owner, no less) would resign over something. Yes, she deserves to be removed from her position, but it&rsquo;s so refreshing to see a powerful person actually have to face consequences.</p>",
         "source": "BBC",
+        "sourceType": "news",
         "author": "Michael Bristow"
     },
     {
@@ -360,6 +397,7 @@
         "image": "",
         "summary": "",
         "source": "Guardian",
+        "sourceType": "news",
         "author": ""
     },
     {
@@ -369,6 +407,7 @@
         "image": "",
         "summary": "",
         "source": "Founders Grid",
+        "sourceType": "blog",
         "author": ""
     },
     {
@@ -378,6 +417,7 @@
         "image": "",
         "summary": "",
         "source": "Huffington Post",
+        "sourceType": "news",
         "author": ""
     },
     {
@@ -387,6 +427,7 @@
         "image": "",
         "summary": "",
         "source": "Wikipedia",
+        "sourceType": "wiki",
         "author": ""
     },
     {
@@ -396,6 +437,7 @@
         "image": "",
         "summary": "",
         "source": "Baddass Digest",
+        "sourceType": "blog",
         "author": ""
     },
     {
@@ -405,6 +447,7 @@
         "image": "",
         "summary": "",
         "source": "Smatterist",
+        "sourceType": "blog",
         "author": ""
     },
     {
@@ -414,6 +457,7 @@
         "image": "",
         "summary": "",
         "source": "BBC",
+        "sourceType": "news",
         "author": ""
     },
     {
@@ -423,6 +467,7 @@
         "image": "",
         "summary": "",
         "source": "Wikipedia",
+        "sourceType": "wiki",
         "author": ""
     },
     {
@@ -432,6 +477,7 @@
         "image": "",
         "summary": "",
         "source": "New Yorker",
+        "sourceType": "magazine",
         "author": "Alan Burdick"
     },
     {
@@ -441,6 +487,7 @@
         "image": "",
         "summary": "",
         "source": "Bouletcorp",
+        "sourceType": "blog",
         "author": "Boulet"
     },
     {
@@ -450,6 +497,7 @@
         "image": "",
         "summary": "",
         "source": "Aeon Magazine",
+        "sourceType": "long form",
         "author": "Karen Emslie"
     },
     {
@@ -459,6 +507,7 @@
         "image": "",
         "summary": "",
         "source": "Inside Intercom",
+        "sourceType": "blog",
         "author": "Paul Adams"
     },
     {

@@ -25,15 +25,24 @@ angular.module('redwallApp')
                 '$http',
                 function ($scope, $http) {
                     $http.get('json/linkoftheday.min.json').success(function(data) {
-                        var sourceCount;
+                        var sourceCount, sourceTypeCount;
 
-                        sourceCount = _.countBy(data, 'source');
                         $scope.limit = 2;
                         $scope.linkData = data;
                         $scope.sourceSize = data.length;
+
+                        sourceCount = _.countBy(data, 'source');
                         $scope.sourceObject = _.map(sourceCount, function(val, key) {
                             return {
                                 source: key,
+                                count: val
+                            };
+                        });
+
+                        sourceTypeCount = _.countBy(data, 'sourceType');
+                        $scope.sourceTypeObject = _.map(sourceTypeCount, function(val, key) {
+                            return {
+                                sourceType: key,
                                 count: val
                             };
                         });
@@ -47,6 +56,16 @@ angular.module('redwallApp')
                         else {
                             $scope.query = {
                                 source: source
+                            };
+                        }
+                    };
+                    $scope.filterSourceType = function(sourceType) {
+                        if (_.isNull(sourceType) || _.isUndefined(sourceType)) {
+                            $scope.query = '';
+                        }
+                        else {
+                            $scope.query = {
+                                sourceType: sourceType
                             };
                         }
                     };
