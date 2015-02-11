@@ -122,7 +122,8 @@
         "date": "2015-02-01",
         "title": "Katy Perry&rsquo;s Sharks Were The Best Part Of The Super Bowl",
         "url": "http://www.buzzfeed.com/kristinchirico/katy-perrys-sharks-were-the-best-part-of-the-super-bowl-half#.eb2xnMNMR",
-        "image": "",
+        "image": "http://cdn-jpg.si.com/sites/default/files/styles/si_article_main/public/2015/02/03/katy_perry_sharks_super_bowl_halftime_show.jpg",
+        "imageCredit": "Kevin Mazur/WireImage",
         "summary": "<p>Katy Perry just won Burning Man. She arrived onto the field riding a giant golden tiger art car. There were lots of cool lighting effects and choreography, and then....</p><p>She performed a song set in a trippy acid landscape with talking trees and beach balls, and of course, dancing sharks. You want a dancing shark costume, I want a dancing shark costume.</p>",
         "source": "BuzzFeed",
         "sourceType": "blog",
@@ -278,6 +279,7 @@
         "image": "",
         "summary": "",
         "source": "Fast Company",
+        "sourceType": "long form",
         "author": ""
     },
     {
@@ -426,7 +428,7 @@
         "title": "10 Spanish Words That Have No English Translation",
         "url": "http://www.huffingtonpost.com/2014/05/27/spanish-words-no-translation_n_5399000.html",
         "image": "",
-        "summary": "",
+        "summary": "<ul><li><strong>Sobremesa</strong>&mdash;that moment after eating a meal when the food is gone but the conversation is still flowing at the table.</li><li><strong>Estrenar</strong>&mdash;to wear or use something for the first time.</li><li><strong>Pena Ajena</strong>&mdash;to be ashamed or embarrassed on behalf of someone else, even if they don't share the feeling.</li><li><strong>Antier</strong>&mdash;a one-word way of saying the day before yesterday. A shorter version of <em>&ldquo;antes de ayer.&rdquo;</em></li><li><strong>Desvelado</strong>&mdash;unable to sleep or to be sleep deprived.</li><li><strong>Tuerto</strong>&mdash;a man with only one eye.</li><li><strong>Friolento</strong>&mdash;someone who is very sensitive to cold.</li><li><strong>Te quiero</strong>&mdash;a way to tell someone you care about them. Particularly when romance is involved, more meaningful than an &ldquo;I like you&rdquo; but less meaningful than an &ldquo;I love you.&rdquo;</li><li><strong>Merendar</strong>&mdash;to have a snack or to go out for an afternoon snack.</li><li><strong>Tutear</strong>&mdash;to treat someone informally by addressing them as &ldquo;t&uacute;&rdquo; instead of the more formal &ldquo;usted.&rdquo;</li></ul>",
         "source": "Huffington Post",
         "sourceType": "news",
         "author": ""
@@ -528,6 +530,7 @@
         "image": "http://killscreendaily.com/media/img/articles/creation.jpg",
         "summary": "",
         "source": "Kill Screen",
+        "sourceType": "long form",
         "author": "Clayton Purdom"
     }
 ]
