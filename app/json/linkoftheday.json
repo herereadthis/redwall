@@ -327,11 +327,11 @@
         "date": "2014-12-19",
         "title": "Bodh Gaya",
         "url": "http://en.wikipedia.org/wiki/Bodh_Gaya",
-        "image": "",
-        "summary": "",
+        "image": "http://www.indianmirror.com/tourism/images/bodhgaya-main-img.jpg",
+        "imageCredit": "Indian Mirror",
+        "summary": "<p>Bodh Gaya in Bihar, India, is the most holy site for Buddhists and is the place where the Buddha achieved enlightment. The main temple is the Mahabodhi Temple, but surrounding the area are other temples and monastaries built by other Buddhist countries.</p>",
         "source": "Wikipedia",
-        "sourceType": "wiki",
-        "author": ""
+        "sourceType": "wiki"
     },
     {
         "date": "2014-12-18",
@@ -438,7 +438,7 @@
         "title": "Juliane Koepcke",
         "url": "http://en.wikipedia.org/wiki/Juliane_Koepcke",
         "image": "",
-        "summary": "",
+        "summary": "<p>Juliane Margaret Koepcke, at age 17, was the sole survivor of the 24 December 1971 crash of LANSA Flight 508. The plane was struck by lightning while flying over the Peruvian rainforest and disintegrated midair at 10,000 ft. She was still strapped to her chair as she fell. She could not find her mother, but relied upon survival training from her father to locate a stream and wander downstream.</p><p>For nine days, she endured infection and other injuries from the fall. She located a boat and waited for the owners to arrive, who then took her on a canoe ride to a lumber station and flown away to a hospital</p><p>Koepcke to get a doctorate in biology (like her parents) and specialized in the study of bats.</p>",
         "source": "Wikipedia",
         "sourceType": "wiki",
         "author": ""
