@@ -1,5 +1,16 @@
 [
     {
+        "date": "2015-02-10",
+        "title": "The Magic of NeoPixels",
+        "url": "https://learn.adafruit.com/adafruit-neopixel-uberguide",
+        "video": "https://www.youtube.com/v/HO6xQMR8naw",
+        "videoCredit": "Adafruit Industries",
+        "summary": "<p>New resolution goal for 2015! Learn how to make LED lights react to music, and learn it by end of May, because light shows and costumes. Let&rsquo;s all get into this geeky stuff and geek out. I am very excited to start Arduino projects.</p>",
+        "source": "Adafruit Industries",
+        "sourceType": "business",
+        "author": "Phillip Burgess"
+    },
+    {
         "date": "2015-02-09",
         "title": "The Port of Rotterdam",
         "url": "https://www.youtube.com/watch?v=SPTa8EiYBlQ",

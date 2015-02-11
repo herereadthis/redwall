@@ -40,15 +40,18 @@
                 <div>
                     <h3 ng-bind-html="story.title"></h3>
                     <span ng-if="mediaExists(story.image)">
-                        <image width="100%" src="{{ story.image }}" />
-                        <p class="image_credit" ng-if="mediaExists(story.imageCredit)"><em>Image credit:
+                        <image width="100%" ng-src="{{ story.image }}" />
+                        <p class="media_credit" ng-if="mediaExists(story.imageCredit)"><em>Image credit:
                             <span ng-bind-html="story.imageCredit"></span></em>
                         </p>
                     </span>
                     <span ng-if="mediaExists(story.video)">
-                        <object ng-if="story.source == 'YouTube'"
+                        <object ng-if="checkVideo(story.video,'youtube')"
                                 width="640" height="360"
                                 data="{{ story.video }}"></object>
+                        <p class="media_credit" ng-if="mediaExists(story.videoCredit)"><em>Video credit:
+                            <span ng-bind-html="story.videoCredit"></span></em>
+                        </p>
                     </span>
                     <div ng-bind-html="story.summary">
                     </div>

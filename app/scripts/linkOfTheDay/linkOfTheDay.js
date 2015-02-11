@@ -77,6 +77,16 @@ angular.module('redwallApp')
                             return true;
                         }
                     };
+                    $scope.checkVideo = function(url,videoSource) {
+                        var index = url.indexOf(videoSource);
+
+                        if (index > 0) {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    };
                 }
             ],
             templateUrl: '/scripts/linkOfTheDay/link-of-the-day.html'
