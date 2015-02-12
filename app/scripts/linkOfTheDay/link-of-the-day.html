@@ -49,6 +49,9 @@
                         <object ng-if="checkVideo(story.video,'youtube')"
                                 width="640" height="360"
                                 data="{{ story.video }}"></object>
+                        <iframe ng-if="checkVideo(story.video,'embed')"
+                            src="{{ story.video }}"
+                            width="640" height="360" frameborder="0"></iframe>
                         <p class="media_credit" ng-if="mediaExists(story.videoCredit)"><em>Video credit:
                             <span ng-bind-html="story.videoCredit"></span></em>
                         </p>
