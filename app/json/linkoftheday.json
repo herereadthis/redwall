@@ -1,5 +1,16 @@
 [
     {
+        "date": "2015-02-11",
+        "Title": "",
+        "url": "http://www.nytimes.com/2015/02/11/arts/television/jon-stewart-leaving-daily-show.html",
+        "image": "",
+        "video": "",
+        "summary": "",
+        "sourceType": "news",
+        "author": "Dave Itzkoff"
+
+    }
+    {
         "date": "2015-02-10",
         "title": "The Magic of NeoPixels",
         "url": "https://learn.adafruit.com/adafruit-neopixel-uberguide",
