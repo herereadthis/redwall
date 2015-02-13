@@ -24,12 +24,14 @@
                 </li>
             </ul>
             <h3>Publication</h3>
+            <p><a href ng-click="filterSorce('source')">Alphabetical</a> |
+                <a href ng-click="filterSorce('count')">Count</a></p>
             <ul class="source_sort">
                 <li>
                     <a href ng-click="filterSource()"><span>All Sources</span></a>
                     <span class="source_sort_count">({{ sourceSize }})</span>
                 </li>
-                <li ng-repeat="source in sourceObject | orderBy:'source'">
+                <li ng-repeat="source in sourceObject | orderBy:sourceFilter">
                     <a href ng-click="filterSource(source.source)"><span ng-bind-html="source.source"></span></a>
                     <span class="source_sort_count">({{ source.count}})</span>
                 </li>
