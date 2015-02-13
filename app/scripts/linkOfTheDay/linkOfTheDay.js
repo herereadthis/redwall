@@ -69,6 +69,10 @@ angular.module('redwallApp')
                             };
                         }
                     };
+                    $scope.sourceTypeFilter = 'sourceType';
+                    $scope.filterSorceType = function(orderProp) {
+                        $scope.sourceTypeFilter = orderProp;
+                    };
                     $scope.mediaExists = function(media) {
                         if (_.isNull(media) || _.isUndefined(media) || media === '') {
                             return false;
