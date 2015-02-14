@@ -11,9 +11,17 @@
         <aside>
             <h2>Sort</h2>
             <h3>Source</h3>
-            <p><a href ng-click="filterSorceType('sourceType')">Alphabetical</a> |
-                <a href ng-click="filterSorceType('count')">Count</a></p>
-            <ul class="source_type_sort">
+            <p><a href ng-click="filterSorceType('sourceType')">Alphabetical
+                        <span>&uarr;</span>
+                        <span>&darr;</span>
+                </a> |
+                <a href ng-click="filterSorceType('count')">Count
+                        <span>&uarr;</span>
+                        <span>&darr;</span>
+                </a>
+            </p>
+            
+            <ul class="filter_sorts source_type_sort">
                 <li>
                     <a href ng-click="filterSource()"><span>All Source Types</span></a>
                     <span class="source_sort_count">({{ sourceSize }})</span>
@@ -26,7 +34,7 @@
             <h3>Publication</h3>
             <p><a href ng-click="filterSorce('source')">Alphabetical</a> |
                 <a href ng-click="filterSorce('count')">Count</a></p>
-            <ul class="source_sort">
+            <ul class="filter_sorts source_sort">
                 <li>
                     <a href ng-click="filterSource()"><span>All Sources</span></a>
                     <span class="source_sort_count">({{ sourceSize }})</span>
