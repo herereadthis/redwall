@@ -393,7 +393,8 @@ module.exports = function (grunt) {
                             'images/{,*/}*.{webp}',
                             'fonts/{,*/}*.*',
                             'xml/*',
-                            'json/*'
+                            'json/*',
+                            'json/{,*/}*.json'
                         ]
                     },
                     {
@@ -496,6 +497,7 @@ module.exports = function (grunt) {
         'copy:dist',
         'cdnify',
         'cssmin',
+        'jsonmin',
         'uglify',
         'filerev',
         'usemin',
