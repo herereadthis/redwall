@@ -1,14 +1,17 @@
 [
     {
         "date": "2015-02-20",
-        "title": "asdf",
-        "url": "asdf",
-        "image": "asdf",
-        "imageCredit": "asdf",
-        "source": "asdf",
-        "summary": "",
-        "sourceType": "asdf",
-        "author": "asdf"
+        "title": "How to be a &#39;bad girl&#39; in India",
+        "url": "http://www.bbc.com/news/blogs-trending-31535455",
+        "image": "http://news.bbcimg.co.uk/media/images/81112000/jpg/_81112820_62352bbc-e04e-4f92-a8b1-dfd27a2d910d.jpg",
+        "imageCredit": "Furqan Jawed, Roshan Shakeel, Sparsh Saxena, Jaiwant Pradhan, and Stuti Kothari",
+        "source": "BBC",
+        "summary": "<p>Here is some pretty good satire! The art was drawn by students at the Srishti School of Art, Design and Technology in Bangalore. The intent was to show things men could do, but women couldn&rsquo;t, and it&rsquo;s a parody of posters for what good boys do, from the 80s and 90s.</p>",
+        "sourceType": "news",
+        "author": [
+            "Samiha Nettikkara",
+            "Sam Judah"
+        ]
     },
     {
         "date": "2015-02-19",
