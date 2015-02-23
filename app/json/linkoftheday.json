@@ -56,14 +56,13 @@
     },
     {
         "date": "2015-02-17",
-        "title": "asdf",
-        "url": "asdf",
-        "image": "asdf",
-        "imageCredit": "asdf",
+        "title": "The Other Side",
+        "url": "https://www.youtube.com/user/HondaVideo/OtherSide",
+        "image": "https://www.hondatheotherside.com/static/desktop/image/intro_background.jpg",
         "source": "asdf",
         "summary": "",
-        "sourceType": "asdf",
-        "author": "asdf"
+        "sourceType": "Video",
+        "author": "HondaVideo"
     },
     {
         "date": "2015-02-16",
