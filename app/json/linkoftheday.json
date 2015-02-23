@@ -1,5 +1,25 @@
 [
     {
+        "date": "2015-02-22",
+        "title": "asdf",
+        "url": "asdf",
+        "image": "asdf",
+        "imageCredit": "asdf",
+        "source": "Vice",
+        "summary": "",
+        "sourceType": "Blog",
+        "author": "Kari Paul"
+    },
+    {
+        "date": "2015-02-21",
+        "title": "The History of Sex.com, the Most Contested Domain on the Internet",
+        "url": "http://motherboard.vice.com/read/the-history-of-sexcom-the-most-contested-domain-on-the-internet?utm_source=mbtwitter",
+        "source": "Vice",
+        "summary": "<p>Sex.com is a Pinterest for sex! I didn't know that (I had to look, it really is!)</p><p>Remember when we were younger and wish we squatted on all those website names during the first dot-com boom? Well it turns out, the ownership of sex.com is pretty messed up. Gary Kremen registered it in 1994, and magically some dude named Stephen Cohen stole it and made a shit ton of money on just selling ads. It was during the days before Google, so people would just type URLs into their browser, and sex is pretty easy. Anyway, what follows is the long and complicated legal troubles of owning a website with such a simple domain name.</p>",
+        "sourceType": "Blog",
+        "author": "Kari Paul"
+    },
+    {
         "date": "2015-02-20",
         "title": "How to be a &#39;bad girl&#39; in India",
         "url": "http://www.bbc.com/news/blogs-trending-31535455",
@@ -15,6 +35,16 @@
     },
     {
         "date": "2015-02-19",
+        "title": "The Time Everyone &ldquo;Corrected&rdquo; the World’s Smartest Woman",
+        "url": "http://priceonomics.com/the-time-everyone-corrected-the-worlds-smartest/",
+        "image": "http://pix-media.s3.amazonaws.com/blog/907/montyhall_finalgoat2.png",
+        "source": "Priceonomics",
+        "summary": "<p>This story is about the time Marilyn vos Savant answered someone's question about solving the Monty Hall problem. Imagine if you are standing in front of 3 doors, and behind one door is a prize but behind the other two doors is a goat. Suppose you pick a door. Then someone else opens another door and reveals a goat. Now do you choose the door you first chose or do you choose the other unopened door?</p><p>The Monty Hall problem was one of the first things we were taught in probability class. It makes complete sense to me, but initially it does seem counterintuive.</p><p>Anyway, it turns out a lot of academics and very smart people were very angry at Marilyn vos Savant and tried to correct her. Hilarity.</p>",
+        "sourceType": "blog",
+        "author": "Zachary Crockett"
+    },
+    {
+        "date": "2015-02-18",
         "title": "A Complete Guide to the Future of U.S. Freight Movement",
         "url": "http://www.citylab.com/work/2014/10/a-complete-guide-to-the-future-of-us-freight-movement/381012/",
         "image": "http://cdn.theatlantic.com/assets/media/img/posts/2014/10/DSC_9652/54716abdd.jpg",
@@ -23,17 +53,6 @@
         "summary": "",
         "sourceType": "magazine",
         "author": "Dan Glass"
-    },
-    {
-        "date": "2015-02-18",
-        "title": "asdf",
-        "url": "asdf",
-        "image": "asdf",
-        "imageCredit": "asdf",
-        "source": "asdf",
-        "summary": "",
-        "sourceType": "asdf",
-        "author": "asdf"
     },
     {
         "date": "2015-02-17",
