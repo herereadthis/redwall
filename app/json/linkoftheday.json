@@ -66,14 +66,13 @@
     },
     {
         "date": "2015-02-16",
-        "title": "asdf",
-        "url": "asdf",
-        "image": "asdf",
-        "imageCredit": "asdf",
-        "source": "asdf",
-        "summary": "",
-        "sourceType": "asdf",
-        "author": "asdf"
+        "title": "Algorithm That Counts Rap Rhymes and Scouts Mad Lines",
+        "url": "http://mining4meaning.com/2015/02/13/raplyzer/",
+        "image": "https://mining4meaning.files.wordpress.com/2015/02/artists_en_20k_feb20.png",
+        "source": "Mining for Meaning",
+        "summary": "<p>This guy Eric made a tool to analyze assonance rhymes in rap lyrics. Basically, the tool see how many syllables rappers can string together in lyrics that rhyme. Well, it doesn&rsquo;t take a machine to tell you Inspectah Deck is the best. We all know that already.</p>",
+        "sourceType": "Blog",
+        "author": "Eric Malmi"
     },
     {
         "date": "2015-02-15",
