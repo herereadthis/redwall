@@ -1,0 +1,124 @@
+[
+    {
+        "id": 0,
+        "companyName": "Movado Group, Inc.",
+        "companyType": "holding",
+        "inHouseMovements": false,
+        "licences": [
+            "Coach",
+            "HUGO BOSS",
+            "Juicy Couture",
+            "Lacoste",
+            "Scuderia Ferrari",
+            "Tommy Hilfiger"
+        ],
+        "ownership": [
+            "Movado",
+            "Ebel",
+            "ESQ Movado",
+            "Concord"
+        ],
+        "otherMovements": null,
+        "parentID": null
+    },
+    {
+        "id": 2,
+        "companyName": "Coach",
+        "companyType": "licence",
+        "inHouseMovements": false,
+        "licences": null,
+        "ownership": null,
+        "otherMovements": [],
+        "parentID": 0
+    },
+    {
+        "id": 3,
+        "companyName": "HUGO BOSS",
+        "companyType": "licence",
+        "inHouseMovements": false,
+        "licences": null,
+        "ownership": null,
+        "otherMovements": [],
+        "parentID": 0
+    },
+    {
+        "id": 4,
+        "companyName": "Juicy Couture",
+        "companyType": "licence",
+        "inHouseMovements": false,
+        "licences": null,
+        "ownership": null,
+        "otherMovements": [],
+        "parentID": 0
+    },
+    {
+        "id": 5,
+        "companyName": "Lacoste",
+        "companyType": "licence",
+        "inHouseMovements": false,
+        "licences": null,
+        "ownership": null,
+        "otherMovements": [],
+        "parentID": 0
+    },
+    {
+        "id": 6,
+        "companyName": "Scuderia Ferrari",
+        "companyType": "licence",
+        "inHouseMovements": false,
+        "licences": null,
+        "ownership": null,
+        "otherMovements": [],
+        "parentID": 0
+    },
+    {
+        "id": 7,
+        "companyName": "Tommy Hilfiger",
+        "companyType": "licence",
+        "inHouseMovements": false,
+        "licences": null,
+        "ownership": null,
+        "otherMovements": [],
+        "parentID": 0
+    },
+    {
+        "id": 9,
+        "companyName": "Concord",
+        "companyType": "licence",
+        "inHouseMovements": false,
+        "licences": null,
+        "ownership": null,
+        "otherMovements": [],
+        "parentID": 0
+    },
+    {
+        "id": 10,
+        "companyName": "Ebel",
+        "companyType": "licence",
+        "inHouseMovements": false,
+        "licences": null,
+        "ownership": null,
+        "otherMovements": [],
+        "parentID": 0
+    },
+    {
+        "id": 11,
+        "companyName": "ESQ Movado",
+        "companyType": "licence",
+        "inHouseMovements": false,
+        "licences": null,
+        "ownership": null,
+        "otherMovements": [],
+        "parentID": 0
+    },
+    {
+        "id": 8,
+        "companyName": "Movado",
+        "companyType": "licence",
+        "inHouseMovements": false,
+        "licences": null,
+        "ownership": null,
+        "otherMovements": [],
+        "parentID": 0
+    }
+]
