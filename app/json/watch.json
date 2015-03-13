@@ -172,6 +172,29 @@
         "licences": null,
         "ownership": null,
         "parentID": 13
+    },
+    {
+        "id": 21,
+        "companyName": "Breitling",
+        "companyType": "watchmaker",
+        "licences": null,
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 22,
+        "companyName": "LVMH",
+        "companyType": "holding",
+        "licences": null,
+        "ownership": [
+            "Bulgari",
+            "Chaumet",
+            "FRED",
+            "Hublot",
+            "TAG Heuer",
+            "Zenith"
+        ],
+        "parentID": null
     }
 
 ]
