@@ -195,6 +195,54 @@
             "Zenith"
         ],
         "parentID": null
+    },
+    {
+        "id": 21,
+        "companyName": "Bulgari",
+        "companyType": "watchmaker",
+        "licences": null,
+        "ownership": null,
+        "parentID": 22
+    },
+    {
+        "id": 21,
+        "companyName": "Chaumet",
+        "companyType": "watchmaker",
+        "licences": null,
+        "ownership": null,
+        "parentID": 22
+    },
+    {
+        "id": 21,
+        "companyName": "FRED",
+        "companyType": "watchmaker",
+        "licences": null,
+        "ownership": null,
+        "parentID": 22
+    },
+    {
+        "id": 21,
+        "companyName": "Hublot",
+        "companyType": "watchmaker",
+        "licences": null,
+        "ownership": null,
+        "parentID": 22
+    },
+    {
+        "id": 21,
+        "companyName": "TAG Heuer",
+        "companyType": "watchmaker",
+        "licences": null,
+        "ownership": null,
+        "parentID": 22
+    },
+    {
+        "id": 21,
+        "companyName": "Zenith",
+        "companyType": "watchmaker",
+        "licences": null,
+        "ownership": null,
+        "parentID": 22
     }
 
 ]
