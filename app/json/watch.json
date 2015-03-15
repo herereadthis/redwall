@@ -11,6 +11,7 @@
             "Scuderia Ferrari",
             "Tommy Hilfiger"
         ],
+        "nationality": "United States",
         "ownership": [
             "Movado",
             "Ebel",
@@ -24,6 +25,7 @@
         "companyName": "Coach",
         "companyType": "licence",
         "licences": null,
+        "nationality": "United States",
         "ownership": null,
         "parentID": 0
     },
@@ -32,6 +34,7 @@
         "companyName": "HUGO BOSS",
         "companyType": "licence",
         "licences": null,
+        "nationality": "Germany",
         "ownership": null,
         "parentID": 0
     },
@@ -40,6 +43,7 @@
         "companyName": "Juicy Couture",
         "companyType": "licence",
         "licences": null,
+        "nationality": "United States",
         "ownership": null,
         "parentID": 0
     },
@@ -48,6 +52,7 @@
         "companyName": "Lacoste",
         "companyType": "licence",
         "licences": null,
+        "nationality": "France",
         "ownership": null,
         "parentID": 0
     },
@@ -56,6 +61,7 @@
         "companyName": "Scuderia Ferrari",
         "companyType": "licence",
         "licences": null,
+        "nationality": "Italy",
         "ownership": null,
         "parentID": 0
     },
@@ -64,6 +70,7 @@
         "companyName": "Tommy Hilfiger",
         "companyType": "licence",
         "licences": null,
+        "nationality": "United States",
         "ownership": null,
         "parentID": 0
     },
@@ -72,6 +79,7 @@
         "companyName": "Concord",
         "companyType": "watchmaker",
         "licences": null,
+        "nationality": "Switzerland",
         "ownership": null,
         "parentID": 0
     },
@@ -135,6 +143,7 @@
         "companyName": "Harley-Davidson",
         "companyType": "licence",
         "licences": null,
+        "nationality": "United States",
         "ownership": null,
         "parentID": 14
     },
