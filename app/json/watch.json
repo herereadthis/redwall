@@ -218,7 +218,7 @@
         "parentID": null
     },
     {
-        "id": 21,
+        "id": 23,
         "companyName": "Bulgari",
         "companyType": "watchmaker",
         "licences": null,
@@ -227,7 +227,7 @@
         "parentID": 22
     },
     {
-        "id": 21,
+        "id": 24,
         "companyName": "Chaumet",
         "companyType": "watchmaker",
         "licences": null,
@@ -236,7 +236,7 @@
         "parentID": 22
     },
     {
-        "id": 21,
+        "id": 25,
         "companyName": "FRED",
         "companyType": "watchmaker",
         "licences": null,
@@ -245,7 +245,7 @@
         "parentID": 22
     },
     {
-        "id": 21,
+        "id": 26,
         "companyName": "Hublot",
         "companyType": "watchmaker",
         "licences": null,
@@ -254,7 +254,7 @@
         "parentID": 22
     },
     {
-        "id": 21,
+        "id": 27,
         "companyName": "TAG Heuer",
         "companyType": "watchmaker",
         "licences": null,
@@ -263,13 +263,32 @@
         "parentID": 22
     },
     {
-        "id": 21,
+        "id": 28,
         "companyName": "Zenith",
         "companyType": "watchmaker",
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
         "parentID": 22
+    },
+    {
+        "id": 29,
+        "companyName": "Frédérique Constant",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": [
+            "Alpina"
+        ],
+        "parentID": null
+    },
+    {
+        "id": 30,
+        "companyName": "Alpina",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 29
     }
-
 ]
