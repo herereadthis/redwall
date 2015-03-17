@@ -290,5 +290,33 @@
         "nationality": "Switzerland",
         "ownership": null,
         "parentID": 29
+    },
+    {
+        "id": 31,
+        "companyName": "Audemars Piguet",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 32,
+        "companyName": "Bell &amp; Ross",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "France",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 32,
+        "companyName": "Bell &amp; Ross",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "France",
+        "ownership": null,
+        "parentID": null
     }
+
 ]
