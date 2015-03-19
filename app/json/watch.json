@@ -293,21 +293,41 @@
         "parentID": null
     },
     {
-        "id": 32,
-        "companyName": "Bell &amp; Ross",
-        "companyType": "watchmaker",
-        "licences": null,
-        "nationality": "France",
-        "ownership": null,
-        "parentID": null
-    },
-    {
         "id": 33,
         "companyName": "NOMOS",
         "companyType": "watchmaker",
         "licences": null,
         "nationality": "Germany",
         "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 34,
+        "companyName": "Stowa",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 35,
+        "companyName": "Junghans",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 36,
+        "companyName": "POINTtec",
+        "companyType": "holding",
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": [
+
+        ],
         "parentID": null
     }
 ]
