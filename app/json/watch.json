@@ -4,19 +4,11 @@
         "companyName": "Movado Group",
         "companyType": "holding",
         "licences": [
-            "Coach",
-            "HUGO BOSS",
-            "Juicy Couture",
-            "Lacoste",
-            "Scuderia Ferrari",
-            "Tommy Hilfiger"
+            2, 3, 4, 5, 6, 7
         ],
         "nationality": "United States",
         "ownership": [
-            "Movado",
-            "Ebel",
-            "ESQ Movado",
-            "Concord"
+            9, 10, 11, 12
         ],
         "parentID": null
     },
@@ -117,10 +109,7 @@
         "licences": null,
         "nationality": "Japan",
         "ownership": [
-            "Bulova",
-            "Citizen",
-            "Independent Watch",
-            "Miyota"
+            14, 18, 19, 20
         ],
         "parentID": null
     },
@@ -129,12 +118,11 @@
         "companyName": "Bulova",
         "companyType": "watchmaker",
         "licences": [
-            "Harley-Davidson"
+            15
         ],
         "nationality": "United States",
         "ownership": [
-            "Caravelle",
-            "Wittnauer"
+            15, 16, 17
         ],
         "parentID": 13
     },
@@ -208,12 +196,7 @@
         "licences": null,
         "nationality": "France",
         "ownership": [
-            "Bulgari",
-            "Chaumet",
-            "FRED",
-            "Hublot",
-            "TAG Heuer",
-            "Zenith"
+            23, 24, 25, 26, 27, 28
         ],
         "parentID": null
     },
@@ -317,6 +300,14 @@
         "nationality": "France",
         "ownership": null,
         "parentID": null
+    },
+    {
+        "id": 33,
+        "companyName": "NOMOS",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": null
     }
-
 ]
