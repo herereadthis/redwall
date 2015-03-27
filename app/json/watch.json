@@ -326,8 +326,194 @@
         "licences": null,
         "nationality": "Germany",
         "ownership": [
-
+            37, 38
         ],
         "parentID": null
+    },
+    {
+        "id": 37,
+        "companyName": "Zeppelin",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": 36
+    },
+    {
+        "id": 38,
+        "companyName": "Junkers",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": 36
+    },
+    {
+        "id": 39,
+        "companyName": "Swatch Group",
+        "companyType": "holding",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": [
+            40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
+        ],
+        "parentID": null
+    },
+    {
+        "id": 40,
+        "companyName": "Breguet",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 41,
+        "companyName": "Harry Winston",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 42,
+        "companyName": "Blancpain",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 43,
+        "companyName": "Glashütte Original",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "German",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 44,
+        "companyName": "Omega",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 45,
+        "companyName": "Longines",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 46,
+        "companyName": "Rado",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 47,
+        "companyName": "Tissot",
+        "companyType": "watchmaker",
+        "founded": 1853,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 48,
+        "companyName": "Certina",
+        "companyType": "watchmaker",
+        "founded": 1888,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 49,
+        "companyName": "Mido",
+        "companyType": "watchmaker",
+        "founded": 1918,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 50,
+        "companyName": "Hamilton",
+        "companyType": "watchmaker",
+        "founded": 1892,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 50,
+        "companyName": "Blancpain",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 50,
+        "companyName": "Blancpain",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 50,
+        "companyName": "Blancpain",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 50,
+        "companyName": "Blancpain",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 50,
+        "companyName": "Blancpain",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
+    },
+    {
+        "id": 50,
+        "companyName": "Blancpain",
+        "companyType": "watchmaker",
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39
     }
 ]
