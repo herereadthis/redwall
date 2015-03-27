@@ -3,6 +3,7 @@
         "id": 0,
         "companyName": "Movado Group",
         "companyType": "holding",
+        "founded": 1983,
         "licences": [
             2, 3, 4, 5, 6, 7
         ],
@@ -481,56 +482,144 @@
     },
     {
         "id": 52,
-        "companyName": "asdf",
+        "companyName": "Baume et Mercier",
         "companyType": "watchmaker",
+        "founded": 1830,
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
-        "parentID": 39
+        "parentID": 56
     },
     {
         "id": 53,
-        "companyName": "asdf",
+        "companyName": "Bovet Fleurier",
         "companyType": "watchmaker",
+        "founded": 1822,
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
-        "parentID": 39
+        "parentID": null
     },
     {
         "id": 54,
-        "companyName": "asdf",
+        "companyName": "Bremont",
         "companyType": "watchmaker",
+        "founded": 2002,
         "licences": null,
-        "nationality": "Switzerland",
+        "nationality": "United Kingdom",
         "ownership": null,
-        "parentID": 39
+        "parentID": null
     },
     {
         "id": 55,
-        "companyName": "asdf",
+        "companyName": "Christopher Ward",
         "companyType": "watchmaker",
+        "founded": 2004,
         "licences": null,
-        "nationality": "Switzerland",
+        "nationality": "United Kingdom",
         "ownership": null,
-        "parentID": 39
+        "parentID": null
     },
     {
         "id": 56,
-        "companyName": "asdf",
-        "companyType": "watchmaker",
+        "companyName": "Richmont",
+        "companyType": "holding",
+        "founded": 1988,
         "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
-        "parentID": 39
+        "ownership": [
+            52, 57
+        ],
+        "parentID": null
     },
     {
         "id": 57,
-        "companyName": "asdf",
+        "companyName": "Cartier",
         "companyType": "watchmaker",
+        "founded": 1847,
+        "licences": null,
+        "nationality": "France",
+        "ownership": null,
+        "parentID": 56
+    },
+    {
+        "id": 58,
+        "companyName": "International Watch Company (IWC)",
+        "companyType": "watchmaker",
+        "founded": 1868,
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
-        "parentID": 39
+        "parentID": 56
+    },
+    {
+        "id": 59,
+        "companyName": "Jaeger-LeCoultre",
+        "companyType": "watchmaker",
+        "founded": 1833,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 56
+    },
+    {
+        "id": 60,
+        "companyName": "Montblanc",
+        "companyType": "watchmaker",
+        "founded": 1906,
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": 56
+    },
+    {
+        "id": 60,
+        "companyName": "Piaget",
+        "companyType": "watchmaker",
+        "founded": 1874,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 56
+    },
+    {
+        "id": 61,
+        "companyName": "Roger Dubuis",
+        "companyType": "watchmaker",
+        "founded": 1995,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 56
+    },
+    {
+        "id": 62,
+        "companyName": "Vacheron Constantin",
+        "companyType": "watchmaker",
+        "founded": 1755,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 56
+    },
+    {
+        "id": 63,
+        "companyName": "asdf",
+        "companyType": "watchmaker",
+        "founded": 1830,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 56
+    },
+    {
+        "id": 60,
+        "companyName": "asdf",
+        "companyType": "watchmaker",
+        "founded": 1830,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 56
     }
 ]
