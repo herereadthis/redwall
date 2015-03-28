@@ -628,5 +628,37 @@
         "nationality": "Switzerland",
         "ownership": null,
         "parentID": 56
+    },
+    {
+        "id": 61,
+        "companyName": "Seiko Group",
+        "companyType": "holding",
+        "founded": 1942,
+        "licences": null,
+        "nationality": "Japan",
+        "ownership": [
+            62, 63
+        ],
+        "parentID": 56
+    },
+    {
+        "id": 62,
+        "companyName": "Seiko",
+        "companyType": "watchmaker",
+        "founded": 1881,
+        "licences": null,
+        "nationality": "Japan",
+        "ownership": null,
+        "parentID": 61
+    },
+    {
+        "id": 63,
+        "companyName": "Orient",
+        "companyType": "watchmaker",
+        "founded": 1950,
+        "licences": null,
+        "nationality": "Japan",
+        "ownership": null,
+        "parentID": 61
     }
 ]
