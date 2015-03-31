@@ -631,32 +631,20 @@
         "ownership": null,
         "parentID": 56
     },
-
-
-
-
-
-
-
-
-
-
-
-
     {
-        "id": 61,
+        "id": 66,
         "companyName": "Seiko Group",
         "companyType": "holding",
         "founded": 1942,
         "licences": null,
         "nationality": "Japan",
         "ownership": [
-            62, 63
+            67, 68
         ],
         "parentID": 56
     },
     {
-        "id": 62,
+        "id": 67,
         "companyName": "Seiko",
         "companyType": "watchmaker",
         "founded": 1881,
@@ -666,7 +654,7 @@
         "parentID": 61
     },
     {
-        "id": 63,
+        "id": 68,
         "companyName": "Orient",
         "companyType": "watchmaker",
         "founded": 1950,
@@ -676,7 +664,7 @@
         "parentID": 61
     },
     {
-        "id": 64,
+        "id": 69,
         "companyName": "Raymond Weil",
         "companyType": "watchmaker",
         "founded": 1976,
@@ -686,7 +674,7 @@
         "parentID": null
     },
     {
-        "id": 65,
+        "id": 70,
         "companyName": "Oris",
         "companyType": "watchmaker",
         "founded": 1904,
