@@ -682,6 +682,66 @@
         "nationality": "Switzerland",
         "ownership": null,
         "parentID": null
+    },
+    {
+        "id": 71,
+        "companyName": "Frank Muller",
+        "companyType": "watchmaker",
+        "founded": 1991,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 73,
+        "companyName": "Sinn",
+        "companyType": "watchmaker",
+        "founded": 1961,
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 74,
+        "companyName": "Suunto",
+        "companyType": "watchmaker",
+        "founded": 1936,
+        "licences": null,
+        "nationality": "Finland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 75,
+        "companyName": "Suunto",
+        "companyType": "watchmaker",
+        "founded": 1936,
+        "licences": null,
+        "nationality": "Finland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 76,
+        "companyName": "Ulysse Nardin",
+        "companyType": "watchmaker",
+        "founded": 1846,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 77,
+        "companyName": "Girard-Perregaux",
+        "companyType": "watchmaker",
+        "founded": 1791,
+        "licences": null,
+        "nationality": "Finland",
+        "ownership": null,
+        "parentID": null
     }
 
 ]
