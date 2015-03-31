@@ -741,7 +741,29 @@
         "licences": null,
         "nationality": "Finland",
         "ownership": null,
+        "parentID": 78
+    },
+    {
+        "id": 78,
+        "companyName": "Kering",
+        "companyType": "watchmaker",
+        "founded": 1963,
+        "licences": null,
+        "nationality": "France",
+        "ownership": [
+            77
+        ],
         "parentID": null
+    },
+    {
+        "id": 79,
+        "companyName": "Gucci",
+        "companyType": "watchmaker",
+        "founded": 1921,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 78
     }
 
 ]
