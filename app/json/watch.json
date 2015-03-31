@@ -529,13 +529,13 @@
     },
     {
         "id": 56,
-        "companyName": "Richmont",
+        "companyName": "Richemont",
         "companyType": "holding",
         "founded": 1988,
         "licences": null,
         "nationality": "Switzerland",
         "ownership": [
-            52, 57
+            52, 57, 66
         ],
         "parentID": null
     },
@@ -660,5 +660,36 @@
         "nationality": "Japan",
         "ownership": null,
         "parentID": 61
+    },
+    {
+        "id": 64,
+        "companyName": "Raymond Weil",
+        "companyType": "watchmaker",
+        "founded": 1976,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 65,
+        "companyName": "Oris",
+        "companyType": "watchmaker",
+        "founded": 1904,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 66,
+        "companyName": "Panarei",
+        "companyType": "watchmaker",
+        "founded": 1860,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 56
     }
+
 ]
