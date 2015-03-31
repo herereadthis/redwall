@@ -489,16 +489,6 @@
     },
     {
         "id": 52,
-        "companyName": "Baume et Mercier",
-        "companyType": "watchmaker",
-        "founded": 1830,
-        "licences": null,
-        "nationality": "Switzerland",
-        "ownership": null,
-        "parentID": 56
-    },
-    {
-        "id": 53,
         "companyName": "Bovet Fleurier",
         "companyType": "watchmaker",
         "founded": 1822,
@@ -508,7 +498,7 @@
         "parentID": null
     },
     {
-        "id": 54,
+        "id": 53,
         "companyName": "Bremont",
         "companyType": "watchmaker",
         "founded": 2002,
@@ -518,7 +508,7 @@
         "parentID": null
     },
     {
-        "id": 55,
+        "id": 54,
         "companyName": "Christopher Ward",
         "companyType": "watchmaker",
         "founded": 2004,
@@ -526,16 +516,28 @@
         "nationality": "United Kingdom",
         "ownership": null,
         "parentID": null
+    },,
+    {
+        "id": 55,
+        "companyName": "Baume et Mercier",
+        "companyType": "watchmaker",
+        "founded": 1830,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 56
     },
     {
         "id": 56,
         "companyName": "Richemont",
         "companyType": "holding",
         "founded": 1988,
-        "licences": null,
+        "licences": [
+            63
+        ],
         "nationality": "Switzerland",
         "ownership": [
-            52, 57, 66
+            55, 57, 58, 59, 60, 61, 62, 64, 65
         ],
         "parentID": null
     },
@@ -580,16 +582,6 @@
         "parentID": 56
     },
     {
-        "id": 60,
-        "companyName": "Piaget",
-        "companyType": "watchmaker",
-        "founded": 1874,
-        "licences": null,
-        "nationality": "Switzerland",
-        "ownership": null,
-        "parentID": 56
-    },
-    {
         "id": 61,
         "companyName": "Roger Dubuis",
         "companyType": "watchmaker",
@@ -611,24 +603,46 @@
     },
     {
         "id": 63,
-        "companyName": "asdf",
+        "companyName": "Ralph Lauren",
         "companyType": "watchmaker",
-        "founded": 1830,
+        "founded": 2007,
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
         "parentID": 56
     },
     {
-        "id": 60,
-        "companyName": "asdf",
+        "id": 64,
+        "companyName": "Piaget",
         "companyType": "watchmaker",
-        "founded": 1830,
+        "founded": 1874,
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
         "parentID": 56
     },
+    {
+        "id": 65,
+        "companyName": "Panarei",
+        "companyType": "watchmaker",
+        "founded": 1860,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 56
+    },
+
+
+
+
+
+
+
+
+
+
+
+
     {
         "id": 61,
         "companyName": "Seiko Group",
@@ -680,16 +694,6 @@
         "nationality": "Switzerland",
         "ownership": null,
         "parentID": null
-    },
-    {
-        "id": 66,
-        "companyName": "Panarei",
-        "companyType": "watchmaker",
-        "founded": 1860,
-        "licences": null,
-        "nationality": "Italy",
-        "ownership": null,
-        "parentID": 56
     }
 
 ]
