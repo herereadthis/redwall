@@ -2,18 +2,18 @@
 <div id="watch_data">
 
     <header role="banner" class="bellmaker_container">
-        <h1>Watches</h1>
+        <h1>Watches ({{ watchData.length }})</h1>
         <p>By <a href="/" title="Here, Read This">Here, Read This</a></p>
     </header>
 
     <div class="bellmaker_container">
         <table>
-            <tr ng-repeat="row in watchData">
-                <td><p>{{ row.companyName }}</p></td>
-                <td><p>{{ row.companyType }}</p></td>
-                <td><p>{{ row.founded }}</p></td>
-                <td><p>{{ row.nationality }}</p></td>
-                <td><p>{{ row.parentCompany }}</p></td>
+            <tr ng-repeat="row in watchData | orderBy:sortType">
+                <td><p ng-bind-html="row.companyName"></p></td>
+                <td><p ng-bind-html="row.companyType"></p></td>
+                <td><p ng-bind-html="row.founded"></p></td>
+                <td><p ng-bind-html="row.nationality"></p></td>
+                <td><p ng-bind-html="row.parentCompany"></p></td>
             </tr>
         </table>
     </div>

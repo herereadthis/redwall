@@ -40,6 +40,8 @@ angular.module('redwallApp')
                             }
                         }
                     });
+
+                    $scope.sortType = 'companyName';
                 }
             ],
             templateUrl: '/scripts/watches/watches.html'

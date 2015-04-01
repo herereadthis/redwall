@@ -107,6 +107,7 @@
         "id": 13,
         "companyName": "Citizen Holdings",
         "companyType": "holding",
+        "founded": 1918,
         "licences": null,
         "nationality": "Japan",
         "ownership": [
@@ -118,6 +119,7 @@
         "id": 14,
         "companyName": "Bulova",
         "companyType": "watchmaker",
+        "founded": 1875,
         "licences": [
             15
         ],
@@ -266,10 +268,11 @@
         "id": 29,
         "companyName": "Frédérique Constant",
         "companyType": "watchmaker",
+        "founded": 1988,
         "licences": null,
         "nationality": "Switzerland",
         "ownership": [
-            "Alpina"
+            30
         ],
         "parentID": null
     },
@@ -277,6 +280,7 @@
         "id": 30,
         "companyName": "Alpina",
         "companyType": "watchmaker",
+        "founded": 1883,
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
@@ -715,11 +719,11 @@
     },
     {
         "id": 75,
-        "companyName": "Suunto",
-        "companyType": "watchmaker",
-        "founded": 1936,
+        "companyName": "Doxa",
+        "companyType": "Switzerland",
+        "founded": 1889,
         "licences": null,
-        "nationality": "Finland",
+        "nationality": "Switzerland",
         "ownership": null,
         "parentID": null
     },
