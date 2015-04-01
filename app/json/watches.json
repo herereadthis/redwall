@@ -669,7 +669,7 @@
         "licences": null,
         "nationality": "Japan",
         "ownership": [
-            67, 68
+            67, 68, 89
         ],
         "parentID": null
     },
@@ -888,5 +888,35 @@
         "nationality": "Italy",
         "ownership": null,
         "parentID": 80
+    },
+    {
+        "id": 89,
+        "companyName": "Alba",
+        "companyType": "watchmaker",
+        "founded": 1979,
+        "licences": null,
+        "nationality": "Japan",
+        "ownership": null,
+        "parentID": 66
+    },
+    {
+        "id": 90,
+        "companyName": "Eterna",
+        "companyType": "watchmaker",
+        "founded": 1856,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 66
+    },
+    {
+        "id": 91,
+        "companyName": "Festina",
+        "companyType": "watchmaker",
+        "founded": 1902,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 66
     }
 ]
