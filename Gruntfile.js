@@ -61,7 +61,8 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/less/{,*/}*.less',
                     '<%= yeoman.app %>/scripts/components/{,*/}*.less',
                     '<%= yeoman.app %>/scripts/homepage/{,*/}*.less',
-                    '<%= yeoman.app %>/scripts/linkOfTheDay/{,*/}*.less'
+                    '<%= yeoman.app %>/scripts/linkOfTheDay/{,*/}*.less',
+                    '<%= yeoman.app %>/scripts/watches/{,*/}*.less'
                 ],
                 tasks: ['less']
             },
