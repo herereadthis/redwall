@@ -42,6 +42,11 @@ angular
                     templateUrl: 'views/link-of-the-day.html',
                     controller: 'LinkOfTheDayController'
                 })
+                .when('/watches', {
+                    title: 'Watches',
+                    templateUrl: 'views/watches.html',
+                    controller: 'WatchesController'
+                })
                 .otherwise({
                     redirectTo: '/'
                 });

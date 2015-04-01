@@ -74,7 +74,7 @@ module.exports = function (grunt) {
             },
             json: {
                 files: [
-                    '<%= yeoman.app %>/json/{,*/}*.json'],
+                    '<%= yeoman.app %>/json/*.json'],
                 tasks: [
                     'jsonmin',
                     'newer:copy:json'
@@ -178,7 +178,8 @@ module.exports = function (grunt) {
                     stripComments: true
                 },
                 files: {
-                    '<%= yeoman.app %>/json/min/linkoftheday.min.json': '<%= yeoman.app %>/json/linkoftheday.json'
+                    '<%= yeoman.app %>/json/min/linkoftheday.min.json': '<%= yeoman.app %>/json/linkoftheday.json',
+                    '<%= yeoman.app %>/json/min/watches.min.json': '<%= yeoman.app %>/json/watches.json'
                 }
             }
         },
