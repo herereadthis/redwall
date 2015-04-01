@@ -776,7 +776,7 @@
     {
         "id": 78,
         "companyName": "Kering",
-        "companyType": "watchmaker",
+        "companyType": "holding",
         "founded": 1963,
         "licences": null,
         "nationality": "France",
@@ -794,5 +794,99 @@
         "nationality": "Italy",
         "ownership": null,
         "parentID": 78
+    },
+    {
+        "id": 80,
+        "companyName": "Timex Group",
+        "companyType": "holding",
+        "founded": 2000,
+        "licences": [
+            82, 83, 84, 85, 86, 87, 88
+        ],
+        "nationality": "Netherlands",
+        "ownership": [
+            81
+        ],
+        "parentID": null
+    },
+    {
+        "id": 81,
+        "companyName": "Timex",
+        "companyType": "watchmaker",
+        "founded": 1854,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 80
+    },
+    {
+        "id": 82,
+        "companyName": "Guess",
+        "companyType": "licence",
+        "founded": 1991,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 80
+    },
+    {
+        "id": 83,
+        "companyName": "Disney",
+        "companyType": "licence",
+        "founded": 1993,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 80
+    },
+    {
+        "id": 84,
+        "companyName": "Nautica",
+        "companyType": "licence",
+        "founded": 1994,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 80
+    },
+    {
+        "id": 85,
+        "companyName": "Versace",
+        "companyType": "licence",
+        "founded": 2004,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 80
+    },
+    {
+        "id": 86,
+        "companyName": "Marc Ecko",
+        "companyType": "licence",
+        "founded": 2002,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 80
+    },
+    {
+        "id": 87,
+        "companyName": "Salvatore Ferragamo",
+        "companyType": "licence",
+        "founded": 2008,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 80
+    },
+    {
+        "id": 88,
+        "companyName": "Valentino",
+        "companyType": "licence",
+        "founded": 2008,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 80
     }
 ]
