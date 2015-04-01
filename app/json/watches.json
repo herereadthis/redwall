@@ -641,7 +641,7 @@
         "ownership": [
             67, 68
         ],
-        "parentID": 56
+        "parentID": null
     },
     {
         "id": 67,
@@ -651,7 +651,7 @@
         "licences": null,
         "nationality": "Japan",
         "ownership": null,
-        "parentID": 61
+        "parentID": 66
     },
     {
         "id": 68,
@@ -661,7 +661,7 @@
         "licences": null,
         "nationality": "Japan",
         "ownership": null,
-        "parentID": 61
+        "parentID": 66
     },
     {
         "id": 69,

@@ -1,5 +1,5 @@
 
-<div id="link_of_the_day">
+<div id="watch_data">
 
     <header role="banner" class="bellmaker_container">
         <h1>Watches</h1>
@@ -7,7 +7,15 @@
     </header>
 
     <div class="bellmaker_container">
-        <pre>{{ watchData | json }}</pre>
+        <table>
+            <tr ng-repeat="row in watchData">
+                <td><p>{{ row.companyName }}</p></td>
+                <td><p>{{ row.companyType }}</p></td>
+                <td><p>{{ row.founded }}</p></td>
+                <td><p>{{ row.nationality }}</p></td>
+                <td><p>{{ row.parentCompany }}</p></td>
+            </tr>
+        </table>
     </div>
 </div>
 

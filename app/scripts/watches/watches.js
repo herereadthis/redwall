@@ -26,6 +26,19 @@ angular.module('redwallApp')
                 function ($scope, $http) {
                     $http.get('json/watches.min.json').success(function(data) {
                         $scope.watchData = data;
+
+                        var _a, parentCompany;
+
+                        for (_a in $scope.watchData) {
+                            if ($scope.watchData[_a].parentID !== null) {
+
+                                parentCompany = _.where($scope.watchData, {
+                                    id: $scope.watchData[_a].parentID
+                                });
+                                $scope.watchData[_a].parentCompany = 
+                                    parentCompany[0].companyName;
+                            }
+                        }
                     });
                 }
             ],
