@@ -1112,5 +1112,15 @@
         "nationality": "United States",
         "ownership": null,
         "parentID": 92
+    },
+    {
+        "id": 110,
+        "companyName": "Nixon",
+        "companyType": "watchmaker",
+        "founded": 1997,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": null
     }
 ]
