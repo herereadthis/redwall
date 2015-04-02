@@ -60,6 +60,11 @@ angular.module('redwallApp')
                         });
                     });
 
+                    $scope.colOrder = {
+                        type: 'companyName',
+                        reverse: false
+                    }
+
                     $scope.sortType = 'companyName';
                     $scope.reverseSort = false;
 
@@ -70,8 +75,10 @@ angular.module('redwallApp')
                             sortColumn[0].state = !sortColumn[0].state;
                         }
 
-                        $scope.sortType = sortColumn[0].keyName;
-                        $scope.reverseSort = sortColumn[0].state;
+                        $scope.colOrder = {
+                            type: sortColumn[0].keyName,
+                            reverse: sortColumn[0].state
+                        }
                     };
                 }
             ],

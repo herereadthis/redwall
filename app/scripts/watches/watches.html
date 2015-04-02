@@ -7,7 +7,7 @@
     </header>
 
     <div class="bellmaker_container">
-        <pre>{{ newKeys | json}}</pre>
+        <!-- <pre>{{ newKeys | json}}</pre> -->
         <table>
             <thead>
                 <th><p><a href ng-click="sortCol('companyName')">Company Name</a></p></th>
@@ -17,7 +17,7 @@
                 <th><p><a href ng-click="sortCol('parentID')">Parent Company</a></p></th>
             </thead>
             <tbody>
-                <tr ng-repeat="row in watchData | orderBy:sortType:reverseSort">
+                <tr ng-repeat="row in watchData | orderBy:colOrder.type:colOrder.reverse">
                     <td><p ng-bind-html="row.companyName"></p></td>
                     <td><p ng-bind-html="row.companyType"></p></td>
                     <td><p ng-bind-html="row.founded"></p></td>
