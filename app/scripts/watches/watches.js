@@ -39,6 +39,25 @@ angular.module('redwallApp')
                                     parentCompany[0].companyName;
                             }
                         }
+
+                        $scope.keys = [];
+                        var _l, _k;
+                        _l = 0;
+                        // loop though first entry and get keys
+                        // ES6 Object.key didn't really work that well
+                        for (_k in $scope.watchData[0]) {
+                            if (_k !== 'id') {
+                                $scope.keys[_l] = _k;
+                                _l = _l + 1;
+                            }
+                        }
+
+                        $scope.newKeys = _.map($scope.watchData[0], function(val, key) {
+                            return {
+                                keyName: key,
+                                state: false
+                            };
+                        });
                     });
 
                     $scope.sortType = 'companyName';

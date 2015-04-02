@@ -7,14 +7,24 @@
     </header>
 
     <div class="bellmaker_container">
+        <pre>{{ newKeys | json}}</pre>
         <table>
-            <tr ng-repeat="row in watchData | orderBy:sortType">
-                <td><p ng-bind-html="row.companyName"></p></td>
-                <td><p ng-bind-html="row.companyType"></p></td>
-                <td><p ng-bind-html="row.founded"></p></td>
-                <td><p ng-bind-html="row.nationality"></p></td>
-                <td><p ng-bind-html="row.parentCompany"></p></td>
-            </tr>
+            <thead>
+                <th ng-click="sortCol(companyName)"><p>Company Name</p></th>
+                <th ng-click="sortCol(companyName)"><p>Company Type</p></th>
+                <th ng-click="sortCol(companyName)"><p>Founded</p></th>
+                <th ng-click="sortCol(companyName)"><p>Nationality</p></th>
+                <th ng-click="sortCol(companyName)"><p>Parent Company</p></th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in watchData | orderBy:sortType">
+                    <td><p ng-bind-html="row.companyName"></p></td>
+                    <td><p ng-bind-html="row.companyType"></p></td>
+                    <td><p ng-bind-html="row.founded"></p></td>
+                    <td><p ng-bind-html="row.nationality"></p></td>
+                    <td><p ng-bind-html="row.parentCompany"></p></td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </div>
