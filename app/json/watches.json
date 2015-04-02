@@ -925,11 +925,11 @@
         "companyType": "holding",
         "founded": 1984,
         "licences": [
-
+            97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108
         ],
         "nationality": "United States",
         "ownership": [
-            93, 94, 95
+            93, 94, 95, 96, 109
         ],
         "parentID": null
     },
@@ -980,6 +980,136 @@
         "founded": 1893,
         "licences": null,
         "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 97,
+        "companyName": "Burberry",
+        "companyType": "licence",
+        "founded": 1856,
+        "licences": null,
+        "nationality": "United Kingdom",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 98,
+        "companyName": "Emporio Armani",
+        "companyType": "licence",
+        "founded": 1975,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 99,
+        "companyName": "Emporio Armani",
+        "companyType": "licence",
+        "founded": 1975,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 100,
+        "companyName": "Michael Kors",
+        "companyType": "licence",
+        "founded": 1981,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 101,
+        "companyName": "Marc by Marc Jacobs",
+        "companyType": "licence",
+        "founded": 2001,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 102,
+        "companyName": "Michael Kors",
+        "companyType": "licence",
+        "founded": 1981,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 103,
+        "companyName": "DKNY",
+        "companyType": "licence",
+        "founded": 1984,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 104,
+        "companyName": "Karl Lagerfeld",
+        "companyType": "licence",
+        "founded": 1974,
+        "licences": null,
+        "nationality": "France",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 105,
+        "companyName": "Tory Birch",
+        "companyType": "licence",
+        "founded": 2004,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 106,
+        "companyName": "Diesel",
+        "companyType": "licence",
+        "founded": 1978,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 107,
+        "companyName": "Armani Exchange",
+        "companyType": "licence",
+        "founded": 1991,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 108,
+        "companyName": "Adidas",
+        "companyType": "licence",
+        "founded": 1924,
+        "licences": null,
+        "nationality": "German",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 109,
+        "companyName": "Skagen",
+        "companyType": "licence",
+        "founded": 1981,
+        "licences": null,
+        "nationality": "United States",
         "ownership": null,
         "parentID": 92
     }
