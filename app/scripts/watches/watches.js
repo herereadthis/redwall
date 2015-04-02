@@ -61,6 +61,18 @@ angular.module('redwallApp')
                     });
 
                     $scope.sortType = 'companyName';
+                    $scope.reverseSort = false;
+
+                    $scope.sortCol = function(key) {
+                        var sortColumn = _.where($scope.newKeys, {keyName: key});
+
+                        if ($scope.sortType = key) {
+                            sortColumn[0].state = !sortColumn[0].state;
+                        }
+
+                        $scope.sortType = sortColumn[0].keyName;
+                        $scope.reverseSort = sortColumn[0].state;
+                    };
                 }
             ],
             templateUrl: '/scripts/watches/watches.html'

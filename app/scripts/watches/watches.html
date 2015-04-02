@@ -10,14 +10,14 @@
         <pre>{{ newKeys | json}}</pre>
         <table>
             <thead>
-                <th ng-click="sortCol(companyName)"><p>Company Name</p></th>
-                <th ng-click="sortCol(companyName)"><p>Company Type</p></th>
-                <th ng-click="sortCol(companyName)"><p>Founded</p></th>
-                <th ng-click="sortCol(companyName)"><p>Nationality</p></th>
-                <th ng-click="sortCol(companyName)"><p>Parent Company</p></th>
+                <th><p><a href ng-click="sortCol('companyName')">Company Name</a></p></th>
+                <th><p><a href ng-click="sortCol('companyType')">Company Type</a></p></th>
+                <th><p><a href ng-click="sortCol('founded')">Founded</a></p></th>
+                <th><p><a href ng-click="sortCol('nationality')">Nationality</a></p></th>
+                <th><p><a href ng-click="sortCol('parentID')">Parent Company</a></p></th>
             </thead>
             <tbody>
-                <tr ng-repeat="row in watchData | orderBy:sortType">
+                <tr ng-repeat="row in watchData | orderBy:sortType:reverseSort">
                     <td><p ng-bind-html="row.companyName"></p></td>
                     <td><p ng-bind-html="row.companyType"></p></td>
                     <td><p ng-bind-html="row.founded"></p></td>
