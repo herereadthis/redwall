@@ -918,5 +918,69 @@
         "nationality": "Switzerland",
         "ownership": null,
         "parentID": 66
+    },
+    {
+        "id": 92,
+        "companyName": "Fossil Group",
+        "companyType": "holding",
+        "founded": 1984,
+        "licences": [
+
+        ],
+        "nationality": "United States",
+        "ownership": [
+            93, 94, 95
+        ],
+        "parentID": null
+    },
+    {
+        "id": 93,
+        "companyName": "Fossil",
+        "companyType": "watchmaker",
+        "founded": 1990,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 94,
+        "companyName": "Relic",
+        "companyType": "watchmaker",
+        "founded": 1990,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 94,
+        "companyName": "Relic",
+        "companyType": "watchmaker",
+        "founded": 1990,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 95,
+        "companyName": "Michele",
+        "companyType": "watchmaker",
+        "founded": 2000,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 92
+    },
+    {
+        "id": 96,
+        "companyName": "Zodiac",
+        "companyType": "watchmaker",
+        "founded": 1893,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 92
     }
 ]
