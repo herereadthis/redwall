@@ -542,7 +542,9 @@
         "companyName": "Bremont",
         "companyType": "watchmaker",
         "founded": 2002,
-        "licences": null,
+        "licences": [
+            123
+        ],
         "nationality": "United Kingdom",
         "ownership": null,
         "parentID": null
@@ -1264,5 +1266,69 @@
         "nationality": "Switzerland",
         "ownership": null,
         "parentID": null
+    },
+    {
+        "id": 123,
+        "companyName": "Jaguar",
+        "companyType": "licence",
+        "founded": 2015,
+        "licences": null,
+        "nationality": "United Kingdom",
+        "ownership": null,
+        "parentID": 53
+    },
+    {
+        "id": 124,
+        "companyName": "Chronoswiss",
+        "companyType": "watchmaker",
+        "founded": 1983,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 125,
+        "companyName": "Binda Group",
+        "companyType": "holding",
+        "founded": 1983,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": [
+            126
+        ],
+        "parentID": null
+    },
+    {
+        "id": 126,
+        "companyName": "Geneva Watch Group",
+        "companyType": "holding",
+        "founded": 1983,
+        "licences": [
+            127, 128
+        ],
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 125
+    },
+    {
+        "id": 127,
+        "companyName": "Kenneth Cole",
+        "companyType": "licence",
+        "founded": 1982,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 126
+    },
+    {
+        "id": 128,
+        "companyName": "Ted Baker",
+        "companyType": "licence",
+        "founded": 1988,
+        "licences": null,
+        "nationality": "United Kingdom",
+        "ownership": null,
+        "parentID": 126
     }
 ]
