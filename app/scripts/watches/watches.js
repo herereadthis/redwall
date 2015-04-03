@@ -40,6 +40,12 @@ angular.module('redwallApp')
                             }
                         }
 
+                        $scope.licencedCompanies = $scope.watchData;
+                        $scope.licencedCompanies = _.where($scope.licencedCompanies, {
+                            companyType: 'licence'
+                        });
+
+
                         $scope.keys = [];
                         var _l, _k;
                         _l = 0;
@@ -59,6 +65,7 @@ angular.module('redwallApp')
                             };
                         });
                     });
+
 
                     $scope.colOrder = {
                         type: 'companyName',

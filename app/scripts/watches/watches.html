@@ -26,5 +26,21 @@
                 </tr>
             </tbody>
         </table>
+        <table>
+            <thead>
+                <th><p><a href ng-click="sortCol('companyName')">Company Name</a></p></th>
+                <th><p><a href ng-click="sortCol('founded')">Founded</a></p></th>
+                <th><p><a href ng-click="sortCol('nationality')">Nationality</a></p></th>
+                <th><p><a href ng-click="sortCol('parentID')">Parent Company</a></p></th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in licencedCompanies">
+                    <td><p ng-bind-html="row.companyName"></p></td>
+                    <td><p ng-bind-html="row.founded"></p></td>
+                    <td><p ng-bind-html="row.nationality"></p></td>
+                    <td><p ng-bind-html="row.parentCompany"></p></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
