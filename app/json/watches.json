@@ -223,7 +223,7 @@
     },
     {
         "id": 23,
-        "companyName": "Bulgari",
+        "companyName": "Bvlgari",
         "companyType": "watchmaker",
         "founded": 1884,
         "licences": null,
@@ -769,7 +769,7 @@
         "companyType": "watchmaker",
         "founded": 1791,
         "licences": null,
-        "nationality": "Finland",
+        "nationality": "Switzerland",
         "ownership": null,
         "parentID": 78
     },
@@ -1120,6 +1120,76 @@
         "founded": 1997,
         "licences": null,
         "nationality": "United States",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 111,
+        "companyName": "Tiffany &amp; Co.",
+        "companyType": "watchmaker",
+        "founded": 1837,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 112,
+        "companyName": "Sarpaneva",
+        "companyType": "watchmaker",
+        "founded": 2003,
+        "licences": null,
+        "nationality": "Finland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 113,
+        "companyName": "Anomino",
+        "companyType": "watchmaker",
+        "founded": 1997,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 114,
+        "companyName": "Ball",
+        "companyType": "watchmaker",
+        "founded": 1891,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 115,
+        "companyName": "Melbourne",
+        "companyType": "watchmaker",
+        "founded": 2013,
+        "licences": null,
+        "nationality": "Australia",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 116,
+        "companyName": "Raketa",
+        "companyType": "watchmaker",
+        "founded": 1961,
+        "licences": null,
+        "nationality": "Russia",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 117,
+        "companyName": "F.P. Journe",
+        "companyType": "watchmaker",
+        "founded": 1999,
+        "licences": null,
+        "nationality": "Switzerland",
         "ownership": null,
         "parentID": null
     }
