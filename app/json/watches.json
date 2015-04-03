@@ -14,6 +14,16 @@
         "parentID": null
     },
     {
+        "id": 1,
+        "companyName": "Invicta",
+        "companyType": "watchmaker",
+        "founded": 1991,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": null
+    },
+    {
         "id": 2,
         "companyName": "Coach",
         "companyType": "licence",
@@ -583,7 +593,7 @@
     },
     {
         "id": 58,
-        "companyName": "International Watch Company (IWC)",
+        "companyName": "IWC",
         "companyType": "watchmaker",
         "founded": 1868,
         "licences": null,
@@ -720,6 +730,16 @@
         "founded": 1991,
         "licences": null,
         "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 72,
+        "companyName": "Laco",
+        "companyType": "watchmaker",
+        "founded": 1925,
+        "licences": null,
+        "nationality": "Germany",
         "ownership": null,
         "parentID": null
     },
@@ -1190,6 +1210,28 @@
         "founded": 1999,
         "licences": null,
         "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 118,
+        "companyName": "Mondaine",
+        "companyType": "watchmaker",
+        "founded": 1951,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": [
+            119
+        ],
+        "parentID": null
+    },
+    {
+        "id": 119,
+        "companyName": "Luminox",
+        "companyType": "watchmaker",
+        "founded": 1989,
+        "licences": null,
+        "nationality": "United States",
         "ownership": null,
         "parentID": null
     }
