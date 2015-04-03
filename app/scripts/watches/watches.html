@@ -28,13 +28,13 @@
         </table>
         <table>
             <thead>
-                <th><p><a href ng-click="sortCol('companyName')">Company Name</a></p></th>
-                <th><p><a href ng-click="sortCol('founded')">Founded</a></p></th>
-                <th><p><a href ng-click="sortCol('nationality')">Nationality</a></p></th>
-                <th><p><a href ng-click="sortCol('parentID')">Parent Company</a></p></th>
+                <th><p><a href ng-click="sortLicense('companyName')">Company Name</a></p></th>
+                <th><p><a href ng-click="sortLicense('founded')">Founded</a></p></th>
+                <th><p><a href ng-click="sortLicense('nationality')">Nationality</a></p></th>
+                <th><p><a href ng-click="sortLicense('parentID')">Parent Company</a></p></th>
             </thead>
             <tbody>
-                <tr ng-repeat="row in licencedCompanies">
+                <tr ng-repeat="row in licencedCompanies | orderBy:licenseOrder.type:licenseOrder.reverse">
                     <td><p ng-bind-html="row.companyName"></p></td>
                     <td><p ng-bind-html="row.founded"></p></td>
                     <td><p ng-bind-html="row.nationality"></p></td>
