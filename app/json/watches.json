@@ -1234,5 +1234,35 @@
         "nationality": "United States",
         "ownership": null,
         "parentID": null
+    },
+    {
+        "id": 120,
+        "companyName": "Hajime Asaoka",
+        "companyType": "watchmaker",
+        "founded": 2009,
+        "licences": null,
+        "nationality": "Japan",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 121,
+        "companyName": "Hermès",
+        "companyType": "watchmaker",
+        "founded": 1978,
+        "licences": null,
+        "nationality": "France",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 122,
+        "companyName": "Richard Mille",
+        "companyType": "watchmaker",
+        "founded": 2001,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
     }
 ]
