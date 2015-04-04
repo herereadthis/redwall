@@ -11,7 +11,8 @@
         "ownership": [
             9, 10, 11, 12
         ],
-        "parentID": null
+        "parentID": null,
+        "url": "https://www.movadogroup.com"
     },
     {
         "id": 1,
@@ -21,7 +22,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": null
+        "parentID": null,
+        "url": "http://invictawatch.com"
     },
     {
         "id": 2,
@@ -31,7 +33,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 0
+        "parentID": 0,
+        "url": "http://www.coach.com"
     },
     {
         "id": 3,
@@ -41,7 +44,8 @@
         "licences": null,
         "nationality": "Germany",
         "ownership": null,
-        "parentID": 0
+        "parentID": 0,
+        "url": "http://www.hugoboss.com"
     },
     {
         "id": 4,
@@ -51,7 +55,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 0
+        "parentID": 0,
+        "url": "http://www.juicycouture.com"
     },
     {
         "id": 5,
@@ -61,7 +66,8 @@
         "licences": null,
         "nationality": "France",
         "ownership": null,
-        "parentID": 0
+        "parentID": 0,
+        "url": "https://www.lacoste.com"
     },
     {
         "id": 6,
@@ -71,7 +77,8 @@
         "licences": null,
         "nationality": "Italy",
         "ownership": null,
-        "parentID": 0
+        "parentID": 0,
+        "url": "http://formula1.ferrari.com"
     },
     {
         "id": 7,
@@ -81,7 +88,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 0
+        "parentID": 0,
+        "url": "http://www.tommy.com"
     },
     {
         "id": 9,
@@ -91,7 +99,8 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
-        "parentID": 0
+        "parentID": 0,
+        "url": "http://www.concord.ch"
     },
     {
         "id": 10,
@@ -101,7 +110,8 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
-        "parentID": 0
+        "parentID": 0,
+        "url": "http://www.ebel.com"
     },
     {
         "id": 11,
@@ -111,7 +121,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 0
+        "parentID": 0,
+        "url": "http://www.movado.com/esq-movado.html"
     },
     {
         "id": 12,
@@ -121,7 +132,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 0
+        "parentID": 0,
+        "url": "http://www.movado.com"
     },
     {
         "id": 13,
@@ -133,7 +145,8 @@
         "ownership": [
             14, 18, 19, 20
         ],
-        "parentID": null
+        "parentID": null,
+        "url": "https://www.citizen.co.jp/global/"
     },
     {
         "id": 14,
@@ -147,7 +160,8 @@
         "ownership": [
             15, 16, 17
         ],
-        "parentID": 13
+        "parentID": 13,
+        "url": "http://www.bulova.com"
     },
     {
         "id": 15,
@@ -157,7 +171,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 14
+        "parentID": 14,
+        "url": "http://houseofharley.com/en/products/more/jewelry-and-watches/watches"
     },
     {
         "id": 16,
@@ -167,7 +182,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 14
+        "parentID": 14,
+        "url": "http://www.caravelleny.com"
     },
     {
         "id": 17,
@@ -177,7 +193,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 14
+        "parentID": 14,
+        "url": "http://www.wittnauer.com"
     },
     {
         "id": 18,
@@ -187,7 +204,8 @@
         "licences": null,
         "nationality": "Japan",
         "ownership": null,
-        "parentID": 13
+        "parentID": 13,
+        "url": "http://www.citizenwatch.com"
     },
     {
         "id": 19,
@@ -197,7 +215,8 @@
         "licences": null,
         "nationality": "Japan",
         "ownership": null,
-        "parentID": 13
+        "parentID": 13,
+        "url": "http://www.independentwatch.com"
     },
     {
         "id": 20,
@@ -207,7 +226,8 @@
         "licences": null,
         "nationality": "Japan",
         "ownership": null,
-        "parentID": 13
+        "parentID": 13,
+        "url": "http://www.citizen.co.jp/miyota_mvt/"
     },
     {
         "id": 21,
@@ -403,7 +423,7 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": [
-            40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51
+            40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 141
         ],
         "parentID": null
     },
@@ -542,9 +562,7 @@
         "companyName": "Bremont",
         "companyType": "watchmaker",
         "founded": 2002,
-        "licences": [
-            123
-        ],
+        "licences": null,
         "nationality": "United Kingdom",
         "ownership": null,
         "parentID": null
@@ -1037,13 +1055,13 @@
     },
     {
         "id": 100,
-        "companyName": "Michael Kors",
-        "companyType": "licence",
-        "founded": 1981,
+        "companyName": "H. Moser &amp; Cie",
+        "companyType": "watchmaker",
+        "founded": 1828,
         "licences": null,
-        "nationality": "United States",
+        "nationality": "Switzerland",
         "ownership": null,
-        "parentID": 92
+        "parentID": null
     },
     {
         "id": 101,
@@ -1269,13 +1287,14 @@
     },
     {
         "id": 123,
-        "companyName": "Jaguar",
-        "companyType": "licence",
-        "founded": 2015,
+        "companyName": "Vianney Halter",
+        "companyType": "watchmaker",
+        "founded": 1998,
         "licences": null,
-        "nationality": "United Kingdom",
+        "nationality": "Switzerland",
         "ownership": null,
-        "parentID": 53
+        "parentID": null,
+        "url": "http://www.vianny-halter.com"
     },
     {
         "id": 124,
@@ -1285,7 +1304,8 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
-        "parentID": null
+        "parentID": null,
+        "url": "http://www.chronoswiss.com"
     },
     {
         "id": 125,
@@ -1297,7 +1317,8 @@
         "ownership": [
             126, 133
         ],
-        "parentID": null
+        "parentID": null,
+        "url": "http://www.bindagroup.com"
     },
     {
         "id": 126,
@@ -1311,7 +1332,8 @@
         "ownership": [
             129
         ],
-        "parentID": 125
+        "parentID": 125,
+        "url": "http://www.genevawatchgroup.com"
     },
     {
         "id": 127,
@@ -1321,7 +1343,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 126
+        "parentID": 126,
+        "url": "http://www.kennethcole.com"
     },
     {
         "id": 128,
@@ -1331,7 +1354,8 @@
         "licences": null,
         "nationality": "United Kingdom",
         "ownership": null,
-        "parentID": 126
+        "parentID": 126,
+        "url": "http://www.tedbaker.com"
     },
     {
         "id": 129,
@@ -1341,7 +1365,8 @@
         "licences": null,
         "nationality": "Italy",
         "ownership": null,
-        "parentID": 126
+        "parentID": 126,
+        "url": "http://www.breil.com"
     },
     {
         "id": 130,
@@ -1351,7 +1376,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 126
+        "parentID": 126,
+        "url": "http://www.tommybahama.com"
     },
     {
         "id": 131,
@@ -1361,7 +1387,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 126
+        "parentID": 126,
+        "url": "http://www.betseyjohnson.com"
     },
     {
         "id": 132,
@@ -1371,7 +1398,8 @@
         "licences": null,
         "nationality": "United States",
         "ownership": null,
-        "parentID": 126
+        "parentID": 126,
+        "url": "http://www.bcbg.com"
     },
     {
         "id": 133,
@@ -1381,7 +1409,8 @@
         "licences": null,
         "nationality": "Italy",
         "ownership": null,
-        "parentID": 125
+        "parentID": 125,
+        "url": "http://www.dolcegabbana.com"
     },
     {
         "id": 134,
@@ -1391,7 +1420,8 @@
         "licences": null,
         "nationality": "Italy",
         "ownership": null,
-        "parentID": 125
+        "parentID": 125,
+        "url": "http://www.moschino.com"
     },
     {
         "id": 135,
@@ -1401,7 +1431,8 @@
         "licences": null,
         "nationality": "Germany",
         "ownership": null,
-        "parentID": null
+        "parentID": null,
+        "url": "http://www.urwerk.com"
     },
     {
         "id": 136,
@@ -1411,7 +1442,8 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
-        "parentID": null
+        "parentID": null,
+        "url": "http://www.victorinoxwatches.com"
     },
     {
         "id": 137,
@@ -1421,6 +1453,51 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
-        "parentID": null
+        "parentID": null,
+        "url": "http://glycine-watch.ch"
+    },
+    {
+        "id": 138,
+        "companyName": "Halda",
+        "companyType": "watchmaker",
+        "founded": 1887,
+        "licences": null,
+        "nationality": "Sweden",
+        "ownership": null,
+        "parentID": null,
+        "url": "http://www.haldasweden.com"
+    },
+    {
+        "id": 139,
+        "companyName": "Angelus",
+        "companyType": "watchmaker",
+        "founded": 1891,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null,
+        "url": "http://www.angelus-watches.com"
+    },
+    {
+        "id": 140,
+        "companyName": "De Bethune",
+        "companyType": "watchmaker",
+        "founded": 2002,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null,
+        "url": "http://www.debethune.ch"
+    },
+    {
+        "id": 141,
+        "companyName": "ETA",
+        "companyType": "watchmaker",
+        "founded": 1793,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39,
+        "url": "http://www.eta.ch"
     }
 ]
