@@ -1295,7 +1295,7 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": [
-            126
+            126, 133
         ],
         "parentID": null
     },
@@ -1305,10 +1305,12 @@
         "companyType": "holding",
         "founded": 1983,
         "licences": [
-            127, 128
+            127, 128, 130, 131, 132
         ],
         "nationality": "Switzerland",
-        "ownership": null,
+        "ownership": [
+            129
+        ],
         "parentID": 125
     },
     {
@@ -1330,5 +1332,65 @@
         "nationality": "United Kingdom",
         "ownership": null,
         "parentID": 126
+    },
+    {
+        "id": 129,
+        "companyName": "Breil",
+        "companyType": "watchmaker",
+        "founded": 1938,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 126
+    },
+    {
+        "id": 130,
+        "companyName": "Tommy Bahama",
+        "companyType": "licence",
+        "founded": 2009,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 126
+    },
+    {
+        "id": 131,
+        "companyName": "Betsey Johnson",
+        "companyType": "licence",
+        "founded": 1978,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 126
+    },
+    {
+        "id": 132,
+        "companyName": "BCBG",
+        "companyType": "licence",
+        "founded": 1989,
+        "licences": null,
+        "nationality": "United States",
+        "ownership": null,
+        "parentID": 126
+    },
+    {
+        "id": 133,
+        "companyName": "Dolce &amp; Gabbana",
+        "companyType": "licence",
+        "founded": 1985,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 125
+    },
+    {
+        "id": 134,
+        "companyName": "Moschino",
+        "companyType": "licence",
+        "founded": 1983,
+        "licences": null,
+        "nationality": "Italy",
+        "ownership": null,
+        "parentID": 125
     }
 ]
