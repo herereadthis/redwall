@@ -947,7 +947,7 @@
         "companyType": "holding",
         "founded": 1984,
         "licences": [
-            97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108
+            97, 98, 100, 101, 102, 103, 104, 105, 106, 107, 108
         ],
         "nationality": "United States",
         "ownership": [
@@ -1027,13 +1027,13 @@
     },
     {
         "id": 99,
-        "companyName": "Emporio Armani",
-        "companyType": "licence",
-        "founded": 1975,
+        "companyName": "Universal Genève",
+        "companyType": "watcmaker",
+        "founded": 1894,
         "licences": null,
-        "nationality": "Italy",
+        "nationality": "Switzerland",
         "ownership": null,
-        "parentID": 92
+        "parentID": null
     },
     {
         "id": 100,
@@ -1087,7 +1087,7 @@
     },
     {
         "id": 105,
-        "companyName": "Tory Birch",
+        "companyName": "Tory Burch",
         "companyType": "licence",
         "founded": 2004,
         "licences": null,
@@ -1392,5 +1392,35 @@
         "nationality": "Italy",
         "ownership": null,
         "parentID": 125
+    },
+    {
+        "id": 135,
+        "companyName": "URWERK",
+        "companyType": "watchmaker",
+        "founded": 1995,
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 136,
+        "companyName": "Victorinox Swiss Army",
+        "companyType": "watchmaker",
+        "founded": 1989,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
+    },
+    {
+        "id": 137,
+        "companyName": "Glycine",
+        "companyType": "watchmaker",
+        "founded": 1914,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null
     }
 ]
