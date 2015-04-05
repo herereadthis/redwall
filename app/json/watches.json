@@ -575,7 +575,8 @@
         "licences": null,
         "nationality": "United Kingdom",
         "ownership": null,
-        "parentID": null
+        "parentID": 143,
+        "url": "http://www.christopherward.com"
     },
     {
         "id": 55,
@@ -1492,12 +1493,47 @@
     {
         "id": 141,
         "companyName": "ETA",
-        "companyType": "watchmaker",
+        "companyType": "movement",
         "founded": 1793,
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
         "parentID": 39,
         "url": "http://www.eta.ch"
+    },
+    {
+        "id": 142,
+        "companyName": "Synergies Horlogères",
+        "companyType": "movement",
+        "founded": 2007,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39,
+        "url": "http://www.synhor.ch"
+    },
+    {
+        "id": 143,
+        "companyName": "C.W. London Holdings",
+        "companyType": "holding",
+        "founded": 2014,
+        "licences": null,
+        "nationality": "United Kindom",
+        "ownership": [
+            142, 54
+        ],
+        "parentID": null,
+        "url": "http://www.christopherward.com"
+    },
+    {
+        "id": 144,
+        "companyName": "Sellita",
+        "companyType": "movement",
+        "founded": 1950,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null,
+        "url": "http://www.sellita.ch"
     }
 ]
