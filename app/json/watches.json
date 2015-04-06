@@ -1535,5 +1535,16 @@
         "ownership": null,
         "parentID": null,
         "url": "http://www.sellita.ch"
+    },
+    {
+        "id": 145,
+        "companyName": "Edox",
+        "companyType": "watchmaker",
+        "founded": 1884,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null,
+        "url": "http://www.edox.ch"
     }
 ]
