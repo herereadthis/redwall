@@ -1546,5 +1546,16 @@
         "ownership": null,
         "parentID": null,
         "url": "http://www.edox.ch"
+    },
+    {
+        "id": 146,
+        "companyName": "Carl F. Bucherer",
+        "companyType": "watchmaker",
+        "founded": 1919,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": null,
+        "url": "http://www.carl-f-bucherer.com/"
     }
 ]
