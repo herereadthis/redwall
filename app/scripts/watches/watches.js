@@ -98,20 +98,20 @@ angular.module('redwallApp')
                     $scope.sortLicense = function(key) {
                         var sortColumn = _.where($scope.newKeys, {keyName: key});
 
-                        if ($scope.sortType = key) {
+                        if ($scope.sortType === key) {
                             sortColumn[0].state = !sortColumn[0].state;
                         }
 
                         $scope.licenseOrder = {
                             type: sortColumn[0].keyName,
                             reverse: sortColumn[0].state
-                        }
+                        };
                     };
                     $scope.launchWatchModal = function(rowID) {
-                        var _b, closeModal, openModal;
+                        var closeModal, openModal;
 
                         closeModal = _.find($scope.watchData, function(item) {
-                            return $scope.watchData.showModal === true;
+                            return item.showModal === true;
                         });
                         if (closeModal !== undefined) {
                             closeModal.showModal = false;
