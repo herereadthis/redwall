@@ -38,7 +38,7 @@ angular.module('redwallApp')
                                 $scope.watchData[_a].parentCompany = 
                                     parentCompany[0].companyName;
                             }
-                            $scope.watchData.showModal = false;
+                            $scope.watchData[_a].showModal = false;
                         }
 
                         $scope.licencedCompanies = $scope.watchData;
@@ -113,11 +113,22 @@ angular.module('redwallApp')
                         closeModal = _.find($scope.watchData, function(item) {
                             return item.showModal === true;
                         });
-                        if (closeModal !== undefined) {
-                            closeModal.showModal = false;
-                        }
+
                         openModal = _.findWhere($scope.watchData, {id: rowID});
-                        openModal.showModal = true;
+
+                        if (openModal.id === rowID && openModal.showModal === true) {
+                            window.console.log(1);
+                            openModal.showModal = false;
+                        }
+                        else {
+                            if (closeModal !== undefined) {
+                                closeModal.showModal = false;
+                            }
+                            openModal.showModal = true;
+                        }
+
+
+
                     };
                 }
             ],
