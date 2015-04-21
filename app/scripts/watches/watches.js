@@ -38,6 +38,7 @@ angular.module('redwallApp')
                                 $scope.watchData[_a].parentCompany = 
                                     parentCompany[0].companyName;
                             }
+                            $scope.watchData.showModal = false;
                         }
 
                         $scope.licencedCompanies = $scope.watchData;
@@ -75,7 +76,7 @@ angular.module('redwallApp')
                     $scope.licenseOrder = {
                         type: 'companyName',
                         reverse: false
-                    }
+                    };
 
                     $scope.sortType = 'companyName';
                     $scope.reverseSort = false;
@@ -83,14 +84,14 @@ angular.module('redwallApp')
                     $scope.sortCol = function(key) {
                         var sortColumn = _.where($scope.newKeys, {keyName: key});
 
-                        if ($scope.sortType = key) {
+                        if ($scope.sortType === key) {
                             sortColumn[0].state = !sortColumn[0].state;
                         }
 
                         $scope.colOrder = {
                             type: sortColumn[0].keyName,
                             reverse: sortColumn[0].state
-                        }
+                        };
                     };
 
 
@@ -105,6 +106,18 @@ angular.module('redwallApp')
                             type: sortColumn[0].keyName,
                             reverse: sortColumn[0].state
                         }
+                    };
+                    $scope.launchWatchModal = function(rowID) {
+                        var _b, closeModal, openModal;
+
+                        closeModal = _.find($scope.watchData, function(item) {
+                            return $scope.watchData.showModal === true;
+                        });
+                        if (closeModal !== undefined) {
+                            closeModal.showModal = false;
+                        }
+                        openModal = _.findWhere($scope.watchData, {id: rowID});
+                        openModal.showModal = true;
                     };
                 }
             ],

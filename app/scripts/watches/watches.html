@@ -18,7 +18,9 @@
             </thead>
             <tbody>
                 <tr ng-repeat="row in watchData | orderBy:colOrder.type:colOrder.reverse">
-                    <td><p ng-bind-html="row.companyName"></p></td>
+                    <td><p><a href ng-bind-html="row.companyName"
+                              ng-click="launchWatchModal(row.id)"></a></p>
+                              <p ng-if="row.showModal === true">Show Modal</p></td>
                     <td><p ng-bind-html="row.companyType"></p></td>
                     <td><p ng-bind-html="row.founded"></p></td>
                     <td><p ng-bind-html="row.nationality"></p></td>
