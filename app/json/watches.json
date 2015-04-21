@@ -948,7 +948,7 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
-        "parentID": 66
+        "parentID": 147
     },
     {
         "id": 91,
@@ -1518,7 +1518,7 @@
         "companyType": "holding",
         "founded": 2014,
         "licences": null,
-        "nationality": "United Kindom",
+        "nationality": "United Kingdom",
         "ownership": [
             142, 54
         ],
@@ -1557,5 +1557,40 @@
         "ownership": null,
         "parentID": null,
         "url": "http://www.carl-f-bucherer.com/"
+    },
+    {
+        "id": 147,
+        "companyName": "Citychamp",
+        "companyType": "holding",
+        "founded": 1991,
+        "licences": null,
+        "nationality": "Hong Kong",
+        "ownership": [
+            90, 148, 149
+        ],
+        "parentID": null,
+        "url": "http://www.citychampwatchjewellery.com/"
+    },
+    {
+        "id": 148,
+        "companyName": "Corum",
+        "companyType": "watchmaker",
+        "founded": 1955,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 147,
+        "url": "http://www.corum.ch"
+    },
+    {
+        "id": 149,
+        "companyName": "Rotary",
+        "companyType": "watchmaker",
+        "founded": 1895,
+        "licences": null,
+        "nationality": "United Kingdom",
+        "ownership": null,
+        "parentID": 147,
+        "url": "http://www.rotarywatches.com/"
     }
 ]
