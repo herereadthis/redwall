@@ -423,7 +423,7 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": [
-            40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 141, 151
+            40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 141, 151, 154
         ],
         "parentID": null
     },
@@ -1636,5 +1636,16 @@
         "ownership": null,
         "parentID": null,
         "url": "http://www.meistersinger.de/"
+    },
+    {
+        "id": 154,
+        "companyName": "Nivarox",
+        "companyType": "movement",
+        "founded": 1984,
+        "licences": null,
+        "nationality": "Switzerland",
+        "ownership": null,
+        "parentID": 39,
+        "url": "http://www.nivarox.com/"
     }
 ]
