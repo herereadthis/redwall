@@ -423,7 +423,7 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": [
-            40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 141
+            40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 141, 151
         ],
         "parentID": null
     },
@@ -463,7 +463,7 @@
         "companyType": "watchmaker",
         "founded": 1994,
         "licences": null,
-        "nationality": "German",
+        "nationality": "Germany",
         "ownership": null,
         "parentID": 39
     },
@@ -1140,7 +1140,7 @@
         "companyType": "licence",
         "founded": 1924,
         "licences": null,
-        "nationality": "German",
+        "nationality": "Germany",
         "ownership": null,
         "parentID": 92
     },
@@ -1592,5 +1592,49 @@
         "ownership": null,
         "parentID": 147,
         "url": "http://www.rotarywatches.com/"
+    },
+    {
+        "id": 150,
+        "companyName": "Mühle-Glashütte",
+        "companyType": "watchmaker",
+        "founded": 1994,
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": null,
+        "url": "http://www.muehle-glashuette.de/"
+    },
+    {
+        "id": 151,
+        "companyName": "Union Glashütte",
+        "companyType": "watchmaker",
+        "founded": 1893,
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": 39,
+        "url": "http://www.union-glashuette.com/"
+    },
+    {
+        "id": 152,
+        "companyName": "Tutima",
+        "companyType": "watchmaker",
+        "founded": 1927,
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": null,
+        "url": "http://www.tutima.com/"
+    },
+    {
+        "id": 153,
+        "companyName": "MeisterSinger",
+        "companyType": "watchmaker",
+        "founded": 2001,
+        "licences": null,
+        "nationality": "Germany",
+        "ownership": null,
+        "parentID": null,
+        "url": "http://www.meistersinger.de/"
     }
 ]
