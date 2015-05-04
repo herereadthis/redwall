@@ -66,8 +66,6 @@ angular.module('redwallApp')
                             };
                         });
                     });
-
-
                     $scope.colOrder = {
                         type: 'companyName',
                         reverse: false
@@ -126,9 +124,6 @@ angular.module('redwallApp')
                             }
                             openModal.showModal = true;
                         }
-
-
-
                     };
                 }
             ],
