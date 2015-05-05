@@ -124,7 +124,14 @@ angular.module('redwallApp')
                             }
                             openModal.showModal = true;
                         }
+                        $scope.showWatchDetail = true;
+                        $scope.watchDetail = {
+                            title: openModal.companyName
+                        };
                     };
+                    $scope.showWatchDetail = false;
+                    $scope.watchDetail = {};
+
                 }
             ],
             templateUrl: '/scripts/watches/watches.html'
