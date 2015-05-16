@@ -802,7 +802,7 @@
         "licences": null,
         "nationality": "Switzerland",
         "ownership": null,
-        "parentID": null
+        "parentID": 78
     },
     {
         "id": 77,
@@ -822,7 +822,7 @@
         "licences": null,
         "nationality": "France",
         "ownership": [
-            77
+            76, 77, 79
         ],
         "parentID": null
     },
