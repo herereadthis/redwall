@@ -1,0 +1,194 @@
+@sizer: floor((((2 / 12) * 100vw) - 1) * 10) / 10;
+@aHeightSizer: round((@sizer - 0.4rem) * 1.618 * 10) / 10;
+
+[data-module="banner_image"] {
+    margin-right: 1rem;
+
+    a {
+        display: block;
+        border: 0.2rem solid #00F;
+        background-color: @color_maya_blue;
+        position: relative;
+    }
+    img {
+        width: 100%;
+        top: 0;
+        position: relative;
+        z-index: 3;
+    }
+    span {
+        display: block;
+        text-align: center;
+        position: absolute;
+        z-index: 1;
+    }
+
+    @media @da_baseline {
+        display: none;
+    }
+    @media @da_x_small {
+        display: block;
+        float: left;
+        margin: 0;
+        width: floor((((2 / 12) * 100vw) - 1) * 10) / 10;
+
+        a {
+        }
+        span {
+            font-size: 1.5rem;
+            padding: 7rem 1rem 0 1rem;
+        }
+    }
+    @media @da_small {
+        @sizer: floor((((2 / 12) * @pw_small) - 1) * 10) / 10;
+        width: @sizer;
+
+        a {
+            width: @sizer - 0.4rem;
+            height: @aHeightSizer;
+        }
+        span {
+            font-size: 1.5rem;
+            padding: 8rem 1rem 0 1rem;
+        }
+    }
+    @media @da_medium {
+        margin: 1rem 0 0 0rem;
+        @sizer: floor((((2 / 12) * @pw_medium) - 1) * 10) / 10;
+        width: @sizer;
+
+        a {
+            width: @sizer - 0.4rem;
+            height: @aHeightSizer;
+        }
+        span {
+            font-size: 2rem;
+            padding: 8rem 1.5rem 0 1.5rem;
+        }
+    }
+    @media @da_large {
+        @sizer: floor((((2 / 12) * @pw_large) - 2) * 10) / 10;
+        width: @sizer;
+
+        a {
+            width: @sizer - 0.4rem;
+            height: @aHeightSizer;
+        }
+        span {
+            font-size: 2.5rem;
+            padding: 10rem 2rem 0 2rem;
+        }
+    }
+    /*
+    @media @da_x_large {
+        width: ((2 / 12) * @pw_x_large) - 2;
+        height: floor(((((2 / 12) * @pw_x_large) - 1.4rem) * 1.618) * 10) / 10;
+
+        a {
+            height: floor(((((2 / 12) * @pw_x_large) - 1.4rem) * 1.618 - 0.4rem) * 10) / 10;
+        }
+        span {
+            font-size: 3rem;
+            padding: 11rem 3rem 0 3rem;
+        }
+    }
+    */
+}
+
+
+[role="banner"] {
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+    > span {
+        display: block;
+        display: none;
+        color: #FFF;
+        font-size: 1.2rem;
+        height: 1.5rem;
+    }
+    > .bellmaker_container {
+        @media @da_baseline {
+            padding-bottom: 1rem;
+        }
+        @media @da_medium {
+            padding-bottom: 0;
+        }
+    }
+    .popup_box_simulator {
+
+        @media @da_baseline {
+            float: none;
+            margin-left: 0;
+        }
+        @media @da_x_small {
+            margin-right: 0rem;
+            float: right;
+            width: ((10 / 12) * @pw_x_small) - 2;
+        }
+        @media @da_small {
+            margin-right: 1rem;
+            width: ((10 / 12) * @pw_small) - 2;
+        }
+        @media @da_medium {
+            width: ((10 / 12) * @pw_medium) - 2;
+        }
+        @media @da_large {
+            width: ((10 / 12) * @pw_large) - 2;
+        }
+        /*
+        @media @da_x_large {
+            width: ((10 / 12) * @pw_x_large) - 2;
+        }
+        */
+    }
+    h1 {
+        padding: 1rem 0 0rem 0;
+
+        @media @da_baseline {
+            font-size: 3rem;
+            line-height: 4rem;
+            text-align: center;
+        }
+        @media @da_2x_small {
+            font-size: 4rem;
+            line-height: 5rem;
+            margin-left: 1rem;
+        }
+        @media @da_x_small {
+            font-size: 4rem;
+            line-height: 5rem;
+            text-align: left;
+        }
+    }
+    #construction {
+        height: 5rem;
+        background: transparent url("@{img_path}under_construction_572x44.gif") scroll no-repeat 50% 0.3rem;
+
+        @media @da_baseline {
+        }
+        @media @da_x_small {
+            float: right;
+            width: @pw_x_small;
+        }
+        @media @da_small {
+            width: @pw_small;
+        }
+        @media @da_medium {
+            width: ((10 / 12) * @pw_medium);
+            background-position: 3.4rem 0.3rem;
+        }
+        @media @da_large {
+            width: ((10 / 12) * @pw_large);
+            background-position: 9.8rem 0.3rem;
+        }
+        /*
+        @media @da_x_large {
+            width: ((10 / 12) * @pw_x_large);
+            background-position: 16.2rem 0.3rem;
+        }
+        */
+    }
+}

@@ -1,128 +1,63 @@
 <!doctype html>
 <html lang="en" dir="ltr" xml:lang="en" class="no-js"
-prefix="og: http://ogp.me/ns#
+      prefix="og: http://ogp.me/ns#
 fb: http://ogp.me/ns/fb#
 foaf: http://xmlns.com/foaf/0.1/
 dc: http://purl.org/dc/terms/
 v: http://rdf.data-vocabulary.org/#
-owl: http://www.w3.org/2002/07/owl#"
-ng-app="redwallApp">
+owl: http://www.w3.org/2002/07/owl#">
 <head>
     <meta charset="utf-8">
-    <title property="dc:title" data-ng-bind-html="title">Here, Read This</title>
-<!-- Metadata Standards + Dublin Core RDFA -->
+    <title property="dc:title">Here, Read This</title>
+    <!-- Metadata Standards + Dublin Core RDFA -->
     <meta name="robots" content="INDEX, FOLLOW" />
     <meta name="keywords" content="Here, Read This, Jimmy Ha, web development, photography, Baking, Gardening" />
     <meta property="dc:creator" name="author" content="Jimmy Ha" />
     <meta property="dc:created" content="2014-01-15" />
     <meta property="dc:language" content="en-US" />
-<!-- Open Graph RDFa -->
+    <!-- Open Graph RDFa -->
     <meta property="og:title" content="Here, Read This" />
     <meta property="og:description" name="description" content="A website by Jimmy Ha about photography, gardening, and baking." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://herereadthis.com/" />
+    <!--
     <meta property="og:image" content="/images/branding/herereadthis_fb_320x320.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="320" />
     <meta property="og:image:height" content="320" />
     <meta property="og:site_name" content="Here, Read This" />
-<!-- browser-specific tags -->
+    -->
+    <!-- browser-specific tags -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<!-- Facebook RDFa -->
+    <!-- Facebook RDFa -->
     <meta property="fb:admins" content="104276" />
     <meta property="fb:app_id" content="146371075435162" />
-<!-- Bing Site Verification -->
+    <!-- Bing Site Verification -->
     <meta name="msvalidate.01" content="F7EE73CB34D5AF1C9DC816A5C75C32E6" />
-<!-- Google Site Verification -->
+    <!-- Google Site Verification -->
     <meta name="google-site-verification" content="mczqUD0AU2jqxVwDld32k25wCRWJb5bMuQoCzvQCdfE" />
-<!-- Google Plus Verification -->
+    <!-- Google Plus Verification -->
     <link rel="author" href="https://plus.google.com/113505279995940079003" />
     <link rel="publisher" href="https://plus.google.com/110556642392047316226" />
-<!-- Pinterest Site Verification -->
+    <!-- Pinterest Site Verification -->
     <meta name="p:domain_verify" content="642e03628ffc0809c6eab89aa14fb65b" />
-<!-- Friend of a Friend FOAF -->
+    <!-- Friend of a Friend FOAF -->
+    <!--
     <link rel="foaf:primaryTopic" type="application/rdf+xml" title="FOAF" href="http://herereadthis.com/build/xml/foaf.rdf" />
+    -->
     <base href="/" />
+    <!--
     <link rel="canonical" href="{{ location }}" />
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600' type='text/css' />
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic' type='text/css' />
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+    -->
+    <link rel="stylesheet" href="global.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-
-<div data-ng-view=""></div>
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-37798496-1');
-    ga('send', 'pageview');
-</script>
-
-<!-- build:js(.) scripts/oldieshim.js -->
-<!--[if lt IE 9]>
-<script src="bower_components/es5-shim/es5-shim.js"></script>
-<script src="bower_components/json3/lib/json3.js"></script>
-<![endif]-->
-<!-- endbuild -->
-
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-aria/angular-aria.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-messages/angular-messages.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/underscore/underscore.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
-
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<script src="scripts/controllers/about.js"></script>
-<script src="scripts/components/socialFu/socialFu.js"></script>
-<script src="scripts/components/parallaxScroll/parallaxScroll.js"></script>
-<script src="scripts/components/popupBoxSimulator/popupBoxSimulator.js"></script>
-<script src="scripts/homepage/homepage.js"></script>
-<script src="scripts/homepage/directives/bannerAds.js"></script>
-<script src="scripts/homepage/directives/hitCounter.js"></script>
-<script src="scripts/homepage/directives/retroFooter.js"></script>
-<script src="scripts/homepage/directives/retroBanner.js"></script>
-<script src="scripts/homepage/directives/retroArt.js"></script>
-<script src="scripts/homepage/directives/retroRules.js"></script>
-<script src="scripts/homepage/directives/rileyFu.js"></script>
-<script src="scripts/homepage/services/colorShift.js"></script>
-<script src="scripts/homepage/services/pageCount.js"></script>
-<script src="scripts/homepage/directives/greeter.js"></script>
-<script src="scripts/linkOfTheDay/linkOfTheDay.js"></script>
-<script src="scripts/watches/watches.js"></script>
-<!-- endbuild -->
+<div id="app"></div>
+<script type="text/javascript" src="vendors.js"></script>
+<script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>

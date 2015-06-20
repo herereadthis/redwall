@@ -1,0 +1,112 @@
+.bellmaker_container {
+    @media @da_x_large {
+        width: @pw_large;
+    }
+}
+
+body {
+    article {
+        clear: both;
+
+        > section {
+            box-sizing: border-box;
+            position: relative;
+            clear: both;
+
+            &:last-of-type {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+img {
+    display: block;
+    p & {
+        display: inline;
+    }
+}
+p {
+    font: normal normal bold 18px/25px 'Microsoft Sans Serif', sans-serif;
+    /*font: normal normal normal 50px/50px Helvetica, Arial, sans-serif;*/
+    color: #000;
+}
+hr {
+    height: 2px;
+    border: 0;
+    margin: 19px auto;
+    padding: 0;
+}
+
+.starfield {
+    // background: transparent url("@{img_path}space_bg.gif") repeat scroll 0 bottom;
+    background-image: url("@{img_path}space_bg.gif");
+    background-position: 50% 0;
+}
+.parallax_scroll {
+    background-attachment: fixed;
+}
+
+
+.rainbow_gradient {
+    background-image: linear-gradient(90deg, #000020 0%, #000871 5%, #0021c2 10%, #004ff7 15%,
+    #008dff 20%, #00cad9 25%, #01f88f 30%, #00ff3f 35%, #00f609 40%, #00d400 45%,
+    #00a400 50%, #0a6900 55%, #502a00 60%, #a80000 65%, #f80000 70%, #ff0000 75%,
+    #ff1400 80%, #ff8c00 85%, #ffe600 90%, #ffff2e 95%, #FFFFFF 100%);
+}
+
+
+.old_school_table {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: #CCC #515151 #515151 #CCC;
+    border-spacing: 0.5rem;
+    border-collapse: separate;
+
+    tr {
+    }
+    td {
+        display: block;
+        text-align: center;
+        padding: 0.5rem;
+        border-width: 0.1rem;
+        border-style: solid;
+        border-color: #515151 #CCC #CCC #515151;
+    }
+    @media @da_baseline {
+        dispalay: block;
+        width: 100%;
+
+        tr, td {
+            display: block;
+        }
+        td {
+            margin-bottom: 0.5rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    @media @da_x_small {
+        display: table;
+
+        tr {
+            display: table-row;
+        }
+        td {
+            display: table-cell;
+            margin-bottom: 0;
+        }
+        img {
+            width: auto;
+        }
+    }
+}
+
+

@@ -1,0 +1,88 @@
+
+.centered_image {
+    margin: 0 auto;
+
+    img, [data-sprite] {
+        margin: 0 auto;
+        max-width: 100%
+    }
+}
+
+@id: #2F4F4F;
+@ibd: linear-gradient(0deg, @id 0%, @id 100%);
+@im: #BEBEBE;
+@ibm: linear-gradient(0deg, @im 0%, @im 100%);
+@il: #E6E6FA;
+@ibl: linear-gradient(0deg, @il 0%, @il 100%);
+
+.icon_box {
+    width: 4rem;
+    height: 4rem;
+    background-image:
+    @ibm, @ibl, @ibl, @ibd, @ibl, @ibd, @ibd, @ibd, @ibd, @ibl;
+    background-size:
+    3.2rem 3.2rem, 3.4rem 0.1rem, 0.1rem 3.4rem, 3.4rem 3.4rem, 3.6rem 3.6rem,
+    4rem 0.1rem, 3.8rem 0.1rem, 0.1rem 4rem, 0.1rem 3.8rem, 4rem 4rem;
+    background-position:
+    0.4rem 0.4rem, 0.3rem 3.6rem, 3.6rem 0.3rem, 0.3rem 0.3rem, 0.2rem 0.2rem,
+    0rem 3.9rem, 0.1rem 3.8rem, 3.9rem 0rem, 3.8rem 0.1rem, 0 0;
+    background-repeat: no-repeat;
+}
+
+@icon_size_retina: 10rem 20rem;
+@icon_size_full: 20rem 40rem;
+[data-sprite] {
+    background-image: url("@{img_path}icon_logo_sprites.png");
+    background-repeat: no-repeat;
+}
+[data-sprite="broken_image"] {
+    background-size: @icon_size_retina;
+    background-position: 0.3rem -4.7rem;
+    width: 31px;
+    height: 32px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @wdg @wlg @wlg @wdg;
+    padding: 0.3rem 0.4rem 0.3rem 0.3rem;
+}
+[data-sprite="email"] {
+    background-position: 0 0;
+    background-size: @icon_size_retina;
+    width: 3.2rem;
+    height: 3.2rem;
+
+    .icon_box & {
+        width: 4rem;
+        height: 4rem;
+        background-position: 0.4rem 0.4rem;
+    }
+}
+[data-sprite="tripod_125x71"] {
+    background-size: @icon_size_full;
+    width: 12.5rem;
+    height: 7.1rem;
+    background-position: 0rem -30rem;
+}
+
+
+.geocities_me {
+    h3, p, li {
+        color: #FF0;
+    }
+    h3 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    p, li {
+        font-size: 1.5rem;
+        line-height: 2.0rem;
+    }
+    ul {
+        padding: 0 0 2rem 0;
+    }
+    li {
+        padding: 0 0 0rem 2rem;
+        list-style-type: none;
+        background: transparent  url("@{img_path}ball_14x14.gif") scroll no-repeat 0 0.2rem;
+    }
+}
