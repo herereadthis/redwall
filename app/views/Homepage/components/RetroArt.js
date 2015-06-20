@@ -67,9 +67,7 @@ export default class RetroArt extends React.Component {
                 <section className="bellmaker_container">
 
                     <div className="centered_image">
-                        <img
-                            src="http://herereadthis.com/build/images/homepage/netscape_88x31.gif"
-                            width={88} height={31}/>
+                        {AppConstants.DataSprite('netscape_88x31')}
                     </div>
 
                     <h3 className="before_text_1">
@@ -101,9 +99,7 @@ export default class RetroArt extends React.Component {
                     </div>
 
                     <div className="centered_image" style={addPadding(1)}>
-                        <img
-                            src="http://herereadthis.com/build/images/homepage/under_construction_128x40.gif"
-                            width={128} height={31}/>
+                        {AppConstants.DataSprite('under_construction_128x40')}
                     </div>
 
                     <hr className="rainbow_gradient"/>
