@@ -28,6 +28,7 @@ export default class App extends React.Component {
 
     componentWillMount() {
         let currentPath = this.currentPath();
+        this.props.flux.getActions(AppActions.ID).setCacheAge();
         this.props.flux.getActions(AppActions.ID).recordLastPath(currentPath);
     }
 

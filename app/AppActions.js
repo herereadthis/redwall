@@ -19,6 +19,12 @@ export default class AppActions extends Actions {
         return status;
     }
 
+    setCacheAge() {
+        window.console.log('foo action');
+        var currentTime = new Date();
+        return currentTime;
+    }
+
     async fetchHitCount(url) {
         return url;
     }

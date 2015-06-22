@@ -31,6 +31,12 @@ export default class AppStore extends Store {
         KEY: 'lastCache',
         TIME: 86400000
     };
+    static APP_CACHE = {
+        KEY: 'cacheAge',
+        VALID: 'cacheValidity',
+        LIMIT: 86400000
+    };
+
     static NINETIES_IMG = {
         NAME: 'ninetiesImg',
         INDEX_NAME: 'ninetiesImgIndex',
@@ -53,11 +59,62 @@ export default class AppStore extends Store {
 
         this.registerAsync(appActionsIds.fetchTimestamp, this.fetchTimestamp);
         this.registerAsync(appActionsIds.fetch90sImage, this.fetch90sImage);
-        this.register(appActionsIds.store90sImage, this.store90sImage);
         this.registerAsync(appActionsIds.fetchHitCount, this.fetchHitCount);
         this.register(appActionsIds.getLastPath, this.getLastPath);
         this.register(appActionsIds.recordLastPath, this.recordLastPath);
+        this.register(appActionsIds.setCacheAge, this.setCacheAge);
+        this.register(appActionsIds.store90sImage, this.store90sImage);
     }
+
+
+    getLocalCacheData = () => {
+        var last = LocalStorageMethods.get(AppStore.APP_CACHE.KEY);
+        var valid = LocalStorageMethods.get(AppStore.APP_CACHE.VALID);
+
+        return {
+            last,
+            valid
+        }
+    };
+
+    setCacheAge(currentTime) {
+
+        var cacheData = this.getLocalCacheData();
+
+        if (cacheData.last === undefined || cacheData.valid === undefined) {
+            LocalStorageMethods.set(AppStore.APP_CACHE.VALID, false);
+        }
+        cacheData = this.getLocalCacheData();
+        if (cacheData.valid === false) {
+            LocalStorageMethods.set(AppStore.APP_CACHE.KEY, currentTime);
+        }
+
+        var dateDiff = Date.parse(currentTime) - Date.parse(cacheData.last);
+
+        // if the time between the last cache and now is greater than the cache
+        // limit or if the new cache time is now.
+        if (dateDiff > AppStore.APP_CACHE.LIMIT  ||
+            cacheData.last === undefined) {
+            LocalStorageMethods.set(AppStore.APP_CACHE.VALID, false);
+            LocalStorageMethods.set(AppStore.APP_CACHE.KEY, currentTime);
+        }
+        // else, last cache is still valid
+        else {
+            LocalStorageMethods.set(AppStore.APP_CACHE.VALID, true);
+        }
+        cacheData = this.getLocalCacheData();
+        window.console.log(cacheData);
+
+
+
+
+
+
+
+    }
+
+
+
 
     fetchTimestamp() {
         axios.get('/timestamp.json')
