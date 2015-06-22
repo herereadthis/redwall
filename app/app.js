@@ -33,6 +33,7 @@ export default class App extends React.Component {
     }
 
     render() {
+        window.console.log(this.props.cacheAge, this.props.cacheValidity);
         return (
             <div>
                 <Homepage {...this.props} />

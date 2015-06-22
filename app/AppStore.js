@@ -52,7 +52,9 @@ export default class AppStore extends Store {
             popupBox,
             timestamp: {},
             ninetiesImgSize: 0,
-            hitCounterFigures: HomepageConfig.hitCounterFigures
+            hitCounterFigures: HomepageConfig.hitCounterFigures,
+            cacheAge: null,
+            cacheValidity: null
         };
 
         const appActionsIds = flux.getActionIds(AppActions.ID);
@@ -63,7 +65,6 @@ export default class AppStore extends Store {
         this.register(appActionsIds.getLastPath, this.getLastPath);
         this.register(appActionsIds.recordLastPath, this.recordLastPath);
         this.register(appActionsIds.setCacheAge, this.setCacheAge);
-        this.register(appActionsIds.store90sImage, this.store90sImage);
     }
 
 
@@ -78,8 +79,9 @@ export default class AppStore extends Store {
     };
 
     setCacheAge(currentTime) {
+        var cacheData, dateDiff;
 
-        var cacheData = this.getLocalCacheData();
+        cacheData = this.getLocalCacheData();
 
         if (cacheData.last === undefined || cacheData.valid === undefined) {
             LocalStorageMethods.set(AppStore.APP_CACHE.VALID, false);
@@ -89,7 +91,7 @@ export default class AppStore extends Store {
             LocalStorageMethods.set(AppStore.APP_CACHE.KEY, currentTime);
         }
 
-        var dateDiff = Date.parse(currentTime) - Date.parse(cacheData.last);
+        dateDiff = Date.parse(currentTime) - Date.parse(cacheData.last);
 
         // if the time between the last cache and now is greater than the cache
         // limit or if the new cache time is now.
@@ -103,14 +105,11 @@ export default class AppStore extends Store {
             LocalStorageMethods.set(AppStore.APP_CACHE.VALID, true);
         }
         cacheData = this.getLocalCacheData();
-        window.console.log(cacheData);
 
-
-
-
-
-
-
+        this.setState({
+            cacheAge: cacheData.last,
+            cacheValidity: cacheData.valid
+        });
     }
 
 
@@ -127,11 +126,10 @@ export default class AppStore extends Store {
 
     fetch90sImage() {
         let url = 'http://redwall.herereadthis.com/api/banner_image/';
-        let updateCache = this.store90sImage();
 
         // if the cache is too old, or if 90s image data has not been stored, or
         // if the size of the data has not been stored
-        if (updateCache === true ||
+        if (this.state.cacheValidity === false ||
             LocalStorageMethods.get(AppStore.NINETIES_IMG.NAME) === undefined ||
             LocalStorageMethods.get(AppStore.NINETIES_IMG.AMT) === undefined) {
             window.console.log('update cache!');
@@ -183,26 +181,6 @@ export default class AppStore extends Store {
             AppConstants.getRandomInteger(size)
         );
     };
-
-    store90sImage() {
-        let cache90sImage, newCache, dateDiff, updateCache;
-
-        cache90sImage = LocalStorageMethods.get(AppStore.UPDATE_CACHE.KEY);
-        newCache = new Date();
-        updateCache = false;
-
-        if (cache90sImage === undefined) {
-            cache90sImage = new Date();
-            updateCache = true;
-        }
-        dateDiff = Date.parse(newCache) - Date.parse(cache90sImage);
-
-        if (dateDiff - AppStore.UPDATE_CACHE.TIME > 0) {
-            updateCache = true;
-        }
-        return updateCache;
-    }
-
 
     fetchHitCount(path) {
         window.console.log(path);

@@ -25,7 +25,6 @@ export default class Banner extends React.Component {
     }
 
     componentWillMount() {
-        this.props.flux.getActions(AppActions.ID).store90sImage(true);
         this.props.flux.getActions(AppActions.ID).fetch90sImage(true);
     }
 

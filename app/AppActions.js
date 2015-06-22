@@ -15,12 +15,7 @@ export default class AppActions extends Actions {
         return status;
     }
 
-    store90sImage(status) {
-        return status;
-    }
-
     setCacheAge() {
-        window.console.log('foo action');
         var currentTime = new Date();
         return currentTime;
     }
@@ -28,7 +23,6 @@ export default class AppActions extends Actions {
     async fetchHitCount(url) {
         return url;
     }
-
 
     recordLastPath(path) {
         return path;
