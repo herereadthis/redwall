@@ -122,7 +122,6 @@ export default class AppStore extends Store {
 
     fetch90sImage() {
         let url = 'http://redwall.herereadthis.com/api/banner_image/';
-        let _this = this;
 
         // if the cache is too old, or if 90s image data has not been stored, or
         // if the size of the data has not been stored
@@ -133,8 +132,6 @@ export default class AppStore extends Store {
             axios.get(url)
                 .then((response) => {
                     let dataLength = response.data.length;
-                    window.console.log(dataLength);
-                    window.console.log(_this.setNew90sIndex);
                     // store the size of the data
                     LocalStorageMethods.set(
                         AppStore.NINETIES_IMG.AMT,
@@ -146,10 +143,7 @@ export default class AppStore extends Store {
                         AppStore.NINETIES_IMG.NAME,
                         JSON.stringify(response.data)
                     );
-                    window.console.log(dataLength);
-                    window.console.log('awgohwfe');
-                    window.console.log(this);
-                    _this.setNew90sIndex(dataLength);
+                    this.setNew90sIndex(dataLength);
                 }
             );
         }
@@ -166,10 +160,11 @@ export default class AppStore extends Store {
             ninetiesImgSize: size
         });
         let randomIndex = AppConstants.getRandomInteger(size);
+
+        window.console.log(randomIndex);
         let cIndex = LocalStorageMethods.get(AppStore.NINETIES_IMG.INDEX_NAME);
-
-
-        window.console.log('aowigh;nk');
+        window.console.log(cIndex);
+        
         // insure that the random generation is always different than the
         // previous render
         if (cIndex !== undefined) {
