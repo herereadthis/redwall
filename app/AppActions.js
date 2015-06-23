@@ -20,10 +20,6 @@ export default class AppActions extends Actions {
         return currentTime;
     }
 
-    async fetchHitCount(url) {
-        return url;
-    }
-
     recordLastPath(path) {
         return path;
     }

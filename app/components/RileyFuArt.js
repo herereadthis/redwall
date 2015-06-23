@@ -67,27 +67,24 @@ export default class RileyFuArt {
 
 
     static drawCanvas = () => {
-        var _i, getColor;
-        var rileyRect = [];
+        var canvas, context, _l, getColor;
 
-        for (_i = 0;_i < colLength;_i = _i + 1) {
-            getColor = rileyColors[rileyColumns[colLength - _i - 1]];
-            rileyRect.push({
-                x: _i * colWidth,
-                y: 0,
-                w: colWidth,
-                h: colWidth,
-                fill: getColor
-            });
+        canvas = document.createElement('canvas');
+        canvas.width = colWidth * colLength;
+        canvas.height = colWidth;
+        context = canvas.getContext('2d');
+
+        for (_l = 0;_l < colLength;_l = _l + 1) {
+            getColor = rileyColors[rileyColumns[colLength - _l - 1]];
+            context.fillStyle = getColor;
+            context.fillRect(_l * colWidth, 0, colWidth, colWidth);
         }
 
-/*
-        let updateCache = AppStore.store90sImage;
-        window.console.log(updateCache);
-        */
+        LocalStorageMethods.set(RileyFuArt.storeRileyShape, JSON.stringify(canvas.toDataURL('image/png')));
 
-        LocalStorageMethods.set(RileyFuArt.storeRileyShape, JSON.stringify(rileyRect));
-        window.console.log(JSON.parse(LocalStorageMethods.get(RileyFuArt.storeRileyShape)).length);
+        var rileyTemplate = JSON.parse(LocalStorageMethods.get(RileyFuArt.storeRileyShape));
+
+        window.console.log(rileyTemplate);
     };
 
     static setBackgroundPosition = () => {
