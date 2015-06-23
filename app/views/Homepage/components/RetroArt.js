@@ -29,7 +29,7 @@ export default class RetroArt extends React.Component {
             return;
         }
         this.props.flux.getActions(AppActions.ID).fetchTimestamp(true);
-
+/*
         var starfield = React.findDOMNode(this.refs.starfield);
 
         ParallaxScroll.moveBackground(-50, starfield);
@@ -38,6 +38,7 @@ export default class RetroArt extends React.Component {
             ParallaxScroll.killScrollListener();
             ParallaxScroll.moveBackground(-50, starfield);
         }, true);
+        */
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -61,7 +62,9 @@ export default class RetroArt extends React.Component {
         };
 
         return (
-            <article id="retro_art" className="starfield cinnamon_fantasy parallax_scroll"
+            <article id="retro_art"
+                     className="starfield cinnamon_fantasy parallax_scroll"
+                     data-parallax-speed="-50"
                      data-cinnamon-fantasy ref="starfield">
                 <h2>This website is all that and a bag of chips!</h2>
                 <section className="bellmaker_container">

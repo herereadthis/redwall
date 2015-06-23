@@ -7,12 +7,27 @@ import RetroArt from './components/RetroArt';
 import RetroRules from './components/RetroRules';
 import RileyFu from './components/RileyFu';
 
+import ParallaxScroll from 'components/ParallaxScroll';
+
 export default class Homepage extends React.Component {
     constructor() {
         super();
         this.state = {
             scrollTop: 0
         }
+    }
+
+    componentDidMount() {
+
+        var starfield = document.getElementsByClassName('starfield');
+
+        ParallaxScroll.moveBackground(starfield);
+
+        window.addEventListener('resize', function () {
+            ParallaxScroll.killScrollListener();
+            ParallaxScroll.moveBackground(starfield);
+        }, true);
+
     }
 
     render() {

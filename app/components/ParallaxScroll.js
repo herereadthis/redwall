@@ -1,5 +1,9 @@
 'use strict';
 
+let elements = [];
+
+let elementOffsets = [];
+
 export default class ParallaxScroll {
 
     static getBgPosition = (bgStyle) => {
@@ -33,12 +37,22 @@ export default class ParallaxScroll {
 
     };
 
-    static setBackground = (
-        parallaxSpeed, bgStyle, domHeight, offFromTop, starfield) => {
+    static setBackground = () => {
         var dScroll = document.body.scrollTop,
             wHeight = window.innerHeight,
             scrollSpeed, yPosition, newBgPosition;
 
+        var _k;
+
+        for (_k = 0;_k < elements.length;_k = _k + 1) {
+            elementOffsets[_k] = Math.round(
+                elements[_k].node.getBoundingClientRect().top);
+        }
+        window.console.log(elementOffsets);
+
+        //window.console.log(elements);
+
+        /*
         // logic:
         // 1. the top edge of the element is inside the window during scrolling,
         // 2. the bottom edge of the element has not been exceeded by scrolling
@@ -53,27 +67,52 @@ export default class ParallaxScroll {
             // combine exising x-position and y-position of background-position
             newBgPosition = `${bgStyle[0]} ${yPosition}px`;
 
-            starfield.style.backgroundPosition = newBgPosition;
+            //starfield.style.backgroundPosition = newBgPosition;
+            //document.getElementsByClassName('starfield').style.backgroundPosition = newBgPosition;
+            window.console.log(document.getElementsByClassName('starfield'), 2);
         }
+        */
     };
 
-    static moveBackground = (parallaxSpeed, starfield) => {
-        var domHeight, offFromTop, bgStyle, bgPosition;
+    static moveBackground = (starfield) => {
+        var getParallaxSpeed, parallaxRef, bgPosition, _l, bgStyle = [];
 
-        domHeight = starfield.offsetHeight;
-        offFromTop = Math.round(starfield.getBoundingClientRect().top);
-        bgStyle = getComputedStyle(starfield)['background-position'];
-        bgPosition = ParallaxScroll.getBgPosition(bgStyle);
+        elements = [];
 
-        window.addEventListener('scroll', function (event) {
-            ParallaxScroll.setBackground(
-                parallaxSpeed, bgPosition, domHeight, offFromTop, starfield
-            );
-        }, true);
+        // first starfield describes all starfields
+
+        for (_l = 0;_l < starfield.length;_l = _l + 1) {
+            getParallaxSpeed = 0;
+            parallaxRef = starfield[_l].getAttribute('data-parallax-speed');
+            if (parallaxRef !== undefined && parallaxRef !== null &&
+                isNaN(parallaxRef) === false) {
+                getParallaxSpeed = parseInt(parallaxRef, 10);
+            }
+
+            bgStyle.push(getComputedStyle(
+                starfield[_l])['background-position']);
+            bgPosition = ParallaxScroll.getBgPosition(bgStyle[_l]);
+
+            /*
+
+             offFromTop: Math.round(
+             starfield[_l].getBoundingClientRect().top),
+             */
+
+            elements.push({
+                node: starfield[_l],
+                parallaxSpeed: getParallaxSpeed,
+                domHeight: starfield[_l].offsetHeight,
+                bgX: bgPosition[0],
+                bgY: bgPosition[1]
+            });
+        }
+        window.console.log(elements);
+
+        window.addEventListener('scroll', ParallaxScroll.setBackground, true);
     };
 
     static killScrollListener = () => {
-        window.removeEventListener('scroll', function () {
-        }, true);
+        window.removeEventListener('scroll', ParallaxScroll.setBackground, true);
     }
 };

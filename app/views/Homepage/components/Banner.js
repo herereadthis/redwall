@@ -29,14 +29,17 @@ export default class Banner extends React.Component {
     }
 
     componentDidMount() {
+        /*
         var starfield = React.findDOMNode(this.refs.starfield);
 
         ParallaxScroll.moveBackground(-50, starfield);
+        window.console.log('foo');
 
         window.addEventListener('resize', function () {
             ParallaxScroll.killScrollListener();
             ParallaxScroll.moveBackground(-50, starfield);
         }, true);
+        */
     }
 
 
@@ -147,7 +150,9 @@ export default class Banner extends React.Component {
         }
 
         return (
-            <header role="banner" ref="starfield" className="starfield parallax_scroll">
+            <header role="banner" ref="starfield"
+                    className="starfield parallax_scroll"
+                    data-parallax-speed="-50">
                 <div className="bellmaker_container">
                     <div id="construction" role="presentation"></div>
                     <div id="header_panel" data-module="banner_image" ref="bannerImg">
