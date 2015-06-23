@@ -45,7 +45,7 @@ export default class RileyFuArt {
 
 
         if (windowWidth < breakpoints[0]) {
-            bgX = bgWidth + (11 / 12) * _width;
+            bgX = bgWidth + (11 / 12) * windowWidth;
         }
         else if (windowWidth < breakpoints[1]) {
             bgX = bgWidth + ((windowWidth - mediaQueries[0]) / 2) + ((1 / 6) * mediaQueries[0]);
@@ -85,6 +85,8 @@ export default class RileyFuArt {
         var rileyTemplate = JSON.parse(LocalStorageMethods.get(RileyFuArt.storeRileyShape));
 
         window.console.log(rileyTemplate);
+
+        return rileyTemplate;
     };
 
     static setBackgroundPosition = () => {

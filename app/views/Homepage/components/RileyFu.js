@@ -11,15 +11,17 @@ export default class RileyFu extends React.Component {
     }
 
     componentWillMount() {
+        window.console.log(this.props.cacheValidity);
     }
 
     componentDidMount() {
         var backgroundPosition = RileyFuArt.setBackgroundPosition();
+        var backgroundImage = RileyFuArt.drawCanvas();
         var rileyFu =  React.findDOMNode(this.refs.rileyFu);
 
-        RileyFuArt.drawCanvas();
 
         rileyFu.style.backgroundPosition = backgroundPosition;
+        rileyFu.style.backgroundImage = 'url(' + backgroundImage + ')';
 
         window.addEventListener('resize', function () {
             rileyFu.style.backgroundPosition = backgroundPosition;
