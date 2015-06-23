@@ -1,6 +1,9 @@
 'use strict';
 
-var rileyColors = {
+var rileyColors, rileyColumns, breakpoints, mediaQueries, colWidth, colHeight,
+    colLength;
+
+rileyColors = {
     b1: '#0090D9', b2: '#388AED', b3: '#008DDB', b4: '#068ECA', b5: '#0097DF',
     b6: '#0093DE', b7: '#3694ED', b8: '#4192F0', b9: '#009AE5', b0: '#2799F3',
     p1: '#D3707E', p2: '#CD6472', p3: '#D46773',
@@ -9,7 +12,7 @@ var rileyColors = {
     y1: '#D4A934', y2: '#CFA632', y3: '#D8AD34'
 };
 
-var rileyColumns = [
+rileyColumns = [
     'b1', 'p1', 'b2', 'y1', 'b3', 'p2', 'b3', 'p2', 'k1', 'y1', 'b4', 'p2',
     'b2', 'p2', 'w1', 'b1', 'p2', 'b2', 'y1', 'b3', 'y1', 'b4', 'k2', 'y1',
     'b2', 'w1', 'p2', 'b5', 'p3', 'k2', 'b2', 'y1', 'b3', 'p2', 'b3', 'w1',
@@ -22,79 +25,89 @@ var rileyColumns = [
     'b0'
 ];
 
-var breakpoints = [768, 1024, 1280];
+breakpoints = [768, 1024, 1280];
+mediaQueries = [768, 960, 1152];
 
-var mediaQueries = [768, 960, 1152];
-
-var colWidth = 8;
-var colLength = rileyColumns.length;
+colWidth = 8;
+colHeight = 8;
 
 import {LocalStorageMethods} from 'AppConstants';
-import AppStore from 'AppStore';
-
 
 export default class RileyFuArt {
 
     static storeRileyShape = 'rileyRect';
 
+    static colLength = rileyColumns.length;
+
+    // determines the position of the background image.
     static sizer = () => {
         var windowWidth, bgWidth, bgX, bgPos;
 
-        windowWidth = window.innerWidth;
-        bgWidth = colLength * colWidth * -1;
+        // this one is inaccurate as it measures the width of the browser with
+        // the scrollbar
+        //windowWidth = window.innerWidth;
+        windowWidth = document.body.clientWidth;
+        bgWidth = RileyFuArt.colLength * colWidth * -1;
 
 
         if (windowWidth < breakpoints[0]) {
             bgX = bgWidth + (11 / 12) * windowWidth;
         }
         else if (windowWidth < breakpoints[1]) {
-            bgX = bgWidth + ((windowWidth - mediaQueries[0]) / 2) + ((1 / 6) * mediaQueries[0]);
+            bgX = bgWidth + ((windowWidth - mediaQueries[0]) / 2) + ((1 / 6) *
+                mediaQueries[0]);
         }
         else if (windowWidth < breakpoints[2]) {
-            bgX = bgWidth + ((windowWidth - mediaQueries[1]) / 2) + ((1 / 6) * mediaQueries[1]);
+            bgX = bgWidth + ((windowWidth - mediaQueries[1]) / 2) + ((1 / 6) *
+                mediaQueries[1]);
         }
         else {
-            bgX = bgWidth + ((windowWidth - mediaQueries[2]) / 2) + ((1 / 6) * mediaQueries[2]);
+            bgX = bgWidth + ((windowWidth - mediaQueries[2]) / 2) + ((1 / 6) *
+                mediaQueries[2]);
         }
         bgX = (Math.round(bgX) / 10).toString();
         bgPos = bgX + 'rem 0';
 
         return bgPos;
-
-
-
     };
 
+    // will put in local storage the background image as Canvas, if either the
+    // local storage does not exist or the cache has expired.
+    static setCanvas = (cacheValidity) => {
+        var storedCanvas = LocalStorageMethods.get(RileyFuArt.storeRileyShape);
 
-    static drawCanvas = () => {
-        var canvas, context, _l, getColor;
+        if (storedCanvas === undefined || cacheValidity === false) {
+            var canvas, context, _l, getColor, colIndex;
 
-        canvas = document.createElement('canvas');
-        canvas.width = colWidth * colLength;
-        canvas.height = colWidth;
-        context = canvas.getContext('2d');
+            window.console.log('draw riley canvas');
 
-        for (_l = 0;_l < colLength;_l = _l + 1) {
-            getColor = rileyColors[rileyColumns[colLength - _l - 1]];
-            context.fillStyle = getColor;
-            context.fillRect(_l * colWidth, 0, colWidth, colWidth);
+            canvas = document.createElement('canvas');
+            canvas.width = colWidth * colLength;
+            canvas.height = colHeight;
+            context = canvas.getContext('2d');
+
+            for (_l = 0; _l < RileyFuArt.colLength; _l = _l + 1) {
+                colIndex = RileyFuArt.colLength - _l - 1;
+                getColor = rileyColors[rileyColumns[colIndex]];
+                context.fillStyle = getColor;
+                context.fillRect(_l * colWidth, 0, colWidth, colWidth);
+            }
+            LocalStorageMethods.set(
+                RileyFuArt.storeRileyShape,
+                JSON.stringify(canvas.toDataURL('image/png'))
+            );
         }
+    };
 
-        LocalStorageMethods.set(RileyFuArt.storeRileyShape, JSON.stringify(canvas.toDataURL('image/png')));
-
-        var rileyTemplate = JSON.parse(LocalStorageMethods.get(RileyFuArt.storeRileyShape));
-
-        window.console.log(rileyTemplate);
+    static getCanvas = () => {
+        var rileyTemplate = JSON.parse(LocalStorageMethods.get(
+            RileyFuArt.storeRileyShape));
 
         return rileyTemplate;
     };
 
     static setBackgroundPosition = () => {
-
         var backgroundPosition = RileyFuArt.sizer();
-
-
-        window.console.log(backgroundPosition);
         return backgroundPosition;
     };
 };
