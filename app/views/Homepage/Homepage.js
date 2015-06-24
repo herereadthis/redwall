@@ -18,19 +18,19 @@ export default class Homepage extends React.Component {
     }
 
     componentDidMount() {
+        var parallaxScroll = document.getElementsByClassName('parallax_scroll');
 
-        var starfield = document.getElementsByClassName('parallax_scroll');
-
-        ParallaxScroll.moveBackground(starfield);
+        ParallaxScroll.moveBackground(parallaxScroll);
 
         window.addEventListener('resize', function () {
             ParallaxScroll.killScrollListener();
-            ParallaxScroll.moveBackground(starfield);
+            ParallaxScroll.moveBackground(parallaxScroll);
         }, true);
 
     }
 
     render() {
+
         return (
             <div id="retro_homepage">
                 <Banner {...this.props} />

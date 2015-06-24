@@ -39,7 +39,6 @@ export default class RileyFu extends React.Component {
     }
 
     render() {
-        window.console.log(this.props.cacheValidity);
         return (
             <article id="riley_fu" ref="rileyFu">
                 <h2 className="bellmaker_container">I swear, I actually know <a

@@ -5,7 +5,11 @@ import axios from 'axios';
 
 import AppActions from 'AppActions';
 
+import {LocalStorageMethods} from 'AppConstants';
+
 import HitCounterDefaults from './HitCounterDefaults';
+
+let hitCounterValidity = true;
 
 class HitCounterDigits extends React.Component {
 
@@ -100,7 +104,6 @@ class HitCounterDigits extends React.Component {
     }
 }
 
-
 export default class HitCounter extends React.Component {
 
     constructor() {
@@ -114,6 +117,8 @@ export default class HitCounter extends React.Component {
         numWidth: React.PropTypes.number,
         numHeight: React.PropTypes.number
     };
+
+    static hitCounterParams = 'hitCounterparams';
 
     static defaultProps = {
         figures: HitCounterDefaults.figures,
@@ -148,7 +153,28 @@ export default class HitCounter extends React.Component {
     }
 
     componentWillMount() {
+        var hitCounterParams = {
+            colorOff: this.props.colorOff,
+            colorOn: this.props.colorOn,
+            numHeight: this.props.numHeight,
+            numWidth: this.props.numWidth
+        };
+
+        var storedHitCounterParams = LocalStorageMethods.get(HitCounter.hitCounterParams);
+
+        if (storedHitCounterParams === undefined ||
+            storedHitCounterParams !== JSON.stringify(hitCounterParams)) {
+            window.console.log(hitCounterParams);
+            LocalStorageMethods.set(
+                HitCounter.hitCounterParams, JSON.stringify(hitCounterParams));
+            hitCounterValidity = false;
+        }
         this.fetchHitCount(this.props.path);
+    }
+
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextProps.figures !== this.props.figures;
     }
 
     render() {

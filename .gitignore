@@ -5,7 +5,6 @@ node_modules/
 npm-debug.log
 bower_components
 app/assets.json
-app/timestamp.json
 archive/build/
 archive/src/components/
 dist/*
