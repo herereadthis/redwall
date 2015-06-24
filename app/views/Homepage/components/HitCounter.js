@@ -13,10 +13,11 @@ let hitCounterValidity = true;
 
 class HitCounterDigits extends React.Component {
 
+    static HitDigit = 'hitDigit';
+
     constructor() {
         super();
     }
-
 
     // checks to see if a number exists in an array.
     // return one color if true, another color if false.
@@ -28,7 +29,6 @@ class HitCounterDigits extends React.Component {
             return this.props.colorOn;
         }
     };
-
 
     // draws a polygon, given the context, the array of coordinates, and color
     polyDraw = (context, polyArray, color) => {
@@ -44,25 +44,42 @@ class HitCounterDigits extends React.Component {
     };
 
     makeCanvasBG = (digit) => {
-        var key, canvas;
 
-        canvas = document.createElement('canvas');
-        canvas.width = this.props.numWidth;
-        canvas.height = this.props.numHeight;
+        var storedHitDigit = `${HitCounterDigits.HitDigit}${digit}`;
 
-        for (key in HitCounterDefaults.lcd) {
-            // isolate the specific bar
-            let obj = HitCounterDefaults.lcd[key];
-            // determine if bar is 'on' or 'off' color for that specific digit
-            let cMatch = this.arrayCheck(obj.cMatch, digit);
-            // create context for canvas for the spcific bar
-            obj.context = canvas.getContext('2d');
-            // draw the bar
-            this.polyDraw(obj.context, obj.poly, cMatch);
+        var lsHitDigit = LocalStorageMethods.get(storedHitDigit);
+
+        if (lsHitDigit === undefined || hitCounterValidity === false) {
+
+            window.console.log(`${digit} must be rendered`);
+
+            var key, canvas, bgImage;
+
+            canvas = document.createElement('canvas');
+            canvas.width = this.props.numWidth;
+            canvas.height = this.props.numHeight;
+
+            for (key in HitCounterDefaults.lcd) {
+                // isolate the specific bar
+                let obj = HitCounterDefaults.lcd[key];
+                // determine if bar is 'on' or 'off' color for that specific digit
+                let cMatch = this.arrayCheck(obj.cMatch, digit);
+                // create context for canvas for the spcific bar
+                obj.context = canvas.getContext('2d');
+                // draw the bar
+                this.polyDraw(obj.context, obj.poly, cMatch);
+            }
+            bgImage = `url(${canvas.toDataURL('image/png')})`
+
+            LocalStorageMethods.set(storedHitDigit, bgImage);
+
+        }
+        else {
+            bgImage = lsHitDigit;
         }
         return {
-            backgroundImage: `url(${canvas.toDataURL('image/png')})`
-        }
+            backgroundImage: bgImage
+        };
     };
 
     makeNumbers = () => {
@@ -118,7 +135,7 @@ export default class HitCounter extends React.Component {
         numHeight: React.PropTypes.number
     };
 
-    static hitCounterParams = 'hitCounterparams';
+    static hitCounterParams = 'hitDigitParams';
 
     static defaultProps = {
         figures: HitCounterDefaults.figures,
