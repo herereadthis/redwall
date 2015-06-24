@@ -19,7 +19,7 @@ export default class Homepage extends React.Component {
 
     componentDidMount() {
 
-        var starfield = document.getElementsByClassName('starfield');
+        var starfield = document.getElementsByClassName('parallax_scroll');
 
         ParallaxScroll.moveBackground(starfield);
 

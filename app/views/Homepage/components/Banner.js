@@ -150,7 +150,7 @@ export default class Banner extends React.Component {
         }
 
         return (
-            <header role="banner" ref="starfield"
+            <header role="banner" ref="starfield parallax_scroll"
                     className="starfield parallax_scroll"
                     data-parallax-speed="-50">
                 <div className="bellmaker_container">
