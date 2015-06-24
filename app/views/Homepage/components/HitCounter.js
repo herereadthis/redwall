@@ -44,16 +44,15 @@ class HitCounterDigits extends React.Component {
     };
 
     makeCanvasBG = (digit) => {
+        var storedHitDigit, lsHitDigit;
 
-        var storedHitDigit = `${HitCounterDigits.HitDigit}${digit}`;
+        storedHitDigit = `${HitCounterDigits.HitDigit}${digit}`;
+        lsHitDigit = LocalStorageMethods.get(storedHitDigit);
 
-        var lsHitDigit = LocalStorageMethods.get(storedHitDigit);
-
+        // if params are no longer valid, or if the digit has not been drawn,
+        // then draw the digit.
         if (lsHitDigit === undefined || hitCounterValidity === false) {
-
-            window.console.log(`${digit} must be rendered`);
-
-            var key, canvas, bgImage;
+            var key, canvas, bgImage, obj, cMatch;
 
             canvas = document.createElement('canvas');
             canvas.width = this.props.numWidth;
@@ -61,19 +60,22 @@ class HitCounterDigits extends React.Component {
 
             for (key in HitCounterDefaults.lcd) {
                 // isolate the specific bar
-                let obj = HitCounterDefaults.lcd[key];
+                obj = HitCounterDefaults.lcd[key];
+
                 // determine if bar is 'on' or 'off' color for that specific digit
-                let cMatch = this.arrayCheck(obj.cMatch, digit);
+                cMatch = this.arrayCheck(obj.cMatch, digit);
+
                 // create context for canvas for the spcific bar
                 obj.context = canvas.getContext('2d');
+
                 // draw the bar
                 this.polyDraw(obj.context, obj.poly, cMatch);
             }
             bgImage = `url(${canvas.toDataURL('image/png')})`
 
             LocalStorageMethods.set(storedHitDigit, bgImage);
-
         }
+        // Otherwise, draw the digit from what is held in local storage.
         else {
             bgImage = lsHitDigit;
         }
@@ -170,25 +172,27 @@ export default class HitCounter extends React.Component {
     }
 
     componentWillMount() {
-        var hitCounterParams = {
-            colorOff: this.props.colorOff,
-            colorOn: this.props.colorOn,
-            numHeight: this.props.numHeight,
-            numWidth: this.props.numWidth
-        };
+        var hitCounterParams = [
+            this.props.colorOff,
+            this.props.colorOn,
+            this.props.numHeight,
+            this.props.numWidth
+        ];
 
-        var storedHitCounterParams = LocalStorageMethods.get(HitCounter.hitCounterParams);
+        var storedHitCounterParams = LocalStorageMethods.get(
+            HitCounter.hitCounterParams);
 
+        // storing the images for the hit counter are based off params.
+        // if params do not exist, or new params are different than old ones,
+        // then force a new canvas draw.
         if (storedHitCounterParams === undefined ||
             storedHitCounterParams !== JSON.stringify(hitCounterParams)) {
-            window.console.log(hitCounterParams);
             LocalStorageMethods.set(
                 HitCounter.hitCounterParams, JSON.stringify(hitCounterParams));
             hitCounterValidity = false;
         }
         this.fetchHitCount(this.props.path);
     }
-
 
     shouldComponentUpdate(nextProps, nextState) {
         return nextProps.figures !== this.props.figures;
