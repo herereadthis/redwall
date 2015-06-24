@@ -29,16 +29,6 @@ export default class RetroArt extends React.Component {
             return;
         }
         this.props.flux.getActions(AppActions.ID).fetchTimestamp(true);
-/*
-        var starfield = React.findDOMNode(this.refs.starfield);
-
-        ParallaxScroll.moveBackground(-50, starfield);
-
-        window.addEventListener('resize', function () {
-            ParallaxScroll.killScrollListener();
-            ParallaxScroll.moveBackground(-50, starfield);
-        }, true);
-        */
     }
 
     shouldComponentUpdate(nextProps, nextState) {

@@ -2,17 +2,14 @@
 
 import React from 'react';
 
-import PopupBoxSimulator from './PopupBoxSimulator';
-
 import AppActions from 'AppActions';
 import AppStore from 'AppStore';
+import {LocalStorageMethods} from 'AppConstants';
 
+import PopupBoxSimulator from './PopupBoxSimulator';
 import ParallaxScroll from 'components/ParallaxScroll';
 
 let bannerHasImg = null;
-
-import {LocalStorageMethods} from 'AppConstants';
-
 
 export default class Banner extends React.Component {
 //class Banner extends React.Component {
@@ -28,22 +25,6 @@ export default class Banner extends React.Component {
         this.props.flux.getActions(AppActions.ID).fetch90sImage(true);
     }
 
-    componentDidMount() {
-        /*
-        var starfield = React.findDOMNode(this.refs.starfield);
-
-        ParallaxScroll.moveBackground(-50, starfield);
-        window.console.log('foo');
-
-        window.addEventListener('resize', function () {
-            ParallaxScroll.killScrollListener();
-            ParallaxScroll.moveBackground(-50, starfield);
-        }, true);
-        */
-    }
-
-
-
     shouldComponentUpdate(nextProps, nextState) {
         return nextProps.ninetiesImgSize !== this.props.ninetiesImgSize;
     }
@@ -55,7 +36,6 @@ export default class Banner extends React.Component {
     popupContent() {
         var foafLogoUrl = 'http://herereadthis.com/build/images/branding/' +
             'herereadthis_logo.svg';
-
 
         return (
             <p typeof="foaf:Person" resource="#/me/">
@@ -105,24 +85,6 @@ export default class Banner extends React.Component {
         );
     }
 
-    makeImage = () => {
-        /*
-        if (this.props.ninetiesImg.length === 0) {
-            return '';
-        }
-        else {
-            if (bannerHasImg === null) {
-                bannerHasImg = this.state.bannerImg.thumbnail;
-                return bannerHasImg
-            }
-            else {
-                return '';
-            }
-            window.console.log('asdf');
-            return '';
-        }
-    */
-    };
     getBannerImage = () => {
         let ninetiesImg = LocalStorageMethods.get(AppStore.NINETIES_IMG.NAME);
         if (ninetiesImg !== undefined) {
@@ -137,7 +99,6 @@ export default class Banner extends React.Component {
         else {
             return null;
         }
-
     };
 
     render() {
@@ -169,6 +130,3 @@ export default class Banner extends React.Component {
         );
     }
 }
-
-//export default ParallaxScroll(Banner);
-
