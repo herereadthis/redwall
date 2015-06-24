@@ -42,13 +42,39 @@ export default class ParallaxScroll {
             wHeight = window.innerHeight,
             scrollSpeed, yPosition, newBgPosition;
 
-        var _k;
+        var _k, elOSet;
 
         for (_k = 0;_k < elements.length;_k = _k + 1) {
             elementOffsets[_k] = Math.round(
                 elements[_k].node.getBoundingClientRect().top);
+
+            elOSet = Math.round( elements[_k].node.getBoundingClientRect().top);
+
+            // logic:
+            // 1. the top edge of the element is inside the window during
+            // scrolling, or 2. the bottom edge of the element has not been
+            // exceeded by scrolling
+            if (dScroll + wHeight > elOSet &&
+                elOSet + elements[_k].domHeight > dScroll) {
+                window.console.log(_k);
+                //document.getElementsByClassName('starfield').style.backgroundPosition = newBgPosition;
+                //window.console.log(document.getElementsByClassName('starfield'), 2);
+            }
+
+
+
+            // scroll speed is a percentage of the actual scrolling
+            scrollSpeed = elements[_k].parallaxSpeed / 100;
+            // y-position of background position
+            yPosition = -1 * Math.round(dScroll * scrollSpeed);
+
+            // combine exising x-position and y-position of background-position
+            newBgPosition = `${elements[_k].bgX} ${yPosition}px`;
+            //window.console.log(_k, elOSet, newBgPosition);
+
+            elements[_k].node.style.backgroundPosition = newBgPosition;
         }
-        window.console.log(elementOffsets);
+        //window.console.log(elementOffsets);
 
         //window.console.log(elements);
 
