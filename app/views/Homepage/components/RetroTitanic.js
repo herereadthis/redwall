@@ -6,7 +6,7 @@ import AppActions from 'AppActions';
 import AppStore from 'AppStore';
 import AppConstants from 'AppConstants';
 
-export default class RetroArt extends React.Component {
+export default class RetroTitantic extends React.Component {
 
     constructor() {
         super();
@@ -19,16 +19,6 @@ export default class RetroArt extends React.Component {
     }
 
     render() {
-        var addPadding = (pad) => {
-            return {
-                paddingTop: `${pad}rem`
-            }
-        };
-
-        var tca = {
-            textAlign: 'center'
-        };
-
         var h2Style = {
             color: '#FF0',
             textAlign: 'center',
