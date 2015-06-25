@@ -5,6 +5,7 @@ import {Link} from 'react-router';
 import Banner from './components/Banner';
 import RetroArt from './components/RetroArt';
 import RetroRules from './components/RetroRules';
+import RetroTitanic from './components/RetroTitanic';
 import RileyFu from './components/RileyFu';
 
 import ParallaxScroll from 'components/ParallaxScroll';
@@ -35,6 +36,7 @@ export default class Homepage extends React.Component {
                 <RetroArt {...this.props} />
                 <RetroRules {...this.props} />
                 <RileyFu {...this.props} />
+                <RetroTitanic {...this.props} />
 
                 <h1>Hello world, it is nice to meet you!!!</h1>
                 <ul>
