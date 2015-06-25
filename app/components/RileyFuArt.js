@@ -82,7 +82,7 @@ export default class RileyFuArt {
             window.console.log('draw riley canvas');
 
             canvas = document.createElement('canvas');
-            canvas.width = colWidth * colLength;
+            canvas.width = colWidth * RileyFuArt.colLength;
             canvas.height = colHeight;
             context = canvas.getContext('2d');
 

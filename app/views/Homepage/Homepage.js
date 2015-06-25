@@ -1,6 +1,6 @@
 var React = require('react');
 
-//import {Link, RouteHandler} from 'react-router';
+import {Link} from 'react-router';
 
 import Banner from './components/Banner';
 import RetroArt from './components/RetroArt';
