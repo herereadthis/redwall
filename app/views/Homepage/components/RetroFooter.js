@@ -37,6 +37,7 @@ export default class RetroFooter extends React.Component {
         var h3Style = {
             textAlign: 'center'
         };
+        var location = 'http://herereadthis.com/';
 
         return (
             <footer role="contentinfo"
@@ -44,7 +45,7 @@ export default class RetroFooter extends React.Component {
                     data-parallax-speed="-50">
                 <div id="frames_foo">
                     <div className="frames_address_bar retro_spriter">
-                        <span class="retro_spriter">{{location}}</span>
+                        <span className="retro_spriter">{location}</span>
                     </div>
                     <div className="frames_nav_column frames_column">
                         <section>
