@@ -104,7 +104,9 @@ export default class RetroArt extends React.Component {
                     <table className="old_school_table">
                         <tr>
                             <td>
-                                <div className="dancing_baby"></div>
+                                <div className="dancing_baby">
+                                    <img src="http://assets.herereadthis.com/images/homepage/dancing_baby_170x230.gif"
+                                    alt="Dancing Baby" /></div>
                                 <p style={tca}>&amp;nbsp;</p>
                                 <div className="centered_image">
                                     {AppConstants.DataSprite('tripod_125x71')}
@@ -113,7 +115,7 @@ export default class RetroArt extends React.Component {
                             <td>
                                 <div className="centered_image">
                                     <img
-                                        src="http://herereadthis.com/build/images/homepage/power_rangers_500x375.gif"/>
+                                        src="http://assets.herereadthis.com/images/homepage/power_rangers_500x375.gif"/>
                                 </div>
                             </td>
                         </tr>

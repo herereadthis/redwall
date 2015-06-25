@@ -21,7 +21,6 @@
     }
 }
 
-
 #hit_counter {
     padding: 2rem 0 1rem 0;
     margin: 0 auto;
@@ -40,6 +39,7 @@
         > div {
             display: block;
         }
+
         p {
             padding: 0rem 0.5rem 0 0.5rem;
         }
@@ -52,11 +52,13 @@
             display: table-cell;
             vertical-align: top;
         }
+
         p {
             padding: 1rem 0.5rem 0 0.5rem;
         }
     }
 }
+
 [data-hit-counter] {
     position: relative;
     padding: 0.1rem;
@@ -114,6 +116,7 @@
             text-align: left;
             left: 4rem;
         }
+
         div.icon_box {
             left: 0;
             margin-top: 0.5rem;
@@ -122,6 +125,7 @@
                 top: 2.5rem;
             }
         }
+
         + * {
             clear: both;
         }
@@ -140,13 +144,13 @@
             vertical-align: top;
             padding-top: 1.5rem;
         }
+
         div.icon_box {
             padding-top: 0;
             margin-top: 0;
         }
     }
 }
-
 
 [data-cinnamon-fantasy] {
     position: relative;
@@ -157,7 +161,7 @@
         content: "";
         display: block;
         clear: both;
-        background: transparent url("../../../assets/images/homepage/unicorn_623x150.jpg") scroll repeat 50% 100%;
+        background: transparent url("../../../assets/images/css/unicorn_623x150.jpg") scroll repeat 50% 100%;
         background-size: contain;
         width: 100%;
     }
@@ -212,45 +216,22 @@
     }
 }
 
-
 .dancing_baby {
     margin: 0 auto;
-    background-image: url("../../../assets/images/homepage/dancing_baby_170x230.gif");
 
     @media @da_baseline {
-        width: 8.5rem;
-        height: 11.5rem;
-        background-size: 8.5rem 11.5rem;
+            width: 8.5rem;
+            height: 11.5rem;
     }
     @media @da_2x_small {
-        width: 10.2rem;
-        height: 13.8rem;
-        background-size: 10.2rem 13.8rem;
+            width: 10.2rem;
+            height: 13.8rem;
     }
     @media @da_small {
-        width: 17rem;
-        height: 23rem;
-        background-size: 17rem 23rem;
+            width: 17rem;
+            height: 23rem;
     }
-
-    body > header & {
-        position: absolute;
-        top: 0;
-        @media @da_baseline {
-            right: 0;
-        }
-        @media @da_medium {
-            right: auto;
-            left: 50%;
-            margin-left: (@pw_medium / 2) - 17;
-        }
-        @media @da_large {
-            margin-left: (@pw_large / 2) - 17;
-        }
-        /*
-        @media @da_x_large {
-            margin-left: (@pw_large / 2) - 17;
-        }
-        */
+    img {
+        width: 100%;
     }
 }
