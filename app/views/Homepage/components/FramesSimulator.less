@@ -1,28 +1,21 @@
+@lg000: linear-gradient(0deg, #000 0%, #000 100%);
+@lgwlg: linear-gradient(0deg, @wlg 0%, @wlg 100%);
+@lgwdg: linear-gradient(0deg, @wdg 0%, @wdg 100%);
+@lgFFF: linear-gradient(0deg, #FFF 0%, #FFF 100%);
+@lgc0c: linear-gradient(0deg, #C0C0C0 0%, #C0C0C0 100%);
+@lg808: linear-gradient(0deg, #808080 0%, #808080 100%);
+
 #frames_foo {
     overflow: auto;
     position: relative;
     display: table;
     width: 100%;
     background-image:
-    linear-gradient(0deg, @wlg 0%, @wlg 100%),
-
-    linear-gradient(0deg, @wlg 0%, @wlg 100%),
-    linear-gradient(0deg, @wlg 0%, @wlg 100%),
-    linear-gradient(0deg, #FFF 0%, #FFF 100%),
-    linear-gradient(0deg, #FFF 0%, #FFF 100%),
-
-    linear-gradient(0deg, @wdg 0%, @wdg 100%),
-    linear-gradient(0deg, @wdg 0%, @wdg 100%),
-    linear-gradient(0deg, @wlg 0%, @wlg 100%),
-    linear-gradient(0deg, @wlg 0%, @wlg 100%),
-
-    linear-gradient(0deg, #000 0%, #000 100%),
-    linear-gradient(0deg, #000 0%, #000 100%),
-    linear-gradient(0deg, #FFF 0%, #FFF 100%),
-    linear-gradient(0deg, #FFF 0%, #FFF 100%),
-
-    linear-gradient(0deg, #FFF 0%, #FFF 100%),
-    linear-gradient(0deg, #FFF 0%, #FFF 100%);
+    @lgwlg,
+    @lgwlg,@lgwlg,@lgFFF,@lgFFF,
+    @lgwdg,@lgwdg,@lgwlg,@lgwlg,
+    @lg000,@lg000,@lgFFF,@lgFFF,
+    @lgFFF,@lgFFF;
     background-position:
     0 100%,
     0 0,0 0,100% 0%,0% 100%,
@@ -177,13 +170,7 @@
         margin-top: 0.1rem;
         border-right: 0.1rem solid #FFF;
         background-color: #FFF;
-        background-image:
-        linear-gradient(0deg, @wdg 0%, @wdg 100%),
-        linear-gradient(0deg, @wdg 0%, @wdg 100%),
-        linear-gradient(0deg, @wlg 0%, @wlg 100%),
-        linear-gradient(0deg, @wlg 0%, @wlg 100%),
-        linear-gradient(0deg, #000 0%, #000 100%),
-        linear-gradient(0deg, #000 0%, #000 100%);
+        background-image: @lgwdg, @lgwdg, @lgwlg, @lgwlg, @lg000, @lg000;
         background-size:
         100% 0.1rem,
         0.1rem 100%,
@@ -410,14 +397,7 @@
         display: block;
         background-color: @wlg;
         background-image:
-        linear-gradient(0deg, #000 0, #000 100%),
-        linear-gradient(0deg, #000 0, #000 100%),
-        linear-gradient(0deg, #C0C0C0 0, #C0C0C0 100%),
-        linear-gradient(0deg, #C0C0C0 0, #C0C0C0 100%),
-        linear-gradient(0deg, #808080 0, #808080 100%),
-        linear-gradient(0deg, #808080 0, #808080 100%),
-        linear-gradient(0deg, #FFF 0, #FFF 100%),
-        linear-gradient(0deg, #FFF 0, #FFF 100%);
+        @lg000, @lg000, @lgc0c, @lgc0c, @lg808, @lg808, @lgFFF, @lgFFF;
         background-size:
         100% 0.1rem, 0.1rem 100%, 100% 0.1rem, 0.1rem 100%,
         100% 0.2rem, 0.2rem 100%, 100% 0.2rem, 0.2rem 100%;
