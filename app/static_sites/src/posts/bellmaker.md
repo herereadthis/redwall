@@ -1,11 +1,13 @@
 ---
-title: Bellmaker, a responsive media query package
-template: page.hbs
+title:          Bellmaker, a responsive media query package
+repo_title:     "<em>Bellmaker</em>, a responsive media query package"
+template:       page.hbs
 created:        2014-06-16
 modified:       2014-10-30
 permalink:      bellmaker
-snippet: <p>The Bellmaker is a library of <em><strong>device-agnostic</strong> and <strong>device-specific</strong></em> media queries that will complement your existing CSS.</p><ul><li>It will help you make *responsive websites*, especially if you are using grid layouts.</li><li>It is <a href="https://github.com/herereadthis/bellmaker">available on Github</a> to use and modify as you please.</li><li>Both <strong>LESS</strong> and <strong>SASS</strong> versions are available, and will work with Bootstrap.</li><li>Can currently complement Bootstrap 3.2.x</li></ul>
+snippet:        <p>The Bellmaker is a library of <em><strong>device-agnostic</strong> and <strong>device-specific</strong></em> media queries that will complement your existing CSS.</p><ul><li>It will help you make *responsive websites*, especially if you are using grid layouts.</li><li>It is <a href="https://github.com/herereadthis/bellmaker">available on Github</a> to use and modify as you please.</li><li>Both <strong>LESS</strong> and <strong>SASS</strong> versions are available, and will work with Bootstrap.</li><li>Can currently complement Bootstrap 3.2.x</li></ul>
 description:    "The Bellmaker is a library of device-agnostic and device specific media queries that will complement your existing CSS."
+tags:           css, less, sass
 ---
 
 <ul id="github_badges" class="sunflash_navmenu">
