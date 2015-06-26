@@ -1,6 +1,6 @@
 ---
 title: Home
-template: home.hbs
+template: index.hbs
 ---
 Hi, this is my start page; neat ain't it? ;)
 

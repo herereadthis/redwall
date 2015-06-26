@@ -7,7 +7,7 @@ Metalsmith(__dirname)
     .use(markdown())
     .use(templates('handlebars'))
     .source('./src')
-    .destination('../build')
+    .destination('../../dist/code')
     .build(function (err) {
         if (err) throw err;
     });
