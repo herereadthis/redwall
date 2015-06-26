@@ -15,8 +15,8 @@ description:    "The Bellmaker is a library of device-agnostic and device specif
     <li><a href="http://badge.fury.io/bo/bellmaker" title="Bower version">
             <img alt="Bower version" src="https://badge.fury.io/bo/bellmaker.svg" />
         </a></li> 
-    <li><a href="https://travis-ci.org/herereadthis/bellmaker.svg?branch=master" title="Build Status">
-            <img alt="Build Status" src="http://travis-ci.org/herereadthis/bellmaker" />
+    <li><a href="http://travis-ci.org/herereadthis/bellmaker" title="Build Status">
+            <img alt="Build Status" src="https://travis-ci.org/herereadthis/bellmaker.svg?branch=master" />
         </a></li> 
     <li><a href="https://david-dm.org/herereadthis/bellmaker" title="devDependency Status">
             <img alt="devDependency Status" src="https://david-dm.org/herereadthis/bellmaker/dev-status.svg" />
