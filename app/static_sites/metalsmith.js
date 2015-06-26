@@ -4,11 +4,13 @@ var Metalsmith  = require('metalsmith'),
     Handlebars  = require('handlebars'),
     collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
+    metallic    = require('metalsmith-metallic'),
     fs          = require('fs');
 
 Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbs').toString());
 
 Metalsmith(__dirname)
+    .use(metallic())
     .use(collections({
         posts: {
             pattern: 'posts/*.md',
