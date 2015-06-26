@@ -8,3 +8,4 @@ app/assets.json
 archive/build/
 archive/src/components/
 dist/*
+build
