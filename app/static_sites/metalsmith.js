@@ -8,7 +8,23 @@ var Metalsmith    = require('metalsmith'),
     dateFormatter = require('metalsmith-date-formatter'),
     fs            = require('fs');
 
-Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbs').toString());
+Handlebars.registerPartial('header',
+    fs.readFileSync(__dirname + '/templates/partials/header.hbs').toString());
+Handlebars.registerPartial('footer',
+    fs.readFileSync(__dirname + '/templates/partials/footer.hbs').toString());
+Handlebars.registerPartial('icon_facebook',
+    fs.readFileSync(__dirname + '/templates/partials/icon_facebook.hbs').toString());
+Handlebars.registerPartial('icon_twitter',
+    fs.readFileSync(__dirname + '/templates/partials/icon_twitter.hbs').toString());
+Handlebars.registerPartial('icon_github',
+    fs.readFileSync(__dirname + '/templates/partials/icon_github.hbs').toString());
+Handlebars.registerPartial('icon_googleplus',
+    fs.readFileSync(__dirname + '/templates/partials/icon_googleplus.hbs').toString());
+Handlebars.registerPartial('icon_pinterest',
+    fs.readFileSync(__dirname + '/templates/partials/icon_pinterest.hbs').toString());
+Handlebars.registerPartial('icon_vimeo',
+    fs.readFileSync(__dirname + '/templates/partials/icon_vimeo.hbs').toString());
+
 
 Metalsmith(__dirname)
     .use(dateFormatter({
