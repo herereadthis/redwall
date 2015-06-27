@@ -10,10 +10,15 @@ owl: http://www.w3.org/2002/07/owl#">
 {{> header}}
 
 <body>
-<div class="main-wrapper">
-    {{{ snippet }}}
-{{{ contents }}}
-</div>
+
+
+<article role="main" class="text_container">
+    <div class="content_container">
+        <h2>{{{ repo_title }}}</h2>
+        {{{ snippet }}}
+        {{{ contents }}}
+    </div>
+</article>
 
 </body>
 </html>
