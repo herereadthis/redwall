@@ -5,7 +5,7 @@ template:       page.hbs
 created:        2014-07-18
 modified:       2014-07-20
 permalink:      information-architecture-part-1/
-snippet:        
+snippet:        <p><strong><em>We shall define Information Architecture (IA) as the high-level, structured organization of the site.</em></strong> On a deeper level, IA will concern itself with:</p><ul><li>what content is on the site, along with the scope of content</li><li>how users get to the content</li><li>the needs of the different kinds of users visiting the site</li><li>how the content is organized</li><li>the intent, purpose and tone of the site</li></ul>
 description:    "Information Architecture (IA) as the high-level, structured organization of a site, intended to organize content, facilitate design, and improve user interaction"
 tags:           information, architecture
 ---
