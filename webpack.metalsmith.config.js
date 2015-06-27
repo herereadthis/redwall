@@ -48,6 +48,13 @@ config = {
                 loader: ExtractTextPlugin.extract(
                     'style-loader', 'css-loader!less-loader'
                 )
+            },
+            {
+                test: /\.(jpg?g|png|jpg|svg|gif)$/,
+                loaders: [
+                    "url?limit=10240&digest=hex&name=img-[sha512:hash:base64:7].[ext]",
+                    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+                ]
             }
         ]
     },

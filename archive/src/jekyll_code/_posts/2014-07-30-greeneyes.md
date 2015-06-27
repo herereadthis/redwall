@@ -3,7 +3,9 @@ layout:         post
 title:          "Greeneyes, a RequireJS module library"
 repo_title:     "<em>Greeneyes</em>, a RequireJS module library"
 created:        2014-08-01
+createdDT:      2014-08-01
 modified:       2014-08-04
+modifiedDT:     2014-08-04
 permalink:      greeneyes-requirejs/
 description:    "Greeneyes is collection of useful JavaScript utilities and widgets (and accompanying CSS) written in AMD format to be used with RequireJS"
 tags:           RequireJS, AMD, Javascript

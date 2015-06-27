@@ -2,7 +2,9 @@
 layout:         post
 title:          "How to manage 3rd party libraries using Bower"
 created:        2014-06-19
+createdDT:      2014-06-19
 modified:       2014-07-15
+modifiedDT:     2014-07-15
 permalink:      bower-how-to/
 description:    "Bower is a package manager that will help you keep all your 3rd party libraries (e.g. jQuery) updated and maintained."
 tags:           bower, github
@@ -61,13 +63,13 @@ It will ask you for a bunch of options, enter in information as needed, or just 
 {% highlight bash %}
 [?] name: <myproject>
 [?] version: <0.0.0>
-[?] description: 
-[?] main file: 
-[?] what types of modules does this package expose? 
-[?] keywords: 
+[?] description:
+[?] main file:
+[?] what types of modules does this package expose?
+[?] keywords:
 [?] authors: <John Smith>
 [?] license: <MIT>
-[?] homepage: 
+[?] homepage:
 [?] set currently installed components as dependencies? <Yes>
 [?] add commonly ignored files to ignore list? <Yes>
 [?] would you like to mark this package as private which prevents it from being accidentally published to the registry? <Yes>

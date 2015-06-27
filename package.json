@@ -7,7 +7,7 @@
     "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "rm -rf dist;mkdir dist;NODE_ENV=production webpack -p --config webpack.production.config.js; npm run metalsmith",
-    "metalsmith": "rm -rf dist/code;node app/static_sites/metalsmith;NODE_ENV=production webpack -p --config webpack.metalsmith.config.js"
+    "metalsmith": "node app/static_sites/metalsmith;NODE_ENV=production webpack -p --config webpack.metalsmith.config.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "less-loader": "^2.2.0",
     "metalsmith": "^1.7.0",
     "metalsmith-collections": "^0.7.0",
+    "metalsmith-date-formatter": "^1.0.2",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-metallic": "^0.3.1",

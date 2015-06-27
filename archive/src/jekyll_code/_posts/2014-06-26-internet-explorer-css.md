@@ -2,7 +2,9 @@
 layout:         post
 title:          "How to write fallback CSS for legacy Internet Explorer (IE8, IE7)"
 created:        2014-06-26
+createdDT:      2014-06-26
 modified:       2014-06-30
+modifiedDT:     2014-06-30
 permalink:      internet-explorer-legacy-css/
 description:    "Supporting older versions of Internet Explorer (e.g. IE7, IE8) can be a nightmare but there are many options available to speed up development time while minimizing debugging errors"
 tags:           IE8, IE7, css

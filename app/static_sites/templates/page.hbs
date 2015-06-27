@@ -17,6 +17,33 @@ owl: http://www.w3.org/2002/07/owl#">
         <h2>{{{ repo_title }}}</h2>
         {{{ snippet }}}
         {{{ contents }}}
+        <footer>
+            <p><em>
+                <time property="dc:created"
+                      datetime="{{ createdDT }}">{{ created }}</time>
+            </em>
+                <br/>
+                <em>By: <span property="dc:creator">Jimmy Ha</span></em><br/>
+                <em>Last updated:
+                    <time property="dc:modified"
+                          datetime="{{ modifiedDT }}">{{ modified }}</time>
+                </em></p>
+
+            <h4>Share this article:</h4>
+            <ul id="post_social" class="navmenu">
+                <li>
+                    <a href="https://twitter.com/intent/tweet?text=%22{{ title }}%22&amp;url=http://herereadthis.com/code/{{ permalink}}&amp;via=herereadthis">Twitter</a>
+                </li>
+                <li> | </li>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http://herereadthis.com/code/{{ permalink}}">Facebook</a>
+                </li>
+                <li> | </li>
+                <li>
+                    <a href="https://plus.google.com/share?url=http://herereadthis.com/code/{{ permalink}}">Google+</a>
+                </li>
+            </ul>
+        </footer>
     </div>
 </article>
 

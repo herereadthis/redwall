@@ -1,9 +1,11 @@
 ---
 layout:         post
-title:          "Bellmaker, a respoonsive media query package"
+title:          "Bellmaker, a responsive media query package"
 repo_title:     "<em>Bellmaker</em>, a responsive media query package"
 created:        2014-06-16
+createdDT:      2014-06-16
 modified:       2014-10-30
+modifiedDT:     2014-10-30
 permalink:      bellmaker/
 description:    "The Bellmaker is a library of device-agnostic and device specific media queries that will complement your existing CSS."
 tags:           css, less, sass
