@@ -30,7 +30,8 @@ Handlebars.registerPartial('icon_vimeo',
 
 Metalsmith(__dirname)
     .metadata({
-        baseUrl: 'http://herereadthis.com/code/',
+        siteUrl: 'http://herereadthis.com',
+        baseUrl: '/code/',
         siteTitle: 'Here, Read this Code'
     })
     .use(dateFormatter({
@@ -57,7 +58,8 @@ Metalsmith(__dirname)
     .use(collections({
         posts: {
             pattern: 'posts/*.md',
-            sortBy: 'modified'
+            sortBy: 'modified',
+            reverse: true
         }
     }))
     .use(markdown())

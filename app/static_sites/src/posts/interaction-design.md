@@ -3,7 +3,9 @@ title:      	"Interaction design and user experience: essential concepts"
 repo_title:     "Interaction design and user experience: essential concepts"
 template:       page.hbs
 created:        2014-06-24
+createdDT:      2014-06-24
 modified:       2014-07-18
+modifiedDT:     2014-07-18
 permalink:      interaction-design/
 snippet:        <p>Using research from UX studies and known principles of user interface design, and maintaining best practices for device-agnostic development, <strong><em>here's some tips and clarification for working on appearance and behavior for sites.</em></strong></p><ul><li><strong>Learnability</strong> - and nobody wants to read the manual. Oh look, an adorable cat video.</li><li><strong>Efficiency</strong> - how fast can you perform the task?</li><li><strong>Memorability</strong> - If you come back to it later, will you remember how to use it? And if you don't, will it be okay?</li></ul>
 description:    "Using research from UX studies and known principles of user interface design, and maintaining best practices for device-agnostic development, here's some tips and clarification for working on appearance and behavior for sites."

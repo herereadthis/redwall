@@ -10,21 +10,21 @@ owl: http://www.w3.org/2002/07/owl#">
 {{> head_boilerplate}}
 
 <body>
-<div class="main-wrapper">
-{{{ contents }}}
 
+{{> header}}
 
-    <article>
-        <ul>
-            {{#each collections.posts}}
-            <li>
-                <h3>{{this.title}}</h3>
-                <div>{{{this.snippet}}}</div>
-            </li>
-            {{/each}}
-        </ul>
-    </article>
-</div>
+<article class="text_container">
+    {{#each collections.posts}}
+        <section class="content_container">
+            <h2><a href="{{ baseUrl }}{{ this.permalink }}">{{{ this.repo_title }}}</a></h2>
+            {{{ this.snippet }}}
+            <p><a href="{{ baseUrl }}{{ this.permalink }}">Continue Reading &raquo;</a></p>
+            <hr/>
+        </section>
+    {{/each}}
+</article>
+
+{{> footer}}
 
 </body>
 </html>

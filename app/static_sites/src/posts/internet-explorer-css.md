@@ -3,7 +3,9 @@ title:          "How to write fallback CSS for legacy Internet Explorer (IE8, IE
 repo_title:     "How to write fallback CSS for legacy Internet Explorer (IE8, IE7)"
 template:       page.hbs
 created:        2014-06-26
+createdDT:      2014-06-26
 modified:       2014-06-30
+modifiedDT:     2014-06-30
 permalink:      internet-explorer-css
 snippet:        <p>It's the nightmare of every front-end developer&#58; supporting older versions of Internet Explorer (IE). You may not want to, but usually it's because your company's project needs to support customers still using older machines...or maybe you're just a masochist. However, there are many ways to make your life easier by <strong>speeding up development</strong> while minimizing those mysterious errors when debugging.</p>
 description:    "Using research from UX studies and known principles of user interface design, and maintaining best practices for device-agnostic development, here's some tips and clarification for working on appearance and behavior for sites."

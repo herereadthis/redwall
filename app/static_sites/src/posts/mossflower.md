@@ -2,15 +2,17 @@
 title:      	"Mossflower, a CSS global reset"
 repo_title:     "<em>Mossflower</em>, a CSS global reset"
 template:       page.hbs
-created:        2014-06-19
-modified:       2014-07-15
+created:       	2014-06-20
+createdDT:     	2014-06-20
+modified:		2014-06-23
+modifiedDT:     2014-06-23
 permalink:  	mossflower/
 snippet:        <p>Mossflower is a global reset CSS utility for both LESS and SASS</p><ul><li>Both robust and bare-bones; you won't find yourself fighting against this utility</li><li>It is free to use and modify as you please.</li><li>Both <strong>LESS</strong> (.less) and <strong>SASS</strong> (.scss) versions are available.</li><li>It sets a single standard for sizing (REM) so you can do all sizing off 1REM = 10PX</li></ul>
 description:	"Mossflower is a global reset CSS utility for both LESS and SASS to help you spin up new websites."
 tags:       	css, less, sass
 ---
 
-<ul id="github_badges" class="sunflash_navmenu">
+<ul id="github_badges" class="navmenu">
     <li><a href="http://badge.fury.io/js/mossflower" title="npm version">
             <img alt="npm version" src="https://badge.fury.io/js/mossflower.svg" />
         </a></li> 

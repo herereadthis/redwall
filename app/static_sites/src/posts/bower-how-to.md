@@ -3,7 +3,9 @@ title:          "How to manage 3rd party libraries using Bower"
 repo_title:     "How to manage 3rd party libraries using Bower"
 template:       page.hbs
 created:        2014-06-19
+createdDT:      2014-06-19
 modified:       2014-07-15
+modifiedDT:     2014-07-15
 permalink:      bower-how-to/
 snippet:        <p>Nearly every project requires third party libraries and frameworks (e.g. jQuery, Bootstrap), and it can get complicated keeping them updated and maintained. Fortunately, there's <a href="http://bower.io">Bower</a>, a package manager that will take registered components and organize them as dependencies.</p>
 description:    "Bower is a package manager that will help you keep all your 3rd party libraries (e.g. jQuery) updated and maintained."
