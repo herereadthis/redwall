@@ -8,6 +8,8 @@ var Metalsmith    = require('metalsmith'),
     dateFormatter = require('metalsmith-date-formatter'),
     fs            = require('fs');
 
+Handlebars.registerPartial('html_declaration',
+    fs.readFileSync(__dirname + '/templates/partials/html_declaration.hbs').toString());
 Handlebars.registerPartial('head_boilerplate',
     fs.readFileSync(__dirname + '/templates/partials/head_boilerplate.hbs').toString());
 Handlebars.registerPartial('header',
