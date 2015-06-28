@@ -76,15 +76,16 @@ tags:       	css, less, sass
     ```bash
     git config --global credential.helper wincred
     # proceed to the next step. 
-    # As soon as you attempt to clone, it will ask for your credentials.
+    # As soon as you attempt to clone, 
+    # it will ask for your credentials.
     # Once you enter them, it will be stored into your machine.
     ```
 
-4. Add your public key to your Github Account
+5. Add your public key to your Github Account
   
-  * go to your [SSH keys](https://github.com/settings/ssh) page on Github and add the key you just copied.
+  Go to your [SSH keys](https://github.com/settings/ssh) page on Github and add the key you just copied.
 
-5. Clone the repo (If you don't know what these commands do, it's okay for now.)
+6. Clone the repo (If you don't know what these commands do, it's okay for now.)
 
   ```bash
   # If you haven't already, clone the repo.
@@ -92,15 +93,16 @@ tags:       	css, less, sass
   git clone https://github.com/blinemedical/tech-talks.git
   # get latest changes
   # this command should work without prompting you for a password.
-  # If it asks for credentials, then you have not properly added your SSH keys.
+  # If it asks for credentials, 
+  # then you have not properly added your SSH keys.
   git fetch origin
   # reset your local master
   git reset --hard origin/master
   ```
 
-6. Make your first commit
+7. Make your first commit
   
-  * Inside the ```github-demo``` folder create a new, empty text file that is your name
+  * Inside the `github-demo` folder create a new, empty text file that is your name
 
     ```bash
     # Mac instructions

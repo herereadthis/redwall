@@ -5,7 +5,7 @@ template:       page.hbs
 created:        2014-06-16
 createdDT:      2014-06-16
 modified:       2015-06-27
-modifiedDT:     2015-27-27
+modifiedDT:     2015-06-27
 permalink:      bellmaker
 snippet:        <p>The Bellmaker is a library of <em><strong>device-agnostic</strong> and <strong>device-specific</strong></em> media queries that will complement your existing CSS.</p><ul><li>It will help you make *responsive websites*, especially if you are using grid layouts.</li><li>It is <a href="https://github.com/herereadthis/bellmaker">available on Github</a> to use and modify as you please.</li><li>Both <strong>LESS</strong> and <strong>SASS</strong> versions are available, and will work with Bootstrap.</li><li>Can currently complement Bootstrap 3.2.x</li></ul>
 description:    "The Bellmaker is a library of device-agnostic and device specific media queries that will complement your existing CSS."
@@ -70,7 +70,7 @@ $ npm install --save bellmaker
 
 #### Importing
 
-```CSS
+```css
 /* Import LESS file */
 @import "/PATH_TO_BOWER/bellmaker/src/less/bellmaker.less";
 /* Import SASS file */
@@ -81,7 +81,7 @@ $ npm install --save bellmaker
 
 #### Reset page styling to make 10px = 1REM
 
-```CSS
+```css
 html {
     font-size: 62.5%;
     -webkit-text-size-adjust: 100%;
@@ -97,13 +97,13 @@ body {
 
 (*For more useful global CSS resets and utilities, check out out the companion [**Mossflower**](https://github.com/herereadthis/mossflower) repository on the [herereadthis](https://github.com/herereadthis) Github.*)
 
-```
+```bash
 $ bower install --save mossflower
 ```
 
 #### Add vital stuff to your index.html file
 
-```HTML
+```html
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -140,7 +140,7 @@ resolutions.
 
 #### Device-agnostic output as LESS
 
-```
+```less
 .bellmaker_container {
     @media @da_baseline {
         width: @pw_baseline;
@@ -168,7 +168,7 @@ resolutions.
 
 #### Device-agnostic output as SASS
 
-```SASS
+```sass
 .bellmaker_container {
     @media #{$da_baseline} {
         width: $pw_baseline;
@@ -198,7 +198,7 @@ Note: the abbreviation "da" stands for "device-agnostic," and "pw" stands for "p
 
 #### Compiled as CSS
 
-```CSS
+```css
 @media only screen and (min-width: 320px) {
     .bellmaker_container {
         width: 100%;
@@ -246,7 +246,7 @@ though the Bellmaker does provide 7 breakpoints,** ***you can use just 4***
 
 #### As LESS
 
-```
+```less
 .bellmaker_container {
     @media @da_baseline {   width: @pw_baseline;}
     @media @da_small {      width: @pw_small;}
@@ -257,7 +257,7 @@ though the Bellmaker does provide 7 breakpoints,** ***you can use just 4***
 
 #### As SASS
 
-```SASS
+```sass
 .bellmaker_container {
     @media #{$da_baseline} {    width: $pw_baseline;}
     @media #{$da_small} {       width: $pw_small;}
@@ -269,7 +269,7 @@ though the Bellmaker does provide 7 breakpoints,** ***you can use just 4***
 Notice how the LESS/SASS variable names of the media queries just became very 
 easy to remember?
 
-```CSS
+```css
 @media only screen and (min-width: 320px) {
     .bellmaker_container {width: 100%;}
 }
@@ -310,7 +310,7 @@ the formula is always lowest ratio : highest ratio.
 
 #### Target all 9:16 phones (LESS)
 
-```LESS
+```less
 @media @ds_ratio_9_16 {
     #container_id   {width: 100%;}
 }
@@ -318,7 +318,7 @@ the formula is always lowest ratio : highest ratio.
 
 #### Target all 9:16 phones (SASS)
 
-```SASS
+```sass
 @media #{ds_ratio_9_16} {
     #container_id   {width: 100%;}
 }
@@ -326,7 +326,7 @@ the formula is always lowest ratio : highest ratio.
 
 #### Compiled as CSS
 
-```CSS
+```css
 @media only screen and (device-aspect-ratio: 9/16) {
     #container_id   {width: 100%;}
 }
@@ -358,7 +358,7 @@ Declare the orientation as a variable (`orientation_landscape` vs.
 
 #### LESS
 
-```
+```css
 @media @ds_ratio_9_16 @orientation_landscape {}
 @media @ds_ratio_9_16_landscape {}
 
@@ -368,7 +368,7 @@ Declare the orientation as a variable (`orientation_landscape` vs.
 
 #### SASS
 
-```
+```css
 @media #{ds_ratio_9_16} #{orientation_landscape} {}
 @media #{ds_ratio_9_16_landscape} {}
 
@@ -378,7 +378,7 @@ Declare the orientation as a variable (`orientation_landscape` vs.
 
 #### Compiled as CSS
 
-```CSS
+```css
 @media only screen and (device-aspect-ratio: 9/16) and (orientation : landscape) {
 }
 @media only screen and (device-aspect-ratio: 9/16) and (orientation : portrait) {
@@ -398,14 +398,14 @@ Use these mixins especially for moving columns around. Remember that offsets and
 factors will be calculated as REM units.
 
 
-```LESS
+```less
 // LESS: Offset mixin:
 .bellmaker_offset(@attribute,@offset) {};
 // LESS Factor mixin:
 .bellmaker_factor(@attribute,@factor) {};
 ```
 
-```SCSS
+```scss
 // SASS: Offset mixin:
 @include bellmaker_offset($attribute,$offset) {};
 // SASS Factor mixin:

@@ -3,9 +3,9 @@ title:          "How to write fallback CSS for legacy Internet Explorer (IE8, IE
 repo_title:     "How to write fallback CSS for legacy Internet Explorer (IE8, IE7)"
 template:       page.hbs
 created:        2014-06-26
-createdDT:      2014-06-26
-modified:       2014-06-30
-modifiedDT:     2014-06-30
+createdDT:      2014-06-16
+modified:       2014-06-25
+modifiedDT:     2014-06-25
 permalink:      internet-explorer-css
 snippet:        <p>It's the nightmare of every front-end developer&#58; supporting older versions of Internet Explorer (IE). You may not want to, but usually it's because your company's project needs to support customers still using older machines...or maybe you're just a masochist. However, there are many ways to make your life easier by <strong>speeding up development</strong> while minimizing those mysterious errors when debugging.</p>
 description:    "Using research from UX studies and known principles of user interface design, and maintaining best practices for device-agnostic development, here's some tips and clarification for working on appearance and behavior for sites."
@@ -127,11 +127,11 @@ Also, when writing fallback IE, the vast majority of the problems come from IE7 
 .ie7_8 .container p {
     /* styles go here */
 }
-{% endhighlight %}
+```
 
 #### As precompiled CSS (LESS or SASS)
 
-{% highlight css %}
+```less
 .ie7_8 {
     .container {
         /* styles go here */
@@ -148,7 +148,7 @@ Again, what we are concerned about is **speed of development.** Writing CSS for 
 
 ### *Tip #3:* Set your page's content to a fixed with of 984 pixels (984px)
 
-If your page is using a grid layout, or especially if you're using frameworks such as Bootstrap or Foundation, then you've most likely set {% raw %}<code>box-sizing: border-box;</code>{% endraw %}. This means on IE7 machines, all your floats are going to break because of the paddings and margins. Save a lot of headaches by letting go of liquid columns.
+If your page is using a grid layout, or especially if you're using frameworks such as Bootstrap or Foundation, then you've most likely set `box-sizing: border-box;`. This means on IE7 machines, all your floats are going to break because of the paddings and margins. Save a lot of headaches by letting go of liquid columns.
 
 I've chosen 984px specifically as a matter of praticality: Most users on IE7 or IE8 machines are likely working with old computers and old, small monitors. The majority will either be using 1024×768 or 1280×1024, so debugging time will be much faster with one lowest-common-denominator size. (984px leaves from for the scrollbar)
 
@@ -190,9 +190,9 @@ This does mean that for IE7, you will not be able to set column widths with perc
 * gradients - just pick one color and go with it
 * transitions - it will just tax IE8 browser resources anyway.
 
-****The only exception here is*** **[html5shiv](https://github.com/aFarkas/html5shiv)** ***but I believe it's overkill.*** The simplest approach is to {% raw %}<code>createElement</code>{% endraw %} all all your html5 elements and declare them as block elements in your CSS.
+****The only exception here is*** **[html5shiv](https://github.com/aFarkas/html5shiv)** ***but I believe it's overkill.*** The simplest approach is to `createElement` all all your html5 elements and declare them as block elements in your CSS.
 
-#### Insert this JS snippet into your {% raw %}<code><HEAD /></code>{% endraw %}
+#### Insert this JS snippet into your `<HEAD />`
 
 ```javascript
 var html5Elements = [
@@ -230,7 +230,7 @@ Wherever you use REMs or EMs, write the alternative CSS for IE in pixels. All yo
 
 #### Original LESS
 
-```css
+```less
 [role="banner"] {
     height: 12rem;
     background-position: 0% 100%;
@@ -285,7 +285,7 @@ Notice how the the media queries for the IE7/IE8 version went away? Since older 
 
 -------------
 
-### *Tip #6:* Use lots of {% raw %}<code>overflow: hidden;</code>{% endraw %}
+### *Tip #6:* Use lots of `overflow: hidden;`
 
 IE tends to bug out on containers with floated elements. It doesn't know how large the parent container ought to be, so it will add scrollbars.
 

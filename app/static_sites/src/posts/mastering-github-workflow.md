@@ -4,8 +4,8 @@ repo_title:     "Mastering Github - Part 3: Optimizing Your Workflow"
 template:       page.hbs
 created:       	2015-06-27
 createdDT:     	2015-06-27
-modified:		2015-06-29
-modifiedDT:     2015-06-29
+modified:		2015-06-30
+modifiedDT:     2015-06-30
 permalink:  	mastering-github-workflow/
 snippet:        <p>There are many ways to structure your workflow in Git. I recommend the following process, which uses feature branches and 3-way merges.</p>
 description:	There are many ways to structure your workflow in Git. I recommend the following process, which uses feature branches and 3-way merges.

@@ -84,6 +84,11 @@ config = {
         }),
         new HtmlWebpackPlugin({
             inject: true,
+            filename: 'watches/index.html',
+            template: 'app/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            inject: true,
             template: 'app/index.html'
         }),
         new Webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
