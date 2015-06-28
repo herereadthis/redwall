@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "rm -rf dist;mkdir dist;NODE_ENV=production webpack -p --config webpack.production.config.js; npm run metalsmith",
+    "deploy": "rm -rf dist;mkdir dist;NODE_ENV=production webpack -p --config webpack.production.config.js",
     "metalsmith": "node app/static_sites/metalsmith;NODE_ENV=production webpack -p --config webpack.metalsmith.config.js"
   },
   "repository": {

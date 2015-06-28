@@ -16,7 +16,8 @@ paths = {
     archiveBuild: path.resolve(__dirname, 'archive'),
     docs: path.resolve(__dirname, 'docs'),
     build: path.resolve(__dirname, 'dist'),
-    main: path.resolve(__dirname, 'app', 'main.js')
+    main: path.resolve(__dirname, 'app', 'main.js'),
+    watches: path.resolve(__dirname, 'app/views/Watches', 'main.js')
 };
 
 // https://www.npmjs.com/package/html-webpack-plugin
@@ -29,11 +30,13 @@ config = {
     debug: false,
     entry: {
         app: paths.main,
+        watches: paths.watches,
         vendors: ['react', 'react-router', 'flummox', 'axios']
     },
     output: {
         path: paths.build,
-        filename: 'bundle.js'
+        filename: "[name].bundle.js",
+        publicPath: '/'
     },
     module: {
         loaders: [
@@ -82,17 +85,20 @@ config = {
                 warnings: true
             }
         }),
-        new HtmlWebpackPlugin({
-            inject: true,
-            filename: 'watches/index.html',
-            template: 'app/index.html'
-        }),
-        new HtmlWebpackPlugin({
-            inject: true,
-            template: 'app/index.html'
-        }),
         new Webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
         new ExtractTextPlugin("global.css"),
+        new HtmlWebpackPlugin({
+            inject: false,
+            filename: 'index.html',
+            template: 'app/index.html',
+            excludeChunks: ['watches.bundle.js']
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            filename: 'watches/index.html',
+            template: 'app/views/watches/index.html',
+            excludeChunks: ['app.bundle.js']
+        }),
         new SaveAssetsJson({
             path: paths.build,
             filename: 'assets.json'

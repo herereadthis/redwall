@@ -5,11 +5,13 @@
 
 var Webpack, path, paths,
     ExtractTextPlugin, SaveAssetsJson, TimestampWebpackPlugin,
+    HtmlWebpackPlugin,
     config;
 
 Webpack = require('webpack');
 
 path = require('path');
+HtmlWebpackPlugin = require('html-webpack-plugin');
 
 paths = {
     // node path module
@@ -19,7 +21,8 @@ paths = {
     docs: path.resolve(__dirname, 'docs'),
     build: path.resolve(__dirname, 'app'),
     dist: path.resolve(__dirname, 'dist'),
-    main: path.resolve(__dirname, 'app', 'main.js')
+    main: path.resolve(__dirname, 'app', 'main.js'),
+    watches: path.resolve(__dirname, 'app/views/Watches', 'main.js')
 };
 
 // Extract Text Plugin is for embedded stylesheets to be compiled as CSS
@@ -41,6 +44,14 @@ config = {
             // Our application
             paths.main
         ],
+        watches: [
+            // For hot style updates
+            'webpack/hot/dev-server',
+            // The script refreshing the browser on none hot updates
+            'webpack-dev-server/client?http://localhost:8080',
+            // Our application
+            paths.watches
+        ],
         vendors: ['react', 'react-router', 'flummox', 'axios']
     },
     output: {
@@ -49,8 +60,8 @@ config = {
         // error will occur if nothing is specified. We use the paths.build
         // as that points to where the files will eventually be bundled
         // in production
-        path: paths.build,
-        filename: 'bundle.js',
+        path: path.join(__dirname, "js"),
+        filename: "[name].bundle.js",
 
         // Everything related to Webpack should go through a build path,
         // localhost:3000/build. That makes proxying easier to handle
@@ -105,6 +116,18 @@ config = {
         new Webpack.HotModuleReplacementPlugin(),
         new Webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
         new ExtractTextPlugin("global.css"),
+        new HtmlWebpackPlugin({
+            inject: false,
+            filename: 'index.html',
+            template: 'app/index.html',
+            excludeChunks: ['watches.bundle.js']
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            filename: 'watches/index.html',
+            template: 'app/views/watches/index.html',
+            excludeChunks: ['app.bundle.js']
+        }),
         new SaveAssetsJson({
             path: paths.build,
             filename: 'assets.json'
