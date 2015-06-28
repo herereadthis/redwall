@@ -43,7 +43,31 @@ export default class RetroRules extends React.Component {
                         <li>I am the company I keep.</li>
                     </ul>
 
-                    <hr className="rainbow_gradient" />
+                    <hr className="rainbow_gradient"/>
+
+                    {/*
+                    <h3>Here are 3 rules for Burning Man virgins:</h3>
+
+                    <ul>
+                        <li>At some point, all your friends are going to ditch
+                            you. It&rsquo;s okay.
+                        </li>
+                        <li>You are going to meet people who look at the world
+                            in an entirely different way than you do, and you
+                            may never understand them. It&rsquo;s okay.
+                        </li>
+                        <li>You have to be able to make your own fun. It
+                            won&rsquo;t happen for you, and it&rsquo;s okay.
+                        </li>
+                    </ul>
+
+                    <hr class="rainbow_gradient"/>
+
+                    <div class="centered_image with_border">
+                        <img src="/build/images/homepage/irene_430x464.png"
+                             width="215" height="232"/>
+                    </div>
+                    */}
                 </section>
             </article>
         );
