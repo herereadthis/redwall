@@ -8,6 +8,8 @@ var Metalsmith    = require('metalsmith'),
     dateFormatter = require('metalsmith-date-formatter'),
     fs            = require('fs');
 
+Handlebars.registerPartial('head_boilerplate',
+    fs.readFileSync(__dirname + '/templates/partials/head_boilerplate.hbs').toString());
 Handlebars.registerPartial('header',
     fs.readFileSync(__dirname + '/templates/partials/header.hbs').toString());
 Handlebars.registerPartial('footer',
@@ -27,6 +29,10 @@ Handlebars.registerPartial('icon_vimeo',
 
 
 Metalsmith(__dirname)
+    .metadata({
+        baseUrl: 'http://herereadthis.com/code/',
+        siteTitle: 'Here, Read this Code'
+    })
     .use(dateFormatter({
         dates: [
             {
