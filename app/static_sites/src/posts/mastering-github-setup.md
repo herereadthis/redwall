@@ -4,8 +4,8 @@ repo_title:     "Mastering Github - Part 1: Computer Setup"
 template:       page.hbs
 created:       	2015-06-27
 createdDT:     	2015-06-27
-modified:		2015-06-27
-modifiedDT:     2015-06-27
+modified:		2015-06-28
+modifiedDT:     2015-06-28
 permalink:  	mastering-github-setup/
 snippet:        <p>Github is the versioning tool for writing code. It's basically social networking for coders. In this 5-part series, I'll show you how to go from zero Github experience to doing pretty much everything you need to do. Part 1 will be about setting up your computer to use Github from the command line.</p>
 description:	How to set up your computer to use Github from the command line

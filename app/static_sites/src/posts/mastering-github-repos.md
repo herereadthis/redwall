@@ -1,11 +1,11 @@
 ---
-title:      	"Mastering Github - Part 1: Creating and Managing Repositories"
-repo_title:     "Mastering Github - Part 1: Creating and Managing Repositories"
+title:      	"Mastering Github - Part 2: Creating and Managing Repositories"
+repo_title:     "Mastering Github - Part 2: Creating and Managing Repositories"
 template:       page.hbs
 created:       	2015-06-27
 createdDT:     	2015-06-27
-modified:		2015-06-27
-modifiedDT:     2015-06-27
+modified:		2015-06-29
+modifiedDT:     2015-06-29
 permalink:  	mastering-github-repos/
 snippet:        <p>In Part 2 of this series, you'll learn how to create a Github Respository, make a code commit, and push your changes.</p>
 description:	In Part 2 of this series, you'll learn how to create a Github Respository, make a code commit, and push your changes.
