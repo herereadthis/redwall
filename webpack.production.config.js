@@ -31,7 +31,7 @@ config = {
     entry: {
         app: paths.main,
         watches: paths.watches,
-        vendors: ['react', 'react-router', 'flummox', 'axios']
+        vendors: ['react', 'react-router', 'flummox', 'axios', 'lodash']
     },
     output: {
         path: paths.build,

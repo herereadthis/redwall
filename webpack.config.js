@@ -52,7 +52,7 @@ config = {
             // Our application
             paths.watches
         ],
-        vendors: ['react', 'react-router', 'flummox', 'axios']
+        vendors: ['react', 'react-router', 'flummox', 'axios', 'lodash']
     },
     output: {
         // We need to give Webpack a path. It does not actually need it,

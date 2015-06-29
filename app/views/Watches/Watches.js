@@ -32,7 +32,6 @@ export default class App extends React.Component {
     }
 
     render() {
-        window.console.log(this.props.watches);
         return (
             <div>
                 <WatchTable watches={this.props.watches} />

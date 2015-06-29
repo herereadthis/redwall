@@ -1,5 +1,7 @@
 import React from 'react';
 
+import _ from 'lodash';
+
 export default class Homepage extends React.Component {
     constructor() {
         super();
@@ -8,7 +10,42 @@ export default class Homepage extends React.Component {
     componentDidMount() {
     }
 
+
+    getParent = (id) => {
+        //window.console.log(this.props.watches);
+        var parentLicense, parentOwner, parentCompany, parent;
+
+        parentLicense = _.find(this.props.watches, (watch) => {
+
+            if (watch.licences !== undefined) {
+                return watch.licences.indexOf(id) !== -1;
+            }
+        });
+        if (parentLicense === undefined) {
+            parentOwner = _.find(this.props.watches, (watch) => {
+
+                if (watch.ownership !== undefined) {
+                    return watch.ownership.indexOf(id) !== -1;
+                }
+            });
+        }
+        else {
+            parentCompany = parentLicense;
+        }
+        if (parentOwner !== undefined) {
+            parentCompany = parentOwner;
+        }
+        if (parentCompany === undefined) {
+            parent = '';
+        }
+        else {
+            parent = parentCompany.companyName;
+        }
+        return parent;
+    };
+
     makeRows = () => {
+        var _this = this
         return this.props.watches.map((value, key) => {
             return (
                 <tr key={key}>
@@ -16,13 +53,13 @@ export default class Homepage extends React.Component {
                     <td><p>{value.companyType}</p></td>
                     <td><p>{value.founded}</p></td>
                     <td><p>{value.nationality}</p></td>
+                    <td><p>{_this.getParent(value.id)}</p></td>
                 </tr>
             )
         });
     };
 
     render() {
-        window.console.log(this.props.watches);
         if (this.props.watches === undefined) {
             return (
                 <p>No data</p>
@@ -37,6 +74,7 @@ export default class Homepage extends React.Component {
                             <th><p>Type</p></th>
                             <th><p>Founded</p></th>
                             <th><p>Country</p></th>
+                            <th><p>Parent</p></th>
                         </tr>
                     </thead>
                     <tbody>

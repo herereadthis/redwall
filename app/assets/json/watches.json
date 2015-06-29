@@ -19,9 +19,7 @@
         "companyName": "Invicta",
         "companyType": "watchmaker",
         "founded": 1991,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": null,
         "url": "http://invictawatch.com"
     },
@@ -30,9 +28,7 @@
         "companyName": "Coach",
         "companyType": "licence",
         "founded": 1941,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 0,
         "url": "http://www.coach.com"
     },
@@ -41,9 +37,7 @@
         "companyName": "HUGO BOSS",
         "companyType": "licence",
         "founded": 1924,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": 0,
         "url": "http://www.hugoboss.com"
     },
@@ -52,9 +46,7 @@
         "companyName": "Juicy Couture",
         "companyType": "licence",
         "founded": 1997,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 0,
         "url": "http://www.juicycouture.com"
     },
@@ -63,9 +55,7 @@
         "companyName": "Lacoste",
         "companyType": "licence",
         "founded": 1933,
-        "licences": null,
         "nationality": "France",
-        "ownership": null,
         "parentID": 0,
         "url": "https://www.lacoste.com"
     },
@@ -74,9 +64,7 @@
         "companyName": "Scuderia Ferrari",
         "companyType": "licence",
         "founded": 1929,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 0,
         "url": "http://formula1.ferrari.com"
     },
@@ -85,9 +73,7 @@
         "companyName": "Tommy Hilfiger",
         "companyType": "licence",
         "founded": 1985,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 0,
         "url": "http://www.tommy.com"
     },
@@ -96,9 +82,7 @@
         "companyName": "Concord",
         "companyType": "watchmaker",
         "founded": 1908,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 0,
         "url": "http://www.concord.ch"
     },
@@ -107,9 +91,7 @@
         "companyName": "Ebel",
         "companyType": "watchmaker",
         "founded": 1911,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 0,
         "url": "http://www.ebel.com"
     },
@@ -118,9 +100,7 @@
         "companyName": "ESQ Movado",
         "companyType": "watchmaker",
         "founded": 1992,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 0,
         "url": "http://www.movado.com/esq-movado.html"
     },
@@ -129,9 +109,7 @@
         "companyName": "Movado",
         "companyType": "watchmaker",
         "founded": 1881,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 0,
         "url": "http://www.movado.com"
     },
@@ -140,7 +118,6 @@
         "companyName": "Citizen Holdings",
         "companyType": "holding",
         "founded": 1918,
-        "licences": null,
         "nationality": "Japan",
         "ownership": [
             14, 18, 19, 20
@@ -168,9 +145,7 @@
         "companyName": "Harley-Davidson",
         "companyType": "licence",
         "founded": 1903,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 14,
         "url": "http://houseofharley.com/en/products/more/jewelry-and-watches/watches"
     },
@@ -179,9 +154,7 @@
         "companyName": "Caravelle",
         "companyType": "watchmaker",
         "founded": 1962,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 14,
         "url": "http://www.caravelleny.com"
     },
@@ -190,9 +163,7 @@
         "companyName": "Wittnauer",
         "companyType": "watchmaker",
         "founded": 1885,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 14,
         "url": "http://www.wittnauer.com"
     },
@@ -201,9 +172,7 @@
         "companyName": "Citizen",
         "companyType": "watchmaker",
         "founded": 1918,
-        "licences": null,
         "nationality": "Japan",
-        "ownership": null,
         "parentID": 13,
         "url": "http://www.citizenwatch.com"
     },
@@ -212,9 +181,7 @@
         "companyName": "Independent Watch",
         "companyType": "watchmaker",
         "founded": 2013,
-        "licences": null,
         "nationality": "Japan",
-        "ownership": null,
         "parentID": 13,
         "url": "http://www.independentwatch.com"
     },
@@ -223,9 +190,7 @@
         "companyName": "Miyota",
         "companyType": "movement",
         "founded": 1959,
-        "licences": null,
         "nationality": "Japan",
-        "ownership": null,
         "parentID": 13,
         "url": "http://www.citizen.co.jp/miyota_mvt/"
     },
@@ -234,9 +199,7 @@
         "companyName": "Breitling",
         "companyType": "watchmaker",
         "founded": 1884,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -244,7 +207,6 @@
         "companyName": "LVMH",
         "companyType": "holding",
         "founded": 1987,
-        "licences": null,
         "nationality": "France",
         "ownership": [
             23, 24, 25, 26, 27, 28
@@ -256,9 +218,7 @@
         "companyName": "Bvlgari",
         "companyType": "watchmaker",
         "founded": 1884,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 22
     },
     {
@@ -266,9 +226,7 @@
         "companyName": "Chaumet",
         "companyType": "watchmaker",
         "founded": 1780,
-        "licences": null,
         "nationality": "France",
-        "ownership": null,
         "parentID": 22
     },
     {
@@ -276,9 +234,7 @@
         "companyName": "FRED",
         "companyType": "watchmaker",
         "founded": 1936,
-        "licences": null,
         "nationality": "France",
-        "ownership": null,
         "parentID": 22
     },
     {
@@ -286,9 +242,7 @@
         "companyName": "Hublot",
         "companyType": "watchmaker",
         "founded": 1980,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 22
     },
     {
@@ -296,9 +250,7 @@
         "companyName": "TAG Heuer",
         "companyType": "watchmaker",
         "founded": 1860,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 22
     },
     {
@@ -306,9 +258,7 @@
         "companyName": "Zenith",
         "companyType": "watchmaker",
         "founded": 1865,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 22
     },
     {
@@ -316,7 +266,6 @@
         "companyName": "Frédérique Constant",
         "companyType": "watchmaker",
         "founded": 1988,
-        "licences": null,
         "nationality": "Switzerland",
         "ownership": [
             30
@@ -328,9 +277,7 @@
         "companyName": "Alpina",
         "companyType": "watchmaker",
         "founded": 1883,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 29
     },
     {
@@ -338,9 +285,7 @@
         "companyName": "Audemars Piguet",
         "companyType": "watchmaker",
         "founded": 1875,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -348,9 +293,7 @@
         "companyName": "Bell &amp; Ross",
         "companyType": "watchmaker",
         "founded": 1992,
-        "licences": null,
         "nationality": "France",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -358,9 +301,7 @@
         "companyName": "NOMOS",
         "companyType": "watchmaker",
         "founded": 1990,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -368,9 +309,7 @@
         "companyName": "Stowa",
         "companyType": "watchmaker",
         "founded": 1927,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -378,9 +317,7 @@
         "companyName": "Junghans",
         "companyType": "watchmaker",
         "founded": 1861,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -388,7 +325,6 @@
         "companyName": "POINTtec",
         "companyType": "holding",
         "founded": 1987,
-        "licences": null,
         "nationality": "Germany",
         "ownership": [
             37, 38
@@ -400,9 +336,7 @@
         "companyName": "Zeppelin",
         "companyType": "watchmaker",
         "founded": 1987,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": 36
     },
     {
@@ -410,9 +344,7 @@
         "companyName": "Junkers",
         "companyType": "watchmaker",
         "founded": 1987,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": 36
     },
     {
@@ -420,7 +352,6 @@
         "companyName": "Swatch Group",
         "companyType": "holding",
         "founded": 1983,
-        "licences": null,
         "nationality": "Switzerland",
         "ownership": [
             40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 141, 151, 154
@@ -432,9 +363,7 @@
         "companyName": "Breguet",
         "companyType": "watchmaker",
         "founded": 1775,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -442,9 +371,7 @@
         "companyName": "Harry Winston",
         "companyType": "watchmaker",
         "founded": 1932,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -452,9 +379,7 @@
         "companyName": "Blancpain",
         "companyType": "watchmaker",
         "founded": 1735,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -462,9 +387,7 @@
         "companyName": "Glashütte Original",
         "companyType": "watchmaker",
         "founded": 1994,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -472,9 +395,7 @@
         "companyName": "Omega",
         "companyType": "watchmaker",
         "founded": 1903,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -482,9 +403,7 @@
         "companyName": "Longines",
         "companyType": "watchmaker",
         "founded": 1832,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -492,9 +411,7 @@
         "companyName": "Rado",
         "companyType": "watchmaker",
         "founded": 1917,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -502,9 +419,7 @@
         "companyName": "Tissot",
         "companyType": "watchmaker",
         "founded": 1853,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -512,9 +427,7 @@
         "companyName": "Certina",
         "companyType": "watchmaker",
         "founded": 1888,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -522,9 +435,7 @@
         "companyName": "Mido",
         "companyType": "watchmaker",
         "founded": 1918,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -532,9 +443,7 @@
         "companyName": "Hamilton",
         "companyType": "watchmaker",
         "founded": 1892,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -542,9 +451,7 @@
         "companyName": "Swatch",
         "companyType": "watchmaker",
         "founded": 1983,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39
     },
     {
@@ -552,9 +459,7 @@
         "companyName": "Bovet Fleurier",
         "companyType": "watchmaker",
         "founded": 1822,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -562,9 +467,7 @@
         "companyName": "Bremont",
         "companyType": "watchmaker",
         "founded": 2002,
-        "licences": null,
         "nationality": "United Kingdom",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -572,9 +475,7 @@
         "companyName": "Christopher Ward",
         "companyType": "watchmaker",
         "founded": 2004,
-        "licences": null,
         "nationality": "United Kingdom",
-        "ownership": null,
         "parentID": 143,
         "url": "http://www.christopherward.com"
     },
@@ -583,9 +484,7 @@
         "companyName": "Baume et Mercier",
         "companyType": "watchmaker",
         "founded": 1830,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 56
     },
     {
@@ -607,9 +506,7 @@
         "companyName": "Cartier",
         "companyType": "watchmaker",
         "founded": 1847,
-        "licences": null,
         "nationality": "France",
-        "ownership": null,
         "parentID": 56
     },
     {
@@ -617,9 +514,7 @@
         "companyName": "IWC",
         "companyType": "watchmaker",
         "founded": 1868,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 56
     },
     {
@@ -627,9 +522,7 @@
         "companyName": "Jaeger-LeCoultre",
         "companyType": "watchmaker",
         "founded": 1833,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 56
     },
     {
@@ -637,9 +530,7 @@
         "companyName": "Montblanc",
         "companyType": "watchmaker",
         "founded": 1906,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": 56
     },
     {
@@ -647,9 +538,7 @@
         "companyName": "Roger Dubuis",
         "companyType": "watchmaker",
         "founded": 1995,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 56
     },
     {
@@ -657,9 +546,7 @@
         "companyName": "Vacheron Constantin",
         "companyType": "watchmaker",
         "founded": 1755,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 56
     },
     {
@@ -667,9 +554,7 @@
         "companyName": "Ralph Lauren",
         "companyType": "watchmaker",
         "founded": 2007,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 56
     },
     {
@@ -677,9 +562,7 @@
         "companyName": "Piaget",
         "companyType": "watchmaker",
         "founded": 1874,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 56
     },
     {
@@ -687,9 +570,7 @@
         "companyName": "Panarei",
         "companyType": "watchmaker",
         "founded": 1860,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 56
     },
     {
@@ -697,7 +578,6 @@
         "companyName": "Seiko Group",
         "companyType": "holding",
         "founded": 1942,
-        "licences": null,
         "nationality": "Japan",
         "ownership": [
             67, 68, 89
@@ -709,9 +589,7 @@
         "companyName": "Seiko",
         "companyType": "watchmaker",
         "founded": 1881,
-        "licences": null,
         "nationality": "Japan",
-        "ownership": null,
         "parentID": 66
     },
     {
@@ -719,9 +597,7 @@
         "companyName": "Orient",
         "companyType": "watchmaker",
         "founded": 1950,
-        "licences": null,
         "nationality": "Japan",
-        "ownership": null,
         "parentID": 66
     },
     {
@@ -729,9 +605,7 @@
         "companyName": "Raymond Weil",
         "companyType": "watchmaker",
         "founded": 1976,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -739,9 +613,7 @@
         "companyName": "Oris",
         "companyType": "watchmaker",
         "founded": 1904,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -749,9 +621,7 @@
         "companyName": "Frank Muller",
         "companyType": "watchmaker",
         "founded": 1991,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -759,9 +629,7 @@
         "companyName": "Laco",
         "companyType": "watchmaker",
         "founded": 1925,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -769,9 +637,7 @@
         "companyName": "Sinn",
         "companyType": "watchmaker",
         "founded": 1961,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -779,9 +645,7 @@
         "companyName": "Suunto",
         "companyType": "watchmaker",
         "founded": 1936,
-        "licences": null,
         "nationality": "Finland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -789,9 +653,7 @@
         "companyName": "Doxa",
         "companyType": "Switzerland",
         "founded": 1889,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -799,9 +661,7 @@
         "companyName": "Ulysse Nardin",
         "companyType": "watchmaker",
         "founded": 1846,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -809,9 +669,7 @@
         "companyName": "Girard-Perregaux",
         "companyType": "watchmaker",
         "founded": 1791,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 78
     },
     {
@@ -819,7 +677,6 @@
         "companyName": "Kering",
         "companyType": "holding",
         "founded": 1963,
-        "licences": null,
         "nationality": "France",
         "ownership": [
             77
@@ -831,9 +688,7 @@
         "companyName": "Gucci",
         "companyType": "watchmaker",
         "founded": 1921,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 78
     },
     {
@@ -855,9 +710,7 @@
         "companyName": "Timex",
         "companyType": "watchmaker",
         "founded": 1854,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 80
     },
     {
@@ -865,9 +718,7 @@
         "companyName": "Guess",
         "companyType": "licence",
         "founded": 1991,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 80
     },
     {
@@ -875,9 +726,7 @@
         "companyName": "Disney",
         "companyType": "licence",
         "founded": 1993,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 80
     },
     {
@@ -885,9 +734,7 @@
         "companyName": "Nautica",
         "companyType": "licence",
         "founded": 1994,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 80
     },
     {
@@ -895,9 +742,7 @@
         "companyName": "Versace",
         "companyType": "licence",
         "founded": 2004,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 80
     },
     {
@@ -905,9 +750,7 @@
         "companyName": "Marc Ecko",
         "companyType": "licence",
         "founded": 2002,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 80
     },
     {
@@ -915,9 +758,7 @@
         "companyName": "Salvatore Ferragamo",
         "companyType": "licence",
         "founded": 2008,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 80
     },
     {
@@ -925,9 +766,7 @@
         "companyName": "Valentino",
         "companyType": "licence",
         "founded": 2008,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 80
     },
     {
@@ -935,9 +774,7 @@
         "companyName": "Alba",
         "companyType": "watchmaker",
         "founded": 1979,
-        "licences": null,
         "nationality": "Japan",
-        "ownership": null,
         "parentID": 66
     },
     {
@@ -945,9 +782,7 @@
         "companyName": "Eterna",
         "companyType": "watchmaker",
         "founded": 1856,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 147
     },
     {
@@ -955,9 +790,7 @@
         "companyName": "Festina",
         "companyType": "watchmaker",
         "founded": 1902,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 66
     },
     {
@@ -979,9 +812,7 @@
         "companyName": "Fossil",
         "companyType": "watchmaker",
         "founded": 1990,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -989,9 +820,7 @@
         "companyName": "Relic",
         "companyType": "watchmaker",
         "founded": 1990,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -999,9 +828,7 @@
         "companyName": "Relic",
         "companyType": "watchmaker",
         "founded": 1990,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1009,9 +836,7 @@
         "companyName": "Michele",
         "companyType": "watchmaker",
         "founded": 2000,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1019,9 +844,7 @@
         "companyName": "Zodiac",
         "companyType": "watchmaker",
         "founded": 1893,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1029,9 +852,7 @@
         "companyName": "Burberry",
         "companyType": "licence",
         "founded": 1856,
-        "licences": null,
         "nationality": "United Kingdom",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1039,9 +860,7 @@
         "companyName": "Emporio Armani",
         "companyType": "licence",
         "founded": 1975,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1049,9 +868,7 @@
         "companyName": "Universal Genève",
         "companyType": "watcmaker",
         "founded": 1894,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1059,9 +876,7 @@
         "companyName": "H. Moser &amp; Cie",
         "companyType": "watchmaker",
         "founded": 1828,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1069,9 +884,7 @@
         "companyName": "Marc by Marc Jacobs",
         "companyType": "licence",
         "founded": 2001,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1079,9 +892,7 @@
         "companyName": "Michael Kors",
         "companyType": "licence",
         "founded": 1981,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1089,9 +900,7 @@
         "companyName": "DKNY",
         "companyType": "licence",
         "founded": 1984,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1099,9 +908,7 @@
         "companyName": "Karl Lagerfeld",
         "companyType": "licence",
         "founded": 1974,
-        "licences": null,
         "nationality": "France",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1109,9 +916,7 @@
         "companyName": "Tory Burch",
         "companyType": "licence",
         "founded": 2004,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1119,9 +924,7 @@
         "companyName": "Diesel",
         "companyType": "licence",
         "founded": 1978,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1129,9 +932,7 @@
         "companyName": "Armani Exchange",
         "companyType": "licence",
         "founded": 1991,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1139,9 +940,7 @@
         "companyName": "Adidas",
         "companyType": "licence",
         "founded": 1924,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1149,9 +948,7 @@
         "companyName": "Skagen",
         "companyType": "licence",
         "founded": 1981,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 92
     },
     {
@@ -1159,9 +956,7 @@
         "companyName": "Nixon",
         "companyType": "watchmaker",
         "founded": 1997,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1169,9 +964,7 @@
         "companyName": "Tiffany &amp; Co.",
         "companyType": "watchmaker",
         "founded": 1837,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1179,9 +972,7 @@
         "companyName": "Sarpaneva",
         "companyType": "watchmaker",
         "founded": 2003,
-        "licences": null,
         "nationality": "Finland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1189,9 +980,7 @@
         "companyName": "Anomino",
         "companyType": "watchmaker",
         "founded": 1997,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1199,9 +988,7 @@
         "companyName": "Ball",
         "companyType": "watchmaker",
         "founded": 1891,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1209,9 +996,7 @@
         "companyName": "Melbourne",
         "companyType": "watchmaker",
         "founded": 2013,
-        "licences": null,
         "nationality": "Australia",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1219,9 +1004,7 @@
         "companyName": "Raketa",
         "companyType": "watchmaker",
         "founded": 1961,
-        "licences": null,
         "nationality": "Russia",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1229,9 +1012,7 @@
         "companyName": "F.P. Journe",
         "companyType": "watchmaker",
         "founded": 1999,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1239,7 +1020,6 @@
         "companyName": "Mondaine",
         "companyType": "watchmaker",
         "founded": 1951,
-        "licences": null,
         "nationality": "Switzerland",
         "ownership": [
             119
@@ -1251,9 +1031,7 @@
         "companyName": "Luminox",
         "companyType": "watchmaker",
         "founded": 1989,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1261,9 +1039,7 @@
         "companyName": "Hajime Asaoka",
         "companyType": "watchmaker",
         "founded": 2009,
-        "licences": null,
         "nationality": "Japan",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1271,9 +1047,7 @@
         "companyName": "Hermès",
         "companyType": "watchmaker",
         "founded": 1978,
-        "licences": null,
         "nationality": "France",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1281,9 +1055,7 @@
         "companyName": "Richard Mille",
         "companyType": "watchmaker",
         "founded": 2001,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null
     },
     {
@@ -1291,9 +1063,7 @@
         "companyName": "Vianney Halter",
         "companyType": "watchmaker",
         "founded": 1998,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.vianny-halter.com"
     },
@@ -1302,9 +1072,7 @@
         "companyName": "Chronoswiss",
         "companyType": "watchmaker",
         "founded": 1983,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.chronoswiss.com"
     },
@@ -1313,7 +1081,6 @@
         "companyName": "Binda Group",
         "companyType": "holding",
         "founded": 1983,
-        "licences": null,
         "nationality": "Switzerland",
         "ownership": [
             126, 133
@@ -1341,9 +1108,7 @@
         "companyName": "Kenneth Cole",
         "companyType": "licence",
         "founded": 1982,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 126,
         "url": "http://www.kennethcole.com"
     },
@@ -1352,9 +1117,7 @@
         "companyName": "Ted Baker",
         "companyType": "licence",
         "founded": 1988,
-        "licences": null,
         "nationality": "United Kingdom",
-        "ownership": null,
         "parentID": 126,
         "url": "http://www.tedbaker.com"
     },
@@ -1363,9 +1126,7 @@
         "companyName": "Breil",
         "companyType": "watchmaker",
         "founded": 1938,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 126,
         "url": "http://www.breil.com"
     },
@@ -1374,9 +1135,7 @@
         "companyName": "Tommy Bahama",
         "companyType": "licence",
         "founded": 2009,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 126,
         "url": "http://www.tommybahama.com"
     },
@@ -1385,9 +1144,7 @@
         "companyName": "Betsey Johnson",
         "companyType": "licence",
         "founded": 1978,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 126,
         "url": "http://www.betseyjohnson.com"
     },
@@ -1396,9 +1153,7 @@
         "companyName": "BCBG",
         "companyType": "licence",
         "founded": 1989,
-        "licences": null,
         "nationality": "United States",
-        "ownership": null,
         "parentID": 126,
         "url": "http://www.bcbg.com"
     },
@@ -1407,9 +1162,7 @@
         "companyName": "Dolce &amp; Gabbana",
         "companyType": "licence",
         "founded": 1985,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 125,
         "url": "http://www.dolcegabbana.com"
     },
@@ -1418,9 +1171,7 @@
         "companyName": "Moschino",
         "companyType": "licence",
         "founded": 1983,
-        "licences": null,
         "nationality": "Italy",
-        "ownership": null,
         "parentID": 125,
         "url": "http://www.moschino.com"
     },
@@ -1429,9 +1180,7 @@
         "companyName": "URWERK",
         "companyType": "watchmaker",
         "founded": 1995,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.urwerk.com"
     },
@@ -1440,9 +1189,7 @@
         "companyName": "Victorinox Swiss Army",
         "companyType": "watchmaker",
         "founded": 1989,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.victorinoxwatches.com"
     },
@@ -1451,9 +1198,7 @@
         "companyName": "Glycine",
         "companyType": "watchmaker",
         "founded": 1914,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null,
         "url": "http://glycine-watch.ch"
     },
@@ -1462,9 +1207,7 @@
         "companyName": "Halda",
         "companyType": "watchmaker",
         "founded": 1887,
-        "licences": null,
         "nationality": "Sweden",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.haldasweden.com"
     },
@@ -1473,9 +1216,7 @@
         "companyName": "Angelus",
         "companyType": "watchmaker",
         "founded": 1891,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.angelus-watches.com"
     },
@@ -1484,9 +1225,7 @@
         "companyName": "De Bethune",
         "companyType": "watchmaker",
         "founded": 2002,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.debethune.ch"
     },
@@ -1495,9 +1234,7 @@
         "companyName": "ETA",
         "companyType": "movement",
         "founded": 1793,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39,
         "url": "http://www.eta.ch"
     },
@@ -1506,9 +1243,7 @@
         "companyName": "Synergies Horlogères",
         "companyType": "movement",
         "founded": 2007,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39,
         "url": "http://www.synhor.ch"
     },
@@ -1517,7 +1252,6 @@
         "companyName": "C.W. London Holdings",
         "companyType": "holding",
         "founded": 2014,
-        "licences": null,
         "nationality": "United Kingdom",
         "ownership": [
             142, 54
@@ -1530,9 +1264,7 @@
         "companyName": "Sellita",
         "companyType": "movement",
         "founded": 1950,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.sellita.ch"
     },
@@ -1541,9 +1273,7 @@
         "companyName": "Edox",
         "companyType": "watchmaker",
         "founded": 1884,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.edox.ch"
     },
@@ -1552,9 +1282,7 @@
         "companyName": "Carl F. Bucherer",
         "companyType": "watchmaker",
         "founded": 1919,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.carl-f-bucherer.com/"
     },
@@ -1563,7 +1291,6 @@
         "companyName": "Citychamp",
         "companyType": "holding",
         "founded": 1991,
-        "licences": null,
         "nationality": "Hong Kong",
         "ownership": [
             90, 148, 149
@@ -1576,9 +1303,7 @@
         "companyName": "Corum",
         "companyType": "watchmaker",
         "founded": 1955,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 147,
         "url": "http://www.corum.ch"
     },
@@ -1587,9 +1312,7 @@
         "companyName": "Rotary",
         "companyType": "watchmaker",
         "founded": 1895,
-        "licences": null,
         "nationality": "United Kingdom",
-        "ownership": null,
         "parentID": 147,
         "url": "http://www.rotarywatches.com/"
     },
@@ -1598,9 +1321,7 @@
         "companyName": "Mühle-Glashütte",
         "companyType": "watchmaker",
         "founded": 1994,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.muehle-glashuette.de/"
     },
@@ -1609,9 +1330,7 @@
         "companyName": "Union Glashütte",
         "companyType": "watchmaker",
         "founded": 1893,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": 39,
         "url": "http://www.union-glashuette.com/"
     },
@@ -1620,9 +1339,7 @@
         "companyName": "Tutima",
         "companyType": "watchmaker",
         "founded": 1927,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.tutima.com/"
     },
@@ -1631,9 +1348,7 @@
         "companyName": "MeisterSinger",
         "companyType": "watchmaker",
         "founded": 2001,
-        "licences": null,
         "nationality": "Germany",
-        "ownership": null,
         "parentID": null,
         "url": "http://www.meistersinger.de/"
     },
@@ -1642,9 +1357,7 @@
         "companyName": "Nivarox",
         "companyType": "movement",
         "founded": 1984,
-        "licences": null,
         "nationality": "Switzerland",
-        "ownership": null,
         "parentID": 39,
         "url": "http://www.nivarox.com/"
     }

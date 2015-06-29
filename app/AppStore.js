@@ -190,7 +190,6 @@ export default class AppStore extends Store {
 
     fetchWatches() {
         let url = 'assets/json/watches.json';
-        window.console.log(this.state);
         axios.get(url)
             .then((response) => {
                 this.setState({
