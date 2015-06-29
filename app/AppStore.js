@@ -7,7 +7,7 @@ import AppConstants from './AppConstants';
 
 import {HomepageConfig, LocalStorageMethods, SessionStorageMethods} from './AppConstants';
 
-const watches = require('./assets/json/watches.json');
+//const watches = require('./assets/json/watches.json');
 
 import axios from 'axios'
 
@@ -44,7 +44,6 @@ export default class AppStore extends Store {
         super();
 
         this.state = {
-            watches,
             popupBox,
             timestamp: {},
             ninetiesImgSize: 0,
@@ -60,6 +59,8 @@ export default class AppStore extends Store {
         this.register(appActionsIds.getLastPath, this.getLastPath);
         this.register(appActionsIds.recordLastPath, this.recordLastPath);
         this.register(appActionsIds.setCacheAge, this.setCacheAge);
+        this.registerAsync(appActionsIds.fetchTimestamp, this.fetchTimestamp);
+        this.registerAsync(appActionsIds.fetchWatches, this.fetchWatches);
     }
 
 
@@ -185,5 +186,18 @@ export default class AppStore extends Store {
             SessionStorageMethods.set(AppStore.LAST_PATH_KEY, path);
         }
     }
+
+
+    fetchWatches() {
+        let url = 'assets/json/watches.json';
+        window.console.log(this.state);
+        axios.get(url)
+            .then((response) => {
+                this.setState({
+                    watches: response.data
+                })
+            })
+    }
+
 }
 

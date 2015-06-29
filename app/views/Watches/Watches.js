@@ -3,13 +3,7 @@
 import React from 'react';
 import { Link, RouteHandler} from 'react-router';
 
-import Homepage from 'views/Homepage/Homepage';
-import Code from 'views/Code/Code';
-import AppActions from './AppActions';
-
-require("styles/global.less");
-require("static?!./favicon.ico?output=favicon.ico");
-
+import AppActions from 'AppActions';
 
 export default class App extends React.Component {
 
@@ -30,6 +24,7 @@ export default class App extends React.Component {
         let currentPath = this.currentPath();
         this.props.flux.getActions(AppActions.ID).setCacheAge();
         this.props.flux.getActions(AppActions.ID).recordLastPath(currentPath);
+        this.props.flux.getActions(AppActions.ID).fetchWatches(true);
     }
 
     render() {
@@ -37,7 +32,7 @@ export default class App extends React.Component {
         window.console.log(this.props);
         return (
             <div>
-                <Homepage {...this.props} />
+                <p>Foo</p>
                 <RouteHandler />
             </div>
         );
