@@ -4,6 +4,7 @@ import React from 'react';
 import { Link, RouteHandler} from 'react-router';
 
 import AppActions from 'AppActions';
+import WatchTable from './WatchTable';
 
 export default class App extends React.Component {
 
@@ -28,11 +29,10 @@ export default class App extends React.Component {
     }
 
     render() {
-        //window.console.log(this.props.cacheAge, this.props.cacheValidity);
-        window.console.log(this.props);
+        window.console.log(this.props.watches);
         return (
             <div>
-                <p>Foo</p>
+                <WatchTable watches={this.props.watches} />
                 <RouteHandler />
             </div>
         );
