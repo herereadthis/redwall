@@ -86,7 +86,7 @@ config = {
             }
         }),
         new Webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
-        new ExtractTextPlugin("global.css"),
+        new ExtractTextPlugin("[name].css"),
         new HtmlWebpackPlugin({
             inject: false,
             filename: 'index.html',

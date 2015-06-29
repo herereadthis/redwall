@@ -6,6 +6,9 @@ import { Link, RouteHandler} from 'react-router';
 import AppActions from 'AppActions';
 import WatchTable from './WatchTable';
 
+require('mossflower');
+require("./watches.less");
+
 export default class App extends React.Component {
 
     constructor() {

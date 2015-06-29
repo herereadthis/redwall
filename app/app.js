@@ -7,6 +7,7 @@ import Homepage from 'views/Homepage/Homepage';
 import Code from 'views/Code/Code';
 import AppActions from './AppActions';
 
+require('mossflower');
 require("styles/global.less");
 require("static?!./favicon.ico?output=favicon.ico");
 
