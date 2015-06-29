@@ -34,14 +34,14 @@ tags:           css, less, sass
 
 ```bash
 # install SASS in order to run its compiler
-$ gem install sass
+gem install sass
 # get the repo
-$ git clone https://github.com/herereadthis/bellmaker.git
-$ cd bellmaker/
-$ npm install
-$ npm run bower
-$ npm run grunt
-$ npm run server
+git clone https://github.com/herereadthis/bellmaker.git
+cd bellmaker/
+npm install
+npm run bower
+npm run grunt
+npm run serve
 ```
 
 Site will load at http://localhost:9000/
@@ -65,7 +65,7 @@ $ bower install --save bellmaker
 #### Alternative: Add the Bellmaker as a Bower dependency
 
 ```bash
-$ npm install --save bellmaker
+npm install --save bellmaker
 ```
 
 #### Importing
@@ -356,9 +356,8 @@ Declare the orientation as a variable (`orientation_landscape` vs.
 `orientation_portrait`) or use the pre-assigned variable (`_landscape` vs. 
 `_portrait`).
 
-#### LESS
-
-```css
+```less
+// LESS
 @media @ds_ratio_9_16 @orientation_landscape {}
 @media @ds_ratio_9_16_landscape {}
 
@@ -366,9 +365,8 @@ Declare the orientation as a variable (`orientation_landscape` vs.
 @media @ds_ratio_9_16_landscape {}
 ```
 
-#### SASS
-
-```css
+```scss
+// SASS
 @media #{ds_ratio_9_16} #{orientation_landscape} {}
 @media #{ds_ratio_9_16_landscape} {}
 
@@ -376,9 +374,8 @@ Declare the orientation as a variable (`orientation_landscape` vs.
 @media #{ds_ratio_9_16_landscape} {}
 ```
 
-#### Compiled as CSS
-
 ```css
+/* compiled as CSS */
 @media only screen and (device-aspect-ratio: 9/16) and (orientation : landscape) {
 }
 @media only screen and (device-aspect-ratio: 9/16) and (orientation : portrait) {
@@ -414,7 +411,7 @@ factors will be calculated as REM units.
 
 #### Example: offset left padding
 
-```LESS
+```less
 // As LESS: section will now always be 30rem width less than parent
 // container, so that a 30rem sidebar can floated right
 section {
@@ -427,7 +424,7 @@ aside {
 }
 ```
 
-```SCSS
+```scss
 // As SASS
 section {
     float: left;
@@ -442,7 +439,7 @@ aside {
 
 
 
-```CSS
+```css
 /* output */
 section {
     float: left;
@@ -480,7 +477,7 @@ Available attributes are `width`, `height`, `padding-top`, `padding-right`,
 
 #### LESS integration with Twitter Bootstrap (add bootstrap_integration.less)
 
-```CSS
+```css
 @import "/PATH_TO/../bootstrap/less/bootstrap.less";
 @import "/PATH_TO/../bellmaker/src/less/bellmaker.less";
 @import "/PATH_TO/../bellmaker/src/less/bootstrap_integration.less";
@@ -488,7 +485,7 @@ Available attributes are `width`, `height`, `padding-top`, `padding-right`,
 
 Now you will have 7 breakpoints in Bootstrap
 
-```CSS
+```css
 .col-bl-##
 .col-ss-##
 .col-xs-##
