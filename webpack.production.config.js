@@ -28,6 +28,7 @@ TimestampWebpackPlugin = require('timestamp-webpack-plugin');
 
 config = {
     debug: false,
+    devtool: false,
     entry: {
         app: paths.main,
         watches: paths.watches,
@@ -80,9 +81,11 @@ config = {
         // Search for equal or similar files and deduplicate them in the
         // output.
         new Webpack.optimize.DedupePlugin(),
+        new Webpack.optimize.OccurenceOrderPlugin(),
         new Webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: true
+                warnings: true,
+                drop_console: true
             }
         }),
         new Webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
