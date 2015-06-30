@@ -19,23 +19,9 @@ export default class RetroFooter extends React.Component {
     }
 
     render() {
-        var addPadding = (pad) => {
-            return {
-                paddingTop: `${pad}rem`
-            }
-        };
 
         var style1 = {
             color: '#FFF'
-        };
-
-        var h2Style = {
-            color: '#FF0',
-            textAlign: 'center',
-            display: 'none'
-        };
-        var h3Style = {
-            textAlign: 'center'
         };
         var location = 'http://herereadthis.com/';
 

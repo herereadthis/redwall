@@ -1,7 +1,6 @@
 'use strict';
 
-var rileyColors, rileyColumns, breakpoints, mediaQueries, colWidth, colHeight,
-    colLength;
+var rileyColors, rileyColumns, breakpoints, mediaQueries, colWidth, colHeight;
 
 rileyColors = {
     b1: '#0090D9', b2: '#388AED', b3: '#008DDB', b4: '#068ECA', b5: '#0097DF',

@@ -99,7 +99,7 @@ config = {
         new HtmlWebpackPlugin({
             inject: false,
             filename: 'watches/index.html',
-            template: 'app/views/watches/index.html',
+            template: 'app/views/Watches/index.html',
             excludeChunks: ['app.bundle.js']
         }),
         new SaveAssetsJson({

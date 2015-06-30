@@ -9,8 +9,6 @@ import {LocalStorageMethods} from 'AppConstants';
 import PopupBoxSimulator from './PopupBoxSimulator';
 import ParallaxScroll from 'components/ParallaxScroll';
 
-let bannerHasImg = null;
-
 export default class Banner extends React.Component {
 //class Banner extends React.Component {
 
