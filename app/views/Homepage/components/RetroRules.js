@@ -15,12 +15,13 @@ export default class RetroRules extends React.Component {
     }
 
     render() {
+        var retroRulesStyle, goAway;
 
-        var retroRulesStyle = {
+        retroRulesStyle = {
             backgroundColor: '#000',
             paddingTop: '2rem'
         };
-        var goAway = {
+        goAway = {
             display: 'none'
         };
 

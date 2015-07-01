@@ -22,7 +22,7 @@ export default class Banner extends React.Component {
         this.props.flux.getActions(AppActions.ID).fetch90sImage(true);
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextProps) {
         return nextProps.ninetiesImgSize !== this.props.ninetiesImgSize;
     }
 
@@ -83,11 +83,13 @@ export default class Banner extends React.Component {
     }
 
     getBannerImage = () => {
-        let ninetiesImg = LocalStorageMethods.get(AppStore.NINETIES_IMG.NAME);
+        let ninetiesImg, imgIndex, targetImg;
+
+        ninetiesImg = LocalStorageMethods.get(AppStore.NINETIES_IMG.NAME);
         if (ninetiesImg !== undefined) {
             ninetiesImg = JSON.parse(ninetiesImg);
-            let imgIndex = LocalStorageMethods.get(AppStore.NINETIES_IMG.INDEX_NAME);
-            let targetImg = ninetiesImg[imgIndex];
+            imgIndex = LocalStorageMethods.get(AppStore.NINETIES_IMG.INDEX_NAME);
+            targetImg = ninetiesImg[imgIndex];
 
             return (
                 <img src={targetImg.thumbnail} ref="bannerImage" />

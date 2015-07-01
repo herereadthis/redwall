@@ -1,6 +1,6 @@
 'use strict';
 
-import { Flux } from 'flummox';
+import {Flux} from 'flummox';
 
 import AppStore from './AppStore';
 import AppActions from './AppActions';

@@ -35,21 +35,32 @@ export default class ColorShiftTitle extends React.Component {
     // http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
     hexToRgb = (hex) => {
         // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
-        var shorthandRegex, newHex;
+        var shorthandRegex, sh, newHex, result;
+
         shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-        newHex = hex.replace(shorthandRegex, function (m, r, g, b) {
-            return r + r + g + g + b + b;
-        });
-        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(newHex);
-        return result ? {
-            r: parseInt(result[1], 16),
-            g: parseInt(result[2], 16),
-            b: parseInt(result[3], 16)
-        } : null;
+
+        newHex = hex;
+        sh = shorthandRegex.exec(hex);
+
+        if (sh !== null) {
+            newHex = `${sh[1]}${sh[1]}${sh[2]}${sh[2]}${sh[3]}${sh[3]}`;
+        }
+        result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(newHex);
+
+        if (result !== null) {
+            return {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            };
+        }
+        else {
+            return null;
+        }
     };
 
     makeLetters = () => {
-        let colors, colorDiff;
+        let colors, colorDiff, lettersArray;
 
         colors = this.state.colorShift;
         colorDiff = {
@@ -58,7 +69,7 @@ export default class ColorShiftTitle extends React.Component {
             b: colors.end.b - colors.begin.b
         };
 
-        let lettersArray = this.props.title.split('');
+        lettersArray = this.props.title.split('');
 
         return lettersArray.map((value, key) => {
             let increment, diffR, diffG, diffB, rgbValue;

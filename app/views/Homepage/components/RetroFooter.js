@@ -15,11 +15,12 @@ export default class RetroFooter extends React.Component {
     }
 
     render() {
+        var style1, location;
 
-        var style1 = {
+        style1 = {
             color: '#FFF'
         };
-        var location = 'http://herereadthis.com/';
+        location = 'http://herereadthis.com/';
 
         return (
             <footer role="contentinfo"

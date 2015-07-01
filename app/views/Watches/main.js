@@ -9,18 +9,20 @@ import AppStore from 'AppStore';
 
 import Watches from './Watches';
 
-var {DefaultRoute, Route} = Router;
+var {DefaultRoute, Route} = Router, routes;
 
 // simple test to ensure babel is working
 let re = 'me',
-    fa = 'so';
-let obj = {re, fa};
+    fa = 'so',
+    obj;
+
+obj = {re, fa};
 window.console.log(`loaded main.js with Babel ES6, ${JSON.stringify(obj)}`);
 // end simple test
 
 const flux = new AppFlux();
 
-var routes = (
+routes = (
     <Route>
         <Route name="watches" path="/watches/" handler={Watches}/>
         <DefaultRoute handler={Watches}/>
@@ -38,5 +40,3 @@ Router.run(routes, Router.HistoryLocation, (Handler) => {
         document.getElementById('app')
     );
 });
-
-

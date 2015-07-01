@@ -1,6 +1,6 @@
 'use strict';
 
-import { Store } from 'flummox';
+import {Store} from 'flummox';
 
 import AppActions from './AppActions';
 import AppConstants from './AppConstants';
@@ -20,8 +20,7 @@ const popupBox = {
     }
 };
 
-const NoResults = [null, ''];
-
+let NoResults = [null, ''];
 
 export default class AppStore extends Store {
 
@@ -65,8 +64,8 @@ export default class AppStore extends Store {
 
 
     getLocalCacheData = () => {
-        var last = LocalStorageMethods.get(AppStore.APP_CACHE.KEY);
-        var valid = LocalStorageMethods.get(AppStore.APP_CACHE.VALID);
+        var last = LocalStorageMethods.get(AppStore.APP_CACHE.KEY),
+            valid = LocalStorageMethods.get(AppStore.APP_CACHE.VALID);
 
         return {
             last,
@@ -153,8 +152,8 @@ export default class AppStore extends Store {
 
 
     setNew90sIndex = (size) => {
-        let randomIndex = AppConstants.getRandomInteger(size);
-        let cIndex = LocalStorageMethods.get(AppStore.NINETIES_IMG.INDEX_NAME);
+        let randomIndex = AppConstants.getRandomInteger(size),
+            cIndex = LocalStorageMethods.get(AppStore.NINETIES_IMG.INDEX_NAME);
 
         // insure that the random generation is always different than the
         // previous render

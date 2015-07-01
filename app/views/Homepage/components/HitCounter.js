@@ -33,7 +33,7 @@ class HitCounterDigits extends React.Component {
         var coords;
         context.beginPath();
         context.moveTo(polyArray[0], polyArray[1]);
-        for (coords = 2; coords < polyArray.length - 1; coords += 2) {
+        for (coords = 2; coords < polyArray.length - 1; coords = coords + 2) {
             context.lineTo(polyArray[coords], polyArray[coords + 1]);
         }
         context.closePath();
@@ -42,7 +42,7 @@ class HitCounterDigits extends React.Component {
     };
 
     makeCanvasBG = (digit) => {
-        var storedHitDigit, lsHitDigit;
+        var storedHitDigit, lsHitDigit, key, canvas, bgImage, obj, cMatch;
 
         storedHitDigit = `${HitCounterDigits.HitDigit}${digit}`;
         lsHitDigit = LocalStorageMethods.get(storedHitDigit);
@@ -50,7 +50,6 @@ class HitCounterDigits extends React.Component {
         // if params are no longer valid, or if the digit has not been drawn,
         // then draw the digit.
         if (lsHitDigit === undefined || hitCounterValidity === false) {
-            var key, canvas, bgImage, obj, cMatch;
 
             canvas = document.createElement('canvas');
             canvas.width = this.props.numWidth;
@@ -164,20 +163,22 @@ export default class HitCounter extends React.Component {
             .then((response) => {
                 this.renderDigits(response.data.page_hits);
             })
-            .catch((response) => {
+            .catch(() => {
                 this.renderDigits(3000);
             });
     }
 
     componentWillMount() {
-        var hitCounterParams = [
+        var hitCounterParams, storedHitCounterParams;
+
+        hitCounterParams = [
             this.props.colorOff,
             this.props.colorOn,
             this.props.numHeight,
             this.props.numWidth
         ];
 
-        var storedHitCounterParams = LocalStorageMethods.get(
+        storedHitCounterParams = LocalStorageMethods.get(
             HitCounter.hitCounterParams);
 
         // storing the images for the hit counter are based off params.
@@ -192,7 +193,7 @@ export default class HitCounter extends React.Component {
         this.fetchHitCount(this.props.path);
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextProps) {
         return nextProps.figures !== this.props.figures;
     }
 

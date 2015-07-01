@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { RouteHandler} from 'react-router';
+import {RouteHandler} from 'react-router';
 
 import Homepage from 'views/Homepage/Homepage';
 //import Code from 'views/Code/Code';

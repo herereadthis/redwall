@@ -17,12 +17,14 @@ export default class RetroTitantic extends React.Component {
     }
 
     render() {
-        var h2Style = {
+        var h2Style, h3Style;
+
+        h2Style = {
             color: '#FF0',
             textAlign: 'center',
             display: 'none'
         };
-        var h3Style = {
+        h3Style = {
             textAlign: 'center'
         };
 

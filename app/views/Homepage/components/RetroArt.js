@@ -30,7 +30,7 @@ export default class RetroArt extends React.Component {
         this.props.flux.getActions(AppActions.ID).fetchTimestamp(true);
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextProps) {
         let makeUpdate = false;
         if (nextProps.timestamp !== this.props.timestamp ||
             nextProps.ninetiesImg !== this.props.ninetiesImg) {
@@ -40,13 +40,14 @@ export default class RetroArt extends React.Component {
     }
 
     render() {
-        var addPadding = (pad) => {
+        var addPadding, tca;
+
+        addPadding = (pad) => {
             return {
                 paddingTop: `${pad}rem`
             };
         };
-
-        var tca = {
+        tca = {
             textAlign: 'center'
         };
 
@@ -126,4 +127,3 @@ export default class RetroArt extends React.Component {
         );
     }
 }
-

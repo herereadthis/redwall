@@ -25,14 +25,13 @@
     "no-trailing-spaces": 1,
     "no-underscore-dangle": 0,
     "one-var": [1, "always"],
-    "operator-assignment": [1, "always"],
+    "operator-assignment": [1, "never"],
     "quotes": [1, "single"],
     "semi": 2,
     "space-after-keywords": [1, "always"],
     "space-before-blocks": [1, "always"],
     "space-in-brackets": [1, "never"],
     // strict
-    "strict": [1, "global"],
     // react plugin
     "react/display-name": [1, { "acceptTranspilerName": true }],
     "react/jsx-uses-react": 1
