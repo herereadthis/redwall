@@ -9,7 +9,7 @@ import {HomepageConfig, LocalStorageMethods, SessionStorageMethods} from './AppC
 
 //const watches = require('./assets/json/watches.json');
 
-import axios from 'axios'
+import axios from 'axios';
 
 const popupBox = {
     boxName: 'Welcome to my site!',
@@ -71,7 +71,7 @@ export default class AppStore extends Store {
         return {
             last,
             valid
-        }
+        };
     };
 
 
@@ -80,10 +80,9 @@ export default class AppStore extends Store {
             .then((response) => {
                 this.setState({
                     timestamp: response.data
-                })
-            })
+                });
+            });
     }
-
 
     fetch90sImage() {
         let url = 'http://redwall.herereadthis.com/api/banner_image/';
@@ -135,7 +134,7 @@ export default class AppStore extends Store {
 
         // if the time between the last cache and now is greater than the cache
         // limit or if the new cache time is now.
-        if (dateDiff > AppStore.APP_CACHE.LIMIT  ||
+        if (dateDiff > AppStore.APP_CACHE.LIMIT ||
             cacheData.last === undefined) {
             LocalStorageMethods.set(AppStore.APP_CACHE.VALID, false);
             LocalStorageMethods.set(AppStore.APP_CACHE.KEY, currentTime);
@@ -153,7 +152,7 @@ export default class AppStore extends Store {
     }
 
 
-    setNew90sIndex(size) {
+    setNew90sIndex = (size) => {
         let randomIndex = AppConstants.getRandomInteger(size);
         let cIndex = LocalStorageMethods.get(AppStore.NINETIES_IMG.INDEX_NAME);
 
@@ -194,9 +193,7 @@ export default class AppStore extends Store {
             .then((response) => {
                 this.setState({
                     watches: response.data
-                })
-            })
+                });
+            });
     }
-
 }
-

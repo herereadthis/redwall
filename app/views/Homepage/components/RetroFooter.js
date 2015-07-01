@@ -2,10 +2,6 @@
 
 import React from 'react';
 
-import AppActions from 'AppActions';
-import AppStore from 'AppStore';
-import AppConstants from 'AppConstants';
-
 export default class RetroFooter extends React.Component {
 
     constructor() {

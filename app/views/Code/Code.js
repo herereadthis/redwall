@@ -1,6 +1,8 @@
-var React = require('react');
+'use strict';
 
-import { Link, RouteHandler} from 'react-router';
+import React from 'react';
+
+import {Link} from 'react-router';
 
 export default class Code extends React.Component {
     render() {

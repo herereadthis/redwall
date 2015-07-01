@@ -45,7 +45,7 @@ export default class Homepage extends React.Component {
     };
 
     makeRows = () => {
-        var _this = this
+        var _this = this;
         return this.props.watches.map((value, key) => {
             return (
                 <tr key={key}>
@@ -55,7 +55,7 @@ export default class Homepage extends React.Component {
                     <td><p>{value.nationality}</p></td>
                     <td><p>{_this.getParent(value.id)}</p></td>
                 </tr>
-            )
+            );
         });
     };
 

@@ -7,7 +7,6 @@ import AppStore from 'AppStore';
 import AppConstants from 'AppConstants';
 import HitCounter from './HitCounter';
 import DateRender from 'components/DateRender';
-import ParallaxScroll from 'components/ParallaxScroll';
 
 export default class RetroArt extends React.Component {
 
@@ -21,7 +20,7 @@ export default class RetroArt extends React.Component {
         var lastPath = appStore.getLastPath();
         this.setState({
             hitCounterPath: lastPath
-        })
+        });
     }
 
     componentDidMount() {
@@ -44,7 +43,7 @@ export default class RetroArt extends React.Component {
         var addPadding = (pad) => {
             return {
                 paddingTop: `${pad}rem`
-            }
+            };
         };
 
         var tca = {

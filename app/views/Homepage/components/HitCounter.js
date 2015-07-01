@@ -3,8 +3,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import AppActions from 'AppActions';
-
 import {LocalStorageMethods} from 'AppConstants';
 
 import HitCounterDefaults from './HitCounterDefaults';
@@ -71,7 +69,7 @@ class HitCounterDigits extends React.Component {
                 // draw the bar
                 this.polyDraw(obj.context, obj.poly, cMatch);
             }
-            bgImage = `url(${canvas.toDataURL('image/png')})`
+            bgImage = `url(${canvas.toDataURL('image/png')})`;
 
             LocalStorageMethods.set(storedHitDigit, bgImage);
         }
@@ -89,13 +87,13 @@ class HitCounterDigits extends React.Component {
 
         // create an array out of the page hits, each item is a number
         numArray = this.props.pageHits.toString().split('');
-        for (_j = 0;_j < numArray.length;_j = _j + 1) {
+        for (_j = 0; _j < numArray.length; _j = _j + 1) {
             numArray[_j] = parseInt(numArray[_j], 10);
         }
         // add enough decimal-leading zeros to array so that array is the size
         // of this.props.figures
         addZeros = this.props.figures - numArray.length;
-        for (_i = 0;_i < addZeros;_i = _i + 1) {
+        for (_i = 0; _i < addZeros; _i = _i + 1) {
             numArray.unshift(0);
         }
         return numArray.map((value, key) => {
@@ -111,7 +109,7 @@ class HitCounterDigits extends React.Component {
 
         return {
             width: `${minWidth}rem`
-        }
+        };
     };
 
     render() {
@@ -119,7 +117,7 @@ class HitCounterDigits extends React.Component {
             <div data-hit-counter
                  style={this.hitCounterWidth()}>{this.makeNumbers()}</div>
 
-        )
+        );
     }
 }
 
@@ -168,7 +166,7 @@ export default class HitCounter extends React.Component {
             })
             .catch((response) => {
                 this.renderDigits(3000);
-            })
+            });
     }
 
     componentWillMount() {

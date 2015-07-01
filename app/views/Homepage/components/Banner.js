@@ -7,7 +7,6 @@ import AppStore from 'AppStore';
 import {LocalStorageMethods} from 'AppConstants';
 
 import PopupBoxSimulator from './PopupBoxSimulator';
-import ParallaxScroll from 'components/ParallaxScroll';
 
 export default class Banner extends React.Component {
 //class Banner extends React.Component {
@@ -92,7 +91,7 @@ export default class Banner extends React.Component {
 
             return (
                 <img src={targetImg.thumbnail} ref="bannerImage" />
-            )
+            );
         }
         else {
             return null;

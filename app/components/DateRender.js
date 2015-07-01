@@ -118,7 +118,7 @@ export default class DateRender extends React.Component {
             s,
             ss: this.leadDecimal(s),
             S,
-            SS: this.leadDecimal(S,3),
+            SS: this.leadDecimal(S, 3),
             tz
         };
         return dateObj;
@@ -126,7 +126,7 @@ export default class DateRender extends React.Component {
 
     getFormatArray = (format) => {
         let formatArray = format.match(DateRender.testRegex),
-            cleanArray  = [],
+            cleanArray = [],
             concatFormat = [],
             _i, _k;
 
@@ -236,10 +236,7 @@ export default class DateRender extends React.Component {
         }
         else if (dateTypes.months.exists === true &&
             dateTypes.days.exists === true) {
-            dateStamp = `${dateObj.MM}-${dateObj.dd}`
-        }
-        if (dateTypes.hours.exists === true) {
-
+            dateStamp = `${dateObj.MM}-${dateObj.dd}`;
         }
         if (dateTypes.hours.exists === true) {
             timeStamp = `${dateObj.HH}`;

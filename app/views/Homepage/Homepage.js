@@ -16,7 +16,7 @@ export default class Homepage extends React.Component {
         super();
         this.state = {
             scrollTop: 0
-        }
+        };
     }
 
     componentDidMount() {

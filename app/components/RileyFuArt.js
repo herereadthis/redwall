@@ -109,4 +109,4 @@ export default class RileyFuArt {
         var backgroundPosition = RileyFuArt.sizer();
         return backgroundPosition;
     };
-};
+}

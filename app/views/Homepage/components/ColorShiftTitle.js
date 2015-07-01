@@ -28,7 +28,7 @@ export default class ColorShiftTitle extends React.Component {
                 begin: this.hexToRgb(this.props.colorShift.begin),
                 end: this.hexToRgb(this.props.colorShift.end)
             }
-        })
+        });
     }
 
     // hexToRgb function taken from

@@ -22,7 +22,8 @@ paths = {
     build: path.resolve(__dirname, 'app'),
     dist: path.resolve(__dirname, 'dist'),
     main: path.resolve(__dirname, 'app', 'main.js'),
-    watches: path.resolve(__dirname, 'app/views/Watches', 'main.js')
+    watches: path.resolve(__dirname, 'app/views/Watches', 'main.js'),
+    esLintRC: path.resolve(__dirname, '.eslintrc')
 };
 
 // Extract Text Plugin is for embedded stylesheets to be compiled as CSS
@@ -67,6 +68,9 @@ config = {
         // localhost:3000/build. That makes proxying easier to handle
         publicPath: '/'
     },
+    eslint: {
+        configFile: paths.esLintRC
+    },
     resolve: {
         extensions: ['', '.js'],
         modulesDirectories: ['node_modules', 'app']
@@ -84,6 +88,11 @@ config = {
                     optional: ['runtime'],
                     stage: 0
                 }
+            },
+            {
+                test: /\.js$/,
+                loader: "eslint-loader",
+                exclude: paths.nodeModules
             },
             {
                 test: /\.(css|less)$/,

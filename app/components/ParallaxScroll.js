@@ -15,14 +15,14 @@ export default class ParallaxScroll {
         }
         // it should grab top|center|etc as percentages, but we'll force it.
         for (_i = 0; _i < 2; _i++) {
-            if (bgPosition[_i] === "center") {
+            if (bgPosition[_i] === 'center') {
                 bgPosition[_i] = '50%';
             }
-            else if (bgPosition[_i] === "top" || bgPosition[_i] === "left") {
+            else if (bgPosition[_i] === 'top' || bgPosition[_i] === 'left') {
                 bgPosition[_i] = '0%';
             }
-            else if (bgPosition[_i] === "bottom" ||
-                bgPosition[_i] === "right") {
+            else if (bgPosition[_i] === 'bottom' ||
+                bgPosition[_i] === 'right') {
                 bgPosition[_i] = '100%';
             }
             if (/%/.test(bgPosition[_i]) === true) {
@@ -39,7 +39,7 @@ export default class ParallaxScroll {
             wHeight = window.innerHeight,
             scrollSpeed, yPosition, newBgPosition, _k;
 
-        for (_k = 0;_k < elements.length;_k = _k + 1) {
+        for (_k = 0; _k < elements.length; _k = _k + 1) {
 
             // logic:
             // 1. the top edge of the element is inside the window during
@@ -67,7 +67,7 @@ export default class ParallaxScroll {
 
         elements = [];
 
-        for (_l = 0;_l < parallaxEl.length;_l = _l + 1) {
+        for (_l = 0; _l < parallaxEl.length; _l = _l + 1) {
             getParallaxSpeed = 0;
             parallaxRef = parallaxEl[_l].getAttribute('data-parallax-speed');
             if (parallaxRef !== undefined && parallaxRef !== null &&
@@ -97,4 +97,4 @@ export default class ParallaxScroll {
         window.removeEventListener('scroll', ParallaxScroll.setBackground,
             true);
     }
-};
+}
