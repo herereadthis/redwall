@@ -1,5 +1,3 @@
-'use strict';
-
 import {Flux} from 'flummox';
 
 import AppStore from './AppStore';

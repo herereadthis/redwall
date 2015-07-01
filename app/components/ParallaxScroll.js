@@ -1,5 +1,3 @@
-'use strict';
-
 let elements = [];
 
 export default class ParallaxScroll {

@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import AppConstants from 'AppConstants';
 import RileyFuArt from 'components/RileyFuArt.js';

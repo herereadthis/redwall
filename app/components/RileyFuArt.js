@@ -1,5 +1,3 @@
-'use strict';
-
 var rileyColors, rileyColumns, breakpoints, mediaQueries, colWidth, colHeight;
 
 rileyColors = {

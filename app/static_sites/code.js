@@ -1,7 +1,6 @@
 'use strict';
 
-
-require("static_sites/less/code.less");
+import 'static_sites/less/code.less';
 
 // simple test to ensure babel is working
 let foo = 'foo',

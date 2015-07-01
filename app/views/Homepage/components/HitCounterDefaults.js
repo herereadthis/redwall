@@ -1,5 +1,3 @@
-'use strict';
-
 export default class HitCounterDefaults {
 
     static figures = 6;

@@ -1,6 +1,4 @@
-'use strict';
-
-var React = require('react');
+import React from 'react';
 
 // The Color Shifter
 // takes a string of characters and gives it a color range as you define them.

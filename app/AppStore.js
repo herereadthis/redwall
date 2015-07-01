@@ -1,5 +1,3 @@
-'use strict';
-
 import {Store} from 'flummox';
 
 import AppActions from './AppActions';
@@ -196,3 +194,4 @@ export default class AppStore extends Store {
             });
     }
 }
+

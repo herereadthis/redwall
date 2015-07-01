@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 
 export default class AppConstants {
@@ -46,29 +44,21 @@ export default class AppConstants {
             return true;
         },
         parseString: (str) => {
-            let numRegex = /^(\d+\.?\d*|\d+,?\d*|\.\d+|,\d+)$/;
-
-            if (str === undefined) {
-                return;
-            }
+            let numRegex = /^(\d+\.?\d*|\d+,?\d*|\.\d+|,\d+)$/,
+                finalVal = str;
 
             if (str === 'false') {
-                return false;
+                finalVal = false;
             }
             else if (str === 'true') {
-                return true;
+                finalVal = true;
             }
             else if (str.length < 20) {
                 if (numRegex.test(str) === true) {
-                    return parseFloat(str, 10);
-                }
-                else {
-                    return str;
+                    finalVal = parseFloat(str, 10);
                 }
             }
-            else {
-                return str;
-            }
+            return finalVal;
         }
     };
 

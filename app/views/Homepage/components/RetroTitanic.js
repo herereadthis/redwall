@@ -1,7 +1,4 @@
-'use strict';
-
 import React from 'react';
-
 import AppConstants from 'AppConstants';
 
 export default class RetroTitantic extends React.Component {
