@@ -72,7 +72,7 @@ export default class AppConstants {
         }
     };
 
-    static DataSprite = (sprite) => {
+    static dataSprite = (sprite) => {
         return (
             <div data-sprite={sprite}/>
         );
@@ -82,3 +82,4 @@ export default class AppConstants {
         return Math.floor(Math.random() * max);
     }
 }
+

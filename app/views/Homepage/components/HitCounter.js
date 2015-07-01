@@ -19,7 +19,7 @@ class HitCounterDigits extends React.Component {
 
     // checks to see if a number exists in an array.
     // return one color if true, another color if false.
-    arrayCheck = (testArray, digit) => {
+    arrayCheck = ( testArray, digit) => {
         if (testArray.indexOf(digit) === -1) {
             return this.props.colorOff;
         }

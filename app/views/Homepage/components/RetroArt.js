@@ -59,7 +59,7 @@ export default class RetroArt extends React.Component {
                 <section className="bellmaker_container">
 
                     <div className="centered_image">
-                        {AppConstants.DataSprite('netscape_88x31')}
+                        {AppConstants.dataSprite('netscape_88x31')}
                     </div>
 
                     <h3 className="before_text_1">
@@ -78,12 +78,12 @@ export default class RetroArt extends React.Component {
                     </div>
 
                     <div className="centered_image" style={addPadding(1)}>
-                        {AppConstants.DataSprite('broken_image')}
+                        {AppConstants.dataSprite('broken_image')}
                     </div>
 
                     <div id="email_joke">
                         <div><p>My Email:</p></div>
-                        <div className="icon_box">{AppConstants.DataSprite('email')}</div>
+                        <div className="icon_box">{AppConstants.dataSprite('email')}</div>
                         <div>
                             <p><a href="mailto:herereadthis@hotmail.com">herereadthis@hotmail.com</a>
                             </p>
@@ -91,7 +91,7 @@ export default class RetroArt extends React.Component {
                     </div>
 
                     <div className="centered_image" style={addPadding(1)}>
-                        {AppConstants.DataSprite('under_construction_128x40')}
+                        {AppConstants.dataSprite('under_construction_128x40')}
                     </div>
 
                     <hr className="rainbow_gradient"/>
@@ -108,7 +108,7 @@ export default class RetroArt extends React.Component {
                                     alt="Dancing Baby" /></div>
                                 <p style={tca}>&amp;nbsp;</p>
                                 <div className="centered_image">
-                                    {AppConstants.DataSprite('tripod_125x71')}
+                                    {AppConstants.dataSprite('tripod_125x71')}
                                 </div>
                             </td>
                             <td>

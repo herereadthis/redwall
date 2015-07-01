@@ -98,3 +98,4 @@ export default class ParallaxScroll {
             true);
     }
 }
+

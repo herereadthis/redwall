@@ -65,7 +65,7 @@ export default class RileyFu extends React.Component {
                             <span>, the codebase for the &ldquo;Here, Read
                                 This&rdquo; website</span></li>
                     </ul>
-                    {AppConstants.DataSprite('broken_image')}
+                    {AppConstants.dataSprite('broken_image')}
                     <p>&lt;BR&gt;</p>
                     <h3>Cool code things on this page:</h3>
                     <ul>
@@ -85,7 +85,7 @@ export default class RileyFu extends React.Component {
                             render on your phone, tablet, and computer.
                         </li>
                     </ul>
-                    {AppConstants.DataSprite('broken_image')}
+                    {AppConstants.dataSprite('broken_image')}
                     <p>&lt;BR&gt;</p>
                 </section>
             </article>

@@ -49,8 +49,10 @@ export default class ColorShiftTitle extends React.Component {
     };
 
     makeLetters = () => {
-        let colors = this.state.colorShift;
-        let colorDiff = {
+        let colors, colorDiff;
+
+        colors = this.state.colorShift;
+        colorDiff = {
             r: colors.end.r - colors.begin.r,
             g: colors.end.g - colors.begin.g,
             b: colors.end.b - colors.begin.b
@@ -59,14 +61,15 @@ export default class ColorShiftTitle extends React.Component {
         let lettersArray = this.props.title.split('');
 
         return lettersArray.map((value, key) => {
-            let increment = key / (lettersArray.length - 1);
+            let increment, diffR, diffG, diffB, rgbValue;
+            increment = key / (lettersArray.length - 1);
 
             // each RGB value gets one more increment of the diff value
-            let diffR = Math.round(colors.begin.r + increment * colorDiff.r);
-            let diffG = Math.round(colors.begin.g + increment * colorDiff.g);
-            let diffB = Math.round(colors.begin.b + increment * colorDiff.b);
+            diffR = Math.round(colors.begin.r + increment * colorDiff.r);
+            diffG = Math.round(colors.begin.g + increment * colorDiff.g);
+            diffB = Math.round(colors.begin.b + increment * colorDiff.b);
 
-            let rgbValue = {
+            rgbValue = {
                 color: `rgb(${diffR},${diffG},${diffB})`
             };
             return (
@@ -81,4 +84,3 @@ export default class ColorShiftTitle extends React.Component {
         );
     }
 }
-

@@ -1,32 +1,43 @@
 {
-    "parser": "babel-eslint",
-    "ecmaFeatures": {
-        "jsx": true,
-        "modules": true,
-        "classes": true
-    },
-    "env": {
-        "browser": true,
-        "node": true,
-        "es6": true
-    },
-    "rules": {
-        "strict": [2, "global"],
-        "quotes": [1, "single"],
-        "consistent-return": 1,
-        "no-underscore-dangle": 0,
-        "eol-last": 1,
-        "react/display-name": [1, { "acceptTranspilerName": true }],
-        "react/jsx-uses-react": 1,
-        "new-cap": 1,
-        "no-new": 1,
-        "no-unused-vars": [1, {"args": "all"}],
-        "no-shadow": 1,
-        "no-undef": 1,
-        "no-new": 1,
-        "semi": 2
-    },
-    "plugins": [
-        "react"
-    ]
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true,
+    "classes": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    // possible errors
+    "consistent-return": 1,
+    "no-new": 1,
+    "no-unused-vars": [1, {"args": "all"}],
+    "no-shadow": 1,
+    "no-undef": 1,
+    "no-new": 1,
+    // stylistic
+    "eol-last": 1,
+    "new-cap": 1,
+    "no-ternary": 1,
+    "no-trailing-spaces": 1,
+    "no-underscore-dangle": 0,
+    "one-var": [1, "always"],
+    "operator-assignment": [1, "always"],
+    "quotes": [1, "single"],
+    "semi": 2,
+    "space-after-keywords": [1, "always"],
+    "space-before-blocks": [1, "always"],
+    "space-in-brackets": [1, "never"],
+    // strict
+    "strict": [1, "global"],
+    // react plugin
+    "react/display-name": [1, { "acceptTranspilerName": true }],
+    "react/jsx-uses-react": 1
+  },
+  "plugins": [
+    "react"
+  ]
 }

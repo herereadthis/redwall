@@ -1,4 +1,4 @@
-import { Actions } from 'flummox';
+import {Actions} from 'flummox';
 
 export default class AppActions extends Actions {
 
@@ -27,3 +27,4 @@ export default class AppActions extends Actions {
         return path;
     }
 }
+

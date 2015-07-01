@@ -49,7 +49,7 @@ export default class RileyFuArt {
         bgWidth = RileyFuArt.colLength * colWidth * -1;
 
 
-        if (windowWidth < breakpoints[0]) {
+        if ( windowWidth < breakpoints[0]) {
             bgX = bgWidth + (11 / 12) * windowWidth;
         }
         else if (windowWidth < breakpoints[1]) {
@@ -73,11 +73,10 @@ export default class RileyFuArt {
     // will put in local storage the background image as Canvas, if either the
     // local storage does not exist or the cache has expired.
     static setCanvas = (cacheValidity) => {
-        var storedCanvas = LocalStorageMethods.get(RileyFuArt.storeRileyShape);
+        var storedCanvas = LocalStorageMethods.get(RileyFuArt.storeRileyShape),
+            canvas, context, _l, getColor, colIndex;
 
         if (storedCanvas === undefined || cacheValidity === false) {
-            var canvas, context, _l, getColor, colIndex;
-
             window.console.log('draw riley canvas');
 
             canvas = document.createElement('canvas');

@@ -37,7 +37,7 @@ export default class RetroTitantic extends React.Component {
                     <h3 style={h3Style}>1997 was the best year ever!</h3>
 
                     <div className="centered_image">
-                        {AppConstants.DataSprite('titanic_468x60')}
+                        {AppConstants.dataSprite('titanic_468x60')}
                     </div>
                 </section>
             </article>
