@@ -11,13 +11,17 @@
     "es6": true
   },
   "rules": {
-    // possible errors
+    // best practices
+    "block-scoped-var": 1,
+    "curly": 1,
+    "no-param-reassign": 1,
+    "radix": 1,
     "consistent-return": 1,
     "no-new": 1,
-    "no-unused-vars": [1, {"args": "all"}],
+    // variables
     "no-shadow": 1,
     "no-undef": 1,
-    "no-new": 1,
+    "no-unused-vars": [1, {"args": "all"}],
     // stylistic
     "eol-last": 1,
     "new-cap": 1,
