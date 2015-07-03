@@ -17,7 +17,7 @@
     "no-param-reassign": 1,
     "radix": 1,
     "consistent-return": 1,
-    "no-new": 1,
+    "no-new": 0,
     // variables
     "no-shadow": 1,
     "no-undef": 1,

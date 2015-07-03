@@ -1,15 +1,19 @@
 import React from 'react';
 
 import _ from 'lodash';
+import WatchActions from './WatchActions.js';
 
 export default class Homepage extends React.Component {
     constructor() {
         super();
     }
 
-    componentDidMount() {
+    componentWillMount() {
+        this.props.flux.getActions(WatchActions.ID).foo('bar');
     }
 
+    componentDidMount() {
+    }
 
     getParent = (id) => {
         //window.console.log(this.props.watches);
@@ -60,7 +64,7 @@ export default class Homepage extends React.Component {
     };
 
     render() {
-        window.console.log(this.props.flux);
+        window.console.log(this.props);
         if (this.props.watches === undefined) {
             return (
                 <p>No data</p>

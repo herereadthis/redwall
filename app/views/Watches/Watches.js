@@ -7,20 +7,14 @@ import FluxComponent from 'flummox/component';
 import AppActions from 'AppActions';
 import WatchTable from './WatchTable';
 import WatchFlux from './WatchFlux.js';
-import WatchStore from './WatchStore.js';
 
 require('mossflower');
 require('./watches.less');
 
-let fluxInstances = [];
-
 export default class Watches extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            flux: null
-        };
+    constructor() {
+        super();
     }
 
     static contextTypes = {
@@ -33,38 +27,21 @@ export default class Watches extends React.Component {
     }
 
     componentWillMount() {
-        if (this.props.flux === false) {
-            window.console.log('asdfasdf');
-        }
-        else {
-            window.console.log(this.props.flux);
+        new WatchFlux(this.props.flux);
 
-        }
-        this.setState({
-            flux: new WatchFlux()
-        });
-
-        /*
         let currentPath = this.currentPath();
         this.props.flux.getActions(AppActions.ID).setCacheAge();
         this.props.flux.getActions(AppActions.ID).recordLastPath(currentPath);
         this.props.flux.getActions(AppActions.ID).fetchWatches(true);
-        */
+
     }
 
     render() {
-        let addMoreFlux = {};
-        addMoreFlux.flux = this.state.flux;
-        window.console.log(addMoreFlux);
         return (
-            <FluxComponent {...addMoreFlux} connectToStores={[WatchStore.ID]}>
+            <FluxComponent {...this.props}>
                 <WatchTable watches={this.props.watches}/>
                 <RouteHandler />
             </FluxComponent>
         );
     }
 }
-
-
-//connectToStores={[WatchStore.ID]}>
-//export default AddMoreFlux(Watches, WatchFlux);
