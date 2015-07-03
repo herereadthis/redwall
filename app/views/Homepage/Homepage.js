@@ -1,6 +1,6 @@
 var React = require('react');
 
-import {Link} from 'react-router';
+//import {Link} from 'react-router';
 
 import Banner from './components/Banner';
 import RetroArt from './components/RetroArt';
@@ -39,11 +39,12 @@ export default class Homepage extends React.Component {
                 <RileyFu />
                 <RetroTitanic />
                 <RetroFooter {...this.props} />
-
+                {/*
                 <h1>Hello world, it is nice to meet you!!!</h1>
                 <ul>
                     <li><Link to="code">Code</Link></li>
                 </ul>
+                */}
             </div>
         );
     }

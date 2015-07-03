@@ -33,7 +33,6 @@ export default class Watches extends React.Component {
         let currentPath = this.currentPath();
         this.props.flux.getActions(AppActions.ID).setCacheAge();
         this.props.flux.getActions(AppActions.ID).recordLastPath(currentPath);
-
     }
 
     render() {

@@ -26,13 +26,12 @@ export default class App extends React.Component {
 
     componentWillMount() {
         let currentPath = this.currentPath();
+
         this.props.flux.getActions(AppActions.ID).setCacheAge();
         this.props.flux.getActions(AppActions.ID).recordLastPath(currentPath);
     }
 
     render() {
-        //window.console.log(this.props.cacheAge, this.props.cacheValidity);
-        window.console.log(this.props);
         return (
             <div>
                 <Homepage {...this.props} />

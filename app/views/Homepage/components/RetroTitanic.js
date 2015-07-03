@@ -14,26 +14,22 @@ export default class RetroTitantic extends React.Component {
     }
 
     render() {
-        var h2Style, h3Style;
+        var titanticStyle;
 
-        h2Style = {
-            color: '#FF0',
-            textAlign: 'center',
-            display: 'none'
-        };
-        h3Style = {
-            textAlign: 'center'
+        titanticStyle = {
+            paddingTop: '2rem',
+            paddingBottom: '1rem'
         };
 
         return (
             <article id="retro_art"
                      className="starfield parallax_scroll"
-                     data-parallax-speed="-50"
-                     ref="starfield">
-                <h2>This website is all that and a bag of chips!</h2>
-                <h2 style={h2Style}>Here are some awesome thing!</h2>
+                     data-parallax-speed="250"
+                     ref="starfield"
+                     style={titanticStyle}>
+                <h2>Here are some awesome thing!</h2>
                 <section className="bellmaker_container geocities_me">
-                    <h3 style={h3Style}>1997 was the best year ever!</h3>
+                    <h3>1997 was the best year ever!</h3>
 
                     <div className="centered_image">
                         {AppConstants.dataSprite('titanic_468x60')}

@@ -53,7 +53,7 @@ export default class AppConstants {
             else if (str === 'true') {
                 finalVal = true;
             }
-            else if (str.length < 20) {
+            else if (str !== undefined && str.length < 20) {
                 if (numRegex.test(str) === true) {
                     finalVal = parseFloat(str, 10);
                 }
