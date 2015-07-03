@@ -5,8 +5,6 @@ import AppConstants from './AppConstants';
 
 import {HomepageConfig, LocalStorageMethods, SessionStorageMethods} from './AppConstants';
 
-//const watches = require('./assets/json/watches.json');
-
 import axios from 'axios';
 
 const popupBox = {
@@ -57,7 +55,6 @@ export default class AppStore extends Store {
         this.register(appActionsIds.recordLastPath, this.recordLastPath);
         this.register(appActionsIds.setCacheAge, this.setCacheAge);
         this.registerAsync(appActionsIds.fetchTimestamp, this.fetchTimestamp);
-        this.registerAsync(appActionsIds.fetchWatches, this.fetchWatches);
     }
 
 
@@ -181,17 +178,6 @@ export default class AppStore extends Store {
         if (NoResults.indexOf(path) === -1) {
             SessionStorageMethods.set(AppStore.LAST_PATH_KEY, path);
         }
-    }
-
-
-    fetchWatches() {
-        let url = 'assets/json/watches.json';
-        axios.get(url)
-            .then((response) => {
-                this.setState({
-                    watches: response.data
-                });
-            });
     }
 }
 

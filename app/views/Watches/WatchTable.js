@@ -16,8 +16,8 @@ export default class Homepage extends React.Component {
     componentDidMount() {
     }
 
-    componentWillReceiveProps(nextProps) {
-        window.console.log(nextProps);
+    shouldComponentUpdate(nextProps) {
+        return nextProps.watches !== this.props.watches;
     }
 
     getParent = (id) => {

@@ -22,9 +22,5 @@ export default class AppActions extends Actions {
     getLastPath(path) {
         return path;
     }
-
-    async fetchWatches(path) {
-        return path;
-    }
 }
 
