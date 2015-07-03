@@ -60,6 +60,7 @@ export default class Homepage extends React.Component {
     };
 
     render() {
+        window.console.log(this.props.flux);
         if (this.props.watches === undefined) {
             return (
                 <p>No data</p>
