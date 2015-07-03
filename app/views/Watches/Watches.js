@@ -7,6 +7,7 @@ import FluxComponent from 'flummox/component';
 import AppActions from 'AppActions';
 import WatchTable from './WatchTable';
 import WatchFlux from './WatchFlux.js';
+import WatchStore from './WatchStore.js';
 
 require('mossflower');
 require('./watches.less');
@@ -32,13 +33,12 @@ export default class Watches extends React.Component {
         let currentPath = this.currentPath();
         this.props.flux.getActions(AppActions.ID).setCacheAge();
         this.props.flux.getActions(AppActions.ID).recordLastPath(currentPath);
-        this.props.flux.getActions(AppActions.ID).fetchWatches(true);
 
     }
 
     render() {
         return (
-            <FluxComponent {...this.props}>
+            <FluxComponent {...this.props} connectToStores={[WatchStore.ID]}>
                 <WatchTable watches={this.props.watches}/>
                 <RouteHandler />
             </FluxComponent>

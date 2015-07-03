@@ -9,15 +9,6 @@ import Watches from './Watches';
 
 var {DefaultRoute, Route} = Router, routes;
 
-// simple test to ensure babel is working
-let re = 'me',
-    fa = 'so',
-    obj;
-
-obj = {re, fa};
-window.console.log(`loaded main.js with Babel ES6, ${JSON.stringify(obj)}`);
-// end simple test
-
 const flux = new AppFlux();
 
 routes = (
