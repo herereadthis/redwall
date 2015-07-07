@@ -1,7 +1,8 @@
 import React from 'react';
 
-import AppActions from 'AppActions';
-import AppStore from 'AppStore';
+import HomeActions from 'views/Homepage/HomeActions.js';
+import HomeStore from 'views/Homepage/HomeStore.js';
+
 import {LocalStorageMethods} from 'AppConstants';
 
 import PopupBoxSimulator from './PopupBoxSimulator';
@@ -17,12 +18,25 @@ export default class Banner extends React.Component {
     }
 
     componentWillMount() {
-        this.props.flux.getActions(AppActions.ID).fetch90sImage(true);
+        if (this.props.cacheValidity !== undefined) {
+            this.fetch90sImage(this.props.cacheValidity);
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.cacheValidity !== this.props.cacheValidity) {
+            this.fetch90sImage(nextProps.cacheValidity);
+        }
+
     }
 
     shouldComponentUpdate(nextProps) {
         return nextProps.ninetiesImgSize !== this.props.ninetiesImgSize;
     }
+
+    fetch90sImage = (cacheValidity) => {
+        this.props.flux.getActions(HomeActions.ID).fetch90sImage(cacheValidity);
+    };
 
     handleClick = (e) => {
         e.preventDefault();
@@ -81,25 +95,27 @@ export default class Banner extends React.Component {
     }
 
     getBannerImage = () => {
-        let ninetiesImg, imgIndex, targetImg;
+        let ninetiesImg, ninetiesImgIndex, imgIndex, targetImg;
 
-        ninetiesImg = LocalStorageMethods.get(AppStore.NINETIES_IMG.NAME);
-        if (ninetiesImg !== undefined) {
+        ninetiesImg = LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME);
+        ninetiesImgIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME);
+        if (ninetiesImg !== undefined && ninetiesImgIndex !== undefined) {
             ninetiesImg = JSON.parse(ninetiesImg);
-            imgIndex = LocalStorageMethods.get(AppStore.NINETIES_IMG.INDEX_NAME);
+            imgIndex = ninetiesImgIndex;
             targetImg = ninetiesImg[imgIndex];
 
             return (
                 <img src={targetImg.thumbnail} ref="bannerImage" />
             );
         }
-        else {
+        else if (this.props.cacheValidity !== undefined) {
+            this.fetch90sImage(this.props.cacheValidity);
             return null;
         }
     };
 
     render() {
-        let ninetiesImg = LocalStorageMethods.get(AppStore.NINETIES_IMG.NAME);
+        let ninetiesImg = LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME);
         if (ninetiesImg !== undefined) {
             ninetiesImg = JSON.parse(ninetiesImg);
         }

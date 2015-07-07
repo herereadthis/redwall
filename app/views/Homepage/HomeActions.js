@@ -8,6 +8,10 @@ export default class HomeActions extends Actions {
         return message;
     }
 
+    async fetch90sImage(cacheValidity) {
+        return cacheValidity;
+    }
+
     async fetchTimestamp(status) {
         return status;
     }

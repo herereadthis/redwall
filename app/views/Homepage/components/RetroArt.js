@@ -1,6 +1,5 @@
 import React from 'react';
 
-import AppActions from 'AppActions';
 import AppStore from 'AppStore';
 import AppConstants from 'AppConstants';
 import HitCounter from './HitCounter';
