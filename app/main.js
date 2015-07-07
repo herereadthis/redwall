@@ -7,6 +7,7 @@ import AppStore from './AppStore';
 import Code from 'views/Code/Code';
 import App from './app';
 
+/*
 // simple test to ensure babel is working
 let foo, bar, obj;
 
@@ -14,10 +15,13 @@ foo = 'foo';
 bar = 'bar';
 obj = {foo, bar};
 
-var {DefaultRoute, Route, Link, RouteHandler} = Router, routes;
-
 window.console.log(`loaded main.js with Babel ES6, ${JSON.stringify(obj)}`);
 // end simple test
+*/
+
+//{DefaultRoute, Route, Link, RouteHandler}
+var {DefaultRoute, Route} = Router,
+    routes;
 
 const flux = new AppFlux();
 
