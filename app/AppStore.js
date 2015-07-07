@@ -1,11 +1,10 @@
 import {Store} from 'flummox';
+import axios from 'axios';
 
 import AppActions from './AppActions';
 import AppConstants from './AppConstants';
 
 import {HomepageConfig, LocalStorageMethods, SessionStorageMethods} from './AppConstants';
-
-import axios from 'axios';
 
 const popupBox = {
     boxName: 'Welcome to my site!',
@@ -40,7 +39,6 @@ export default class AppStore extends Store {
 
         this.state = {
             popupBox,
-            timestamp: {},
             ninetiesImgSize: 0,
             hitCounterFigures: HomepageConfig.hitCounterFigures,
             cacheAge: null,
@@ -49,14 +47,11 @@ export default class AppStore extends Store {
 
         const appActionsIds = flux.getActionIds(AppActions.ID);
 
-        this.registerAsync(appActionsIds.fetchTimestamp, this.fetchTimestamp);
         this.registerAsync(appActionsIds.fetch90sImage, this.fetch90sImage);
         this.register(appActionsIds.getLastPath, this.getLastPath);
         this.register(appActionsIds.recordLastPath, this.recordLastPath);
         this.register(appActionsIds.setCacheAge, this.setCacheAge);
-        this.registerAsync(appActionsIds.fetchTimestamp, this.fetchTimestamp);
     }
-
 
     getLocalCacheData = () => {
         var last = LocalStorageMethods.get(AppStore.APP_CACHE.KEY),
@@ -67,16 +62,6 @@ export default class AppStore extends Store {
             valid
         };
     };
-
-
-    fetchTimestamp() {
-        axios.get('/timestamp.json')
-            .then((response) => {
-                this.setState({
-                    timestamp: response.data
-                });
-            });
-    }
 
     fetch90sImage() {
         let url = 'http://redwall.herereadthis.com/api/banner_image/';

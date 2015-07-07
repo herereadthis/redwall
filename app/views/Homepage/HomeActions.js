@@ -7,5 +7,9 @@ export default class HomeActions extends Actions {
     foo(message) {
         return message;
     }
+
+    async fetchTimestamp(status) {
+        return status;
+    }
 }
 
