@@ -67,6 +67,5 @@
     "mossflower": "^0.2.8",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
-    "stats-webpack-plugin": "^0.1.2"
   }
 }
