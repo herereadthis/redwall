@@ -88,7 +88,28 @@ export default class RetroFooter extends React.Component {
                                 season</p>
                         </section>
                         <section>
-                            <social-fu></social-fu>
+                            <ul className="social_fu" resource="#/me/" typeof="foaf:Person" data-module="social_fu">
+                                <li property="foaf:account" resource="#/me/facebook/" typeof="foaf:OnlineAccount">
+                                    <span property="foaf:accountServiceHomepage" resource="https://www.facebook.com/"><span>Facebook</span></span>
+                                    <a rel="foaf:homepage" href="https://www.facebook.com/herereadthis"
+                                       property="foaf:accountName" title="herereadthis">herereadthis</a>
+                                </li>
+                                <li property="foaf:account" resource="#/me/twitter/" typeof="foaf:OnlineAccount">
+                                    <span property="foaf:accountServiceHomepage" resource="https://twitter.com/"><span>Twitter</span></span>
+                                    <a rel="foaf:homepage" href="http://twitter.com/herereadthis"
+                                       property="foaf:accountName">herereadthis</a>
+                                </li>
+                                <li property="foaf:account" resource="#/me/github/" typeof="foaf:OnlineAccount">
+                                    <span property="foaf:accountServiceHomepage" resource="https://github.com/"><span>GitHub</span></span>
+                                    <a rel="foaf:homepage" href="https://github.com/herereadthis/redwall"
+                                       property="foaf:accountName">herereadthis</a>
+                                </li>
+                                <li property="foaf:account" resource="#/me/pinterest/" typeof="foaf:OnlineAccount">
+                                    <span property="foaf:accountServiceHomepage" resource="http://pinterest.com/"><span>Pinterest</span></span>
+                                    <a rel="foaf:homepage" href="http://pinterest.com/herereadthis/"
+                                       property="foaf:accountName">herereadthis</a>
+                                </li>
+                            </ul>
                         </section>
                     </div>
                     <div
@@ -102,6 +123,11 @@ export default class RetroFooter extends React.Component {
                         role="presentation"><span></span></div>
                 </div>
                 <div className="frames_start_bar" role="presentation"></div>
+                {/*<li property="foaf:account" resource="#/me/flickr/" typeof="foaf:OnlineAccount" style="display: none;">
+                 <span property="foaf:accountServiceHomepage" resource="http://www.flickr.com/">Flickr</span>
+                 <a rel="foaf:homepage" href="http://www.flickr.com/photos/applesanity/"
+                 property="foaf:accountName">applesanity</a>
+                 </li>*/}
             </footer>
         );
     }
