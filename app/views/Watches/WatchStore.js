@@ -15,14 +15,14 @@ export default class WatchStore extends Store {
         let watchActionIds = flux.getActionIds(WatchActions.ID);
 
         this.register(watchActionIds.foo, this.foo);
-        this.registerAsync(watchActionIds.fetchWatches, this.fetchWatches);
+        this.registerAsync(watchActionIds.getWatchData, this.getWatchData);
     }
 
     foo = (message) => {
         window.console.log(message);
     };
 
-    fetchWatches() {
+    getWatchData() {
         let url = 'assets/json/watches.json', _i;
         axios.get(url)
             .then((response) => {

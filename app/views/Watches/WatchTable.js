@@ -9,7 +9,7 @@ export default class Homepage extends React.Component {
 
     componentWillMount() {
         this.props.flux.getActions(WatchActions.ID).foo('bar');
-        this.props.flux.getActions(WatchActions.ID).fetchWatches(true);
+        this.props.flux.getActions(WatchActions.ID).getWatchData(true);
     }
 
     componentDidMount() {

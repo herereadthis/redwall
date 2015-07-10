@@ -8,7 +8,7 @@ export default class WatchActions extends Actions {
         return message;
     }
 
-    async fetchWatches(path) {
+    async getWatchData(path) {
         return path;
     }
 }
