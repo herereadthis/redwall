@@ -1,6 +1,5 @@
 import React from 'react';
 
-import _ from 'lodash';
 import WatchActions from './WatchActions.js';
 
 export default class Homepage extends React.Component {
@@ -20,41 +19,7 @@ export default class Homepage extends React.Component {
         return nextProps.watches !== this.props.watches;
     }
 
-    getParent = (id) => {
-        //window.console.log(this.props.watches);
-        var parentLicense, parentOwner, parentCompany, parent;
-
-        parentLicense = _.find(this.props.watches, (watch) => {
-
-            if (watch.licences !== undefined) {
-                return watch.licences.indexOf(id) !== -1;
-            }
-        });
-        if (parentLicense === undefined) {
-            parentOwner = _.find(this.props.watches, (watch) => {
-
-                if (watch.ownership !== undefined) {
-                    return watch.ownership.indexOf(id) !== -1;
-                }
-            });
-        }
-        else {
-            parentCompany = parentLicense;
-        }
-        if (parentOwner !== undefined) {
-            parentCompany = parentOwner;
-        }
-        if (parentCompany === undefined) {
-            parent = '';
-        }
-        else {
-            parent = parentCompany.companyName;
-        }
-        return parent;
-    };
-
     makeRows = () => {
-        var _this = this;
         return this.props.watches.map((value, key) => {
             return (
                 <tr key={key}>
@@ -62,7 +27,7 @@ export default class Homepage extends React.Component {
                     <td><p>{value.companyType}</p></td>
                     <td><p>{value.founded}</p></td>
                     <td><p>{value.nationality}</p></td>
-                    <td><p>{_this.getParent(value.id)}</p></td>
+                    <td><p>{value.parentCompany}</p></td>
                 </tr>
             );
         });
@@ -75,6 +40,36 @@ export default class Homepage extends React.Component {
                 <p>No data</p>
             );
         }
+
+        var metadata = [
+            {
+                columnName: 'companyName',
+                columnTitle: 'Name'
+
+            },
+            {
+                columnName: 'companyType',
+                columnTitle: 'Company Type'
+
+            },
+            {
+                columnName: 'founded',
+                columnTitle: 'Founded'
+
+            },
+            {
+                columnName: 'nationality',
+                columnTitle: 'Country'
+
+            },
+            {
+                columnName: 'parentCompany',
+                columnTitle: 'Parent Company'
+
+            }
+        ];
+        window.console.log(metadata);
+
         return (
             <div className="bellmaker_container">
                 <table>
