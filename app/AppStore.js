@@ -4,15 +4,6 @@ import AppActions from './AppActions';
 
 import {LocalStorageMethods, SessionStorageMethods} from './AppConstants';
 
-const popupBox = {
-    boxName: 'Welcome to my site!',
-    boxTitle: 'Here, Read This!',
-    colorShift: {
-        begin: 'F00',
-        end: 'FF9600'
-    }
-};
-
 let NoResults = [null, ''];
 
 export default class AppStore extends Store {
@@ -25,18 +16,10 @@ export default class AppStore extends Store {
         LIMIT: 86400000
     };
 
-    static NINETIES_IMG = {
-        NAME: 'ninetiesImg',
-        INDEX_NAME: 'ninetiesImgIndex',
-        INDEX: 0,
-        AMT: 'ninetiesImgCount'
-    };
-
     constructor(flux) {
         super();
 
         this.state = {
-            popupBox,
             cacheAge: null,
             cacheValidity: undefined
         };

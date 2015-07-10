@@ -5,7 +5,6 @@ import HomeActions from './HomeActions.js';
 import {LocalStorageMethods, getRandomInteger} from 'AppConstants.js';
 import {HomepageConfig} from './HomeConstants.js';
 
-
 export default class HomeStore extends Store {
 
     static ID = 'HomeStore';
@@ -21,6 +20,7 @@ export default class HomeStore extends Store {
         super();
 
         this.state = {
+            popupBox: HomepageConfig.popupBox,
             timestamp: {},
             hitCounterFigures: HomepageConfig.hitCounterFigures,
             ninetiesImgSize: 0
