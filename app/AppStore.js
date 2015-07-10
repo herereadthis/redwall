@@ -2,7 +2,7 @@ import {Store} from 'flummox';
 
 import AppActions from './AppActions';
 
-import {HomepageConfig, LocalStorageMethods, SessionStorageMethods} from './AppConstants';
+import {LocalStorageMethods, SessionStorageMethods} from './AppConstants';
 
 const popupBox = {
     boxName: 'Welcome to my site!',
@@ -37,7 +37,6 @@ export default class AppStore extends Store {
 
         this.state = {
             popupBox,
-            hitCounterFigures: HomepageConfig.hitCounterFigures,
             cacheAge: null,
             cacheValidity: undefined
         };

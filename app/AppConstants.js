@@ -2,11 +2,6 @@ import React from 'react';
 
 export default class AppConstants {
 
-    static HomepageConfig = {
-        imgUrl: 'http://herereadthis.com/build/images/',
-        hitCounterFigures: 6
-    };
-
     static LocalStorageMethods = {
         set: (key, value) => {
             localStorage[key] = value;

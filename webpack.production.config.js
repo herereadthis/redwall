@@ -17,7 +17,8 @@ paths = {
     docs: path.resolve(__dirname, 'docs'),
     build: path.resolve(__dirname, 'dist'),
     main: path.resolve(__dirname, 'app', 'main.js'),
-    watches: path.resolve(__dirname, 'app/views/Watches', 'main.js')
+    watches: path.resolve(__dirname, 'app/views/Watches', 'main.js'),
+    homepageImages: path.resolve(__dirname, 'app/assets/images/homepage')
 };
 
 // https://www.npmjs.com/package/html-webpack-plugin

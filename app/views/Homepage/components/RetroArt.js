@@ -4,7 +4,6 @@ import AppStore from 'AppStore';
 import AppConstants from 'AppConstants';
 import HitCounter from './HitCounter';
 import DateRender from 'components/DateRender';
-import HomeActions from 'views/Homepage/HomeActions.js';
 
 export default class RetroArt extends React.Component {
 
@@ -13,7 +12,6 @@ export default class RetroArt extends React.Component {
     }
 
     componentWillMount() {
-        this.props.flux.getActions(HomeActions.ID).fetchTimestamp(true);
         let appStore = this.props.flux.getStore(AppStore.ID);
         var lastPath = appStore.getLastPath();
         this.setState({

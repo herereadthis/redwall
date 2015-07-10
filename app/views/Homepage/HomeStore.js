@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import HomeActions from './HomeActions.js';
 import {LocalStorageMethods, getRandomInteger} from 'AppConstants.js';
+import {HomepageConfig} from './HomeConstants.js';
 
 
 export default class HomeStore extends Store {
@@ -21,6 +22,7 @@ export default class HomeStore extends Store {
 
         this.state = {
             timestamp: {},
+            hitCounterFigures: HomepageConfig.hitCounterFigures,
             ninetiesImgSize: 0
         };
 
