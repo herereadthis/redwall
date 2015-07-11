@@ -8,19 +8,23 @@ export default class Homepage extends React.Component {
     }
 
     componentWillMount() {
-        this.props.flux.getActions(WatchActions.ID).foo('bar');
-        this.props.flux.getActions(WatchActions.ID).getWatchData(true);
     }
 
     componentDidMount() {
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.cacheValidity !== this.props.cacheValidity) {
+            this.props.flux.getActions(WatchActions.ID).fetchWatchData(nextProps.cacheValidity);
+        }
+    }
+
     shouldComponentUpdate(nextProps) {
-        return nextProps.watches !== this.props.watches;
+        return nextProps.watchData !== this.props.watchData;
     }
 
     makeRows = () => {
-        return this.props.watches.map((value, key) => {
+        return this.props.watchData.map((value, key) => {
             return (
                 <tr key={key}>
                     <td><p>{value.companyName}</p></td>
@@ -34,41 +38,40 @@ export default class Homepage extends React.Component {
     };
 
     render() {
-        window.console.log(this.props);
-        if (this.props.watches === undefined) {
+        if (this.props.watchData === undefined) {
             return (
                 <p>No data</p>
             );
         }
 
-        var metadata = [
-            {
-                columnName: 'companyName',
-                columnTitle: 'Name'
-
-            },
-            {
-                columnName: 'companyType',
-                columnTitle: 'Company Type'
-
-            },
-            {
-                columnName: 'founded',
-                columnTitle: 'Founded'
-
-            },
-            {
-                columnName: 'nationality',
-                columnTitle: 'Country'
-
-            },
-            {
-                columnName: 'parentCompany',
-                columnTitle: 'Parent Company'
-
-            }
-        ];
-        window.console.log(metadata);
+        //var metadata = [
+        //    {
+        //        columnName: 'companyName',
+        //        columnTitle: 'Name'
+        //
+        //    },
+        //    {
+        //        columnName: 'companyType',
+        //        columnTitle: 'Company Type'
+        //
+        //    },
+        //    {
+        //        columnName: 'founded',
+        //        columnTitle: 'Founded'
+        //
+        //    },
+        //    {
+        //        columnName: 'nationality',
+        //        columnTitle: 'Country'
+        //
+        //    },
+        //    {
+        //        columnName: 'parentCompany',
+        //        columnTitle: 'Parent Company'
+        //
+        //    }
+        //];
+        //window.console.log(metadata);
 
         return (
             <div className="bellmaker_container">
