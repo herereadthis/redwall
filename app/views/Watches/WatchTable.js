@@ -23,18 +23,40 @@ export default class Homepage extends React.Component {
         return nextProps.watchData !== this.props.watchData;
     }
 
-    makeRows = () => {
+    makeRowCells = (row, metadata) => {
+        return metadata.map((value, key) => {
+            return (
+                <td key={key}><p>{row[value.columnName]}</p></td>
+            );
+        });
+    };
+
+    makeRows = (metadata) => {
         return this.props.watchData.map((value, key) => {
             return (
                 <tr key={key}>
-                    <td><p>{value.companyName}</p></td>
-                    <td><p>{value.companyType}</p></td>
-                    <td><p>{value.founded}</p></td>
-                    <td><p>{value.nationality}</p></td>
-                    <td><p>{value.parentCompany}</p></td>
+                    {this.makeRowCells(value, metadata)}
                 </tr>
             );
         });
+    };
+
+    makeTableHeaderRows = (metadata) => {
+        return metadata.map((value, key) => {
+            return (
+                <th key={key}>{value.columnTitle}</th>
+            );
+        });
+    };
+
+    makeTableHeader = (metadata) => {
+        return (
+            <thead>
+                <tr>
+                    {this.makeTableHeaderRows(metadata)}
+                </tr>
+            </thead>
+        );
     };
 
     render() {
@@ -44,49 +66,40 @@ export default class Homepage extends React.Component {
             );
         }
 
-        //var metadata = [
-        //    {
-        //        columnName: 'companyName',
-        //        columnTitle: 'Name'
-        //
-        //    },
-        //    {
-        //        columnName: 'companyType',
-        //        columnTitle: 'Company Type'
-        //
-        //    },
-        //    {
-        //        columnName: 'founded',
-        //        columnTitle: 'Founded'
-        //
-        //    },
-        //    {
-        //        columnName: 'nationality',
-        //        columnTitle: 'Country'
-        //
-        //    },
-        //    {
-        //        columnName: 'parentCompany',
-        //        columnTitle: 'Parent Company'
-        //
-        //    }
-        //];
-        //window.console.log(metadata);
+        var metadata = [
+            {
+                columnName: 'companyName',
+                columnTitle: 'Name'
+
+            },
+            {
+                columnName: 'companyType',
+                columnTitle: 'Company Type'
+
+            },
+            {
+                columnName: 'founded',
+                columnTitle: 'Founded'
+
+            },
+            {
+                columnName: 'nationality',
+                columnTitle: 'Country'
+
+            },
+            {
+                columnName: 'parentCompany',
+                columnTitle: 'Parent Company'
+
+            }
+        ];
 
         return (
             <div className="bellmaker_container">
                 <table>
-                    <thead>
-                        <tr>
-                            <th><p>Name</p></th>
-                            <th><p>Type</p></th>
-                            <th><p>Founded</p></th>
-                            <th><p>Country</p></th>
-                            <th><p>Parent</p></th>
-                        </tr>
-                    </thead>
+                    {this.makeTableHeader(metadata)}
                     <tbody>
-                        {this.makeRows()}
+                        {this.makeRows(metadata)}
                     </tbody>
                 </table>
             </div>
