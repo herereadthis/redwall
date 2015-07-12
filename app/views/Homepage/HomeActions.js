@@ -8,6 +8,10 @@ export default class HomeActions extends Actions {
         return message;
     }
 
+    showNinetiesImgBox(status) {
+        return status;
+    }
+
     async fetch90sImage(cacheValidity) {
         return cacheValidity;
     }

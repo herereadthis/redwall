@@ -3,6 +3,8 @@ import React from 'react';
 import HomeActions from 'views/Homepage/HomeActions.js';
 import HomeStore from 'views/Homepage/HomeStore.js';
 
+import NinetiesImgBox from './NinetiesImgBox.js';
+
 import {LocalStorageMethods} from 'AppConstants';
 
 import PopupBoxSimulator from './PopupBoxSimulator';
@@ -31,7 +33,13 @@ export default class Banner extends React.Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.ninetiesImgSize !== this.props.ninetiesImgSize;
+        if (nextProps.ninetiesImgSize !== this.props.ninetiesImgSize ||
+            nextProps.showNinetiesImgBox !== nextProps.showNinetiesImgBox) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
     fetch90sImage = (cacheValidity) => {
@@ -40,6 +48,7 @@ export default class Banner extends React.Component {
 
     handleClick = (e) => {
         e.preventDefault();
+        this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
     };
 
     popupContent() {
@@ -114,6 +123,15 @@ export default class Banner extends React.Component {
         }
     };
 
+    showNinetiesImgBox = () => {
+        window.console.log('123');
+        if (this.props.showNinetiesImgBox === true) {
+            return (
+                <NinetiesImgBox {...this.props} />
+            );
+        }
+    };
+
     render() {
         let ninetiesImg = LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME);
         if (ninetiesImg !== undefined) {
@@ -139,6 +157,7 @@ export default class Banner extends React.Component {
                         {this.popupContent()}
                     </PopupBoxSimulator>
                 </div>
+                {this.showNinetiesImgBox()}
             </header>
         );
     }

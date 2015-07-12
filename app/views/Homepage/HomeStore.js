@@ -23,18 +23,27 @@ export default class HomeStore extends Store {
             popupBox: HomepageConfig.popupBox,
             timestamp: {},
             hitCounterFigures: HomepageConfig.hitCounterFigures,
-            ninetiesImgSize: 0
+            ninetiesImgSize: 0,
+            showNinetiesImgBox: false
         };
 
         let homeActionIds = flux.getActionIds(HomeActions.ID);
 
         this.register(homeActionIds.foo, this.foo);
+        this.register(homeActionIds.showNinetiesImgBox, this.showNinetiesImgBox);
         this.registerAsync(homeActionIds.fetchTimestamp, this.fetchTimestamp);
         this.registerAsync(homeActionIds.fetch90sImage, this.fetch90sImage);
     }
 
     foo = (message) => {
         window.console.log(message);
+    };
+
+    showNinetiesImgBox = (status) => {
+        window.console.log('showNinetiesImgBox');
+        this.setState({
+            showNinetiesImgBox: status
+        });
     };
 
     fetchTimestamp() {
