@@ -1,5 +1,7 @@
 import React from 'react';
 
+import HomeActions from 'views/Homepage/HomeActions.js';
+
 import './NinetiesImgBox.less';
 
 export default class NinetiesImgBox extends React.Component {
@@ -12,6 +14,12 @@ export default class NinetiesImgBox extends React.Component {
     }
 
     componentDidMount() {
+        var _this = this;
+        window.addEventListener('keyup', function (e) {
+            if (e.keyCode === 27) {
+                _this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(false);
+            }
+        }, true);
     }
 
     render() {

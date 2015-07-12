@@ -40,7 +40,6 @@ export default class HomeStore extends Store {
     };
 
     showNinetiesImgBox = (status) => {
-        window.console.log('showNinetiesImgBox');
         this.setState({
             showNinetiesImgBox: status
         });

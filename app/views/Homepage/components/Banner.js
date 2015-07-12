@@ -124,7 +124,6 @@ export default class Banner extends React.Component {
     };
 
     showNinetiesImgBox = () => {
-        window.console.log('123');
         if (this.props.showNinetiesImgBox === true) {
             return (
                 <NinetiesImgBox {...this.props} />
