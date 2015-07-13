@@ -9,6 +9,8 @@ import {LocalStorageMethods} from 'AppConstants';
 
 import PopupBoxSimulator from './PopupBoxSimulator';
 
+import {RouteHandler} from 'react-router';
+
 export default class Banner extends React.Component {
 //class Banner extends React.Component {
 
@@ -157,6 +159,7 @@ export default class Banner extends React.Component {
                     </PopupBoxSimulator>
                 </div>
                 {this.showNinetiesImgBox()}
+                <RouteHandler {...this.props} />
             </header>
         );
     }

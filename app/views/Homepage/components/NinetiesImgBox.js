@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {RouteHandler} from 'react-router';
+
 import HomeActions from 'views/Homepage/HomeActions.js';
 
 import './NinetiesImgBox.less';

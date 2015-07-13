@@ -3,13 +3,17 @@ var React = require('react');
 //import {Link} from 'react-router';
 
 import Banner from './components/Banner';
+/*
 import RetroArt from './components/RetroArt';
 import RetroRules from './components/RetroRules';
 import RileyFu from './components/RileyFu';
 import RetroTitanic from './components/RetroTitanic';
 import RetroFooter from './components/RetroFooter';
+*/
 
 import ParallaxScroll from 'components/ParallaxScroll';
+
+import {RouteHandler} from 'react-router';
 
 export default class Homepage extends React.Component {
     constructor() {
@@ -34,11 +38,14 @@ export default class Homepage extends React.Component {
         return (
             <div id="retro_homepage">
                 <Banner {...this.props} />
+                <RouteHandler {...this.props} />
+                {/*
                 <RetroArt {...this.props} />
                 <RetroRules />
                 <RileyFu />
                 <RetroTitanic />
                 <RetroFooter {...this.props} />
+                */}
                 {/*
                 <h1>Hello world, it is nice to meet you!!!</h1>
                 <ul>

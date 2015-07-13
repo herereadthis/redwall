@@ -4,20 +4,22 @@ import FluxComponent from 'flummox/component';
 
 import AppFlux from './AppFlux';
 import AppStore from './AppStore';
-import Code from 'views/Code/Code';
 import App from './app';
 
+import NinetiesImage from 'views/Homepage/views/NinetiesImage.js';
+
+
 /*
-// simple test to ensure babel is working
-let foo, bar, obj;
+ // simple test to ensure babel is working
+ let foo, bar, obj;
 
-foo = 'foo';
-bar = 'bar';
-obj = {foo, bar};
+ foo = 'foo';
+ bar = 'bar';
+ obj = {foo, bar};
 
-window.console.log(`loaded main.js with Babel ES6, ${JSON.stringify(obj)}`);
-// end simple test
-*/
+ window.console.log(`loaded main.js with Babel ES6, ${JSON.stringify(obj)}`);
+ // end simple test
+ */
 
 //{DefaultRoute, Route, Link, RouteHandler}
 var {DefaultRoute, Route} = Router,
@@ -27,9 +29,10 @@ const flux = new AppFlux();
 
 routes = (
     <Route>
-        <Route name="code" path="code" handler={Code}/>
-        <Route name="app" path="/" handler={App}/>
-        <DefaultRoute handler={App}/>
+        <Route name="app" path="/" handler={App}>
+            <Route name="nineties_image" path="nineties-image/:id"
+                   component={NinetiesImage}/>
+        </Route>
     </Route>
 );
 
