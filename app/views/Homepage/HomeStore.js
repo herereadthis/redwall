@@ -1,5 +1,6 @@
 import {Store} from 'flummox';
 import axios from 'axios';
+import _ from 'lodash';
 
 import HomeActions from './HomeActions.js';
 import {LocalStorageMethods, getRandomInteger} from 'AppConstants.js';
@@ -23,7 +24,6 @@ export default class HomeStore extends Store {
             popupBox: HomepageConfig.popupBox,
             timestamp: {},
             hitCounterFigures: HomepageConfig.hitCounterFigures,
-            ninetiesImgSize: 0,
             showNinetiesImgBox: false
         };
 
@@ -46,6 +46,7 @@ export default class HomeStore extends Store {
     };
 
     fetchTimestamp() {
+        window.console.log('asdf');
         axios.get('/timestamp.json')
             .then((response) => {
                 this.setState({
@@ -88,15 +89,23 @@ export default class HomeStore extends Store {
 
     setNew90sIndex = (size) => {
         let randomIndex = getRandomInteger(size),
-            cIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME);
+            cIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME),
+            ninetiesImgJSON = JSON.parse(LocalStorageMethods.
+                get(HomeStore.NINETIES_IMG.NAME)),
+            ninetiesImgSelection;
 
         // insure that the random generation is always different than the
         // previous render
         if (cIndex !== undefined) {
             while (randomIndex === cIndex) {
-                randomIndex = getRandomInteger(size);
+                randomIndex = getRandomInteger(size) + 1;
             }
         }
+
+        ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
+            return parseInt(item.pk, 10) === randomIndex;
+        });
+        window.console.log(ninetiesImgSelection.unique_id, size);
 
         // store a random number that is between 0 and the number of total
         // images stored in data
@@ -105,6 +114,7 @@ export default class HomeStore extends Store {
             randomIndex
         );
         this.setState({
+            ninetiesImgSelection: ninetiesImgSelection,
             ninetiesImgSize: size
         });
     };

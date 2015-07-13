@@ -5,6 +5,8 @@ import AppConstants from 'AppConstants';
 import HitCounter from './HitCounter';
 import DateRender from 'components/DateRender';
 
+import HomeActions from 'views/Homepage/HomeActions.js';
+
 export default class RetroArt extends React.Component {
 
     constructor() {
@@ -17,6 +19,7 @@ export default class RetroArt extends React.Component {
         this.setState({
             hitCounterPath: lastPath
         });
+        this.props.flux.getActions(HomeActions.ID).fetchTimestamp(true);
     }
 
     componentDidMount() {

@@ -1,11 +1,11 @@
 import React from 'react';
 
 import HomeActions from 'views/Homepage/HomeActions.js';
-import HomeStore from 'views/Homepage/HomeStore.js';
+//import HomeStore from 'views/Homepage/HomeStore.js';
 
 import NinetiesImgBox from './NinetiesImgBox.js';
 
-import {LocalStorageMethods} from 'AppConstants';
+//import {LocalStorageMethods} from 'AppConstants';
 
 import PopupBoxSimulator from './PopupBoxSimulator';
 
@@ -31,18 +31,17 @@ export default class Banner extends React.Component {
         if (nextProps.cacheValidity !== this.props.cacheValidity) {
             this.fetch90sImage(nextProps.cacheValidity);
         }
-
     }
 
-    shouldComponentUpdate(nextProps) {
-        if (nextProps.ninetiesImgSize !== this.props.ninetiesImgSize ||
-            nextProps.showNinetiesImgBox !== nextProps.showNinetiesImgBox) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
+    //shouldComponentUpdate(nextProps) {
+    //    if (nextProps.ninetiesImgSize !== this.props.ninetiesImgSize ||
+    //        nextProps.showNinetiesImgBox !== nextProps.showNinetiesImgBox) {
+    //        return false;
+    //    }
+    //    else {
+    //        return true;
+    //    }
+    //}
 
     fetch90sImage = (cacheValidity) => {
         this.props.flux.getActions(HomeActions.ID).fetch90sImage(cacheValidity);
@@ -106,17 +105,16 @@ export default class Banner extends React.Component {
     }
 
     getBannerImage = () => {
-        let ninetiesImg, ninetiesImgIndex, imgIndex, targetImg;
+        //let ninetiesImg, ninetiesImgIndex, imgIndex, targetImg;
 
-        ninetiesImg = LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME);
-        ninetiesImgIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME);
-        if (ninetiesImg !== undefined && ninetiesImgIndex !== undefined) {
-            ninetiesImg = JSON.parse(ninetiesImg);
-            imgIndex = ninetiesImgIndex;
-            targetImg = ninetiesImg[imgIndex];
+        //ninetiesImg = LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME);
+        //ninetiesImgIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME);
+
+        if (this.props.ninetiesImgSelection !== undefined) {
+            window.console.log(this.props.ninetiesImgSelection.thumbnail);
 
             return (
-                <img src={targetImg.thumbnail} ref="bannerImage" />
+                <img src="" ref="bannerImage" />
             );
         }
         else if (this.props.cacheValidity !== undefined) {
@@ -134,12 +132,10 @@ export default class Banner extends React.Component {
     };
 
     render() {
-        let ninetiesImg = LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME);
-        if (ninetiesImg !== undefined) {
-            ninetiesImg = JSON.parse(ninetiesImg);
-        }
-        else {
-            ninetiesImg = null;
+
+        if (this.props.ninetiesImgSelection !== undefined) {
+            window.console.log(this.props.ninetiesImgSelection.unique_id);
+
         }
 
         return (
