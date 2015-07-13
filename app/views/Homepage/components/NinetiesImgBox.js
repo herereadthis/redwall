@@ -40,6 +40,10 @@ export default class NinetiesImgBox extends React.Component {
                         </div>
                     <div className="nineties_img_container">
                         <p>Nineties Image Box!!!!</p>
+
+                        <p>Route</p>
+                        <RouteHandler />
+                        <p>Handler</p>
                     </div>
                 </div>
             </div>

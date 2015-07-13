@@ -1,5 +1,4 @@
 import React from 'react';
-import {RouteHandler} from 'react-router';
 
 import Homepage from 'views/Homepage/Homepage';
 //import Code from 'views/Code/Code';
@@ -34,16 +33,16 @@ export default class App extends React.Component {
         this.props.flux.getActions(AppActions.ID).setCacheAge();
         this.props.flux.getActions(AppActions.ID).recordLastPath(currentPath);
 
-
         new HomeFlux(this.props.flux);
     }
 
     render() {
         return (
-            <FluxComponent {...this.props} connectToStores={[HomeStore.ID]}>
-                <Homepage {...this.props} />
-                <RouteHandler />
-            </FluxComponent>
+            <div>
+                <FluxComponent {...this.props} connectToStores={[HomeStore.ID]}>
+                    <Homepage {...this.props} />
+                </FluxComponent>
+            </div>
         );
     }
 }

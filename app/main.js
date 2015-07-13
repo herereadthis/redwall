@@ -7,6 +7,7 @@ import AppStore from './AppStore';
 import App from './app';
 
 import NinetiesImage from 'views/Homepage/views/NinetiesImage.js';
+import NinetiesImageIndex from 'views/Homepage/views/NinetiesImageIndex.js';
 
 
 /*
@@ -28,18 +29,18 @@ var {DefaultRoute, Route} = Router,
 const flux = new AppFlux();
 
 routes = (
-    <Route>
         <Route name="app" path="/" handler={App}>
             <Route name="nineties_image" path="nineties-image/:id"
-                   component={NinetiesImage}/>
+                   handler={NinetiesImage}/>
+            <Route name="nineties_image_index" path="nineties-image"
+                   handler={NinetiesImageIndex}/>
         </Route>
-    </Route>
 );
 
 // Router.HistoryLocation gets rid of the the /#/ hash by using html5 history
 // API for cleaner URLs
 // Router.run(routes, Router.HistoryLocation, (Handler) => {
-Router.run(routes, Router.HistoryLocation, (Handler) => {
+Router.run(routes, (Handler) => {
     React.render(
         <FluxComponent flux={flux} connectToStores={[AppStore.ID]}>
             <Handler/>
