@@ -8,8 +8,8 @@ import NinetiesImgBox from './NinetiesImgBox.js';
 //import {LocalStorageMethods} from 'AppConstants';
 
 import PopupBoxSimulator from './PopupBoxSimulator';
-
-import {RouteHandler} from 'react-router';
+import {getRouteData} from 'AppConstants.js';
+import AppRoutes from 'AppRoutes.js';
 
 export default class Banner extends React.Component {
 //class Banner extends React.Component {
@@ -21,6 +21,10 @@ export default class Banner extends React.Component {
         };
     }
 
+    static contextTypes = {
+        router: React.PropTypes.func
+    };
+
     componentWillMount() {
         if (this.props.cacheValidity !== undefined) {
             this.fetch90sImage(this.props.cacheValidity);
@@ -30,6 +34,20 @@ export default class Banner extends React.Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.cacheValidity !== this.props.cacheValidity) {
             this.fetch90sImage(nextProps.cacheValidity);
+        }
+        var {router} = this.context, routeData;
+        routeData = getRouteData(router);
+
+        window.console.log(routeData, AppRoutes.APP);
+
+        if (routeData.id !== undefined &&
+            routeData.name === AppRoutes.NINETIES_IMG) {
+            window.console.log(this.props.showNinetiesImgBox, nextProps.showNinetiesImgBox);
+
+            if (this.props.showNinetiesImgBox === false && nextProps.showNinetiesImgBox === false) {
+
+                nextProps.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
+            }
         }
     }
 
@@ -50,7 +68,6 @@ export default class Banner extends React.Component {
 
     handleClick = (e) => {
         e.preventDefault();
-        window.console.log(1);
         this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
     };
 
@@ -132,7 +149,7 @@ export default class Banner extends React.Component {
     };
 
     render() {
-        window.console.log(this.props);
+        //window.console.log(this.props);
 
         return (
             <header role="banner" ref="starfield parallax_scroll"

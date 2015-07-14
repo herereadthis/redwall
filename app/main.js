@@ -4,10 +4,11 @@ import FluxComponent from 'flummox/component';
 
 import AppFlux from './AppFlux';
 import AppStore from './AppStore';
-import App from './app';
-
-import NinetiesImage from 'views/Homepage/views/NinetiesImage.js';
-import NinetiesImageIndex from 'views/Homepage/views/NinetiesImageIndex.js';
+import AppRoutes from './AppRoutes.js';
+//import App from './app';
+//
+//import NinetiesImage from 'views/Homepage/views/NinetiesImage.js';
+//import NinetiesImageIndex from 'views/Homepage/views/NinetiesImageIndex.js';
 
 
 /*
@@ -23,24 +24,23 @@ import NinetiesImageIndex from 'views/Homepage/views/NinetiesImageIndex.js';
  */
 
 //{DefaultRoute, Route, Link, RouteHandler}
-var {DefaultRoute, Route} = Router,
-    routes;
+var {DefaultRoute, Route} = Router;
 
 const flux = new AppFlux();
 
-routes = (
-        <Route name="app" path="/" handler={App}>
-            <Route name="nineties_image" path="nineties-image/:id"
-                   handler={NinetiesImage}/>
-            <Route name="nineties_image_index" path="nineties-image"
-                   handler={NinetiesImageIndex}/>
-        </Route>
-);
+//routes = (
+//        <Route name="app" path="/" handler={App}>
+//            <Route name="nineties_image" path="nineties-image/:id"
+//                   handler={NinetiesImage}/>
+//            <Route name="nineties_image_index" path="nineties-image"
+//                   handler={NinetiesImageIndex}/>
+//        </Route>
+//);
 
 // Router.HistoryLocation gets rid of the the /#/ hash by using html5 history
 // API for cleaner URLs
 // Router.run(routes, Router.HistoryLocation, (Handler) => {
-Router.run(routes, (Handler) => {
+Router.run(AppRoutes.routes, (Handler) => {
     React.render(
         <FluxComponent flux={flux} connectToStores={[AppStore.ID]}>
             <Handler/>

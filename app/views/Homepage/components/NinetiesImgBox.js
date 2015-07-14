@@ -4,6 +4,9 @@ import {RouteHandler} from 'react-router';
 
 import HomeActions from 'views/Homepage/HomeActions.js';
 
+import {getRouteData} from 'AppConstants.js';
+import AppRoutes from 'AppRoutes.js';
+
 import './NinetiesImgBox.less';
 
 export default class NinetiesImgBox extends React.Component {
@@ -12,7 +15,29 @@ export default class NinetiesImgBox extends React.Component {
         super();
     }
 
+    static contextTypes = {
+        router: React.PropTypes.func
+    };
+
     componentWillMount() {
+        window.console.log(this.props.ninetiesImgSelection.unique_id);
+        var {router} = this.context, routeData;
+        routeData = getRouteData(router);
+
+        window.console.log(routeData, AppRoutes.APP);
+
+        if (routeData.name === AppRoutes.APP &&
+            routeData.id === undefined &&
+            this.props.ninetiesImgSelection.unique_id !== undefined) {
+            router.transitionTo(AppRoutes.NINETIES_IMG,
+                {id: this.props.ninetiesImgSelection.unique_id});
+        }
+        //if (routeData.id !== undefined &&
+        //    routeData.name === AppRoutes.NINETIES_IMG) {
+        //    router.transitionTo(AppRoutes.NINETIES_IMG,
+        //        {id: routeData.id});
+        //}
+
     }
 
     componentDidMount() {
@@ -22,6 +47,9 @@ export default class NinetiesImgBox extends React.Component {
                 _this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(false);
             }
         }, true);
+    }
+
+    componentWillReceiveProps() {
     }
 
     closeNinetiesBox = () => {

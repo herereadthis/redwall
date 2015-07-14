@@ -65,6 +65,14 @@ export default class AppConstants {
 
     static getRandomInteger = (max) => {
         return Math.floor(Math.random() * max);
-    }
+    };
+
+    static getRouteData = (router) => {
+        var currentRoutes = router.getCurrentRoutes();
+        return {
+            id: router.getCurrentParams().id,
+            name: currentRoutes[currentRoutes.length - 1].name
+        };
+    };
 }
 
