@@ -31,8 +31,11 @@ export default class HomeStore extends Store {
 
         this.register(homeActionIds.foo, this.foo);
         this.register(homeActionIds.showNinetiesImgBox, this.showNinetiesImgBox);
+
+
+        this.register(homeActionIds.getNewNinetiesImgSelection, this.getNewNinetiesImgSelection);
         this.registerAsync(homeActionIds.fetchTimestamp, this.fetchTimestamp);
-        this.registerAsync(homeActionIds.fetch90sImage, this.fetch90sImage);
+        this.register(homeActionIds.fetch90sImage, this.fetch90sImage);
     }
 
     foo = (message) => {
@@ -54,12 +57,12 @@ export default class HomeStore extends Store {
             });
     }
 
-    fetch90sImage(cacheValidity) {
+    fetch90sImage(obj) {
         let url = 'http://redwall.herereadthis.com/api/banner_image/';
 
         // if the cache is too old, or if 90s image data has not been stored, or
         // if the size of the data has not been stored
-        if (cacheValidity === false ||
+        if (obj.cacheValidity === false ||
             LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME) === undefined ||
             LocalStorageMethods.get(HomeStore.NINETIES_IMG.AMT) === undefined) {
             window.console.log('update cache!');
@@ -76,46 +79,59 @@ export default class HomeStore extends Store {
                         HomeStore.NINETIES_IMG.NAME,
                         JSON.stringify(response.data)
                     );
-                    this.setNew90sIndex(dataLength);
+                    this.setNew90sIndex(dataLength, obj.routeID);
                 }
             );
         }
         else {
             this.setNew90sIndex(
-                LocalStorageMethods.get(HomeStore.NINETIES_IMG.AMT));
+                LocalStorageMethods.get(HomeStore.NINETIES_IMG.AMT),
+                obj.routeID);
         }
     }
 
-    setNew90sIndex = (size) => {
-        let randomIndex = getRandomInteger(size),
-            cIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME),
-            ninetiesImgJSON = JSON.parse(LocalStorageMethods.
-                get(HomeStore.NINETIES_IMG.NAME)),
-            ninetiesImgSelection;
+    getNewNinetiesImgSelection = (route) => {
+        window.console.log(route);
+        //window.console.log(JSON.parse(LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME)));
+    };
 
-        // insure that the random generation is always different than the
-        // previous render
-        if (cIndex !== undefined) {
-            while (randomIndex === cIndex) {
-                randomIndex = getRandomInteger(size);
-            }
+    setNew90sIndex = (size, routeID) => {
+        var finalIndex, ninetiesImgSelection, ninetiesImgJSON;
+
+        ninetiesImgJSON = JSON.parse(LocalStorageMethods.
+            get(HomeStore.NINETIES_IMG.NAME));
+
+        if (routeID !== undefined) {
+            ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
+                return item.unique_id === routeID;
+            });
+            finalIndex = ninetiesImgSelection.pk;
         }
-        randomIndex = randomIndex + 1;
+        else {
+            let randomIndex = getRandomInteger(size),
+                cIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME);
 
-        ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
-            return parseInt(item.pk, 10) === randomIndex;
-        });
-        //window.console.log(ninetiesImgSelection);
-        //window.console.log(ninetiesImgSelection.unique_id, randomIndex, size);
+            // insure that the random generation is always different than the
+            // previous render
+            if (cIndex !== undefined) {
+                while (randomIndex === cIndex) {
+                    randomIndex = getRandomInteger(size);
+                }
+            }
+            finalIndex = randomIndex + 1;
 
+            ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
+                return parseInt(item.pk, 10) === finalIndex;
+            });
+        }
         // store a random number that is between 0 and the number of total
         // images stored in data
         LocalStorageMethods.set(
             HomeStore.NINETIES_IMG.INDEX_NAME,
-            randomIndex
+            finalIndex
         );
         this.setState({
-            ninetiesImgSelection: ninetiesImgSelection,
+            ninetiesImgSelection,
             ninetiesImgSize: size
         });
     };

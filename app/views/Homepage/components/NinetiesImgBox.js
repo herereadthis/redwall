@@ -20,9 +20,16 @@ export default class NinetiesImgBox extends React.Component {
     };
 
     componentWillMount() {
-        window.console.log(this.props.ninetiesImgSelection.unique_id);
         var {router} = this.context, routeData;
         routeData = getRouteData(router);
+
+        if (this.props.ninetiesImgSelection !== undefined) {
+            window.console.log(this.props.ninetiesImgSelection.unique_id);
+        }
+        else {
+            window.console.log(4);
+            this.props.flux.getActions(HomeActions.ID).getNewNinetiesImgSelection(routeData.name);
+        }
 
         window.console.log(routeData, AppRoutes.APP);
 

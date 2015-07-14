@@ -26,53 +26,85 @@ export default class Banner extends React.Component {
     };
 
     componentWillMount() {
+        var {router} = this.context, routeData;
+        routeData = getRouteData(router);
+
         if (this.props.cacheValidity !== undefined) {
-            this.fetch90sImage(this.props.cacheValidity);
+            this.fetch90sImage(this.props.cacheValidity, routeData.id);
         }
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.cacheValidity !== this.props.cacheValidity) {
-            this.fetch90sImage(nextProps.cacheValidity);
-        }
         var {router} = this.context, routeData;
         routeData = getRouteData(router);
 
-        window.console.log(this.props.showNinetiesImgBox, nextProps.showNinetiesImgBox, routeData.name, routeData.id);
+        window.console.log(7);
+
+
+        //let ninetiesImgSize, showNinetiesImgBox, cacheAge, ninetiesImgSelection;
+        //
+        //ninetiesImgSize = nextProps.ninetiesImgSize !== this.props.ninetiesImgSize;
+        //showNinetiesImgBox = nextProps.showNinetiesImgBox !== this.props.showNinetiesImgBox;
+        //cacheAge = nextProps.cacheAge !== this.props.cacheAge;
+        //ninetiesImgSelection = nextProps.ninetiesImgSelection !== this.props.ninetiesImgSelection;
+        //
+        //window.console.log(ninetiesImgSize, showNinetiesImgBox, cacheAge, ninetiesImgSelection);
+
+
+        if (nextProps.cacheValidity !== this.props.cacheValidity) {
+            this.fetch90sImage(nextProps.cacheValidity, routeData.id);
+        }
 
         if (routeData.id !== undefined &&
             routeData.name === AppRoutes.NINETIES_IMG) {
-            window.console.log(this.props.showNinetiesImgBox, nextProps.showNinetiesImgBox);
 
             if (this.props.showNinetiesImgBox === false && nextProps.showNinetiesImgBox === false) {
+                window.console.log(1);
                 nextProps.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
+
+                if (nextProps.ninetiesImgSelection === undefined) {
+                    window.console.log(5);
+                    //nextProps.flux.getActions(HomeActions.ID).getNewNinetiesImgSelection(routeData.name);
+                }
             }
 
-
             if (this.props.showNinetiesImgBox === true && nextProps.showNinetiesImgBox === false) {
+                window.console.log(2);
                 router.transitionTo(AppRoutes.APP);
             }
         }
-        if (routeData.name === AppRoutes.APP) {
+        if (routeData.id === undefined &&
+            routeData.name === AppRoutes.APP) {
 
-            window.console.log(this.props.showNinetiesImgBox, nextProps.showNinetiesImgBox, routeData.name, routeData.id);
-
+            if (this.props.showNinetiesImgBox === true && nextProps.showNinetiesImgBox === true) {
+                window.console.log(3);
+                nextProps.flux.getActions(HomeActions.ID).showNinetiesImgBox(false);
+            }
         }
     }
 
-    shouldComponentUpdate(nextProps) {
-        if (nextProps.ninetiesImgSize !== this.props.ninetiesImgSize ||
-            nextProps.showNinetiesImgBox !== nextProps.showNinetiesImgBox ||
-            nextProps.cacheAge !== this.props.cacheAge) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
+    //shouldComponentUpdate(nextProps) {
+    //    var ninetiesImgSize, showNinetiesImgBox, cacheAge, ninetiesImgSelection;
+    //
+    //    ninetiesImgSize = nextProps.ninetiesImgSize !== this.props.ninetiesImgSize;
+    //    showNinetiesImgBox = nextProps.showNinetiesImgBox !== this.props.showNinetiesImgBox;
+    //    cacheAge = nextProps.cacheAge !== this.props.cacheAge;
+    //    ninetiesImgSelection = nextProps.ninetiesImgSelection !== this.props.ninetiesImgSelection;
+    //
+    //    window.console.log(nextProps.ninetiesImgSelection, this.props.ninetiesImgSelection);
+    //    window.console.log(ninetiesImgSize, showNinetiesImgBox, cacheAge, ninetiesImgSelection);
+    //
+    //    if (ninetiesImgSize === true || showNinetiesImgBox === true ||
+    //        cacheAge === true || ninetiesImgSelection === true) {
+    //        return false;
+    //    }
+    //    else {
+    //        return true;
+    //    }
+    //}
 
-    fetch90sImage = (cacheValidity) => {
-        this.props.flux.getActions(HomeActions.ID).fetch90sImage(cacheValidity);
+    fetch90sImage = (cacheValidity, routeID) => {
+        this.props.flux.getActions(HomeActions.ID).fetch90sImage(cacheValidity, routeID);
     };
 
     handleClick = (e) => {
@@ -143,10 +175,6 @@ export default class Banner extends React.Component {
                 <img src={this.props.ninetiesImgSelection.thumbnail} ref="bannerImage" />
             );
         }
-        //else if (this.props.cacheValidity !== undefined) {
-        //    this.fetch90sImage(this.props.cacheValidity);
-        //    return null;
-        //}
     };
 
     showNinetiesImgBox = () => {

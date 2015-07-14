@@ -12,8 +12,15 @@ export default class HomeActions extends Actions {
         return status;
     }
 
-    async fetch90sImage(cacheValidity) {
-        return cacheValidity;
+    getNewNinetiesImgSelection(route) {
+        return route;
+    }
+
+    fetch90sImage(cacheValidity, routeID) {
+        return {
+            cacheValidity,
+            routeID
+        };
     }
 
     async fetchTimestamp(status) {
