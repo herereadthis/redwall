@@ -49,6 +49,7 @@ export default class Banner extends React.Component {
 
     handleClick = (e) => {
         e.preventDefault();
+        window.console.log(1);
         this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
     };
 
@@ -111,16 +112,14 @@ export default class Banner extends React.Component {
         //ninetiesImgIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME);
 
         if (this.props.ninetiesImgSelection !== undefined) {
-            window.console.log(this.props.ninetiesImgSelection.thumbnail);
-
             return (
-                <img src="" ref="bannerImage" />
+                <img src={this.props.ninetiesImgSelection.thumbnail} ref="bannerImage" />
             );
         }
-        else if (this.props.cacheValidity !== undefined) {
-            this.fetch90sImage(this.props.cacheValidity);
-            return null;
-        }
+        //else if (this.props.cacheValidity !== undefined) {
+        //    this.fetch90sImage(this.props.cacheValidity);
+        //    return null;
+        //}
     };
 
     showNinetiesImgBox = () => {
@@ -132,11 +131,7 @@ export default class Banner extends React.Component {
     };
 
     render() {
-
-        if (this.props.ninetiesImgSelection !== undefined) {
-            window.console.log(this.props.ninetiesImgSelection.unique_id);
-
-        }
+        window.console.log(this.props.showNinetiesImgBox);
 
         return (
             <header role="banner" ref="starfield parallax_scroll"
@@ -155,7 +150,6 @@ export default class Banner extends React.Component {
                     </PopupBoxSimulator>
                 </div>
                 {this.showNinetiesImgBox()}
-                <RouteHandler {...this.props} />
             </header>
         );
     }

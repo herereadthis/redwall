@@ -46,7 +46,6 @@ export default class HomeStore extends Store {
     };
 
     fetchTimestamp() {
-        window.console.log('asdf');
         axios.get('/timestamp.json')
             .then((response) => {
                 this.setState({
@@ -98,14 +97,16 @@ export default class HomeStore extends Store {
         // previous render
         if (cIndex !== undefined) {
             while (randomIndex === cIndex) {
-                randomIndex = getRandomInteger(size) + 1;
+                randomIndex = getRandomInteger(size);
             }
         }
+        randomIndex = randomIndex + 1;
 
         ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
             return parseInt(item.pk, 10) === randomIndex;
         });
-        window.console.log(ninetiesImgSelection.unique_id, size);
+        //window.console.log(ninetiesImgSelection);
+        //window.console.log(ninetiesImgSelection.unique_id, randomIndex, size);
 
         // store a random number that is between 0 and the number of total
         // images stored in data
