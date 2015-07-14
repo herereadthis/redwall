@@ -6,9 +6,17 @@
 
     a {
         display: block;
-        border: 0.2rem solid #00F;
+        border-width: 0.2rem;
+        border-style: solid;
         background-color: @color_maya_blue;
         position: relative;
+
+        &:link, &:visited {
+            border-color: #00E;
+        }
+        &:hover {
+            border-color: #551A8B;
+        }
     }
     img {
         width: 100%;

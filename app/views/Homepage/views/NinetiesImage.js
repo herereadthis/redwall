@@ -17,13 +17,25 @@ export default class NinetiesImage extends React.Component {
         var style = {
             float: 'left'
         };
-        return (
-            <div>
-                <img src={this.props.data.url} height={400} style={style} />
-                <h1>{this.props.data.title}</h1>
-                <div className="nineties_description" dangerouslySetInnerHTML={{__html: this.props.data.description}} />
-            </div>
-        );
+        if (this.props.data === undefined) {
+            return (
+                <div>
+                    <p>Loading...</p>
+                    </div>
+            );
+        }
+        else {
+            return (
+                <div>
+                    <img src={this.props.data.url} height={400} style={style}/>
+
+                    <h1>{this.props.data.title}</h1>
+
+                    <div className="nineties_description"
+                         dangerouslySetInnerHTML={{__html: this.props.data.description}}/>
+                </div>
+            );
+        }
     }
 }
 
