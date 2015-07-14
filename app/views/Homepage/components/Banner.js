@@ -38,16 +38,25 @@ export default class Banner extends React.Component {
         var {router} = this.context, routeData;
         routeData = getRouteData(router);
 
-        window.console.log(routeData, AppRoutes.APP);
+        window.console.log(this.props.showNinetiesImgBox, nextProps.showNinetiesImgBox, routeData.name, routeData.id);
 
         if (routeData.id !== undefined &&
             routeData.name === AppRoutes.NINETIES_IMG) {
             window.console.log(this.props.showNinetiesImgBox, nextProps.showNinetiesImgBox);
 
             if (this.props.showNinetiesImgBox === false && nextProps.showNinetiesImgBox === false) {
-
                 nextProps.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
             }
+
+
+            if (this.props.showNinetiesImgBox === true && nextProps.showNinetiesImgBox === false) {
+                router.transitionTo(AppRoutes.APP);
+            }
+        }
+        if (routeData.name === AppRoutes.APP) {
+
+            window.console.log(this.props.showNinetiesImgBox, nextProps.showNinetiesImgBox, routeData.name, routeData.id);
+
         }
     }
 

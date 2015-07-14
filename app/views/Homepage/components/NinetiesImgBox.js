@@ -49,6 +49,10 @@ export default class NinetiesImgBox extends React.Component {
         }, true);
     }
 
+    componentWillUnmount() {
+        window.console.log(this.props.showNinetiesImgBox);
+    }
+
     componentWillReceiveProps() {
     }
 
