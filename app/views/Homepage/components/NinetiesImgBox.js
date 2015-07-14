@@ -7,8 +7,6 @@ import HomeActions from 'views/Homepage/HomeActions.js';
 import {getRouteData} from 'AppConstants.js';
 import AppRoutes from 'AppRoutes.js';
 
-import './NinetiesImgBox.less';
-
 export default class NinetiesImgBox extends React.Component {
 
     constructor() {
@@ -78,11 +76,8 @@ export default class NinetiesImgBox extends React.Component {
                         <div className="nineties_img_head_text mac_os8_sprites pictures" onClick={this.closeNinetiesBox}></div>
                         </div>
                     <div className="nineties_img_container">
-                        <p>Nineties Image Box!!!!</p>
-
-                        <p>Route</p>
-                        <RouteHandler />
-                        <p>Handler</p>
+                        <RouteHandler data={this.props.ninetiesImgSelection}
+                                      dataCount={this.props.ninetiesImgSize} />
                     </div>
                 </div>
             </div>

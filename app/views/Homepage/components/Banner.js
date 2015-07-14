@@ -38,8 +38,6 @@ export default class Banner extends React.Component {
         var {router} = this.context, routeData;
         routeData = getRouteData(router);
 
-        window.console.log(7);
-
 
         //let ninetiesImgSize, showNinetiesImgBox, cacheAge, ninetiesImgSelection;
         //
@@ -72,6 +70,15 @@ export default class Banner extends React.Component {
                 window.console.log(2);
                 router.transitionTo(AppRoutes.APP);
             }
+
+
+            if (nextProps.ninetiesImgSelection !== undefined) {
+                if (nextProps.ninetiesImgSelection.unique_id !== undefined &&
+                    nextProps.ninetiesImgSelection.unique_id !== routeData.id) {
+                    window.console.log(8);
+                    this.fetch90sImage(nextProps.cacheValidity, routeData.id);
+                }
+            }
         }
         if (routeData.id === undefined &&
             routeData.name === AppRoutes.APP) {
@@ -89,7 +96,7 @@ export default class Banner extends React.Component {
     //    ninetiesImgSize = nextProps.ninetiesImgSize !== this.props.ninetiesImgSize;
     //    showNinetiesImgBox = nextProps.showNinetiesImgBox !== this.props.showNinetiesImgBox;
     //    cacheAge = nextProps.cacheAge !== this.props.cacheAge;
-    //    ninetiesImgSelection = nextProps.ninetiesImgSelection !== this.props.ninetiesImgSelection;
+    //    ninetiesImgSelection = nextProps.ninetiesImgSelection !== this.props.nMET-504-store-new-urlsinetiesImgSelection;
     //
     //    window.console.log(nextProps.ninetiesImgSelection, this.props.ninetiesImgSelection);
     //    window.console.log(ninetiesImgSize, showNinetiesImgBox, cacheAge, ninetiesImgSelection);
