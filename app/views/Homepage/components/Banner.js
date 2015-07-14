@@ -33,15 +33,16 @@ export default class Banner extends React.Component {
         }
     }
 
-    //shouldComponentUpdate(nextProps) {
-    //    if (nextProps.ninetiesImgSize !== this.props.ninetiesImgSize ||
-    //        nextProps.showNinetiesImgBox !== nextProps.showNinetiesImgBox) {
-    //        return false;
-    //    }
-    //    else {
-    //        return true;
-    //    }
-    //}
+    shouldComponentUpdate(nextProps) {
+        if (nextProps.ninetiesImgSize !== this.props.ninetiesImgSize ||
+            nextProps.showNinetiesImgBox !== nextProps.showNinetiesImgBox ||
+            nextProps.cacheAge !== this.props.cacheAge) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
 
     fetch90sImage = (cacheValidity) => {
         this.props.flux.getActions(HomeActions.ID).fetch90sImage(cacheValidity);
@@ -131,7 +132,7 @@ export default class Banner extends React.Component {
     };
 
     render() {
-        window.console.log(this.props.showNinetiesImgBox);
+        window.console.log(this.props);
 
         return (
             <header role="banner" ref="starfield parallax_scroll"
