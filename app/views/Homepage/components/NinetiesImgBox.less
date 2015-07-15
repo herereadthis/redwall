@@ -80,6 +80,10 @@
 
         background-repeat: no-repeat;
     }
+    h1, p, span {
+        font-family: "charcoal";
+        font-weight: 400;
+    }
 }
 .nineties_img_container {
     position: absolute;
@@ -185,6 +189,8 @@
     }
 }
 
+@head_text_padding: 1.4rem;
+
 .nineties_img_head_text {
     //height: 1.3rem;
     height: 2.6rem;
@@ -199,13 +205,59 @@
         margin-left: -6rem;
         background-position: 0 -4rem;
     }
+    &.free_text {
+        left: 50%;
+        text-align: center;
+        //width: 12rem;
+        margin-left: -6rem;
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+        letter-spacing: 0.1rem;
+        background-image:
+            @lgD7D, @lgD7D, @lgD7D, @lgD7D,
+            @lgD7D, @lgD7D, @lgD7D, @lgD7D,
+            @lgD7D, @lgD7D, @lgD7D, @lgD7D;
+        background-repeat: no-repeat;
+        background-size:
+            calc(~"100% - 0.2rem") 0.2rem;
+
+        background-position:
+            0.0rem 0.0rem, 0.2rem 0.2rem, 0.0rem 0.4rem, 0.2rem 0.6rem,
+            0.0rem 0.8rem, 0.2rem 1.0rem, 0.0rem 1.2rem, 0.2rem 1.4rem,
+            0.0rem 1.6rem, 0.2rem 1.8rem, 0.0rem 2.0rem, 0.2rem 2.2rem;
+
+        &.kelly-kapowski {
+            width: 19.4rem + @head_text_padding;
+        }
+        &.macarena {
+            width: 18.4rem + @head_text_padding;
+        }
+        &.motorola-startac {
+            width: 22.8rem + @head_text_padding;
+        }
+        &.notorious-big {
+            width: 20.2rem + @head_text_padding;
+        }
+        &.princess-diana {
+            width: 18.6rem + @head_text_padding;
+        }
+        &.tamagotchi {
+            width: 15.1rem + @head_text_padding;
+        }
+        &.titanic {
+            width: 8.6rem + @head_text_padding;
+        }
+        &.x-files {
+            width: 8.9rem + @head_text_padding;
+        }
+    }
 }
 
 .mac_os8_sprites {
     background-image: url("../../../assets/images/css/mac_os8_sprites.png");
     background-repeat: no-repeat;
     //background-size: 6rem 4rem;
-    background-size: 12rem 8rem;
+    background-size: 12rem 12rem;
 }
 
 .disable_body_scroll {

@@ -74,18 +74,27 @@ export default class NinetiesImgBox extends React.Component {
     };
 
     render() {
+        var classes = 'nineties_img_head_text free_text';
+        classes = `${classes} ${this.props.ninetiesImgSelection.unique_id}`;
         return (
             <div className="nineties_img_box">
                 <div className="bellmaker_container">
                     <div className="nineties_img_header">
-                        <div className="nineties_img_head_button mac_os8_sprites close" onClick={this.closeNinetiesBox}></div>
-                        <div className="nineties_img_head_button mac_os8_sprites resize" onClick={this.closeNinetiesBox}></div>
-                        <div className="nineties_img_head_button mac_os8_sprites minimize" onClick={this.closeNinetiesBox}></div>
-                        <div className="nineties_img_head_text mac_os8_sprites pictures" onClick={this.closeNinetiesBox}></div>
+                        <div className="nineties_img_head_button mac_os8_sprites close"
+                            onClick={this.closeNinetiesBox} />
+                        <div className="nineties_img_head_button mac_os8_sprites resize"
+                            onClick={this.closeNinetiesBox} />
+                        <div className="nineties_img_head_button mac_os8_sprites minimize"
+                            onClick={this.closeNinetiesBox} />
+                        {/*<div className="nineties_img_head_text mac_os8_sprites pictures"
+                             onClick={this.closeNinetiesBox} />*/}
+                        <div className={classes}>
+                            <span>{this.props.ninetiesImgSelection.title}</span>
                         </div>
+                    </div>
                     <div className="nineties_img_container">
                         <RouteHandler data={this.props.ninetiesImgSelection}
-                                      dataCount={this.props.ninetiesImgSize} />
+                                      dataCount={this.props.ninetiesImgSize}/>
                     </div>
                 </div>
             </div>
