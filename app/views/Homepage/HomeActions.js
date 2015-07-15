@@ -22,18 +22,16 @@ export default class HomeActions extends Actions {
             routeID
         };
     }
-    setNew90sIndex(size, routeID, usePK) {
+    setNew90sIndex(size, routeID) {
         return {
             size,
-            routeID,
-            usePK
+            routeID
         };
     }
-    setNext90sIndex(size, routeID, usePK) {
+    set90sNavRoutes(size, routeID) {
         return {
             size,
-            routeID,
-            usePK
+            routeID
         };
     }
 

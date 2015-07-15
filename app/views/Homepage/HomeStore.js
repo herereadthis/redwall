@@ -37,6 +37,7 @@ export default class HomeStore extends Store {
         this.registerAsync(homeActionIds.fetchTimestamp, this.fetchTimestamp);
         this.register(homeActionIds.fetch90sImage, this.fetch90sImage);
         this.register(homeActionIds.setNew90sIndex, this.setNew90sIndex);
+        this.register(homeActionIds.set90sNavRoutes, this.set90sNavRoutes);
     }
 
     foo = (message) => {
@@ -101,32 +102,21 @@ export default class HomeStore extends Store {
     };
 
     setNew90sIndex = (obj) => {
-        var finalIndex, ninetiesImgSelection, ninetiesImgJSON,
-            {size, routeID, usePK} = obj;
+        var finalIndex, ninetiesImgSelection, ninetiesImgJSON, randomIndex,
+            cIndex, {size, routeID} = obj;
 
         ninetiesImgJSON = JSON.parse(LocalStorageMethods.
             get(HomeStore.NINETIES_IMG.NAME));
 
-
         if (routeID !== undefined) {
-
-            if (usePK === undefined) {
-                ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
-                    return item.unique_id === routeID;
-                });
-            }
-            else {
-                window.console.log(size, routeID, usePK);
-                window.console.log(ninetiesImgJSON);
-                ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
-                    return parseInt(item.pk, 10) === routeID;
-                });
-            }
+            ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
+                return item.unique_id === routeID;
+            });
             finalIndex = ninetiesImgSelection.pk;
         }
         else {
-            let randomIndex = getRandomInteger(size),
-                cIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME);
+            randomIndex = getRandomInteger(size);
+            cIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME);
 
             // insure that the random generation is always different than the
             // previous render
@@ -152,5 +142,44 @@ export default class HomeStore extends Store {
             ninetiesImgSize: size
         });
     };
+
+    set90sNavRoutes = (obj) => {
+        var ninetiesImgJSON, prevID, nextID, prevRoute, nextRoute,
+            {size, routeID} = obj;
+
+        routeID = parseInt(routeID, 10);
+
+        ninetiesImgJSON = JSON.parse(LocalStorageMethods.
+            get(HomeStore.NINETIES_IMG.NAME));
+
+        if (routeID === 1) {
+            prevID = size;
+        }
+        else if (routeID === size) {
+            nextID = 1;
+        }
+        if (prevID === undefined) {
+            prevID = routeID - 1;
+        }
+        if (nextID === undefined) {
+            nextID = routeID + 1;
+        }
+
+        prevRoute = _.find(ninetiesImgJSON, (item) => {
+            return parseInt(item.pk, 10) === prevID;
+        }).unique_id;
+
+        nextRoute = _.find(ninetiesImgJSON, (item) => {
+            return parseInt(item.pk, 10) === nextID;
+        }).unique_id;
+
+        this.setState({
+            ninetiesRoutes: {
+                prevRoute,
+                nextRoute
+            }
+        });
+
+    }
 }
 
