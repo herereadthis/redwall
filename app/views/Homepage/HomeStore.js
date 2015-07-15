@@ -36,6 +36,7 @@ export default class HomeStore extends Store {
         this.register(homeActionIds.getNewNinetiesImgSelection, this.getNewNinetiesImgSelection);
         this.registerAsync(homeActionIds.fetchTimestamp, this.fetchTimestamp);
         this.register(homeActionIds.fetch90sImage, this.fetch90sImage);
+        this.register(homeActionIds.setNew90sIndex, this.setNew90sIndex);
     }
 
     foo = (message) => {
@@ -79,14 +80,18 @@ export default class HomeStore extends Store {
                         HomeStore.NINETIES_IMG.NAME,
                         JSON.stringify(response.data)
                     );
-                    this.setNew90sIndex(dataLength, obj.routeID);
+                    this.setNew90sIndex({
+                        size: dataLength,
+                        routeID: obj.routeID
+                    });
                 }
             );
         }
         else {
-            this.setNew90sIndex(
-                LocalStorageMethods.get(HomeStore.NINETIES_IMG.AMT),
-                obj.routeID);
+            this.setNew90sIndex({
+                size: LocalStorageMethods.get(HomeStore.NINETIES_IMG.AMT),
+                routeID: obj.routeID
+            });
         }
     }
 
@@ -95,16 +100,28 @@ export default class HomeStore extends Store {
         //window.console.log(JSON.parse(LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME)));
     };
 
-    setNew90sIndex = (size, routeID) => {
-        var finalIndex, ninetiesImgSelection, ninetiesImgJSON;
+    setNew90sIndex = (obj) => {
+        var finalIndex, ninetiesImgSelection, ninetiesImgJSON,
+            {size, routeID, usePK} = obj;
 
         ninetiesImgJSON = JSON.parse(LocalStorageMethods.
             get(HomeStore.NINETIES_IMG.NAME));
 
+
         if (routeID !== undefined) {
-            ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
-                return item.unique_id === routeID;
-            });
+
+            if (usePK === undefined) {
+                ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
+                    return item.unique_id === routeID;
+                });
+            }
+            else {
+                window.console.log(size, routeID, usePK);
+                window.console.log(ninetiesImgJSON);
+                ninetiesImgSelection = _.find(ninetiesImgJSON, (item) => {
+                    return parseInt(item.pk, 10) === routeID;
+                });
+            }
             finalIndex = ninetiesImgSelection.pk;
         }
         else {

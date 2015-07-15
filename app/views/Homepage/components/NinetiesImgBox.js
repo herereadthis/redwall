@@ -66,7 +66,8 @@ export default class NinetiesImgBox extends React.Component {
             NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
     }
 
-    componentWillReceiveProps() {
+    componentWillReceiveProps(nextProps) {
+        window.console.log(nextProps.ninetiesImgSelection);
     }
 
     closeNinetiesBox = () => {
@@ -94,7 +95,8 @@ export default class NinetiesImgBox extends React.Component {
                     </div>
                     <div className="nineties_img_container">
                         <RouteHandler data={this.props.ninetiesImgSelection}
-                                      dataCount={this.props.ninetiesImgSize}/>
+                                      dataCount={this.props.ninetiesImgSize}
+                                        flux={this.props.flux}/>
                     </div>
                 </div>
             </div>

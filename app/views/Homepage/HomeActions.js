@@ -22,6 +22,20 @@ export default class HomeActions extends Actions {
             routeID
         };
     }
+    setNew90sIndex(size, routeID, usePK) {
+        return {
+            size,
+            routeID,
+            usePK
+        };
+    }
+    setNext90sIndex(size, routeID, usePK) {
+        return {
+            size,
+            routeID,
+            usePK
+        };
+    }
 
     async fetchTimestamp(status) {
         return status;
