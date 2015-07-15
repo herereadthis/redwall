@@ -74,5 +74,27 @@ export default class AppConstants {
             name: currentRoutes[currentRoutes.length - 1].name
         };
     };
+
+    static DomUtils = {
+        addClass: (element, classToAdd) => {
+            if (element.classList !== undefined) {
+                element.classList.add(classToAdd);
+            }
+            else {
+                element.className = element.classToAdd + ' ' +
+                    classToAdd;
+            }
+        },
+        removeClass: (element, classToRemove) => {
+            if (element.classList) {
+                element.classList.remove(classToRemove);
+            }
+            else {
+                var regex = new RegExp('(^|\\b)' +
+                    classToRemove.split(' ').join('|') + '(\\b|$)', 'gi');
+                element.className = element.className.replace(regex, ' ');
+            }
+        }
+    }
 }
 

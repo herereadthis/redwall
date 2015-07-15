@@ -4,7 +4,7 @@ import {RouteHandler} from 'react-router';
 
 import HomeActions from 'views/Homepage/HomeActions.js';
 
-import {getRouteData} from 'AppConstants.js';
+import {getRouteData, DomUtils} from 'AppConstants.js';
 import AppRoutes from 'AppRoutes.js';
 
 export default class NinetiesImgBox extends React.Component {
@@ -16,6 +16,8 @@ export default class NinetiesImgBox extends React.Component {
     static contextTypes = {
         router: React.PropTypes.func
     };
+
+    static DISABLE_BODY_SCROLL_CLASS = 'disable_body_scroll';
 
     componentWillMount() {
         var {router} = this.context, routeData;
@@ -43,6 +45,9 @@ export default class NinetiesImgBox extends React.Component {
         //        {id: routeData.id});
         //}
 
+        DomUtils.addClass(document.body,
+            NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
+
     }
 
     componentDidMount() {
@@ -56,6 +61,9 @@ export default class NinetiesImgBox extends React.Component {
 
     componentWillUnmount() {
         window.console.log(this.props.showNinetiesImgBox);
+
+        DomUtils.removeClass(document.body,
+            NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
     }
 
     componentWillReceiveProps() {

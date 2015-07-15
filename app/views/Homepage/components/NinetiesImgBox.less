@@ -98,6 +98,9 @@
             margin-bottom: 2rem;
         }
     }
+    img {
+        padding: 0.5rem 0 0.5rem 0.5rem;
+    }
 }
 
 .nineties_img_header {
@@ -138,12 +141,19 @@
 .nineties_img_head_button {
     //width: 1.3rem;
     //height: 1.3rem;
-    width: 2.6rem;
-    height: 2.6rem;
-    position: absolute;
+
+    &, &:after {
+        width: 2.6rem;
+        height: 2.6rem;
+        position: absolute;
+    }
 
     &:hover {
         cursor: pointer;
+
+        &:after {
+            display: block;
+        }
     }
     &.close {
         left: 0;
@@ -158,6 +168,20 @@
         right: 0;
         //background-position: -4rem 0;
         background-position: -8rem 0;
+    }
+    &:after {
+        content: "";
+        display: none;
+        background-repeat: no-repeat;
+        background-image:
+            @lgFFF, @lgFFF,
+            @lgACA, @lgACA;
+        background-size:
+            2.4rem 0.2rem, 0.2rem 2.4rem,
+            2.4rem 0.2rem, 0.2rem 2.4rem;
+        background-position:
+            0 0, 0 0,
+            0.2rem 2.4rem, 2.4rem 0.2rem;
     }
 }
 
@@ -182,4 +206,9 @@
     background-repeat: no-repeat;
     //background-size: 6rem 4rem;
     background-size: 12rem 8rem;
+}
+
+.disable_body_scroll {
+    height: 100vh;
+    overflow: hidden;
 }
