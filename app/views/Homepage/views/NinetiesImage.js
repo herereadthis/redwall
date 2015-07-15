@@ -27,6 +27,12 @@ export default class NinetiesImage extends React.Component {
         else {
             return (
                 <div>
+                    <div className="nineties_img_navigator">
+                        <div className="nineties_img_nav_button mac_os8_sprites previous" />
+                        <div className="nineties_img_nav_button mac_os8_sprites next" />
+                        <div className="nineties_img_nav_button mac_os8_sprites counter" />
+                        </div>
+
                     <img src={this.props.data.url} height={400} style={style}/>
 
                     <h1>{this.props.data.title}</h1>

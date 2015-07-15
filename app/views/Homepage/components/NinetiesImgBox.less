@@ -280,3 +280,33 @@
     height: 100vh;
     overflow: hidden;
 }
+
+.nineties_img_navigator {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 11.4rem;
+    height: 3.8rem;
+
+}
+.nineties_img_nav_button {
+
+    &.previous, &.next {
+        width: 3.8rem;
+        height: 3.8rem;
+        background-color: #CCC;
+    }
+    &.previous {
+        float: left;
+        background-position: 0 -8rem;
+    }
+    &.next {
+        float: right;
+        background-position: -4rem -8rem;
+    }
+    &.counter {
+        width: 3.6rem;
+        height: 3.6rem;
+        border: 0.1rem solid #777;
+    }
+}
