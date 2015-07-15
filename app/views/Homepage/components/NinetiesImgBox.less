@@ -116,20 +116,30 @@
         @lgFFF, @lgACA, @lgFFF, @lgACA,
         @lgFFF, @lgACA, @lgFFF, @lgACA;
 
+    //background-size:
+    //    calc(~"100% - 5.1rem") 0.2rem;
+
+    //background-position:
+    //    1.7rem 0.0rem, 1.8rem 0.1rem, 1.7rem 0.2rem, 1.8rem 0.3rem,
+    //    1.7rem 0.4rem, 1.8rem 0.5rem, 1.7rem 0.6rem, 1.8rem 0.7rem,
+    //    1.7rem 0.8rem, 1.8rem 0.9rem, 1.7rem 1.0rem, 1.8rem 1.1rem;
+
     background-size:
-        calc(~"100% - 5.1rem") 0.1rem;
+        calc(~"100% - 10.2rem") 0.2rem;
 
     background-position:
-        1.7rem 0.0rem, 1.8rem 0.1rem, 1.7rem 0.2rem, 1.8rem 0.3rem,
-        1.7rem 0.4rem, 1.8rem 0.5rem, 1.7rem 0.6rem, 1.8rem 0.7rem,
-        1.7rem 0.8rem, 1.8rem 0.9rem, 1.7rem 1.0rem, 1.8rem 1.1rem;
+        3.4rem 0.0rem, 3.6rem 0.2rem, 3.4rem 0.4rem, 3.6rem 0.6rem,
+        3.4rem 0.8rem, 3.6rem 1.0rem, 3.4rem 1.2rem, 3.6rem 1.4rem,
+        3.4rem 1.6rem, 3.6rem 1.8rem, 3.4rem 2.0rem, 3.6rem 2.2rem;
 
     background-repeat: no-repeat;
 }
 
 .nineties_img_head_button {
-    width: 1.3rem;
-    height: 1.3rem;
+    //width: 1.3rem;
+    //height: 1.3rem;
+    width: 2.6rem;
+    height: 2.6rem;
     position: absolute;
 
     &:hover {
@@ -140,29 +150,36 @@
         background-position: 0 0;
     }
     &.resize {
-        right: 1.6rem;
-        background-position: -2rem 0;
+        right: 3.2rem;
+        //background-position: -2rem 0;
+        background-position: -4rem 0;
     }
     &.minimize {
         right: 0;
-        background-position: -4rem 0;
+        //background-position: -4rem 0;
+        background-position: -8rem 0;
     }
 }
 
 .nineties_img_head_text {
-    height: 1.3rem;
+    //height: 1.3rem;
+    height: 2.6rem;
     position: absolute;
 
     &.pictures {
-        width: 6rem;
         left: 50%;
-        margin-left: -3rem;
-        background-position: 0 -2rem;
+        //width: 6rem;
+        //margin-left: -3rem;
+        //background-position: 0 -2rem;
+        width: 12rem;
+        margin-left: -6rem;
+        background-position: 0 -4rem;
     }
 }
 
 .mac_os8_sprites {
     background-image: url("../../../assets/images/css/mac_os8_sprites.png");
     background-repeat: no-repeat;
-    background-size: 6rem 4rem;
+    //background-size: 6rem 4rem;
+    background-size: 12rem 8rem;
 }
