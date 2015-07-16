@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeActions from 'views/Homepage/HomeActions.js';
 import AppRoutes from 'AppRoutes.js';
+import {Link} from 'react-router';
 
 export default class NinetiesImage extends React.Component {
 
@@ -66,10 +67,12 @@ export default class NinetiesImage extends React.Component {
 
                     <h1>{this.props.data.title}</h1>
 
-                    <div className="nineties_description"
-                         dangerouslySetInnerHTML={{__html: this.props.data.description}}/>
+                    <span className="nineties_description"
+                         dangerouslySetInnerHTML={{__html: this.props.data.description}} />
 
-                    <div className="continue"><span>Continue...</span></div>
+                    <div className="mac_os8_button">
+                        <Link to={AppRoutes.NINETIES_IMG_INDEX}>View More...</Link>
+                    </div>
                 </div>
             );
         }

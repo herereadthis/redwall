@@ -80,7 +80,7 @@
 
         background-repeat: no-repeat;
     }
-    h1, p, span {
+    h1, p, span, a {
         font-family: "charcoal";
         font-weight: 400;
     }
@@ -100,6 +100,10 @@
         p {
             .font_standard;
             margin-bottom: 2rem;
+
+            &:last-of-type {
+                margin-bottom: 1rem;
+            }
         }
     }
     img {
@@ -281,24 +285,51 @@
     overflow: hidden;
 }
 
-.continue {
-    //background-image: url("../../../assets/images/css/mac_continue.png");
-    //background-size: 20.6rem 5.6rem;
-    //width: 20.6rem;
-    //height: 5.6rem;
-    //background-size: 14rem 4rem;
-    width: 14rem;
-    height: 4rem;
+.mac_os8_button {
+    width: 17rem;
+    height: 4.6rem;
+    position: static;
+    float: right;
+    margin-right: 1rem;
 
-    span {
+    a {
+        position: relative;
+        width: 13rem;
         display: block;
-        line-height: 3.8rem;
-        padding-bottom: 0.2rem;
-        padding-right: 0.2rem;
-        font-size: 16px;
+        line-height: 4.6rem;
+        height: 4.6rem;
+        font-size: 1.6rem;
         text-align: center;
-        letter-spacing: 0.07rem;
-        color: #F00;
+        margin: 0 2rem;
+        letter-spacing: 0.1rem;
+        background-repeat: repeat-x;
+        background-image: @lgFFF, @lg000, @lgFFF, @lg000;
+        background-size: 1rem 2.6rem, 1rem 3.0rem, 1rem 3.4rem, 1rem 4.6rem;
+        background-position: 0 1.0rem, 0 0.8rem, 0 0.6rem, 0 0rem;
+        color: #000;
+
+        &:hover {
+            color: #666;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        &:before, &:after {
+            .mac_os8_sprites;
+            display: block;
+            content: "";
+            width: 2rem;
+            height: 4.6rem;
+            top: 0;
+            position: absolute;
+        }
+        &:before {
+            left: -2rem;
+            background-position: -8rem -7.4rem;
+        }
+        &:after {
+            right: -2rem;
+            background-position: -10rem -7.4rem;
+        }
     }
 }
 
