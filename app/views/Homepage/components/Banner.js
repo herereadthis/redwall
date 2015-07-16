@@ -88,6 +88,16 @@ export default class Banner extends React.Component {
                 nextProps.flux.getActions(HomeActions.ID).showNinetiesImgBox(false);
             }
         }
+        if (routeData.name === AppRoutes.NINETIES_IMG_INDEX) {
+            window.console.log(this.props.showNinetiesImgBox, nextProps.showNinetiesImgBox);
+            if (this.props.showNinetiesImgBox === false) {
+                nextProps.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
+            }
+            if (this.props.showNinetiesImgBox === true && nextProps.showNinetiesImgBox === false) {
+                window.console.log(6);
+                router.transitionTo(AppRoutes.APP);
+            }
+        }
     }
 
     //shouldComponentUpdate(nextProps) {
