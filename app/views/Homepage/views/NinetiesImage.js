@@ -68,6 +68,8 @@ export default class NinetiesImage extends React.Component {
 
                     <div className="nineties_description"
                          dangerouslySetInnerHTML={{__html: this.props.data.description}}/>
+
+                    <div className="continue"><span>Continue...</span></div>
                 </div>
             );
         }

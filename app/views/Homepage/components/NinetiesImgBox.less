@@ -281,12 +281,45 @@
     overflow: hidden;
 }
 
+.continue {
+    //background-image: url("../../../assets/images/css/mac_continue.png");
+    //background-size: 20.6rem 5.6rem;
+    //width: 20.6rem;
+    //height: 5.6rem;
+    //background-size: 14rem 4rem;
+    width: 14rem;
+    height: 4rem;
+
+    span {
+        display: block;
+        line-height: 3.8rem;
+        padding-bottom: 0.2rem;
+        padding-right: 0.2rem;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 0.07rem;
+        color: #F00;
+    }
+}
+
 .nineties_img_navigator {
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: -1.0rem;
+    bottom: -0.8rem;
     width: 12.4rem;
     height: 3.8rem;
+    padding: 0.8rem 0.8rem 0.6rem 1.0rem;
+    background-color: #CCC;
+    //border-top: 0.2rem solid #000;
+    //border-left: 0.2rem solid #000;
+    background-repeat: no-repeat;
+    background-image:
+        @lg000, @lg000,
+        @lgFFF, @lgFFF;
+    background-size:
+        13.4rem 0.2rem, 0.2rem 4.6rem,
+        13.6rem 0.4rem, 0.4rem 4.8rem;
+    background-position: 0 0;
 
 }
 .nineties_img_nav_button {
