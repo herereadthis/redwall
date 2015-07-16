@@ -22,10 +22,19 @@ export default class NinetiesImgBox extends React.Component {
     componentWillMount() {
         var {router} = this.context, routeData;
         routeData = getRouteData(router);
+        window.console.log(routeData.name, AppRoutes.NINETIES_IMG_INDEX);
 
-        if (this.props.ninetiesImgSelection === undefined) {
-            window.console.log(4);
-            this.props.flux.getActions(HomeActions.ID).getNewNinetiesImgSelection(routeData.name);
+        if (routeData.name === AppRoutes.NINETIES_IMG) {
+            if (this.props.ninetiesImgSelection === undefined) {
+                window.console.log(4);
+                this.props.flux.getActions(HomeActions.ID).getNewNinetiesImgSelection(routeData.name);
+            }
+        }
+        else if (routeData.name === AppRoutes.NINETIES_IMG_INDEX) {
+            window.console.log(8);
+            this.setState({
+                indexPage: true
+            });
         }
 
         if (routeData.name === AppRoutes.APP &&
@@ -57,6 +66,14 @@ export default class NinetiesImgBox extends React.Component {
     }
 
     componentWillReceiveProps() {
+        var {router} = this.context, routeData;
+        routeData = getRouteData(router);
+        
+        if (routeData.name === AppRoutes.NINETIES_IMG_INDEX) {
+            this.setState({
+                indexPage: true
+            });
+        }
     }
 
     closeNinetiesBox = () => {
@@ -70,8 +87,16 @@ export default class NinetiesImgBox extends React.Component {
             );
         }
         else {
-            var classes = 'nineties_img_head_text free_text';
-            classes = `${classes} ${this.props.ninetiesImgSelection.unique_id}`;
+            var classes, selectionClass, boxTitle;
+            classes = 'nineties_img_head_text free_text';
+            selectionClass = this.props.ninetiesImgSelection.unique_id;
+            boxTitle = this.props.ninetiesImgSelection.title;
+            if (this.state !== null &&
+                this.state.indexPage === true) {
+                selectionClass = 'pictures';
+                boxTitle = 'Pictures';
+            }
+            classes = `${classes} ${selectionClass}`;
             return (
                 <div className="nineties_img_box">
                     <div className="bellmaker_container">
@@ -88,7 +113,7 @@ export default class NinetiesImgBox extends React.Component {
                             {/*<div className="nineties_img_head_text mac_os8_sprites pictures"
                              onClick={this.closeNinetiesBox} />*/}
                             <div className={classes}>
-                                <span>{this.props.ninetiesImgSelection.title}</span>
+                                <span>{boxTitle}</span>
                             </div>
                         </div>
                         <div className="nineties_img_container">
