@@ -196,8 +196,17 @@ export default class Banner extends React.Component {
 
     showNinetiesImgBox = () => {
         if (this.props.showNinetiesImgBox === true) {
+            var propsSubset = {
+                flux: this.props.flux,
+                showNinetiesImgBox: this.props.showNinetiesImgBox,
+                ninetiesImgSelection: this.props.ninetiesImgSelection,
+                ninetiesImgListing: this.props.ninetiesImgListing,
+                ninetiesImgSize: this.props.ninetiesImgSize,
+                ninetiesRoutes: this.props.ninetiesRoutes
+            };
+
             return (
-                <NinetiesImgBox {...this.props} />
+                <NinetiesImgBox {...propsSubset} />
             );
         }
     };

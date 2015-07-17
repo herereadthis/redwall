@@ -38,6 +38,7 @@ export default class HomeStore extends Store {
         this.register(homeActionIds.fetch90sImage, this.fetch90sImage);
         this.register(homeActionIds.setNew90sIndex, this.setNew90sIndex);
         this.register(homeActionIds.set90sNavRoutes, this.set90sNavRoutes);
+        this.register(homeActionIds.set90slist, this.set90slist);
     }
 
     foo = (message) => {
@@ -179,7 +180,23 @@ export default class HomeStore extends Store {
                 nextRoute
             }
         });
+    };
 
-    }
+    set90slist = () => {
+        var ninetiesImgJSON, ninetiesImgListing;
+
+        ninetiesImgJSON = JSON.parse(LocalStorageMethods.
+            get(HomeStore.NINETIES_IMG.NAME));
+
+        ninetiesImgListing = ninetiesImgJSON.map((value) => {
+            return {
+                uniqueID: value.unique_id,
+                thumbnail: value.thumbnail,
+                title: value.title
+            };
+        });
+        this.setState({
+            ninetiesImgListing
+        });
+    };
 }
-

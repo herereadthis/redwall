@@ -34,6 +34,9 @@ export default class HomeActions extends Actions {
             routeID
         };
     }
+    set90slist() {
+        return true;
+    }
 
     async fetchTimestamp(status) {
         return status;

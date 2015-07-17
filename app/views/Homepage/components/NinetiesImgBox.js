@@ -22,7 +22,7 @@ export default class NinetiesImgBox extends React.Component {
     componentWillMount() {
         var {router} = this.context, routeData;
         routeData = getRouteData(router);
-        window.console.log(routeData.name, AppRoutes.NINETIES_IMG_INDEX);
+        //window.console.log(routeData.name, AppRoutes.NINETIES_IMG_INDEX);
 
         if (routeData.name === AppRoutes.NINETIES_IMG) {
             if (this.props.ninetiesImgSelection === undefined) {
@@ -68,13 +68,16 @@ export default class NinetiesImgBox extends React.Component {
     componentWillReceiveProps() {
         var {router} = this.context, routeData;
         routeData = getRouteData(router);
-        
+
         if (routeData.name === AppRoutes.NINETIES_IMG_INDEX) {
             this.setState({
                 indexPage: true
             });
         }
     }
+
+    //shouldComponentUpdate() {
+    //}
 
     closeNinetiesBox = () => {
         this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(false);
@@ -118,6 +121,7 @@ export default class NinetiesImgBox extends React.Component {
                         </div>
                         <div className="nineties_img_container">
                             <RouteHandler data={this.props.ninetiesImgSelection}
+                                          listing={this.props.ninetiesImgListing}
                                           dataCount={this.props.ninetiesImgSize}
                                           navRoutes={this.props.ninetiesRoutes}
                                           flux={this.props.flux}/>
