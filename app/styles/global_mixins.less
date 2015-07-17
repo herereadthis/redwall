@@ -14,3 +14,13 @@
     content: "";
     position: absolute;
 }
+
+// force sibling elements to clear floats
+.clear_floats {
+    &:after {
+        float: none;
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
