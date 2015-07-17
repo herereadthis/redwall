@@ -82,6 +82,7 @@
     }
 }
 
+// wrapper for both item and listin routes
 .nineties_img_container {
     position: absolute;
     //top: 2.2rem;
@@ -92,18 +93,25 @@
     right: 1.6rem;
     bottom: 1.4rem;
     left: 1.2rem;
+}
 
-    .nineties_description {
-        p {
-            .font_standard;
-            margin-bottom: 2rem;
-
-            &:last-of-type {
-                margin-bottom: 1rem;
-            }
-        }
+.nineties_img {
+    // wrapper for item view content
+    &_item {
         img {
             padding: 0.5rem 0 0.5rem 0.5rem;
+        }
+
+        // wrapper for json description in item view content
+        &_description {
+            p {
+                .font_standard;
+                margin-bottom: 2rem;
+
+                &:last-of-type {
+                    margin-bottom: 1rem;
+                }
+            }
         }
     }
 }
@@ -119,9 +127,10 @@
     left: 0.8rem;
     height: 2.6rem;
 
-    background-image: @lgFFF, @lgACA, @lgFFF, @lgACA,
-    @lgFFF, @lgACA, @lgFFF, @lgACA,
-    @lgFFF, @lgACA, @lgFFF, @lgACA;
+    background-image:
+        @lgFFF, @lgACA, @lgFFF, @lgACA,
+        @lgFFF, @lgACA, @lgFFF, @lgACA,
+        @lgFFF, @lgACA, @lgFFF, @lgACA;
 
     //background-size:
     //    calc(~"100% - 5.1rem") 0.2rem;
@@ -133,9 +142,10 @@
 
     background-size: calc(~"100% - 10.2rem") 0.2rem;
 
-    background-position: 3.4rem 0.0rem, 3.6rem 0.2rem, 3.4rem 0.4rem, 3.6rem 0.6rem,
-    3.4rem 0.8rem, 3.6rem 1.0rem, 3.4rem 1.2rem, 3.6rem 1.4rem,
-    3.4rem 1.6rem, 3.6rem 1.8rem, 3.4rem 2.0rem, 3.6rem 2.2rem;
+    background-position:
+        3.4rem 0.0rem, 3.6rem 0.2rem, 3.4rem 0.4rem, 3.6rem 0.6rem,
+        3.4rem 0.8rem, 3.6rem 1.0rem, 3.4rem 1.2rem, 3.6rem 1.4rem,
+        3.4rem 1.6rem, 3.6rem 1.8rem, 3.4rem 2.0rem, 3.6rem 2.2rem;
 
     background-repeat: no-repeat;
 }
@@ -334,8 +344,6 @@
     height: 3.8rem;
     padding: 0.8rem 0.8rem 0.6rem 1.0rem;
     background-color: #CCC;
-    //border-top: 0.2rem solid #000;
-    //border-left: 0.2rem solid #000;
     background-repeat: no-repeat;
     background-image: @lg000, @lg000,
     @lgFFF, @lgFFF;
@@ -449,7 +457,10 @@
                     top: -100% * (0 / 8);
                 }
             }
-            &notorious-big, &kelly-kapowski, &titanic, &x-files {
+            &notorious-big,
+            &kelly-kapowski,
+            &titanic,
+            &x-files {
                 img {
                     top: -100% * (1 / 8);
                 }
@@ -459,7 +470,8 @@
                     top: -100% * (2 / 8);
                 }
             }
-            &motorola-startac, &tamagotchi {
+            &motorola-startac,
+            &tamagotchi {
                 img {
                     top: -100% * (4 / 8);
                 }

@@ -50,7 +50,7 @@ export default class NinetiesImage extends React.Component {
         }
         else {
             return (
-                <div>
+                <div className="nineties_img_item">
                     <div className="nineties_img_navigator">
                         <a className="nineties_img_nav_button mac_os8_sprites previous"
                             onClick={this.handleClick.bind(this, 'prev')} />
@@ -67,7 +67,7 @@ export default class NinetiesImage extends React.Component {
 
                     <h1>{this.props.data.title}</h1>
 
-                    <span className="nineties_description"
+                    <span className="nineties_img_item_description"
                          dangerouslySetInnerHTML={{__html: this.props.data.description}} />
 
                     <div className="mac_os8_button">
