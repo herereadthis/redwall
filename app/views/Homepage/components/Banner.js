@@ -48,16 +48,6 @@ export default class Banner extends React.Component {
         routeData = getRouteData(router);
 
 
-        //let ninetiesImgSize, showNinetiesImgBox, cacheAge, ninetiesImgSelection;
-        //
-        //ninetiesImgSize = nextProps.ninetiesImgSize !== this.props.ninetiesImgSize;
-        //showNinetiesImgBox = nextProps.showNinetiesImgBox !== this.props.showNinetiesImgBox;
-        //cacheAge = nextProps.cacheAge !== this.props.cacheAge;
-        //ninetiesImgSelection = nextProps.ninetiesImgSelection !== this.props.ninetiesImgSelection;
-        //
-        //window.console.log(ninetiesImgSize, showNinetiesImgBox, cacheAge, ninetiesImgSelection);
-
-
         if (nextProps.cacheValidity !== this.props.cacheValidity) {
             this.fetch90sImage(nextProps.cacheValidity, routeData.id);
         }
@@ -66,11 +56,9 @@ export default class Banner extends React.Component {
             routeData.name === AppRoutes.NINETIES_IMG) {
 
             if (this.props.showNinetiesImgBox === false && nextProps.showNinetiesImgBox === false) {
-                window.console.log(1);
+
                 nextProps.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
 
-                //router.transitionTo(AppRoutes.APP);
-                window.console.log(10);
                 if (nextProps.ninetiesImgSelection === undefined) {
                     window.console.log(5);
                     //nextProps.flux.getActions(HomeActions.ID).getNewNinetiesImgSelection(routeData.name);
@@ -78,10 +66,8 @@ export default class Banner extends React.Component {
             }
 
             if (this.props.showNinetiesImgBox === true && nextProps.showNinetiesImgBox === false) {
-                window.console.log(2);
                 router.transitionTo(AppRoutes.APP);
             }
-
 
             if (nextProps.ninetiesImgSelection !== undefined) {
                 if (nextProps.ninetiesImgSelection.unique_id !== undefined &&
@@ -194,11 +180,6 @@ export default class Banner extends React.Component {
     }
 
     getBannerImage = () => {
-        //let ninetiesImg, ninetiesImgIndex, imgIndex, targetImg;
-
-        //ninetiesImg = LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME);
-        //ninetiesImgIndex = LocalStorageMethods.get(HomeStore.NINETIES_IMG.INDEX_NAME);
-
         if (this.props.ninetiesImgSelection !== undefined) {
             return (
                 <img src={this.props.ninetiesImgSelection.thumbnail} ref="bannerImage" />
@@ -224,8 +205,6 @@ export default class Banner extends React.Component {
     };
 
     render() {
-        //window.console.log(this.props);
-
         return (
             <header role="banner" ref="starfield parallax_scroll"
                     className="starfield parallax_scroll"

@@ -415,21 +415,25 @@
 
 .ninties_img_listing {
     ul {
+        margin: 0.2rem 0 0 0.2rem;
     }
     li {
         float: left;
-        width: 15rem;
+        width: 15.2rem;
         list-style-type: none;
-        margin: 1rem 0 0 1rem;
+        margin: 0.8rem 0 0 0.8rem;
 
         &:hover {
             cursor: pointer;
 
             div {
+                margin: 0rem;
                 border-color: @color_link_hover;
+                border-width: 0.4rem;
             }
             p {
                 color: @color_link_hover;
+                margin-top: -0.1rem;
             }
         }
         &:nth-child(5) {
@@ -439,6 +443,7 @@
         div {
             width: @list_box_size_small;
             height: @list_box_size_small;
+            margin: 0.1rem 0.1rem 0 0.1rem;
             border: 0.3rem solid @color_link_default;
             position: relative;
             overflow: hidden;
