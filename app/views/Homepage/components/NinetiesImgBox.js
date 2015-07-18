@@ -59,7 +59,7 @@ export default class NinetiesImgBox extends React.Component {
         var _this = this;
         window.addEventListener('keyup', function (e) {
             if (e.keyCode === 27) {
-                _this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(false);
+                _this.goBackToHomepage();
             }
         }, true);
     }
@@ -100,22 +100,33 @@ export default class NinetiesImgBox extends React.Component {
         element.style[attribute] = `${increment}px`;
     };
 
-    closeNinetiesBox = () => {
-        this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(false);
+    goBackToHomepage = () => {
+        this.context.router.transitionTo(AppRoutes.APP);
     };
 
     clickOutside = (event) => {
-        var box, boxDims;
+        var box, boxDims, boundX = false, boundY = false;
 
         box = React.findDOMNode(this.refs.ninetiesBox);
-
-        //window.console.log(box);
 
         boxDims = {
             top: box.offsetTop,
             left: box.offsetLeft
         };
-        window.console.log(boxDims, event.pageX, event.pageY);
+        boxDims.right = boxDims.left + box.offsetWidth;
+        boxDims.bottom = boxDims.top + box.offsetHeight;
+        //window.console.log(boxDims, event.pageX, event.pageY);
+
+        if (event.pageX < boxDims.left || event.pageX > boxDims.right) {
+            boundX = true;
+        }
+        if (event.pageY < boxDims.top || event.pageY > boxDims.bottom) {
+            boundY = true;
+        }
+
+        if (boundX === true || boundY === true) {
+            this.goBackToHomepage();
+        }
     };
 
     render() {
@@ -142,15 +153,15 @@ export default class NinetiesImgBox extends React.Component {
                         <div className="nineties_img_header">
                             <div
                                 className="nineties_img_head_button mac_os8_sprites close"
-                                onClick={this.closeNinetiesBox}/>
+                                onClick={this.goBackToHomepage}/>
                             <div
                                 className="nineties_img_head_button mac_os8_sprites resize"
-                                onClick={this.closeNinetiesBox}/>
+                                onClick={this.goBackToHomepage}/>
                             <div
                                 className="nineties_img_head_button mac_os8_sprites minimize"
-                                onClick={this.closeNinetiesBox}/>
+                                onClick={this.goBackToHomepage}/>
                             {/*<div className="nineties_img_head_text mac_os8_sprites pictures"
-                             onClick={this.closeNinetiesBox} />*/}
+                             onClick={this.goBackToHomepage} />*/}
                             <div className={classes}>
                                 <span>{boxTitle}</span>
                             </div>
