@@ -12,10 +12,6 @@ export default class HomeActions extends Actions {
         return status;
     }
 
-    getNewNinetiesImgSelection(route) {
-        return route;
-    }
-
     fetch90sImage(cacheValidity, routeID) {
         return {
             cacheValidity,

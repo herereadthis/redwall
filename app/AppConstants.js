@@ -108,8 +108,28 @@ export default class AppConstants {
                 theStyle = parseInt(theStyle, 10);
             }
             return theStyle;
-        }
+        },
+        clickOutside: (event, element) => {
+            var boxDims, boundX = false, boundY = false, result = false;
 
+            boxDims = {
+                top: element.offsetTop,
+                left: element.offsetLeft
+            };
+            boxDims.right = boxDims.left + element.offsetWidth;
+            boxDims.bottom = boxDims.top + element.offsetHeight;
+
+            if (event.pageX < boxDims.left || event.pageX > boxDims.right) {
+                boundX = true;
+            }
+            if (event.pageY < boxDims.top || event.pageY > boxDims.bottom) {
+                boundY = true;
+            }
+            if (boundX === true || boundY === true) {
+                result = true;
+            }
+            return result;
+        }
     }
 }
 

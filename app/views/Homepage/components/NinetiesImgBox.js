@@ -2,8 +2,6 @@ import React from 'react';
 
 import {RouteHandler} from 'react-router';
 
-import HomeActions from 'views/Homepage/HomeActions.js';
-
 import {getRouteData, DomUtils} from 'AppConstants.js';
 import AppRoutes from 'AppRoutes.js';
 
@@ -25,14 +23,13 @@ export default class NinetiesImgBox extends React.Component {
         routeData = getRouteData(router);
         //window.console.log(routeData.name, AppRoutes.NINETIES_IMG_INDEX);
 
-        if (routeData.name === AppRoutes.NINETIES_IMG) {
-            if (this.props.ninetiesImgSelection === undefined) {
-                window.console.log(4);
-                this.props.flux.getActions(HomeActions.ID).getNewNinetiesImgSelection(routeData.name);
-            }
-        }
-        else if (routeData.name === AppRoutes.NINETIES_IMG_INDEX) {
-            window.console.log(8);
+        //if (routeData.name === AppRoutes.NINETIES_IMG) {
+        //    if (this.props.ninetiesImgSelection === undefined) {
+        //        //window.console.log(4);
+        //    }
+        //}
+        if (routeData.name === AppRoutes.NINETIES_IMG_INDEX) {
+            //window.console.log(8);
             this.setState({
                 indexPage: true
             });
@@ -105,26 +102,9 @@ export default class NinetiesImgBox extends React.Component {
     };
 
     clickOutside = (event) => {
-        var box, boxDims, boundX = false, boundY = false;
+        var box = React.findDOMNode(this.refs.ninetiesBox);
 
-        box = React.findDOMNode(this.refs.ninetiesBox);
-
-        boxDims = {
-            top: box.offsetTop,
-            left: box.offsetLeft
-        };
-        boxDims.right = boxDims.left + box.offsetWidth;
-        boxDims.bottom = boxDims.top + box.offsetHeight;
-        //window.console.log(boxDims, event.pageX, event.pageY);
-
-        if (event.pageX < boxDims.left || event.pageX > boxDims.right) {
-            boundX = true;
-        }
-        if (event.pageY < boxDims.top || event.pageY > boxDims.bottom) {
-            boundY = true;
-        }
-
-        if (boundX === true || boundY === true) {
+        if (DomUtils.clickOutside(event, box) === true) {
             this.goBackToHomepage();
         }
     };

@@ -48,7 +48,6 @@ export default class NinetiesImageIndex extends React.Component {
 
 
     render() {
-        window.console.log(this.props.listing);
         if (this.props.listing === undefined) {
             return (
                 <div>

@@ -31,9 +31,6 @@ export default class HomeStore extends Store {
 
         this.register(homeActionIds.foo, this.foo);
         this.register(homeActionIds.showNinetiesImgBox, this.showNinetiesImgBox);
-
-
-        this.register(homeActionIds.getNewNinetiesImgSelection, this.getNewNinetiesImgSelection);
         this.registerAsync(homeActionIds.fetchTimestamp, this.fetchTimestamp);
         this.register(homeActionIds.fetch90sImage, this.fetch90sImage);
         this.register(homeActionIds.setNew90sIndex, this.setNew90sIndex);
@@ -96,11 +93,6 @@ export default class HomeStore extends Store {
             });
         }
     }
-
-    getNewNinetiesImgSelection = (route) => {
-        window.console.log(route);
-        //window.console.log(JSON.parse(LocalStorageMethods.get(HomeStore.NINETIES_IMG.NAME)));
-    };
 
     setNew90sIndex = (obj) => {
         var finalIndex, ninetiesImgSelection, ninetiesImgJSON, randomIndex,
