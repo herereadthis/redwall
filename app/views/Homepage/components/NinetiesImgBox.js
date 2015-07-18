@@ -20,7 +20,8 @@ export default class NinetiesImgBox extends React.Component {
     static DISABLE_BODY_SCROLL_CLASS = 'disable_body_scroll';
 
     componentWillMount() {
-        var {router} = this.context, routeData;
+        var {router} = this.context, routeData, bodyTopPos;
+
         routeData = getRouteData(router);
         //window.console.log(routeData.name, AppRoutes.NINETIES_IMG_INDEX);
 
@@ -44,6 +45,17 @@ export default class NinetiesImgBox extends React.Component {
                 {id: this.props.ninetiesImgSelection.unique_id});
         }
 
+        bodyTopPos = document.body.scrollTop * -1;
+
+        window.console.log(bodyTopPos);
+
+
+        window.scrollTo(0, 141);
+
+        if (bodyTopPos < 0) {
+            DomUtils.changeStyle(document.body, 'top', bodyTopPos);
+        }
+
         DomUtils.addClass(document.body,
             NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
 
@@ -59,10 +71,21 @@ export default class NinetiesImgBox extends React.Component {
     }
 
     componentWillUnmount() {
-        window.console.log(this.props.showNinetiesImgBox);
+        var topStyle;
+
+        topStyle = DomUtils.getStyle(document.body, 'top', true) * -1;
+
+        window.console.log(topStyle);
+
+        DomUtils.unsetStyle(document.body, 'top', true);
 
         DomUtils.removeClass(document.body,
             NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
+
+        if (topStyle > 0) {
+            window.console.log('asdf');
+            window.scrollTo(0, topStyle);
+        }
     }
 
     componentWillReceiveProps() {
@@ -74,13 +97,36 @@ export default class NinetiesImgBox extends React.Component {
                 indexPage: true
             });
         }
+        else {
+            this.setState({
+                indexPage: false
+            });
+        }
     }
 
     //shouldComponentUpdate() {
     //}
 
+    changeStyle = (element, attribute, increment) => {
+        element.style[attribute] = `${increment}px`;
+    };
+
     closeNinetiesBox = () => {
         this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(false);
+    };
+
+    clickOutside = (event) => {
+        var box, boxDims;
+
+        box = React.findDOMNode(this.refs.ninetiesBox);
+
+        window.console.log(box);
+
+        boxDims = {
+            top: box.offsetTop,
+            left: box.offsetLeft
+        };
+        window.console.log(boxDims, event.pageX, event.pageY);
     };
 
     render() {
@@ -101,8 +147,9 @@ export default class NinetiesImgBox extends React.Component {
             }
             classes = `${classes} ${selectionClass}`;
             return (
-                <div className="nineties_img_box">
-                    <div className="bellmaker_container">
+                <div className="nineties_img_box"
+                     onClick={this.clickOutside.bind(this)}>
+                    <div className="bellmaker_container" ref="ninetiesBox">
                         <div className="nineties_img_header">
                             <div
                                 className="nineties_img_head_button mac_os8_sprites close"

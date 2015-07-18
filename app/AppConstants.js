@@ -94,7 +94,22 @@ export default class AppConstants {
                     classToRemove.split(' ').join('|') + '(\\b|$)', 'gi');
                 element.className = element.className.replace(regex, ' ');
             }
+        },
+        changeStyle: (element, attribute, increment) => {
+            element.style[attribute] = `${increment}px`;
+        },
+        unsetStyle: (element, attribute) => {
+            element.style[attribute] = null;
+        },
+        getStyle: (element, attribute, asInteger) => {
+            var theStyle = element.style[attribute];
+
+            if (asInteger === true) {
+                theStyle = parseInt(theStyle, 10);
+            }
+            return theStyle;
         }
+
     }
 }
 

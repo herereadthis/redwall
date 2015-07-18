@@ -17,7 +17,18 @@ export default class NinetiesImage extends React.Component {
     }
 
     componentDidMount() {
-        this.props.flux.getActions(HomeActions.ID).set90sNavRoutes(this.props.dataCount, this.props.data.pk);
+        var _this = this;
+        this.props.flux.getActions(HomeActions.ID).set90sNavRoutes(
+            this.props.dataCount, this.props.data.pk);
+
+        window.addEventListener('keyup', function (e) {
+            if (e.keyCode === 37) {
+                _this.handleClick('prev');
+            }
+            if (e.keyCode === 39) {
+                _this.handleClick('next');
+            }
+        }, true);
     }
 
     handleClick = (increment) => {

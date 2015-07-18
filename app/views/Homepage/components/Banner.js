@@ -126,6 +126,7 @@ export default class Banner extends React.Component {
 
     handleClick = (e) => {
         e.preventDefault();
+
         this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
     };
 
