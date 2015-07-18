@@ -67,7 +67,7 @@ export default class Banner extends React.Component {
             }
 
             if (this.props.showNinetiesImgBox === true && nextProps.showNinetiesImgBox === false) {
-                window.console.log(2);
+                //window.console.log(2);
                 router.transitionTo(AppRoutes.APP);
             }
 

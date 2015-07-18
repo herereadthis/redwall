@@ -56,13 +56,15 @@ export default class NinetiesImgBox extends React.Component {
             DomUtils.changeStyle(document.body, 'top', bodyTopPos);
         }
 
-        DomUtils.addClass(document.body,
-            NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
+        window.scrollTo(0, 500);
+        //DomUtils.addClass(document.body,
+        //    NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
 
     }
 
     componentDidMount() {
         var _this = this;
+        window.scrollTo(0, 500);
         window.addEventListener('keyup', function (e) {
             if (e.keyCode === 27) {
                 _this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(false);
@@ -73,19 +75,23 @@ export default class NinetiesImgBox extends React.Component {
     componentWillUnmount() {
         var topStyle;
 
+        window.scrollTo(0, 500);
         topStyle = DomUtils.getStyle(document.body, 'top', true) * -1;
 
-        window.console.log(topStyle);
 
-        DomUtils.unsetStyle(document.body, 'top', true);
-
+        //DomUtils.unsetStyle(document.body, 'top', true);
+        window.console.log(5);
         DomUtils.removeClass(document.body,
             NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
 
+        window.console.log(6);
+
         if (topStyle > 0) {
-            window.console.log('asdf');
-            window.scrollTo(0, topStyle);
+            window.console.log(topStyle);
+            window.scrollTo(0, 200);
         }
+        window.console.log(7);
+        window.scrollTo(0, 500);
     }
 
     componentWillReceiveProps() {
@@ -120,7 +126,7 @@ export default class NinetiesImgBox extends React.Component {
 
         box = React.findDOMNode(this.refs.ninetiesBox);
 
-        window.console.log(box);
+        //window.console.log(box);
 
         boxDims = {
             top: box.offsetTop,
