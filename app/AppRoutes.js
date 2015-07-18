@@ -15,11 +15,12 @@ NINETIES_IMG_INDEX = 'nineties-image-index';
 
 
 routes = (
-        <Route name={APP} path="/" handler={App}>
+        <Route name={APP} path="/" handler={App}
+               ignoreScrollBehavior={true}>
             <Route name={NINETIES_IMG} path="nineties-image/:id"
                    handler={NinetiesImage}/>
             <Route name={NINETIES_IMG_INDEX} path="nineties-image"
-                   handler={NinetiesImageIndex}/>
+                   handler={NinetiesImageIndex} />
         </Route>
 );
 

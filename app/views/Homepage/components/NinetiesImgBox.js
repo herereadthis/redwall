@@ -47,24 +47,16 @@ export default class NinetiesImgBox extends React.Component {
 
         bodyTopPos = document.body.scrollTop * -1;
 
-        window.console.log(bodyTopPos);
-
-
-        window.scrollTo(0, 141);
-
         if (bodyTopPos < 0) {
             DomUtils.changeStyle(document.body, 'top', bodyTopPos);
         }
 
-        window.scrollTo(0, 500);
-        //DomUtils.addClass(document.body,
-        //    NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
-
+        DomUtils.addClass(document.body,
+            NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
     }
 
     componentDidMount() {
         var _this = this;
-        window.scrollTo(0, 500);
         window.addEventListener('keyup', function (e) {
             if (e.keyCode === 27) {
                 _this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(false);
@@ -73,25 +65,16 @@ export default class NinetiesImgBox extends React.Component {
     }
 
     componentWillUnmount() {
-        var topStyle;
+        var topStyle = DomUtils.getStyle(document.body, 'top', true) * -1;
 
-        window.scrollTo(0, 500);
-        topStyle = DomUtils.getStyle(document.body, 'top', true) * -1;
+        DomUtils.unsetStyle(document.body, 'top', true);
 
-
-        //DomUtils.unsetStyle(document.body, 'top', true);
-        window.console.log(5);
         DomUtils.removeClass(document.body,
             NinetiesImgBox.DISABLE_BODY_SCROLL_CLASS);
 
-        window.console.log(6);
-
         if (topStyle > 0) {
-            window.console.log(topStyle);
-            window.scrollTo(0, 200);
+            window.scrollTo(0, topStyle);
         }
-        window.console.log(7);
-        window.scrollTo(0, 500);
     }
 
     componentWillReceiveProps() {
