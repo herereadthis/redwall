@@ -32,6 +32,15 @@ export default class Banner extends React.Component {
         if (this.props.cacheValidity !== undefined) {
             this.fetch90sImage(this.props.cacheValidity, routeData.id);
         }
+
+        window.console.log(routeData.name, this.props.showNinetiesImgBox);
+
+        if (routeData.name === AppRoutes.NINETIES_IMG ||
+            routeData.name === AppRoutes.NINETIES_IMG_INDEX) {
+            if (this.props.showNinetiesImgBox !== true) {
+                this.props.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
+            }
+        }
     }
 
     componentWillReceiveProps(nextProps) {
@@ -60,6 +69,8 @@ export default class Banner extends React.Component {
                 window.console.log(1);
                 nextProps.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
 
+                //router.transitionTo(AppRoutes.APP);
+                window.console.log(10);
                 if (nextProps.ninetiesImgSelection === undefined) {
                     window.console.log(5);
                     //nextProps.flux.getActions(HomeActions.ID).getNewNinetiesImgSelection(routeData.name);
@@ -67,7 +78,7 @@ export default class Banner extends React.Component {
             }
 
             if (this.props.showNinetiesImgBox === true && nextProps.showNinetiesImgBox === false) {
-                //window.console.log(2);
+                window.console.log(2);
                 router.transitionTo(AppRoutes.APP);
             }
 
