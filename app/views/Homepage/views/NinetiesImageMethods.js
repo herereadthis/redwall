@@ -15,11 +15,6 @@ export default class NinetiesImageMethods {
         }
     };
 
-    static setScrollVars = (scrollBoxContainer) => {
-        scrollBoxParentHeight = scrollContainer.parentNode.parentNode.
-                offsetHeight - 45;
-    };
-
     static fixScrollContainerHeight = (scrollBoxContainer) => {
         scrollContainer = scrollBoxContainer;
         NinetiesImageMethods.setScrollContainerHeight();
@@ -37,5 +32,3 @@ export default class NinetiesImageMethods {
         );
     };
 }
-
-
