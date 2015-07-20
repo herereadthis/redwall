@@ -3,6 +3,8 @@ import HomeActions from 'views/Homepage/HomeActions.js';
 import AppRoutes from 'AppRoutes.js';
 import {Link} from 'react-router';
 
+import NinetiesImageMethods from './NinetiesImageMethods.js';
+
 export default class NinetiesImage extends React.Component {
 
     constructor() {
@@ -17,9 +19,10 @@ export default class NinetiesImage extends React.Component {
     }
 
     componentDidMount() {
-        var _this;
+        var _this, scrollBoxContainer;
 
         _this = this;
+        scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
 
         this.props.flux.getActions(HomeActions.ID).set90sNavRoutes(
             this.props.dataCount, this.props.data.pk);
@@ -32,36 +35,12 @@ export default class NinetiesImage extends React.Component {
                 _this.handleClick('next');
             }
         }, true);
-
-        window.addEventListener('resize', function () {
-            _this.killResizeListener();
-            _this.setScrollContainerHeight();
-        }, true);
-
-
-
+        NinetiesImageMethods.fixScrollContainerHeight(scrollBoxContainer);
     }
 
     componentWillUnmount() {
-        this.killResizeListener();
+        NinetiesImageMethods.killResizeListener();
     }
-
-
-    killResizeListener = () => {
-        window.removeEventListener('resize', this.setScrollContainerHeight(),
-            true);
-    };
-
-    setScrollContainerHeight = () => {
-        var scrollBoxContainer, scrollBoxParentHeight;
-        scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
-        scrollBoxParentHeight = scrollBoxContainer.parentNode.parentNode.offsetHeight;
-
-        scrollBoxContainer.style.height = `${scrollBoxParentHeight - 45}px`;
-
-        window.console.log(scrollBoxParentHeight);
-
-    };
 
     handleClick = (increment) => {
         var {router} = this.context;
