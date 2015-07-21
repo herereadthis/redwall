@@ -12,7 +12,8 @@ export default class NinetiesImage extends React.Component {
     constructor() {
         super();
         this.state = {
-            'scrollable': false
+            scrollable: false,
+            scrollPos: 0
         };
     }
 
@@ -83,15 +84,38 @@ export default class NinetiesImage extends React.Component {
     };
 
     renderScrollbar = () => {
+        var style, diffForButton;
+        diffForButton = Math.round(this.state.scrollPos * 0.34);
+
+        style = {
+            top: `calc(${this.state.scrollPos}% - ${diffForButton}px)`
+        };
         if (this.state.scrollable === true) {
             return (
                 <div className="mac_os8_scroll_bar">
                     <div className="mac_os8_scroll_tab mac_os8_sprites up" />
                     <div className="mac_os8_scroll_tab mac_os8_sprites down" />
-                    <div className="mac_os8_scroll_button mac_os8_sprites" />
+                    <div className="mac_os8_scroll_button mac_os8_sprites"
+                        ref="macOs8ScrollButton" style={style}/>
                 </div>
             );
         }
+    };
+
+    handleScroll = (event) => {
+        var scrollBoxContainer, scrollBox, diffScroll, scrollPos;
+
+        scrollBoxContainer = event.target;
+        scrollBox = React.findDOMNode(this.refs.scrollBox);
+        diffScroll = scrollBox.offsetHeight - scrollBoxContainer.offsetHeight;
+        scrollPos = scrollBoxContainer.scrollTop;
+
+        //window.console.log(scrollPos, scrollPos / diffScroll);
+
+        this.setState({
+            scrollPos: Math.round((scrollPos / diffScroll) * 100)
+        });
+
     };
 
     handleClick = (increment) => {
@@ -118,11 +142,14 @@ export default class NinetiesImage extends React.Component {
                 <div className="nineties_img_item clear_floats">
 
                     <div className="nineties_img_item_scroll_container"
+                         id="nineties_img_item_scroll_container"
+                         onScroll={this.handleScroll.bind(this)}
                          ref="scrollBoxContainer">
 
                         <img src={this.props.data.url} width={225} height={400}/>
 
                         <section className="nineties_img_item_scroll"
+                                 id="nineties_img_item_scroll"
                             ref="scrollBox">
 
                             <h1>{this.props.data.title}</h1>
