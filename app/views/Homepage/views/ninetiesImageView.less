@@ -249,6 +249,42 @@
                 border-top: 0.2rem solid #000;
                 background-position: -4rem -12rem;
             }
+            &:after {
+                position: absolute;
+                width: 2.8rem;
+                height: 2.8rem;
+                top: 0rem;
+                left: 0rem;
+                content: "";
+                background-repeat: no-repeat;
+                background-image:
+                    @lgFFF, @lgFFF,
+                    @lgBBB, @lgBBB;
+                background-size:
+                    2.6rem 0.2rem, 0.2rem 2.6rem,
+                    2.6rem 0.2rem, 0.2rem 2.6rem;
+                background-position:
+                    0 0, 0 0,
+                    0.2rem 2.6rem, 2.6rem 0.2rem;
+            }
+            &:hover {
+                background-color: #CCC;
+                
+                &:after {
+                    background-image:
+                        @lgFFF, @lgFFF,
+                        @lg999, @lg999;
+                }
+            }
+            &:active {
+                background-color: #DDD;
+
+                &:after {
+                    background-image:
+                        @lgAAA, @lgAAA,
+                        @lgFFF, @lgFFF;
+                }
+            }
         }
         &_button {
             position: absolute;

@@ -113,7 +113,7 @@ export default class NinetiesImage extends React.Component {
         //window.console.log(scrollPos, scrollPos / diffScroll);
 
         this.setState({
-            scrollPos: Math.round((scrollPos / diffScroll) * 100)
+            scrollPos: Math.round((scrollPos / diffScroll) * 1000) / 10
         });
 
     };
