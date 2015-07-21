@@ -3,9 +3,12 @@
 
 @lg000: linear-gradient(0deg, #000 0%, #000 100%);
 @lg00F: linear-gradient(0deg, #000 0%, #000 100%);
-@lgD7D: linear-gradient(0deg, #CCC 0%, #CCC 100%);
-@lgACA: linear-gradient(0deg, #999 0%, #999 100%);
+@lgCCC: linear-gradient(0deg, #CCC 0%, #CCC 100%);
 @lgFFF: linear-gradient(0deg, #FFF 0%, #FFF 100%);
+@lg777: linear-gradient(0deg, #777 0%, #777 100%);
+@lg888: linear-gradient(0deg, #888 0%, #888 100%);
+@lg999: linear-gradient(0deg, #999 0%, #999 100%);
+@lgBBB: linear-gradient(0deg, #BBB 0%, #BBB 100%);
 
 .nineties_img_box {
     display: block;
@@ -24,13 +27,13 @@
         background-image:
             @lgFFF,
             @lg000,
-            @lgACA, @lgACA,
+            @lg999, @lg999,
             @lgFFF, @lgFFF,
             @lgFFF, @lgFFF,
-            @lgACA, @lgACA,
+            @lg999, @lg999,
             @lg000, @lg000, @lg000, @lg000,
             @lg000, @lg000,
-            @lgD7D;
+            @lgCCC;
         /*
                 background-size:
                     calc(~"100% - 1.4rem") calc(~"100% - 2.9rem"),
@@ -112,9 +115,9 @@
     height: 2.6rem;
 
     background-image:
-        @lgFFF, @lgACA, @lgFFF, @lgACA,
-        @lgFFF, @lgACA, @lgFFF, @lgACA,
-        @lgFFF, @lgACA, @lgFFF, @lgACA;
+        @lgFFF, @lg999, @lgFFF, @lg999,
+        @lgFFF, @lg999, @lgFFF, @lg999,
+        @lgFFF, @lg999, @lgFFF, @lg999;
 
     //background-size:
     //    calc(~"100% - 5.1rem") 0.2rem;
@@ -170,7 +173,7 @@
         display: none;
         background-repeat: no-repeat;
         background-image: @lgFFF, @lgFFF,
-        @lgACA, @lgACA;
+        @lg999, @lg999;
         background-size:
             2.4rem 0.2rem, 0.2rem 2.4rem,
             2.4rem 0.2rem, 0.2rem 2.4rem;
@@ -213,9 +216,9 @@
         font-size: 2.4rem;
         line-height: 2.6rem;
         letter-spacing: 0.1rem;
-        background-image: @lgD7D, @lgD7D, @lgD7D, @lgD7D,
-        @lgD7D, @lgD7D, @lgD7D, @lgD7D,
-        @lgD7D, @lgD7D, @lgD7D, @lgD7D;
+        background-image: @lgCCC, @lgCCC, @lgCCC, @lgCCC,
+        @lgCCC, @lgCCC, @lgCCC, @lgCCC,
+        @lgCCC, @lgCCC, @lgCCC, @lgCCC;
         background-repeat: no-repeat;
         background-size: calc(~"100% - 0.2rem") 0.2rem;
 
@@ -267,7 +270,7 @@
     background-image: url("../../../assets/images/css/mac_os8_sprites.png");
     background-repeat: no-repeat;
     //background-size: 6rem 4rem;
-    background-size: 12rem 12rem;
+    background-size: 12rem 16rem;
 }
 
 .disable_body_scroll {

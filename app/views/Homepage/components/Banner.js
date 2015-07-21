@@ -72,7 +72,7 @@ export default class Banner extends React.Component {
             if (nextProps.ninetiesImgSelection !== undefined) {
                 if (nextProps.ninetiesImgSelection.unique_id !== undefined &&
                     nextProps.ninetiesImgSelection.unique_id !== routeData.id) {
-                    window.console.log(8);
+                    //window.console.log(8);
                     this.fetch90sImage(nextProps.cacheValidity, routeData.id);
                 }
             }

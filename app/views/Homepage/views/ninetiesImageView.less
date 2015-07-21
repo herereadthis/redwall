@@ -9,11 +9,24 @@
         }
         // parent container of the scrolling section
         &_scroll_container {
-            float: left;
-            width: calc(~"100% - 23rem");
+            float: none;
+            //position: absolute;
+            //top: 0;
+            //right: 0;
+            //bottom: 0;
+            box-sizing: border-box;
+            //width: calc(~"100% - 23rem");
+            widht: 100%;
+            //overflow-y: visible;
         }
         // this is the scrollable section for the actual content
         &_scroll {
+            &:after {
+                content: "";
+                display: block;
+                height: 5.5rem;
+                clear: both;
+            }
         }
         // wrapper for json description in item view content
         &_description {
@@ -81,7 +94,7 @@
             display: none;
             background-repeat: no-repeat;
             background-image:
-            @lgACA, @lgACA,
+            @lg999, @lg999,
             @lgFFF, @lgFFF;
             background-size:
             3.2rem 0.2rem, 0.2rem 3.2rem,
@@ -187,5 +200,79 @@
             }
         }
 
+    }
+}
+
+
+.mac_os8_scrollable {
+    overflow-y: scroll;
+    padding-right: 3rem;
+}
+
+.mac_os8 {
+    &_scroll {
+        &_bar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 4.4rem;
+            border-left: 0.2rem solid #000;
+            width: 2.8rem;
+            background-color: #AAA;
+            background-repeat: no-repeat;
+            background-image:
+                @lg777, @lg888,
+                @lg777, @lg888, @lgBBB, @lgCCC;
+            background-size:
+                2.6rem 0.2rem, 2.2rem 0.2rem,
+                0.2rem 100%, 0.2rem 100%, 0.2rem 100%, 0.2rem 100%;
+            background-position:
+                0 3.0rem, 0.2rem 3.2rem,
+                0 0, 0.2rem 0, 2.4rem 0, 2.6rem 0;
+        }
+        &_tab {
+            position: absolute;
+            width: 2.8rem;
+            height: 2.8rem;
+            z-index: 3;
+            background-color: #DDD;
+
+            &.up {
+                top: 0;
+                border-bottom: 0.2rem solid #000;
+                background-position: 0 -12rem;
+            }
+            &.down {
+                bottom: 0;
+                border-top: 0.2rem solid #000;
+                background-position: -4rem -12rem;
+            }
+        }
+        &_button {
+            position: absolute;
+            width: 2.8rem;
+            height: 3rem;
+            background-position: -8em -12rem;
+            border-top: 0.2rem solid #000;
+            border-bottom: 0.2rem solid #000;
+            top: 10rem;
+            background-color: #99F;
+
+            &:after {
+                position: absolute;
+                content: "";
+                display: block;
+                top: 3.2rem;
+                height: 0.3rem;
+                width: 2.8rem;
+                background-repeat: no-repeat;
+                background-image:
+                    @lg777, @lg888;
+                background-size:
+                    2.6rem 0.2rem, 2.2rem 0.2rem;
+                background-position:
+                    0 0rem, 0.2rem 0.2rem;
+            }
+        }
     }
 }
