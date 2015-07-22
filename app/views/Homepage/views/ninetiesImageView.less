@@ -261,15 +261,14 @@
                     @lgFFF, @lgFFF,
                     @lgBBB, @lgBBB;
                 background-size:
-                    2.6rem 0.2rem, 0.2rem 2.6rem,
-                    2.6rem 0.2rem, 0.2rem 2.6rem;
+                    2.6rem 0.2rem, 0.2rem 2.4rem;
                 background-position:
-                    0 0, 0 0,
+                    0 0, 0 0.2rem,
                     0.2rem 2.6rem, 2.6rem 0.2rem;
             }
             &:hover {
                 background-color: #CCC;
-                
+
                 &:after {
                     background-image:
                         @lgFFF, @lgFFF,
@@ -310,6 +309,36 @@
                     2.6rem 0.2rem, 2.2rem 0.2rem;
                 background-position:
                     0 0rem, 0.2rem 0.2rem;
+            }
+            &:before {
+                position: absolute;
+                width: 2.8rem;
+                height: 3.0rem;
+                top: 0rem;
+                left: 0rem;
+                content: "";
+                background-repeat: no-repeat;
+                background-image:
+                    @lgCCF, @lgCCF,
+                    @lg66C, @lg66C;
+                background-size:
+                    2.6rem 0.2rem, 0.2rem 2.6rem;
+                background-position:
+                    0 0, 0 0.2rem,
+                    0.2rem 2.8rem, 2.6rem 0.2rem;
+            }
+            &:hover {
+                background-color: #88F;
+
+            }
+            &:active {
+                background-color: #99F;
+
+                &:before {
+                    background-image:
+                    @lg66C, @lg66C,
+                    @lgCCF, @lgCCF;
+                }
             }
         }
     }
