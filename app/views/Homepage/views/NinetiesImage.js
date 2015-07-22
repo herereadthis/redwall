@@ -21,6 +21,8 @@ export default class NinetiesImage extends React.Component {
         router: React.PropTypes.func
     };
 
+    static scrollIncrement = 40;
+
     componentWillMount() {
     }
 
@@ -84,7 +86,19 @@ export default class NinetiesImage extends React.Component {
     };
 
     tabScroll = (direction) => {
-        window.console.log(direction);
+        window.console.log(direction, NinetiesImage.scrollIncrement);
+
+        var scrollBoxContainer, scrollBox, scrollContainerHeight, scrollBoxHeight, currentScrollPos;
+
+        scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
+        scrollBox = React.findDOMNode(this.refs.scrollBox);
+
+        scrollContainerHeight = scrollBoxContainer.offsetHeight;
+        scrollBoxHeight = scrollBox.offsetHeight;
+
+        currentScrollPos = scrollBoxContainer.scrollTop;
+
+        scrollBoxContainer = currentScrollPos + NinetiesImage.scrollIncrement;
     };
 
     renderScrollbar = () => {
