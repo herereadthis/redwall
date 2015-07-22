@@ -88,13 +88,13 @@ export default class NinetiesImage extends React.Component {
     tabScroll = (direction) => {
         window.console.log(direction, NinetiesImage.scrollIncrement);
 
-        var scrollBoxContainer, scrollBox, scrollContainerHeight, scrollBoxHeight, currentScrollPos;
+        var scrollBoxContainer, scrollBox, scrollContainerHeight, currentScrollPos;
 
         scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
         scrollBox = React.findDOMNode(this.refs.scrollBox);
 
         scrollContainerHeight = scrollBoxContainer.offsetHeight;
-        scrollBoxHeight = scrollBox.offsetHeight;
+        //scrollBoxHeight = scrollBox.offsetHeight;
 
         currentScrollPos = scrollBoxContainer.scrollTop;
 
