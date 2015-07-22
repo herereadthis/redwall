@@ -83,6 +83,10 @@ export default class NinetiesImage extends React.Component {
         }
     };
 
+    tabScroll = (direction) => {
+        window.console.log(direction);
+    };
+
     renderScrollbar = () => {
         var style, diffForButton;
         diffForButton = Math.round(this.state.scrollPos * 0.34);
@@ -93,8 +97,10 @@ export default class NinetiesImage extends React.Component {
         if (this.state.scrollable === true) {
             return (
                 <div className="mac_os8_scroll_bar">
-                    <div className="mac_os8_scroll_tab mac_os8_sprites up" />
-                    <div className="mac_os8_scroll_tab mac_os8_sprites down" />
+                    <div onClick={this.tabScroll.bind(this, 'up')}
+                         className="mac_os8_scroll_tab mac_os8_sprites up" />
+                    <div onClick={this.tabScroll.bind(this, 'down')}
+                         className="mac_os8_scroll_tab mac_os8_sprites down" />
                     <div className="mac_os8_scroll_button mac_os8_sprites"
                         ref="macOs8ScrollButton" style={style}/>
                 </div>
