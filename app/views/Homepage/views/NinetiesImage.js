@@ -87,23 +87,14 @@ export default class NinetiesImage extends React.Component {
     };
 
     tabScroll = (direction) => {
-        var scrollBoxContainer, scrollBox, scrollContainerHeight,
+        var scrollBoxContainer, scrollBox,
             scrollBoxHeight, currentScrollPos, scrollIncrement,
             scrollInterval, targetScrollPos;
 
         scrollIncrement = NinetiesImage.scrollIncrement;
 
-
-
-
         scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
         scrollBox = React.findDOMNode(this.refs.scrollBox);
-
-        scrollContainerHeight = scrollBoxContainer.offsetHeight;
-        scrollBoxHeight = scrollBox.offsetHeight;
-
-        currentScrollPos = scrollBoxContainer.scrollTop;
-
 
         if (direction === 'up') {
             scrollIncrement = -1 * scrollIncrement;
@@ -124,7 +115,21 @@ export default class NinetiesImage extends React.Component {
             }, 10);
         }
         else {
-            window.console.log('asdf');
+            targetScrollPos = scrollBoxContainer.scrollTop + scrollIncrement;
+            currentScrollPos = scrollBoxContainer.scrollTop;
+            scrollBoxHeight = scrollBox.offsetHeight;
+
+            scrollInterval = setInterval(() => {
+                currentScrollPos = scrollBoxContainer.scrollTop;
+
+                if (scrollBoxHeight - currentScrollPos >= currentScrollPos &&
+                    currentScrollPos < targetScrollPos) {
+                    scrollBoxContainer.scrollTop = currentScrollPos + 8;
+                }
+                else {
+                    clearInterval(scrollInterval);
+                }
+            }, 10);
         }
 
     };
