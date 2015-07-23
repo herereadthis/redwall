@@ -22,7 +22,8 @@ export default class NinetiesImage extends React.Component {
     };
 
     static scrollIncrement = 40;
-    static scrollDuration = 100;
+    static scrollInterval = 10;
+    static scrollStep = 8;
 
     componentWillMount() {
     }
@@ -89,47 +90,49 @@ export default class NinetiesImage extends React.Component {
     tabScroll = (direction) => {
         var scrollBoxContainer, scrollBox,
             scrollBoxHeight, currentScrollPos, scrollIncrement,
-            scrollInterval, targetScrollPos;
+            scrollInterval, targetScrollPos, jumpStep;
 
         scrollIncrement = NinetiesImage.scrollIncrement;
-
+        jumpStep = NinetiesImage.scrollStep;
         scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
         scrollBox = React.findDOMNode(this.refs.scrollBox);
+        scrollBoxHeight = scrollBox.offsetHeight;
 
         if (direction === 'up') {
             scrollIncrement = -1 * scrollIncrement;
+            jumpStep = -1 * jumpStep;
+        }
 
+        if (direction === 'up') {
             targetScrollPos = scrollBoxContainer.scrollTop + scrollIncrement;
             currentScrollPos = scrollBoxContainer.scrollTop;
 
             scrollInterval = setInterval(() => {
-
                 currentScrollPos = scrollBoxContainer.scrollTop;
 
                 if (currentScrollPos >= targetScrollPos && currentScrollPos > 0) {
-                    scrollBoxContainer.scrollTop = currentScrollPos - 8;
+                    scrollBoxContainer.scrollTop = currentScrollPos + jumpStep;
                 }
                 else {
                     clearInterval(scrollInterval);
                 }
-            }, 10);
+            }, NinetiesImage.scrollInterval);
         }
         else {
             targetScrollPos = scrollBoxContainer.scrollTop + scrollIncrement;
             currentScrollPos = scrollBoxContainer.scrollTop;
-            scrollBoxHeight = scrollBox.offsetHeight;
 
             scrollInterval = setInterval(() => {
                 currentScrollPos = scrollBoxContainer.scrollTop;
 
                 if (scrollBoxHeight - currentScrollPos >= currentScrollPos &&
                     currentScrollPos < targetScrollPos) {
-                    scrollBoxContainer.scrollTop = currentScrollPos + 8;
+                    scrollBoxContainer.scrollTop = currentScrollPos + jumpStep;
                 }
                 else {
                     clearInterval(scrollInterval);
                 }
-            }, 10);
+            }, NinetiesImage.scrollInterval);
         }
 
     };
