@@ -129,6 +129,28 @@ export default class NinetiesImage extends React.Component {
 
     };
 
+    startDragScrollButton = (event) => {
+
+        var _eventTarget, _elementRect, _elementTop;
+
+
+        _eventTarget = event.target;
+
+        _elementRect = _eventTarget.getBoundingClientRect();
+
+        _elementTop = Math.round(_elementRect.top);
+
+        _eventTarget.onmousemove = (dragEvent) => {
+            var positionY = dragEvent.clientY;
+
+            window.console.log(positionY, _elementTop);
+        };
+    };
+
+    stopDragScrollButton = (event) => {
+        event.target.onmousemove = () => {};
+    };
+
     renderScrollbar = () => {
         var style, diffForButton;
         diffForButton = Math.round(this.state.scrollPos * 0.34);
@@ -144,6 +166,8 @@ export default class NinetiesImage extends React.Component {
                     <div onClick={this.tabScroll.bind(this, 'down')}
                          className="mac_os8_scroll_tab mac_os8_sprites down" />
                     <div className="mac_os8_scroll_button mac_os8_sprites"
+                         onMouseDown={this.startDragScrollButton.bind(this)}
+                         onMouseUp={this.stopDragScrollButton.bind(this)}
                         ref="macOs8ScrollButton" style={style}/>
                 </div>
             );
