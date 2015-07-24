@@ -48,6 +48,10 @@ export default class NinetiesImage extends React.Component {
         }, true);
         NinetiesImageMethods.fixScrollContainerHeight(scrollBoxContainer);
 
+        window.addEventListener('mouseup', function () {
+            NinetiesImageMethods.killScrollDragListener();
+        }, true);
+
         this.makeThatScrollbar();
     }
 
