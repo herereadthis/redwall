@@ -60,13 +60,14 @@ export default class Homepage extends React.Component {
     };
 
     render() {
+        var metadata;
         if (this.props.watchData === undefined) {
             return (
                 <p>No data</p>
             );
         }
 
-        var metadata = [
+        metadata = [
             {
                 columnName: 'companyName',
                 columnTitle: 'Name'

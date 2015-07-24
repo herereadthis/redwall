@@ -139,20 +139,31 @@ export default class NinetiesImage extends React.Component {
 
     startDragScrollButton = (event) => {
 
-        var _eventTarget, _elementRect, _elementTop;
+        var _eventTarget, _elementRect, buttonParams, scrollButton, yPosClick;
 
 
         _eventTarget = event.target;
 
         _elementRect = _eventTarget.getBoundingClientRect();
 
-        _elementTop = Math.round(_elementRect.top);
-
-        _eventTarget.onmousemove = (dragEvent) => {
-            var positionY = dragEvent.clientY;
-
-            window.console.log(positionY, _elementTop);
+        buttonParams = {
+            height: Math.round(_elementRect.height),
+            top: Math.round(_elementRect.top)
         };
+
+        yPosClick = event.clientY - buttonParams.top;
+
+
+
+
+        window.console.log(yPosClick);
+
+        //
+        //_eventTarget.onmousemove = (dragEvent) => {
+        //    var positionY = dragEvent.clientY;
+        //
+        //    window.console.log(positionY, _elementTop);
+        //};
     };
 
     stopDragScrollButton = (event) => {
@@ -161,11 +172,14 @@ export default class NinetiesImage extends React.Component {
 
     renderScrollbar = () => {
         var style, diffForButton;
+
         diffForButton = Math.round(this.state.scrollPos * 0.34);
 
         style = {
             top: `calc(${this.state.scrollPos}% - ${diffForButton}px)`
         };
+
+
         if (this.state.scrollable === true) {
             return (
                 <div className="mac_os8_scroll_bar">
@@ -175,8 +189,7 @@ export default class NinetiesImage extends React.Component {
                          className="mac_os8_scroll_tab mac_os8_sprites down" />
                     <div className="mac_os8_scroll_button mac_os8_sprites"
                          onMouseDown={this.startDragScrollButton.bind(this)}
-                         onMouseUp={this.stopDragScrollButton.bind(this)}
-                        ref="macOs8ScrollButton" style={style}/>
+                         ref="macScrollButton" style={style}/>
                 </div>
             );
         }
