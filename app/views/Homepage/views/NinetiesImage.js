@@ -139,7 +139,7 @@ export default class NinetiesImage extends React.Component {
 
     startDragScrollButton = (event) => {
 
-        var _eventTarget, _elementRect, buttonParams, scrollButton, yPosClick;
+        var _eventTarget, _elementRect, buttonParams, yPosClick;
 
 
         _eventTarget = event.target;
@@ -157,6 +157,9 @@ export default class NinetiesImage extends React.Component {
 
 
         window.console.log(yPosClick);
+
+
+        NinetiesImageMethods.scrollDrag(event.clientY, buttonParams.top, event.target);
 
         //
         //_eventTarget.onmousemove = (dragEvent) => {
