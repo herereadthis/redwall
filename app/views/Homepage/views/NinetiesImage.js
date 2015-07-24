@@ -29,11 +29,12 @@ export default class NinetiesImage extends React.Component {
     }
 
     componentDidMount() {
-        var _this, scrollBoxContainer;
+        var _this, scrollBoxContainer, scrollBox;
         //var _this;
 
         _this = this;
         scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
+        scrollBox = React.findDOMNode(this.refs.scrollBox);
 
         this.props.flux.getActions(HomeActions.ID).set90sNavRoutes(
             this.props.dataCount, this.props.data.pk);
@@ -47,6 +48,7 @@ export default class NinetiesImage extends React.Component {
             }
         }, true);
         NinetiesImageMethods.fixScrollContainerHeight(scrollBoxContainer);
+        NinetiesImageMethods.fixScrollBoxHeight(scrollBox);
 
         window.addEventListener('mouseup', function () {
             NinetiesImageMethods.killScrollDragListener();
@@ -62,7 +64,10 @@ export default class NinetiesImage extends React.Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.data.pk !== this.props.data.pk) {
             this.props.flux.getActions(HomeActions.ID).set90sNavRoutes(this.props.dataCount, nextProps.data.pk);
-
+            
+            var scrollBox;
+            scrollBox = React.findDOMNode(this.refs.scrollBox);
+            NinetiesImageMethods.fixScrollBoxHeight(scrollBox);
         }
 
         this.makeThatScrollbar();

@@ -1,4 +1,4 @@
-var scrollContainer, scrollBoxParentHeight, scrollTopPos, yClickPos, scrollButton, scrollButtonParent;
+var scrollContainer, scrollBoxParentHeight, scrollTopPos, yClickPos, scrollButton, scrollButtonParentHeight, scrollBox, scrollDiff;
 
 import {DomUtils} from 'AppConstants.js';
 
@@ -25,6 +25,10 @@ export default class NinetiesImageMethods {
         );
     };
 
+    static fixScrollBoxHeight = (scrollBoxElement) => {
+        scrollBox = scrollBoxElement;
+    };
+
     static killResizeListener = () => {
         window.removeEventListener(
             'resize',
@@ -33,20 +37,23 @@ export default class NinetiesImageMethods {
     };
 
     static setscrollDrag = (event) => {
-        var scrollMovement, actualScrollPos;
+        var scrollMovement, actualScrollPos, scrollPercentage;
 
         scrollMovement = event.pageY - yClickPos;
         actualScrollPos = yClickPos - scrollTopPos + scrollMovement;
-        window.console.log(scrollMovement, actualScrollPos, scrollButtonParent);
+        scrollPercentage = actualScrollPos / scrollButtonParentHeight;
 
-        scrollContainer.scrollTop = scrollMovement;
+        window.console.log(scrollMovement, scrollPercentage, scrollDiff);
+
+        scrollContainer.scrollTop = Math.round(scrollPercentage * scrollDiff);
     };
 
     static scrollDrag = (yPosClick, elementTop, element) => {
         yClickPos = yPosClick;
         scrollTopPos = elementTop;
         scrollButton = element;
-        scrollButtonParent = scrollButton.parentNode.offsetHeight;
+        scrollDiff = scrollBox.offsetHeight - scrollBoxParentHeight;
+        scrollButtonParentHeight = scrollButton.parentNode.offsetHeight;
 
 
         window.addEventListener(
