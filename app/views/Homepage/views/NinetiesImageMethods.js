@@ -43,7 +43,8 @@ export default class NinetiesImageMethods {
         actualScrollPos = yClickPos - scrollTopPos + scrollMovement;
         scrollPercentage = actualScrollPos / scrollButtonParentHeight;
 
-        window.console.log(scrollMovement, scrollPercentage, scrollDiff);
+        window.console.log(scrollMovement,
+            Math.round(scrollPercentage * 100) / 100, scrollDiff);
 
         scrollContainer.scrollTop = Math.round(scrollPercentage * scrollDiff);
     };

@@ -64,12 +64,18 @@ export default class NinetiesImage extends React.Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.data.pk !== this.props.data.pk) {
             this.props.flux.getActions(HomeActions.ID).set90sNavRoutes(this.props.dataCount, nextProps.data.pk);
-            
+
             var scrollBox;
             scrollBox = React.findDOMNode(this.refs.scrollBox);
             NinetiesImageMethods.fixScrollBoxHeight(scrollBox);
         }
 
+        if (this.state.scrollable === true) {
+            window.console.log(this.state.scrollable);
+            this.setState({
+                'scrollable': false
+            });
+        }
         this.makeThatScrollbar();
     }
 
@@ -81,6 +87,8 @@ export default class NinetiesImage extends React.Component {
 
         scrollContainerHeight = scrollBoxContainer.offsetHeight;
         scrollBoxHeight = scrollBox.offsetHeight;
+
+
 
         if (scrollContainerHeight < scrollBoxHeight) {
             DomUtils.addClass(scrollBoxContainer, 'mac_os8_scrollable');
