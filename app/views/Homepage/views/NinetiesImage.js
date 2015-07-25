@@ -50,15 +50,13 @@ export default class NinetiesImage extends React.Component {
         NinetiesImageMethods.fixScrollContainerHeight(scrollBoxContainer);
         NinetiesImageMethods.fixScrollBoxHeight(scrollBox);
 
-        window.addEventListener('mouseup', function () {
-            NinetiesImageMethods.killScrollDragListener();
-        }, true);
-
+        NinetiesImageMethods.mouseUpDetection();
         this.makeThatScrollbar();
     }
 
     componentWillUnmount() {
         NinetiesImageMethods.killResizeListener();
+        NinetiesImageMethods.killMouseUpDetection();
     }
 
     componentWillReceiveProps(nextProps) {
@@ -70,20 +68,22 @@ export default class NinetiesImage extends React.Component {
             NinetiesImageMethods.fixScrollBoxHeight(scrollBox);
         }
 
-        if (this.state.scrollable === true) {
-            window.console.log(this.state.scrollable);
-            this.setState({
-                'scrollable': false
-            });
-        }
         this.makeThatScrollbar();
     }
 
     makeThatScrollbar = () => {
+
         var scrollBoxContainer, scrollBox, scrollContainerHeight, scrollBoxHeight;
 
         scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
         scrollBox = React.findDOMNode(this.refs.scrollBox);
+
+        scrollBoxContainer.scrollTop = 0;
+
+        if (DomUtils.hasClass(scrollBoxContainer, 'mac_os8_scrollable') === true) {
+            window.console.log(2);
+            DomUtils.removeClass(scrollBoxContainer, 'mac_os8_scrollable');
+        }
 
         scrollContainerHeight = scrollBoxContainer.offsetHeight;
         scrollBoxHeight = scrollBox.offsetHeight;

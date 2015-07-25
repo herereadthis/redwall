@@ -95,6 +95,17 @@ export default class AppConstants {
                 element.className = element.className.replace(regex, ' ');
             }
         },
+        hasClass: (element, classQuery) => {
+            var classExists;
+
+            if (element.classList !== undefined) {
+                classExists = element.classList.contains(classQuery);
+            }
+            else {
+                classExists = new RegExp('(^| )' + classQuery + '( |$)', 'gi').test(element.classQuery);
+            }
+            return classExists;
+        },
         changeStyle: (element, attribute, increment) => {
             element.style[attribute] = `${increment}px`;
         },

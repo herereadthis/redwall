@@ -43,8 +43,7 @@ export default class NinetiesImageMethods {
         actualScrollPos = yClickPos - scrollTopPos + scrollMovement;
         scrollPercentage = actualScrollPos / scrollButtonParentHeight;
 
-        window.console.log(scrollMovement,
-            Math.round(scrollPercentage * 100) / 100, scrollDiff);
+        window.console.log(Math.round(scrollPercentage * 100));
 
         scrollContainer.scrollTop = Math.round(scrollPercentage * scrollDiff);
     };
@@ -69,5 +68,25 @@ export default class NinetiesImageMethods {
             'mousemove',
             NinetiesImageMethods.setscrollDrag
         );
+    };
+
+    static killScrollDrag = () => {
+        window.console.log(5);
+        NinetiesImageMethods.killScrollDragListener();
+    };
+
+    static mouseUpDetection = () => {
+        window.addEventListener(
+            'mouseup',
+            NinetiesImageMethods.killScrollDrag
+        );
+    };
+
+    static killMouseUpDetection = () => {
+        window.removeEventListener(
+            'mouseup',
+            NinetiesImageMethods.killScrollDrag
+        );
+
     };
 }
