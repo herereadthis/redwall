@@ -57,11 +57,12 @@ export default class NinetiesImageIndex extends React.Component {
         }
         else {
             return (
-                <div className="ninties_img_listing">
+                <div className="ninties_img_listing"
+                    id="nineties_img_index_scroll_container"
+                    ref="scrollBoxContainer">
                     {this.renderIndex()}
                 </div>
             );
         }
     }
 }
-
