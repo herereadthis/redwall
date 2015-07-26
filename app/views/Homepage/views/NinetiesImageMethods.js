@@ -8,6 +8,8 @@ export default class NinetiesImageMethods {
         scrollBoxParentHeight = scrollContainer.parentNode.parentNode.
                 offsetHeight - 1;
 
+        window.console.log(scrollContainer.parentNode.parentNode);
+
         if (DomUtils.getStyle(scrollContainer, 'height', true) !==
             scrollBoxParentHeight) {
             DomUtils.changeStyle(scrollContainer, 'height',

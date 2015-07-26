@@ -2,6 +2,8 @@ import React from 'react';
 import HomeActions from 'views/Homepage/HomeActions.js';
 import AppRoutes from 'AppRoutes.js';
 
+import NinetiesImageMethods from './NinetiesImageMethods.js';
+
 export default class NinetiesImageIndex extends React.Component {
 
     constructor() {
@@ -17,6 +19,15 @@ export default class NinetiesImageIndex extends React.Component {
     }
 
     componentDidMount() {
+        var scrollBoxContainer, scrollBox;
+
+        scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
+        scrollBox = React.findDOMNode(this.refs.scrollBox);
+
+        window.console.log(scrollBoxContainer.offsetHeight, scrollBox);
+
+        //NinetiesImageMethods.fixScrollContainerHeight(scrollBoxContainer);
+        //NinetiesImageMethods.fixScrollBoxHeight(scrollBox);
     }
 
     handleClick = (uniqueID) => {
@@ -40,7 +51,9 @@ export default class NinetiesImageIndex extends React.Component {
 
     renderIndex = () => {
         return (
-            <ul className="clear_floats">
+            <ul className="nineties_img_index_scroll clear_floats"
+                id="nineties_img_index_scroll"
+                ref="scrollBox">
                 {this.renderListing()}
             </ul>
         );
@@ -50,7 +63,7 @@ export default class NinetiesImageIndex extends React.Component {
     render() {
         if (this.props.listing === undefined) {
             return (
-                <div>
+                <div ref="scrollBoxContainer">
                     <p>Loading...</p>
                 </div>
             );
