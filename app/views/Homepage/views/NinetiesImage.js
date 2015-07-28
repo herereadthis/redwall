@@ -39,14 +39,7 @@ export default class NinetiesImage extends React.Component {
         this.props.flux.getActions(HomeActions.ID).set90sNavRoutes(
             this.props.dataCount, this.props.data.pk);
 
-        window.addEventListener('keyup', function (e) {
-            if (e.keyCode === 37) {
-                _this.handleClick('prev');
-            }
-            if (e.keyCode === 39) {
-                _this.handleClick('next');
-            }
-        }, true);
+        NinetiesImageMethods.fixArrowKeyStrokes(this.handleClick);
         NinetiesImageMethods.fixScrollContainerHeight(scrollBoxContainer);
         NinetiesImageMethods.fixScrollBoxHeight(scrollBox);
 
@@ -57,6 +50,7 @@ export default class NinetiesImage extends React.Component {
     componentWillUnmount() {
         NinetiesImageMethods.killResizeListener();
         NinetiesImageMethods.killMouseUpDetection();
+        NinetiesImageMethods.killArrowKeyStrokes();
     }
 
     componentWillReceiveProps(nextProps) {

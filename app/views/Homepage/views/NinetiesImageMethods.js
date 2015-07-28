@@ -1,4 +1,5 @@
-var scrollContainer, scrollBoxParentHeight, scrollTopPos, yClickPos, scrollButton, scrollButtonParentHeight, scrollBox, scrollDiff;
+var scrollContainer, scrollBoxParentHeight, scrollTopPos, yClickPos,
+    scrollButton, scrollButtonParentHeight, scrollBox, scrollDiff, arrowClick;
 
 import {DomUtils} from 'AppConstants.js';
 
@@ -91,4 +92,28 @@ export default class NinetiesImageMethods {
         );
 
     };
+
+    static setArrowClick = (e) => {
+        if (e.keyCode === 37) {
+            arrowClick('prev');
+        }
+        if (e.keyCode === 39) {
+            arrowClick('next');
+        }
+    };
+
+    static fixArrowKeyStrokes = (method) => {
+        arrowClick = method;
+        window.addEventListener(
+            'keyup',
+            NinetiesImageMethods.setArrowClick
+        );
+    };
+
+    static killArrowKeyStrokes = () => {
+        window.removeEventListener(
+            'keyup',
+            NinetiesImageMethods.setArrowClick
+        );
+    }
 }
