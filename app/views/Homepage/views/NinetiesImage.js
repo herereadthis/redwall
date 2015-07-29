@@ -29,10 +29,8 @@ export default class NinetiesImage extends React.Component {
     }
 
     componentDidMount() {
-        var _this, scrollBoxContainer, scrollBox;
-        //var _this;
+        var scrollBoxContainer, scrollBox;
 
-        _this = this;
         scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
         scrollBox = React.findDOMNode(this.refs.scrollBox);
 

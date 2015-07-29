@@ -2,7 +2,7 @@ import React from 'react';
 import HomeActions from 'views/Homepage/HomeActions.js';
 import AppRoutes from 'AppRoutes.js';
 
-import NinetiesImageMethods from './NinetiesImageMethods.js';
+//import NinetiesImageMethods from './NinetiesImageMethods.js';
 
 export default class NinetiesImageIndex extends React.Component {
 
