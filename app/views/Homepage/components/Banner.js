@@ -33,7 +33,7 @@ export default class Banner extends React.Component {
             this.fetch90sImage(this.props.cacheValidity, routeData.id);
         }
 
-        window.console.log(routeData.name, this.props.showNinetiesImgBox);
+        //window.console.log(routeData.name, this.props.showNinetiesImgBox);
 
         if (routeData.name === AppRoutes.NINETIES_IMG ||
             routeData.name === AppRoutes.NINETIES_IMG_INDEX) {
@@ -86,7 +86,7 @@ export default class Banner extends React.Component {
             }
         }
         if (routeData.name === AppRoutes.NINETIES_IMG_INDEX) {
-            window.console.log(this.props.showNinetiesImgBox, nextProps.showNinetiesImgBox);
+            //window.console.log(this.props.showNinetiesImgBox, nextProps.showNinetiesImgBox);
             if (this.props.showNinetiesImgBox === false) {
                 nextProps.flux.getActions(HomeActions.ID).showNinetiesImgBox(true);
             }

@@ -6,10 +6,15 @@ import {DomUtils} from 'AppConstants.js';
 export default class NinetiesImageMethods {
 
     static setScrollContainerHeight = () => {
-        scrollBoxParentHeight = scrollContainer.parentNode.parentNode.
-                offsetHeight - 1;
-
-        window.console.log(scrollContainer.parentNode.parentNode);
+        if (DomUtils.hasClass(scrollContainer.parentNode.parentNode,
+                'nineties_img_container') === true) {
+            scrollBoxParentHeight = scrollContainer.parentNode.parentNode.
+                    offsetHeight - 1;
+        }
+        else if (DomUtils.hasClass(scrollContainer.parentNode,
+                'nineties_img_container') === true) {
+            scrollBoxParentHeight = scrollContainer.parentNode.offsetHeight - 1;
+        }
 
         if (DomUtils.getStyle(scrollContainer, 'height', true) !==
             scrollBoxParentHeight) {

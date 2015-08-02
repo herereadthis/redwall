@@ -2,7 +2,9 @@ import React from 'react';
 import HomeActions from 'views/Homepage/HomeActions.js';
 import AppRoutes from 'AppRoutes.js';
 
-//import NinetiesImageMethods from './NinetiesImageMethods.js';
+import NinetiesImageMethods from './NinetiesImageMethods.js';
+
+import {DomUtils} from 'AppConstants.js';
 
 export default class NinetiesImageIndex extends React.Component {
 
@@ -36,8 +38,43 @@ export default class NinetiesImageIndex extends React.Component {
         scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
         scrollBox = React.findDOMNode(this.refs.scrollBox);
 
-        window.console.log(scrollBoxContainer.offsetHeight, scrollBox);
+        NinetiesImageMethods.fixScrollContainerHeight(scrollBoxContainer);
+        NinetiesImageMethods.fixScrollBoxHeight(scrollBox);
 
+        this.makeThatScrollbar();
+    };
+
+    makeThatScrollbar = () => {
+
+        var scrollBoxContainer, scrollBox, scrollContainerHeight, scrollBoxHeight;
+
+        scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
+        scrollBox = React.findDOMNode(this.refs.scrollBox);
+
+        scrollBoxContainer.scrollTop = 0;
+
+        if (DomUtils.hasClass(scrollBoxContainer, 'mac_os8_scrollable') === true) {
+            window.console.log(2);
+            DomUtils.removeClass(scrollBoxContainer, 'mac_os8_scrollable');
+        }
+
+        scrollContainerHeight = scrollBoxContainer.offsetHeight;
+        scrollBoxHeight = scrollBox.offsetHeight;
+
+        window.console.log(scrollContainerHeight, scrollBoxHeight);
+
+        if (scrollContainerHeight < scrollBoxHeight) {
+            DomUtils.addClass(scrollBoxContainer, 'mac_os8_scrollable');
+            this.setState({
+                'scrollable': true
+            });
+        }
+        else {
+            DomUtils.removeClass(scrollBoxContainer, 'mac_os8_scrollable');
+            this.setState({
+                'scrollable': false
+            });
+        }
     };
 
     handleClick = (uniqueID) => {

@@ -80,8 +80,6 @@ export default class NinetiesImage extends React.Component {
         scrollContainerHeight = scrollBoxContainer.offsetHeight;
         scrollBoxHeight = scrollBox.offsetHeight;
 
-
-
         if (scrollContainerHeight < scrollBoxHeight) {
             DomUtils.addClass(scrollBoxContainer, 'mac_os8_scrollable');
             this.setState({
