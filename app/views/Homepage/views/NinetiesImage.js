@@ -180,31 +180,6 @@ export default class NinetiesImage extends React.Component {
         event.target.onmousemove = () => {};
     };
 
-    renderScrollbar = () => {
-        var style, diffForButton;
-
-        diffForButton = Math.round(this.state.scrollPos * 0.34);
-
-        style = {
-            top: `calc(${this.state.scrollPos}% - ${diffForButton}px)`
-        };
-
-
-        if (this.state.scrollable === true) {
-            return (
-                <div className="mac_os8_scroll_bar">
-                    <div onClick={this.tabScroll.bind(this, 'up')}
-                         className="mac_os8_scroll_tab mac_os8_sprites up" />
-                    <div onClick={this.tabScroll.bind(this, 'down')}
-                         className="mac_os8_scroll_tab mac_os8_sprites down" />
-                    <div className="mac_os8_scroll_button mac_os8_sprites"
-                         onMouseDown={this.startDragScrollButton.bind(this)}
-                         ref="macScrollButton" style={style}/>
-                </div>
-            );
-        }
-    };
-
     handleScroll = (event) => {
         var scrollBoxContainer, scrollBox, diffScroll, scrollPos;
 
@@ -241,6 +216,20 @@ export default class NinetiesImage extends React.Component {
             );
         }
         else {
+            var style, diffForButton, classes;
+
+            diffForButton = Math.round(this.state.scrollPos * 0.34);
+
+            style = {
+                top: `calc(${this.state.scrollPos}% - ${diffForButton}px)`
+            };
+
+            classes = 'mac_os8_scroll_bar';
+
+            if (this.state.scrollable === true) {
+                classes = `${classes} scroll_enabled`;
+            }
+
             return (
                 <div className="nineties_img_item clear_floats">
 
@@ -267,7 +256,15 @@ export default class NinetiesImage extends React.Component {
                         </section>
                     </div>
 
-                    {this.renderScrollbar()}
+                    <div className={classes}>
+                        <div onClick={this.tabScroll.bind(this, 'up')}
+                             className="mac_os8_scroll_tab mac_os8_sprites up" />
+                        <div onClick={this.tabScroll.bind(this, 'down')}
+                             className="mac_os8_scroll_tab mac_os8_sprites down" />
+                        <div className="mac_os8_scroll_button mac_os8_sprites"
+                             onMouseDown={this.startDragScrollButton.bind(this)}
+                             ref="macScrollButton" style={style}/>
+                    </div>
 
                     <div className="nineties_img_navigator">
                         <a className="nineties_img_nav_button mac_os8_sprites previous"

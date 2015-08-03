@@ -212,6 +212,7 @@
 .mac_os8 {
     &_scroll {
         &_bar {
+            display: none;
             position: absolute;
             top: 2.8rem;
             right: 0;
@@ -229,6 +230,10 @@
             background-position:
                 0 0.2rem, 0.2rem 0.4rem,
                 0 0, 0.2rem 0, 2.4rem 0, 2.6rem 0;
+
+            &.scroll_enabled {
+                display: block;
+            }
         }
         &_tab {
             position: absolute;
