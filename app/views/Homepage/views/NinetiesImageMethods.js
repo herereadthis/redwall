@@ -6,14 +6,31 @@ import {DomUtils} from 'AppConstants.js';
 export default class NinetiesImageMethods {
 
     static setScrollContainerHeight = () => {
+        var scrollBoxHeight;
+
         if (DomUtils.hasClass(scrollContainer.parentNode.parentNode,
                 'nineties_img_container') === true) {
             scrollBoxParentHeight = scrollContainer.parentNode.parentNode.
                     offsetHeight - 1;
+
+
         }
         else if (DomUtils.hasClass(scrollContainer.parentNode,
                 'nineties_img_container') === true) {
             scrollBoxParentHeight = scrollContainer.parentNode.offsetHeight - 1;
+        }
+
+        if (scrollBox !== undefined) {
+            scrollBoxHeight = scrollBox.offsetHeight;
+
+            window.console.log(scrollBoxHeight, scrollBoxParentHeight);
+
+            if (scrollBoxHeight < scrollBoxParentHeight) {
+                DomUtils.removeClass(scrollContainer, 'mac_os8_scrollable');
+            }
+            else {
+                DomUtils.addClass(scrollContainer, 'mac_os8_scrollable');
+            }
         }
 
         if (DomUtils.getStyle(scrollContainer, 'height', true) !==
@@ -21,6 +38,9 @@ export default class NinetiesImageMethods {
             DomUtils.changeStyle(scrollContainer, 'height',
                 scrollBoxParentHeight);
         }
+
+
+        //window.console.log(scrollBoxHeight, scrollBoxParentHeight);
     };
 
     static fixScrollContainerHeight = (scrollBoxContainer) => {
