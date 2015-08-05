@@ -27,6 +27,7 @@ export default class NinetiesImageIndex extends React.Component {
     }
 
     componentWillReceiveProps() {
+        window.console.log(this.props.listing);
         if (this.props.listing !== undefined) {
             this.setScrollHeight();
         }
@@ -35,8 +36,8 @@ export default class NinetiesImageIndex extends React.Component {
     setScrollHeight = () => {
         var scrollBoxContainer, scrollBox;
 
-        scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
-        scrollBox = React.findDOMNode(this.refs.scrollBox);
+        scrollBoxContainer = document.getElementById('nineties_img_index_scroll_container');
+        scrollBox = document.getElementById('nineties_img_index_scroll');
 
         NinetiesImageMethods.fixScrollContainerHeight(scrollBoxContainer);
         NinetiesImageMethods.fixScrollBoxHeight(scrollBox);
@@ -48,8 +49,8 @@ export default class NinetiesImageIndex extends React.Component {
 
         var scrollBoxContainer, scrollBox, scrollContainerHeight, scrollBoxHeight;
 
-        scrollBoxContainer = React.findDOMNode(this.refs.scrollBoxContainer);
-        scrollBox = React.findDOMNode(this.refs.scrollBox);
+        scrollBoxContainer = document.getElementById('nineties_img_index_scroll_container');
+        scrollBox = document.getElementById('nineties_img_index_scroll');
 
         scrollBoxContainer.scrollTop = 0;
 
