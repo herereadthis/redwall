@@ -25,19 +25,18 @@
     top: 0;
 
     .bellmaker_container {
-        height: 80vh;
-        top: 10vh;
         position: relative;
 
         @media @da_baseline {
             width: calc(~"100% - 2rem");
-            margin-right: 1rem;
-            margin-left: 1rem;
+            height: calc(~"100% - 2rem");
+            margin: 1rem;
         }
         @media @da_small {
             width: @pw_small;
-            margin-right: auto;
-            margin-left: auto;
+            height: 80vh;
+            top: 10vh;
+            margin: 0 auto;
         }
         @media @da_medium {
             width: @pw_medium;
