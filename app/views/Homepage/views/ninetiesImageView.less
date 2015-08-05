@@ -150,10 +150,27 @@
                 margin-top: -0.1rem;
             }
         }
-        &:nth-child(5) {
-            clear: both;
+        @media only screen and (min-width: 410px) {
+            &:nth-child(2n + 1) {
+                clear: both;
+            }
         }
-
+        @media only screen and (min-width: 560px) {
+            &:nth-child(2n + 1) {
+                clear: none;
+            }
+            &:nth-child(3n + 1) {
+                clear: both;
+            }
+        }
+        @media @da_small {
+            &:nth-child(3n + 1) {
+                clear: none;
+            }
+            &:nth-child(4n + 1) {
+                clear: both;
+            }
+        }
         div {
             width: @list_box_size_small;
             height: @list_box_size_small;
