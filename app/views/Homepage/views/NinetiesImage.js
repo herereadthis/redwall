@@ -216,15 +216,13 @@ export default class NinetiesImage extends React.Component {
             );
         }
         else {
-            var style, diffForButton, classes;
+            var style, diffForButton;
 
             diffForButton = Math.round(this.state.scrollPos * 0.34);
 
             style = {
                 top: `calc(${this.state.scrollPos}% - ${diffForButton}px)`
             };
-
-            classes = 'mac_os8_scroll_bar';
 
             if (this.state.scrollable === true) {
                 classes = `${classes} scroll_enabled`;
@@ -256,7 +254,7 @@ export default class NinetiesImage extends React.Component {
                         </section>
                     </div>
 
-                    <div className={classes}>
+                    <div className="mac_os8_scroll_bar">
                         <div onClick={this.tabScroll.bind(this, 'up')}
                              className="mac_os8_scroll_tab mac_os8_sprites up" />
                         <div onClick={this.tabScroll.bind(this, 'down')}
