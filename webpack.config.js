@@ -68,6 +68,7 @@ config = {
         // localhost:3000/build. That makes proxying easier to handle
         publicPath: '/'
     },
+    cache: true,
     eslint: {
         configFile: paths.esLintRC
     },
