@@ -22,8 +22,6 @@ app.get('/timestamp.json', function(req, res) {
     });
 });
 
-
-// icons for predefined annotations
 app.get('/images/banner_image/:img', function (req, res) {
     var img = fs.readFileSync('./static/images/banner_image/' +
         req.params.img);
@@ -31,6 +29,19 @@ app.get('/images/banner_image/:img', function (req, res) {
     res.end(img, 'binary');
 });
 
+app.get('/images/homepage/:img', function (req, res) {
+    var fileName, extension, contentType, img;
+
+    fileName = req.params.img;
+    extension = fileName.split('.');
+    extension = extension[extension.length - 1];
+    contentType = 'image/' + extension;
+    img = fs.readFileSync('./static/images/homepage/' +
+        req.params.img);
+
+    res.writeHead(200, {'Content-Type': contentType});
+    res.end(img, 'binary');
+});
 
 // We only want to run the workflow when not in production
 if (!isProduction) {
