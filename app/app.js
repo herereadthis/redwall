@@ -11,6 +11,7 @@ import FluxComponent from 'flummox/component';
 require('mossflower');
 require('styles/global.less');
 require('static?!./favicon.ico?output=favicon.ico');
+require('static?!./.htaccess?output=.htaccess');
 
 export default class App extends React.Component {
 

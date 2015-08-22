@@ -23,6 +23,15 @@ app.get('/timestamp.json', function(req, res) {
 });
 
 
+// icons for predefined annotations
+app.get('/images/banner_image/:img', function (req, res) {
+    var img = fs.readFileSync('./static/images/banner_image/' +
+        req.params.img);
+    res.writeHead(200, {'Content-Type': 'image/jpg'});
+    res.end(img, 'binary');
+});
+
+
 // We only want to run the workflow when not in production
 if (!isProduction) {
 
