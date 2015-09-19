@@ -2,8 +2,80 @@ import React from 'react';
 
 export default class DateRender extends React.Component {
 
+    static propTypes = {
+        date: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.instanceOf(Date)
+        ]).isRequired,
+        timeZone: PropTypes.number,
+        metaData: PropTypes.string,
+        language: PropTypes.oneOf([
+            'en', 'fr', 'es', 'ru', 'hu'
+        ])
+    };
+
+    static defaultProps = {
+        timeZone: 240 / 6,
+        metaData: 'yyyy-MM-dd HH:mm:ss',
+        language: 'en'
+    };
+
     constructor() {
         super();
+    }
+
+    componentWillMount() {
+        var MMM, MMMM, www, wwww;
+        // French
+        if (this.props.language === 'fr') {
+            MMM = ['janv', 'févr', 'mars', 'avril', 'mai', 'juin', 'juil',
+                'août', 'sept', 'oct', 'nov', 'déc'];
+            MMMM = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+                'juillet', 'août', 'septembre', 'octobre', 'novembre',
+                'décembre'];
+            www = ['dim', 'lun', 'mar', 'mer', 'jeu', 'ven', 'sam'];
+            wwww = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi',
+                'dimanche'];
+        }
+        // Spanish
+        else if (this.props.language === 'es') {
+            MMM = ['enero', 'feb', 'marzo', 'abr', 'mayo', 'jun', 'jul',
+                'agosto', 'set', 'oct', 'nov', 'dic'];
+            MMMM = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                'julio', 'agosto', 'septiembre', 'octubre', 'noviembre',
+                'diciembre'];
+            www = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+            wwww = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves',
+                'viernes', 'sábado'];
+
+        }
+        // Russian
+        else if (this.props.language === 'ru') {
+            MMM = ['ianv', 'февр', 'март', 'апр', 'май', 'июнь', 'июль', 'авг',
+                'сент', 'окт', 'ноябрь', 'дек'];
+            MMMM = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь',
+                'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+            www = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+            wwww = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг',
+                'пятница', 'суббота'];
+        }
+        // catch-all is English
+        else {
+            MMM = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug',
+                'Sep', 'Oct', 'Nov', 'Dec'];
+            MMMM = ['January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November',
+                'December'];
+            www = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            wwww = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday',
+                'Friday', 'Saturday'];
+        }
+        this.setState({
+            MMM,
+            MMMM,
+            www,
+            wwww
+        });
     }
 
     static testRegex = /(([a-z])+|([^a-z0-9]*))/gi;
@@ -43,7 +115,7 @@ export default class DateRender extends React.Component {
     };
 
     makeDateObj = (date) => {
-        var yyyy, yy, M, MMM, MMMM, w, www, wwww, d,
+        var yyyy, yy, M, w, d,
             H, h, a, m, s, S,
             tz, dateObj;
 
@@ -98,12 +170,12 @@ export default class DateRender extends React.Component {
             yy,
             M: M + 1,
             MM: this.leadDecimal(M + 1),
-            MMM: MMM[M],
-            MMMM: MMMM[M],
+            MMM: this.state.MMM[M],
+            MMMM: this.state.MMMM[M],
             w: w + 1,
             ww: this.leadDecimal(w + 1),
-            www: www[w],
-            wwww: wwww[w],
+            www: this.state.www[w],
+            wwww: this.state.wwww[w],
             d,
             dd: this.leadDecimal(d),
             H,
